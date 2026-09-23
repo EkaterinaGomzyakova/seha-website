@@ -1,4 +1,5 @@
 name: Deploy Seha to GitHub Pages
+# Rebuild nested product routes from the current Sites snapshot
 
 on:
   push:
