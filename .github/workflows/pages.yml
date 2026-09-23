@@ -28,10 +28,18 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare project-site paths
+        shell: bash
+        run: |
+          rm -rf _site
+          cp -R dist/. _site/
+          find _site -type f -name '*.html' -print0 | xargs -0 sed -i -E 's#(href|src|action)="\/#\1="/seha-website/#g'
+          find _site -type f -name '*.css' -print0 | xargs -0 sed -i -E "s#url\('/#url('/seha-website/#g; s#url\(\"/#url(\"/seha-website/#g"
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./_site
 
       - name: Deploy to Pages
         id: deployment
