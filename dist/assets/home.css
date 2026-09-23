@@ -43,3 +43,7 @@
 @media(min-width:1680px){.error-page{max-width:1648px;margin-left:auto;margin-right:auto}}
 @media(max-width:900px){.not-found .site-header{height:80px}.error-page{margin:0 10px 10px;padding:36px 5%}.error-copy{min-height:72vh}.error-copy h1{margin-top:36px}.error-button{margin-top:56px}.error-page:before{left:-170px}.error-page:after{right:-240px}}
 @media(max-width:520px){.error-page{border-radius:18px;padding:32px 22px}.error-copy{min-height:76vh}.error-mark{font-size:clamp(82px,26vw,132px);gap:7px}.error-copy h1{font-size:2.25rem;margin:34px 0 16px}.error-copy p{font-size:.98rem}.error-nav{gap:16px 20px;margin-top:28px}.error-nav a{font-size:.86rem}.error-button{width:100%;min-width:0;margin-top:44px}.error-page:before{min-width:230px;min-height:230px;left:-150px;top:14%}.error-page:after{min-width:300px;min-height:300px;right:-210px;bottom:-120px}}
+
+/* PDF-aligned homepage typography: bold sans-serif hierarchy, no italic display type. */
+.home h1,.home h2,.home h3{font-weight:800}
+.home em{font-family:inherit;font-style:normal;font-weight:800}
