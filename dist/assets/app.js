@@ -98,13 +98,13 @@ const languageDictionary = {
     navProducts:'Продукты', navProduction:'Производство', navQuality:'Качество', navAbout:'Из кокосового волокна', navHome:'Главная', offer:'Получить предложение',
     quoteTitle:'Получите<br>расчёт<br>поставки', company:'Название компании', contact:'Имя контактного лица', email:'Контактный email', phone:'Номер телефона', message:'Сообщение',
     companyPlaceholder:'ООО Агрокомплекс', contactPlaceholder:'Иван', messagePlaceholder:'Расскажите, какой продукт вам нужен, о ваших требованиях, количестве и сроках', business:'Тип компании',
-    distributor:'Дистрибьютор', retailer:'Ритейлер', manufacturer:'Производитель', hydro:'Гидропонная ферма', garden:'Садоводческая компания', foodBrand:'Бренд продуктов питания', other:'Другое', consent:'Я ознакомлен(а) с', privacy:'Политикой конфиденциальности', consentEnd:'и даю согласие на обработку персональных данных', submit:'Получить расчёт', contacts:'КОНТАКТЫ', legal:'Юридический адрес', phoneLabel:'ТЕЛЕФОН', emailLabel:'ПОЧТА', footerBrand:'НАТУРАЛЬНЫЕ ПРОДУКТЫ<br>ИЗ КОКОСА'
+    distributor:'Дистрибьютор', retailer:'Ритейлер', manufacturer:'Производитель', hydro:'Гидропонная ферма', garden:'Садоводческая компания', foodBrand:'Бренд продуктов питания', other:'Другое', consent:'Я ознакомлен(а) с', privacy:'Политикой конфиденциальности', consentEnd:'и даю согласие на обработку персональных данных', submit:'Получить расчёт', contacts:'КОНТАКТЫ', legal:'Юридический адрес', phoneLabel:'ТЕЛЕФОН', emailLabel:'ПОЧТА', footerBrand:'НАТУРАЛЬНЫЕ ПРОДУКТЫ<br>ИЗ КОКОСА', cookieText:'Мы используем куки для улучшения работы сайта. Подробнее — в', cookieLink:'Политике конфиденциальности.', cookieAction:'ПОНЯТНО'
   },
   en: {
     navProducts:'Products', navProduction:'Manufacturing', navQuality:'Quality & Certifications', navAbout:'About us', navHome:'Home', offer:'Request a quote',
     quoteTitle:'Request<br>a Price List', company:'Company name', contact:'Contact person name', email:'Business email', phone:'Phone number', message:'Message',
     companyPlaceholder:'Your company name', contactPlaceholder:'Contact person name', messagePlaceholder:'Tell us about your requirements, products of interest, quantities, and delivery timelines', business:'Business type',
-    distributor:'Distributor', retailer:'Retailer', manufacturer:'Manufacturer', hydro:'Hydroponic Farm', garden:'Horticulture Company', foodBrand:'Food Brand', other:'Other', consent:'I have read the', privacy:'Privacy Policy', consentEnd:'and consent to the processing of my personal data', submit:'Request a price list', contacts:'CONTACTS', legal:'Registered Address', phoneLabel:'PHONE', emailLabel:'EMAIL', footerBrand:'NATURAL COCONUT<br>PRODUCTS'
+    distributor:'Distributor', retailer:'Retailer', manufacturer:'Manufacturer', hydro:'Hydroponic Farm', garden:'Horticulture Company', foodBrand:'Food Brand', other:'Other', consent:'I have read the', privacy:'Privacy Policy', consentEnd:'and consent to the processing of my personal data', submit:'Request a price list', contacts:'CONTACTS', legal:'Registered Address', phoneLabel:'PHONE', emailLabel:'EMAIL', footerBrand:'NATURAL COCONUT<br>PRODUCTS', cookieText:'We use cookies to improve your experience on our website. Learn more in our', cookieLink:'Privacy Policy.', cookieAction:'ACCEPT'
   },
   privacy: {
     title:'Privacy Policy', intro:'This Privacy Policy explains how personal data is collected, processed, stored, and protected when using the seha-group.ru website (the “Website”).', active:'Effective', since:'from 2026', generalTitle:'General Provisions', controller:'Data Controller:<br>SEHA LLC<br>1 Bratyev Vesninykh Boulevard, Office 151K<br>Moscow, 115432, Russian Federation<br>E-mail: info@seha-group.ru<br>Phone: +7 922 459-00-63', generalText:'By using the Website and submitting information through its forms, the User agrees to this Privacy Policy.', dataTitle:'Personal Data We Collect', dataLead:'We may collect and process the following information:', data1:'• company name;', data2:'• contact person name;', data3:'• email address;', data4:'• phone number;', data5:'• business type;', data6:'• inquiry details and messages;', data7:'• website activity data;', data8:'• IP address;', data9:'• browser and device information;', data10:'• cookies and technical identifiers.', goalTitle:'Purposes of Processing', goalLead:'Personal data is processed for the following purposes:', goal1:'• responding to inquiries;', goal2:'• providing quotations and price lists;', goal3:'• handling wholesale supply requests;', goal4:'• business communications;', goal5:'• contract preparation and performance;', goal6:'• improving website functionality;', goal7:'• website analytics and statistics.', legalTitle:'Legal Basis', legalLead:'Personal data is processed on the basis of:', legal1:'• the User’s consent;', legal2:'• contractual necessity;', legal3:'• compliance with applicable laws.', cookiesTitle:'Cookies and Yandex.Metrica', cookiesLead:'The Website uses cookies and Yandex.Metrica web analytics services.', cookiesText:'Cookies are small files stored on the User’s device and used to improve website performance and user experience.', cookiesData:'Yandex.Metrica may collect:', cookie1:'• IP address;', cookie2:'• browser and device information;', cookie3:'• user activity on the Website;', cookie4:'• date and time of visits;', cookie5:'• cookie identifiers and technical information.', cookiesOptout:'Users may disable cookies through their browser settings. Certain Website functions may become unavailable as a result.', shareTitle:'Sharing of Data', shareLead:'Personal data is not sold or disclosed to third parties except:', share1:'• where required by law;', share2:'• where necessary to fulfil contractual obligations;', share3:'• where required for operation of analytics and website infrastructure services.', storageTitle:'Data Retention', storageText:'Personal data is retained only for as long as necessary to achieve the purposes described in this Policy or as required by applicable law.', rightsTitle:'User Rights', rightsLead:'Users have the right to:<br>• access their personal data;<br>• request correction, deletion, or restriction of processing;', rightsText:'• withdraw consent;<br>• file complaints with competent authorities.', withdrawTitle:'Withdrawal of Consent', withdrawText:'Users may withdraw consent by sending a request to info@seha-group.ru', contactTitle:'Contact Information', contactText:'For questions about personal data processing, please contact us at:<br>info@seha-group.ru<br>SEHA LLC<br>1 Bratyev Vesninykh Boulevard, Office 151K<br>Moscow, 115432, Russian Federation<br>Phone: +7 922 459-00-63'
@@ -115,6 +115,14 @@ function setLabelText(element, text){
   if(!element) return;
   const node = Array.from(element.childNodes).find(item => item.nodeType === Node.TEXT_NODE && item.textContent.trim());
   if(node) node.textContent = `${text}`;
+}
+let cookieBanner;
+function translateCookieBanner(lang){
+  if(!cookieBanner) return;
+  const t=languageDictionary[lang];
+  const link=document.querySelector('a[href*="privacy"]')?.getAttribute('href') || '/privacy/';
+  cookieBanner.querySelector('[data-cookie-message]').innerHTML=`${t.cookieText} <a href="${link}">${t.cookieLink}</a>`;
+  cookieBanner.querySelector('[data-cookie-action]').textContent=t.cookieAction;
 }
 function translatePrivacy(lang){
   if(lang !== 'en') return;
@@ -155,11 +163,23 @@ function translateShell(lang){
   document.querySelectorAll('.quote-bottom>div>span').forEach(el=>el.innerHTML=t.footerBrand);
   document.querySelectorAll('.quote-bottom>a').forEach(el=>el.textContent=t.privacy.toUpperCase());
   if(document.body.classList.contains('privacy-page')) translatePrivacy(lang);
+  translateCookieBanner(lang);
   document.documentElement.lang=lang;
   localStorage.setItem('seha-language',lang);
 }
 const languageToggle = document.querySelector('[data-language-toggle]');
 const savedLanguage = localStorage.getItem('seha-language') === 'en' ? 'en' : 'ru';
+if(!localStorage.getItem('seha-cookie-consent')){
+  cookieBanner=document.createElement('aside');
+  cookieBanner.className='cookie-banner';
+  cookieBanner.setAttribute('role','dialog');
+  cookieBanner.setAttribute('aria-label','Cookie notice');
+  cookieBanner.innerHTML='<span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть">×</button><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button>';
+  document.body.append(cookieBanner);
+  const closeCookie=()=>{localStorage.setItem('seha-cookie-consent','accepted');cookieBanner.remove()};
+  cookieBanner.querySelector('.cookie-close').addEventListener('click',closeCookie);
+  cookieBanner.querySelector('.cookie-action').addEventListener('click',closeCookie);
+}
 let languageMenu;
 if(languageToggle){
   const languageControl=document.createElement('div');
