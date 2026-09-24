@@ -160,5 +160,42 @@ function translateShell(lang){
 }
 const languageToggle = document.querySelector('[data-language-toggle]');
 const savedLanguage = localStorage.getItem('seha-language') === 'en' ? 'en' : 'ru';
+let languageMenu;
+if(languageToggle){
+  const languageControl=document.createElement('div');
+  languageControl.className='language-control';
+  languageToggle.parentNode.insertBefore(languageControl,languageToggle);
+  languageControl.append(languageToggle);
+  languageMenu=document.createElement('div');
+  languageMenu.className='language-menu';
+  languageMenu.hidden=true;
+  languageControl.append(languageMenu);
+}
+function updateLanguageMenu(lang){
+  if(!languageMenu || !languageToggle) return;
+  const next=lang === 'en' ? 'ru' : 'en';
+  const label=next === 'en' ? 'EN' : 'RU';
+  const flag=next === 'en' ? 'flag_of_the_UK.svg' : 'flag_of_russia.svg';
+  const currentSrc=languageToggle.querySelector('[data-language-flag]')?.getAttribute('src') || '';
+  const nextSrc=currentSrc.replace(/flag_of_(?:russia|the_UK)\.svg$/i,flag);
+  languageMenu.innerHTML=`<button type="button" data-set-language="${next}"><img class="language-flag" src="${nextSrc}" alt=""><span>${label}</span></button>`;
+  languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
+}
 translateShell(savedLanguage);
-languageToggle?.addEventListener('click',()=>{ if(document.documentElement.lang === 'en'){ localStorage.setItem('seha-language','ru'); window.location.reload(); } else translateShell('en'); });
+updateLanguageMenu(savedLanguage);
+languageToggle?.addEventListener('click',()=>{
+  languageMenu.hidden=!languageMenu.hidden;
+  languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
+});
+languageMenu?.addEventListener('click',event=>{
+  const option=event.target.closest('[data-set-language]');
+  if(!option) return;
+  const next=option.dataset.setLanguage;
+  languageMenu.hidden=true;
+  if(next === 'ru'){ localStorage.setItem('seha-language','ru'); window.location.reload(); return; }
+  translateShell(next);
+  updateLanguageMenu(next);
+});
+document.addEventListener('click',event=>{
+  if(languageMenu && !event.target.closest('.language-control')){ languageMenu.hidden=true; languageToggle?.setAttribute('aria-expanded','false'); }
+});
