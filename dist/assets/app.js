@@ -10,21 +10,12 @@ document.querySelectorAll('.category').forEach(category => {
 
 const quoteForm = document.getElementById('quote-form');
 if (quoteForm) {
-  const productInputs = [...quoteForm.querySelectorAll('[name="products"]')];
-  const productError = document.getElementById('product-error');
   const phone = quoteForm.elements.phone;
   const phoneError = document.getElementById('phone-error');
   const result = document.getElementById('quote-result');
   const copyButton = document.getElementById('copy-quote');
   let preparedQuote = '';
-  // Validate all fields together, including the required multi-selection.
   quoteForm.noValidate = true;
-  function validateProducts(showError = false) {
-    const selected = productInputs.some(input => input.checked);
-    productInputs[0].setCustomValidity(selected ? '' : 'Выберите хотя бы одно направление.');
-    if (showError || selected) productError.hidden = selected;
-    return selected;
-  }
   function validatePhone(showError = false) {
     const count = phone.value.replace(/\D/g, '').length;
     const valid = count >= 7 && count <= 15;
@@ -32,20 +23,10 @@ if (quoteForm) {
     if (showError || valid) phoneError.hidden = valid;
     return valid;
   }
-  productInputs.forEach(input => input.addEventListener('change', () => validateProducts(true)));
   phone.addEventListener('input', () => validatePhone(false));
-  quoteForm.addEventListener('input', () => { result.hidden = true; });
-  document.querySelectorAll('[data-quote-product]').forEach(link => {
-    link.addEventListener('click', () => {
-      const input = productInputs.find(item => item.value === link.dataset.quoteProduct);
-      if (input) input.checked = true;
-      validateProducts(false);
-      result.hidden = true;
-    });
-  });
+  quoteForm.addEventListener('input', () => { if (result) result.hidden = true; });
   quoteForm.addEventListener('submit', event => {
     event.preventDefault();
-    validateProducts(true);
     validatePhone(true);
     ['company', 'contact'].forEach(name => {
       const input = quoteForm.elements[name];
@@ -58,21 +39,19 @@ if (quoteForm) {
       'Здравствуйте! Прошу подготовить коммерческое предложение.', '',
       `Компания: ${value('company')}`, `Контактное лицо: ${value('contact')}`,
       `Телефон: ${value('phone')}`, `Email: ${value('email') || 'Не указан'}`, '',
-      `Продукты: ${fields.getAll('products').join(', ')}`,
-      `Ориентировочный объем: ${value('volume') || 'Не указан'}`,
-      `Город доставки: ${value('city') || 'Не указан'}`,
       `Тип бизнеса: ${value('business') || 'Не указан'}`,
       `Комментарий: ${value('comment') || 'Нет'}`, '',
       'Согласен на обработку указанных данных для подготовки предложения и обратной связи.'
     ].join('\n');
-    copyButton.textContent = 'Скопировать заявку';
-    document.getElementById('quote-copy-fallback').hidden = true;
-    result.hidden = false;
-    window.location.href = `mailto:info@seha-group.ru?subject=${encodeURIComponent('Расчет поставки — ' + value('company'))}&body=${encodeURIComponent(preparedQuote)}`;
-    result.focus({ preventScroll: true });
+    if (copyButton) copyButton.textContent = 'Скопировать заявку';
+    const fallback = document.getElementById('quote-copy-fallback');
+    if (fallback) fallback.hidden = true;
+    if (result) result.hidden = false;
+    window.location.href = `mailto:seha.info@inbox.ru?subject=${encodeURIComponent('Расчет поставки — ' + value('company'))}&body=${encodeURIComponent(preparedQuote)}`;
+    result?.focus({ preventScroll: true });
   });
   ['company', 'contact'].forEach(name => quoteForm.elements[name].addEventListener('input', () => quoteForm.elements[name].setCustomValidity('')));
-  copyButton.addEventListener('click', async () => {
+  copyButton?.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(preparedQuote);
       copyButton.textContent = 'Заявка скопирована';
