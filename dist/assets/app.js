@@ -1,13 +1,3 @@
-// Keep the category overview compact in browsers without exclusive details support.
-document.querySelectorAll('.category').forEach(category => {
-  category.addEventListener('toggle', () => {
-    if (!category.open) return;
-    document.querySelectorAll('.category').forEach(other => {
-      if (other !== category) other.open = false;
-    });
-  });
-});
-
 const quoteForm = document.getElementById('quote-form');
 if (quoteForm) {
   const phone = quoteForm.elements.phone;
@@ -88,24 +78,13 @@ if (industryTrack && industryPrev && industryNext) {
   updateIndustryArrows();
 }
 
-// Shared navigation and route-aware category entrances.
+// Shared navigation.
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 function closeMenu(){ if(!menuToggle) return; menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Открыть меню'); mobileNav.hidden=true; }
 menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));menuToggle.setAttribute('aria-label',open?'Открыть меню':'Закрыть меню');mobileNav.hidden=open;});
 mobileNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
 document.addEventListener('keydown',event=>{if(event.key==='Escape' && mobileNav && !mobileNav.hidden){closeMenu();menuToggle.focus();}});
-function openLinkedCategory(){
-  let id = '';
-  try {
-    id = decodeURIComponent(location.hash.slice(1));
-  } catch {
-    id = location.hash.slice(1);
-  }
-  const target=document.getElementById(id);
-  if(target?.classList.contains('category'))target.open=true;
-}
-openLinkedCategory();window.addEventListener('hashchange',openLinkedCategory);
 if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
  const items=document.querySelectorAll('.reveal');
  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.08});
