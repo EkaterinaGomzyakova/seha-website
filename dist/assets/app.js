@@ -133,6 +133,40 @@ function translatePrivacy(lang){
   const privacyBreadcrumb = document.querySelector('.breadcrumbs [aria-current="page"]');
   if(privacyBreadcrumb) privacyBreadcrumb.textContent = lang === 'en' ? 'Privacy Policy' : 'Политика конфиденциальности';
 }
+const substratePageContent = {
+  ru: {
+    breadcrumb:'Кокосовые субстраты', section:'01 / КОКОСОВЫЕ СУБСТРАТЫ', title:'Субстраты для выращивания', intro:'Профессиональные субстраты на основе кокоса для теплиц, питомников, гидропоники и рассады. Подберем фракцию, формат, объем и упаковку под вашу технологию выращивания.', listLabel:'для растениеводства', listTitle:'Категории<br>продуктов', names:['Кокосовый торф','Кокосовый торф в брикетах','Кубический субстрат (M)','Кубический субстрат (L)','Кокосовые диски','Кокосовые чипсы','Таблетки из кокосового торфа','Компост из кокосового торфа','Субстрат для лотков рассады','Субстрат для проращивания'], descriptions:['Натуральный субстрат из очищенного кокосового волокна. Подходит для улучшения влагоемкости, аэрации и структуры почвосмесей.','Спрессованные брикеты кокосового субстрата для тепличных хозяйств и объемных поставок. Удобны для хранения и транспортировки.','Кокосовые блоки среднего формата для рассады, горшечных культур и гидропоники. Удерживают влагу и поддерживают аэрацию корней.','Крупноформатные блоки кокосового субстрата для выращивания растений в закрытых грунтах и системах интенсивного полива.','Спрессованные диски из кокосового волокна. При увлажнении увеличиваются, образуют натуральный биоразлагаемый субстрат.','Крупные частицы кокосовой скорлупы для улучшения аэрации и дренажа. Подходят для орхидей, гидропоники и специализированных культур.','Прессованные таблетки для проращивания семян и рассады. После увлажнения увеличиваются в объеме и формируют удобное посадочное место.','Органический натуральный субстрат для выращивания растений и улучшения почвы. Удерживает влагу и поддерживает здоровье корней.','Готовая смесь для лотков и кассет с рассадой. Обеспечивает равномерное прорастание, аэрацию и развитие здоровой корневой системы.','Мелкофракционный субстрат для проращивания семян. Поддерживает влажность и доступ воздуха для роста молодых растений.'], cta:'Заказать'
+  },
+  en: {
+    breadcrumb:'Coconut Substrates', section:'01 / COCONUT SUBSTRATES', title:'Growing Substrates', intro:'Professional coconut-based substrates for greenhouses, nurseries, hydroponics, and seedlings. We will match the fraction, format, volume, and packaging to your growing technology.', listLabel:'for horticulture', listTitle:'Product<br>categories', names:['Coconut Peat','Coconut Peat Bricks','Grow Cube (M)','Grow Cube (L)','Coconut Discs','Coconut Husk Chips','Coconut Peat Tablets','Coconut Peat Compost','Seedling Tray Substrate','Seed Starter Substrate'], descriptions:['Natural substrate made from cleaned coconut fibre. Suitable for improving moisture retention, aeration, and soil mix structure.','Compressed coconut substrate bricks for greenhouse operations and bulk supply. Convenient to store and transport.','Medium-format coconut blocks for seedlings, potted crops, and hydroponics. Retain moisture and support root aeration.','Large-format coconut substrate blocks for growing plants in protected cultivation and intensive irrigation systems.','Compressed coconut fibre discs. They expand when moistened and form a natural biodegradable substrate.','Large coconut shell particles for improved aeration and drainage. Suitable for orchids, hydroponics, and specialist crops.','Pressed tablets for seed germination and seedlings. They expand when moistened and form a convenient planting medium.','Organic natural substrate for growing plants and improving soil. Retains moisture and supports root health.','Ready-made mix for seedling trays and plug trays. Ensures even germination, aeration, and healthy root development.','Fine-fraction substrate for seed germination. Supports moisture retention and air access for young plant growth.'], cta:'Request a quote'
+  }
+};
+function translateSubstratePage(lang){
+  if(!document.body.classList.contains('product-detail')) return;
+  const content=substratePageContent[lang];
+  if(!content) return;
+  const breadcrumb=document.querySelector('.breadcrumbs [aria-current="page"]');
+  const section=document.querySelector('.product-hero .section-label');
+  const title=document.querySelector('.product-hero h1');
+  const intro=document.querySelector('.product-hero>p');
+  const listLabel=document.querySelector('.product-list-heading>span');
+  const listTitle=document.querySelector('.product-list-heading h2');
+  if(breadcrumb) breadcrumb.textContent=content.breadcrumb;
+  if(section) section.textContent=content.section;
+  if(title) title.textContent=content.title;
+  if(intro) intro.textContent=content.intro;
+  if(listLabel) listLabel.textContent=content.listLabel;
+  if(listTitle) listTitle.innerHTML=content.listTitle;
+  document.querySelectorAll('.product-item').forEach((item,index)=>{
+    const name=item.querySelector('h3');
+    const description=item.querySelector('p');
+    const action=item.querySelector('a');
+    if(name) name.textContent=content.names[index];
+    if(description) description.textContent=content.descriptions[index];
+    if(action) action.textContent=content.cta;
+  });
+  document.title=lang === 'en' ? 'Growing Substrates — Seha' : 'Субстраты для выращивания — Сеха';
+}
 function translateShell(lang){
   const t = languageDictionary[lang];
   const nav = { '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
@@ -163,6 +197,7 @@ function translateShell(lang){
   document.querySelectorAll('.quote-bottom>div>span').forEach(el=>el.innerHTML=t.footerBrand);
   document.querySelectorAll('.quote-bottom>a').forEach(el=>el.textContent=t.privacy.toUpperCase());
   if(document.body.classList.contains('privacy-page')) translatePrivacy(lang);
+  translateSubstratePage(lang);
   translateCookieBanner(lang);
   document.documentElement.lang=lang;
   localStorage.setItem('seha-language',lang);
