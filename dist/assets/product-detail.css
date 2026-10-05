@@ -1,27 +1,28 @@
-/* Product category pages — shared visual system */
+/* Shared Figma-aligned system for all four product detail pages. */
 .product-detail{background:var(--color-background-light);color:var(--color-green-brand)}
-.product-hero{width:calc(100% - 32px);max-width:1648px;margin:0 auto;border-radius:22px;background:var(--color-light-gray);padding:64px 8% 74px;text-align:center;display:flex;flex-direction:column;align-items:center}
-.product-hero-icon{width:188px;height:188px;border-radius:28px;overflow:hidden;margin-bottom:34px;background:var(--color-light-gray)}
+.product-hero{width:calc(100% - 32px);max-width:1648px;margin:0 auto;border-radius:40px;background:#f0f0e7;padding:54px 24px 64px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.product-hero-icon{width:148px;height:148px;border-radius:24px;overflow:hidden;margin-bottom:28px;background:var(--color-light-gray)}
 .product-hero-icon img{display:block;width:100%;height:100%;object-fit:cover}
-.product-hero>.section-label{font-size:12px;letter-spacing:1.4px;color:var(--color-dark-gray);margin-bottom:22px}
-.product-hero h1{max-width:920px;margin:0;font-size:clamp(48px,6vw,92px);line-height:.98;letter-spacing:-.065em;font-weight:900}
-.product-hero>p{max-width:720px;margin:30px 0 0;font-size:17px;line-height:1.7;color:var(--color-dark-gray)}
-.product-list-section{max-width:1568px;margin:0 auto;padding:104px 5.2% 114px}
-.product-list-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:44px}
-.product-list-heading>span{order:2;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--color-dark-gray);font-weight:700}
-.product-list-heading h2{margin:0;font-size:clamp(44px,5vw,78px);line-height:1.02;letter-spacing:-.06em;font-weight:900}
-.product-grid-page{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:52px 26px}
-.product-item{min-width:0}
-.product-item figure{margin:0 0 20px;aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:var(--color-light-gray)}
+.product-hero>.section-label{margin-bottom:20px;color:var(--color-dark-gray);font-size:11px;line-height:1.2;letter-spacing:.99px}
+.product-hero h1{max-width:920px;margin:0;color:var(--color-green-brand);font:900 clamp(48px,3.75vw,72px)/.98 Inter,Arial,sans-serif;letter-spacing:-2.88px}
+.product-hero>p{max-width:808px;margin:26px 0 0;color:var(--color-dark-gray);font:500 15px/1.55 Inter,Arial,sans-serif}
+.product-list-section{max-width:1648px;margin:0 auto;padding:88px 0 120px}
+.product-list-heading{display:flex;flex-direction:column;align-items:flex-start;gap:24px;margin:0 0 44px}
+.product-list-heading>span{order:0;display:inline-flex;padding:9px 7px;border:1px solid var(--color-gray);border-radius:4px;color:var(--color-dark-gray);font:700 11px/1.2 Inter,Arial,sans-serif;letter-spacing:.99px;text-transform:uppercase}
+.product-list-heading h2{margin:0;color:var(--color-green-brand);font:900 clamp(42px,2.5vw,48px)/.9 Inter,Arial,sans-serif;letter-spacing:-2.08px}
+.product-grid-page{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:64px 32px}
+.product-item{min-width:0;display:flex;flex-direction:column;color:var(--color-green-brand)}
+.product-item figure{margin:0 0 20px;aspect-ratio:1/1;border-radius:40px;overflow:hidden;background:var(--color-light-gray)}
 .product-item figure img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .5s}
 .product-item:hover figure img{transform:scale(1.035);filter:saturate(1.06)}
-.product-item>span{display:inline-block;margin-bottom:12px;padding:7px 10px;border:1px solid var(--color-gray);border-radius:3px;color:var(--color-dark-gray);font-size:11px;letter-spacing:1.1px;text-transform:uppercase;font-weight:700}
-.product-item h3{margin:0 0 10px;font-size:clamp(24px,2.2vw,34px);line-height:1.08;letter-spacing:-.045em;font-weight:900}
-.product-item p{margin:0;min-height:76px;color:var(--color-dark-gray);font-size:15px;line-height:1.65}
-.product-item>a{display:flex;align-items:center;justify-content:center;min-height:52px;margin-top:24px;border-radius:8px;background:var(--color-black);color:var(--color-background-light);font-size:13px;letter-spacing:1.1px;text-transform:uppercase;font-weight:700;transition:transform .2s,background .2s}
-.product-item>a:hover{background:var(--color-black);transform:translateY(-3px)}
+.product-item>span{align-self:flex-start;display:inline-flex;margin-bottom:12px;padding:7px 10px;border:1px solid var(--color-gray);border-radius:4px;color:var(--color-dark-gray);font:700 11px/1.2 Inter,Arial,sans-serif;letter-spacing:.99px;text-transform:uppercase}
+.product-item h3{margin:0 0 12px;color:var(--color-green-brand);font:900 clamp(24px,1.65vw,28px)/1.05 Inter,Arial,sans-serif;letter-spacing:-1.05px}
+.product-item p{flex:1;margin:0;color:var(--color-dark-gray);font:500 15px/1.55 Inter,Arial,sans-serif}
+.product-item>a{display:flex;align-items:center;justify-content:center;height:56px;margin-top:20px;border-radius:12px;background:var(--color-black);color:var(--color-background-light);font:700 11px/1.2 Inter,Arial,sans-serif;letter-spacing:.99px;text-transform:uppercase;transition:transform .2s,background .2s}
+.product-item>a:hover{background:var(--color-green-brand);transform:translateY(-2px)}
 .product-detail .quote-footer{margin-top:0}
-@media(max-width:900px){.product-hero{margin:0 10px;padding:48px 6% 56px}.product-hero-icon{width:150px;height:150px;border-radius:22px}.product-hero h1{font-size:clamp(42px,8vw,68px)}.product-hero>p{font-size:16px}.product-list-section{padding:76px 5% 84px}.product-grid-page{grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 18px}.product-list-heading{align-items:flex-start}.product-list-heading h2{font-size:56px}}
-@media(max-width:560px){.product-hero{padding:36px 22px 42px;border-radius:18px}.product-hero-icon{width:122px;height:122px;border-radius:18px;margin-bottom:24px}.product-hero h1{font-size:42px;line-height:1.02}.product-hero>p{font-size:15px;line-height:1.6;margin-top:22px}.product-list-section{padding:58px 24px 66px}.product-list-heading{display:block;margin-bottom:30px}.product-list-heading>span{display:block;margin-bottom:16px;font-size:10px}.product-list-heading h2{font-size:42px}.product-grid-page{grid-template-columns:1fr;gap:42px}.product-item figure{border-radius:16px;margin-bottom:16px}.product-item h3{font-size:28px}.product-item p{min-height:0;font-size:15px}.product-item>a{margin-top:18px}}
-
-@media(max-width:800px){.product-hero,.home-hero,.about-hero,.production-hero,.material-banner,.packing-band,.cert-preview{width:calc(100% - 20px);margin-left:auto;margin-right:auto}}
+@media(max-width:1720px){.product-list-section{padding-left:32px;padding-right:32px}}
+@media(max-width:1100px){.product-hero{border-radius:32px}.product-list-section{padding-top:72px;padding-bottom:96px}.product-grid-page{grid-template-columns:repeat(2,minmax(0,1fr));gap:52px 24px}.product-item figure{border-radius:32px}}
+@media(max-width:800px){.product-hero{width:calc(100% - 20px);margin-left:auto;margin-right:auto;padding:44px 7% 52px}.product-hero-icon{width:132px;height:132px;border-radius:22px}.product-hero h1{font-size:clamp(42px,8vw,64px);letter-spacing:-2.4px}.product-hero>p{font-size:15px}.product-list-section{padding:64px 5% 80px}.product-list-heading{gap:18px;margin-bottom:36px}.product-grid-page{gap:44px 18px}.product-item figure{border-radius:28px}}
+@media(max-width:560px){.product-hero{padding:34px 22px 42px;border-radius:24px}.product-hero-icon{width:112px;height:112px;border-radius:18px;margin-bottom:22px}.product-hero>.section-label{margin-bottom:16px;font-size:10px}.product-hero h1{font-size:42px;line-height:1.02;letter-spacing:-1.8px}.product-hero>p{margin-top:20px;font-size:14px;line-height:1.55}.product-list-section{padding:54px 24px 66px}.product-list-heading{margin-bottom:30px}.product-list-heading>span{font-size:10px}.product-list-heading h2{font-size:42px}.product-grid-page{grid-template-columns:1fr;gap:42px}.product-item figure{border-radius:24px;margin-bottom:16px}.product-item h3{font-size:28px}.product-item p{font-size:15px}.product-item>a{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.product-item figure img{transition:none}}
