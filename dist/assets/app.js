@@ -81,8 +81,15 @@ if (industryTrack && industryPrev && industryNext) {
 // Shared navigation.
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
-function closeMenu(){ if(!menuToggle) return; menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Открыть меню'); mobileNav.hidden=true; }
-menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));menuToggle.setAttribute('aria-label',open?'Открыть меню':'Закрыть меню');mobileNav.hidden=open;});
+const menuIcon = menuToggle?.querySelector('[data-menu-icon]');
+function setMenuIcon(open){
+  if(!menuIcon) return;
+  const src=menuIcon.getAttribute('src') || '';
+  menuIcon.setAttribute('src',src.replace(/(?:menu|xmark)-icon\.svg$/i,open ? 'xmark-icon.svg' : 'menu-icon.svg'));
+}
+function closeMenu(){ if(!menuToggle) return; menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Открыть меню'); setMenuIcon(false); mobileNav.hidden=true; }
+setMenuIcon(false);
+menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));menuToggle.setAttribute('aria-label',open?'Открыть меню':'Закрыть меню');setMenuIcon(!open);mobileNav.hidden=open;});
 mobileNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
 document.addEventListener('keydown',event=>{if(event.key==='Escape' && mobileNav && !mobileNav.hidden){closeMenu();menuToggle.focus();}});
 if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
@@ -167,6 +174,12 @@ function translateSubstratePage(lang){
   });
   document.title=lang === 'en' ? 'Growing Substrates — Seha' : 'Субстраты для выращивания — Сеха';
 }
+function setSiteLogoState(logo,state='default'){
+  const base=document.documentElement.lang === 'en' ? 'logo-international' : 'logo-russian';
+  logo.dataset.logoState=state;
+  logo.src=`/assets/${base}${state === 'hover' ? '-hover' : ''}.svg`;
+  logo.alt=document.documentElement.lang === 'en' ? 'SEHA — international' : 'Сеха';
+}
 function translateShell(lang){
   const t = languageDictionary[lang];
   const nav = { '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
@@ -175,7 +188,7 @@ function translateShell(lang){
   document.querySelectorAll('.mobile-nav a').forEach(link => { const key=link.getAttribute('href').replace(/#.*$/,''); if(mobileLabels[key]) setLabelText(link,mobileLabels[key]); else setLabelText(link,t.offer); });
   document.querySelectorAll('.button--compact').forEach(link => { const arrow=link.querySelector('span'); link.firstChild.textContent=`${t.offer} `; if(arrow) link.append(arrow); });
   document.querySelectorAll('[data-language-code]').forEach(code => code.textContent=lang.toUpperCase());
-  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=flag.src.replace(/flag_of_(?:russia|the_UK)\.svg$/i,lang === 'en' ? 'flag_of_the_UK.svg' : 'flag_of_russia.svg'); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
+  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=flag.src.replace(/(?:figma-language-ru|figma-language-en|flag_of_russia|flag_of_the_UK)\.svg$/i,lang === 'en' ? 'figma-language-en.svg' : 'figma-language-ru.svg'); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
   document.querySelectorAll('.quote-main h2').forEach(element => element.innerHTML=t.quoteTitle);
   document.querySelectorAll('.quote-main .form-field').forEach(label => {
     if(label.classList.contains('comment-field')) setLabelText(label,t.message);
@@ -189,7 +202,7 @@ function translateShell(lang){
   document.querySelectorAll('.quote-footer legend').forEach(el=>el.textContent=t.business);
   const business={ 'Дистрибьютор':t.distributor,'Distributor':t.distributor,'Ритейлер':t.retailer,'Retailer':t.retailer,'Производитель':t.manufacturer,'Manufacturer':t.manufacturer,'Гидропонная ферма':t.hydro,'Hydroponic Farm':t.hydro,'Садоводческая компания':t.garden,'Horticulture Company':t.garden,'Бренд продуктов питания':t.foodBrand,'Food Brand':t.foodBrand,'Другое':t.other,'Other':t.other };
   document.querySelectorAll('.business-choices label span').forEach(el=>{const key=el.textContent.trim(); if(business[key]) el.textContent=business[key];});
-  document.querySelectorAll('.consent').forEach(label=>{const link=label.querySelector('a'); const textNodes=Array.from(label.childNodes).filter(node=>node.nodeType===Node.TEXT_NODE); if(textNodes[0]) textNodes[0].textContent=`${t.consent} `; if(link) link.textContent=t.privacy; if(textNodes[1]) textNodes[1].textContent=` ${t.consentEnd}`;});
+  document.querySelectorAll('.consent').forEach(label=>{const text=label.querySelector('.consent__text'); const link=text?.querySelector('a'); if(text) { const before=Array.from(text.childNodes).find(node=>node.nodeType===Node.TEXT_NODE); const after=Array.from(text.childNodes).filter(node=>node.nodeType===Node.TEXT_NODE).at(-1); if(before) before.textContent=`${t.consent} `; if(link) link.textContent=t.privacy; if(after && after!==before) after.textContent=` ${t.consentEnd}`; }});
   document.querySelectorAll('.button--secondary.button--full').forEach(el=>el.textContent=t.submit);
   document.querySelectorAll('.quote-kicker').forEach(el=>el.textContent=t.contacts);
   document.querySelectorAll('.contact-item.address strong').forEach(el=>el.textContent=t.legal);
@@ -200,9 +213,17 @@ function translateShell(lang){
   translateSubstratePage(lang);
   translateCookieBanner(lang);
   document.documentElement.lang=lang;
+  document.querySelectorAll('.site-header .logo-image').forEach(logo=>setSiteLogoState(logo,logo.dataset.logoState || 'default'));
   localStorage.setItem('seha-language',lang);
 }
 const languageToggle = document.querySelector('[data-language-toggle]');
+document.querySelectorAll('.site-header .logo-image').forEach(logo=>{
+  logo.dataset.logoState='default';
+  logo.addEventListener('mouseenter',()=>setSiteLogoState(logo,'hover'));
+  logo.addEventListener('mouseleave',()=>setSiteLogoState(logo,'default'));
+  logo.addEventListener('focus',()=>setSiteLogoState(logo,'hover'));
+  logo.addEventListener('blur',()=>setSiteLogoState(logo,'default'));
+});
 const savedLanguage = localStorage.getItem('seha-language') === 'en' ? 'en' : 'ru';
 if(!localStorage.getItem('seha-cookie-consent')){
   cookieBanner=document.createElement('aside');
@@ -230,27 +251,36 @@ function updateLanguageMenu(lang){
   if(!languageMenu || !languageToggle) return;
   const next=lang === 'en' ? 'ru' : 'en';
   const label=next === 'en' ? 'EN' : 'RU';
-  const flag=next === 'en' ? 'flag_of_the_UK.svg' : 'flag_of_russia.svg';
+  const flag=next === 'en' ? 'figma-language-en-option.svg' : 'figma-language-ru.svg';
   const currentSrc=languageToggle.querySelector('[data-language-flag]')?.getAttribute('src') || '';
-  const nextSrc=currentSrc.replace(/flag_of_(?:russia|the_UK)\.svg$/i,flag);
-  languageMenu.innerHTML=`<button type="button" data-set-language="${next}"><img class="language-flag" src="${nextSrc}" alt=""><span>${label}</span></button>`;
+  const nextSrc=currentSrc.replace(/(?:figma-language-ru|figma-language-en|flag_of_russia|flag_of_the_UK)\.svg$/i,flag);
+  languageMenu.innerHTML=`<button class="type-button" type="button" data-set-language="${next}"><img class="language-flag" src="${nextSrc}" alt=""><span>${label}</span></button>`;
   languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
+  setLanguageArrow(!languageMenu.hidden);
+}
+function setLanguageArrow(open){
+  const arrow=languageToggle?.querySelector('[data-language-arrow]');
+  if(!arrow) return;
+  const src=arrow.getAttribute('src') || '';
+  arrow.setAttribute('src',src.replace(/language-arrow-(?:down|up)\.svg$/i,open ? 'language-arrow-up.svg' : 'language-arrow-down.svg'));
 }
 translateShell(savedLanguage);
 updateLanguageMenu(savedLanguage);
 languageToggle?.addEventListener('click',()=>{
   languageMenu.hidden=!languageMenu.hidden;
   languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
+  setLanguageArrow(!languageMenu.hidden);
 });
 languageMenu?.addEventListener('click',event=>{
   const option=event.target.closest('[data-set-language]');
   if(!option) return;
   const next=option.dataset.setLanguage;
   languageMenu.hidden=true;
+  setLanguageArrow(false);
   if(next === 'ru'){ localStorage.setItem('seha-language','ru'); window.location.reload(); return; }
   translateShell(next);
   updateLanguageMenu(next);
 });
 document.addEventListener('click',event=>{
-  if(languageMenu && !event.target.closest('.language-control')){ languageMenu.hidden=true; languageToggle?.setAttribute('aria-expanded','false'); }
+  if(languageMenu && !event.target.closest('.language-control')){ languageMenu.hidden=true; languageToggle?.setAttribute('aria-expanded','false'); setLanguageArrow(false); }
 });
