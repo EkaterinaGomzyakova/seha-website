@@ -173,7 +173,7 @@ function translateShell(lang){
   document.querySelectorAll('.site-nav a').forEach(link => { if(nav[link.getAttribute('href')]) link.textContent = nav[link.getAttribute('href')]; });
   const mobileLabels = { '/':t.navHome, '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
   document.querySelectorAll('.mobile-nav a').forEach(link => { const key=link.getAttribute('href').replace(/#.*$/,''); if(mobileLabels[key]) setLabelText(link,mobileLabels[key]); else setLabelText(link,t.offer); });
-  document.querySelectorAll('.header-contact').forEach(link => { const arrow=link.querySelector('span'); link.firstChild.textContent=`${t.offer} `; if(arrow) link.append(arrow); });
+  document.querySelectorAll('.button--compact').forEach(link => { const arrow=link.querySelector('span'); link.firstChild.textContent=`${t.offer} `; if(arrow) link.append(arrow); });
   document.querySelectorAll('[data-language-code]').forEach(code => code.textContent=lang.toUpperCase());
   document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=flag.src.replace(/flag_of_(?:russia|the_UK)\.svg$/i,lang === 'en' ? 'flag_of_the_UK.svg' : 'flag_of_russia.svg'); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
   document.querySelectorAll('.quote-main h2').forEach(element => element.innerHTML=t.quoteTitle);
@@ -190,7 +190,7 @@ function translateShell(lang){
   const business={ 'Дистрибьютор':t.distributor,'Distributor':t.distributor,'Ритейлер':t.retailer,'Retailer':t.retailer,'Производитель':t.manufacturer,'Manufacturer':t.manufacturer,'Гидропонная ферма':t.hydro,'Hydroponic Farm':t.hydro,'Садоводческая компания':t.garden,'Horticulture Company':t.garden,'Бренд продуктов питания':t.foodBrand,'Food Brand':t.foodBrand,'Другое':t.other,'Other':t.other };
   document.querySelectorAll('.business-choices label span').forEach(el=>{const key=el.textContent.trim(); if(business[key]) el.textContent=business[key];});
   document.querySelectorAll('.consent').forEach(label=>{const link=label.querySelector('a'); const textNodes=Array.from(label.childNodes).filter(node=>node.nodeType===Node.TEXT_NODE); if(textNodes[0]) textNodes[0].textContent=`${t.consent} `; if(link) link.textContent=t.privacy; if(textNodes[1]) textNodes[1].textContent=` ${t.consentEnd}`;});
-  document.querySelectorAll('.quote-submit').forEach(el=>el.textContent=t.submit);
+  document.querySelectorAll('.button--secondary.button--full').forEach(el=>el.textContent=t.submit);
   document.querySelectorAll('.quote-kicker').forEach(el=>el.textContent=t.contacts);
   document.querySelectorAll('.contact-item.address strong').forEach(el=>el.textContent=t.legal);
   document.querySelectorAll('.contact-item:not(.address)>span').forEach(el=>{el.textContent=el.textContent.trim()==='ПОЧТА'?t.emailLabel:t.phoneLabel});
