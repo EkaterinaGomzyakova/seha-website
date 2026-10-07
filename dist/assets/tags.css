@@ -1,0 +1,29 @@
+/* Tag component — Figma node 106:5453. */
+.tag,
+.business-choices span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:2px 22px;
+  border:2px solid var(--color-yellow-transparent,rgba(217,244,0,.5));
+  border-radius:9999px;
+  background:transparent;
+  color:var(--color-yellow-brand,#d9f400);
+  font:500 16px/1.45 Inter,Arial,sans-serif;
+  text-align:center;
+  white-space:nowrap;
+  transition:background-color .2s ease,border-color .2s ease,color .2s ease;
+}
+.tag:hover,
+.business-choices label:hover span,
+.business-choices input:focus-visible+span{
+  border-color:var(--color-yellow-brand,#d9f400);
+  color:var(--color-yellow-brand,#d9f400);
+}
+.tag--pressed,
+.business-choices input:checked+span{
+  border-color:var(--color-yellow-brand,#d9f400);
+  background:var(--color-yellow-brand,#d9f400);
+  color:var(--color-green-brand,#004d25);
+}

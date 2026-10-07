@@ -82,10 +82,32 @@ if (industryTrack && industryPrev && industryNext) {
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 const menuIcon = menuToggle?.querySelector('[data-menu-icon]');
+function buildMobileMenu(){
+  if(!mobileNav || mobileNav.dataset.ready) return;
+  mobileNav.dataset.ready='true';
+  const links=Array.from(mobileNav.querySelectorAll('a')).filter(link=>{
+    const href=link.getAttribute('href') || '';
+    return href !== '/' && !href.endsWith('/#contacts') && href !== '#contacts';
+  });
+  const close=document.createElement('button');
+  close.className='mobile-nav-close';
+  close.type='button';
+  close.setAttribute('aria-label','Закрыть меню');
+  const closeAsset=window.matchMedia('(max-width:440px)').matches ? 'mobile-menu-xmark.svg' : 'tablet-menu-xmark.svg';
+  close.innerHTML=`<img src="/assets/${closeAsset}" alt="">`;
+  const linkGroup=document.createElement('div');
+  linkGroup.className='mobile-nav-links';
+  links.forEach(link=>linkGroup.append(link));
+  const contacts=document.createElement('div');
+  contacts.className='mobile-nav-contacts';
+  contacts.innerHTML='<div class="mobile-nav-contact"><span data-mobile-contact-label="phone">Телефон</span><a href="tel:+79660612828">+7 966 061-28-28</a></div><div class="mobile-nav-contact"><span data-mobile-contact-label="email">Почта</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a></div>';
+  mobileNav.replaceChildren(close,linkGroup,contacts);
+  close.addEventListener('click',()=>closeMenu());
+}
+buildMobileMenu();
 function setMenuIcon(open){
   if(!menuIcon) return;
-  const src=menuIcon.getAttribute('src') || '';
-  menuIcon.setAttribute('src',src.replace(/(?:menu|xmark)-icon\.svg$/i,open ? 'xmark-icon.svg' : 'menu-icon.svg'));
+  menuIcon.setAttribute('src',open ? '/assets/xmark-icon.svg' : '/assets/menu-icon-figma.svg');
 }
 function closeMenu(){ if(!menuToggle) return; menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Открыть меню'); setMenuIcon(false); mobileNav.hidden=true; }
 setMenuIcon(false);
@@ -174,10 +196,10 @@ function translateSubstratePage(lang){
   });
   document.title=lang === 'en' ? 'Growing Substrates — Seha' : 'Субстраты для выращивания — Сеха';
 }
-function setSiteLogoState(logo,state='default'){
-  const base=document.documentElement.lang === 'en' ? 'logo-international' : 'logo-russian';
-  logo.dataset.logoState=state;
-  logo.src=`/assets/${base}${state === 'hover' ? '-hover' : ''}.svg`;
+function setSiteLogoAsset(logo){
+  const language=document.documentElement.lang === 'en' ? 'international' : 'russian';
+  const variant=window.matchMedia('(max-width: 1024px)').matches ? 'mobile' : window.matchMedia('(max-width: 1280px)').matches ? 'smdesktop' : 'desktop';
+  logo.src=`/assets/menu-logo-${language}-${variant}.svg`;
   logo.alt=document.documentElement.lang === 'en' ? 'SEHA — international' : 'Сеха';
 }
 function translateShell(lang){
@@ -186,9 +208,12 @@ function translateShell(lang){
   document.querySelectorAll('.site-nav a').forEach(link => { if(nav[link.getAttribute('href')]) link.textContent = nav[link.getAttribute('href')]; });
   const mobileLabels = { '/':t.navHome, '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
   document.querySelectorAll('.mobile-nav a').forEach(link => { const key=link.getAttribute('href').replace(/#.*$/,''); if(mobileLabels[key]) setLabelText(link,mobileLabels[key]); else setLabelText(link,t.offer); });
+  document.querySelectorAll('[data-mobile-contact-label]').forEach(label=>{label.textContent=label.dataset.mobileContactLabel === 'email' ? t.emailLabel : t.phoneLabel;});
+  const mobileClose=document.querySelector('.mobile-nav-close');
+  if(mobileClose) mobileClose.setAttribute('aria-label',lang === 'en' ? 'Close menu' : 'Закрыть меню');
   document.querySelectorAll('.button--compact').forEach(link => { const arrow=link.querySelector('span'); link.firstChild.textContent=`${t.offer} `; if(arrow) link.append(arrow); });
   document.querySelectorAll('[data-language-code]').forEach(code => code.textContent=lang.toUpperCase());
-  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=flag.src.replace(/(?:figma-language-ru|figma-language-en|flag_of_russia|flag_of_the_UK)\.svg$/i,lang === 'en' ? 'figma-language-en.svg' : 'figma-language-ru.svg'); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
+  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=`/assets/menu-flag-${lang === 'en' ? 'en' : 'ru'}.svg`; flag.alt=lang === 'en' ? 'English' : 'Русский'; });
   document.querySelectorAll('.quote-main h2').forEach(element => element.innerHTML=t.quoteTitle);
   document.querySelectorAll('.quote-main .form-field').forEach(label => {
     if(label.classList.contains('comment-field')) setLabelText(label,t.message);
@@ -213,24 +238,18 @@ function translateShell(lang){
   translateSubstratePage(lang);
   translateCookieBanner(lang);
   document.documentElement.lang=lang;
-  document.querySelectorAll('.site-header .logo-image').forEach(logo=>setSiteLogoState(logo,logo.dataset.logoState || 'default'));
+  document.querySelectorAll('.site-header .logo-image').forEach(setSiteLogoAsset);
   localStorage.setItem('seha-language',lang);
 }
 const languageToggle = document.querySelector('[data-language-toggle]');
-document.querySelectorAll('.site-header .logo-image').forEach(logo=>{
-  logo.dataset.logoState='default';
-  logo.addEventListener('mouseenter',()=>setSiteLogoState(logo,'hover'));
-  logo.addEventListener('mouseleave',()=>setSiteLogoState(logo,'default'));
-  logo.addEventListener('focus',()=>setSiteLogoState(logo,'hover'));
-  logo.addEventListener('blur',()=>setSiteLogoState(logo,'default'));
-});
 const savedLanguage = localStorage.getItem('seha-language') === 'en' ? 'en' : 'ru';
+window.addEventListener('resize',()=>document.querySelectorAll('.site-header .logo-image').forEach(setSiteLogoAsset));
 if(!localStorage.getItem('seha-cookie-consent')){
   cookieBanner=document.createElement('aside');
   cookieBanner.className='cookie-banner';
   cookieBanner.setAttribute('role','dialog');
   cookieBanner.setAttribute('aria-label','Cookie notice');
-  cookieBanner.innerHTML='<span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть">×</button><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button>';
+  cookieBanner.innerHTML='<div class="cookie-header"><span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть"><img src="/assets/cookie-xmark.svg" alt=""></button></div><div class="cookie-content"><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button></div>';
   document.body.append(cookieBanner);
   const closeCookie=()=>{localStorage.setItem('seha-cookie-consent','accepted');cookieBanner.remove()};
   cookieBanner.querySelector('.cookie-close').addEventListener('click',closeCookie);
@@ -251,18 +270,16 @@ function updateLanguageMenu(lang){
   if(!languageMenu || !languageToggle) return;
   const next=lang === 'en' ? 'ru' : 'en';
   const label=next === 'en' ? 'EN' : 'RU';
-  const flag=next === 'en' ? 'figma-language-en-option.svg' : 'figma-language-ru.svg';
-  const currentSrc=languageToggle.querySelector('[data-language-flag]')?.getAttribute('src') || '';
-  const nextSrc=currentSrc.replace(/(?:figma-language-ru|figma-language-en|flag_of_russia|flag_of_the_UK)\.svg$/i,flag);
-  languageMenu.innerHTML=`<button class="type-button" type="button" data-set-language="${next}"><img class="language-flag" src="${nextSrc}" alt=""><span>${label}</span></button>`;
+  const flag=next === 'en' ? 'menu-flag-en.svg' : 'menu-flag-ru.svg';
+  languageMenu.innerHTML=`<button class="type-button" type="button" data-set-language="${next}"><img class="language-flag" src="/assets/${flag}" alt=""><span>${label}</span></button>`;
   languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
   setLanguageArrow(!languageMenu.hidden);
 }
 function setLanguageArrow(open){
   const arrow=languageToggle?.querySelector('[data-language-arrow]');
   if(!arrow) return;
-  const src=arrow.getAttribute('src') || '';
-  arrow.setAttribute('src',src.replace(/language-arrow-(?:down|up)\.svg$/i,open ? 'language-arrow-up.svg' : 'language-arrow-down.svg'));
+  arrow.setAttribute('src','/assets/menu-language-arrow.svg');
+  languageToggle.setAttribute('aria-expanded',String(open));
 }
 translateShell(savedLanguage);
 updateLanguageMenu(savedLanguage);

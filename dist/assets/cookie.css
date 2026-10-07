@@ -1,0 +1,32 @@
+/* Cookie banner component — Figma node 98:7166. */
+.cookie-banner{
+  position:fixed;
+  left:32px;
+  bottom:32px;
+  z-index:100;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:12px;
+  width:485px;
+  height:auto;
+  padding:32px;
+  overflow:hidden;
+  border-radius:40px;
+  background:var(--color-green-brand);
+  color:var(--color-background-light);
+  box-shadow:0 18px 50px rgba(38,50,35,.24);
+}
+.cookie-banner>div:first-child{display:flex;align-items:flex-start;justify-content:space-between;width:100%;min-height:54px}
+.cookie-badge{display:block;width:54px;height:54px;flex:0 0 54px;border-radius:0;background:url('/assets/cookie-coconut.png') center/80px 80px no-repeat;filter:none;box-shadow:none}
+.cookie-close{position:static;display:grid;place-items:center;width:24px;height:24px;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.cookie-close img{display:block;width:24px;height:24px}
+.cookie-content{display:flex;flex-direction:column;align-items:flex-start;gap:20px;width:100%}
+.cookie-banner p{margin:0;max-width:none;font:500 16px/1.45 Inter,Arial,sans-serif}
+.cookie-banner p a{color:var(--color-yellow-brand)}
+.cookie-action{min-width:0;height:40px;padding:12px 24px;border:0;border-radius:12px;background:var(--color-yellow-brand);color:var(--color-green-brand);font:700 11px/1.2 Inter,Arial,sans-serif;letter-spacing:.99px;text-transform:uppercase;cursor:pointer}
+.cookie-close:focus-visible,.cookie-action:focus-visible{outline:2px solid var(--color-yellow-brand);outline-offset:4px}
+.cookie-action:hover{filter:brightness(.95)}
+@media(max-width:560px){
+  .cookie-banner{left:12px;right:12px;bottom:12px;width:auto;height:auto;min-height:0;padding:28px;border-radius:36px}
+}

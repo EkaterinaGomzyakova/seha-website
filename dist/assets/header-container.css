@@ -1,0 +1,22 @@
+/* HeaderContainer component — Figma node 98:7232. */
+.header-container{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:27px;
+  padding:6px 8px;
+  border-radius:4px;
+  font:700 11px/1.2 Inter,Arial,sans-serif;
+  letter-spacing:.99px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.header-container--gray{
+  border:1px solid var(--color-gray,#949494);
+  color:var(--color-gray,#949494);
+}
+.header-container--green{
+  border:1px solid var(--color-green-brand,#004d25);
+  background:var(--color-green-brand,#004d25);
+  color:var(--color-yellow-brand,#d9f400);
+}
