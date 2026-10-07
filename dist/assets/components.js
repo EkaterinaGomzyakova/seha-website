@@ -52,7 +52,8 @@
 
     const contacts = document.createElement('div');
     contacts.className = 'mobile-nav-contacts';
-    contacts.innerHTML = '<div class="mobile-nav-contact"><span data-mobile-contact-label="phone">Телефон</span><a href="tel:+79660612828">+7 966 061-28-28</a></div><div class="mobile-nav-contact"><span data-mobile-contact-label="email">Почта</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a></div>';
+    const isEnglish = document.documentElement.lang === 'en';
+    contacts.innerHTML = `<div class="mobile-nav-contact"><span data-mobile-contact-label="phone">${isEnglish ? 'PHONE' : 'ТЕЛЕФОН'}</span><a href="tel:+79660612828">+7 966 061-28-28</a></div><div class="mobile-nav-contact"><span data-mobile-contact-label="email">${isEnglish ? 'EMAIL' : 'ПОЧТА'}</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a></div>`;
     mobileNav.replaceChildren(close, linkGroup, contacts);
 
     const setIcon = open => {

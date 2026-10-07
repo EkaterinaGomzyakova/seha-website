@@ -96,8 +96,8 @@ const languageDictionary = {
   },
   en: {
     navProducts:'Products', navProduction:'Manufacturing', navQuality:'Quality & Certifications', navAbout:'About us', navHome:'Home', offer:'Request a quote',
-    quoteTitle:'Request<br>a Price List', company:'Company name', contact:'Contact person name', email:'Business email', phone:'Phone number', message:'Message',
-    companyPlaceholder:'Your company name', contactPlaceholder:'Contact person name', messagePlaceholder:'Tell us about your requirements, products of interest, quantities, and delivery timelines', business:'Business type',
+    quoteTitle:'Request<br>a Delivery Quote', company:'Company Name', contact:'Contact Person Name', email:'Business Email', phone:'Phone Number', message:'Message',
+    companyPlaceholder:'Agrocomplex LLC', contactPlaceholder:'John', messagePlaceholder:'Tell us which product you are interested in, along with your requirements, quantities, and desired delivery timeline.', business:'Business Type',
     distributor:'Distributor', retailer:'Retailer', manufacturer:'Manufacturer', hydro:'Hydroponic Farm', garden:'Horticulture Company', foodBrand:'Food Brand', other:'Other', consent:'I have read the', privacy:'Privacy Policy', consentEnd:'and consent to the processing of my personal data', submit:'Request a price list', contacts:'CONTACTS', legal:'Registered Address', phoneLabel:'PHONE', emailLabel:'EMAIL', footerBrand:'NATURAL COCONUT<br>PRODUCTS', cookieText:'We use cookies to improve your experience on our website. Learn more in our', cookieLink:'Privacy Policy.', cookieAction:'ACCEPT'
   },
   privacy: {
@@ -135,6 +135,110 @@ const substratePageContent = {
     breadcrumb:'Coconut Substrates', section:'01 / COCONUT SUBSTRATES', title:'Growing Substrates', intro:'Professional coconut-based substrates for greenhouses, nurseries, hydroponics, and seedlings. We will match the fraction, format, volume, and packaging to your growing technology.', listLabel:'for horticulture', listTitle:'Product<br>categories', names:['Coconut Peat','Coconut Peat Bricks','Grow Cube Slice (M)','Grow Cube Olive (L)','Coco Disc','Coco Husk Chips','Coco Peat Tablets','Coco Peat Compost','Seeding Tray Media','Coco Peat Seed Starter'], descriptions:['Natural substrate made from cleaned coconut fibre. Suitable for improving moisture retention, aeration, and soil mix structure.','Compressed coconut substrate bricks for greenhouse operations and bulk supply. Convenient to store and transport.','Medium-format coconut blocks for seedlings, potted crops, and hydroponics. Retain moisture and support root aeration.','Large-format coconut substrate blocks for growing plants in protected cultivation and intensive irrigation systems.','Compressed coconut fibre discs. They expand when moistened and form a natural biodegradable substrate.','Large coconut shell particles for improved aeration and drainage. Suitable for orchids, hydroponics, and specialist crops.','Pressed tablets for seed germination and seedlings. They expand when moistened and form a convenient planting medium.','Organic natural substrate for growing plants and improving soil. Retains moisture and supports root health.','Ready-made mix for seedling trays and plug trays. Ensures even germination, aeration, and healthy root development.','Fine-fraction substrate for seed germination. Supports moisture retention and air access for young plant growth.'], cta:'Request a quote'
   }
 };
+const foodPageContent = {
+  ru: {
+    breadcrumb:'Главная / пищевые продукты', section:'02 / ПИЩЕВЫЕ ПРОДУКТЫ', title:'Пищевые продукты', intro:'Кокос и продукты его переработки для производителей продуктов питания, брендов, HoReCa и дистрибьюторов. Уточним формат, характеристики, упаковку и объем партии.', listLabel:'для пищевого производства', listTitle:'Оптовая<br>линейка', labels:['Fresh Coconut','Coconut Copra','Coconut Sugar','Desiccated Coconut Powder','Coconut Water','Coconut Milk','Virgin Coconut Oil','RBD Coconut Oil','MCT Oil'], names:['Свежие кокосы','Кокосовая копра','Кокосовый сахар','Кокосовая стружка','Кокосовая вода','Кокосовое молоко','Нерафинированное масло','Кокосовое масло RBD','MCT масло'], descriptions:['Отборные кокосы из индийского региона Поллачи. Контроль размера, зрелости и свежести для стабильных поставок.','Сушеная мякоть зрелого кокоса с выраженным кокосовым профилем. Используется в пищевом производстве и переработке.','Натуральный подсластитель с мягким карамельным профилем для напитков, выпечки и пищевого производства.','Высушенная измельченная кокосовая мякоть для выпечки, кондитерских изделий, начинок и пищевой промышленности.','Натуральная кокосовая вода для напитков, функциональных продуктов и контрактного производства.','Нежное кокосовое молоко для напитков, соусов, десертов и пищевых рецептур.','Кокосовое масло без химической обработки. Подходит для продуктов питания, косметики и premium-линеек.','Масло из высококачественной копры для пищевого производства, косметики и фармацевтических применений.','Прозрачное масло со среднецепочечными триглицеридами для функционального питания и спортивных продуктов.'], cta:'Заказать'
+  },
+  en: {
+    breadcrumb:'Main / food products', section:'02 / FOOD PRODUCTS', title:'Food Products', intro:'Coconut products and ingredients for food manufacturing, HoReCa, and wholesale supply. Various specifications, packaging formats, and order volumes to meet your business needs.', listLabel:'For food manufacturing', listTitle:'Wholesale<br>Product Range', labels:['Farm Selected','Oil Rich','Natural Sweetener','Fine Texture','Pure Hydration','Creamy Texture','Natural Aroma','Neutral Taste','Fast Energy'], names:['Fresh Coconut','Coconut Copra','Coconut Sugar','Desiccated Coconut Powder','Coconut Water','Coconut Milk','Virgin Coconut Oil','RBD Coconut Oil','MCT Oil'], descriptions:['Selected coconuts from the Pollachi region of India are carefully inspected for size, maturity, and freshness. Suitable for further processing.','Dried flesh of mature coconuts with a high oil content. Used for coconut oil production and further processing.','A natural sweetener made from coconut palm sap. Minimally processed to retain its natural nutrients.','Made from finely grated and dried coconut flesh. Used in bakery, confectionery, and food manufacturing.','Made from young coconuts with a naturally refreshing taste. Used in beverages and health-focused food products.','Made from the flesh of mature coconuts through grinding and pressing. Used in beverages, desserts, sauces, bakery products, and other food applications.','Made from fresh mature coconut flesh, retaining its natural taste and aroma. Used in food manufacturing and cosmetics.','Made from coconut-derived raw materials through refining, bleaching, and deodorization. Used in bakery products and other food applications.','Made from medium-chain triglycerides derived from coconut oil. Used in functional foods, sports nutrition, and specialized nutrition products.'], cta:'Request a Quote'
+  }
+};
+function translateFoodPage(lang){
+  if(!document.body.classList.contains('product-detail--food')) return;
+  const content=foodPageContent[lang];
+  if(!content) return;
+  const breadcrumb=document.querySelector('.breadcrumbs [aria-current="page"]');
+  const section=document.querySelector('.product-hero .section-label');
+  const title=document.querySelector('.product-hero h1');
+  const intro=document.querySelector('.product-hero>p');
+  const listLabel=document.querySelector('.product-list-heading>span');
+  const listTitle=document.querySelector('.product-list-heading h2');
+  if(breadcrumb) breadcrumb.textContent=content.breadcrumb;
+  if(section) section.textContent=content.section;
+  if(title) title.textContent=content.title;
+  if(intro) intro.textContent=content.intro;
+  if(listLabel) listLabel.textContent=content.listLabel;
+  if(listTitle) listTitle.innerHTML=content.listTitle;
+  document.querySelectorAll('.product-item').forEach((item,index)=>{
+    const label=item.querySelector(':scope>span');
+    const name=item.querySelector('h3');
+    const description=item.querySelector('p');
+    const action=item.querySelector('a');
+    if(label) label.textContent=content.labels[index] || '';
+    if(name) name.textContent=content.names[index] || '';
+    if(description) description.textContent=content.descriptions[index] || '';
+    if(action) action.textContent=content.cta;
+  });
+  document.title=lang === 'en' ? 'Food Products — Seha' : 'Пищевые продукты — Сеха';
+}
+const fiberPageContent = {
+  ru: {
+    breadcrumb:'Главная / Кокосовое волокно', title:'Продукты из кокосового волокна', intro:'Продукты из натурального кокосового волокна для промышленности, сельского хозяйства, озеленения и защиты грунта. Различные форматы и объёмы поставок для профессионального применения.', listLabel:'Для промышленности и строительства', listTitle:'Оптовая<br>линейка', labels:['Coir Fibre Bales','Bristle Fibre','Machine Twisted Fibre','Coir Weed Mat','Erosion Control Blankets','Coir Geo Textile'], names:['Тюки кокосового волокна','Кокосовая щетина','Скрученное волокно','Мульчирующие маты','Противоэрозионные маты','Кокосовый геотекстиль'], descriptions:['Прессованное кокосовое волокно используется для производства матрасов, мебели, канатов и промышленной продукции.','Высококачественное волокно, полученное из кокосовой скорлупы. Используется для производства щёток, ковриков, других изделий.','Кокосовое волокно, скрученное механическим способом. Используется для производства геотекстиля, канатов и промышленных изделий.','Биоразлагаемые маты для сельского хозяйства и ландшафтного дизайна. Сдерживают рост сорняков, пропуская воду и питательные вещества.','Кокосовые маты для защиты почвы от эрозии и укрепления склонов. Используются в строительстве и ландшафтных проектах.','Кокосовая сетка для укрепления почвы и защиты от эрозии. Поддерживает рост растений и сохраняет устойчивость грунта.'], cta:'Заказать'
+  },
+  en: {
+    breadcrumb:'Main / Coir products', title:'Coir Products', intro:'Natural coconut fiber products for industrial, agricultural, landscaping, and soil protection applications. Available in various formats and supply volumes for professional use.', listLabel:'INDUSTRIAL & CONSTRUCTION USE', listTitle:'Wholesale<br>Product Range', labels:['Industrial Use','High Strength','Rope Production','Weed Control','Slope Protection','Soil Stabilization'], names:['Coir Fibre Bales','Bristle Fibre','Machine Twisted Fibre','Coir Weed Mat','Erosion Control Blankets','Coir Geo Textile'], descriptions:['Processed coconut husk fibres compressed into bales for easy transport. Widely used in mattresses, upholstery, ropes, and industrial products.','High-quality fiber obtained from coconut husks. Used in the production of brushes, mats, and other fiber-based products.','Mechanically twisted coconut fiber. Used in the production of geotextiles, ropes, and various industrial products.','Biodegradable mats for agriculture and landscaping. Help suppress weed growth while allowing water and nutrients to pass through.','Coconut fiber mats designed for erosion control and slope stabilization. Used in construction, landscaping, and environmental projects.','Coconut fiber netting for soil stabilization and erosion control. Supports vegetation growth while helping maintain soil stability.'], cta:'Request a Quote'
+  }
+};
+function translateFiberPage(lang){
+  if(!document.body.classList.contains('product-detail--fiber')) return;
+  const content=fiberPageContent[lang];
+  if(!content) return;
+  const breadcrumb=document.querySelector('.breadcrumbs [aria-current="page"]');
+  const title=document.querySelector('.product-hero h1');
+  const intro=document.querySelector('.product-hero>p');
+  const listLabel=document.querySelector('.product-list-heading>span');
+  const listTitle=document.querySelector('.product-list-heading h2');
+  if(breadcrumb) breadcrumb.textContent=content.breadcrumb;
+  if(title) title.textContent=content.title;
+  if(intro) intro.textContent=content.intro;
+  if(listLabel) listLabel.textContent=content.listLabel;
+  if(listTitle) listTitle.innerHTML=content.listTitle;
+  document.querySelectorAll('.product-item').forEach((item,index)=>{
+    const label=item.querySelector(':scope>span');
+    const name=item.querySelector('h3');
+    const description=item.querySelector('p');
+    const action=item.querySelector('a');
+    if(label) label.textContent=content.labels[index] || '';
+    if(name) name.textContent=content.names[index] || '';
+    if(description) description.textContent=content.descriptions[index] || '';
+    if(action) action.textContent=content.cta;
+  });
+  document.title=lang === 'en' ? 'Coconut Fibre Products — Seha' : 'Продукты из кокосового волокна — Сеха';
+}
+const shellPageContent = {
+  ru: {
+    breadcrumb:'Главная / Кокосовая скорлупа', title:'Продукты из кокосовой скорлупы', intro:'Продукты из натуральной кокосовой скорлупы для промышленности, фильтрации и производства топлива. Различные форматы и объёмы поставок для бизнеса.', listLabel:'Для промышленности и топлива', listTitle:'Оптовая<br>линейка', labels:['Coco Shell','Coco Shell Charcoal Briquettes','Coco Shell Activated Carbon'], names:['Кокосовая скорлупа','Брикеты из кокосового угля','Активированный уголь'], descriptions:['Натуральная кокосовая скорлупа — востребованное сырьё для производства активированного угля, топлива и промышленной продукции.','Брикеты с высокой теплоотдачей и минимальным количеством золы. Подходят для гриля, барбекю и промышленного применения.','Активированный уголь из кокосовой скорлупы для очистки воды, очистки воздуха и промышленных систем фильтрации.'], cta:'Заказать'
+  },
+  en: {
+    breadcrumb:'Main / Coco Shell products', title:'Coco Shell Products', intro:'Natural coconut shell products for industrial applications, filtration, and fuel production. Available in various formats and supply volumes for business needs.', listLabel:'Industrial Raw Material', listTitle:'Wholesale<br>Product Range', labels:['Industrial Raw Material','High Heat Output','High Adsorption'], names:['Coco Shell','Coco Shell Charcoal Briquettes','Coco Shell Activated Carbon'], descriptions:['Natural coconut shell is a widely used raw material for the production of activated carbon, fuel, and industrial products.','Briquettes with high heat output and low ash content. Suitable for grilling, barbecuing, and industrial applications.','Coconut shell activated carbon for water purification, air purification, and industrial filtration systems.'], cta:'Request a Quote'
+  }
+};
+function translateShellPage(lang){
+  if(!document.body.classList.contains('product-detail--shell')) return;
+  const content=shellPageContent[lang];
+  if(!content) return;
+  const breadcrumb=document.querySelector('.breadcrumbs [aria-current="page"]');
+  const title=document.querySelector('.product-hero h1');
+  const intro=document.querySelector('.product-hero>p');
+  const listLabel=document.querySelector('.product-list-heading>span');
+  const listTitle=document.querySelector('.product-list-heading h2');
+  if(breadcrumb) breadcrumb.textContent=content.breadcrumb;
+  if(title) title.textContent=content.title;
+  if(intro) intro.textContent=content.intro;
+  if(listLabel) listLabel.textContent=content.listLabel;
+  if(listTitle) listTitle.innerHTML=content.listTitle;
+  document.querySelectorAll('.product-item').forEach((item,index)=>{
+    const label=item.querySelector(':scope>span');
+    const name=item.querySelector('h3');
+    const description=item.querySelector('p');
+    const action=item.querySelector('a');
+    if(label) label.textContent=content.labels[index] || '';
+    if(name) name.textContent=content.names[index] || '';
+    if(description) description.textContent=content.descriptions[index] || '';
+    if(action) action.textContent=content.cta;
+  });
+  document.title=lang === 'en' ? 'Coco Shell Products — Seha' : 'Продукты из кокосовой скорлупы — Сеха';
+}
 function translateSubstratePage(lang){
   if(!document.body.classList.contains('product-detail--substrates')) return;
   const content=substratePageContent[lang];
@@ -179,8 +283,8 @@ function syncProductDetailHero(){
   const variants={
     'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','/assets/category-substrates.png'],
     'product-detail--food':['Пищевые продукты','Food Products','/assets/category-food.png'],
-    'product-detail--fiber':['Кокосовое волокно','Coconut Fibre','/assets/category-fibre.png'],
-    'product-detail--shell':['Кокосовая скорлупа','Coconut Shell','/assets/category-shell.png']
+    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fibre Products','/assets/category-fibre.png'],
+    'product-detail--shell':['Продукты из кокосовой скорлупы','Coco Shell Products','/assets/category-shell.png']
   };
   const variant=Object.entries(variants).find(([className])=>document.body.classList.contains(className));
   if(!variant) return;
@@ -189,10 +293,6 @@ function syncProductDetailHero(){
 }
 function translateShell(lang){
   const t = languageDictionary[lang];
-  if(lang === 'en'){
-    t.quoteTitle='Request<br>a Delivery Quote';
-    t.submit='Request a quote';
-  }
   const nav = { '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
   document.querySelectorAll('.site-nav a').forEach(link => { if(nav[link.getAttribute('href')]) link.textContent = nav[link.getAttribute('href')]; });
   const mobileLabels = { '/':t.navHome, '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
@@ -220,11 +320,15 @@ function translateShell(lang){
   document.querySelectorAll('.button--secondary.button--full').forEach(el=>el.textContent=t.submit);
   document.querySelectorAll('.quote-kicker').forEach(el=>el.textContent=t.contacts);
   document.querySelectorAll('.contact-item.address strong').forEach(el=>el.textContent=t.legal);
+  document.querySelectorAll('.contact-item.address p').forEach(el=>el.innerHTML=lang === 'en' ? 'Office 151K, 1 Bratyev Vesninykh Boulevard<br>Moscow, 115432, Russia' : '115432, Россия, Москва<br>б-р Братьев Весниных, д. 1, пом. 151К');
   document.querySelectorAll('.contact-item:not(.address)>span').forEach(el=>{el.textContent=el.textContent.trim()==='ПОЧТА'?t.emailLabel:t.phoneLabel});
   document.querySelectorAll('.quote-bottom>div>span').forEach(el=>el.innerHTML=t.footerBrand);
   document.querySelectorAll('.quote-bottom>a').forEach(el=>el.textContent=t.privacy.toUpperCase());
   if(document.body.classList.contains('privacy-page')) translatePrivacy(lang);
   translateSubstratePage(lang);
+  translateFoodPage(lang);
+  translateFiberPage(lang);
+  translateShellPage(lang);
   translateCookieBanner(lang);
   document.documentElement.lang=lang;
   syncProductDetailHero();
