@@ -79,41 +79,6 @@ if (industryTrack && industryPrev && industryNext) {
 }
 
 // Shared navigation.
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileNav = document.getElementById('mobile-nav');
-const menuIcon = menuToggle?.querySelector('[data-menu-icon]');
-function buildMobileMenu(){
-  if(!mobileNav || mobileNav.dataset.ready) return;
-  mobileNav.dataset.ready='true';
-  const links=Array.from(mobileNav.querySelectorAll('a')).filter(link=>{
-    const href=link.getAttribute('href') || '';
-    return href !== '/' && !href.endsWith('/#contacts') && href !== '#contacts';
-  });
-  const close=document.createElement('button');
-  close.className='mobile-nav-close';
-  close.type='button';
-  close.setAttribute('aria-label','Закрыть меню');
-  const closeAsset=window.matchMedia('(max-width:440px)').matches ? 'mobile-menu-xmark.svg' : 'tablet-menu-xmark.svg';
-  close.innerHTML=`<img src="/assets/${closeAsset}" alt="">`;
-  const linkGroup=document.createElement('div');
-  linkGroup.className='mobile-nav-links';
-  links.forEach(link=>linkGroup.append(link));
-  const contacts=document.createElement('div');
-  contacts.className='mobile-nav-contacts';
-  contacts.innerHTML='<div class="mobile-nav-contact"><span data-mobile-contact-label="phone">Телефон</span><a href="tel:+79660612828">+7 966 061-28-28</a></div><div class="mobile-nav-contact"><span data-mobile-contact-label="email">Почта</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a></div>';
-  mobileNav.replaceChildren(close,linkGroup,contacts);
-  close.addEventListener('click',()=>closeMenu());
-}
-buildMobileMenu();
-function setMenuIcon(open){
-  if(!menuIcon) return;
-  menuIcon.setAttribute('src',open ? '/assets/xmark-icon.svg' : '/assets/menu-icon-figma.svg');
-}
-function closeMenu(){ if(!menuToggle) return; menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Открыть меню'); setMenuIcon(false); mobileNav.hidden=true; }
-setMenuIcon(false);
-menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));menuToggle.setAttribute('aria-label',open?'Открыть меню':'Закрыть меню');setMenuIcon(!open);mobileNav.hidden=open;});
-mobileNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
-document.addEventListener('keydown',event=>{if(event.key==='Escape' && mobileNav && !mobileNav.hidden){closeMenu();menuToggle.focus();}});
 if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
  const items=document.querySelectorAll('.reveal');
  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.08});
@@ -171,9 +136,12 @@ const substratePageContent = {
   }
 };
 function translateSubstratePage(lang){
-  if(!document.body.classList.contains('product-detail')) return;
+  if(!document.body.classList.contains('product-detail--substrates')) return;
   const content=substratePageContent[lang];
   if(!content) return;
+  const labels=lang === 'en'
+    ? ['Organic','Compressed','Hydroponics','Greenhouses','Biodegradable','Aeration','Seed Starting','Root Growth','Nursery Production','Fine Grade']
+    : ['Coco Peat','Coco Peat Bricks','Grow Cube Slice M','Grow Cube Olive L','Coco Disc','Coco Husk Chips','Coco Peat Tablets','Coco Peat Compost','Seeding Tray Media','Coco Peat Seed Starter'];
   const breadcrumb=document.querySelector('.breadcrumbs [aria-current="page"]');
   const section=document.querySelector('.product-hero .section-label');
   const title=document.querySelector('.product-hero h1');
@@ -182,19 +150,21 @@ function translateSubstratePage(lang){
   const listTitle=document.querySelector('.product-list-heading h2');
   if(breadcrumb) breadcrumb.textContent=content.breadcrumb;
   if(section) section.textContent=content.section;
-  if(title) title.textContent=content.title;
+  if(title) title.textContent=lang === 'en' ? 'Growing Substrates' : 'Кокосовые субстраты';
   if(intro) intro.textContent=content.intro;
   if(listLabel) listLabel.textContent=content.listLabel;
-  if(listTitle) listTitle.innerHTML=content.listTitle;
+  if(listTitle) listTitle.innerHTML=lang === 'en' ? 'Wholesale<br>Product Range' : 'Оптовая<br>линейка';
   document.querySelectorAll('.product-item').forEach((item,index)=>{
+    const label=item.querySelector(':scope>span');
     const name=item.querySelector('h3');
     const description=item.querySelector('p');
     const action=item.querySelector('a');
+    if(label) label.textContent=labels[index] || '';
     if(name) name.textContent=content.names[index];
     if(description) description.textContent=content.descriptions[index];
     if(action) action.textContent=content.cta;
   });
-  document.title=lang === 'en' ? 'Growing Substrates — Seha' : 'Субстраты для выращивания — Сеха';
+  document.title=lang === 'en' ? 'Growing Substrates — Seha' : 'Кокосовые субстраты — Сеха';
 }
 function setSiteLogoAsset(logo){
   const language=document.documentElement.lang === 'en' ? 'international' : 'russian';
@@ -202,8 +172,27 @@ function setSiteLogoAsset(logo){
   logo.src=`/assets/menu-logo-${language}-${variant}.svg`;
   logo.alt=document.documentElement.lang === 'en' ? 'SEHA — international' : 'Сеха';
 }
+function syncProductDetailHero(){
+  const title=document.querySelector('.product-hero h1');
+  const icon=document.querySelector('.product-hero-icon img');
+  if(!title || !icon) return;
+  const variants={
+    'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','/assets/category-substrates.png'],
+    'product-detail--food':['Пищевые продукты','Food Products','/assets/category-food.png'],
+    'product-detail--fiber':['Кокосовое волокно','Coconut Fibre','/assets/category-fibre.png'],
+    'product-detail--shell':['Кокосовая скорлупа','Coconut Shell','/assets/category-shell.png']
+  };
+  const variant=Object.entries(variants).find(([className])=>document.body.classList.contains(className));
+  if(!variant) return;
+  title.textContent=document.documentElement.lang === 'en' ? variant[1][1] : variant[1][0];
+  icon.src=variant[1][2];
+}
 function translateShell(lang){
   const t = languageDictionary[lang];
+  if(lang === 'en'){
+    t.quoteTitle='Request<br>a Delivery Quote';
+    t.submit='Request a quote';
+  }
   const nav = { '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
   document.querySelectorAll('.site-nav a').forEach(link => { if(nav[link.getAttribute('href')]) link.textContent = nav[link.getAttribute('href')]; });
   const mobileLabels = { '/':t.navHome, '/products':t.navProducts, '/production':t.navProduction, '/quality':t.navQuality, '/about':t.navAbout };
@@ -238,6 +227,7 @@ function translateShell(lang){
   translateSubstratePage(lang);
   translateCookieBanner(lang);
   document.documentElement.lang=lang;
+  syncProductDetailHero();
   document.querySelectorAll('.site-header .logo-image').forEach(setSiteLogoAsset);
   localStorage.setItem('seha-language',lang);
 }
@@ -245,11 +235,7 @@ const languageToggle = document.querySelector('[data-language-toggle]');
 const savedLanguage = localStorage.getItem('seha-language') === 'en' ? 'en' : 'ru';
 window.addEventListener('resize',()=>document.querySelectorAll('.site-header .logo-image').forEach(setSiteLogoAsset));
 if(!localStorage.getItem('seha-cookie-consent')){
-  cookieBanner=document.createElement('aside');
-  cookieBanner.className='cookie-banner';
-  cookieBanner.setAttribute('role','dialog');
-  cookieBanner.setAttribute('aria-label','Cookie notice');
-  cookieBanner.innerHTML='<div class="cookie-header"><span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть"><img src="/assets/cookie-xmark.svg" alt=""></button></div><div class="cookie-content"><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button></div>';
+  cookieBanner=document.createElement('seha-cookie-banner');
   document.body.append(cookieBanner);
   const closeCookie=()=>{localStorage.setItem('seha-cookie-consent','accepted');cookieBanner.remove()};
   cookieBanner.querySelector('.cookie-close').addEventListener('click',closeCookie);

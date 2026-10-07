@@ -5,11 +5,13 @@
 .site-header .language-switch{padding:0;gap:4px}
 .site-header .language-arrow{width:24px;height:24px;flex:0 0 24px}
 .site-header .language-switch[aria-expanded=true] .language-arrow{transform:rotate(180deg)}
+html.menu-open,body.menu-open{overflow:hidden}
+.site-header .mobile-nav[hidden]{display:none}
 
 @media (max-width:1024px){
   .site-header .mobile-nav{
-    position:absolute;
-    top:72px;
+    position:fixed;
+    top:0;
     left:0;
     right:0;
     z-index:30;
@@ -18,8 +20,8 @@
     align-items:flex-end;
     gap:28px;
     width:auto;
-    height:calc(100dvh - 72px);
-    min-height:548px;
+    height:548px;
+    min-height:0;
     padding:20px 32px 24px;
     overflow:hidden;
     border:0;
@@ -58,5 +60,4 @@
   .site-header .button--compact,.site-nav{display:none}
   .site-header .language-switch{margin-left:auto}
   .site-header .menu-toggle{display:flex;width:32px;height:32px;padding:0;gap:0}
-  .site-header .mobile-nav{top:72px}
 }

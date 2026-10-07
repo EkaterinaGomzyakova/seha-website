@@ -1,0 +1,28 @@
+/* Pixel-aligned layout for the four Figma product pages. */
+.product-detail .site-header{width:var(--grid-content-width);max-width:none;height:auto;padding:18px 0}
+.product-detail .breadcrumbs{width:var(--grid-content-width);max-width:none;padding:0;min-height:24px}
+.product-detail .product-hero{width:var(--grid-content-width);max-width:none;padding:54px 32px 64px}
+.product-detail .product-hero>.section-label{display:none}
+.product-detail .product-hero h1{max-width:1088px;margin:0}
+.product-detail .product-hero>p{max-width:1088px;margin-top:24px}
+.product-detail .product-list-section{width:min(1088px,var(--grid-content-width));max-width:none;padding:88px 0 120px}
+.product-detail .product-grid-page{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.product-detail .product-item>span{margin-bottom:12px}
+.product-detail .product-item h3{margin-bottom:12px}
+.product-detail--substrates .product-hero-icon img{content:url('/assets/category-substrates.png')}
+.product-detail--food .product-hero-icon img{content:url('/assets/category-food.png')}
+.product-detail--fiber .product-hero-icon img{content:url('/assets/category-fibre.png')}
+.product-detail--shell .product-hero-icon img{content:url('/assets/category-shell.png')}
+@media(max-width:800px){
+  .product-detail .site-header{width:var(--grid-content-width);padding:20px 0}
+  .product-detail .breadcrumbs{width:var(--grid-content-width);padding:0}
+  .product-detail .product-hero{width:var(--grid-content-width);padding:44px 24px 52px}
+  .product-detail .product-grid-page{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+  .product-detail .product-list-section{padding:64px 0 80px}
+}
+@media(max-width:440px){
+  .product-detail .site-header{padding:20px 0}
+  .product-detail .product-hero{padding:34px 24px 42px}
+  .product-detail .product-grid-page{grid-template-columns:1fr;gap:32px}
+  .product-detail .product-list-section{padding:54px 0 66px}
+}

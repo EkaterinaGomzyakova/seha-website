@@ -1,0 +1,12 @@
+/* Light-DOM Web Components preserve the existing design-system selectors. */
+seha-header,
+seha-footer,
+seha-mobile-menu,
+seha-button,
+seha-link,
+seha-input,
+seha-checkbox,
+seha-tag,
+seha-language-switcher{display:contents}
+
+seha-mobile-menu{position:static}

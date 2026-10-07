@@ -1,0 +1,38 @@
+/* Figma: Footer (98:6766). The footer composes the shared Input, Tag,
+   Checkbox, Button and Link components already used by the form. */
+.quote-footer{
+  width:var(--grid-content-width,calc(100% - 32px));
+  max-width:1880px;
+  margin:0 auto 16px;
+  padding:54px clamp(80px,13.33vw,256px);
+  border-radius:40px;
+}
+.quote-layout{grid-template-columns:minmax(0,668px) minmax(250px,394px);gap:80px}
+.quote-main h2{font-size:clamp(52px,3.75vw,72px);line-height:1;letter-spacing:-2.88px}
+.form-grid{column-gap:24px;row-gap:32px}
+.business-choices span{min-height:42px;padding:2px 22px;border-width:2px;display:inline-flex;align-items:center;justify-content:center}
+.consent{align-items:flex-start}
+.quote-bottom{margin-top:48px;padding-top:50px}
+
+@media(max-width:1280px){
+  .quote-footer{padding:48px 80px}
+  .quote-layout{grid-template-columns:minmax(0,532px) minmax(230px,1fr);gap:56px}
+  .quote-main h2{font-size:52px;letter-spacing:-2.08px}
+}
+
+@media(max-width:800px){
+  .quote-footer{padding:48px 32px;border-radius:40px}
+  .quote-layout{grid-template-columns:1fr;gap:54px}
+  .quote-main h2{font-size:52px;letter-spacing:-2.08px}
+  .quote-bottom{align-items:flex-end}
+}
+
+@media(max-width:440px){
+  .quote-footer{padding:40px 24px;border-radius:40px}
+  .quote-layout{gap:40px}
+  .quote-main h2{font-size:32px;letter-spacing:-1.28px}
+  .form-grid{grid-template-columns:1fr;row-gap:24px}
+  .business-choices span{padding-inline:14px;font-size:14px}
+  .consent{font-size:13px}
+  .quote-bottom{align-items:flex-start;flex-direction:column;gap:32px;margin-top:32px;padding-top:42px}
+}
