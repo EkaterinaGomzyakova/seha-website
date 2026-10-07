@@ -20,9 +20,8 @@
 }
 @media(min-width:1281px){
   .cookie-banner{
-    top:804px;
     right:max(32px,calc((100vw - 1648px)/2));
-    bottom:auto;
+    bottom:40px;
   }
 }
 .cookie-banner>div:first-child{display:flex;align-items:flex-start;justify-content:space-between;width:100%;min-height:54px}
