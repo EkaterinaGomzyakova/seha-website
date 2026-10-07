@@ -1,5 +1,7 @@
 /* Native Web Components for the shared SEHA design system. */
 (function(){
+  const assetBase = new URL('.', document.currentScript?.src || document.baseURI);
+  const assetPath = file => new URL(file, assetBase).href;
   const define = (name, Base = HTMLElement, setup = () => {}) => {
     if(customElements.get(name)) return;
     class SehaComponent extends Base {
@@ -27,7 +29,7 @@
     this.classList.add('cookie-banner');
     this.setAttribute('role','dialog');
     this.setAttribute('aria-label','Cookie notice');
-    this.innerHTML = '<div class="cookie-header"><span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть"><img src="/assets/cookie-xmark.svg" alt=""></button></div><div class="cookie-content"><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button></div>';
+    this.innerHTML = `<div class="cookie-header"><span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть"><img src="${assetPath('cookie-xmark.svg')}" alt=""></button></div><div class="cookie-content"><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button></div>`;
   });
 
   define('seha-mobile-menu', HTMLElement, function(){
@@ -44,7 +46,7 @@
     close.className = 'mobile-nav-close';
     close.type = 'button';
     close.setAttribute('aria-label','Закрыть меню');
-    close.innerHTML = '<img src="/assets/tablet-menu-xmark.svg" alt="">';
+    close.innerHTML = `<img src="${assetPath('tablet-menu-xmark.svg')}" alt="">`;
 
     const linkGroup = document.createElement('div');
     linkGroup.className = 'mobile-nav-links';
@@ -57,7 +59,7 @@
     mobileNav.replaceChildren(close, linkGroup, contacts);
 
     const setIcon = open => {
-      if(menuIcon) menuIcon.src = open ? '/assets/mobile-menu-xmark.svg' : '/assets/menu-icon-figma.svg';
+      if(menuIcon) menuIcon.src = assetPath(open ? 'mobile-menu-xmark.svg' : 'menu-icon-figma.svg');
     };
     const closeMenu = () => {
       menuToggle.setAttribute('aria-expanded','false');

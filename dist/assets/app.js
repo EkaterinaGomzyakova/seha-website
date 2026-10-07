@@ -87,6 +87,8 @@ if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: red
 }
 
 // Shared RU/EN switch for the site shell and the privacy policy.
+const assetBase = new URL('.', document.currentScript?.src || document.baseURI);
+const assetPath = file => new URL(file, assetBase).href;
 const languageDictionary = {
   ru: {
     navProducts:'Продукты', navProduction:'Производство', navQuality:'Качество', navAbout:'Из кокосового волокна', navHome:'Главная', offer:'Получить предложение',
@@ -273,7 +275,7 @@ function translateSubstratePage(lang){
 function setSiteLogoAsset(logo){
   const language=document.documentElement.lang === 'en' ? 'international' : 'russian';
   const variant=window.matchMedia('(max-width: 1024px)').matches ? 'mobile' : window.matchMedia('(max-width: 1280px)').matches ? 'smdesktop' : 'desktop';
-  logo.src=`/assets/menu-logo-${language}-${variant}.svg`;
+  logo.src=assetPath(`menu-logo-${language}-${variant}.svg`);
   logo.alt=document.documentElement.lang === 'en' ? 'SEHA — international' : 'Сеха';
 }
 function syncProductDetailHero(){
@@ -281,15 +283,15 @@ function syncProductDetailHero(){
   const icon=document.querySelector('.product-hero-icon img');
   if(!title || !icon) return;
   const variants={
-    'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','/assets/category-substrates.png'],
-    'product-detail--food':['Пищевые продукты','Food Products','/assets/category-food.png'],
-    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fibre Products','/assets/category-fibre.png'],
-    'product-detail--shell':['Продукты из кокосовой скорлупы','Coco Shell Products','/assets/category-shell.png']
+    'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','category-substrates.png'],
+    'product-detail--food':['Пищевые продукты','Food Products','category-food.png'],
+    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fibre Products','category-fibre.png'],
+    'product-detail--shell':['Продукты из кокосовой скорлупы','Coco Shell Products','category-shell.png']
   };
   const variant=Object.entries(variants).find(([className])=>document.body.classList.contains(className));
   if(!variant) return;
   title.textContent=document.documentElement.lang === 'en' ? variant[1][1] : variant[1][0];
-  icon.src=variant[1][2];
+  icon.src=assetPath(variant[1][2]);
 }
 function translateShell(lang){
   const t = languageDictionary[lang];
@@ -302,7 +304,7 @@ function translateShell(lang){
   if(mobileClose) mobileClose.setAttribute('aria-label',lang === 'en' ? 'Close menu' : 'Закрыть меню');
   document.querySelectorAll('.button--compact').forEach(link => { const arrow=link.querySelector('span'); link.firstChild.textContent=`${t.offer} `; if(arrow) link.append(arrow); });
   document.querySelectorAll('[data-language-code]').forEach(code => code.textContent=lang.toUpperCase());
-  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=`/assets/menu-flag-${lang === 'en' ? 'en' : 'ru'}.svg`; flag.alt=lang === 'en' ? 'English' : 'Русский'; });
+  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=assetPath(`menu-flag-${lang === 'en' ? 'en' : 'ru'}.svg`); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
   document.querySelectorAll('.quote-main h2').forEach(element => element.innerHTML=t.quoteTitle);
   document.querySelectorAll('.quote-main .form-field').forEach(label => {
     if(label.classList.contains('comment-field')) setLabelText(label,t.message);
@@ -361,14 +363,14 @@ function updateLanguageMenu(lang){
   const next=lang === 'en' ? 'ru' : 'en';
   const label=next === 'en' ? 'EN' : 'RU';
   const flag=next === 'en' ? 'menu-flag-en.svg' : 'menu-flag-ru.svg';
-  languageMenu.innerHTML=`<button class="type-button" type="button" data-set-language="${next}"><img class="language-flag" src="/assets/${flag}" alt=""><span>${label}</span></button>`;
+  languageMenu.innerHTML=`<button class="type-button" type="button" data-set-language="${next}"><img class="language-flag" src="${assetPath(flag)}" alt=""><span>${label}</span></button>`;
   languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
   setLanguageArrow(!languageMenu.hidden);
 }
 function setLanguageArrow(open){
   const arrow=languageToggle?.querySelector('[data-language-arrow]');
   if(!arrow) return;
-  arrow.setAttribute('src','/assets/menu-language-arrow.svg');
+  arrow.setAttribute('src',assetPath('menu-language-arrow.svg'));
   languageToggle.setAttribute('aria-expanded',String(open));
 }
 translateShell(savedLanguage);
