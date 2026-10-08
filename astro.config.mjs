@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
+  site: 'https://seha-group.ru',
   output: 'static',
   outDir: './dist',
   publicDir: './public',

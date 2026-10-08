@@ -90,8 +90,8 @@ if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: red
 const assetBase = new URL('.', document.currentScript?.src || document.baseURI);
 const assetPath = file => new URL(file, assetBase).href;
 const languageDictionary = {
-  ru: {
-    navProducts:'Продукты', navProduction:'Производство', navQuality:'Качество', navAbout:'Из кокосового волокна', navHome:'Главная', offer:'Получить предложение',
+    ru: {
+    navProducts:'Продукты', navProduction:'Производство', navQuality:'Качество', navAbout:'О компании', navHome:'Главная', offer:'Получить предложение',
     quoteTitle:'Получите<br>расчёт<br>поставки', company:'Название компании', contact:'Имя контактного лица', email:'Контактный email', phone:'Номер телефона', message:'Сообщение',
     companyPlaceholder:'ООО Агрокомплекс', contactPlaceholder:'Иван', messagePlaceholder:'Расскажите, какой продукт вам нужен, о ваших требованиях, количестве и сроках', business:'Тип компании',
     distributor:'Дистрибьютор', retailer:'Ритейлер', manufacturer:'Производитель', hydro:'Гидропонная ферма', garden:'Садоводческая компания', foodBrand:'Бренд продуктов питания', other:'Другое', consent:'Я ознакомлен(а) с', privacy:'Политикой конфиденциальности', consentEnd:'и даю согласие на обработку персональных данных', submit:'Получить расчёт', contacts:'КОНТАКТЫ', legal:'Юридический адрес', phoneLabel:'ТЕЛЕФОН', emailLabel:'ПОЧТА', footerBrand:'НАТУРАЛЬНЫЕ ПРОДУКТЫ<br>ИЗ КОКОСА', cookieText:'Мы используем куки для улучшения работы сайта. Подробнее — в', cookieLink:'Политике конфиденциальности.', cookieAction:'ПОНЯТНО'
@@ -338,7 +338,7 @@ function translateShell(lang){
   localStorage.setItem('seha-language',lang);
 }
 const languageToggle = document.querySelector('[data-language-toggle]');
-const savedLanguage = localStorage.getItem('seha-language') === 'en' ? 'en' : 'ru';
+const savedLanguage = document.documentElement.lang === 'en' ? 'en' : 'ru';
 window.addEventListener('resize',()=>document.querySelectorAll('.site-header .logo-image').forEach(setSiteLogoAsset));
 if(!localStorage.getItem('seha-cookie-consent')){
   cookieBanner=document.createElement('seha-cookie-banner');
@@ -386,7 +386,9 @@ languageMenu?.addEventListener('click',event=>{
   const next=option.dataset.setLanguage;
   languageMenu.hidden=true;
   setLanguageArrow(false);
-  if(next === 'ru'){ localStorage.setItem('seha-language','ru'); window.location.reload(); return; }
+  const target = languageToggle?.dataset.languageTarget;
+  localStorage.setItem('seha-language',next);
+  if(target){ window.location.assign(target); return; }
   translateShell(next);
   updateLanguageMenu(next);
 });

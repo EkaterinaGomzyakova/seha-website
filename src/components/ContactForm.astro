@@ -1,4 +1,6 @@
 ---
+const { locale = 'ru' } = Astro.props;
+const privacyHref = locale === 'en' ? '/en/privacy/' : '/ru/privacy/';
 ---
 <form id="quote-form">
             <div class="form-grid">
@@ -92,7 +94,7 @@
                 aria-hidden="true"
               ></span
               ><span class="consent__text"
-                >Я ознакомлен(а) с <a href="/privacy">Политикой конфиденциальности</a> и даю
+                >Я ознакомлен(а) с <a href={privacyHref}>Политикой конфиденциальности</a> и даю
                 согласие на обработку персональных данных</span
               ></label
             >

@@ -1,32 +1,37 @@
 ---
 import ContactForm from './ContactForm.astro';
+const { locale = 'ru' } = Astro.props;
+const isEnglish = locale === 'en';
+const copy = isEnglish
+  ? { title: 'Request<br />a delivery<br />quote', contacts: 'CONTACTS', address: 'Registered Address', addressText: 'Office 151K, 1 Bratyev Vesninykh Boulevard<br />Moscow, 115432, Russia', phone: 'PHONE', email: 'EMAIL', brand: 'NATURAL COCONUT<br />PRODUCTS', privacy: 'PRIVACY POLICY', logoAlt: 'SEHA — international', home: 'Home', privacyHref: '/en/privacy/' }
+  : { title: 'Получите<br />расчёт<br />поставки', contacts: 'КОНТАКТЫ', address: 'Юридический адрес', addressText: '115432, Россия, Москва<br />б-р Братьев Весниных, д. 1, пом. 151К', phone: 'ТЕЛЕФОН', email: 'ПОЧТА', brand: 'НАТУРАЛЬНЫЕ ПРОДУКТЫ<br />ИЗ КОКОСА', privacy: 'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ', logoAlt: 'Сеха', home: 'Главная', privacyHref: '/ru/privacy/' };
+const localizePath = (path) => `/${locale}${path === '/' ? '/' : path}`;
 ---
 <footer class="quote-footer" id="contacts">
       <div class="quote-layout">
         <section class="quote-main" aria-labelledby="quote-title">
-          <h2 id="quote-title" class="type-h2">Получите<br />расчёт<br />поставки</h2>
-          <ContactForm />
+          <h2 id="quote-title" class="type-h2" set:html={copy.title}></h2>
+          <ContactForm locale={locale} />
         </section>
         <aside class="quote-contacts" aria-labelledby="contacts-title">
-          <span class="quote-kicker" id="contacts-title">КОНТАКТЫ</span>
+          <span class="quote-kicker" id="contacts-title">{copy.contacts}</span>
           <div class="contact-item address">
-            <strong>Юридический адрес</strong>
-            <p class="type-p">115432, Россия, Москва<br />б-р Братьев Весниных, д. 1, пом. 151К</p>
+            <strong>{copy.address}</strong>
+            <p class="type-p" set:html={copy.addressText}></p>
           </div>
           <div class="contact-item">
-            <span>ТЕЛЕФОН</span><a href="tel:+79660612828">+7 966 061-28-28</a>
+            <span>{copy.phone}</span><a href="tel:+79660612828">+7 966 061-28-28</a>
           </div>
           <div class="contact-item">
-            <span>ПОЧТА</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a>
+            <span>{copy.email}</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a>
           </div>
         </aside>
       </div>
       <div class="quote-bottom">
         <div class="quote-brand">
-          <a class="logo" href="/" aria-label="Сеха — главная"
-            ><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt="Сеха" /></a
-          ><span>НАТУРАЛЬНЫЕ ПРОДУКТЫ<br />ИЗ КОКОСА</span>
+          <a class="logo" href={localizePath('/')} aria-label={`${copy.logoAlt} — ${copy.home}`}><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt={copy.logoAlt} /></a
+          ><span set:html={copy.brand}></span>
         </div>
-        <a href="/privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+        <a href={copy.privacyHref}>{copy.privacy}</a>
       </div>
     </footer>

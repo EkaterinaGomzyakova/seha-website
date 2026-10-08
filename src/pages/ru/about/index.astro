@@ -39,9 +39,9 @@ import SeoLinks from '@components/SeoLinks.astro';
   </head>
   <body class="home about">
     <a class="skip" href="#approach">К подходу</a>
-    <Header />
+    <Header locale="ru" />
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="/">Главная</a><span aria-hidden="true">/</span
+      <a href="/ru/">Главная</a><span aria-hidden="true">/</span
       ><span aria-current="page">О компании</span>
     </nav>
     <main>
@@ -58,8 +58,8 @@ import SeoLinks from '@components/SeoLinks.astro';
             качества: от пищевых ингредиентов до субстратов, волокна и скорлупы.
           </p>
           <div class="production-actions">
-            <a class="button button--secondary" href="/products">Выбрать продукцию <span>↗</span></a
-            ><a class="button button--tertiary" href="/production">Как устроено производство</a>
+            <a class="button button--secondary" href="/ru/products/">Выбрать продукцию <span>↗</span></a
+            ><a class="button button--tertiary" href="/ru/production/">Как устроено производство</a>
           </div>
         </div>
         <div class="about-hero-note">
@@ -248,7 +248,7 @@ import SeoLinks from '@components/SeoLinks.astro';
         </div>
       </section>
     </main>
-    <Footer />
+    <Footer locale="ru" />
     <script is:inline src="/assets/components.js"></script>
     <script is:inline src="/assets/app.js"></script>
   </body>

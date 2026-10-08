@@ -1,20 +1,29 @@
 ---
+const { locale = 'ru' } = Astro.props;
+const isEnglish = locale === 'en';
+const localizePath = (path) => `/${locale}${path === '/' ? '/' : path}`;
+const routePath = (Astro.url.pathname.replace(/^\/(?:ru|en)(?=\/|$)/, '').replace(/\/$/, '') || '/');
+const languageTarget = `/${isEnglish ? 'ru' : 'en'}${routePath === '/' ? '/' : `${routePath}/`}`;
+const copy = isEnglish
+  ? { home: 'Home', products: 'Products', production: 'Manufacturing', quality: 'Quality & Certifications', about: 'About us', offer: 'Request a quote', language: 'Switch language', menu: 'Open menu', logoAlt: 'SEHA — international' }
+  : { home: 'Главная', products: 'Продукты', production: 'Производство', quality: 'Качество', about: 'О компании', offer: 'Получить предложение', language: 'Переключить язык', menu: 'Открыть меню', logoAlt: 'Сеха' };
 ---
 <header class="header site-header">
-      <a class="logo" href="/" aria-label="Сеха — главная"
+      <a class="logo" href={localizePath('/')} aria-label={`${copy.logoAlt} — ${copy.home}`}
         ><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt="Сеха"
       /></a>
       <nav class="site-nav" aria-label="Основная навигация">
-        <a href="/products">Продукты</a><a href="/production">Производство</a
-        ><a href="/quality">Качество</a><a href="/about">О компании</a>
+        <a href={localizePath('/products')}>{copy.products}</a><a href={localizePath('/production')}>{copy.production}</a
+        ><a href={localizePath('/quality')}>{copy.quality}</a><a href={localizePath('/about')}>{copy.about}</a>
       </nav>
-      <a class="button button--primary button--compact" href="#contacts"
-        >Получить предложение <span aria-hidden="true">↗</span></a
+      <a class="button button--primary button--compact" href={`${localizePath('/')}#contacts`
+        }>{copy.offer} <span aria-hidden="true">↗</span></a
       ><button
         class="language-switch type-button"
         type="button"
         data-language-toggle
-        aria-label="Переключить язык"
+        data-language-target={languageTarget}
+        aria-label={copy.language}
       >
         <img
           class="language-flag"
@@ -30,7 +39,7 @@
         /></button
       ><button
         class="menu-toggle"
-        aria-label="Открыть меню"
+        aria-label={copy.menu}
         aria-expanded="false"
         aria-controls="mobile-nav"
       >
@@ -42,9 +51,9 @@
           aria-hidden="true"
         />
       </button>
-      <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
-        <a href="/">Главная</a><a href="/products">Продукты</a><a href="/production">Производство</a
-        ><a href="/quality">Качество</a><a href="/about">О компании</a
-        ><a href="#contacts">Получить предложение</a>
+      <nav id="mobile-nav" class="mobile-nav" aria-label={isEnglish ? 'Mobile navigation' : 'Мобильная навигация'} hidden>
+        <a href={localizePath('/')}>{copy.home}</a><a href={localizePath('/products')}>{copy.products}</a><a href={localizePath('/production')}>{copy.production}</a
+        ><a href={localizePath('/quality')}>{copy.quality}</a><a href={localizePath('/about')}>{copy.about}</a
+        ><a href={`${localizePath('/')}#contacts`}>{copy.offer}</a>
       </nav>
     </header>

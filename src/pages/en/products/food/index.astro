@@ -4,21 +4,21 @@ import Footer from '@components/Footer.astro';
 import SeoLinks from '@components/SeoLinks.astro';
 ---
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#004b32" />
     <meta
       name="description"
-      content="Органические кокосовые продукты Сеха. Пищевые ингредиенты, субстраты для выращивания, кокосовое волокно и скорлупа. Прямые поставки от производителя."
+      content="Organic coconut products for food manufacturing, horticulture and industry. Direct B2B supply from Seha."
     />
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23004b32%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-weight%3D%22bold%22%20font-size%3D%2248%22%20fill%3D%22%23d7f500%22%3E%D1%81%3C%2Ftext%3E%3C%2Fsvg%3E"
     />
-    <title>Пищевые продукты — Сеха</title>
+    <title>Food Products — Seha</title>
     <link rel="stylesheet" href="/assets/styles.css" />
     <link rel="stylesheet" href="/assets/components.css" />
     <link rel="stylesheet" href="/assets/buttons.css" />
@@ -37,11 +37,11 @@ import SeoLinks from '@components/SeoLinks.astro';
     <link rel="stylesheet" href="/assets/grid.css" />
     <link rel="stylesheet" href="/assets/footer.css" />
     <link rel="stylesheet" href="/assets/product-detail-pixel.css" />
-      <SeoLinks locale="ru" path="/products/food" />
+      <SeoLinks locale="en" path="/products/food" />
   </head>
   <body class="product-detail product-detail--food">
     <a class="skip" href="#products-list">К продуктам</a>
-    <Header />
+    <Header locale="en" />
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <span aria-current="page">Главная / пищевые продукты</span>
     </nav>
@@ -278,7 +278,7 @@ import SeoLinks from '@components/SeoLinks.astro';
         </div>
       </section>
     </main>
-    <Footer />
+    <Footer locale="en" />
     <script is:inline src="/assets/components.js"></script>
     <script is:inline src="/assets/app.js"></script>
   </body>
