@@ -46,7 +46,7 @@
     close.className = 'mobile-nav-close';
     close.type = 'button';
     close.setAttribute('aria-label','Закрыть меню');
-    close.innerHTML = `<img src="${assetPath('tablet-menu-xmark.svg')}" alt="">`;
+    close.innerHTML = `<img src="${assetPath('mobile-menu-xmark.svg')}" alt="">`;
 
     const linkGroup = document.createElement('div');
     linkGroup.className = 'mobile-nav-links';
