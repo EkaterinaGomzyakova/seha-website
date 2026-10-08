@@ -1,0 +1,21 @@
+{
+  "name": "seha-website",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.17.1"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint --no-ignore public/assets/*.js astro.config.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "astro": "^4.16.19",
+    "eslint": "^8.57.1",
+    "prettier": "^3.6.2"
+  }
+}

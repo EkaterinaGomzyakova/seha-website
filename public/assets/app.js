@@ -6,13 +6,13 @@ if (quoteForm) {
   const copyButton = document.getElementById('copy-quote');
   let preparedQuote = '';
   quoteForm.noValidate = true;
-  function validatePhone(showError = false) {
+  const validatePhone = (showError = false) => {
     const count = phone.value.replace(/\D/g, '').length;
     const valid = count >= 7 && count <= 15;
     phone.setCustomValidity(valid ? '' : 'Укажите телефон: от 7 до 15 цифр.');
     if (showError || valid) phoneError.hidden = valid;
     return valid;
-  }
+  };
   phone.addEventListener('input', () => validatePhone(false));
   quoteForm.addEventListener('input', () => { if (result) result.hidden = true; });
   quoteForm.addEventListener('submit', event => {
@@ -60,12 +60,12 @@ const industryTrack = document.querySelector('.industry-track');
 const industryPrev = document.querySelector('[data-industry-prev]');
 const industryNext = document.querySelector('[data-industry-next]');
 if (industryTrack && industryPrev && industryNext) {
-  function updateIndustryArrows() {
+  const updateIndustryArrows = () => {
     const maxScroll = industryTrack.scrollWidth - industryTrack.clientWidth - 2;
     industryPrev.disabled = industryTrack.scrollLeft <= 2;
     industryNext.disabled = industryTrack.scrollLeft >= maxScroll;
-  }
-  function scrollIndustries(direction) {
+  };
+  const scrollIndustries = direction => {
     const card = industryTrack.querySelector('.industry-card');
     const gap = parseFloat(getComputedStyle(industryTrack).columnGap) || 16;
     const step = card ? card.getBoundingClientRect().width + gap : industryTrack.clientWidth * .8;
