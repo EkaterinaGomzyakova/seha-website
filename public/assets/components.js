@@ -14,17 +14,6 @@
     customElements.define(name, SehaComponent);
   };
 
-  ['seha-button','seha-link','seha-input','seha-checkbox','seha-tag','seha-language-switcher']
-    .forEach(name => define(name, HTMLElement));
-
-  define('seha-header', HTMLElement, function(){
-    this.setAttribute('role','banner');
-  });
-
-  define('seha-footer', HTMLElement, function(){
-    this.setAttribute('role','contentinfo');
-  });
-
   define('seha-cookie-banner', HTMLElement, function(){
     this.classList.add('cookie-banner');
     this.setAttribute('role','dialog');
@@ -105,15 +94,7 @@
   };
 
   function mountComponents(){
-    document.querySelectorAll('header.site-header').forEach(node => wrap(node,'seha-header'));
-    document.querySelectorAll('footer.quote-footer').forEach(node => wrap(node,'seha-footer'));
     document.querySelectorAll('.mobile-nav').forEach(node => wrap(node,'seha-mobile-menu'));
-    document.querySelectorAll('.site-nav a, .quote-bottom a, .consent__text a').forEach(node => wrap(node,'seha-link'));
-    document.querySelectorAll('.button').forEach(node => wrap(node,'seha-button'));
-    document.querySelectorAll('.form-field input, .form-field textarea').forEach(node => wrap(node,'seha-input'));
-    document.querySelectorAll('.consent').forEach(node => wrap(node,'seha-checkbox'));
-    document.querySelectorAll('.business-choices label').forEach(node => wrap(node,'seha-tag'));
-    document.querySelectorAll('.language-switch').forEach(node => wrap(node,'seha-language-switcher'));
   }
 
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mountComponents, {once:true});

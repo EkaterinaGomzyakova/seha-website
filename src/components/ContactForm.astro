@@ -1,0 +1,116 @@
+---
+---
+<form id="quote-form">
+            <div class="form-grid">
+              <label class="form-field"
+                >Название компании<input
+                  name="company"
+                  autocomplete="organization"
+                  placeholder="ООО Агрокомплекс"
+                  required
+                  maxlength="160"
+              /></label>
+              <label class="form-field"
+                >Имя контактного лица<input
+                  name="contact"
+                  autocomplete="name"
+                  placeholder="Иван"
+                  required
+                  maxlength="120"
+              /></label>
+              <label class="form-field"
+                >Контактный email<input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="Email@website.com"
+                  maxlength="160"
+              /></label>
+              <label class="form-field"
+                >Номер телефона<input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+7 999 999-99-99"
+                  required
+                  maxlength="40"
+                  aria-describedby="phone-error"
+                /><span class="field-error" id="phone-error" hidden
+                  >Укажите телефон: от 7 до 15 цифр.</span
+                ></label
+              >
+            </div>
+            <label class="form-field comment-field"
+              >Сообщение<textarea
+                name="comment"
+                rows="2"
+                placeholder="Расскажите, какой продукт вам нужен, о ваших требованиях, количестве и сроках"
+                maxlength="1500"
+              ></textarea>
+            </label>
+            <fieldset class="business-options">
+              <legend>Тип компании</legend>
+              <div class="business-choices">
+                <label
+                  ><input type="radio" name="business" value="Дистрибьютор" /><span
+                    >Дистрибьютор</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="business" value="Ритейлер" /><span
+                    >Ритейлер</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="business" value="Производитель" /><span
+                    >Производитель</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="business" value="Гидропонная ферма" /><span
+                    >Гидропонная ферма</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="business" value="Садоводческая компания" /><span
+                    >Садоводческая компания</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="business" value="Бренд продуктов питания" /><span
+                    >Бренд продуктов питания</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="business" value="Другое" /><span>Другое</span></label
+                >
+              </div>
+            </fieldset>
+            <label class="consent"
+              ><input class="consent__input" type="checkbox" name="consent" required /><span
+                class="consent__checkbox"
+                aria-hidden="true"
+              ></span
+              ><span class="consent__text"
+                >Я ознакомлен(а) с <a href="/privacy">Политикой конфиденциальности</a> и даю
+                согласие на обработку персональных данных</span
+              ></label
+            >
+            <button class="button button--secondary button--full" type="submit">
+              Получить расчёт
+            </button>
+            <div id="quote-result" class="quote-result" role="status" tabindex="-1" hidden>
+              <strong>Заявка подготовлена</strong>
+              <p class="type-p">
+                Отправьте письмо в открывшейся почтовой программе. Если она не открылась, скопируйте
+                заявку и отправьте ее на seha.info@inbox.ru.
+              </p>
+              <button type="button" id="copy-quote">Скопировать заявку</button
+              ><textarea
+                id="quote-copy-fallback"
+                readonly
+                aria-label="Текст заявки для копирования"
+                hidden
+              ></textarea>
+            </div>
+          </form>
