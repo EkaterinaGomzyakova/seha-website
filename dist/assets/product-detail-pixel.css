@@ -21,10 +21,10 @@ html[lang="ru"] .product-detail--shell .product-item p{min-height:120px}
 html[lang="en"] .product-detail--shell .product-item p{min-height:96px}
 .product-detail--fiber .product-hero h1,
 .product-detail--fiber .product-hero>p{width:min(1088px,100%)}
-.product-detail--substrates .product-hero-icon img{content:url('/assets/category-substrates.png')}
-.product-detail--food .product-hero-icon img{content:url('/assets/category-food.png')}
-.product-detail--fiber .product-hero-icon img{content:url('/assets/category-fibre.png')}
-.product-detail--shell .product-hero-icon img{content:url('/assets/category-shell.png')}
+.product-detail--substrates .product-hero-icon img{content:url('/assets/images/common/category-substrates.png')}
+.product-detail--food .product-hero-icon img{content:url('/assets/images/common/category-food.png')}
+.product-detail--fiber .product-hero-icon img{content:url('/assets/images/common/category-fibre.png')}
+.product-detail--shell .product-hero-icon img{content:url('/assets/images/common/category-shell.png')}
 @media(max-width:800px){
   .product-detail .site-header{width:var(--grid-content-width);padding:20px 0}
   .product-detail .breadcrumbs{width:var(--grid-content-width);padding:0}

@@ -275,7 +275,7 @@ function translateSubstratePage(lang){
 function setSiteLogoAsset(logo){
   const language=document.documentElement.lang === 'en' ? 'international' : 'russian';
   const variant=window.matchMedia('(max-width: 1024px)').matches ? 'mobile' : window.matchMedia('(max-width: 1280px)').matches ? 'smdesktop' : 'desktop';
-  logo.src=assetPath(`menu-logo-${language}-${variant}.svg`);
+  logo.src=assetPath(`images/common/menu-logo-${language}-${variant}.svg`);
   logo.alt=document.documentElement.lang === 'en' ? 'SEHA — international' : 'Сеха';
 }
 function syncProductDetailHero(){
@@ -283,10 +283,10 @@ function syncProductDetailHero(){
   const icon=document.querySelector('.product-hero-icon img');
   if(!title || !icon) return;
   const variants={
-    'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','category-substrates.png'],
-    'product-detail--food':['Пищевые продукты','Food Products','category-food.png'],
-    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fibre Products','category-fibre.png'],
-    'product-detail--shell':['Продукты из кокосовой скорлупы','Coco Shell Products','category-shell.png']
+    'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','images/common/category-substrates.png'],
+    'product-detail--food':['Пищевые продукты','Food Products','images/common/category-food.png'],
+    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fibre Products','images/common/category-fibre.png'],
+    'product-detail--shell':['Продукты из кокосовой скорлупы','Coco Shell Products','images/common/category-shell.png']
   };
   const variant=Object.entries(variants).find(([className])=>document.body.classList.contains(className));
   if(!variant) return;
@@ -304,7 +304,7 @@ function translateShell(lang){
   if(mobileClose) mobileClose.setAttribute('aria-label',lang === 'en' ? 'Close menu' : 'Закрыть меню');
   document.querySelectorAll('.button--compact').forEach(link => { const arrow=link.querySelector('span'); link.firstChild.textContent=`${t.offer} `; if(arrow) link.append(arrow); });
   document.querySelectorAll('[data-language-code]').forEach(code => code.textContent=lang.toUpperCase());
-  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=assetPath(`menu-flag-${lang === 'en' ? 'en' : 'ru'}.svg`); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
+  document.querySelectorAll('[data-language-flag]').forEach(flag => { flag.src=assetPath(`images/common/menu-flag-${lang === 'en' ? 'en' : 'ru'}.svg`); flag.alt=lang === 'en' ? 'English' : 'Русский'; });
   document.querySelectorAll('.quote-main h2').forEach(element => element.innerHTML=t.quoteTitle);
   document.querySelectorAll('.quote-main .form-field').forEach(label => {
     if(label.classList.contains('comment-field')) setLabelText(label,t.message);
@@ -362,7 +362,7 @@ function updateLanguageMenu(lang){
   if(!languageMenu || !languageToggle) return;
   const next=lang === 'en' ? 'ru' : 'en';
   const label=next === 'en' ? 'EN' : 'RU';
-  const flag=next === 'en' ? 'menu-flag-en.svg' : 'menu-flag-ru.svg';
+  const flag=next === 'en' ? 'images/common/menu-flag-en.svg' : 'images/common/menu-flag-ru.svg';
   languageMenu.innerHTML=`<button class="type-button" type="button" data-set-language="${next}"><img class="language-flag" src="${assetPath(flag)}" alt=""><span>${label}</span></button>`;
   languageToggle.setAttribute('aria-expanded',String(!languageMenu.hidden));
   setLanguageArrow(!languageMenu.hidden);
@@ -370,7 +370,7 @@ function updateLanguageMenu(lang){
 function setLanguageArrow(open){
   const arrow=languageToggle?.querySelector('[data-language-arrow]');
   if(!arrow) return;
-  arrow.setAttribute('src',assetPath('menu-language-arrow.svg'));
+  arrow.setAttribute('src',assetPath('images/common/menu-language-arrow.svg'));
   languageToggle.setAttribute('aria-expanded',String(open));
 }
 translateShell(savedLanguage);

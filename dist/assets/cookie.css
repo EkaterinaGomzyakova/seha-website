@@ -25,7 +25,7 @@
   }
 }
 .cookie-banner>div:first-child{display:flex;align-items:flex-start;justify-content:space-between;width:100%;min-height:54px}
-.cookie-badge{display:block;width:54px;height:54px;flex:0 0 54px;border-radius:0;background:url('/assets/cookie-coconut.png') center/80px 80px no-repeat;filter:none;box-shadow:none}
+.cookie-badge{display:block;width:54px;height:54px;flex:0 0 54px;border-radius:0;background:url('/assets/images/common/cookie-coconut.png') center/80px 80px no-repeat;filter:none;box-shadow:none}
 .cookie-close{position:static;display:grid;place-items:center;width:24px;height:24px;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
 .cookie-close img{display:block;width:24px;height:24px}
 .cookie-content{display:flex;flex-direction:column;align-items:flex-start;gap:20px;width:100%}
