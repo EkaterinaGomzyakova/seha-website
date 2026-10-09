@@ -10,8 +10,44 @@ const suffix = path === '/' ? '/' : `${path.replace(/\/$/, '')}/`;
 const ruUrl = new URL(`/ru${suffix}`, base);
 const enUrl = new URL(`/en${suffix}`, base);
 const canonical = locale === 'en' ? enUrl : ruUrl;
+const languageName = locale === 'en' ? 'English' : 'Русский';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${base}#organization`,
+      name: 'SEHA',
+      url: base.toString(),
+      email: 'seha.info@inbox.ru',
+      telephone: '+7 966 061-28-28',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1 Bratyev Vesninykh Boulevard, Office 151K',
+        addressLocality: 'Moscow',
+        postalCode: '115432',
+        addressCountry: 'RU'
+      }
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${base}#website`,
+      name: 'SEHA',
+      url: base.toString(),
+      inLanguage: languageName,
+      publisher: { '@id': `${base}#organization` }
+    },
+    {
+      '@type': 'WebPage',
+      url: canonical.toString(),
+      inLanguage: languageName,
+      isPartOf: { '@id': `${base}#website` }
+    }
+  ]
+};
 ---
 <link rel="canonical" href={canonical} />
 <link rel="alternate" hreflang="ru" href={ruUrl} />
 <link rel="alternate" hreflang="en" href={enUrl} />
 <link rel="alternate" hreflang="x-default" href={ruUrl} />
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>

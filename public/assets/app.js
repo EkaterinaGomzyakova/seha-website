@@ -15,7 +15,7 @@ if (quoteForm) {
   };
   phone.addEventListener('input', () => validatePhone(false));
   quoteForm.addEventListener('input', () => { if (result) result.hidden = true; });
-  quoteForm.addEventListener('submit', event => {
+  quoteForm.addEventListener('submit', async event => {
     event.preventDefault();
     validatePhone(true);
     ['company', 'contact'].forEach(name => {
@@ -37,6 +37,21 @@ if (quoteForm) {
     const fallback = document.getElementById('quote-copy-fallback');
     if (fallback) fallback.hidden = true;
     if (result) result.hidden = false;
+    const endpoint = quoteForm.dataset.formEndpoint?.trim();
+    if (endpoint) {
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: fields
+        });
+        if (!response.ok) throw new Error(`Form endpoint returned ${response.status}`);
+        result?.focus({ preventScroll: true });
+        return;
+      } catch (error) {
+        console.warn('Configured form endpoint failed; using mail client fallback.', error);
+      }
+    }
     window.location.href = `mailto:seha.info@inbox.ru?subject=${encodeURIComponent('Расчет поставки — ' + value('company'))}&body=${encodeURIComponent(preparedQuote)}`;
     result?.focus({ preventScroll: true });
   });

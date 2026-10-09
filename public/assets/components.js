@@ -18,7 +18,8 @@
     this.classList.add('cookie-banner');
     this.setAttribute('role','dialog');
     this.setAttribute('aria-label','Cookie notice');
-    this.innerHTML = `<div class="cookie-header"><span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть"><img src="${assetPath('images/common/cookie-xmark.svg')}" alt=""></button></div><div class="cookie-content"><p data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button></div>`;
+    this.setAttribute('aria-describedby','cookie-message');
+    this.innerHTML = `<div class="cookie-header"><span class="cookie-badge" aria-hidden="true"></span><button class="cookie-close" type="button" aria-label="Закрыть"><img src="${assetPath('images/common/cookie-xmark.svg')}" alt=""></button></div><div class="cookie-content"><p id="cookie-message" data-cookie-message></p><button class="cookie-action" data-cookie-action type="button"></button></div>`;
   });
 
   define('seha-mobile-menu', HTMLElement, function(){

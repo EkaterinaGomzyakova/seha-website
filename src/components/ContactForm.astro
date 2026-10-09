@@ -2,7 +2,7 @@
 const { locale = 'ru' } = Astro.props;
 const privacyHref = locale === 'en' ? '/en/privacy/' : '/ru/privacy/';
 ---
-<form id="quote-form">
+<form id="quote-form" data-form-endpoint={import.meta.env.PUBLIC_FORM_ENDPOINT || undefined}>
             <div class="form-grid">
               <label class="form-field"
                 >Название компании<input

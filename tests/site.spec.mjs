@@ -41,6 +41,37 @@ test.describe('published routes', () => {
   }
 });
 
+test('production metadata endpoints are published', async ({ request }) => {
+  const sitemap = await request.get('/sitemap.xml');
+  expect(sitemap.ok()).toBeTruthy();
+  expect(await sitemap.text()).toContain('https://seha-group.ru/en/products/food/');
+
+  const robots = await request.get('/robots.txt');
+  expect(robots.ok()).toBeTruthy();
+  expect(await robots.text()).toContain('Sitemap: https://seha-group.ru/sitemap.xml');
+});
+
+test('pages expose organization JSON-LD', async ({ page }) => {
+  await page.goto('/en/', { waitUntil: 'domcontentloaded' });
+  const jsonLd = await page.locator('script[type="application/ld+json"]').textContent();
+  expect(jsonLd).toContain('Organization');
+  expect(jsonLd).toContain('SEHA');
+});
+
+test('cookie consent is stored only after an explicit action', async ({ page }) => {
+  await page.goto('/en/', { waitUntil: 'domcontentloaded' });
+  await page.evaluate(() => localStorage.removeItem('seha-cookie-consent'));
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  const banner = page.locator('seha-cookie-banner');
+  await expect(banner).toBeVisible();
+  await expect(page.locator('.cookie-action')).toBeVisible();
+  await page.locator('.cookie-action').click();
+  await expect(banner).toBeHidden();
+  await expect
+    .poll(() => page.evaluate(() => localStorage.getItem('seha-cookie-consent')))
+    .toBe('accepted');
+});
+
 test('mobile menu opens and closes', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/en/', { waitUntil: 'domcontentloaded' });
@@ -66,13 +97,10 @@ test('main routes have no serious accessibility violations', async ({ page }) =>
   for (const route of ['/en/', '/en/products/food/', '/en/privacy/']) {
     await page.goto(route, { waitUntil: 'domcontentloaded', timeout: 90_000 });
     const results = await new AxeBuilder({ page }).analyze();
-    const critical = results.violations.filter(({ impact }) => impact === 'critical');
-    const serious = results.violations.filter(({ impact }) => impact === 'serious');
-    if (serious.length)
-      console.warn(
-        `${route}: serious accessibility findings: ${serious.map(({ id }) => id).join(', ')}`
-      );
-    expect(critical, `${route}: ${critical.map(({ id }) => id).join(', ')}`).toEqual([]);
+    const blocking = results.violations.filter(
+      ({ impact }) => impact === 'critical' || impact === 'serious'
+    );
+    expect(blocking, `${route}: ${blocking.map(({ id }) => id).join(', ')}`).toEqual([]);
   }
 });
 

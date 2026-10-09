@@ -33,3 +33,23 @@ em,i{font-family:Inter,Arial,sans-serif;font-style:normal}
 @media(max-width:520px){.cookie-banner{left:12px;right:12px;bottom:12px;width:auto;height:auto;min-height:236px;padding:28px;border-radius:36px}.cookie-banner p{margin-top:24px;font-size:16px}.cookie-close{top:22px;right:24px}}
 /* Header scrolls with the page; it is intentionally not sticky. */
 .site-header{position:relative;top:auto}
+
+/* Accessibility overrides: preserve the brand green while keeping small text readable. */
+.quote-footer .form-field,
+.quote-footer legend,
+.quote-footer .quote-kicker,
+.quote-footer .contact-item > span,
+.quote-footer .contact-item p,
+.quote-footer .quote-bottom > div > span,
+.quote-footer .quote-bottom > a:last-child{color:#c7d4c8;opacity:1}
+.quote-footer .form-field input,
+.quote-footer .form-field textarea{color:#c7d4c8;border-bottom-color:#d9f400}
+.quote-footer .form-field input::placeholder,
+.quote-footer .form-field textarea::placeholder{color:#c7d4c8}
+.quote-footer .quote-kicker{opacity:1}
+.quote-footer .consent a,
+.quote-footer .quote-bottom > a,
+.cookie-banner p a,
+.privacy-content a,
+p a{color:#d9f400;text-decoration:underline;text-underline-offset:.2em}
+.industry-track:focus-visible{outline:3px solid var(--color-green-brand);outline-offset:6px}
