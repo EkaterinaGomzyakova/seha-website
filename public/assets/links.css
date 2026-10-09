@@ -1,42 +1,58 @@
 /* Link component — Figma node 98:7149. */
 .link-component--phone,
 .link-component--email,
-.contact-item>a{
-  display:flex;
-  align-items:center;
-  width:100%;
-  max-width:280px;
-  color:var(--color-yellow-brand);
-  font:900 25px/1.15 Inter,Arial,sans-serif;
-  letter-spacing:-.5px;
-  overflow-wrap:anywhere;
-  transition:color .2s ease;
+.contact-item > a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  color: var(--color-yellow-brand);
+  font:
+    900 25px/1.15 Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
 }
 .link-component--phone:hover,
 .link-component--email:hover,
-.contact-item>a:hover{color:var(--color-yellow-transparent)}
+.contact-item > a:hover {
+  color: var(--color-yellow-transparent);
+}
 .link-component--privacy,
-.quote-bottom>a{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  color:var(--color-yellow-transparent);
-  font:700 11px/1.2 Inter,Arial,sans-serif;
-  letter-spacing:.99px;
-  text-transform:uppercase;
-  transition:color .2s ease;
+.quote-bottom > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-yellow-transparent);
+  font:
+    700 11px/1.2 Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
 }
 .link-component--privacy:hover,
-.quote-bottom>a:hover{color:var(--color-yellow-brand)}
+.quote-bottom > a:hover {
+  color: var(--color-yellow-brand);
+}
 .link-component--menu,
 .site-nav a,
-.mobile-nav-links a{
-  color:var(--color-black,#263223);
-  font:700 11px/1.2 Inter,Arial,sans-serif;
-  letter-spacing:.99px;
-  text-transform:uppercase;
-  transition:color .2s ease;
+.mobile-nav-links a {
+  color: var(--color-black, #263223);
+  font:
+    700 11px/1.2 Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
 }
 .link-component--menu:hover,
 .site-nav a:hover,
-.mobile-nav-links a:hover{color:var(--color-green-brand);opacity:1}
+.mobile-nav-links a:hover {
+  color: var(--color-green-brand);
+  opacity: 1;
+}

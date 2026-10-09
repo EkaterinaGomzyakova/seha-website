@@ -1,54 +1,21 @@
 ---
-import Header from '@components/Header.astro';
+import SiteLayout from '@layouts/SiteLayout.astro';
+
+const locale = 'ru';
+const path = '/404';
+const title = '404 — Сеха';
+const description = 'Страница не найдена. Вернитесь к каталогу кокосовых продуктов Сеха или отправьте запрос на расчет поставки.';
 ---
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#004b32" />
-    <meta
-      name="description"
-      content="Страница не найдена. Вернитесь к каталогу кокосовых продуктов Сеха или отправьте запрос на расчет поставки."
-    />
-    <title>404 — Сеха</title>
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link rel="stylesheet" href="/assets/components.css" />
-    <link rel="stylesheet" href="/assets/buttons.css" />
-    <link rel="stylesheet" href="/assets/checkbox.css" />
-    <link rel="stylesheet" href="/assets/language-switcher.css" />
-    <link rel="stylesheet" href="/assets/menu.css" />
-    <link rel="stylesheet" href="/assets/home.css" />
-    <link rel="stylesheet" href="/assets/404.css" />
-    <link rel="stylesheet" href="/assets/typography.css" />
-    <link rel="stylesheet" href="/assets/cookie.css" />
-    <link rel="stylesheet" href="/assets/header-container.css" />
-    <link rel="stylesheet" href="/assets/input.css" />
-    <link rel="stylesheet" href="/assets/links.css" />
-    <link rel="stylesheet" href="/assets/tags.css" />
-    <link rel="stylesheet" href="/assets/grid.css" />
-    <link rel="stylesheet" href="/assets/footer.css" />
-  </head>
-  <body class="not-found">
-    <a class="skip" href="#error-content">К содержанию</a>
-    <Header />
-    <main class="error-page" id="error-content">
-      <section class="error-copy" aria-labelledby="error-title">
-        <div class="error-mark" aria-hidden="true"><span>4</span><i>0</i><span>4</span></div>
-        <h1 id="error-title" class="type-h1">Страница не найдена</h1>
-        <p class="type-p">
-          Такой страницы сейчас нет. Перейдите на главную или откройте каталог продукции.
-        </p>
-        <nav class="error-nav" aria-label="Куда перейти дальше">
-          <a href="/products">Продукты</a><a href="/production">Производство</a
-          ><a href="/quality">Качество</a><a href="/about">О компании</a>
-        </nav>
-        <a class="button button--tertiary" href="/">На главную</a>
-      </section>
-    </main>
-    <script is:inline src="/assets/components.js"></script>
-    <script is:inline src="/assets/app.js"></script>
-  </body>
-</html>
-
-
+<SiteLayout locale={locale} path={path} title={title} description={description} bodyClass="not-found" skipText="К содержанию" skipHref="#error-content" showFooter={false}>
+  <main class="error-page" id="error-content">
+    <section class="error-copy" aria-labelledby="error-title">
+      <div class="error-mark" aria-hidden="true"><span>4</span><i>0</i><span>4</span></div>
+      <h1 id="error-title" class="type-h1">Страница не найдена</h1>
+      <p class="type-p">Такой страницы сейчас нет. Перейдите на главную или откройте каталог продукции.</p>
+      <nav class="error-nav" aria-label="Куда перейти дальше">
+        <a href="/products">Продукты</a><a href="/production">Производство</a><a href="/quality">Качество</a><a href="/about">О компании</a>
+      </nav>
+      <a class="button button--tertiary" href="/">На главную</a>
+    </section>
+  </main>
+</SiteLayout>

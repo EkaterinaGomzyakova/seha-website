@@ -1,92 +1,258 @@
 /* Pixel-aligned layout for the four Figma product pages. */
-.product-detail .site-header{width:var(--grid-content-width);max-width:none;height:auto;padding:18px 0}
-.product-detail .breadcrumbs{width:var(--grid-content-width);max-width:none;padding:0;min-height:24px}
-.product-detail .product-hero{width:var(--grid-content-width);max-width:none;padding:54px 32px 64px}
-.product-detail .product-hero>.section-label{display:none}
-.product-detail .product-hero-icon{margin-bottom:12px}
-.product-detail .product-hero h1{max-width:1088px;margin:0}
-.product-detail .product-hero>p{max-width:1088px;margin-top:24px}
-.product-detail .product-list-section{width:min(1088px,var(--grid-content-width));max-width:none;padding:64px 0}
-.product-detail .product-list-heading{gap:12px;margin-bottom:32px}
-.product-detail .product-grid-page{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
-.product-detail .product-item figure{margin-bottom:20px}
-.product-detail .product-item .button{min-height:56px;height:56px}
-.product-detail .product-item>span{margin-bottom:12px}
-.product-detail .product-item h3{margin-bottom:12px}
-.product-detail .quote-footer{width:calc(100% - 32px);max-width:1880px;padding:54px 256px;margin-left:auto;margin-right:auto}
-html[lang="en"] .product-detail--food .product-item p{min-height:90px}
-html[lang="ru"] .product-detail--food .product-item p{min-height:120px}
-.product-detail--fiber .product-item p{min-height:90px}
-html[lang="ru"] .product-detail--shell .product-item p{min-height:120px}
-html[lang="en"] .product-detail--shell .product-item p{min-height:96px}
+.product-detail .site-header {
+  width: var(--grid-content-width);
+  max-width: none;
+  height: auto;
+  padding: 18px 0;
+}
+.product-detail .breadcrumbs {
+  width: var(--grid-content-width);
+  max-width: none;
+  padding: 0;
+  min-height: 24px;
+}
+.product-detail .product-hero {
+  width: var(--grid-content-width);
+  max-width: none;
+  padding: 54px 32px 64px;
+}
+.product-detail .product-hero > .section-label {
+  display: none;
+}
+.product-detail .product-hero-icon {
+  margin-bottom: 12px;
+}
+.product-detail .product-hero h1 {
+  max-width: 1088px;
+  margin: 0;
+}
+.product-detail .product-hero > p {
+  max-width: 1088px;
+  margin-top: 24px;
+}
+.product-detail .product-list-section {
+  width: min(1088px, var(--grid-content-width));
+  max-width: none;
+  padding: 64px 0;
+}
+.product-detail .product-list-heading {
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.product-detail .product-grid-page {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.product-detail .product-item figure {
+  margin-bottom: 20px;
+}
+.product-detail .product-item .button {
+  min-height: 56px;
+  height: 56px;
+}
+.product-detail .product-item > span {
+  margin-bottom: 12px;
+}
+.product-detail .product-item h3 {
+  margin-bottom: 12px;
+}
+.product-detail .quote-footer {
+  width: calc(100% - 32px);
+  max-width: 1880px;
+  padding: 54px 256px;
+  margin-left: auto;
+  margin-right: auto;
+}
+html[lang='en'] .product-detail--food .product-item p {
+  min-height: 90px;
+}
+html[lang='ru'] .product-detail--food .product-item p {
+  min-height: 120px;
+}
+.product-detail--fiber .product-item p {
+  min-height: 90px;
+}
+html[lang='ru'] .product-detail--shell .product-item p {
+  min-height: 120px;
+}
+html[lang='en'] .product-detail--shell .product-item p {
+  min-height: 96px;
+}
 .product-detail--fiber .product-hero h1,
-.product-detail--fiber .product-hero>p{width:min(1088px,100%)}
-.product-detail--substrates .product-hero-icon img{content:url('/assets/images/common/category-substrates.png')}
-.product-detail--food .product-hero-icon img{content:url('/assets/images/common/category-food.png')}
-.product-detail--fiber .product-hero-icon img{content:url('/assets/images/common/category-fibre.png')}
-.product-detail--shell .product-hero-icon img{content:url('/assets/images/common/category-shell.png')}
-@media(max-width:800px){
-  .product-detail .site-header{width:var(--grid-content-width);padding:20px 0}
-  .product-detail .breadcrumbs{width:var(--grid-content-width);padding:0}
-  .product-detail .product-hero{width:var(--grid-content-width);padding:40px 32px 48px;border-radius:40px}
-  .product-detail .product-hero-icon{width:124px;height:124px;border-radius:24px;margin-bottom:12px}
-  .product-detail .product-hero>p{margin-top:20px}
-  .product-detail .product-grid-page{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-  .product-detail .product-list-section{padding:48px 0}
-  .product-detail .product-item .button{min-height:48px;height:48px}
-  html[lang="en"] .product-detail--food .product-item p,
-  html[lang="ru"] .product-detail--food .product-item p{min-height:0}
+.product-detail--fiber .product-hero > p {
+  width: min(1088px, 100%);
 }
-@media(max-width:440px){
-  .product-detail .site-header{padding:20px 0}
-  .product-detail .product-hero{padding:40px 24px;border-radius:40px}
-  .product-detail .product-hero-icon{width:124px;height:124px;border-radius:32px}
-  .product-detail .product-hero>p{margin-top:20px}
-  .product-detail .product-grid-page{grid-template-columns:1fr;gap:32px}
-  .product-detail .product-list-section{padding:40px 0}
+.product-detail--substrates .product-hero-icon img {
+  content: url('/assets/images/common/category-substrates.png');
+}
+.product-detail--food .product-hero-icon img {
+  content: url('/assets/images/common/category-food.png');
+}
+.product-detail--fiber .product-hero-icon img {
+  content: url('/assets/images/common/category-fibre.png');
+}
+.product-detail--shell .product-hero-icon img {
+  content: url('/assets/images/common/category-shell.png');
+}
+@media (max-width: 800px) {
+  .product-detail .site-header {
+    width: var(--grid-content-width);
+    padding: 20px 0;
+  }
+  .product-detail .breadcrumbs {
+    width: var(--grid-content-width);
+    padding: 0;
+  }
+  .product-detail .product-hero {
+    width: var(--grid-content-width);
+    padding: 40px 32px 48px;
+    border-radius: 40px;
+  }
+  .product-detail .product-hero-icon {
+    width: 124px;
+    height: 124px;
+    border-radius: 24px;
+    margin-bottom: 12px;
+  }
+  .product-detail .product-hero > p {
+    margin-top: 20px;
+  }
+  .product-detail .product-grid-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .product-detail .product-list-section {
+    padding: 48px 0;
+  }
+  .product-detail .product-item .button {
+    min-height: 48px;
+    height: 48px;
+  }
+  html[lang='en'] .product-detail--food .product-item p,
+  html[lang='ru'] .product-detail--food .product-item p {
+    min-height: 0;
+  }
+}
+@media (max-width: 440px) {
+  .product-detail .site-header {
+    padding: 20px 0;
+  }
+  .product-detail .product-hero {
+    padding: 40px 24px;
+    border-radius: 40px;
+  }
+  .product-detail .product-hero-icon {
+    width: 124px;
+    height: 124px;
+    border-radius: 32px;
+  }
+  .product-detail .product-hero > p {
+    margin-top: 20px;
+  }
+  .product-detail .product-grid-page {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .product-detail .product-list-section {
+    padding: 40px 0;
+  }
 }
 
-@media (min-width:801px) and (max-width:1280px){
-  .product-detail .site-header{padding:20px 0}
-  .product-detail .product-hero{padding:40px 32px 48px}
-  .product-detail .product-hero-icon{width:124px;height:124px;border-radius:24px}
-  .product-detail .product-list-section{width:810px}
-  .product-detail .product-grid-page{gap:24px}
-  .product-detail .product-item figure{border-radius:32px}
-  .product-detail .product-item .button{min-height:48px;height:48px}
-  .product-detail .product-list-section{padding:48px 0}
-  .product-detail .quote-footer{width:calc(100% - 32px);padding:48px 80px}
-  html[lang="en"] .product-detail--food .product-item p{min-height:99px}
-  html[lang="ru"] .product-detail--food .product-item p{min-height:123px}
-  .product-detail--fiber .product-item p{min-height:99px}
-  html[lang="ru"] .product-detail--shell .product-item p{min-height:102px}
-  html[lang="en"] .product-detail--shell .product-item p{min-height:99px}
+@media (min-width: 801px) and (max-width: 1280px) {
+  .product-detail .site-header {
+    padding: 20px 0;
+  }
+  .product-detail .product-hero {
+    padding: 40px 32px 48px;
+  }
+  .product-detail .product-hero-icon {
+    width: 124px;
+    height: 124px;
+    border-radius: 24px;
+  }
+  .product-detail .product-list-section {
+    width: 810px;
+  }
+  .product-detail .product-grid-page {
+    gap: 24px;
+  }
+  .product-detail .product-item figure {
+    border-radius: 32px;
+  }
+  .product-detail .product-item .button {
+    min-height: 48px;
+    height: 48px;
+  }
+  .product-detail .product-list-section {
+    padding: 48px 0;
+  }
+  .product-detail .quote-footer {
+    width: calc(100% - 32px);
+    padding: 48px 80px;
+  }
+  html[lang='en'] .product-detail--food .product-item p {
+    min-height: 99px;
+  }
+  html[lang='ru'] .product-detail--food .product-item p {
+    min-height: 123px;
+  }
+  .product-detail--fiber .product-item p {
+    min-height: 99px;
+  }
+  html[lang='ru'] .product-detail--shell .product-item p {
+    min-height: 102px;
+  }
+  html[lang='en'] .product-detail--shell .product-item p {
+    min-height: 99px;
+  }
   .product-detail--fiber .product-hero h1,
-  .product-detail--fiber .product-hero>p{max-width:810px}
+  .product-detail--fiber .product-hero > p {
+    max-width: 810px;
+  }
 }
 
-@media(max-width:800px){
-  .product-detail .quote-footer{width:var(--grid-content-width);padding:48px 32px}
+@media (max-width: 800px) {
+  .product-detail .quote-footer {
+    width: var(--grid-content-width);
+    padding: 48px 32px;
+  }
 }
 
-@media(max-width:440px){
-  .product-detail .quote-footer{width:var(--grid-content-width);padding:40px 24px}
-  html[lang="en"] .product-detail--food .product-item p,
-  html[lang="ru"] .product-detail--food .product-item p{min-height:0}
-  .product-detail--fiber .product-item p{min-height:0}
-  .product-detail--shell .product-item p{min-height:0}
+@media (max-width: 440px) {
+  .product-detail .quote-footer {
+    width: var(--grid-content-width);
+    padding: 40px 24px;
+  }
+  html[lang='en'] .product-detail--food .product-item p,
+  html[lang='ru'] .product-detail--food .product-item p {
+    min-height: 0;
+  }
+  .product-detail--fiber .product-item p {
+    min-height: 0;
+  }
+  .product-detail--shell .product-item p {
+    min-height: 0;
+  }
 }
 
-@media(max-width:800px){
+@media (max-width: 800px) {
   .product-detail--fiber .product-hero h1,
-  .product-detail--fiber .product-hero>p{max-width:640px}
+  .product-detail--fiber .product-hero > p {
+    max-width: 640px;
+  }
   .product-detail--shell .product-hero h1,
-  .product-detail--shell .product-hero>p{max-width:640px}
+  .product-detail--shell .product-hero > p {
+    max-width: 640px;
+  }
 }
 
-@media(max-width:440px){
+@media (max-width: 440px) {
   .product-detail--fiber .product-hero h1,
-  .product-detail--fiber .product-hero>p{max-width:344px}
+  .product-detail--fiber .product-hero > p {
+    max-width: 344px;
+  }
   .product-detail--shell .product-hero h1,
-  .product-detail--shell .product-hero>p{max-width:344px}
+  .product-detail--shell .product-hero > p {
+    max-width: 344px;
+  }
 }

@@ -1,0 +1,37 @@
+@layer reset, tokens, base, layout, components, utilities, pages, legacy;
+
+@import url('./reset.css') layer(reset);
+@import url('./tokens.css') layer(tokens);
+@import url('./globals.css') layer(base);
+
+/*
+ * Compatibility layer: the existing visual rules are kept in their original
+ * order until each selector is migrated into the source structure. Keeping
+ * them in one final named layer makes the cascade explicit while preserving
+ * the current visual baseline.
+ */
+@import url('/assets/styles.css') layer(legacy);
+@import url('/assets/components.css') layer(legacy);
+@import url('/assets/buttons.css') layer(legacy);
+@import url('/assets/checkbox.css') layer(legacy);
+@import url('/assets/language-switcher.css') layer(legacy);
+@import url('/assets/menu.css') layer(legacy);
+@import url('/assets/home.css') layer(legacy);
+@import url('/assets/about.css') layer(legacy);
+@import url('/assets/production.css') layer(legacy);
+@import url('/assets/quality.css') layer(legacy);
+@import url('/assets/products.css') layer(legacy);
+@import url('/assets/category-image.css') layer(legacy);
+@import url('/assets/product-detail.css') layer(legacy);
+@import url('/assets/typography.css') layer(legacy);
+@import url('/assets/product-image.css') layer(legacy);
+@import url('/assets/cookie.css') layer(legacy);
+@import url('/assets/header-container.css') layer(legacy);
+@import url('/assets/input.css') layer(legacy);
+@import url('/assets/links.css') layer(legacy);
+@import url('/assets/tags.css') layer(legacy);
+@import url('/assets/grid.css') layer(legacy);
+@import url('/assets/footer.css') layer(legacy);
+@import url('/assets/privacy.css') layer(legacy);
+@import url('/assets/404.css') layer(legacy);
+@import url('/assets/product-detail-pixel.css') layer(legacy);

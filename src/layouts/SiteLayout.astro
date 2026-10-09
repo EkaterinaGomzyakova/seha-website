@@ -13,9 +13,10 @@ interface Props {
   bodyClass: string;
   skipText: string;
   skipHref?: string;
+  showFooter?: boolean;
 }
 
-const { locale, path, title, description, bodyClass, skipText, skipHref = '#main-content' } = Astro.props;
+const { locale, path, title, description, bodyClass, skipText, skipHref = '#main-content', showFooter = true } = Astro.props;
 ---
 <!doctype html>
 <html lang={locale}>
@@ -26,24 +27,6 @@ const { locale, path, title, description, bodyClass, skipText, skipHref = '#main
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link rel="stylesheet" href="/assets/components.css" />
-    <link rel="stylesheet" href="/assets/buttons.css" />
-    <link rel="stylesheet" href="/assets/checkbox.css" />
-    <link rel="stylesheet" href="/assets/language-switcher.css" />
-    <link rel="stylesheet" href="/assets/menu.css" />
-    <link rel="stylesheet" href="/assets/home.css" />
-    <link rel="stylesheet" href="/assets/product-detail.css" />
-    <link rel="stylesheet" href="/assets/typography.css" />
-    <link rel="stylesheet" href="/assets/product-image.css" />
-    <link rel="stylesheet" href="/assets/cookie.css" />
-    <link rel="stylesheet" href="/assets/header-container.css" />
-    <link rel="stylesheet" href="/assets/input.css" />
-    <link rel="stylesheet" href="/assets/links.css" />
-    <link rel="stylesheet" href="/assets/tags.css" />
-    <link rel="stylesheet" href="/assets/grid.css" />
-    <link rel="stylesheet" href="/assets/footer.css" />
-    <link rel="stylesheet" href="/assets/product-detail-pixel.css" />
     <SeoLinks locale={locale} path={path} />
     <GlobalStyles />
   </head>
@@ -51,7 +34,7 @@ const { locale, path, title, description, bodyClass, skipText, skipHref = '#main
     <a class="skip" href={skipHref}>{skipText}</a>
     <Header locale={locale} />
     <slot />
-    <Footer locale={locale} />
+    {showFooter && <Footer locale={locale} />}
     <script is:inline src="/assets/components.js"></script>
     <script is:inline src="/assets/app.js"></script>
   </body>

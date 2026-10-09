@@ -1,59 +1,90 @@
 /* Shared text styles from the Figma type system. */
-:root{
-  --type-font-family:Inter,Arial,sans-serif;
-  --type-big-h1-size:72px;
-  --type-big-h2-size:48px;
-  --type-big-h3-size:25px;
-  --type-big-p-size:15px;
-  --type-big-p-line-height:1.55;
-  --type-medium-small-h1-size:52px;
-  --type-medium-small-h2-size:36px;
-  --type-medium-small-h3-size:20px;
-  --type-medium-small-h3-line-height:1.2;
-  --type-medium-small-p-size:14px;
-  --type-medium-small-p-line-height:1.45;
-  --type-mobile-h1-size:32px;
-  --type-mobile-h2-size:28px;
-  --type-h1-size:var(--type-big-h1-size);
-  --type-h1-line-height:1;
-  --type-h1-letter-spacing:-.04em;
-  --type-h2-size:var(--type-big-h2-size);
-  --type-h2-line-height:.9;
-  --type-h2-letter-spacing:-.04em;
-  --type-h3-size:var(--type-big-h3-size);
-  --type-h3-line-height:1.15;
-  --type-h3-letter-spacing:-.02em;
-  --type-p-size:var(--type-big-p-size);
-  --type-p-line-height:var(--type-big-p-line-height);
-  --type-p-letter-spacing:0;
-  --type-button-size:11px;
-  --type-button-line-height:1.2;
-  --type-button-letter-spacing:.09em;
+:root {
+  --type-font-family: Inter, Arial, sans-serif;
+  --type-big-h1-size: 72px;
+  --type-big-h2-size: 48px;
+  --type-big-h3-size: 25px;
+  --type-big-p-size: 15px;
+  --type-big-p-line-height: 1.55;
+  --type-medium-small-h1-size: 52px;
+  --type-medium-small-h2-size: 36px;
+  --type-medium-small-h3-size: 20px;
+  --type-medium-small-h3-line-height: 1.2;
+  --type-medium-small-p-size: 14px;
+  --type-medium-small-p-line-height: 1.45;
+  --type-mobile-h1-size: 32px;
+  --type-mobile-h2-size: 28px;
+  --type-h1-size: var(--type-big-h1-size);
+  --type-h1-line-height: 1;
+  --type-h1-letter-spacing: -0.04em;
+  --type-h2-size: var(--type-big-h2-size);
+  --type-h2-line-height: 0.9;
+  --type-h2-letter-spacing: -0.04em;
+  --type-h3-size: var(--type-big-h3-size);
+  --type-h3-line-height: 1.15;
+  --type-h3-letter-spacing: -0.02em;
+  --type-p-size: var(--type-big-p-size);
+  --type-p-line-height: var(--type-big-p-line-height);
+  --type-p-letter-spacing: 0;
+  --type-button-size: 11px;
+  --type-button-line-height: 1.2;
+  --type-button-letter-spacing: 0.09em;
 }
 
-.type-h1,.type-h2,.type-h3,.type-p,.type-button,.button{
-  font-family:var(--type-font-family)!important;
+.type-h1,
+.type-h2,
+.type-h3,
+.type-p,
+.type-button,
+.button {
+  font-family: var(--type-font-family) !important;
 }
-.type-h1{font-size:var(--type-h1-size)!important;line-height:var(--type-h1-line-height)!important;letter-spacing:var(--type-h1-letter-spacing)!important;font-weight:900!important}
-.type-h2{font-size:var(--type-h2-size)!important;line-height:var(--type-h2-line-height)!important;letter-spacing:var(--type-h2-letter-spacing)!important;font-weight:900!important}
-.type-h3{font-size:var(--type-h3-size)!important;line-height:var(--type-h3-line-height)!important;letter-spacing:var(--type-h3-letter-spacing)!important;font-weight:900!important}
-.type-p{font-size:var(--type-p-size)!important;line-height:var(--type-p-line-height)!important;letter-spacing:var(--type-p-letter-spacing)!important;font-weight:500!important}
-.type-button,.button{font-size:var(--type-button-size)!important;line-height:var(--type-button-line-height)!important;letter-spacing:var(--type-button-letter-spacing)!important;font-weight:700!important}
+.type-h1 {
+  font-size: var(--type-h1-size) !important;
+  line-height: var(--type-h1-line-height) !important;
+  letter-spacing: var(--type-h1-letter-spacing) !important;
+  font-weight: 900 !important;
+}
+.type-h2 {
+  font-size: var(--type-h2-size) !important;
+  line-height: var(--type-h2-line-height) !important;
+  letter-spacing: var(--type-h2-letter-spacing) !important;
+  font-weight: 900 !important;
+}
+.type-h3 {
+  font-size: var(--type-h3-size) !important;
+  line-height: var(--type-h3-line-height) !important;
+  letter-spacing: var(--type-h3-letter-spacing) !important;
+  font-weight: 900 !important;
+}
+.type-p {
+  font-size: var(--type-p-size) !important;
+  line-height: var(--type-p-line-height) !important;
+  letter-spacing: var(--type-p-letter-spacing) !important;
+  font-weight: 500 !important;
+}
+.type-button,
+.button {
+  font-size: var(--type-button-size) !important;
+  line-height: var(--type-button-line-height) !important;
+  letter-spacing: var(--type-button-letter-spacing) !important;
+  font-weight: 700 !important;
+}
 
-@media(max-width:1280px){
-  :root{
-    --type-h1-size:var(--type-medium-small-h1-size);
-    --type-h2-size:var(--type-medium-small-h2-size);
-    --type-h3-size:var(--type-medium-small-h3-size);
-    --type-h3-line-height:var(--type-medium-small-h3-line-height);
-    --type-p-size:var(--type-medium-small-p-size);
-    --type-p-line-height:var(--type-medium-small-p-line-height);
+@media (max-width: 1280px) {
+  :root {
+    --type-h1-size: var(--type-medium-small-h1-size);
+    --type-h2-size: var(--type-medium-small-h2-size);
+    --type-h3-size: var(--type-medium-small-h3-size);
+    --type-h3-line-height: var(--type-medium-small-h3-line-height);
+    --type-p-size: var(--type-medium-small-p-size);
+    --type-p-line-height: var(--type-medium-small-p-line-height);
   }
 }
 
-@media(max-width:440px){
-  :root{
-    --type-h1-size:var(--type-mobile-h1-size);
-    --type-h2-size:var(--type-mobile-h2-size);
+@media (max-width: 440px) {
+  :root {
+    --type-h1-size: var(--type-mobile-h1-size);
+    --type-h2-size: var(--type-mobile-h2-size);
   }
 }

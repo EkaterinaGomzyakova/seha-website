@@ -1,8 +1,35 @@
 /* Shared Language Switcher arrow component — Figma node 87:9082. */
-.language-arrow{display:block;width:14px;height:8px;flex:0 0 14px;transition:none}
-.language-switch[aria-expanded=true] .language-arrow{transform:none}
+.language-arrow {
+  display: block;
+  width: 14px;
+  height: 8px;
+  flex: 0 0 14px;
+  transition: none;
+}
+.language-switch[aria-expanded='true'] .language-arrow {
+  transform: none;
+}
 
 /* Language component — Figma node 87:9087. */
-.language-menu{min-width:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-.language-menu button{width:auto;padding:0;border-radius:0;background:transparent;gap:4px}
-.language-menu button:hover{background:transparent}
+.language-menu {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.language-menu button {
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  gap: 4px;
+}
+.language-menu button:hover {
+  background: transparent;
+}

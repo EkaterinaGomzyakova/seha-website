@@ -1,0 +1,20 @@
+/* Minimal reset shared by every page. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
