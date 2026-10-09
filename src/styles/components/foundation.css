@@ -1,3 +1,4 @@
+/* Source: components.css */
 /* The mobile menu remains a light-DOM custom element to preserve the existing selectors. */
 seha-mobile-menu {
   position: static;

@@ -1,2 +1,96 @@
-@import url('/assets/links.css');
-@import url('/assets/tags.css');
+/* Source: links.css */
+/* Link component — Figma node 98:7149. */
+.link-component--phone,
+.link-component--email,
+.contact-item > a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  color: var(--color-yellow-brand);
+  font:
+    900 25px/1.15 Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+.link-component--phone:hover,
+.link-component--email:hover,
+.contact-item > a:hover {
+  color: var(--color-yellow-transparent);
+}
+.link-component--privacy,
+.quote-bottom > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-yellow-transparent);
+  font:
+    700 11px/1.2 Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.link-component--privacy:hover,
+.quote-bottom > a:hover {
+  color: var(--color-yellow-brand);
+}
+.link-component--menu,
+.site-nav a,
+.mobile-nav-links a {
+  color: var(--color-black, #263223);
+  font:
+    700 11px/1.2 Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.link-component--menu:hover,
+.site-nav a:hover,
+.mobile-nav-links a:hover {
+  color: var(--color-green-brand);
+  opacity: 1;
+}
+
+/* Source: tags.css */
+/* Tag component — Figma node 106:5453. */
+.tag,
+.business-choices span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 2px 22px;
+  border: 2px solid var(--color-yellow-transparent, rgba(217, 244, 0, 0.5));
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--color-yellow-brand, #d9f400);
+  font:
+    500 16px/1.45 Inter,
+    Arial,
+    sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.tag:hover,
+.business-choices label:hover span,
+.business-choices input:focus-visible + span {
+  border-color: var(--color-yellow-brand, #d9f400);
+  color: var(--color-yellow-brand, #d9f400);
+}
+.tag--pressed,
+.business-choices input:checked + span {
+  border-color: var(--color-yellow-brand, #d9f400);
+  background: var(--color-yellow-brand, #d9f400);
+  color: var(--color-green-brand, #004d25);
+}

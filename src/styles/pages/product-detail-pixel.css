@@ -1,3 +1,4 @@
+/* Source: product-detail-pixel.css */
 /* Pixel-aligned layout for the four Figma product pages. */
 .product-detail .site-header {
   width: var(--grid-content-width);
