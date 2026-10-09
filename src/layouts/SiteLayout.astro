@@ -1,0 +1,57 @@
+---
+import Footer from '@components/Footer.astro';
+import GlobalStyles from '@components/GlobalStyles.astro';
+import Header from '@components/Header.astro';
+import SeoLinks from '@components/SeoLinks.astro';
+import type { Locale } from '../data/translations';
+
+interface Props {
+  locale: Locale;
+  path: string;
+  title: string;
+  description: string;
+  bodyClass: string;
+  skipText: string;
+}
+
+const { locale, path, title, description, bodyClass, skipText } = Astro.props;
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#004b32" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/components.css" />
+    <link rel="stylesheet" href="/assets/buttons.css" />
+    <link rel="stylesheet" href="/assets/checkbox.css" />
+    <link rel="stylesheet" href="/assets/language-switcher.css" />
+    <link rel="stylesheet" href="/assets/menu.css" />
+    <link rel="stylesheet" href="/assets/home.css" />
+    <link rel="stylesheet" href="/assets/product-detail.css" />
+    <link rel="stylesheet" href="/assets/typography.css" />
+    <link rel="stylesheet" href="/assets/product-image.css" />
+    <link rel="stylesheet" href="/assets/cookie.css" />
+    <link rel="stylesheet" href="/assets/header-container.css" />
+    <link rel="stylesheet" href="/assets/input.css" />
+    <link rel="stylesheet" href="/assets/links.css" />
+    <link rel="stylesheet" href="/assets/tags.css" />
+    <link rel="stylesheet" href="/assets/grid.css" />
+    <link rel="stylesheet" href="/assets/footer.css" />
+    <link rel="stylesheet" href="/assets/product-detail-pixel.css" />
+    <SeoLinks locale={locale} path={path} />
+    <GlobalStyles />
+  </head>
+  <body class={bodyClass}>
+    <a class="skip" href="#products-list">{skipText}</a>
+    <Header locale={locale} />
+    <slot />
+    <Footer locale={locale} />
+    <script is:inline src="/assets/components.js"></script>
+    <script is:inline src="/assets/app.js"></script>
+  </body>
+</html>

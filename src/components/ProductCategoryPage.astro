@@ -1,0 +1,36 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getProductPage, type ProductPageSlug } from '../data/product-pages';
+import type { Locale } from '../data/translations';
+
+interface Props { locale: Locale; category: ProductPageSlug; }
+const { locale, category } = Astro.props;
+const page = getProductPage(category, locale);
+const t = (value: { ru: string; en: string }) => value[locale];
+const title = `${t(page.title)} — Seha`;
+---
+<SiteLayout locale={locale} path={page.path} title={title} description={t(page.intro)} bodyClass={`product-detail ${page.bodyClass}`} skipText={locale === 'en' ? 'To products' : 'К продуктам'}>
+  <nav class="breadcrumbs" aria-label={locale === 'en' ? 'Breadcrumbs' : 'Хлебные крошки'}>
+    <span aria-current="page">{t(page.breadcrumb)}</span>
+  </nav>
+  <main>
+    <section class="product-hero" aria-labelledby="product-title">
+      <div class="product-hero-icon"><img src={page.heroImage} alt="" width="720" height="720" aria-hidden="true" /></div>
+      <span class="section-label">{t(page.section)}</span>
+      <h1 id="product-title" class="type-h1">{t(page.title)}</h1>
+      <p class="type-p">{t(page.intro)}</p>
+    </section>
+    <section class="product-list-section" id="products-list" aria-labelledby="products-title">
+      <div class="product-list-heading"><span>{t(page.listLabel)}</span><h2 id="products-title" class="type-h2" set:html={t(page.listTitle)}></h2></div>
+      <div class="product-grid-page">
+        {page.items.map((item) => <article class="product-item reveal">
+          <figure><img src={item.image} alt={t(item.alt)} width="720" height="720" loading="lazy" /></figure>
+          <span>{t(item.label)}</span>
+          <h3 class="type-h3">{t(item.name)}</h3>
+          <p class="type-p">{t(item.description)}</p>
+          <a class="button button--primary button--full" href="#contacts" data-quote-product={t(page.title)}>{t(page.cta)}</a>
+        </article>)}
+      </div>
+    </section>
+  </main>
+</SiteLayout>

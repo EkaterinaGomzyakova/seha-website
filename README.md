@@ -25,7 +25,8 @@ The production output is generated in `dist/`. It is ignored by Git and built by
 
 - `src/components/` contains the shared Astro composition layer. `Header`, `Footer`, and `ContactForm` are used by the localized pages; the smaller primitives live in `src/components/ui/`.
 - `public/assets/components.js` still owns the browser-only Web Components for the cookie banner and mobile menu. They are kept there because their behavior is progressively enhanced after static HTML is rendered.
-- `src/data/translations.ts` and `src/data/products.ts` are the typed source of shared labels and catalog metadata. The existing page-specific copy in `public/assets/app.js` remains the runtime compatibility layer for the current product-page markup and can be migrated incrementally without changing URLs or visual output.
+- `src/data/translations.ts` and `src/data/products.ts` are the typed source of shared labels and catalog metadata. Product-page copy is kept separately in `src/data/product-pages.ts`, while `public/assets/app.js` contains only browser-side shell translation and interaction logic.
+- `src/data/product-pages.ts` is the complete localized content model for the four product-category pages. `src/components/ProductCategoryPage.astro` and `src/layouts/SiteLayout.astro` render all Russian, English, and legacy category URLs, so route files only provide locale and category parameters.
 - `src/styles/` contains the shared token and global-style entrypoint. The existing page styles remain in `public/assets/` for now to avoid a visual rewrite; new pages should import the shared source styles and old files can be retired page by page.
 - `public/favicon.svg` is the reusable public favicon. Some legacy pages still contain an inline fallback icon and do not need to be rewritten to use the same asset immediately.
 
