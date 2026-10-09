@@ -40,6 +40,12 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run quality checks
+        run: npm test
+
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5

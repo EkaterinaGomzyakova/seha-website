@@ -9,13 +9,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "playwright test",
+    "test:update": "playwright test --update-snapshots",
+    "test:a11y": "playwright test -g \"accessibility\"",
+    "images:optimize": "node scripts/optimize-images.mjs",
     "lint": "eslint --no-ignore public/assets/*.js astro.config.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.49.1",
     "astro": "^4.16.19",
     "eslint": "^8.57.1",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "sharp": "^0.33.5"
   }
 }
