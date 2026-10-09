@@ -1,13 +1,17 @@
 ---
-const { locale = 'ru' } = Astro.props;
+import GlobalStyles from './GlobalStyles.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import Button from './ui/Button.astro';
+import { getSiteTranslations, type Locale } from '../data/translations';
+
+const { locale = 'ru' as Locale } = Astro.props;
 const isEnglish = locale === 'en';
 const localizePath = (path) => `/${locale}${path === '/' ? '/' : path}`;
 const routePath = (Astro.url.pathname.replace(/^\/(?:ru|en)(?=\/|$)/, '').replace(/\/$/, '') || '/');
 const languageTarget = `/${isEnglish ? 'ru' : 'en'}${routePath === '/' ? '/' : `${routePath}/`}`;
-const copy = isEnglish
-  ? { home: 'Home', products: 'Products', production: 'Manufacturing', quality: 'Quality & Certifications', about: 'About us', offer: 'Request a quote', language: 'Switch language', menu: 'Open menu', logoAlt: 'SEHA — international' }
-  : { home: 'Главная', products: 'Продукты', production: 'Производство', quality: 'Качество', about: 'О компании', offer: 'Получить предложение', language: 'Переключить язык', menu: 'Открыть меню', logoAlt: 'Сеха' };
+const copy = getSiteTranslations(locale);
 ---
+<GlobalStyles />
 <header class="header site-header">
       <a class="logo" href={localizePath('/')} aria-label={`${copy.logoAlt} — ${copy.home}`}
         ><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt="Сеха"
@@ -16,28 +20,10 @@ const copy = isEnglish
         <a href={localizePath('/products')}>{copy.products}</a><a href={localizePath('/production')}>{copy.production}</a
         ><a href={localizePath('/quality')}>{copy.quality}</a><a href={localizePath('/about')}>{copy.about}</a>
       </nav>
-      <a class="button button--primary button--compact" href={`${localizePath('/')}#contacts`
-        }>{copy.offer} <span aria-hidden="true">↗</span></a
-      ><button
-        class="language-switch type-button"
-        type="button"
-        data-language-toggle
-        data-language-target={languageTarget}
-        aria-label={copy.language}
-      >
-        <img
-          class="language-flag"
-          data-language-flag
-          src="/assets/images/common/figma-language-ru.svg"
-          alt=""
-        /><span data-language-code>RU</span
-        ><img
-          class="language-arrow"
-          data-language-arrow
-          src="/assets/images/common/language-arrow-down.svg"
-          alt=""
-        /></button
-      ><button
+      <Button variant="primary" compact href={`${localizePath('/')}#contacts`}>{copy.offer} <span aria-hidden="true">↗</span></Button
+      ><LanguageSwitcher locale={locale} target={languageTarget} label={copy.language}
+      />
+      <button
         class="menu-toggle"
         aria-label={copy.menu}
         aria-expanded="false"

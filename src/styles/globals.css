@@ -1,0 +1,10 @@
+/* Shared progressive-enhancement styles. Page-specific legacy CSS remains in public/assets. */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: var(--seha-focus-outline);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--seha-color-brand-yellow);
+  color: var(--seha-color-brand-green);
+}

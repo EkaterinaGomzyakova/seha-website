@@ -1,0 +1,13 @@
+---
+interface Props extends astroHTML.JSX.InputHTMLAttributes {
+  label?: string;
+}
+
+const { label, class: className, ...inputProps } = Astro.props;
+---
+<label class="consent">
+  <input class:list={['consent__input', className]} type="checkbox" {...inputProps} />
+  <span class="consent__checkbox" aria-hidden="true"></span>
+  {label && <span class="consent__text">{label}</span>}
+  <slot />
+</label>

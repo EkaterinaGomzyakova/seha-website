@@ -21,6 +21,14 @@ npm run format:check
 
 The production output is generated in `dist/`. It is ignored by Git and built by the GitHub Pages workflow before deployment.
 
+## Source architecture
+
+- `src/components/` contains the shared Astro composition layer. `Header`, `Footer`, and `ContactForm` are used by the localized pages; the smaller primitives live in `src/components/ui/`.
+- `public/assets/components.js` still owns the browser-only Web Components for the cookie banner and mobile menu. They are kept there because their behavior is progressively enhanced after static HTML is rendered.
+- `src/data/translations.ts` and `src/data/products.ts` are the typed source of shared labels and catalog metadata. The existing page-specific copy in `public/assets/app.js` remains the runtime compatibility layer for the current product-page markup and can be migrated incrementally without changing URLs or visual output.
+- `src/styles/` contains the shared token and global-style entrypoint. The existing page styles remain in `public/assets/` for now to avoid a visual rewrite; new pages should import the shared source styles and old files can be retired page by page.
+- `public/favicon.svg` is the reusable public favicon. Some legacy pages still contain an inline fallback icon and do not need to be rewritten to use the same asset immediately.
+
 ## Production notes
 
 - `sitemap.xml`, `robots.txt` and JSON-LD are generated during the Astro build.

@@ -1,46 +1,21 @@
 ---
+import Button from './ui/Button.astro';
+import Checkbox from './ui/Checkbox.astro';
+import Input from './ui/Input.astro';
+
 const { locale = 'ru' } = Astro.props;
 const privacyHref = locale === 'en' ? '/en/privacy/' : '/ru/privacy/';
 ---
 <form id="quote-form" data-form-endpoint={import.meta.env.PUBLIC_FORM_ENDPOINT || undefined}>
             <div class="form-grid">
-              <label class="form-field"
-                >Название компании<input
-                  name="company"
-                  autocomplete="organization"
-                  placeholder="ООО Агрокомплекс"
-                  required
-                  maxlength="160"
-              /></label>
-              <label class="form-field"
-                >Имя контактного лица<input
-                  name="contact"
-                  autocomplete="name"
-                  placeholder="Иван"
-                  required
-                  maxlength="120"
-              /></label>
-              <label class="form-field"
-                >Контактный email<input
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  placeholder="Email@website.com"
-                  maxlength="160"
-              /></label>
-              <label class="form-field"
-                >Номер телефона<input
-                  name="phone"
-                  type="tel"
-                  autocomplete="tel"
-                  placeholder="+7 999 999-99-99"
-                  required
-                  maxlength="40"
-                  aria-describedby="phone-error"
-                /><span class="field-error" id="phone-error" hidden
-                  >Укажите телефон: от 7 до 15 цифр.</span
-                ></label
-              >
+              <Input label="Название компании" name="company" autocomplete="organization" placeholder="ООО Агрокомплекс" required maxlength="160" />
+              <Input label="Имя контактного лица" name="contact" autocomplete="name" placeholder="Иван" required maxlength="120" />
+              <Input label="Контактный email" name="email" type="email" autocomplete="email" placeholder="Email@website.com" maxlength="160" />
+              <label class="form-field">
+                Номер телефона
+                <input name="phone" type="tel" autocomplete="tel" placeholder="+7 999 999-99-99" required maxlength="40" aria-describedby="phone-error" />
+                <span class="field-error" id="phone-error" hidden>Укажите телефон: от 7 до 15 цифр.</span>
+              </label>
             </div>
             <label class="form-field comment-field"
               >Сообщение<textarea
@@ -88,19 +63,10 @@ const privacyHref = locale === 'en' ? '/en/privacy/' : '/ru/privacy/';
                 >
               </div>
             </fieldset>
-            <label class="consent"
-              ><input class="consent__input" type="checkbox" name="consent" required /><span
-                class="consent__checkbox"
-                aria-hidden="true"
-              ></span
-              ><span class="consent__text"
-                >Я ознакомлен(а) с <a href={privacyHref}>Политикой конфиденциальности</a> и даю
-                согласие на обработку персональных данных</span
-              ></label
-            >
-            <button class="button button--secondary button--full" type="submit">
-              Получить расчёт
-            </button>
+            <Checkbox name="consent" required>
+              <span class="consent__text">Я ознакомлен(а) с <a href={privacyHref}>Политикой конфиденциальности</a> и даю согласие на обработку персональных данных</span>
+            </Checkbox>
+            <Button variant="secondary" full type="submit">Получить расчёт</Button>
             <div id="quote-result" class="quote-result" role="status" tabindex="-1" hidden>
               <strong>Заявка подготовлена</strong>
               <p class="type-p">

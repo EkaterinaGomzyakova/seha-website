@@ -1,0 +1,8 @@
+---
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  variant?: 'default' | 'text';
+}
+
+const { variant = 'default', class: className, ...anchorProps } = Astro.props;
+---
+<a class:list={[`link link--${variant}`, className]} {...anchorProps}><slot /></a>

@@ -1,0 +1,33 @@
+---
+import type { Locale } from '../data/translations';
+
+interface Props {
+  locale: Locale;
+  target: string;
+  label: string;
+}
+
+const { locale, target, label } = Astro.props;
+const isEnglish = locale === 'en';
+---
+<button
+  class="language-switch type-button"
+  type="button"
+  data-language-toggle
+  data-language-target={target}
+  aria-label={label}
+>
+  <img
+    class="language-flag"
+    data-language-flag
+    src={`/assets/images/common/menu-flag-${isEnglish ? 'en' : 'ru'}.svg`}
+    alt=""
+  />
+  <span data-language-code>{isEnglish ? 'EN' : 'RU'}</span>
+  <img
+    class="language-arrow"
+    data-language-arrow
+    src="/assets/images/common/menu-language-arrow.svg"
+    alt=""
+  />
+</button>

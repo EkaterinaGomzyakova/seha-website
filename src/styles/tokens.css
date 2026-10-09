@@ -1,0 +1,11 @@
+:root {
+  /* Design tokens shared by Astro components and legacy page styles. */
+  --seha-color-brand-green: #004d25;
+  --seha-color-brand-yellow: #d9f400;
+  --seha-color-background: #faf9f0;
+  --seha-color-text: #263223;
+  --seha-color-muted: #586c5d;
+  --seha-font-sans: Inter, Arial, sans-serif;
+  --seha-radius-card: 24px;
+  --seha-focus-outline: 3px solid var(--seha-color-brand-yellow);
+}
