@@ -1,24 +1,24 @@
-@layer reset, tokens, base, layout, components, utilities, pages, legacy;
+@layer reset, tokens, base, layout, components, utilities, pages, site;
 
 @import url('./reset.css') layer(reset);
 @import url('./tokens.css') layer(tokens);
 @import url('./globals.css') layer(base);
 
 /* Source order mirrors the former cascade while every rule lives in src/. */
-@import url('./base.css') layer(legacy);
-@import url('./components/foundation.css') layer(legacy);
-@import url('./components/buttons.css') layer(legacy);
-@import url('./components/forms.css') layer(legacy);
-@import url('./components/header.css') layer(legacy);
-@import url('./pages/home.css') layer(legacy);
-@import url('./pages/product-detail.css') layer(legacy);
-@import url('./typography.css') layer(legacy);
-@import url('./components/product-image.css') layer(legacy);
-@import url('./components/cookie.css') layer(legacy);
-@import url('./components/header-layout.css') layer(legacy);
-@import url('./components/input.css') layer(legacy);
-@import url('./components/links.css') layer(legacy);
-@import url('./layout.css') layer(legacy);
-@import url('./components/footer.css') layer(legacy);
-@import url('./pages/privacy.css') layer(legacy);
-@import url('./pages/product-detail-pixel.css') layer(legacy);
+@import url('./base.css') layer(site);
+@import url('./components/foundation.css') layer(site);
+@import url('./components/buttons.css') layer(site);
+@import url('./components/forms.css') layer(site);
+@import url('./components/header.css') layer(site);
+@import url('./pages/home.css') layer(site);
+@import url('./pages/product-detail.css') layer(site);
+@import url('./typography.css') layer(site);
+@import url('./components/product-image.css') layer(site);
+@import url('./components/cookie.css') layer(site);
+@import url('./components/header-layout.css') layer(site);
+@import url('./components/input.css') layer(site);
+@import url('./components/links.css') layer(site);
+@import url('./layout.css') layer(site);
+@import url('./components/footer.css') layer(site);
+@import url('./pages/privacy.css') layer(site);
+@import url('./pages/product-detail-pixel.css') layer(site);
