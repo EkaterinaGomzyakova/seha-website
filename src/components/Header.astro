@@ -1,5 +1,4 @@
 ---
-import GlobalStyles from './GlobalStyles.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import Button from './ui/Button.astro';
 import { getSiteTranslations, type Locale } from '../data/translations';
@@ -11,7 +10,6 @@ const routePath = (Astro.url.pathname.replace(/^\/(?:ru|en)(?=\/|$)/, '').replac
 const languageTarget = `/${isEnglish ? 'ru' : 'en'}${routePath === '/' ? '/' : `${routePath}/`}`;
 const copy = getSiteTranslations(locale);
 ---
-<GlobalStyles />
 <header class="header site-header">
       <a class="logo" href={localizePath('/')} aria-label={`${copy.logoAlt} — ${copy.home}`}
         ><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt="Сеха"

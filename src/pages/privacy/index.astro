@@ -1,38 +1,13 @@
 ---
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import SeoLinks from '@components/SeoLinks.astro';
+import SiteLayout from '@layouts/SiteLayout.astro';
+
+const locale = "ru";
+const path = "/privacy";
+const title = "Политика конфиденциальности — Сеха";
+const description = "Политика конфиденциальности Сеха.";
 ---
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#004b32" />
-    <meta name="description" content="Политика конфиденциальности Сеха." />
-    <title>Политика конфиденциальности — Сеха</title>
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link rel="stylesheet" href="/assets/components.css" />
-    <link rel="stylesheet" href="/assets/buttons.css" />
-    <link rel="stylesheet" href="/assets/checkbox.css" />
-    <link rel="stylesheet" href="/assets/language-switcher.css" />
-    <link rel="stylesheet" href="/assets/menu.css" />
-    <link rel="stylesheet" href="/assets/home.css" />
-    <link rel="stylesheet" href="/assets/privacy.css" />
-    <link rel="stylesheet" href="/assets/typography.css" />
-    <link rel="stylesheet" href="/assets/cookie.css" />
-    <link rel="stylesheet" href="/assets/header-container.css" />
-    <link rel="stylesheet" href="/assets/input.css" />
-    <link rel="stylesheet" href="/assets/links.css" />
-    <link rel="stylesheet" href="/assets/tags.css" />
-    <link rel="stylesheet" href="/assets/grid.css" />
-    <link rel="stylesheet" href="/assets/footer.css" />
-      <SeoLinks locale="ru" path="/privacy" />
-  </head>
-  <body class="privacy-page">
-    <a class="skip" href="#privacy-content">К содержанию</a>
-    <Header />
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+<SiteLayout locale={locale} path={path} title={title} description={description} bodyClass="privacy-page" skipText="К содержанию" skipHref="#privacy-content">
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a href="/">Главная</a><span aria-hidden="true">/</span
       ><span aria-current="page">Политика конфиденциальности</span>
     </nav>
@@ -206,11 +181,5 @@ import SeoLinks from '@components/SeoLinks.astro';
         </div>
       </section>
     </main>
-    <Footer />
-    <script is:inline src="/assets/components.js"></script>
-    <script is:inline src="/assets/app.js"></script>
-  </body>
-</html>
-
-
+</SiteLayout>
 

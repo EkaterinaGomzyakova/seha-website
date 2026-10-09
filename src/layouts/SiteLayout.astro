@@ -12,9 +12,10 @@ interface Props {
   description: string;
   bodyClass: string;
   skipText: string;
+  skipHref?: string;
 }
 
-const { locale, path, title, description, bodyClass, skipText } = Astro.props;
+const { locale, path, title, description, bodyClass, skipText, skipHref = '#main-content' } = Astro.props;
 ---
 <!doctype html>
 <html lang={locale}>
@@ -47,7 +48,7 @@ const { locale, path, title, description, bodyClass, skipText } = Astro.props;
     <GlobalStyles />
   </head>
   <body class={bodyClass}>
-    <a class="skip" href="#products-list">{skipText}</a>
+    <a class="skip" href={skipHref}>{skipText}</a>
     <Header locale={locale} />
     <slot />
     <Footer locale={locale} />

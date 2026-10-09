@@ -8,7 +8,8 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@components': new URL('./src/components', import.meta.url).pathname
+        '@components': new URL('./src/components', import.meta.url).pathname,
+        '@layouts': new URL('./src/layouts', import.meta.url).pathname
       }
     }
   },
