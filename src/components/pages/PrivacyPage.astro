@@ -1,0 +1,140 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Link from '../ui/Link.astro';
+import Tag from '../ui/Tag.astro';
+import { withBase, localizedPath } from '../../lib/paths';
+import { privacyPageCopy } from '../../data/privacy-page';
+import { siteContact } from '../../data/site';
+import type { Locale } from '../../data/translations';
+
+interface Props {
+  locale: Locale;
+  rootAlias?: boolean;
+}
+const { locale, rootAlias = false } = Astro.props;
+const copy = privacyPageCopy[locale];
+const homeHref = rootAlias ? withBase('/') : localizedPath('/', locale);
+const emailHref = withBase(`mailto:${siteContact.email}`);
+---
+
+<SiteLayout
+  locale={locale}
+  path="/privacy"
+  title={copy.title}
+  description={copy.description}
+  bodyClass="privacy-page"
+  skipText={copy.skipText}
+  skipHref={withBase('#privacy-content')}
+>
+  <nav class="breadcrumbs" aria-label={copy.breadcrumbs}>
+    <Link href={homeHref}>{copy.home}</Link>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{copy.heading}</span>
+  </nav>
+  <main id="privacy-content">
+    <section class="privacy-hero" aria-labelledby="privacy-title">
+      <div class="privacy-hero-copy">
+        <h1 id="privacy-title" class="type-h1">
+          {copy.heading}
+        </h1>
+        <p class="type-p">{copy.intro}</p>
+      </div>
+      <div class="privacy-tags">
+        <Tag>{copy.active}</Tag>
+        <Tag>{copy.since}</Tag>
+      </div>
+    </section>
+    <section class="privacy-content">
+      <div class="privacy-grid">
+        <article class="privacy-section privacy-wide">
+          <h2 class="type-h2">{copy.generalTitle}</h2>
+          <div class="privacy-columns">
+            <div>
+              <p class="type-p">
+                {copy.controller}
+                <br />
+                {copy.company}
+                <br />
+                {copy.addressLabel} {copy.address}
+                <br />
+                {copy.emailLabel} <Link href={emailHref}>{siteContact.email}</Link>
+                <br />
+                {copy.phoneLabel}{' '}
+                <Link href={withBase(siteContact.phoneHref)}>{siteContact.phone}</Link>
+              </p>
+            </div>
+            <p class="type-p">{copy.generalText}</p>
+          </div>
+        </article>
+        {[copy.data, copy.goals, copy.legal].map((section) => (
+          <article class="privacy-section">
+            <h2 class="type-h2">{section.title}</h2>
+            <p class="type-p">{section.lead}</p>
+            <ul>
+              {section.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+        <article class="privacy-section">
+          <h2 class="type-h2">{copy.storageTitle}</h2>
+          <p class="type-p">{copy.storageLead}</p>
+          <p class="type-p">{copy.storageText}</p>
+          <p class="type-p">{copy.storageOptout}</p>
+        </article>
+        <article class="privacy-section">
+          <h2 class="type-h2">{copy.sharing.title}</h2>
+          <p class="type-p">{copy.sharing.lead}</p>
+          <ul>
+            {copy.sharing.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="privacy-section">
+          <h2 class="type-h2">{copy.retentionTitle}</h2>
+          <p class="type-p">{copy.retentionText}</p>
+        </article>
+        <article class="privacy-section privacy-wide">
+          <h2 class="type-h2">{copy.rightsTitle}</h2>
+          <div class="privacy-columns">
+            <p class="type-p">
+              {copy.rightsLead}
+              <br />
+              {copy.rights[0]}
+              <br />
+              {copy.rights[1]}
+            </p>
+            <p class="type-p">
+              {copy.rights[2]}
+              <br />
+              {copy.rights[3]}
+            </p>
+          </div>
+        </article>
+        <article class="privacy-section">
+          <h2 class="type-h2">{copy.withdrawTitle}</h2>
+          <p class="type-p">
+            {copy.withdrawText} <Link href={emailHref}>{siteContact.email}</Link>
+          </p>
+        </article>
+        <article class="privacy-section">
+          <h2 class="type-h2">{copy.contactTitle}</h2>
+          <p class="type-p">
+            {copy.contactText}
+            <br />
+            <Link href={emailHref}>{siteContact.email}</Link>
+            <br />
+            {copy.company}
+            <br />
+            {copy.address}
+            <br />
+            {copy.phoneLabel}{' '}
+            <Link href={withBase(siteContact.phoneHref)}>{siteContact.phone}</Link>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

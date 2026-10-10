@@ -1,37 +1,47 @@
 ---
 import ContactForm from './ContactForm.astro';
-const { locale = 'ru' } = Astro.props;
-const isEnglish = locale === 'en';
-const copy = isEnglish
-  ? { title: 'Request<br />a delivery<br />quote', contacts: 'CONTACTS', address: 'Registered Address', addressText: 'Office 151K, 1 Bratyev Vesninykh Boulevard<br />Moscow, 115432, Russia', phone: 'PHONE', email: 'EMAIL', brand: 'NATURAL COCONUT<br />PRODUCTS', privacy: 'PRIVACY POLICY', logoAlt: 'SEHA — international', home: 'Home', privacyHref: '/en/privacy/' }
-  : { title: 'Получите<br />расчёт<br />поставки', contacts: 'КОНТАКТЫ', address: 'Юридический адрес', addressText: '115432, Россия, Москва<br />б-р Братьев Весниных, д. 1, пом. 151К', phone: 'ТЕЛЕФОН', email: 'ПОЧТА', brand: 'НАТУРАЛЬНЫЕ ПРОДУКТЫ<br />ИЗ КОКОСА', privacy: 'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ', logoAlt: 'Сеха', home: 'Главная', privacyHref: '/ru/privacy/' };
-const localizePath = (path) => `/${locale}${path === '/' ? '/' : path}`;
+import Logo from './Logo.astro';
+import Link from './ui/Link.astro';
+import type { Locale } from '../data/translations';
+import { getInterfaceCopy } from '../data/interface-copy';
+import { siteContact } from '../data/site';
+import { localizedPath } from '../lib/paths';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const copy = getInterfaceCopy(locale);
 ---
+
 <footer class="quote-footer" id="contacts">
-      <div class="quote-layout">
-        <section class="quote-main" aria-labelledby="quote-title">
-          <h2 id="quote-title" class="type-h2" set:html={copy.title}></h2>
-          <ContactForm locale={locale} />
-        </section>
-        <aside class="quote-contacts" aria-labelledby="contacts-title">
-          <span class="quote-kicker" id="contacts-title">{copy.contacts}</span>
-          <div class="contact-item address">
-            <strong>{copy.address}</strong>
-            <p class="type-p" set:html={copy.addressText}></p>
-          </div>
-          <div class="contact-item">
-            <span>{copy.phone}</span><a href="tel:+79660612828">+7 966 061-28-28</a>
-          </div>
-          <div class="contact-item">
-            <span>{copy.email}</span><a href="mailto:seha.info@inbox.ru">seha.info@inbox.ru</a>
-          </div>
-        </aside>
+  <div class="quote-layout">
+    <section class="quote-main" aria-labelledby="quote-title">
+      <h2 id="quote-title" class="type-h2" set:html={copy.title} />
+      <ContactForm locale={locale} />
+    </section>
+    <aside class="quote-contacts" aria-labelledby="contacts-title">
+      <span class="quote-kicker" id="contacts-title">
+        {copy.contacts}
+      </span>
+      <div class="contact-item address">
+        <strong>{copy.address}</strong>
+        <p class="type-p" set:html={copy.addressText} />
       </div>
-      <div class="quote-bottom">
-        <div class="quote-brand">
-          <a class="logo" href={localizePath('/')} aria-label={`${copy.logoAlt} — ${copy.home}`}><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt={copy.logoAlt} /></a
-          ><span set:html={copy.brand}></span>
-        </div>
-        <a href={copy.privacyHref}>{copy.privacy}</a>
+      <div class="contact-item">
+        <span>{copy.phoneLabel}</span>
+        <Link href={siteContact.phoneHref}>{siteContact.phone}</Link>
       </div>
-    </footer>
+      <div class="contact-item">
+        <span>{copy.emailLabel}</span>
+        <Link href={`mailto:${siteContact.email}`}>{siteContact.email}</Link>
+      </div>
+    </aside>
+  </div>
+  <div class="quote-bottom">
+    <div class="quote-brand">
+      <Logo locale={locale} />
+      <span set:html={copy.brand} />
+    </div>
+    <Link href={localizedPath('/privacy/', locale)}>{copy.privacy.toUpperCase()}</Link>
+  </div>
+</footer>

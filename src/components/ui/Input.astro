@@ -5,6 +5,7 @@ interface Props extends astroHTML.JSX.InputHTMLAttributes {
 
 const { label, class: className, ...inputProps } = Astro.props;
 ---
+
 <label class="form-field">
   {label}
   <input class={className} {...inputProps} />

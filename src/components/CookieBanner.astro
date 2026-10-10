@@ -1,0 +1,27 @@
+---
+import type { Locale } from '../data/translations';
+import { getInterfaceCopy } from '../data/interface-copy';
+import { localizedPath, withBase } from '../lib/paths';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const copy = getInterfaceCopy(locale);
+---
+
+<seha-cookie-banner class="cookie-banner" aria-label={copy.cookieTitle} hidden>
+  <div class="cookie-header">
+    <span class="cookie-badge" aria-hidden="true"></span>
+    <button class="cookie-close" type="button" aria-label={copy.close}>
+      <img src={withBase('/assets/images/common/cookie-xmark.svg')} alt="" />
+    </button>
+  </div>
+  <div class="cookie-content">
+    <p id="cookie-message" data-cookie-message>
+      {copy.cookieText} <a href={localizedPath('/privacy/', locale)}>{copy.cookieLink}</a>.
+    </p>
+    <button class="cookie-action" data-cookie-action type="button">
+      {copy.cookieAction}
+    </button>
+  </div>
+</seha-cookie-banner>

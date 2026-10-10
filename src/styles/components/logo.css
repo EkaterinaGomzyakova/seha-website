@@ -1,0 +1,28 @@
+/* components/logo.css: shared styles. */
+.logo {
+  display: block;
+  width: 145px;
+  flex: 0 0 auto;
+  font-size: 0;
+  letter-spacing: 0;
+  line-height: 0;
+}
+.logo picture {
+  display: block;
+  width: 100%;
+}
+.logo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 800px) {
+  .logo {
+    width: 125px;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    width: 115px;
+  }
+}

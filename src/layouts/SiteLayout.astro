@@ -4,6 +4,8 @@ import GlobalStyles from '@components/GlobalStyles.astro';
 import Header from '@components/Header.astro';
 import SeoLinks from '@components/SeoLinks.astro';
 import type { Locale } from '../data/translations';
+import CookieBanner from '../components/CookieBanner.astro';
+import { withBase } from '../lib/paths';
 
 interface Props {
   locale: Locale;
@@ -14,28 +16,44 @@ interface Props {
   skipText: string;
   skipHref?: string;
   showFooter?: boolean;
+  image?: string;
 }
 
-const { locale, path, title, description, bodyClass, skipText, skipHref = '#main-content', showFooter = true } = Astro.props;
+const {
+  locale,
+  path,
+  title,
+  description,
+  bodyClass,
+  skipText,
+  skipHref = '#main-content',
+  showFooter = true,
+  image
+} = Astro.props;
 ---
+
 <!doctype html>
 <html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#004b32" />
+    <meta name="theme-color" content="#004d25" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
     <title>{title}</title>
-    <SeoLinks locale={locale} path={path} title={title} description={description} />
+    <SeoLinks locale={locale} path={path} title={title} description={description} image={image} />
     <GlobalStyles />
   </head>
   <body class={bodyClass}>
-    <a class="skip" href={skipHref}>{skipText}</a>
+    <a class="skip" href={skipHref}>
+      {skipText}
+    </a>
     <Header locale={locale} />
     <slot />
     {showFooter && <Footer locale={locale} />}
-    <script is:inline src="/assets/components.js"></script>
-    <script is:inline src="/assets/app.js"></script>
+    <CookieBanner locale={locale} />
+    <script>
+      import '../scripts/site';
+    </script>
   </body>
 </html>

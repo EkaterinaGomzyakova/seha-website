@@ -1,0 +1,29 @@
+/* Shared Tag component. Business choices are owned by forms.css. */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 2px 22px;
+  border: 2px solid var(--color-yellow-transparent, rgba(217, 244, 0, 0.5));
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--color-yellow-brand, #d9f400);
+  font: 500 16px/1.45 var(--font-sans);
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.tag:hover {
+  border-color: var(--color-yellow-brand, #d9f400);
+  color: var(--color-yellow-brand, #d9f400);
+}
+.tag--pressed {
+  border-color: var(--color-yellow-brand, #d9f400);
+  background: var(--color-yellow-brand, #d9f400);
+  color: var(--color-green-brand, #004d25);
+}

@@ -1,81 +1,189 @@
 ---
+import { localizedPath, withBase } from '../lib/paths';
+import { siteContact } from '../data/site';
+import { productCategories, productsForCategory, type ProductCategorySlug } from '../data/products';
+
 interface Props {
   locale: 'ru' | 'en';
   path: string;
   title: string;
   description: string;
   image?: string;
+  noindex?: boolean;
 }
-
-const { locale, path, title, description, image = '/assets/images/common/home-coconut.webp' } = Astro.props;
-const base = Astro.site ?? new URL('https://seha-group.ru');
-const suffix = path === '/' ? '/' : `${path.replace(/\/$/, '')}/`;
-const ruUrl = new URL(`/ru${suffix}`, base);
-const enUrl = new URL(`/en${suffix}`, base);
-const canonical = locale === 'en' ? enUrl : ruUrl;
-const languageName = locale === 'en' ? 'English' : 'Русский';
-const absoluteImage = new URL(image, base).toString();
-const isProductPage = path.startsWith('/products/') && path !== '/products/';
+const { locale, path, title, description, image, noindex = false } = Astro.props;
+const site = Astro.site ?? new URL('https://seha-group.ru');
+const normalizedPath = path.replace(/^\/(ru|en)(?=\/|$)/, '').replace(/\/$/, '') || '/';
+const is404 = normalizedPath === '/404' || /\/404(?:\.html)?\/?$/.test(Astro.url.pathname);
+const robotsNoindex = noindex || is404;
+const category = productCategories.find(
+  (category) => normalizedPath === '/products/' + category.slug
+);
+const isCatalog = normalizedPath === '/products';
+const absolute = (url: string) => new URL(url, site).toString();
+const canonical = absolute(is404 ? withBase('/404/') : localizedPath(normalizedPath, locale));
+const rootUrl = absolute(withBase('/'));
+const localeCode = locale === 'en' ? 'en-US' : 'ru-RU';
+const localized = (value: { ru: string; en: string }) => value[locale];
+const absoluteImage = absolute(
+  withBase(
+    image ??
+      category?.image ??
+      (isCatalog
+        ? '/assets/images/products/coconut.webp'
+        : normalizedPath === '/production'
+          ? '/assets/images/common/production-hero.webp'
+          : normalizedPath === '/quality'
+            ? '/assets/images/common/production-packing.webp'
+            : '/assets/images/common/home-coconut.webp')
+  )
+);
+// Only emit alternate links when a corresponding real locale route exists.
+const routes = Object.keys(import.meta.glob('../pages/**/*.astro'));
+const alternateLocales = robotsNoindex
+  ? []
+  : (['ru', 'en'] as const).filter((language) =>
+      routes.includes(
+        '../pages/' + language + (normalizedPath === '/' ? '' : normalizedPath) + '/index.astro'
+      )
+    );
+const breadcrumbs = [
+  { name: locale === 'en' ? 'Home' : 'Главная', url: absolute(localizedPath('/', locale)) },
+  ...(isCatalog || category
+    ? [
+        {
+          name: locale === 'en' ? 'Products' : 'Продукты',
+          url: absolute(localizedPath('/products', locale))
+        }
+      ]
+    : []),
+  ...(category ? [{ name: localized(category.title), url: canonical }] : [])
+];
+const listItems = category
+  ? productsForCategory(category.slug as ProductCategorySlug).map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Thing',
+        '@id': canonical + '#' + product.id,
+        url: canonical + '#' + product.id,
+        name: localized(product.name),
+        description: localized(product.description),
+        image: absolute(withBase(product.image))
+      }
+    }))
+  : productCategories.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'CollectionPage',
+        url: absolute(localizedPath('/products/' + entry.slug, locale)),
+        name: localized(entry.title),
+        description: localized(entry.description),
+        image: absolute(withBase(entry.image))
+      }
+    }));
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': `${base}#organization`,
-      name: 'SEHA',
-      url: base.toString(),
-      email: 'seha.info@inbox.ru',
-      telephone: '+7 966 061-28-28',
+      '@id': rootUrl + '#organization',
+      name: siteContact.name,
+      url: rootUrl,
+      email: siteContact.email,
+      telephone: siteContact.phone,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '1 Bratyev Vesninykh Boulevard, Office 151K',
-        addressLocality: 'Moscow',
-        postalCode: '115432',
-        addressCountry: 'RU'
+        streetAddress: siteContact.street,
+        addressLocality: siteContact.city,
+        postalCode: siteContact.postalCode,
+        addressCountry: siteContact.country
       }
     },
     {
       '@type': 'WebSite',
-      '@id': `${base}#website`,
+      '@id': rootUrl + '#website',
       name: 'SEHA',
-      url: base.toString(),
-      inLanguage: languageName,
-      publisher: { '@id': `${base}#organization` }
+      url: rootUrl,
+      inLanguage: ['ru-RU', 'en-US'],
+      publisher: { '@id': rootUrl + '#organization' }
     },
     {
-      '@type': 'WebPage',
-      url: canonical.toString(),
-      inLanguage: languageName,
-      isPartOf: { '@id': `${base}#website` }
+      '@type': category || isCatalog ? 'CollectionPage' : 'WebPage',
+      '@id': canonical + '#webpage',
+      url: canonical,
+      name: title,
+      description,
+      inLanguage: localeCode,
+      image: absoluteImage,
+      isPartOf: { '@id': rootUrl + '#website' },
+      ...(category || isCatalog
+        ? {
+            mainEntity: { '@id': canonical + '#items' },
+            breadcrumb: { '@id': canonical + '#breadcrumbs' }
+          }
+        : {})
     },
-    ...(isProductPage
+    ...(category || isCatalog
       ? [
           {
-            '@type': 'Product',
+            '@type': 'ItemList',
+            '@id': canonical + '#items',
             name: title,
-            description,
-            image: absoluteImage,
-            brand: { '@id': `${base}#organization` }
+            numberOfItems: listItems.length,
+            itemListOrder: 'https://schema.org/ItemListOrderAscending',
+            itemListElement: listItems
+          },
+          {
+            '@type': 'BreadcrumbList',
+            '@id': canonical + '#breadcrumbs',
+            itemListElement: breadcrumbs.map((entry, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: entry.name,
+              item: entry.url
+            }))
           }
         ]
       : [])
   ]
 };
 ---
+
+{robotsNoindex && <meta name="robots" content="noindex, follow" />}
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="SEHA" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={absoluteImage} />
+<meta property="og:image:alt" content={title} />
 <meta property="og:locale" content={locale === 'en' ? 'en_US' : 'ru_RU'} />
-<meta property="og:locale:alternate" content={locale === 'en' ? 'ru_RU' : 'en_US'} />
+{alternateLocales
+  .filter((language) => language !== locale)
+  .map((language) => (
+    <meta property="og:locale:alternate" content={language === 'en' ? 'en_US' : 'ru_RU'} />
+  ))}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={absoluteImage} />
-<link rel="canonical" href={canonical} />
-<link rel="alternate" hreflang="ru" href={ruUrl} />
-<link rel="alternate" hreflang="en" href={enUrl} />
-<link rel="alternate" hreflang="x-default" href={ruUrl} />
-<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+<meta name="twitter:image:alt" content={title} />
+{!is404 && <link rel="canonical" href={canonical} />}
+{alternateLocales.map((language) => (
+  <link
+    rel="alternate"
+    hreflang={language}
+    href={absolute(localizedPath(normalizedPath, language))}
+  />
+))}
+{alternateLocales.includes('ru') && (
+  <link rel="alternate" hreflang="x-default" href={absolute(localizedPath(normalizedPath, 'ru'))} />
+)}
+{!robotsNoindex && (
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')}
+  ></script>
+)}

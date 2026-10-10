@@ -1,33 +1,50 @@
 ---
 import type { Locale } from '../data/translations';
-
+import { withBase } from '../lib/paths';
 interface Props {
   locale: Locale;
   target: string;
   label: string;
 }
-
 const { locale, target, label } = Astro.props;
-const isEnglish = locale === 'en';
+const other = locale === 'en' ? 'ru' : 'en';
 ---
-<button
-  class="language-switch type-button"
-  type="button"
-  data-language-toggle
-  data-language-target={target}
-  aria-label={label}
->
-  <img
-    class="language-flag"
-    data-language-flag
-    src={`/assets/images/common/menu-flag-${isEnglish ? 'en' : 'ru'}.svg`}
-    alt=""
-  />
-  <span data-language-code>{isEnglish ? 'EN' : 'RU'}</span>
-  <img
-    class="language-arrow"
-    data-language-arrow
-    src="/assets/images/common/menu-language-arrow.svg"
-    alt=""
-  />
-</button>
+
+<div class="language-control">
+  <button
+    class="language-switch type-button"
+    type="button"
+    data-language-toggle
+    aria-label={label}
+    aria-expanded="false"
+    aria-controls="language-options"
+  >
+    <img
+      class="language-flag"
+      src={withBase(`/assets/images/common/menu-flag-${locale}.svg`)}
+      alt=""
+    />
+    <span data-language-code>{locale.toUpperCase()}</span>
+    <img
+      class="language-arrow"
+      data-language-arrow
+      src={withBase('/assets/images/common/menu-language-arrow.svg')}
+      alt=""
+    />
+  </button>
+  <div id="language-options" class="language-menu" hidden>
+    <a class="type-button" href={target} hreflang={other} lang={other} data-set-language={other}>
+      <img
+        class="language-flag"
+        src={withBase(`/assets/images/common/menu-flag-${other}.svg`)}
+        alt=""
+      />
+      <span>{other.toUpperCase()}</span>
+    </a>
+  </div>
+  <noscript>
+    <a href={target} hreflang={other} lang={other}>
+      {other.toUpperCase()}
+    </a>
+  </noscript>
+</div>

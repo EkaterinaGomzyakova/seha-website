@@ -1,0 +1,49 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Button from './ui/Button.astro';
+import Link from './ui/Link.astro';
+import type { Locale } from '../data/translations';
+import { getSiteTranslations } from '../data/translations';
+import { errorCopy } from '../data/error-copy';
+import { localizedPath } from '../lib/paths';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const copy = errorCopy[locale];
+const nav = getSiteTranslations(locale);
+---
+
+<SiteLayout
+  locale={locale}
+  path="/404"
+  title={copy.title}
+  description={copy.description}
+  bodyClass="not-found"
+  skipText={copy.skip}
+  skipHref="#error-content"
+  showFooter={false}
+>
+  <main class="error-page" id="error-content">
+    <section class="error-copy" aria-labelledby="error-title">
+      <div class="error-mark" aria-hidden="true">
+        <span>4</span>
+        <i>0</i>
+        <span>4</span>
+      </div>
+      <h1 id="error-title" class="type-h1">
+        {copy.heading}
+      </h1>
+      <p class="type-p">{copy.description}</p>
+      <nav class="error-nav" aria-label={copy.navigation}>
+        <Link href={localizedPath('/products/', locale)}>{nav.products}</Link>
+        <Link href={localizedPath('/production/', locale)}>{nav.production}</Link>
+        <Link href={localizedPath('/quality/', locale)}>{nav.quality}</Link>
+        <Link href={localizedPath('/about/', locale)}>{nav.about}</Link>
+      </nav>
+      <Button variant="tertiary" href={localizedPath('/', locale)}>
+        {copy.home}
+      </Button>
+    </section>
+  </main>
+</SiteLayout>

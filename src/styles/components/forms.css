@@ -1,5 +1,139 @@
-/* Source: checkbox.css */
-/* Shared Checkbox component — Figma node 87:8996. */
+/* components/forms.css: shared styles. */
+.quote-footer form {
+  margin: 0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+.comment-field {
+  margin-top: 32px;
+}
+.quote-footer fieldset {
+  border: 0;
+  padding: 0;
+  margin: 32px 0 0;
+  min-width: 0;
+}
+.quote-footer legend {
+  padding: 0;
+  margin: 0;
+  font: 700 11px/1.2 var(--font-sans);
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+}
+.business-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+  margin-top: 14px;
+}
+.business-choices label {
+  position: relative;
+  cursor: pointer;
+}
+.business-choices input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.business-choices span.tag {
+  border: 2px solid var(--color-yellow-transparent);
+  border-radius: 999px;
+  color: var(--color-yellow-brand);
+  font: 500 16px/1.45 var(--font-sans);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.business-choices label:hover span.tag,
+.business-choices input:focus-visible + span.tag {
+  border-color: var(--color-yellow-brand);
+}
+.business-choices input:checked + span.tag {
+  background: var(--color-yellow-brand);
+  color: var(--color-green-brand);
+}
+.consent {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 22px;
+  color: var(--color-background-light);
+  font: 500 16px/1.45 var(--font-sans);
+  cursor: pointer;
+}
+.consent a {
+  color: var(--color-yellow-brand);
+}
+.field-error {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-yellow-brand);
+  font: 500 12px/1.4 var(--font-sans);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.field-error[hidden],
+.quote-result[hidden],
+#quote-copy-fallback[hidden] {
+  display: none;
+}
+.quote-result {
+  margin-top: 18px;
+  padding: 20px;
+  background: var(--color-green-light);
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid var(--color-yellow-transparent);
+  color: var(--color-background-light);
+}
+.quote-result[data-state='error'] {
+  border-color: var(--color-error);
+}
+.quote-result[data-state='success'] {
+  border-color: var(--color-yellow-brand);
+}
+.quote-result strong {
+  color: var(--color-yellow-brand);
+}
+.quote-result p {
+  margin: 8px 0 14px;
+}
+.quote-result button {
+  padding: 10px 14px;
+  border: 1px solid var(--color-yellow-transparent);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--color-background-light);
+  font: inherit;
+  cursor: pointer;
+}
+#quote-copy-fallback {
+  width: 100%;
+  min-height: 160px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-background-light);
+  color: var(--color-green-brand);
+}
+@media (max-width: 420px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .business-choices span.tag {
+    font-size: 14px;
+    padding: 8px 11px;
+  }
+  .consent {
+    font-size: 13px;
+  }
+}
 .consent {
   position: relative;
 }
@@ -8,7 +142,7 @@
   opacity: 0;
   width: 1px;
   height: 1px;
-  margin: 0 !important;
+  margin: 0;
 }
 .consent__checkbox {
   display: block;
@@ -27,4 +161,131 @@
 }
 .consent__text {
   min-width: 0;
+}
+.input-component,
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+.input-component {
+  width: 274px;
+}
+.form-field {
+  width: 100%;
+}
+.input-component__label,
+.form-field {
+  color: var(--color-yellow-transparent, rgba(217, 244, 0, 0.5));
+  font: 700 11px/1.2 var(--font-sans);
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+}
+.input-component__control,
+.form-field input {
+  display: block;
+  width: 100%;
+  min-height: 57px;
+  margin: 0;
+  padding: 14px 0 16px;
+  border: 0;
+  border-bottom: 2px solid var(--color-yellow-transparent, rgba(217, 244, 0, 0.5));
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-gray, #949494);
+  font: 500 16px/1.45 var(--font-sans);
+  outline: 0;
+}
+.form-field textarea {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 14px 0 16px;
+  border: 0;
+  border-bottom: 2px solid var(--color-yellow-transparent, rgba(217, 244, 0, 0.5));
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-gray, #949494);
+  font: 500 16px/1.45 var(--font-sans);
+  outline: 0;
+}
+.input-component__control::placeholder,
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--color-gray, #949494);
+  opacity: 1;
+}
+.input-component__control:focus,
+.form-field input:focus,
+.form-field textarea:focus {
+  border-bottom-color: var(--color-yellow-brand);
+  box-shadow: 0 2px 0 var(--color-yellow-brand);
+}
+.input-component__control--textarea,
+.form-field textarea {
+  min-height: 75px;
+  resize: vertical;
+}
+.quote-footer .form-field,
+.quote-footer legend {
+  color: var(--color-text-on-green);
+  opacity: 1;
+}
+
+.quote-footer .form-field input,
+.quote-footer .form-field textarea,
+.quote-footer .form-field input::placeholder,
+.quote-footer .form-field textarea::placeholder {
+  color: var(--color-text-on-green);
+}
+
+.quote-footer .form-field input,
+.quote-footer .form-field textarea {
+  border-bottom-color: var(--color-yellow-brand);
+}
+.form-grid {
+  column-gap: 24px;
+  row-gap: 32px;
+}
+.business-choices span.tag {
+  min-height: 42px;
+  padding: 2px 22px;
+  border-width: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.consent {
+  align-items: flex-start;
+}
+
+@media (max-width: 440px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .business-choices span.tag {
+    padding-inline: 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+  .consent {
+    font-size: 13px;
+  }
+}
+
+.quote-footer .consent a {
+  color: var(--color-yellow-brand);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.quote-result[data-state='error'] strong {
+  color: var(--color-error);
 }

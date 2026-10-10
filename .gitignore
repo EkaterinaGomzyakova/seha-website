@@ -2,4 +2,9 @@ node_modules/
 .astro/
 dist/
 test-results/
+test-results-*/
+playwright-report/
+.env
+.env.*
+!.env.example
 !.gitkeep

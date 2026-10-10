@@ -1,5 +1,4 @@
-/* Source: buttons.css */
-/* Shared Button component — Figma node 87:8983. */
+/* components/buttons.css: shared styles. */
 .button {
   display: inline-flex;
   align-items: center;
@@ -8,10 +7,7 @@
   padding: 12px 24px;
   border: 0;
   border-radius: 12px;
-  font:
-    700 11px/1.2 Inter,
-    Arial,
-    sans-serif;
+  font: 700 11px/1.2 var(--font-sans);
   letter-spacing: 0.99px;
   text-transform: uppercase;
   text-decoration: none;
@@ -48,7 +44,7 @@
   transform: translateY(-1px);
 }
 .button:focus-visible {
-  outline: 2px solid var(--color-yellow-brand);
+  outline: var(--focus-outline);
   outline-offset: 5px;
 }
 .button--full {

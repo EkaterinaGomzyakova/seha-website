@@ -1,35 +1,120 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
-import { getProductPage, type ProductPageSlug } from '../data/product-pages';
+import Button from './ui/Button.astro';
+import {
+  getProductCategoryPage,
+  type ProductCategoryPageSlug
+} from '../data/product-category-pages';
 import type { Locale } from '../data/translations';
+import { withBase, localizedPath } from '../lib/paths';
+import imageManifest from '../../public/assets/images/generated/manifest.json';
 
-interface Props { locale: Locale; category: ProductPageSlug; }
+interface Props {
+  locale: Locale;
+  category: ProductCategoryPageSlug;
+}
+interface ImageVariant {
+  src: string;
+  format: string;
+  width: number;
+  height: number;
+}
+interface ImageEntry {
+  width: number;
+  height: number;
+  variants: ImageVariant[];
+}
 const { locale, category } = Astro.props;
-const page = getProductPage(category, locale);
+const page = getProductCategoryPage(category, locale);
 const t = (value: { ru: string; en: string }) => value[locale];
 const title = `${t(page.title)} — Seha`;
+const images = imageManifest.images as Record<string, ImageEntry>;
+const entry = (source: string) => images[source];
+const srcset = (source: string, format: string) =>
+  entry(source)
+    ?.variants.filter((variant) => variant.format === format)
+    .map((variant) => `${withBase(variant.src)} ${variant.width}w`)
+    .join(', ');
+const fallback = (source: string) =>
+  withBase(
+    entry(source)?.variants.find((variant) => variant.format === 'webp' && variant.width >= 640)
+      ?.src ?? source
+  );
+const sizes = '(max-width: 600px) 90vw, (max-width: 1024px) 44vw, 360px';
 ---
-<SiteLayout locale={locale} path={page.path} title={title} description={t(page.intro)} bodyClass={`product-detail ${page.bodyClass}`} skipText={locale === 'en' ? 'To products' : 'К продуктам'}>
+
+<SiteLayout
+  locale={locale}
+  path={page.path}
+  title={title}
+  description={t(page.intro)}
+  image={page.heroImage}
+  bodyClass={`page-product-category ${page.bodyClass}`}
+  skipText={locale === 'en' ? 'To products' : 'К продуктам'}
+>
   <nav class="breadcrumbs" aria-label={locale === 'en' ? 'Breadcrumbs' : 'Хлебные крошки'}>
-    <span aria-current="page">{t(page.breadcrumb)}</span>
+    <a href={localizedPath('/', locale)}>{locale === 'en' ? 'Home' : 'Главная'}</a>
+    <span aria-hidden="true"> / </span>
+    <a href={localizedPath('/products', locale)}>{locale === 'en' ? 'Products' : 'Продукты'}</a>
+    <span aria-hidden="true"> / </span>
+    <span aria-current="page">{t(page.title)}</span>
   </nav>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="product-hero" aria-labelledby="product-title">
-      <div class="product-hero-icon"><img src={page.heroImage} alt="" width="720" height="720" aria-hidden="true" /></div>
+      <div class="product-hero-icon">
+        <picture>
+          <source type="image/avif" srcset={srcset(page.heroImage, 'avif')} sizes={sizes} />
+          <source type="image/webp" srcset={srcset(page.heroImage, 'webp')} sizes={sizes} />
+          <img
+            src={fallback(page.heroImage)}
+            alt={t(page.title)}
+            width={entry(page.heroImage)?.width ?? 720}
+            height={entry(page.heroImage)?.height ?? 720}
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
       <span class="section-label">{t(page.section)}</span>
-      <h1 id="product-title" class="type-h1">{t(page.title)}</h1>
+      <h1 id="product-title" class="type-h1">
+        {t(page.title)}
+      </h1>
       <p class="type-p">{t(page.intro)}</p>
     </section>
     <section class="product-list-section" id="products-list" aria-labelledby="products-title">
-      <div class="product-list-heading"><span>{t(page.listLabel)}</span><h2 id="products-title" class="type-h2" set:html={t(page.listTitle)}></h2></div>
+      <div class="product-list-heading">
+        <span>{t(page.listLabel)}</span>
+        <h2 id="products-title" class="type-h2" set:html={t(page.listTitle)} />
+      </div>
       <div class="product-grid-page">
-        {page.items.map((item) => <article class="product-item reveal">
-          <figure><img src={item.image} alt={t(item.alt)} width="720" height="720" loading="lazy" /></figure>
-          <span>{t(item.label)}</span>
-          <h3 class="type-h3">{t(item.name)}</h3>
-          <p class="type-p">{t(item.description)}</p>
-          <a class="button button--primary button--full" href="#contacts" data-quote-product={t(page.title)}>{t(page.cta)}</a>
-        </article>)}
+        {page.items.map((item) => (
+          <article id={item.id} class="product-item reveal">
+            <figure>
+              <picture>
+                <source type="image/avif" srcset={srcset(item.image, 'avif')} sizes={sizes} />
+                <source type="image/webp" srcset={srcset(item.image, 'webp')} sizes={sizes} />
+                <img
+                  src={fallback(item.image)}
+                  alt={t(item.alt)}
+                  width={entry(item.image)?.width ?? 720}
+                  height={entry(item.image)?.height ?? 720}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </figure>
+            <span>{t(item.label)}</span>
+            <h3 class="type-h3">{t(item.name)}</h3>
+            <p class="type-p">{t(item.description)}</p>
+            <Button
+              href="#contacts"
+              full
+              data-quote-product={t(item.name)}
+              data-product-id={item.id}
+            >
+              {t(page.cta)}
+            </Button>
+          </article>
+        ))}
       </div>
     </section>
   </main>

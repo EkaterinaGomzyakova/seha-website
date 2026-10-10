@@ -1,0 +1,2473 @@
+{
+  "profile": {
+    "version": 1,
+    "widths": [
+      320,
+      640,
+      960,
+      1440
+    ],
+    "webpQuality": 82,
+    "avifQuality": 55
+  },
+  "images": {
+    "/assets/images/common/category-fiber.png": {
+      "fingerprint": "babb86d9d62c52ae18c89d367c9e4ff06a1b1cbdea4df74c7452b25dc4fa7766",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 38292
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19433
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 131132
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 65885
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 248144
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 126007
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 370836
+        },
+        {
+          "src": "/assets/images/generated/common/category-fiber.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 187706
+        }
+      ]
+    },
+    "/assets/images/common/category-food.png": {
+      "fingerprint": "b078eb73b66a5ed86337a68c9e01afe173b7f8ae713a3732b51806cd06e557ff",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/category-food.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22352
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12534
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 71978
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 42241
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 136448
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 80943
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 206230
+        },
+        {
+          "src": "/assets/images/generated/common/category-food.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 121886
+        }
+      ]
+    },
+    "/assets/images/common/category-shell.png": {
+      "fingerprint": "f1632dab5897058723399e500b80a7db650bd0f1138a45b8a700c4693ab30f01",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/category-shell.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 38886
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19007
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 124016
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 63300
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 226222
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 119216
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 329432
+        },
+        {
+          "src": "/assets/images/generated/common/category-shell.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 175724
+        }
+      ]
+    },
+    "/assets/images/common/category-substrates.png": {
+      "fingerprint": "e64fdc21906da84e945052382d013399003770ac7dd5f9cbf715ed8c40b040fa",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34678
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17532
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 115108
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 60279
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 216292
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 114060
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 335022
+        },
+        {
+          "src": "/assets/images/generated/common/category-substrates.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 172555
+        }
+      ]
+    },
+    "/assets/images/common/cookie-coconut.png": {
+      "fingerprint": "8b24e3f922dd25cd9f70bdf156712e771848e8baecaefad180dfcb31776c102f",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 15962
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9440
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 47574
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 27394
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 88656
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 52191
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 113838
+        },
+        {
+          "src": "/assets/images/generated/common/cookie-coconut.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 74654
+        }
+      ]
+    },
+    "/assets/images/common/home-coconut.webp": {
+      "fingerprint": "230733bf58dd8cc6dbd1a54cf46f535c655803986a951730f9960448aa65251b",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 9650
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 6152
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 30672
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 19428
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 57516
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 37235
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 98018
+        },
+        {
+          "src": "/assets/images/generated/common/home-coconut.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 65102
+        }
+      ]
+    },
+    "/assets/images/common/materials.webp": {
+      "fingerprint": "5359d42ccd27ca3744a0b333d941ab3368ececd84e4e01921f3c5b61178e3912",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/materials.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 19556
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 10441
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 68076
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 36773
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 138018
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 74399
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 254188
+        },
+        {
+          "src": "/assets/images/generated/common/materials.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 144515
+        }
+      ]
+    },
+    "/assets/images/common/production-hero.webp": {
+      "fingerprint": "e03ba127aca57dd74457def9924898c1f48a493bb6f1b7f337562401681e6116",
+      "width": 1942,
+      "height": 809,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 133,
+          "bytes": 10064
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 133,
+          "bytes": 5745
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 267,
+          "bytes": 32824
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 267,
+          "bytes": 18407
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 400,
+          "bytes": 64230
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 400,
+          "bytes": 36187
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 600,
+          "bytes": 119582
+        },
+        {
+          "src": "/assets/images/generated/common/production-hero.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 600,
+          "bytes": 71217
+        }
+      ]
+    },
+    "/assets/images/common/production-packing.webp": {
+      "fingerprint": "7d370cfe2b5f62ba5d6fbfd0580832d8a148eaa10e60e177471a77f7680a95f6",
+      "width": 1672,
+      "height": 941,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 15424
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 8088
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 42426
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 23839
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 73970
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 45399
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 117314
+        },
+        {
+          "src": "/assets/images/generated/common/production-packing.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 80419
+        }
+      ]
+    },
+    "/assets/images/common/production-processing.webp": {
+      "fingerprint": "0e65a1b11b0e0d10d4a94d81e8bddc165c901a6ad3584843740f22bb5713ec53",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 16828
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 9108
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 54446
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 30038
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 103454
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 57340
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 180230
+        },
+        {
+          "src": "/assets/images/generated/common/production-processing.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 102706
+        }
+      ]
+    },
+    "/assets/images/fiber/fiber-01-photorealistic.png": {
+      "fingerprint": "97b1c82fda2f901b26ff7221cc2991db4af482878a8bba11681f13aba188180b",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 41836
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 20971
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 157674
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 78463
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 310022
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 154731
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 470698
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 230220
+        }
+      ]
+    },
+    "/assets/images/fiber/fiber-02-photorealistic.png": {
+      "fingerprint": "354ed6fbabe298c1a083b07622f3daabbd93650a3faa8577c085d1100cf20056",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28180
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15089
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 101950
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 54937
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 195014
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 105823
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 288526
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 155432
+        }
+      ]
+    },
+    "/assets/images/fiber/fiber-03-photorealistic.png": {
+      "fingerprint": "cba5e4111e0d7fa66b537e2de52b4c10d4d6aa546f768065664ca0a25abac1c9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 36652
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17910
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 138684
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 66973
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 279516
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 140300
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 432444
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 215570
+        }
+      ]
+    },
+    "/assets/images/fiber/fiber-04-photorealistic.png": {
+      "fingerprint": "81fc987029617f9d63a83f4336541d61866ddc4c5c90c95cb8fa6e12fa2a7a26",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 44284
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 21547
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 146638
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 71942
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 272634
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 135560
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 414740
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 199619
+        }
+      ]
+    },
+    "/assets/images/fiber/fiber-05-photorealistic.png": {
+      "fingerprint": "f12a250e4b256a5d8ce0cb289d28911729683939e3d3e9086fa09ead41614252",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 46228
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 23205
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 186514
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 93441
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 382532
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 187047
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 593918
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 278358
+        }
+      ]
+    },
+    "/assets/images/fiber/fiber-06-photorealistic.png": {
+      "fingerprint": "e1a08949016ef08c0bcba173503a907d7dfd3f10290ba57afdae1c32fa6c0caa",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 50482
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 24875
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 184430
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 93256
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 374774
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 183123
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 574572
+        },
+        {
+          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 271591
+        }
+      ]
+    },
+    "/assets/images/food/food-01-photorealistic.png": {
+      "fingerprint": "08b1be86c76a77aa3b7393deccf720c9248df54b0fbdd1e0103fbf0dc8a294f4",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22586
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12546
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 73544
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 43014
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 136844
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 81021
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 197956
+        },
+        {
+          "src": "/assets/images/generated/food/food-01-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 119858
+        }
+      ]
+    },
+    "/assets/images/food/food-02-photorealistic.png": {
+      "fingerprint": "a985069db4638fab338ce63d922d6f7a231fa3b91d2ce655e840e0de80974696",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26648
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13150
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 84350
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 47491
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 157286
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 92775
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 229986
+        },
+        {
+          "src": "/assets/images/generated/food/food-02-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 138149
+        }
+      ]
+    },
+    "/assets/images/food/food-03-photorealistic.png": {
+      "fingerprint": "de87b5ec1e62136d782f046c3ad11f3f26f8dff737c9302fd847ea9f91ccbbbf",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28796
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14396
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 91474
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49290
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 165326
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 95386
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 250992
+        },
+        {
+          "src": "/assets/images/generated/food/food-03-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 141905
+        }
+      ]
+    },
+    "/assets/images/food/food-04-photorealistic.png": {
+      "fingerprint": "b068b8a2ec29a36f254862ccfc34cf55efdd29f395bd2d3417f5dd8b5bd9ce39",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 17826
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9918
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56326
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34347
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 103774
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 67789
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 155340
+        },
+        {
+          "src": "/assets/images/generated/food/food-04-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 103673
+        }
+      ]
+    },
+    "/assets/images/food/food-05-photorealistic.png": {
+      "fingerprint": "e3e165df547ba0b0173a99620b861b797c0fd345e3b6b347e54342e105e70738",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24464
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13070
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 70784
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 43322
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 126128
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 83458
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 177740
+        },
+        {
+          "src": "/assets/images/generated/food/food-05-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 124670
+        }
+      ]
+    },
+    "/assets/images/food/food-06-photorealistic.png": {
+      "fingerprint": "55cf943e2aa788f8eeed72c984299d648c58e8cd0360e6680f8daece578904a6",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14380
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8300
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 43950
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 29495
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 78362
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 55780
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 116828
+        },
+        {
+          "src": "/assets/images/generated/food/food-06-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 82711
+        }
+      ]
+    },
+    "/assets/images/food/food-07-photorealistic.png": {
+      "fingerprint": "a7f3f587107ec7db539451cb5e6736ca59a127d616b2adab85a8992ea6ae5602",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19708
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11016
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 58962
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 36609
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 101848
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 68533
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 150308
+        },
+        {
+          "src": "/assets/images/generated/food/food-07-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 101508
+        }
+      ]
+    },
+    "/assets/images/food/food-08-photorealistic.png": {
+      "fingerprint": "7dcdcc4df5526bd9af80e44ffd3075de1fecd40c2860241200680d56e2de1ece",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14574
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8573
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 42454
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 28756
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 75614
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 54062
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 111712
+        },
+        {
+          "src": "/assets/images/generated/food/food-08-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 79469
+        }
+      ]
+    },
+    "/assets/images/food/food-09-photorealistic.png": {
+      "fingerprint": "189bf695fefeb2241fa136568c67640044eaffd5d00870ceff8c1f92087991c8",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14690
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8827
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 40038
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 27857
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 71148
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 52459
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 105128
+        },
+        {
+          "src": "/assets/images/generated/food/food-09-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 78685
+        }
+      ]
+    },
+    "/assets/images/products/coconut.webp": {
+      "fingerprint": "2ccfe44db74ab0ffd2fb3ccf530a7683ae7b866c6d00630938972c56edf7d159",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/products/coconut.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 6704
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 4567
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 23490
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 14964
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 48772
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 30455
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 94122
+        },
+        {
+          "src": "/assets/images/generated/products/coconut.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 60552
+        }
+      ]
+    },
+    "/assets/images/shell/shell-01-photorealistic.png": {
+      "fingerprint": "53125a881f303479e868a1c9ffe136b042446483f65cdc6f6269226819a11d36",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24146
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12894
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 87154
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 48627
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 169596
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 96018
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 251546
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 143050
+        }
+      ]
+    },
+    "/assets/images/shell/shell-02-photorealistic.png": {
+      "fingerprint": "822aa524d39b500ca1b731b5294340f04befd5a685b715feefdde842b93918dd",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32420
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16307
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 114458
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 59163
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 220380
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 117992
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 323346
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 177247
+        }
+      ]
+    },
+    "/assets/images/shell/shell-03-photorealistic.png": {
+      "fingerprint": "06c98054b23ce36e297fac0c0386758bff79cc0330cc33a68ce365f9cfdf7672",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25936
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13553
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 89896
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49912
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 170008
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 96221
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 250836
+        },
+        {
+          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 141955
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-01-photorealistic.png": {
+      "fingerprint": "05f002e5edf978db6d8ce90aa77f03e3d38674b50b813646e936108b83f1ee7d",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 37052
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 18874
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 116414
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 62383
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 224350
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 118770
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 372202
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 178787
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-02-photorealistic.png": {
+      "fingerprint": "bd31c5bda049104bdceb1899cd08ac464ff7517cc99602a5545fa6d5389c3109",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26530
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14473
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 92912
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 51385
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 190734
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 105560
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 312126
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 167282
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-03-photorealistic.png": {
+      "fingerprint": "a6df1e53288358862b2e865b3923e0caf102deb6997019569554cf9ba121ab43",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26038
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13892
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 79742
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 46501
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 149768
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 89234
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 242640
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 136876
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-04-photorealistic.png": {
+      "fingerprint": "771bf630039fc6c2c3c729e06d5e9af1b9c9b6691d1861c7fcaa1c70220872f4",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32610
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15978
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 120594
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 60738
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 246820
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 128247
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 397092
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 198789
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-05-photorealistic.png": {
+      "fingerprint": "9798a5e8e894b2e5c5890a9f470ef47a7123622f9a4a1c2b492e5a360d6cc922",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25612
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13620
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 88734
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49885
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 179214
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 100064
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 277802
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 151844
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-06-photorealistic.png": {
+      "fingerprint": "27519c260696f43db7cf786d4cef0f81ea803987d4fa8d27bf79caac962d124d",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26952
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13694
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 88690
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49081
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 166128
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 96032
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 253008
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 144281
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-07-photorealistic.png": {
+      "fingerprint": "f18ace5e89cd9047c93324346b15b96d1da75059916b01efd6f1a217e2481b30",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26166
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14027
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 80112
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 45899
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 150898
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 87723
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 240466
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 132595
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-08-photorealistic.png": {
+      "fingerprint": "5686181fd0f0203191e656e7cdead8cfe81c4565e1d6371094130dc9d516a252",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32696
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16283
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 110248
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 57680
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 211460
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 109971
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 314610
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 162383
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-09-photorealistic.png": {
+      "fingerprint": "1badf6705df4299d8e5c0ec46f4c5660afdd2d742e1df36bbb716cd2a42eb0ef",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28132
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15107
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 89502
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49641
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 163044
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 93215
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 248144
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 139883
+        }
+      ]
+    },
+    "/assets/images/substrates/substrates-10-photorealistic.png": {
+      "fingerprint": "ba0bf4032aeffd5b958c77acfaa8acfb006dd70272a1dbe7d06d6e9f5c7928a4",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25658
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13922
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 83484
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 47015
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 156456
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 90302
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 243896
+        },
+        {
+          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 134887
+        }
+      ]
+    }
+  },
+  "errors": {}
+}

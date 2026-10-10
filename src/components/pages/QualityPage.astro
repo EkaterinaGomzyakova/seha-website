@@ -1,0 +1,210 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Button from '../ui/Button.astro';
+import { withBase, localizedPath } from '../../lib/paths';
+import { qualityPageCopy } from '../../data/quality-page';
+import type { Locale } from '../../data/translations';
+
+interface Props {
+  locale: Locale;
+  rootAlias?: boolean;
+}
+const { locale, rootAlias = false } = Astro.props;
+const copy = qualityPageCopy[locale];
+const path = '/quality';
+const href = (path: string) =>
+  path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
+---
+
+<SiteLayout
+  locale={locale}
+  path={path}
+  title={copy.title}
+  description={copy.description}
+  bodyClass="home quality"
+  skipText={copy.skipText}
+  skipHref={href('#standards')}
+>
+  <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
+    <a href={href('/')}>{copy.pageLink}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{copy.pageLabel}</span>
+  </nav>
+  <main>
+    <section class="quality-hero" aria-labelledby="quality-title">
+      <div class="quality-hero-copy">
+        <div class="hero-topline">
+          <span>{copy.qualityHeroLabel}</span>
+          <span>{copy.qualityHeroLabel2}</span>
+        </div>
+        <h1 id="quality-title" class="type-h1">
+          {copy.qualityHeroTitle}
+          <br />
+          <em>{copy.qualityHeroEmphasis}</em>
+        </h1>
+        <p class="type-p">{copy.qualityHeroText}</p>
+        <div class="production-actions">
+          <Button variant="secondary" href={href('#standards')}>
+            {copy.qualityHeroLink} <span>↓</span>
+          </Button>
+          <Button variant="tertiary" href={href('#documents')}>
+            {copy.qualityHeroLink2}
+          </Button>
+        </div>
+      </div>
+      <figure class="quality-hero-card">
+        <img
+          src={withBase('/assets/images/common/production-processing.webp')}
+          alt={copy.qualityHeroAlt}
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+        />
+        <figcaption>{copy.qualityHeroCaption}</figcaption>
+      </figure>
+    </section>
+    <section class="home-section quality-map" id="standards">
+      <div class="section-top reveal">
+        <span class="section-label">{copy.qualityMapLabel}</span>
+        <span class="section-note">{copy.qualityMapLabel2}</span>
+      </div>
+      <div class="section-heading reveal">
+        <h2 class="type-h2">
+          {copy.qualityMapHeading}
+          <br />
+          <span>{copy.qualityMapLabel3}</span>
+        </h2>
+        <p class="type-p">{copy.qualityMapText}</p>
+      </div>
+      <div class="standards-grid">
+        <article class="standard-card reveal">
+          <span>ORGANIC</span>
+          <h3 class="type-h3">{copy.qualityMapCardTitle}</h3>
+          <p class="type-p">{copy.qualityMapText2}</p>
+          <b>USDA · EU Organic · NPOP</b>
+        </article>
+        <article class="standard-card dark reveal">
+          <span>FOOD SAFETY</span>
+          <h3 class="type-h3">{copy.qualityMapCardTitle2}</h3>
+          <p class="type-p">{copy.qualityMapText3}</p>
+          <b>BRCGS · HACCP · FSSC 22000</b>
+        </article>
+        <article class="standard-card reveal">
+          <span>ETHICAL SUPPLY</span>
+          <h3 class="type-h3">Fairtrade</h3>
+          <p class="type-p">{copy.qualityMapText4}</p>
+          <b>FAIRTRADE CERTIFIED</b>
+        </article>
+      </div>
+    </section>
+    <section class="quality-proof">
+      <div class="proof-image reveal">
+        <img
+          src={withBase('/assets/images/common/production-packing.webp')}
+          alt={copy.qualityProofAlt}
+          width="1680"
+          height="943"
+          loading="lazy"
+        />
+      </div>
+      <div class="proof-copy">
+        <span class="section-label reveal">{copy.qualityProofLabel}</span>
+        <h2 class="reveal type-h2">
+          {copy.qualityProofHeading}
+          <br />
+          <span>{copy.qualityProofLabel2}</span>
+        </h2>
+        <div class="proof-list">
+          <div class="reveal">
+            <span>01</span>
+            <h3 class="type-h3">{copy.qualityProofCardTitle}</h3>
+            <p class="type-p">{copy.qualityProofText}</p>
+          </div>
+          <div class="reveal">
+            <span>02</span>
+            <h3 class="type-h3">{copy.qualityProofCardTitle2}</h3>
+            <p class="type-p">{copy.qualityProofText2}</p>
+          </div>
+          <div class="reveal">
+            <span>03</span>
+            <h3 class="type-h3">{copy.qualityProofCardTitle3}</h3>
+            <p class="type-p">{copy.qualityProofText3}</p>
+          </div>
+          <div class="reveal">
+            <span>04</span>
+            <h3 class="type-h3">{copy.qualityProofCardTitle4}</h3>
+            <p class="type-p">{copy.qualityProofText4}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="home-section documents-section" id="documents">
+      <div class="section-top reveal">
+        <span class="section-label">{copy.documentsSectionLabel}</span>
+        <span class="section-note">{copy.documentsSectionLabel2}</span>
+      </div>
+      <div class="section-heading reveal">
+        <h2 class="type-h2">
+          {copy.documentsSectionHeading}
+          <br />
+          <span>{copy.documentsSectionLabel3}</span>
+        </h2>
+        <p class="type-p">{copy.documentsSectionText}</p>
+      </div>
+      <div class="document-grid">
+        <article class="reveal">
+          <span>01</span>
+          <h3 class="type-h3">{copy.documentsSectionCardTitle}</h3>
+          <p class="type-p">{copy.documentsSectionText2}</p>
+        </article>
+        <article class="reveal">
+          <span>02</span>
+          <h3 class="type-h3">{copy.documentsSectionCardTitle2}</h3>
+          <p class="type-p">{copy.documentsSectionText3}</p>
+        </article>
+        <article class="reveal">
+          <span>03</span>
+          <h3 class="type-h3">{copy.documentsSectionCardTitle3}</h3>
+          <p class="type-p">{copy.documentsSectionText4}</p>
+        </article>
+        <article class="reveal">
+          <span>04</span>
+          <h3 class="type-h3">{copy.documentsSectionCardTitle4}</h3>
+          <p class="type-p">{copy.documentsSectionText5}</p>
+        </article>
+      </div>
+    </section>
+    <section class="site-role">
+      <div class="reveal">
+        <span class="section-label">{copy.siteRoleLabel}</span>
+        <h2 class="type-h2">
+          {copy.siteRoleHeading}
+          <br />
+          <em>{copy.siteRoleEmphasis}</em>
+        </h2>
+      </div>
+      <div class="site-role-copy reveal">
+        <p class="type-p">{copy.siteRoleText}</p>
+        <Button variant="tertiary" href={href('#contacts')}>
+          {copy.siteRoleLink}
+        </Button>
+      </div>
+    </section>
+    <section class="cert-preview quality-cta">
+      <div class="reveal">
+        <span class="section-label">{copy.certPreviewLabel}</span>
+        <h2 class="type-h2">
+          {copy.certPreviewHeading}
+          <br />
+          <span>{copy.certPreviewLabel2}</span>
+        </h2>
+      </div>
+      <div class="cert-copy reveal">
+        <p class="type-p">{copy.certPreviewText}</p>
+        <Button variant="tertiary" href={href('#contacts')}>
+          {copy.certPreviewLink}
+        </Button>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

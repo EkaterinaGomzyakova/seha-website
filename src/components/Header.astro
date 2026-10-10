@@ -1,43 +1,99 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import Logo from './Logo.astro';
 import Button from './ui/Button.astro';
 import { getSiteTranslations, type Locale } from '../data/translations';
-
-const { locale = 'ru' as Locale } = Astro.props;
-const isEnglish = locale === 'en';
-const localizePath = (path) => `/${locale}${path === '/' ? '/' : path}`;
-const routePath = (Astro.url.pathname.replace(/^\/(?:ru|en)(?=\/|$)/, '').replace(/\/$/, '') || '/');
-const languageTarget = `/${isEnglish ? 'ru' : 'en'}${routePath === '/' ? '/' : `${routePath}/`}`;
+import { getInterfaceCopy } from '../data/interface-copy';
+import { siteContact } from '../data/site';
+import { localizedPath, unlocalizedPath, withBase } from '../lib/paths';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
 const copy = getSiteTranslations(locale);
+const ui = getInterfaceCopy(locale);
+const links = [
+  { path: '/products/', text: copy.products },
+  { path: '/production/', text: copy.production },
+  { path: '/quality/', text: copy.quality },
+  { path: '/about/', text: copy.about }
+];
+const languageTarget = localizedPath(
+  unlocalizedPath(Astro.url.pathname),
+  locale === 'en' ? 'ru' : 'en'
+);
 ---
+
 <header class="header site-header">
-      <a class="logo" href={localizePath('/')} aria-label={`${copy.logoAlt} — ${copy.home}`}
-        ><img class="logo-image" src="/assets/images/common/russian_logo.svg" alt="Сеха"
-      /></a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <a href={localizePath('/products')}>{copy.products}</a><a href={localizePath('/production')}>{copy.production}</a
-        ><a href={localizePath('/quality')}>{copy.quality}</a><a href={localizePath('/about')}>{copy.about}</a>
-      </nav>
-      <Button variant="primary" compact href={`${localizePath('/')}#contacts`}>{copy.offer} <span aria-hidden="true">↗</span></Button
-      ><LanguageSwitcher locale={locale} target={languageTarget} label={copy.language}
-      />
-      <button
-        class="menu-toggle"
-        aria-label={copy.menu}
-        aria-expanded="false"
-        aria-controls="mobile-nav"
+  <Logo locale={locale} />
+  <nav class="site-nav" aria-label={ui.mainNavigation}>
+    {links.map((link) => (
+      <a
+        href={localizedPath(link.path, locale)}
+        aria-current={unlocalizedPath(Astro.url.pathname) === link.path ? 'page' : undefined}
       >
-        <img
-          class="menu-icon"
-          data-menu-icon
-          src="/assets/images/common/menu-icon.svg"
-          alt=""
-          aria-hidden="true"
-        />
+        {link.text}
+      </a>
+    ))}
+  </nav>
+  <Button variant="primary" compact href={localizedPath('/#contacts', locale)}>
+    {copy.offer} <span aria-hidden="true">↗</span>
+  </Button>
+  <LanguageSwitcher locale={locale} target={languageTarget} label={copy.language} />
+  <button
+    id="menu-toggle"
+    class="menu-toggle"
+    type="button"
+    aria-label={copy.menu}
+    aria-expanded="false"
+    aria-controls="mobile-nav"
+    data-open-label={copy.menu}
+    data-close-label={ui.closeMenu}
+  >
+    <img
+      class="menu-icon"
+      data-menu-icon
+      src={withBase('/assets/images/common/menu-icon-figma.svg')}
+      data-open-src={withBase('/assets/images/common/mobile-menu-xmark.svg')}
+      data-closed-src={withBase('/assets/images/common/menu-icon-figma.svg')}
+      alt=""
+      aria-hidden="true"
+    />
+  </button>
+  <seha-mobile-menu trigger="menu-toggle">
+    <div
+      id="mobile-nav"
+      class="mobile-nav"
+      role="dialog"
+      aria-modal="true"
+      aria-label={ui.mobileNavigation}
+      hidden
+    >
+      <button class="mobile-nav-close" type="button" aria-label={ui.closeMenu}>
+        <img src={withBase('/assets/images/common/mobile-menu-xmark.svg')} alt="" />
       </button>
-      <nav id="mobile-nav" class="mobile-nav" aria-label={isEnglish ? 'Mobile navigation' : 'Мобильная навигация'} hidden>
-        <a href={localizePath('/')}>{copy.home}</a><a href={localizePath('/products')}>{copy.products}</a><a href={localizePath('/production')}>{copy.production}</a
-        ><a href={localizePath('/quality')}>{copy.quality}</a><a href={localizePath('/about')}>{copy.about}</a
-        ><a href={`${localizePath('/')}#contacts`}>{copy.offer}</a>
+      <nav class="mobile-nav-links" aria-label={ui.mainNavigation}>
+        {links.map((link) => (
+          <a href={localizedPath(link.path, locale)}>{link.text}</a>
+        ))}
       </nav>
-    </header>
+      <div class="mobile-nav-contacts">
+        <div class="mobile-nav-contact">
+          <span>{ui.phoneLabel}</span>
+          <a href={siteContact.phoneHref}>{siteContact.phone}</a>
+        </div>
+        <div class="mobile-nav-contact">
+          <span>{ui.emailLabel}</span>
+          <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
+        </div>
+      </div>
+    </div>
+  </seha-mobile-menu>
+  <noscript>
+    <nav aria-label={ui.mainNavigation}>
+      {links.map((link) => (
+        <a href={localizedPath(link.path, locale)}>{link.text} </a>
+      ))}
+    </nav>
+  </noscript>
+</header>

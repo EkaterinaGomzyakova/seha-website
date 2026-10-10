@@ -1,0 +1,168 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { withBase, localizedPath } from '../../lib/paths';
+import { productsPageCopy } from '../../data/products-page';
+import type { Locale } from '../../data/translations';
+
+interface Props {
+  locale: Locale;
+  rootAlias?: boolean;
+}
+const { locale, rootAlias = false } = Astro.props;
+const copy = productsPageCopy[locale];
+const path = '/products';
+const href = (path: string) =>
+  path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
+---
+
+<SiteLayout
+  locale={locale}
+  path={path}
+  title={copy.title}
+  description={copy.description}
+  bodyClass="product-overview"
+  skipText={copy.skipText}
+  skipHref={href('#catalog')}
+>
+  <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
+    <a href={href('/')}>{copy.pageLink}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{copy.pageLabel}</span>
+  </nav>
+  <main>
+    <section class="hero product-overview-hero" aria-labelledby="title">
+      <img
+        class="hero-image"
+        src={withBase('/assets/images/products/coconut.webp')}
+        alt={copy.heroAlt}
+        width="1536"
+        height="1024"
+        fetchpriority="high"
+      />
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <h1 id="title" class="type-h1">
+          {copy.heroTitle}
+          <br />
+          <span>{copy.heroLabel}</span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="type-p">
+            {copy.heroText}
+            <br />
+            {copy.heroLine}
+            <br />
+            {copy.heroLine2}
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="products-catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="products-catalog-heading">
+        <div>
+          <span class="products-eyebrow">{copy.productsCatalogLabel}</span>
+          <h2 id="catalog-title" class="type-h2">
+            {copy.productsCatalogHeading}
+            <br />
+            {copy.productsCatalogLine}
+          </h2>
+        </div>
+        <p class="type-p">
+          {copy.productsCatalogText}
+          <br />
+          {copy.productsCatalogLine2}
+        </p>
+      </div>
+      <div class="products-list" id="products-list">
+        <a class="product-category" href={href('/products/substrates/')}>
+          <div
+            class="category-image-frame product-category-image"
+            role="img"
+            aria-label={copy.productsCatalogAriaLabel}
+          >
+            <img src={withBase('/assets/images/common/category-substrates.png')} alt="" />
+          </div>
+          <span class="product-category-number">01</span>
+          <div class="product-category-title">
+            <span>{copy.productsCatalogLabel2}</span>
+            <h3 class="type-h3">{copy.productsCatalogCardTitle}</h3>
+          </div>
+          <p class="type-p">
+            {copy.productsCatalogText2}
+            <br />
+            {copy.productsCatalogLine3}
+          </p>
+          <span class="product-category-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a class="product-category" href={href('/products/food/')}>
+          <div
+            class="category-image-frame product-category-image"
+            role="img"
+            aria-label={copy.productsCatalogAriaLabel2}
+          >
+            <img src={withBase('/assets/images/common/category-food.png')} alt="" />
+          </div>
+          <span class="product-category-number">02</span>
+          <div class="product-category-title">
+            <span>{copy.productsCatalogLabel3}</span>
+            <h3 class="type-h3">{copy.productsCatalogCardTitle2}</h3>
+          </div>
+          <p class="type-p">
+            {copy.productsCatalogText3}
+            <br />
+            {copy.productsCatalogLine4}
+          </p>
+          <span class="product-category-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a class="product-category" href={href('/products/fiber/')}>
+          <div
+            class="category-image-frame product-category-image"
+            role="img"
+            aria-label={copy.productsCatalogAriaLabel3}
+          >
+            <img src={withBase('/assets/images/common/category-fiber.png')} alt="" />
+          </div>
+          <span class="product-category-number">03</span>
+          <div class="product-category-title">
+            <span>{copy.productsCatalogLabel4}</span>
+            <h3 class="type-h3">{copy.productsCatalogCardTitle3}</h3>
+          </div>
+          <p class="type-p">
+            {copy.productsCatalogText4}
+            <br />
+            {copy.productsCatalogLine5}
+          </p>
+          <span class="product-category-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a class="product-category" href={href('/products/shell/')}>
+          <div
+            class="category-image-frame product-category-image"
+            role="img"
+            aria-label={copy.productsCatalogAriaLabel4}
+          >
+            <img src={withBase('/assets/images/common/category-shell.png')} alt="" />
+          </div>
+          <span class="product-category-number">04</span>
+          <div class="product-category-title">
+            <span>{copy.productsCatalogLabel5}</span>
+            <h3 class="type-h3">{copy.productsCatalogCardTitle4}</h3>
+          </div>
+          <p class="type-p">
+            {copy.productsCatalogText5}
+            <br />
+            {copy.productsCatalogLine6}
+          </p>
+          <span class="product-category-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

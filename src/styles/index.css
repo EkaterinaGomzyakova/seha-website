@@ -1,25 +1,45 @@
-@layer reset, tokens, base, layout, utilities, pages, components;
+/* Low-to-high precedence; each file has one semantic layer. */
+@layer reset, tokens, base, layout, components, pages, utilities;
+
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/cyrillic-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/cyrillic-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/cyrillic-600.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/inter/cyrillic-700.css';
+@import '@fontsource/inter/latin-800.css';
+@import '@fontsource/inter/cyrillic-800.css';
+@import '@fontsource/inter/latin-900.css';
+@import '@fontsource/inter/cyrillic-900.css';
 
 @import url('./reset.css') layer(reset);
 @import url('./tokens.css') layer(tokens);
-@import url('./globals.css') layer(base);
+@import url('./base.css') layer(base);
+@import url('./layout.css') layer(layout);
 
-/* Application rules remain in their authored order inside the active layer. */
-@import url('./base.css') layer(components);
-@import url('./components/foundation.css') layer(components);
+@import url('./components/logo.css') layer(components);
+@import url('./components/breadcrumbs.css') layer(components);
+@import url('./components/editorial.css') layer(components);
+@import url('./components/hero.css') layer(components);
 @import url('./components/buttons.css') layer(components);
+@import url('./components/tags.css') layer(components);
 @import url('./components/forms.css') layer(components);
 @import url('./components/header.css') layer(components);
-@import url('./pages/home.css') layer(components);
-@import url('./pages/product-detail.css') layer(components);
-@import url('./typography.css') layer(components);
+@import url('./components/product-directions.css') layer(components);
+@import url('./components/category-image.css') layer(components);
 @import url('./components/product-image.css') layer(components);
 @import url('./components/cookie.css') layer(components);
-@import url('./components/header-layout.css') layer(components);
-@import url('./components/input.css') layer(components);
 @import url('./components/links.css') layer(components);
-@import url('./layout.css') layer(components);
 @import url('./components/footer.css') layer(components);
-@import url('./pages/privacy.css') layer(components);
-@import url('./pages/product-detail-layout.css') layer(components);
-@import url('./components/accessibility.css') layer(components);
+@import url('./pages/home.css') layer(pages);
+@import url('./pages/about.css') layer(pages);
+@import url('./pages/production.css') layer(pages);
+@import url('./pages/quality.css') layer(pages);
+@import url('./pages/products.css') layer(pages);
+@import url('./pages/product-category.css') layer(pages);
+@import url('./pages/privacy.css') layer(pages);
+@import url('./pages/not-found.css') layer(pages);
+@import url('./typography.css') layer(utilities);
+@import url('./utilities.css') layer(utilities);

@@ -1,0 +1,97 @@
+/* components/editorial.css: shared styles. */
+.eyebrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: var(--color-yellow-brand);
+}
+.eyebrow span:last-child {
+  color: var(--color-background-light);
+  opacity: 0.7;
+}
+@media (max-width: 800px) {
+  .eyebrow span:last-child {
+    display: none;
+  }
+}
+.section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+.section-label {
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+}
+.section-note {
+  font-size: 14px;
+  color: var(--color-dark-gray);
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 56px;
+}
+.section-heading > p {
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 410px;
+  margin: 0;
+  color: var(--color-dark-gray);
+}
+@media (max-width: 1100px) {
+  .section-heading {
+    gap: 28px;
+  }
+  .section-heading > p {
+    max-width: 310px;
+  }
+}
+@media (max-width: 800px) {
+  .section-heading {
+    display: block;
+    margin-bottom: 36px;
+  }
+  .section-heading > p {
+    max-width: 500px;
+    margin-top: 26px;
+  }
+  .section-heading > p br,
+  .section-note {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .section-top {
+    margin-bottom: 26px;
+  }
+  .section-label {
+    font-size: 11px;
+  }
+  .section-heading > p {
+    font-size: 16px;
+  }
+}
+.home-section {
+  max-width: none;
+  margin: auto;
+  padding: 100px 0;
+}
+@media (max-width: 800px) {
+  .home-section {
+    padding: 65px 0;
+  }
+}
+@media (max-width: 520px) {
+  .home-section {
+    padding: 58px 0;
+  }
+}

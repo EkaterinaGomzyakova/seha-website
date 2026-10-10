@@ -5,4 +5,7 @@ interface Props {
 
 const { class: className = '' } = Astro.props;
 ---
-<span class:list={['tag', className]}><slot /></span>
+
+<span class:list={['tag', className]}>
+  <slot />
+</span>

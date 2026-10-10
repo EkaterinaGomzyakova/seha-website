@@ -1,0 +1,21 @@
+---
+import type { Locale } from '../data/translations';
+import { getSiteTranslations } from '../data/translations';
+import { localizedPath, withBase } from '../lib/paths';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const copy = getSiteTranslations(locale);
+const language = locale === 'en' ? 'international' : 'russian';
+const logo = (variant: string) =>
+  withBase(`/assets/images/common/menu-logo-${language}-${variant}.svg`);
+---
+
+<a class="logo" href={localizedPath('/', locale)} aria-label={`${copy.logoAlt} — ${copy.home}`}>
+  <picture>
+    <source media="(max-width: 1024px)" srcset={logo('mobile')} />
+    <source media="(max-width: 1280px)" srcset={logo('small-desktop')} />
+    <img class="logo-image" src={logo('desktop')} alt={copy.logoAlt} width="240" height="48" />
+  </picture>
+</a>

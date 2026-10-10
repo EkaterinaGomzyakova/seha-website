@@ -1,5 +1,5 @@
 ---
-interface Props {
+interface Props extends Omit<astroHTML.JSX.ButtonHTMLAttributes, 'type'> {
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   variant?: 'primary' | 'secondary' | 'tertiary';
@@ -15,11 +15,23 @@ const {
   compact = false,
   full = false,
   class: className = '',
+  ...attributes
 } = Astro.props;
-const classes = ['button', `button--${variant}`, compact && 'button--compact', full && 'button--full', className];
+const classes = [
+  'button',
+  `button--${variant}`,
+  compact && 'button--compact',
+  full && 'button--full',
+  className
+];
 ---
+
 {href ? (
-  <a class:list={classes} href={href}><slot /></a>
+  <a class:list={classes} href={href} {...attributes}>
+    <slot />
+  </a>
 ) : (
-  <button class:list={classes} type={type}><slot /></button>
+  <button class:list={classes} type={type} {...attributes}>
+    <slot />
+  </button>
 )}

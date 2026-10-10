@@ -1,7 +1,7 @@
-name: Deploy Seha to GitHub Pages
-# Rebuild nested product routes from the current Sites snapshot
+name: Check and deploy Seha
 
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -9,61 +9,166 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  ASTRO_TELEMETRY_DISABLED: '1'
+  # Optional: form delivery stays unavailable until a handler is configured.
+  PUBLIC_FORM_ENDPOINT: ${{ vars.PUBLIC_FORM_ENDPOINT }}
+
 jobs:
-  deploy:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
     env:
-      ASTRO_TELEMETRY_DISABLED: '1'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      # Existing route and metadata assertions exercise the production root URL.
+      SITE_URL: https://seha-group.ru
+      BASE_PATH: /
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
-
       - name: Install dependencies
+        id: install
         run: npm ci
-
-      - name: Build Astro site
-        run: npm run build
-
-      - name: Install Playwright browser
+      - name: Astro and TypeScript check
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run check
+      - name: Lint JavaScript, TypeScript and Astro
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run lint
+      - name: Check formatting
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run format:check
+      - name: Install Chromium
+        id: browser
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npx playwright install --with-deps chromium
+      - name: Functional and accessibility tests against a fresh build
+        if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
+        env:
+          PLAYWRIGHT_OUTPUT_DIR: test-results/root
+          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/root
+          PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/root/junit.xml
+        run: npm test -- --grep-invert @visual
+      - name: Functional and accessibility tests under a Pages subpath
+        if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
+        env:
+          TEST_BASE_PATH: /seha-website/
+          PLAYWRIGHT_OUTPUT_DIR: test-results/subpath
+          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/subpath
+          PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/subpath/junit.xml
+        run: npm test -- --grep-invert @visual
+      - name: Upload test diagnostics
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: functional-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Upload tested build for inspection
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: subpath-build-output
+          path: dist/
+          retention-days: 7
+          if-no-files-found: warn
 
-      - name: Run quality checks
-        run: npm test
+  visual:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    env:
+      SITE_URL: https://seha-group.ru
+      BASE_PATH: /
+    steps:
+      - uses: actions/checkout@v7
+      - name: Require reviewed Windows visual baselines
+        shell: bash
+        run: |
+          missing=0
+          for project in chromium mobile; do
+            for snapshot in home-en-desktop home-en-mobile-menu; do
+              baseline="tests/site.spec.mjs-snapshots/${snapshot}-${project}-win32.png"
+              if [[ ! -f "$baseline" ]]; then
+                echo "::error::Missing reviewed baseline: $baseline"
+                missing=1
+              fi
+            done
+          done
+          if [[ "$missing" -ne 0 ]]; then
+            echo 'Windows visual baselines are unavailable. Capture and review them on Windows with the locked Playwright version. Linux baselines have not been captured or validated.' >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install chromium
+      - name: Visual tests against a fresh build
+        run: npm run test:visual
+      - name: Upload visual diagnostics
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+          if-no-files-found: warn
 
+  build-pages:
+    needs: [quality, visual]
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-
-      - name: Prepare project-site paths
-        shell: bash
-        run: |
-          rm -rf _site
-          cp -R dist/. _site/
-          BASE_PATH="${{ steps.pages.outputs.base_path }}"
-          find _site -type f -name '*.html' -print0 | xargs -0 sed -i -E "s#(href|src|action)=\"/#\\1=\"$BASE_PATH/#g"
-          find _site -type f -name '*.css' -print0 | xargs -0 sed -i -E "s#url\\('/#url('$BASE_PATH/#g; s#url\\(\"/#url(\"$BASE_PATH/#g"
-
+      - name: Build with the actual Pages origin and subpath
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: npm run build
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./dist
 
+  deploy:
+    needs: build-pages
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages-deployment
+      cancel-in-progress: false
+    steps:
       - name: Deploy to Pages
         id: deployment
         uses: actions/deploy-pages@v4

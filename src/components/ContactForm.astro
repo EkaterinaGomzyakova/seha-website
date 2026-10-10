@@ -2,83 +2,126 @@
 import Button from './ui/Button.astro';
 import Checkbox from './ui/Checkbox.astro';
 import Input from './ui/Input.astro';
-
-const { locale = 'ru' } = Astro.props;
-const privacyHref = locale === 'en' ? '/en/privacy/' : '/ru/privacy/';
+import Tag from './ui/Tag.astro';
+import Link from './ui/Link.astro';
+import type { Locale } from '../data/translations';
+import { getInterfaceCopy } from '../data/interface-copy';
+import { siteContact } from '../data/site';
+import { localizedPath } from '../lib/paths';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const copy = getInterfaceCopy(locale);
+const businessValues = [
+  'distributor',
+  'retailer',
+  'manufacturer',
+  'hydroponic-farm',
+  'horticulture',
+  'food-brand',
+  'other'
+];
+const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
 ---
-<form id="quote-form" data-form-endpoint={import.meta.env.PUBLIC_FORM_ENDPOINT || undefined}>
-            <div class="form-grid">
-              <Input label="Название компании" name="company" autocomplete="organization" placeholder="ООО Агрокомплекс" required maxlength="160" />
-              <Input label="Имя контактного лица" name="contact" autocomplete="name" placeholder="Иван" required maxlength="120" />
-              <Input label="Контактный email" name="email" type="email" autocomplete="email" placeholder="Email@website.com" maxlength="160" />
-              <label class="form-field">
-                Номер телефона
-                <input name="phone" type="tel" autocomplete="tel" placeholder="+7 999 999-99-99" required maxlength="40" aria-describedby="phone-error" />
-                <span class="field-error" id="phone-error" hidden>Укажите телефон: от 7 до 15 цифр.</span>
-              </label>
-            </div>
-            <label class="form-field comment-field"
-              >Сообщение<textarea
-                name="comment"
-                rows="2"
-                placeholder="Расскажите, какой продукт вам нужен, о ваших требованиях, количестве и сроках"
-                maxlength="1500"
-              ></textarea>
-            </label>
-            <fieldset class="business-options">
-              <legend>Тип компании</legend>
-              <div class="business-choices">
-                <label
-                  ><input type="radio" name="business" value="Дистрибьютор" /><span
-                    >Дистрибьютор</span
-                  ></label
-                >
-                <label
-                  ><input type="radio" name="business" value="Ритейлер" /><span
-                    >Ритейлер</span
-                  ></label
-                >
-                <label
-                  ><input type="radio" name="business" value="Производитель" /><span
-                    >Производитель</span
-                  ></label
-                >
-                <label
-                  ><input type="radio" name="business" value="Гидропонная ферма" /><span
-                    >Гидропонная ферма</span
-                  ></label
-                >
-                <label
-                  ><input type="radio" name="business" value="Садоводческая компания" /><span
-                    >Садоводческая компания</span
-                  ></label
-                >
-                <label
-                  ><input type="radio" name="business" value="Бренд продуктов питания" /><span
-                    >Бренд продуктов питания</span
-                  ></label
-                >
-                <label
-                  ><input type="radio" name="business" value="Другое" /><span>Другое</span></label
-                >
-              </div>
-            </fieldset>
-            <Checkbox name="consent" required>
-              <span class="consent__text">Я ознакомлен(а) с <a href={privacyHref}>Политикой конфиденциальности</a> и даю согласие на обработку персональных данных</span>
-            </Checkbox>
-            <Button variant="secondary" full type="submit">Получить расчёт</Button>
-            <div id="quote-result" class="quote-result" role="status" tabindex="-1" hidden>
-              <strong>Заявка подготовлена</strong>
-              <p class="type-p">
-                Отправьте письмо в открывшейся почтовой программе. Если она не открылась, скопируйте
-                заявку и отправьте ее на seha.info@inbox.ru.
-              </p>
-              <button type="button" id="copy-quote">Скопировать заявку</button
-              ><textarea
-                id="quote-copy-fallback"
-                readonly
-                aria-label="Текст заявки для копирования"
-                hidden
-              ></textarea>
-            </div>
-          </form>
+
+<form
+  id="quote-form"
+  data-form-endpoint={endpoint}
+  data-locale={locale}
+  action={endpoint || `mailto:${siteContact.email}`}
+  method="post"
+  enctype={endpoint ? 'multipart/form-data' : 'text/plain'}
+>
+  <input type="hidden" name="locale" value={locale} />
+  <input type="hidden" name="product" value="" />
+  <input type="hidden" name="productId" value="" />
+  <div class="form-grid">
+    <Input
+      label={copy.company}
+      name="company"
+      autocomplete="organization"
+      placeholder={copy.companyPlaceholder}
+      required
+      maxlength="160"
+    />
+    <Input
+      label={copy.contact}
+      name="contact"
+      autocomplete="name"
+      placeholder={copy.contactPlaceholder}
+      required
+      maxlength="120"
+    />
+    <Input
+      label={copy.email}
+      name="email"
+      type="email"
+      autocomplete="email"
+      placeholder="email@example.com"
+      maxlength="160"
+    />
+    <label class="form-field">
+      {copy.phone}
+      <input
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        placeholder="+7 999 999-99-99"
+        required
+        maxlength="40"
+        aria-describedby="phone-error"
+      />
+      <span class="field-error" id="phone-error" hidden>
+        {copy.phoneError}
+      </span>
+    </label>
+  </div>
+  <label class="form-field comment-field">
+    {copy.message}
+    <textarea
+      name="comment"
+      rows="2"
+      placeholder={copy.messagePlaceholder}
+      maxlength="1500"
+    ></textarea>
+  </label>
+  <fieldset class="business-options">
+    <legend>{copy.business}</legend>
+    <div class="business-choices">
+      {copy.businesses.map((label, index) => (
+        <label>
+          <input type="radio" name="business" value={businessValues[index]} />
+          <Tag>{label}</Tag>
+        </label>
+      ))}
+    </div>
+  </fieldset>
+  <Checkbox name="consent" required>
+    <span class="consent__text">
+      {copy.consentStart} <Link href={localizedPath('/privacy/', locale)}>{copy.consentLink}</Link>{' '}
+      {copy.consentEnd}
+    </span>
+  </Checkbox>
+  <Button variant="secondary" full type="submit">
+    {copy.submit}
+  </Button>
+  <div id="quote-result" class="quote-result" role="status" tabindex="-1" hidden>
+    <strong data-result-title></strong>
+    <p class="type-p" data-result-message></p>
+    <div data-result-actions hidden>
+      <Link data-email-quote href={`mailto:${siteContact.email}`}>
+        {siteContact.email}
+      </Link>
+      <Button variant="tertiary" type="button" id="copy-quote">
+        {copy.copy}
+      </Button>
+      <textarea id="quote-copy-fallback" readonly aria-label={copy.copyLabel} hidden></textarea>
+    </div>
+  </div>
+  <noscript>
+    <p>
+      {copy.noScript} <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
+    </p>
+  </noscript>
+</form>

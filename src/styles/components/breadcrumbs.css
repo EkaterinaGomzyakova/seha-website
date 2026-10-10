@@ -1,0 +1,38 @@
+/* components/breadcrumbs.css: shared styles. */
+.breadcrumbs {
+  width: calc(100% - 32px);
+  max-width: 1680px;
+  margin: 0 auto;
+  min-height: 24px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.99px;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+}
+.breadcrumbs a {
+  color: inherit;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.breadcrumbs span[aria-current='page'] {
+  color: var(--color-dark-gray);
+}
+@media (max-width: 800px) {
+  .breadcrumbs {
+    width: calc(100% - 20px);
+    padding: 0 22px;
+    font-size: 10px;
+    gap: 6px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
