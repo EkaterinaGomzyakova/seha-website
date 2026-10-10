@@ -165,7 +165,7 @@ export const productPages: Record<ProductPageSlug, ProductPageDefinition> = {
     bodyClass: 'product-detail--fiber',
     path: '/products/fiber',
     heroImage: '/assets/images/fiber/fiber-01-photorealistic.png',
-    section: text('03 / КОКОСОВОЕ ВОЛОКНО', '03 / COIR FIBRE'),
+    section: text('03 / КОКОСОВОЕ ВОЛОКНО', '03 / COIR FIBER'),
     breadcrumb: text('Главная / Кокосовое волокно', 'Main / Coir products'),
     title: text('Продукты из кокосового волокна', 'Coir Products'),
     intro: text(
@@ -176,9 +176,9 @@ export const productPages: Record<ProductPageSlug, ProductPageDefinition> = {
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
     items: [
-      ['01', 'Тюки кокосового волокна', 'Coir Fibre Bales'],
-      ['02', 'Кокосовая щетина', 'Bristle Fibre'],
-      ['03', 'Скрученное волокно', 'Machine Twisted Fibre'],
+      ['01', 'Тюки кокосового волокна', 'Coir Fiber Bales'],
+      ['02', 'Кокосовая щетина', 'Bristle Fiber'],
+      ['03', 'Скрученное волокно', 'Machine Twisted Fiber'],
       ['04', 'Мульчирующие маты', 'Coir Weed Mat'],
       ['05', 'Противоэрозионные маты', 'Erosion Control Blankets'],
       ['06', 'Кокосовый геотекстиль', 'Coir Geo Textile']
@@ -189,7 +189,7 @@ export const productPages: Record<ProductPageSlug, ProductPageDefinition> = {
       alt: text(ru, en),
       description: text(
         'Натуральное кокосовое волокно для профессионального производства, сельского хозяйства и защиты почвы.',
-        'Natural coconut fibre for professional manufacturing, agriculture, landscaping, and soil protection.'
+        'Natural coconut fiber for professional manufacturing, agriculture, landscaping, and soil protection.'
       )
     }))
   },

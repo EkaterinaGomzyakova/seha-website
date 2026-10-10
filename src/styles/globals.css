@@ -1,4 +1,4 @@
-/* Shared progressive-enhancement styles. Page-specific legacy CSS remains in public/assets. */
+/* Shared progressive-enhancement styles for the site foundation. */
 :where(a, button, input, textarea, select):focus-visible {
   outline: var(--seha-focus-outline);
   outline-offset: 4px;

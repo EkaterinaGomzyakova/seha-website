@@ -148,7 +148,7 @@
   margin: 0;
   color: var(--color-dark-gray);
 }
-.direction-grid {
+.product-direction-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 44px 28px;
@@ -169,13 +169,13 @@
 .peat-photo {
   background-position: 100% 0;
 }
-.fibre-photo {
+.fiber-photo {
   background-position: 0 100%;
 }
 .shell-photo {
   background-position: 100% 100%;
 }
-.direction-card:hover .material-photo {
+.product-direction-card:hover .material-photo {
   background-size: 210% 210%;
 }
 .card-index {
@@ -204,24 +204,24 @@
     background 0.2s,
     transform 0.2s;
 }
-.direction-card:hover .card-go {
+.product-direction-card:hover .card-go {
   background: var(--color-yellow-brand);
   transform: rotate(45deg);
 }
-.direction-copy {
+.product-direction-copy {
   padding: 22px 2px 0;
   display: flex;
   justify-content: space-between;
   align-items: start;
   gap: 22px;
 }
-.direction-copy h3 {
+.product-direction-copy h3 {
   font-size: 26px;
   letter-spacing: -1px;
   margin: 0;
   max-width: 240px;
 }
-.direction-copy p {
+.product-direction-copy p {
   font-size: 14px;
   color: var(--color-dark-gray);
   line-height: 1.65;
@@ -426,7 +426,7 @@
   opacity: 0;
   transform: translateY(25px);
 }
-.direction-card.reveal:nth-child(2n) {
+.product-direction-card.reveal:nth-child(2n) {
   transition-delay: 0.09s;
 }
 .quality-grid article:nth-child(2),
@@ -465,10 +465,10 @@
   }
 }
 @media (max-width: 1100px) {
-  .direction-copy {
+  .product-direction-copy {
     display: block;
   }
-  .direction-copy p {
+  .product-direction-copy p {
     margin-top: 12px;
     max-width: none;
   }
@@ -534,10 +534,10 @@
   .home-hero-copy {
     padding-top: 75px;
   }
-  .direction-grid {
+  .product-direction-grid {
     gap: 32px 20px;
   }
-  .direction-copy h3 {
+  .product-direction-copy h3 {
     font-size: 24px;
   }
   .material-photo {
@@ -644,27 +644,27 @@
   .section-heading > p {
     font-size: 16px;
   }
-  .direction-grid {
+  .product-direction-grid {
     grid-template-columns: 1fr;
     gap: 34px;
   }
   .material-photo {
     height: 285px;
   }
-  .direction-copy {
+  .product-direction-copy {
     display: flex;
     gap: 16px;
   }
-  .direction-copy h3 {
+  .product-direction-copy h3 {
     font-size: 23px;
     max-width: 160px;
   }
-  .direction-copy p {
+  .product-direction-copy p {
     font-size: 13px;
     margin: 0;
     max-width: 165px;
   }
-  .direction-copy p br {
+  .product-direction-copy p br {
     display: none;
   }
   .card-index {
@@ -1086,8 +1086,8 @@
   background-position: center;
   background-size: cover;
 }
-.material-photo.fibre-photo {
-  background-image: url('/assets/images/common/category-fibre.png');
+.material-photo.fiber-photo {
+  background-image: url('/assets/images/common/category-fiber.png');
   background-position: center;
   background-size: cover;
 }
@@ -1096,7 +1096,7 @@
   background-position: center;
   background-size: cover;
 }
-.direction-card:hover .material-photo {
+.product-direction-card:hover .material-photo {
   background-size: cover;
 }
 

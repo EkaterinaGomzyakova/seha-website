@@ -146,7 +146,7 @@ function translatePrivacy(lang){
 }
 function setSiteLogoAsset(logo){
   const language=document.documentElement.lang === 'en' ? 'international' : 'russian';
-  const variant=window.matchMedia('(max-width: 1024px)').matches ? 'mobile' : window.matchMedia('(max-width: 1280px)').matches ? 'smdesktop' : 'desktop';
+  const variant=window.matchMedia('(max-width: 1024px)').matches ? 'mobile' : window.matchMedia('(max-width: 1280px)').matches ? 'small-desktop' : 'desktop';
   logo.src=assetPath(`images/common/menu-logo-${language}-${variant}.svg`);
   logo.alt=document.documentElement.lang === 'en' ? 'SEHA — international' : 'Сеха';
 }
@@ -157,7 +157,7 @@ function syncProductDetailHero(){
   const variants={
     'product-detail--substrates':['Кокосовые субстраты','Coconut Substrates','images/common/category-substrates.png'],
     'product-detail--food':['Пищевые продукты','Food Products','images/common/category-food.png'],
-    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fibre Products','images/common/category-fibre.png'],
+    'product-detail--fiber':['Продукты из кокосового волокна','Coconut Fiber Products','images/common/category-fiber.png'],
     'product-detail--shell':['Продукты из кокосовой скорлупы','Coco Shell Products','images/common/category-shell.png']
   };
   const variant=Object.entries(variants).find(([className])=>document.body.classList.contains(className));

@@ -30,11 +30,11 @@ main > section:not(.product-list-section),
   padding-left: 0;
   padding-right: 0;
 }
-.direction-grid {
+.product-direction-grid {
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
   gap: var(--grid-gutter);
 }
-.direction-card {
+.product-direction-card {
   grid-column: span 6;
 }
 .form-grid {
@@ -47,7 +47,7 @@ main > section:not(.product-list-section),
     --grid-margin: 96px;
     --grid-gutter: 24px;
   }
-  .direction-card {
+  .product-direction-card {
     grid-column: span 4;
   }
   .product-list-section {
@@ -62,7 +62,7 @@ main > section:not(.product-list-section),
     --grid-margin: 32px;
     --grid-gutter: 24px;
   }
-  .direction-card {
+  .product-direction-card {
     grid-column: span 2;
   }
   .quote-footer {
@@ -82,7 +82,7 @@ main > section:not(.product-list-section),
     --grid-margin: 24px;
     --grid-gutter: 16px;
   }
-  .direction-card {
+  .product-direction-card {
     grid-column: span 2;
   }
 }

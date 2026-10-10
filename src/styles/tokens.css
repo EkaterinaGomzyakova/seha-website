@@ -1,5 +1,5 @@
 :root {
-  /* Design tokens shared by Astro components and legacy page styles. */
+  /* Design tokens shared by all Astro components and page styles. */
   --seha-color-brand-green: #004d25;
   --seha-color-brand-yellow: #d9f400;
   --seha-color-background: #faf9f0;

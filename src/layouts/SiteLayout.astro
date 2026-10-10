@@ -27,7 +27,7 @@ const { locale, path, title, description, bodyClass, skipText, skipHref = '#main
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <SeoLinks locale={locale} path={path} />
+    <SeoLinks locale={locale} path={path} title={title} description={description} />
     <GlobalStyles />
   </head>
   <body class={bodyClass}>

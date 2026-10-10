@@ -2,15 +2,20 @@
 interface Props {
   locale: 'ru' | 'en';
   path: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
-const { locale, path } = Astro.props;
+const { locale, path, title, description, image = '/assets/images/common/home-coconut.webp' } = Astro.props;
 const base = Astro.site ?? new URL('https://seha-group.ru');
 const suffix = path === '/' ? '/' : `${path.replace(/\/$/, '')}/`;
 const ruUrl = new URL(`/ru${suffix}`, base);
 const enUrl = new URL(`/en${suffix}`, base);
 const canonical = locale === 'en' ? enUrl : ruUrl;
 const languageName = locale === 'en' ? 'English' : 'Русский';
+const absoluteImage = new URL(image, base).toString();
+const isProductPage = path.startsWith('/products/') && path !== '/products/';
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -42,10 +47,33 @@ const structuredData = {
       url: canonical.toString(),
       inLanguage: languageName,
       isPartOf: { '@id': `${base}#website` }
-    }
+    },
+    ...(isProductPage
+      ? [
+          {
+            '@type': 'Product',
+            name: title,
+            description,
+            image: absoluteImage,
+            brand: { '@id': `${base}#organization` }
+          }
+        ]
+      : [])
   ]
 };
 ---
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SEHA" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={absoluteImage} />
+<meta property="og:locale" content={locale === 'en' ? 'en_US' : 'ru_RU'} />
+<meta property="og:locale:alternate" content={locale === 'en' ? 'ru_RU' : 'en_US'} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteImage} />
 <link rel="canonical" href={canonical} />
 <link rel="alternate" hreflang="ru" href={ruUrl} />
 <link rel="alternate" hreflang="en" href={enUrl} />

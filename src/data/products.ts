@@ -38,7 +38,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: 'fiber',
-    title: { ru: 'Кокосовое волокно', en: 'Coconut Fibre' },
+    title: { ru: 'Кокосовое волокно', en: 'Coconut Fiber' },
     description: {
       ru: 'Материалы для производства, сельского хозяйства и озеленения.',
       en: 'Materials for manufacturing, agriculture, and landscaping.'
@@ -71,9 +71,9 @@ export const products: ProductItem[] = [
     name: { ru, en }
   })),
   ...[
-    ['coir-fibre-bales', 'Тюки кокосового волокна', 'Coir Fibre Bales'],
-    ['bristle-fibre', 'Кокосовая щетина', 'Bristle Fibre'],
-    ['machine-twisted-fibre', 'Скрученное волокно', 'Machine Twisted Fibre'],
+    ['coir-fiber-bales', 'Тюки кокосового волокна', 'Coir Fiber Bales'],
+    ['bristle-fiber', 'Кокосовая щетина', 'Bristle Fiber'],
+    ['machine-twisted-fiber', 'Скрученное волокно', 'Machine Twisted Fiber'],
     ['coir-weed-mat', 'Мульчирующие маты', 'Coir Weed Mat'],
     ['erosion-control-blankets', 'Противоэрозионные маты', 'Erosion Control Blankets'],
     ['coir-geo-textile', 'Кокосовый геотекстиль', 'Coir Geo Textile']

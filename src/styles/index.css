@@ -1,24 +1,25 @@
-@layer reset, tokens, base, layout, components, utilities, pages, site;
+@layer reset, tokens, base, layout, utilities, pages, components;
 
 @import url('./reset.css') layer(reset);
 @import url('./tokens.css') layer(tokens);
 @import url('./globals.css') layer(base);
 
-/* Source order mirrors the former cascade while every rule lives in src/. */
-@import url('./base.css') layer(site);
-@import url('./components/foundation.css') layer(site);
-@import url('./components/buttons.css') layer(site);
-@import url('./components/forms.css') layer(site);
-@import url('./components/header.css') layer(site);
-@import url('./pages/home.css') layer(site);
-@import url('./pages/product-detail.css') layer(site);
-@import url('./typography.css') layer(site);
-@import url('./components/product-image.css') layer(site);
-@import url('./components/cookie.css') layer(site);
-@import url('./components/header-layout.css') layer(site);
-@import url('./components/input.css') layer(site);
-@import url('./components/links.css') layer(site);
-@import url('./layout.css') layer(site);
-@import url('./components/footer.css') layer(site);
-@import url('./pages/privacy.css') layer(site);
-@import url('./pages/product-detail-pixel.css') layer(site);
+/* Application rules remain in their authored order inside the active layer. */
+@import url('./base.css') layer(components);
+@import url('./components/foundation.css') layer(components);
+@import url('./components/buttons.css') layer(components);
+@import url('./components/forms.css') layer(components);
+@import url('./components/header.css') layer(components);
+@import url('./pages/home.css') layer(components);
+@import url('./pages/product-detail.css') layer(components);
+@import url('./typography.css') layer(components);
+@import url('./components/product-image.css') layer(components);
+@import url('./components/cookie.css') layer(components);
+@import url('./components/header-layout.css') layer(components);
+@import url('./components/input.css') layer(components);
+@import url('./components/links.css') layer(components);
+@import url('./layout.css') layer(components);
+@import url('./components/footer.css') layer(components);
+@import url('./pages/privacy.css') layer(components);
+@import url('./pages/product-detail-layout.css') layer(components);
+@import url('./components/accessibility.css') layer(components);

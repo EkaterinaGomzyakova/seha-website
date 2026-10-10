@@ -1,4 +1,4 @@
-/* Source: product-detail-pixel.css */
+/* Product detail layout adjustments */
 /* Pixel-aligned layout for the four Figma product pages. */
 .product-detail .site-header {
   width: var(--grid-content-width);
@@ -90,7 +90,7 @@ html[lang='en'] .product-detail--shell .product-item p {
   content: url('/assets/images/common/category-food.png');
 }
 .product-detail--fiber .product-hero-icon img {
-  content: url('/assets/images/common/category-fibre.png');
+  content: url('/assets/images/common/category-fiber.png');
 }
 .product-detail--shell .product-hero-icon img {
   content: url('/assets/images/common/category-shell.png');
