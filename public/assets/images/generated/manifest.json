@@ -1019,570 +1019,633 @@
         }
       ]
     },
-    "/assets/images/food/food-01-photorealistic.png": {
-      "fingerprint": "08b1be86c76a77aa3b7393deccf720c9248df54b0fbdd1e0103fbf0dc8a294f4",
+    "/assets/images/food/coconut-copra.png": {
+      "fingerprint": "d1e42498dfeb027df3c35a44e1d1863611680042f2e797b98260c40257c2cbd3",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/coconut-copra.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 22586
+          "bytes": 25756
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/coconut-copra.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 12546
+          "bytes": 13938
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/coconut-copra.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 73544
+          "bytes": 91696
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/coconut-copra.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 43014
+          "bytes": 51992
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/coconut-copra.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 136844
+          "bytes": 174826
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/coconut-copra.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 81021
+          "bytes": 104138
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/coconut-copra.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 197956
+          "bytes": 256618
         },
         {
-          "src": "/assets/images/generated/food/food-01-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/coconut-copra.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 119858
+          "bytes": 156627
         }
       ]
     },
-    "/assets/images/food/food-02-photorealistic.png": {
-      "fingerprint": "a985069db4638fab338ce63d922d6f7a231fa3b91d2ce655e840e0de80974696",
+    "/assets/images/food/coconut-milk.png": {
+      "fingerprint": "ded49a4e23c06baacdea8b2b4589492b706da54714f12986f3a6e5bd71dc4e34",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/coconut-milk.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 26648
+          "bytes": 21606
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/coconut-milk.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13150
+          "bytes": 12007
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/coconut-milk.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 84350
+          "bytes": 69490
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/coconut-milk.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 47491
+          "bytes": 40164
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/coconut-milk.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 157286
+          "bytes": 127416
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/coconut-milk.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 92775
+          "bytes": 73707
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/coconut-milk.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 229986
+          "bytes": 181842
         },
         {
-          "src": "/assets/images/generated/food/food-02-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/coconut-milk.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 138149
+          "bytes": 106929
         }
       ]
     },
-    "/assets/images/food/food-03-photorealistic.png": {
-      "fingerprint": "de87b5ec1e62136d782f046c3ad11f3f26f8dff737c9302fd847ea9f91ccbbbf",
+    "/assets/images/food/coconut-sugar.png": {
+      "fingerprint": "8df5931380d472f40360a56a80dd7bffd50ffee8c80671ae5f56141b3fa0770c",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/coconut-sugar.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 28796
+          "bytes": 26722
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/coconut-sugar.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 14396
+          "bytes": 13332
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/coconut-sugar.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 91474
+          "bytes": 96724
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/coconut-sugar.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 49290
+          "bytes": 50892
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/coconut-sugar.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 165326
+          "bytes": 186566
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/coconut-sugar.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 95386
+          "bytes": 101018
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/coconut-sugar.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 250992
+          "bytes": 276546
         },
         {
-          "src": "/assets/images/generated/food/food-03-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/coconut-sugar.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 141905
+          "bytes": 153195
         }
       ]
     },
-    "/assets/images/food/food-04-photorealistic.png": {
-      "fingerprint": "b068b8a2ec29a36f254862ccfc34cf55efdd29f395bd2d3417f5dd8b5bd9ce39",
+    "/assets/images/food/coconut-water.png": {
+      "fingerprint": "435cc602bc771638781d74c6a22394c929b948337ce1404a8389017acac4961b",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/coconut-water.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 17826
+          "bytes": 15628
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/coconut-water.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 9918
+          "bytes": 9483
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/coconut-water.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 56326
+          "bytes": 39518
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/coconut-water.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 34347
+          "bytes": 26311
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/coconut-water.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 103774
+          "bytes": 65142
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/coconut-water.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 67789
+          "bytes": 45189
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/coconut-water.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 155340
+          "bytes": 92568
         },
         {
-          "src": "/assets/images/generated/food/food-04-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/coconut-water.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 103673
+          "bytes": 65258
         }
       ]
     },
-    "/assets/images/food/food-05-photorealistic.png": {
-      "fingerprint": "e3e165df547ba0b0173a99620b861b797c0fd345e3b6b347e54342e105e70738",
+    "/assets/images/food/desiccated-coconut.png": {
+      "fingerprint": "43d459a8e1c674bcdb5c8f94da80c1ffcfc06adae345037a14227f0f0d4785bc",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 24464
+          "bytes": 31782
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13070
+          "bytes": 16515
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 70784
+          "bytes": 100888
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 43322
+          "bytes": 54879
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 126128
+          "bytes": 175132
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 83458
+          "bytes": 102073
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 177740
+          "bytes": 240578
         },
         {
-          "src": "/assets/images/generated/food/food-05-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/desiccated-coconut.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 124670
+          "bytes": 147857
         }
       ]
     },
-    "/assets/images/food/food-06-photorealistic.png": {
-      "fingerprint": "55cf943e2aa788f8eeed72c984299d648c58e8cd0360e6680f8daece578904a6",
+    "/assets/images/food/food-products.png": {
+      "fingerprint": "96b91edc422c9219eead7b28824c32133496289b548bc4ed70f1357e5593d1c6",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/food-products.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 14380
+          "bytes": 22594
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/food-products.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 8300
+          "bytes": 12567
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/food-products.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 43950
+          "bytes": 71886
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/food-products.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 29495
+          "bytes": 42311
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/food-products.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 78362
+          "bytes": 135704
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/food-products.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 55780
+          "bytes": 81280
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/food-products.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 116828
+          "bytes": 197636
         },
         {
-          "src": "/assets/images/generated/food/food-06-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/food-products.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 82711
+          "bytes": 120585
         }
       ]
     },
-    "/assets/images/food/food-07-photorealistic.png": {
-      "fingerprint": "a7f3f587107ec7db539451cb5e6736ca59a127d616b2adab85a8992ea6ae5602",
+    "/assets/images/food/fresh-coconut.png": {
+      "fingerprint": "10fabb181ffaea027b4d42eae7b08335508ebe4dd08f1cdbd0cc75c165b85de7",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/fresh-coconut.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 19708
+          "bytes": 24650
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/fresh-coconut.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 11016
+          "bytes": 13396
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/fresh-coconut.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 58962
+          "bytes": 75698
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/fresh-coconut.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 36609
+          "bytes": 44993
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/fresh-coconut.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 101848
+          "bytes": 144438
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/fresh-coconut.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 68533
+          "bytes": 89779
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/fresh-coconut.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 150308
+          "bytes": 205878
         },
         {
-          "src": "/assets/images/generated/food/food-07-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/fresh-coconut.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 101508
+          "bytes": 138183
         }
       ]
     },
-    "/assets/images/food/food-08-photorealistic.png": {
-      "fingerprint": "7dcdcc4df5526bd9af80e44ffd3075de1fecd40c2860241200680d56e2de1ece",
+    "/assets/images/food/mct-oil.png": {
+      "fingerprint": "361fa374a74aad2c6167237eddd0d801ede0ee40b286e71cda5af9022da41490",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/mct-oil.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 14574
+          "bytes": 10448
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/mct-oil.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 8573
+          "bytes": 7161
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/mct-oil.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 42454
+          "bytes": 32566
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/mct-oil.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 28756
+          "bytes": 22734
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/mct-oil.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 75614
+          "bytes": 61164
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/mct-oil.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 54062
+          "bytes": 41195
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/mct-oil.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 111712
+          "bytes": 87476
         },
         {
-          "src": "/assets/images/generated/food/food-08-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/mct-oil.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 79469
+          "bytes": 60624
         }
       ]
     },
-    "/assets/images/food/food-09-photorealistic.png": {
-      "fingerprint": "189bf695fefeb2241fa136568c67640044eaffd5d00870ceff8c1f92087991c8",
+    "/assets/images/food/rbd-coconut-oil.png": {
+      "fingerprint": "3eabe4a2b5da5b156b02edd815cdc8efe6da75fac99e173b8ee3edeed22fb3ff",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 14690
+          "bytes": 8226
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 8827
+          "bytes": 5677
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 40038
+          "bytes": 25202
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 27857
+          "bytes": 16864
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 71148
+          "bytes": 45618
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 52459
+          "bytes": 29801
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 105128
+          "bytes": 65484
         },
         {
-          "src": "/assets/images/generated/food/food-09-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/food/rbd-coconut-oil.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 78685
+          "bytes": 43003
+        }
+      ]
+    },
+    "/assets/images/food/virgin-coconut-oil.png": {
+      "fingerprint": "ceb11edff0b1dfbe874bcd58a7d86e3e793724cc29d482eb55ef80d6cb94316f",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 16314
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10179
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 49198
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 31371
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86664
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 56765
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 123578
+        },
+        {
+          "src": "/assets/images/generated/food/virgin-coconut-oil.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 82033
         }
       ]
     },

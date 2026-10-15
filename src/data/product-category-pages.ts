@@ -37,12 +37,12 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     slug: 'food',
     bodyClass: 'product-category--food',
     path: '/products/food',
-    heroImage: productCategories.find((category) => category.slug === 'food')!.image,
+    heroImage: '/assets/images/food/food-products.png',
     section: text('02 / ПИЩЕВЫЕ ПРОДУКТЫ', '02 / FOOD PRODUCTS'),
     breadcrumb: text('Главная / пищевые продукты', 'Main / food products'),
     title: text('Пищевые продукты', 'Food Products'),
     intro: text(
-      'Кокос и продукты его переработки для производителей продуктов питания, брендов, HoReCa и дистрибьюторов. Уточним формат, характеристики, упаковку и объем партии.',
+      'Кокосовые продукты и ингредиенты для пищевых производств, HoReCa и оптовых поставок. Различные спецификации, форматы упаковки и объёмы партий для задач вашего бизнеса.',
       'Coconut products and ingredients for food manufacturing, HoReCa, and wholesale supply. Various specifications, packaging formats, and order volumes to meet your business needs.'
     ),
     listLabel: text('для пищевого производства', 'for food manufacturing'),
