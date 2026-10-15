@@ -54,16 +54,16 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     slug: 'substrates',
     bodyClass: 'product-category--substrates',
     path: '/products/substrates',
-    heroImage: productCategories.find((category) => category.slug === 'substrates')!.image,
+    heroImage: '/assets/images/substrates/coconut-substrates.png',
     section: text('01 / КОКОСОВЫЕ СУБСТРАТЫ', '01 / COCONUT SUBSTRATES'),
-    breadcrumb: text('Кокосовые субстраты', 'Coconut Substrates'),
-    title: text('Субстраты для выращивания', 'Growing Substrates'),
+    breadcrumb: text('Кокосовые субстраты', 'Growing Substrates'),
+    title: text('Кокосовые субстраты', 'Growing Substrates'),
     intro: text(
-      'Профессиональные субстраты на основе кокоса для теплиц, питомников, гидропоники и рассады. Подберем фракцию, формат, объем и упаковку под вашу технологию выращивания.',
+      'Профессиональные субстраты на основе кокоса для теплиц, питомников, гидропоники и рассады. Подберём фракцию, формат, объём и упаковку под вашу технологию выращивания.',
       'Professional coconut-based substrates for greenhouses, nurseries, hydroponics, and seedlings. We will match the fraction, format, volume, and packaging to your growing technology.'
     ),
     listLabel: text('для растениеводства', 'for horticulture'),
-    listTitle: text('Категории<br>продуктов', 'Product<br>categories'),
+    listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
     items: productsForCategory('substrates')
   },

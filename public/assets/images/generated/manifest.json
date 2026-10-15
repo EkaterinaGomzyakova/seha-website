@@ -1838,633 +1838,759 @@
         }
       ]
     },
-    "/assets/images/substrates/substrates-01-photorealistic.png": {
-      "fingerprint": "05f002e5edf978db6d8ce90aa77f03e3d38674b50b813646e936108b83f1ee7d",
+    "/assets/images/substrates/coco-discs.png": {
+      "fingerprint": "368fb1a243ce20deeed202b3e9b672fea854133c20ba49e3efb25cde79a50d64",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-discs.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 37052
+          "bytes": 20290
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-discs.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 18874
+          "bytes": 12006
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-discs.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 116414
+          "bytes": 78618
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-discs.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 62383
+          "bytes": 45152
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-discs.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 224350
+          "bytes": 158692
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-discs.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 118770
+          "bytes": 89028
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-discs.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 372202
+          "bytes": 245812
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-01-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-discs.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 178787
+          "bytes": 134682
         }
       ]
     },
-    "/assets/images/substrates/substrates-02-photorealistic.png": {
-      "fingerprint": "bd31c5bda049104bdceb1899cd08ac464ff7517cc99602a5545fa6d5389c3109",
+    "/assets/images/substrates/coco-husk-chips-bricks.png": {
+      "fingerprint": "a3cae54446e123e0f0f1ce41932f7cb99f897851f190c7375438f906eee7bac0",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 26530
+          "bytes": 37106
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 14473
+          "bytes": 18941
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 92912
+          "bytes": 138050
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 51385
+          "bytes": 73915
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 190734
+          "bytes": 288680
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 105560
+          "bytes": 154519
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 312126
+          "bytes": 444968
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-02-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 167282
+          "bytes": 232812
         }
       ]
     },
-    "/assets/images/substrates/substrates-03-photorealistic.png": {
-      "fingerprint": "a6df1e53288358862b2e865b3923e0caf102deb6997019569554cf9ba121ab43",
+    "/assets/images/substrates/coco-husk-chips.png": {
+      "fingerprint": "769ab08ebfd36e49f6441d70211bbeb710695150f5f2e9d3b024c065aa7c6fca",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 26038
+          "bytes": 33178
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13892
+          "bytes": 17006
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 79742
+          "bytes": 118864
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 46501
+          "bytes": 61584
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 149768
+          "bytes": 227138
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 89234
+          "bytes": 118388
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 242640
+          "bytes": 325348
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-03-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-husk-chips.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 136876
+          "bytes": 174199
         }
       ]
     },
-    "/assets/images/substrates/substrates-04-photorealistic.png": {
-      "fingerprint": "771bf630039fc6c2c3c729e06d5e9af1b9c9b6691d1861c7fcaa1c70220872f4",
+    "/assets/images/substrates/coco-peat-bricks.png": {
+      "fingerprint": "a2fc9f84b38c61a4d302b18716e8cf82628fac52260f4127c3d1049f76729b80",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 32610
+          "bytes": 31222
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 15978
+          "bytes": 16518
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 120594
+          "bytes": 122728
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 60738
+          "bytes": 67520
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 246820
+          "bytes": 262450
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 128247
+          "bytes": 139727
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 397092
+          "bytes": 401740
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-04-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-bricks.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 198789
+          "bytes": 211262
         }
       ]
     },
-    "/assets/images/substrates/substrates-05-photorealistic.png": {
-      "fingerprint": "9798a5e8e894b2e5c5890a9f470ef47a7123622f9a4a1c2b492e5a360d6cc922",
+    "/assets/images/substrates/coco-peat-compost.png": {
+      "fingerprint": "a32525abd6d3da371b4fcfa026400e6a0cc58b34864116773260c932618d6755",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 25612
+          "bytes": 43946
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13620
+          "bytes": 22083
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 88734
+          "bytes": 162732
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 49885
+          "bytes": 84721
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 179214
+          "bytes": 314538
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 100064
+          "bytes": 163387
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 277802
+          "bytes": 459362
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-05-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-compost.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 151844
+          "bytes": 239111
         }
       ]
     },
-    "/assets/images/substrates/substrates-06-photorealistic.png": {
-      "fingerprint": "27519c260696f43db7cf786d4cef0f81ea803987d4fa8d27bf79caac962d124d",
+    "/assets/images/substrates/coco-peat-tablets.png": {
+      "fingerprint": "ce2c4fd6bde864d945df4123c4429f472923faaedd441e7f25e22a4b0a045f15",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 26952
+          "bytes": 26992
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13694
+          "bytes": 14480
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 88690
+          "bytes": 94186
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 49081
+          "bytes": 52068
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 166128
+          "bytes": 180136
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 96032
+          "bytes": 100782
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 253008
+          "bytes": 259740
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-06-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-peat-tablets.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 144281
+          "bytes": 148504
         }
       ]
     },
-    "/assets/images/substrates/substrates-07-photorealistic.png": {
-      "fingerprint": "f18ace5e89cd9047c93324346b15b96d1da75059916b01efd6f1a217e2481b30",
+    "/assets/images/substrates/coco-peat.png": {
+      "fingerprint": "fa12691a9f39ec4a6f7b7eaa45b3a01fac6be363968d9099a429c97b2ee49355",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coco-peat.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 26166
+          "bytes": 39296
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coco-peat.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 14027
+          "bytes": 19276
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coco-peat.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 80112
+          "bytes": 132020
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coco-peat.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 45899
+          "bytes": 66110
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coco-peat.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 150898
+          "bytes": 247762
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coco-peat.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 87723
+          "bytes": 129021
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coco-peat.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 240466
+          "bytes": 362324
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-07-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coco-peat.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 132595
+          "bytes": 193330
         }
       ]
     },
-    "/assets/images/substrates/substrates-08-photorealistic.png": {
-      "fingerprint": "5686181fd0f0203191e656e7cdead8cfe81c4565e1d6371094130dc9d516a252",
+    "/assets/images/substrates/coconut-substrates.png": {
+      "fingerprint": "c79b422e2b8bd5a0f415f7b17ba4786d519f86095af513476ebb4d3eb29addc8",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 32696
+          "bytes": 34726
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 16283
+          "bytes": 17617
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 110248
+          "bytes": 114632
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 57680
+          "bytes": 60562
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 211460
+          "bytes": 208576
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 109971
+          "bytes": 114237
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 314610
+          "bytes": 301192
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-08-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/coconut-substrates.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 162383
+          "bytes": 167180
         }
       ]
     },
-    "/assets/images/substrates/substrates-09-photorealistic.png": {
-      "fingerprint": "1badf6705df4299d8e5c0ec46f4c5660afdd2d742e1df36bbb716cd2a42eb0ef",
+    "/assets/images/substrates/grow-bag.png": {
+      "fingerprint": "d51ca49ae9c7ff0d855d704456ff86368da6c7d25cbe74e1afe23f55136ff5ff",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/grow-bag.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 28132
+          "bytes": 15870
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/grow-bag.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 15107
+          "bytes": 9512
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/grow-bag.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 89502
+          "bytes": 38634
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/grow-bag.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 49641
+          "bytes": 25992
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/grow-bag.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 163044
+          "bytes": 64152
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/grow-bag.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 93215
+          "bytes": 45190
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/grow-bag.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 248144
+          "bytes": 89614
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-09-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/grow-bag.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 139883
+          "bytes": 63891
         }
       ]
     },
-    "/assets/images/substrates/substrates-10-photorealistic.png": {
-      "fingerprint": "ba0bf4032aeffd5b958c77acfaa8acfb006dd70272a1dbe7d06d6e9f5c7928a4",
+    "/assets/images/substrates/grow-cube-sleeve.png": {
+      "fingerprint": "a48e5cc03cb9ee4a1c1c810544b79d2cc8063291a417407e6e126bbcae21b7c1",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 25658
+          "bytes": 21488
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13922
+          "bytes": 11995
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 83484
+          "bytes": 86672
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 47015
+          "bytes": 47067
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 156456
+          "bytes": 178352
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 90302
+          "bytes": 98197
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 243896
+          "bytes": 272732
         },
         {
-          "src": "/assets/images/generated/substrates/substrates-10-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/substrates/grow-cube-sleeve.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 134887
+          "bytes": 152321
+        }
+      ]
+    },
+    "/assets/images/substrates/open-top-grow-bag.png": {
+      "fingerprint": "ed814d47c233d278ab908cbad34279df2b8bf40a008fb164efed9e908c934605",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20682
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11990
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 66940
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 40445
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 128404
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 75583
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 189120
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 109855
+        }
+      ]
+    },
+    "/assets/images/substrates/seeding-tray-media.png": {
+      "fingerprint": "c30d39b09329198f20b78a9be9bba6a93c4a9281d3598b418b2f206c46c6c57e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 29384
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16068
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 87296
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49476
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 154732
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 90952
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 221718
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 132635
         }
       ]
     }

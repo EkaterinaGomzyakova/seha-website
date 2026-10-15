@@ -167,84 +167,114 @@ const rows: Record<ProductCategorySlug, Row[]> = {
   ],
   substrates: [
     [
+      'grow-bag',
+      'grow-bag.png',
+      'Гроубэг',
+      'Grow Bag',
+      'Кокосовый субстрат для беспочвенного выращивания. Состав, размеры и отверстия подбираются под культуру и требования заказчика.',
+      'Coco substrate for soilless cultivation. Composition, dimensions and holes tailored to crops and customer needs.',
+      'Grow bag',
+      'Customizable'
+    ],
+    [
+      'open-top-grow-bag',
+      'open-top-grow-bag.png',
+      'Открытый гроубэг',
+      'Open-Top Grow Bag',
+      'Гроубэг для голубики и малины с 60% кокосового торфа и 40% кокосовых чипсов. Состав, размеры и дренаж под требования заказчика.',
+      'Grow bag for blueberries and raspberries with 60% coco peat and 40% chips. Customizable composition, size and drainage.',
+      'Open-top grow bag',
+      'Well-Drained'
+    ],
+    [
       'coco-peat',
-      '01',
+      'coco-peat.png',
       'Кокосовый торф',
       'Coco Peat',
-      'Мелкая фракция кокосового сырья для приготовления субстратов в теплицах и питомниках.',
-      'Fine coconut material for preparing growing media in greenhouses and nurseries.'
+      'Натуральный субстрат из очищенного кокосового волокна. Подходит для улучшения влагоёмкости, аэрации и структуры почвосмесей.',
+      'Natural substrate made from cleaned coconut fiber. Suitable for improving moisture retention, aeration, and soil mix structure.',
+      'Coco peat',
+      'Organic'
     ],
     [
       'coco-peat-briquettes',
-      '02',
+      'coco-peat-bricks.png',
       'Кокосовый торф в брикетах',
       'Coco Peat Bricks',
-      'Прессованный кокосовый торф в компактных брикетах, размачиваемых перед использованием.',
-      'Compressed coconut peat in compact bricks, hydrated before use.'
-    ],
-    [
-      'grow-cube-slice-m',
-      '03',
-      'Кубический субстрат (M)',
-      'Grow Cube Slice (M)',
-      'Кокосовый субстрат в кубическом формате среднего размера для выращивания растений.',
-      'Coconut growing medium in a medium cube format for plant cultivation.'
-    ],
-    [
-      'grow-cube-olive-l',
-      '04',
-      'Кубический субстрат (L)',
-      'Grow Cube Olive (L)',
-      'Кокосовый субстрат в крупном кубическом формате для профессионального выращивания.',
-      'Coconut growing medium in a large cube format for professional cultivation.'
-    ],
-    [
-      'coco-coir-discs',
-      '05',
-      'Кокосовые диски',
-      'Coco Coir Discs',
-      'Прессованные кокосовые диски для заполнения горшков и контейнеров после увлажнения.',
-      'Compressed coir discs for filling pots and containers after hydration.'
+      'Спрессованные брикеты кокосового субстрата для тепличных хозяйств и объёмных поставок. Удобны для хранения и транспортировки.',
+      'Compressed coconut substrate bricks for greenhouse operations and bulk supply. Convenient to store and transport.',
+      'Coco Peat Bricks',
+      'Compressed'
     ],
     [
       'coconut-chips',
-      '06',
+      'coco-husk-chips.png',
       'Кокосовые чипсы',
-      'Coconut Husk Chips',
-      'Крупная фракция кокосовой шелухи для структурирования смесей и выращивания в контейнерах.',
-      'Coarse coconut husk chips for structured growing mixes and container cultivation.'
+      'Coco Husk Chips',
+      'Крупные частицы кокосовой шелухи для улучшения аэрации и дренажа. Подходят для орхидей, гидропоники и специализированных культур.',
+      'Large coconut husk particles for improved aeration and drainage. Suitable for orchids, hydroponics, and specialty crops.',
+      'Coco Husk Chips',
+      'Aeration'
+    ],
+    [
+      'coco-husk-chips-bricks',
+      'coco-husk-chips-bricks.png',
+      'Кокосовые чипсы в брикетах',
+      'Coco Husk Chips Bricks',
+      'Прессованные блоки кокосовых чипсов для теплиц и приготовления субстратов. Улучшают аэрацию и дренаж, удобны в транспортировке.',
+      'Compressed coco chip bricks for greenhouses and substrate preparation. Improve aeration and drainage, and are easy to transport.',
+      'Coco Husk Chips Bricks',
+      'Improved Drainage'
+    ],
+    [
+      'grow-cube-sleeve',
+      'grow-cube-sleeve.png',
+      'Кубический субстрат',
+      'Grow Cube Sleeve',
+      'Спрессованные блоки кокосового субстрата среднего размера для контролируемого выращивания растений, подходят для гидропоники.',
+      'Medium-format coconut blocks for seedlings, potted crops, and hydroponics. Retain moisture and support root aeration.',
+      'Grow Cube Sleeve',
+      'Hydroponics'
+    ],
+    [
+      'coco-coir-discs',
+      'coco-discs.png',
+      'Кокосовые диски',
+      'Coco Discs',
+      'Спрессованные диски из кокосового волокна. При увлажнении увеличиваются, образуют натуральный биоразлагаемый субстрат.',
+      'Compressed coconut fiber discs. They expand when moistened and form a natural biodegradable substrate.',
+      'Coco Disc',
+      'Biodegradable'
     ],
     [
       'coco-peat-tablets',
-      '07',
+      'coco-peat-tablets.png',
       'Таблетки из кокосового торфа',
       'Coco Peat Tablets',
-      'Компактные таблетки из кокосового торфа для рассады и укоренения черенков.',
-      'Compact coconut peat tablets for seedlings and rooting cuttings.'
+      'Торфяные таблетки для проращивания семян и рассады. После полива расширяются и обеспечивают комфортные условия для роста.',
+      'Pressed tablets for seed germination and seedlings. They expand when moistened and form a convenient planting medium.',
+      'Coco Peat Tablets',
+      'Seed Starting'
     ],
     [
       'coco-peat-compost',
-      '08',
+      'coco-peat-compost.png',
       'Компост из кокосового торфа',
       'Coco Peat Compost',
-      'Материал на основе кокосового торфа для почвенных смесей и профессионального растениеводства.',
-      'Coconut peat-based material for soil mixes and professional horticulture.'
+      'Органический субстрат для выращивания растений и улучшения почвы. Удерживает влагу и поддерживает здоровье корней.',
+      'Organic natural substrate for growing plants and improving soil. Retains moisture and supports root health.',
+      'Coco Peat Compost',
+      'Root Growth'
     ],
     [
       'seeding-tray-media',
-      '09',
+      'seeding-tray-media.png',
       'Субстрат для лотков рассады',
       'Seeding Tray Media',
-      'Кокосовый субстрат для заполнения рассадных кассет и лотков.',
-      'Coconut growing medium for filling seedling trays and propagation cells.'
-    ],
-    [
-      'coco-peat-seed-starter',
-      '10',
-      'Субстрат для проращивания',
-      'Coco Peat Seed Starter',
-      'Кокосовая среда для посева семян и начального этапа выращивания рассады.',
-      'Coconut growing medium for seed germination and early seedling cultivation.'
+      'Кокосовый субстрат для выращивания рассады. Обеспечивает равномерное прорастание семян и здоровый рост корней.',
+      'Ready-made mix for seedling trays and plug trays. Ensures even germination, aeration, and healthy root development.',
+      'Seeding Tray Media',
+      'Nursery Production'
     ]
   ],
   fiber: [
@@ -334,7 +364,7 @@ export const products: ProductItem[] = (Object.keys(rows) as ProductCategorySlug
       alt: text(ru, en),
       label: text(labelRu ?? ru, labelEn ?? en),
       description: text(descriptionRu, descriptionEn),
-      image: `/assets/images/${category}/${category}-${image}-photorealistic.png`
+      image: `/assets/images/${category}/${image.endsWith('.png') ? image : `${category}-${image}-photorealistic.png`}`
     }))
 );
 export function localized<T extends LocalizedText>(value: T, locale: Locale) {

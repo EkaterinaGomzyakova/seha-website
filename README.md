@@ -19,7 +19,7 @@ Copy `.env.example` to `.env` if deployment settings are needed. `SITE_URL` is t
 - `src/components/pages/`: shared templates for each page type.
 - `src/components/`: header, footer, form, logo, language switcher, category template and SEO. `ui/` contains reusable HTML primitives.
 - `src/data/*-page.ts`: complete RU/EN dictionaries rendered at build time. English copy is a draft for manual editorial review before release.
-- `src/data/products.ts`: the single catalog source, with 28 products, stable IDs/slugs, translated descriptions, and images. `product-category-pages.ts` supplies category presentation metadata and uses the canonical catalog.
+- `src/data/products.ts`: the single catalog source, with 29 products, stable IDs/slugs, translated descriptions, and images. `product-category-pages.ts` supplies category presentation metadata and uses the canonical catalog.
 - `src/data/site.ts`: shared contact and organization details.
 - `src/scripts/`: bundled interaction modules. Light-DOM Web Components enhance server-rendered menu and browser-storage notice; other small interactions use native HTML and TypeScript.
 - `src/styles/`: one entrypoint, semantic cascade layers, component ownership and per-page styles. See `src/styles/README.md`.

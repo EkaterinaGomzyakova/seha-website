@@ -63,8 +63,16 @@ const sizes = '(max-width: 600px) 90vw, (max-width: 1024px) 44vw, 360px';
     <section class="product-hero" aria-labelledby="product-title">
       <div class="product-hero-icon">
         <picture>
-          <source type="image/avif" srcset={srcset(page.heroImage, 'avif')} sizes={sizes} />
-          <source type="image/webp" srcset={srcset(page.heroImage, 'webp')} sizes={sizes} />
+          <source
+            type="image/avif"
+            srcset={srcset(page.heroImage, 'avif')}
+            sizes="(max-width: 1280px) 124px, 148px"
+          />
+          <source
+            type="image/webp"
+            srcset={srcset(page.heroImage, 'webp')}
+            sizes="(max-width: 1280px) 124px, 148px"
+          />
           <img
             src={fallback(page.heroImage)}
             alt={t(page.title)}
