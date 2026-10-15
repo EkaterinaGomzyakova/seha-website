@@ -1,10 +1,5 @@
 import type { Locale } from './translations';
-import {
-  productsForCategory,
-  productCategories,
-  type ProductItem,
-  type ProductCategorySlug
-} from './products';
+import { productsForCategory, type ProductItem, type ProductCategorySlug } from './products';
 
 export type ProductCategoryPageSlug = ProductCategorySlug;
 
@@ -88,15 +83,15 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     slug: 'shell',
     bodyClass: 'product-category--shell',
     path: '/products/shell',
-    heroImage: productCategories.find((category) => category.slug === 'shell')!.image,
+    heroImage: '/assets/images/shell/coco-shell-products.png',
     section: text('04 / КОКОСОВАЯ СКОРЛУПА', '04 / COCO SHELL'),
-    breadcrumb: text('Продукты из кокосовой скорлупы', 'Coco Shell Products'),
+    breadcrumb: text('Кокосовая скорлупа', 'Coco Shell Products'),
     title: text('Продукты из кокосовой скорлупы', 'Coco Shell Products'),
     intro: text(
       'Продукты из натуральной кокосовой скорлупы для промышленности, фильтрации и производства топлива. Различные форматы и объёмы поставок для бизнеса.',
       'Natural coconut shell products for industrial applications, filtration, and fuel production. Available in various formats and supply volumes for business needs.'
     ),
-    listLabel: text('Для промышленности и топлива', 'Industrial Raw Material'),
+    listLabel: text('Для промышленности и топлива', 'INDUSTRIAL & FUEL APPLICATIONS'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
     items: productsForCategory('shell')

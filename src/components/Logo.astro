@@ -4,8 +4,9 @@ import { getSiteTranslations } from '../data/translations';
 import { localizedPath, withBase } from '../lib/paths';
 interface Props {
   locale: Locale;
+  tone?: 'brand' | 'accent';
 }
-const { locale } = Astro.props;
+const { locale, tone = 'brand' } = Astro.props;
 const copy = getSiteTranslations(locale);
 const language = locale === 'en' ? 'international' : 'russian';
 const logo = (variant: string) =>
@@ -13,9 +14,19 @@ const logo = (variant: string) =>
 ---
 
 <a class="logo" href={localizedPath('/', locale)} aria-label={`${copy.logoAlt} — ${copy.home}`}>
-  <picture>
-    <source media="(max-width: 1024px)" srcset={logo('mobile')} />
-    <source media="(max-width: 1280px)" srcset={logo('small-desktop')} />
-    <img class="logo-image" src={logo('desktop')} alt={copy.logoAlt} width="240" height="48" />
-  </picture>
+  {tone === 'accent' ? (
+    <img
+      class="logo-image"
+      src={withBase(`/assets/images/common/logo-${language}-accent.svg`)}
+      alt={copy.logoAlt}
+      width="95"
+      height="32"
+    />
+  ) : (
+    <picture>
+      <source media="(max-width: 1024px)" srcset={logo('mobile')} />
+      <source media="(max-width: 1280px)" srcset={logo('small-desktop')} />
+      <img class="logo-image" src={logo('desktop')} alt={copy.logoAlt} width="240" height="48" />
+    </picture>
+  )}
 </a>

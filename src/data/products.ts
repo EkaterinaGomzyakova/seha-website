@@ -342,27 +342,33 @@ const rows: Record<ProductCategorySlug, Row[]> = {
   shell: [
     [
       'coco-shell',
-      '01',
+      'coco-shell.png',
       'Кокосовая скорлупа',
-      'Coconut Shell',
-      'Натуральная скорлупа кокоса для промышленной переработки и производства угля.',
-      'Natural coconut shell for industrial processing and charcoal production.'
+      'Coco Shell',
+      'Натуральная кокосовая скорлупа — востребованное сырьё для производства активированного угля, топлива и промышленной продукции.',
+      'Natural coconut shell is a widely used raw material for the production of activated carbon, fuel, and industrial products.',
+      'Coco Shell',
+      'Industrial Raw Material'
     ],
     [
       'coco-shell-charcoal-briquettes',
-      '02',
+      'coco-shell-charcoal-briquettes.png',
       'Брикеты из кокосового угля',
-      'Coconut Shell Charcoal Briquettes',
-      'Формованные брикеты из угля кокосовой скорлупы для топливного применения.',
-      'Formed coconut shell charcoal briquettes for fuel applications.'
+      'Coco Shell Charcoal Briquettes',
+      'Брикеты с высокой теплоотдачей и минимальным количеством золы. Подходят для гриля, барбекю и промышленного применения.',
+      'Briquettes with high heat output and low ash content. Suitable for grilling, barbecuing, and industrial applications.',
+      'Coco Shell Charcoal Briquettes',
+      'High Heat Output'
     ],
     [
       'coco-shell-activated-carbon',
-      '03',
+      'coco-shell-activated-carbon.png',
       'Активированный уголь',
-      'Coconut Shell Activated Carbon',
-      'Активированный уголь из кокосовой скорлупы для фильтрации и промышленной очистки.',
-      'Coconut shell activated carbon for filtration and industrial purification.'
+      'Coco Shell Activated Carbon',
+      'Активированный уголь из кокосовой скорлупы для очистки воды, очистки воздуха и промышленных систем фильтрации.',
+      'Coconut shell activated carbon for water purification, air purification, and industrial filtration systems.',
+      'Coco Shell Activated Carbon',
+      'High Adsorption'
     ]
   ]
 };

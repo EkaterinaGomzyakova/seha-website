@@ -1775,192 +1775,255 @@
         }
       ]
     },
-    "/assets/images/shell/shell-01-photorealistic.png": {
-      "fingerprint": "53125a881f303479e868a1c9ffe136b042446483f65cdc6f6269226819a11d36",
+    "/assets/images/shell/coco-shell-activated-carbon.png": {
+      "fingerprint": "96d753658c3e1887578edc008b1c223fb9c86fadbc1773b69f429dd7abeb9a79",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 24146
+          "bytes": 26086
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 12894
+          "bytes": 13518
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 87154
+          "bytes": 89948
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 48627
+          "bytes": 49104
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 169596
+          "bytes": 171640
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 96018
+          "bytes": 94559
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 251546
+          "bytes": 248436
         },
         {
-          "src": "/assets/images/generated/shell/shell-01-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/shell/coco-shell-activated-carbon.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 143050
+          "bytes": 141964
         }
       ]
     },
-    "/assets/images/shell/shell-02-photorealistic.png": {
-      "fingerprint": "822aa524d39b500ca1b731b5294340f04befd5a685b715feefdde842b93918dd",
+    "/assets/images/shell/coco-shell-charcoal-briquettes.png": {
+      "fingerprint": "50d427a0e84266a3f7a2d0c02c23ab87a9df5cceaaac7d735be8f715bc68494b",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 32420
+          "bytes": 22786
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 16307
+          "bytes": 12703
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 114458
+          "bytes": 78992
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 59163
+          "bytes": 45771
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 220380
+          "bytes": 149860
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 117992
+          "bytes": 86577
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 323346
+          "bytes": 214010
         },
         {
-          "src": "/assets/images/generated/shell/shell-02-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/shell/coco-shell-charcoal-briquettes.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 177247
+          "bytes": 126338
         }
       ]
     },
-    "/assets/images/shell/shell-03-photorealistic.png": {
-      "fingerprint": "06c98054b23ce36e297fac0c0386758bff79cc0330cc33a68ce365f9cfdf7672",
+    "/assets/images/shell/coco-shell-products.png": {
+      "fingerprint": "e72d1f075c0f590b3b21bfccc13f30c073cc203aa6fdaa5ad3c9786986c73f14",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 25936
+          "bytes": 38410
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 13553
+          "bytes": 18986
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 89896
+          "bytes": 122946
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 49912
+          "bytes": 63567
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 170008
+          "bytes": 226330
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 96221
+          "bytes": 119912
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 250836
+          "bytes": 315792
         },
         {
-          "src": "/assets/images/generated/shell/shell-03-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/shell/coco-shell-products.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 141955
+          "bytes": 175385
+        }
+      ]
+    },
+    "/assets/images/shell/coco-shell.png": {
+      "fingerprint": "478087a2871c896287bd013ad619a87159e83db953566b854b51c07f843c1ae9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25522
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13885
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 99854
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 54569
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 207352
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 112786
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 311020
+        },
+        {
+          "src": "/assets/images/generated/shell/coco-shell.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 172266
         }
       ]
     },

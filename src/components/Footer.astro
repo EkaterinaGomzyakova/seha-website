@@ -8,38 +8,43 @@ import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
 interface Props {
   locale: Locale;
+  variant?: 'default' | 'product-category';
 }
-const { locale } = Astro.props;
+const { locale, variant = 'default' } = Astro.props;
 const copy = getInterfaceCopy(locale);
+const isProductCategory = variant === 'product-category';
+const title = isProductCategory ? copy.title.replaceAll('<br />', '<br /> ') : copy.title;
 ---
 
 <footer class="quote-footer" id="contacts">
   <div class="quote-layout">
     <section class="quote-main" aria-labelledby="quote-title">
-      <h2 id="quote-title" class="type-h2" set:html={copy.title} />
+      <h2 id="quote-title" class="type-h2" set:html={title} />
       <ContactForm locale={locale} />
     </section>
     <aside class="quote-contacts" aria-labelledby="contacts-title">
       <span class="quote-kicker" id="contacts-title">
         {copy.contacts}
       </span>
-      <div class="contact-item address">
-        <strong>{copy.address}</strong>
-        <p class="type-p" set:html={copy.addressText} />
-      </div>
-      <div class="contact-item">
-        <span>{copy.phoneLabel}</span>
-        <Link href={siteContact.phoneHref}>{siteContact.phone}</Link>
-      </div>
-      <div class="contact-item">
-        <span>{copy.emailLabel}</span>
-        <Link href={`mailto:${siteContact.email}`}>{siteContact.email}</Link>
+      <div class="quote-contact-list">
+        <div class="contact-item address">
+          <strong>{copy.address}</strong>
+          <p class="type-p" set:html={copy.addressText} />
+        </div>
+        <div class="contact-item">
+          <span>{copy.phoneLabel}</span>
+          <Link href={siteContact.phoneHref}>{siteContact.phone}</Link>
+        </div>
+        <div class="contact-item">
+          <span>{copy.emailLabel}</span>
+          <Link href={`mailto:${siteContact.email}`}>{siteContact.email}</Link>
+        </div>
       </div>
     </aside>
   </div>
   <div class="quote-bottom">
     <div class="quote-brand">
-      <Logo locale={locale} />
+      <Logo locale={locale} tone={isProductCategory ? 'accent' : 'brand'} />
       <span set:html={copy.brand} />
     </div>
     <Link href={localizedPath('/privacy/', locale)}>{copy.privacy.toUpperCase()}</Link>
