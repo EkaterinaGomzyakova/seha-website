@@ -7,6 +7,7 @@ import {
 } from '../data/product-category-pages';
 import type { Locale } from '../data/translations';
 import { withBase, localizedPath } from '../lib/paths';
+import { bindShortWords } from '../lib/typography';
 import imageManifest from '../../public/assets/images/generated/manifest.json';
 
 interface Props {
@@ -110,16 +111,16 @@ const sizes = '(max-width: 600px) 90vw, (max-width: 1024px) 44vw, 360px';
                 />
               </picture>
             </figure>
-            <span>{t(item.label)}</span>
-            <h3 class="type-h3">{t(item.name)}</h3>
-            <p class="type-p">{t(item.description)}</p>
+            <span>{bindShortWords(t(item.label), locale)}</span>
+            <h3 class="type-h3">{bindShortWords(t(item.name), locale)}</h3>
+            <p class="type-p">{bindShortWords(t(item.description), locale)}</p>
             <Button
               href="#contacts"
               full
               data-quote-product={t(item.name)}
               data-product-id={item.id}
             >
-              {t(page.cta)}
+              {bindShortWords(t(page.cta), locale)}
             </Button>
           </article>
         ))}

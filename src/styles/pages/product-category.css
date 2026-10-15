@@ -81,6 +81,7 @@
 .product-grid-page {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 64px 32px;
 }
 .product-item {
@@ -109,7 +110,7 @@
 }
 .product-item p {
   flex: 1;
-  margin: 0;
+  margin: 0 0 20px;
   color: var(--color-dark-gray);
   font: 500 15px/1.55 var(--font-sans);
 }
@@ -275,21 +276,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-html[lang='en'] .product-category--food .product-item p {
-  min-height: 90px;
-}
-html[lang='ru'] .product-category--food .product-item p {
-  min-height: 120px;
-}
-.product-category--fiber .product-item p {
-  min-height: 90px;
-}
-html[lang='ru'] .product-category--shell .product-item p {
-  min-height: 120px;
-}
-html[lang='en'] .product-category--shell .product-item p {
-  min-height: 96px;
-}
 .product-category--fiber .product-hero h1,
 .product-category--fiber .product-hero > p {
   width: min(1088px, 100%);
@@ -327,10 +313,6 @@ html[lang='en'] .product-category--shell .product-item p {
   .page-product-category .product-item .button {
     min-height: 48px;
     height: 48px;
-  }
-  html[lang='en'] .product-category--food .product-item p,
-  html[lang='ru'] .product-category--food .product-item p {
-    min-height: 0;
   }
 }
 @media (max-width: 440px) {
@@ -390,21 +372,6 @@ html[lang='en'] .product-category--shell .product-item p {
     width: calc(100% - 32px);
     padding: 48px 80px;
   }
-  html[lang='en'] .product-category--food .product-item p {
-    min-height: 99px;
-  }
-  html[lang='ru'] .product-category--food .product-item p {
-    min-height: 123px;
-  }
-  .product-category--fiber .product-item p {
-    min-height: 99px;
-  }
-  html[lang='ru'] .product-category--shell .product-item p {
-    min-height: 102px;
-  }
-  html[lang='en'] .product-category--shell .product-item p {
-    min-height: 99px;
-  }
   .product-category--fiber .product-hero h1,
   .product-category--fiber .product-hero > p {
     max-width: 810px;
@@ -422,12 +389,6 @@ html[lang='en'] .product-category--shell .product-item p {
   .page-product-category .quote-footer {
     width: var(--grid-content-width);
     padding: 40px 24px;
-  }
-  html[lang='en'] .product-category--food .product-item p,
-  html[lang='ru'] .product-category--food .product-item p,
-  .product-category--fiber .product-item p,
-  .product-category--shell .product-item p {
-    min-height: 0;
   }
 }
 
