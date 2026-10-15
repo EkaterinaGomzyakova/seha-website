@@ -27,6 +27,8 @@ Copy `.env.example` to `.env` if deployment settings are needed. `SITE_URL` is t
 
 Fonts are served locally through Fontsource. Page content, contact labels, logos and language links do not depend on client-side translation.
 
+Public-facing copy uses **fibre/fibres**, including English product names on Russian pages, metadata, and accessible labels. Technical identifiers, filenames, CSS classes, and existing URLs retain **fiber** for stability.
+
 ## Quality checks
 
 ```sh

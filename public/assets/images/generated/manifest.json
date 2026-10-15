@@ -641,381 +641,444 @@
         }
       ]
     },
-    "/assets/images/fiber/fiber-01-photorealistic.png": {
-      "fingerprint": "97b1c82fda2f901b26ff7221cc2991db4af482878a8bba11681f13aba188180b",
+    "/assets/images/fiber/bristle-fiber.png": {
+      "fingerprint": "7413c8f4c47fc602a213b23eeb25f8965cdf4ceb34837b956717b69de8ebceea",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 41836
+          "bytes": 30410
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 20971
+          "bytes": 16172
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 157674
+          "bytes": 111382
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 78463
+          "bytes": 59836
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 310022
+          "bytes": 214624
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 154731
+          "bytes": 114437
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 470698
+          "bytes": 312424
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-01-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/fiber/bristle-fiber.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 230220
+          "bytes": 167157
         }
       ]
     },
-    "/assets/images/fiber/fiber-02-photorealistic.png": {
-      "fingerprint": "354ed6fbabe298c1a083b07622f3daabbd93650a3faa8577c085d1100cf20056",
+    "/assets/images/fiber/coir-fiber-bales.png": {
+      "fingerprint": "b6e0d6216bff4b90d4bde73ec12ebaf1449011b0c4f8c8e90608f3b3ffdc671d",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 28180
+          "bytes": 22490
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 15089
+          "bytes": 12826
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 101950
+          "bytes": 68272
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 54937
+          "bytes": 42414
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 195014
+          "bytes": 114708
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 105823
+          "bytes": 76524
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 288526
+          "bytes": 155546
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-02-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/fiber/coir-fiber-bales.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 155432
+          "bytes": 107856
         }
       ]
     },
-    "/assets/images/fiber/fiber-03-photorealistic.png": {
-      "fingerprint": "cba5e4111e0d7fa66b537e2de52b4c10d4d6aa546f768065664ca0a25abac1c9",
+    "/assets/images/fiber/coir-geo-textile.png": {
+      "fingerprint": "be07a484502818f529bc06aee5880927015ea8929b97f9a28d3ba6f8f21e187f",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 36652
+          "bytes": 45580
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 17910
+          "bytes": 21936
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 138684
+          "bytes": 170072
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 66973
+          "bytes": 86050
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 279516
+          "bytes": 342910
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 140300
+          "bytes": 169160
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 432444
+          "bytes": 511676
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-03-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/fiber/coir-geo-textile.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 215570
+          "bytes": 249189
         }
       ]
     },
-    "/assets/images/fiber/fiber-04-photorealistic.png": {
-      "fingerprint": "81fc987029617f9d63a83f4336541d61866ddc4c5c90c95cb8fa6e12fa2a7a26",
+    "/assets/images/fiber/coir-products.png": {
+      "fingerprint": "44122a8d7b7bee2148d13d30f84145063e20bfbc5116416ffb45ed1175570694",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/fiber/coir-products.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 44284
+          "bytes": 38390
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/fiber/coir-products.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 21547
+          "bytes": 19425
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/fiber/coir-products.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 146638
+          "bytes": 131198
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/fiber/coir-products.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 71942
+          "bytes": 66207
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/fiber/coir-products.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 272634
+          "bytes": 246140
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/fiber/coir-products.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 135560
+          "bytes": 126534
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/fiber/coir-products.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 414740
+          "bytes": 361180
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-04-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/fiber/coir-products.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 199619
+          "bytes": 187667
         }
       ]
     },
-    "/assets/images/fiber/fiber-05-photorealistic.png": {
-      "fingerprint": "f12a250e4b256a5d8ce0cb289d28911729683939e3d3e9086fa09ead41614252",
+    "/assets/images/fiber/coir-weed-mat.png": {
+      "fingerprint": "987109322897b91aae22ea114ff38a89bd2a00488e8ee5f1cfbce002fe560a5e",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 46228
+          "bytes": 45206
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 23205
+          "bytes": 22633
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 186514
+          "bytes": 166404
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 93441
+          "bytes": 84558
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 382532
+          "bytes": 320684
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 187047
+          "bytes": 165053
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 593918
+          "bytes": 484182
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-05-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/fiber/coir-weed-mat.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 278358
+          "bytes": 245044
         }
       ]
     },
-    "/assets/images/fiber/fiber-06-photorealistic.png": {
-      "fingerprint": "e1a08949016ef08c0bcba173503a907d7dfd3f10290ba57afdae1c32fa6c0caa",
+    "/assets/images/fiber/erosion-control-blankets.png": {
+      "fingerprint": "2fe4cbc375f573012a75da1ef23c91f74a01f0a42f9fd7ef71365bd4fe41da73",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-320.webp",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
-          "bytes": 50482
+          "bytes": 40108
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-320.avif",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
-          "bytes": 24875
+          "bytes": 19863
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-640.webp",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
-          "bytes": 184430
+          "bytes": 156304
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-640.avif",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
-          "bytes": 93256
+          "bytes": 78941
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-960.webp",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
-          "bytes": 374774
+          "bytes": 307904
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-960.avif",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
-          "bytes": 183123
+          "bytes": 150959
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-1254.webp",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
-          "bytes": 574572
+          "bytes": 455542
         },
         {
-          "src": "/assets/images/generated/fiber/fiber-06-photorealistic.png-1254.avif",
+          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,
-          "bytes": 271591
+          "bytes": 218646
+        }
+      ]
+    },
+    "/assets/images/fiber/machine-twisted-fiber.png": {
+      "fingerprint": "bc60188f6db27d075cef8ffd36abcf1468a01dcc1d0815e93d23e5c553e6f548",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34038
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17208
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 123842
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 61507
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 237814
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 120564
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 349230
+        },
+        {
+          "src": "/assets/images/generated/fiber/machine-twisted-fiber.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 179018
         }
       ]
     },

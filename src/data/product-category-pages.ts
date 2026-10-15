@@ -39,7 +39,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     path: '/products/food',
     heroImage: '/assets/images/food/food-products.png',
     section: text('02 / ПИЩЕВЫЕ ПРОДУКТЫ', '02 / FOOD PRODUCTS'),
-    breadcrumb: text('Главная / пищевые продукты', 'Main / food products'),
+    breadcrumb: text('Пищевые продукты', 'Food Products'),
     title: text('Пищевые продукты', 'Food Products'),
     intro: text(
       'Кокосовые продукты и ингредиенты для пищевых производств, HoReCa и оптовых поставок. Различные спецификации, форматы упаковки и объёмы партий для задач вашего бизнеса.',
@@ -71,13 +71,13 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     slug: 'fiber',
     bodyClass: 'product-category--fiber',
     path: '/products/fiber',
-    heroImage: productCategories.find((category) => category.slug === 'fiber')!.image,
-    section: text('03 / КОКОСОВОЕ ВОЛОКНО', '03 / COIR FIBER'),
-    breadcrumb: text('Главная / Кокосовое волокно', 'Main / Coir products'),
+    heroImage: '/assets/images/fiber/coir-products.png',
+    section: text('03 / КОКОСОВОЕ ВОЛОКНО', '03 / COIR FIBRE'),
+    breadcrumb: text('Кокосовое волокно', 'Coir Products'),
     title: text('Продукты из кокосового волокна', 'Coir Products'),
     intro: text(
       'Продукты из натурального кокосового волокна для промышленности, сельского хозяйства, озеленения и защиты грунта. Различные форматы и объёмы поставок для профессионального применения.',
-      'Natural coconut fiber products for industrial, agricultural, landscaping, and soil protection applications. Available in various formats and supply volumes for professional use.'
+      'Natural coconut fibre products for industrial, agricultural, landscaping, and soil protection applications. Available in various formats and supply volumes for professional use.'
     ),
     listLabel: text('Для промышленности и строительства', 'INDUSTRIAL & CONSTRUCTION USE'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
@@ -90,7 +90,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     path: '/products/shell',
     heroImage: productCategories.find((category) => category.slug === 'shell')!.image,
     section: text('04 / КОКОСОВАЯ СКОРЛУПА', '04 / COCO SHELL'),
-    breadcrumb: text('Главная / Кокосовая скорлупа', 'Main / Coco Shell products'),
+    breadcrumb: text('Продукты из кокосовой скорлупы', 'Coco Shell Products'),
     title: text('Продукты из кокосовой скорлупы', 'Coco Shell Products'),
     intro: text(
       'Продукты из натуральной кокосовой скорлупы для промышленности, фильтрации и производства топлива. Различные форматы и объёмы поставок для бизнеса.',

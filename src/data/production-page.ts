@@ -122,7 +122,7 @@ export type ProductionPageCopy = { readonly [Key in keyof typeof ru]: string };
 const en = {
   title: 'Coconut Product Manufacturing — Seha',
   description:
-    'Manufacturing of Seha coconut products: certified facilities in India, Laurico Nutraceuticals food products, substrates, fiber, shell and supply for the Russian B2B market.',
+    'Manufacturing of Seha coconut products: certified facilities in India, Laurico Nutraceuticals food products, substrates, fibre, shell and supply for the Russian B2B market.',
   skipText: 'Skip to the process',
   pageAriaLabel: 'Breadcrumbs',
   pageLink: 'Home',
@@ -138,11 +138,11 @@ const en = {
   productionBranchesLabel3: 'for different categories',
   productionBranchesText:
     'Seha combines the manufacturing capabilities of Indian partners with clear communication for Russian buyers, distributors and manufacturers.',
-  productionBranchesCardTitle: 'Substrates, fiber and shell',
+  productionBranchesCardTitle: 'Substrates, fibre and shell',
   productionBranchesText2:
     'A facility for the non-food range: coconut raw material preparation, sorting, drying, particle size control, packaging and export shipment.',
   productionBranchesItem: 'coir pith and chips',
-  productionBranchesItem2: 'fiber materials',
+  productionBranchesItem2: 'fibre materials',
   productionBranchesItem3: 'shell products',
   productionBranchesCardTitle2: 'Coconut food product range',
   productionBranchesText3:
@@ -164,7 +164,7 @@ const en = {
   processSectionCardTitle2: 'Raw material preparation and storage',
   processSectionText3:
     'Raw materials are cleaned, sorted and prepared for further processing. For buyers, this reduces the risk of an inconsistent batch.',
-  processSectionAlt2: 'Coconut raw materials: desiccated coconut, coir pith, fiber and shell',
+  processSectionAlt2: 'Coconut raw materials: desiccated coconut, coir pith, fibre and shell',
   processSectionCaption2: 'Storage, sorting and raw material preparation',
   processSectionCardTitle3: 'Laurico food processing',
   processSectionText4:

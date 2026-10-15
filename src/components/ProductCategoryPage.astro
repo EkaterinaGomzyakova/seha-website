@@ -58,7 +58,7 @@ const sizes = '(max-width: 600px) 90vw, (max-width: 1024px) 44vw, 360px';
     <span aria-hidden="true"> / </span>
     <a href={localizedPath('/products', locale)}>{locale === 'en' ? 'Products' : 'Продукты'}</a>
     <span aria-hidden="true"> / </span>
-    <span aria-current="page">{t(page.title)}</span>
+    <span aria-current="page">{t(page.breadcrumb)}</span>
   </nav>
   <main id="main-content" tabindex="-1">
     <section class="product-hero" aria-labelledby="product-title">

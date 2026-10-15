@@ -45,7 +45,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: 'fiber',
-    title: text('Кокосовое волокно', 'Coconut Fiber'),
+    title: text('Кокосовое волокно', 'Coconut Fibre'),
     description: text(
       'Материалы для производства, сельского хозяйства и озеленения.',
       'Materials for manufacturing, agriculture, and landscaping.'
@@ -192,7 +192,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Кокосовый торф',
       'Coco Peat',
       'Натуральный субстрат из очищенного кокосового волокна. Подходит для улучшения влагоёмкости, аэрации и структуры почвосмесей.',
-      'Natural substrate made from cleaned coconut fiber. Suitable for improving moisture retention, aeration, and soil mix structure.',
+      'Natural substrate made from cleaned coconut fibre. Suitable for improving moisture retention, aeration, and soil mix structure.',
       'Coco peat',
       'Organic'
     ],
@@ -242,7 +242,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Кокосовые диски',
       'Coco Discs',
       'Спрессованные диски из кокосового волокна. При увлажнении увеличиваются, образуют натуральный биоразлагаемый субстрат.',
-      'Compressed coconut fiber discs. They expand when moistened and form a natural biodegradable substrate.',
+      'Compressed coconut fibre discs. They expand when moistened and form a natural biodegradable substrate.',
       'Coco Disc',
       'Biodegradable'
     ],
@@ -280,51 +280,63 @@ const rows: Record<ProductCategorySlug, Row[]> = {
   fiber: [
     [
       'coir-fiber-bales',
-      '01',
+      'coir-fiber-bales.png',
       'Тюки кокосового волокна',
-      'Coir Fiber Bales',
-      'Прессованное натуральное кокосовое волокно для промышленной переработки.',
-      'Baled natural coconut fiber for industrial processing.'
+      'Coir Fibre Bales',
+      'Прессованное кокосовое волокно используется для производства матрасов, мебели, канатов и промышленной продукции.',
+      'Processed coconut husk fibres compressed into bales for easy transport. Widely used in mattresses, upholstery, ropes, and industrial products.',
+      'Coir Fibre Bales',
+      'Industrial Use'
     ],
     [
       'bristle-fiber',
-      '02',
+      'bristle-fiber.png',
       'Кокосовая щетина',
-      'Bristle Fiber',
-      'Жёсткое кокосовое волокно для изготовления щёток и других изделий.',
-      'Stiff coconut fiber for brushes and other manufactured products.'
+      'Bristle Fibre',
+      'Высококачественное волокно, полученное из кокосовой шелухи. Используется для производства щёток, ковриков и других изделий.',
+      'High-quality fibre obtained from coconut husks. Used in the production of brushes, mats, and other fibre-based products.',
+      'Bristle Fibre',
+      'High Strength'
     ],
     [
       'machine-twisted-fiber',
-      '03',
+      'machine-twisted-fiber.png',
       'Скрученное волокно',
-      'Machine Twisted Fiber',
-      'Механически скрученное кокосовое волокно для производственных задач.',
-      'Mechanically twisted coconut fiber for manufacturing applications.'
+      'Machine Twisted Fibre',
+      'Кокосовое волокно, скрученное механическим способом. Используется для производства геотекстиля, канатов и промышленных изделий.',
+      'Mechanically twisted coconut fibre. Used in the production of geotextiles, ropes, and various industrial products.',
+      'Machine Twisted Fibre',
+      'Rope Production'
     ],
     [
       'coir-weed-mat',
-      '04',
+      'coir-weed-mat.png',
       'Мульчирующие маты',
       'Coir Weed Mat',
-      'Маты из кокосового волокна для мульчирования и защиты поверхности почвы.',
-      'Coir mats for mulching and protecting soil surfaces.'
+      'Биоразлагаемые маты для сельского хозяйства и ландшафтного дизайна. Сдерживают рост сорняков, пропуская воду и питательные вещества.',
+      'Biodegradable mats for agriculture and landscaping. Help suppress weed growth while allowing water and nutrients to pass through.',
+      'Coir Weed Mat',
+      'Weed Control'
     ],
     [
       'erosion-control-blankets',
-      '05',
+      'erosion-control-blankets.png',
       'Противоэрозионные маты',
       'Erosion Control Blankets',
-      'Кокосовые маты для защиты склонов и грунта от эрозии при озеленении.',
-      'Coir blankets for erosion protection on slopes and landscaped ground.'
+      'Кокосовые маты для защиты почвы от эрозии и укрепления склонов. Используются в строительстве и ландшафтных проектах.',
+      'Coconut fibre mats designed for erosion control and slope stabilization. Used in construction, landscaping, and environmental projects.',
+      'Erosion Control Blankets',
+      'Slope Protection'
     ],
     [
       'coir-geo-textile',
-      '06',
+      'coir-geo-textile.png',
       'Кокосовый геотекстиль',
       'Coir Geotextile',
-      'Сетчатый материал из кокосового волокна для укрепления почвы и озеленения.',
-      'Woven coir material for soil stabilization and landscaping.'
+      'Кокосовая сетка для укрепления почвы и защиты от эрозии. Поддерживает рост растений и сохраняет устойчивость грунта.',
+      'Coconut fibre netting for soil stabilization and erosion control. Supports vegetation growth while helping maintain soil stability.',
+      'Coir Geotextile',
+      'Soil Stabilization'
     ]
   ],
   shell: [

@@ -152,9 +152,9 @@ export type HomePageCopy = { readonly [Key in keyof typeof ru]: string };
 const en = {
   title: 'Seha — Coconut Products for Your Business',
   description:
-    'Organic coconut products from Seha. Food ingredients, growing substrates, coconut fiber and shell. Direct supply from the manufacturer.',
+    'Organic coconut products from Seha. Food ingredients, growing substrates, coconut fibre and shell. Direct supply from the manufacturer.',
   skipText: 'Skip to products',
-  homeHeroAlt: 'White coconut flesh, shell and natural fiber',
+  homeHeroAlt: 'White coconut flesh, shell and natural fibre',
   homeHeroLabel: 'SEHA / NATURAL COCONUT PRODUCTS',
   homeHeroLabel2: 'CATEGORIES FOR B2B PURCHASING',
   homeHeroTitle: 'Coconut',
@@ -168,7 +168,7 @@ const en = {
   homeHeroLine4: 'specifications and volume.',
   homeHeroAriaLabel: 'Go to product categories',
   homeHeroLabel4: 'Food products · Substrates',
-  homeHeroLine5: 'Fiber · Shell',
+  homeHeroLine5: 'Fibre · Shell',
   directionsLabel: '01 / PRODUCTS',
   directionsLabel2: 'Selection by task, volume and requirements',
   directionsHeading: 'Product',
@@ -185,9 +185,9 @@ const en = {
   directionsCardTitle2: 'Coconut substrates',
   directionsText3: 'Coir pith, briquettes, discs and chips',
   directionsLine2: 'for professional horticulture.',
-  directionsAriaLabel3: 'Natural coconut fiber',
+  directionsAriaLabel3: 'Natural coconut fibre',
   directionsLabel6: '03 / FOR NATURAL MATERIALS',
-  directionsCardTitle3: 'Coconut fiber',
+  directionsCardTitle3: 'Coconut fibre',
   directionsText4: 'Materials for manufacturing,',
   directionsLine3: 'agriculture and landscaping.',
   directionsAriaLabel4: 'Coconut shell',
@@ -207,7 +207,7 @@ const en = {
   homeIndustriesAriaLabel4: 'Types of companies and application areas',
   homeIndustriesCardTitle: 'Distributors',
   homeIndustriesText2:
-    'A range for the wholesale channel: food ingredients, substrates, fiber and shell in agreed packaging.',
+    'A range for the wholesale channel: food ingredients, substrates, fibre and shell in agreed packaging.',
   homeIndustriesCardTitle2: 'Retailers and retail chains',
   homeIndustriesText3:
     'We help select products, pack sizes and documents to introduce coconut products into a retail range.',
@@ -231,7 +231,7 @@ const en = {
     'Coconut oils and lipid components for production processes, formulation development and contract manufacturing.',
   homeIndustriesCardTitle9: 'Natural material manufacturers',
   homeIndustriesText10:
-    'Coconut fiber and shell for industrial, agricultural and landscaping products.',
+    'Coconut fibre and shell for industrial, agricultural and landscaping products.',
   homeIndustriesCardTitle10: 'Contract manufacturers',
   homeIndustriesText11:
     'Supply to customer specifications: product, volume, packaging, documents and shipment frequency for different client projects.',
@@ -245,14 +245,14 @@ const en = {
   ingredientMatchLabel5: 'volume',
   ingredientMatchLabel6: 'documents',
   ingredientMatchLabel7: 'Find a product',
-  originSectionAlt: 'Coconut texture: flesh, fiber and shell',
+  originSectionAlt: 'Coconut texture: flesh, fibre and shell',
   originSectionLabel: 'NATURAL ORIGIN.',
   originSectionLine: 'THOUGHTFUL APPLICATION.',
   originSectionLabel2: '04 / FROM RAW MATERIAL TO PRODUCT',
   originSectionHeading: 'Products',
   originSectionLabel3: 'for different tasks',
   originSectionText:
-    'Flesh, fiber and shell have different properties. We turn them into products for different tasks.',
+    'Flesh, fibre and shell have different properties. We turn them into products for different tasks.',
   originSectionCardTitle: 'Raw material preparation',
   originSectionText2: 'Selection and preparation of coconuts for further processing.',
   originSectionCardTitle2: 'Processing',
@@ -269,7 +269,7 @@ const en = {
   qualitySectionLine2: 'before calculating the supply cost.',
   qualitySectionCardTitle: 'Specifications',
   qualitySectionText2:
-    'For substrates: particle size, pH and EC. For food ingredients: composition and quality indicators. For fiber and shell: moisture, cleanliness and format.',
+    'For substrates: particle size, pH and EC. For food ingredients: composition and quality indicators. For fibre and shell: moisture, cleanliness and format.',
   qualitySectionCardTitle2: 'Documents',
   qualitySectionText3:
     'We will clarify the specifications and documents required for the selected product. Certification scope is considered for the specific product.',

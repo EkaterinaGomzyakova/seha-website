@@ -108,12 +108,12 @@ const en = {
   aboutHeroTitle: 'More than coconut.',
   aboutHeroEmphasis: 'A managed supply chain',
   aboutHeroText:
-    'Seha helps Russian companies purchase premium organic coconut products: from food ingredients to substrates, fiber and shell.',
+    'Seha helps Russian companies purchase premium organic coconut products: from food ingredients to substrates, fibre and shell.',
   aboutHeroLink: 'Choose products',
   aboutHeroLink2: 'How manufacturing works',
   aboutHeroLabel3:
     'What matters in purchasing is not grand promises, but origin, specifications, documents and clear communication in the Russian market.',
-  aboutIntroAlt: 'Coconut flesh, fiber and shell',
+  aboutIntroAlt: 'Coconut flesh, fibre and shell',
   aboutIntroCaption: 'Food, agricultural and industrial products from a single raw material.',
   aboutIntroLabel: '01 / WHO WE ARE',
   aboutIntroHeading: 'A Russian entry point',
@@ -125,7 +125,7 @@ const en = {
   aboutNumbersAriaLabel: 'Key facts',
   aboutNumbersLabel: 'years of coconut expertise at the Indian manufacturing base',
   aboutNumbersLabel2: 'region of origin of raw materials and manufacturing',
-  aboutNumbersLabel3: 'categories: food products, substrates, fiber, shell',
+  aboutNumbersLabel3: 'categories: food products, substrates, fibre, shell',
   aboutNumbersLabel4: 'selection to match specifications, volume and supply requirements',
   aboutApproachLabel: '02 / APPROACH',
   aboutApproachLabel2: 'Principles of our commercial work',
@@ -141,7 +141,7 @@ const en = {
     'Price depends on the category, particle size, packaging, volume, exchange rate, logistics and documents. A quotation is prepared for an actual request.',
   aboutApproachCardTitle3: 'The full value of coconut',
   aboutApproachText4:
-    'Flesh, fiber and shell become different products: food ingredients, growing materials and raw materials for industrial applications.',
+    'Flesh, fibre and shell become different products: food ingredients, growing materials and raw materials for industrial applications.',
   aboutApproachCardTitle4: 'Verification matters more than claims',
   aboutApproachText5:
     'B2B customers need batch specifications, documents, certification scope and clear supply terms. These are the points we communicate.',
