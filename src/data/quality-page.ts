@@ -58,7 +58,7 @@ const ru = {
   documentsSectionText5:
     'Номер партии и прослеживаемость от производства до отгрузки помогают согласовать контроль на стороне клиента.',
   siteRoleLabel: 'Роль Сеха',
-  siteRoleHeading: 'Документы производства,',
+  siteRoleHeading: 'Документы\nпроизводства,',
   siteRoleEmphasis: 'коммуникация в России.',
   siteRoleText:
     'Сеха помогает российскому клиенту заранее определить, какие параметры и документы нужны для закупки: тип продукта, объем, упаковка, город доставки, требования к сертификации и формату партии.',
@@ -129,7 +129,7 @@ const en = {
   documentsSectionText5:
     'The batch number and traceability from manufacturing to shipment help agree on quality control at the customer’s end.',
   siteRoleLabel: 'Seha’s role',
-  siteRoleHeading: 'Manufacturing documents,',
+  siteRoleHeading: 'Manufacturing\ndocuments,',
   siteRoleEmphasis: 'communication in Russia.',
   siteRoleText:
     'Seha helps Russian customers determine in advance which parameters and documents they need for purchasing: product type, volume, packaging, delivery city, certification requirements and batch format.',

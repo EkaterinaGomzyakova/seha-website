@@ -5,7 +5,7 @@ export const siteTranslations = {
     home: 'Главная',
     products: 'Продукты',
     production: 'Производство',
-    quality: 'Качество',
+    quality: 'Качество и сертификаты',
     about: 'О компании',
     offer: 'Рассчитать поставку',
     language: 'Переключить язык',

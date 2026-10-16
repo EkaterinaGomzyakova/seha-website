@@ -18,17 +18,19 @@ const ru = {
   aboutIntroText:
     'Сеха — российский центр продаж и сопровождения B2B-поставок кокосовой продукции. Мы переводим производственную экспертизу Индии в понятные коммерческие условия: продукт, объем, упаковка, документы, логистика и сроки.',
   aboutIntroText2:
-    'Производственная база связана с регионом Pollachi в Tamil Nadu — одним из сильных кокосовых кластеров Индии. Для клиента это означает доступ к сырью, переработке и экспортной компетенции без необходимости самостоятельно разбираться в каждой детали внешней поставки.',
+    'Наша индийская производственная база находится в Поллачи, штат Тамилнад — одном из крупнейших кокосовых кластеров страны. Более 40 лет отраслевого опыта и фермерские корни помогают понимать сырьё и задачи заказчиков: от сбора урожая до переработки и готовой продукции.',
   aboutNumbersAriaLabel: 'Ключевые факты',
-  aboutNumbersLabel: 'лет кокосовой экспертизы у индийской производственной базы',
-  aboutNumbersLabel2: 'регион происхождения сырья и производства',
-  aboutNumbersLabel3: 'направления: пищевые продукты, субстраты, волокно, скорлупа',
-  aboutNumbersLabel4: 'подбор под спецификацию, объем и требования поставки',
+  aboutNumbersLabel: 'лет кокосовой экспертизы у\nиндийской производственной базы',
+  aboutNumbersLabel2: 'регион происхождения сырья и\nпроизводства',
+  aboutNumbersValue3: '200+',
+  aboutNumbersLabel3: 'сотрудников на индийской\nпроизводственной базе',
+  aboutNumbersValue4: '25 акров',
+  aboutNumbersLabel4: 'около 10 гектаров территории\nпроизводственных мощностей',
   aboutApproachHeading: 'Принципы',
   aboutApproachLabel3: 'работы',
   aboutApproachCardTitle: 'Происхождение имеет значение',
   aboutApproachText2:
-    'Кокосовые продукты отличаются по сырью, обработке и назначению. Поэтому мы начинаем разговор не с прайс-листа, а с того, какой продукт нужен вашему бизнесу.',
+    'Наши корни — в сельском хозяйстве. Фермерский опыт и контроль от сбора урожая до готовой продукции помогают подбирать сырьё и решения под задачи заказчиков.',
   aboutApproachCardTitle2: 'Спецификация раньше цены',
   aboutApproachText3:
     'Цена зависит от категории, фракции, упаковки, объема, курса, логистики и документов. Коммерческое предложение собирается под реальный запрос.',
@@ -37,7 +39,7 @@ const ru = {
     'Мякоть, волокно и скорлупа становятся разными продуктами: пищевыми ингредиентами, материалами для выращивания и сырьем для промышленного применения.',
   aboutApproachCardTitle4: 'Индивидуальное решение',
   aboutApproachText5:
-    'Для B2B-клиента важны характеристики партии, документы, область сертификации и понятные условия поставки. Именно это мы выводим в коммуникацию.',
+    'Для растениеводства подбираем состав субстрата, pH, EC, фракцию и соотношение волокна и чипсов. Размеры гроубэгов, отверстия и упаковку согласовываем под культуру и систему выращивания.',
   aboutShiftLabel: 'Наш подход',
   aboutShiftHeading: 'От сырья',
   aboutShiftEmphasis: 'к коммерческому решению.',
@@ -59,7 +61,7 @@ const ru = {
   aboutTimelineLabel5: 'Сейчас',
   aboutTimelineCardTitle4: 'Сеха в России',
   aboutTimelineText4:
-    'Российский центр продаж помогает клиентам выбирать продукт и получать предложение под конкретные условия поставки.',
+    'Индийская база имеет опыт поставок в Европу и Китай. Сеха развивает поставки в Россию и помогает согласовать продукт, упаковку и логистику.',
   aboutClientsLabel: 'Для кого',
   aboutClientsHeading: 'Для компаний,',
   aboutClientsLabel2: 'которым важна предсказуемость.',
@@ -99,17 +101,19 @@ const en = {
   aboutIntroText:
     'Seha is a Russian sales and support centre for B2B supply of coconut products. We translate manufacturing expertise from India into clear commercial terms: product, volume, packaging, documents, logistics and lead times.',
   aboutIntroText2:
-    'The manufacturing base is connected to the Pollachi region in Tamil Nadu, one of India’s major coconut clusters. For customers, this means access to raw materials, processing and export expertise without having to work through every detail of overseas supply themselves.',
+    'Our Indian manufacturing base is in Pollachi, Tamil Nadu, one of the country’s largest coconut clusters. More than 40 years of industry experience and our farming roots help us understand raw materials and customer needs, from harvesting to processing and finished products.',
   aboutNumbersAriaLabel: 'Key facts',
   aboutNumbersLabel: 'years of coconut expertise at the Indian manufacturing base',
   aboutNumbersLabel2: 'region of origin of raw materials and manufacturing',
-  aboutNumbersLabel3: 'categories: food products, substrates, fibre, shell',
-  aboutNumbersLabel4: 'selection to match specifications, volume and supply requirements',
+  aboutNumbersValue3: '200+',
+  aboutNumbersLabel3: 'employees at the Indian manufacturing base',
+  aboutNumbersValue4: '25 acres',
+  aboutNumbersLabel4: 'approximately 10 hectares of manufacturing premises',
   aboutApproachHeading: 'How',
   aboutApproachLabel3: 'we work',
   aboutApproachCardTitle: 'Origin matters',
   aboutApproachText2:
-    'Coconut products differ in raw material, processing and application. That is why we start the conversation with the product your business needs, rather than a price list.',
+    'Our roots are in agriculture. Farming experience and control from harvesting to finished products help us select raw materials and solutions for our customers’ needs.',
   aboutApproachCardTitle2: 'Specifications before price',
   aboutApproachText3:
     'Price depends on the category, particle size, packaging, volume, exchange rate, logistics and documents. A quotation is prepared for an actual request.',
@@ -118,7 +122,7 @@ const en = {
     'Flesh, fibre and shell become different products: food ingredients, growing materials and raw materials for industrial applications.',
   aboutApproachCardTitle4: 'A tailored solution',
   aboutApproachText5:
-    'B2B customers need batch specifications, documents, certification scope and clear supply terms. These are the points we communicate.',
+    'For horticulture, we tailor substrate composition, pH, EC, particle size and the fibre-to-chip ratio. Grow bag dimensions, openings and packaging are agreed for the crop and growing system.',
   aboutShiftLabel: 'Our approach',
   aboutShiftHeading: 'From raw material',
   aboutShiftEmphasis: 'to a commercial solution.',
@@ -140,7 +144,7 @@ const en = {
   aboutTimelineLabel5: 'Today',
   aboutTimelineCardTitle4: 'Seha in Russia',
   aboutTimelineText4:
-    'The Russian sales centre helps customers select a product and receive a quotation for specific supply terms.',
+    'The Indian manufacturing base has experience supplying Europe and China. Seha is expanding supply in Russia and helps agree on products, packaging and logistics.',
   aboutClientsLabel: 'Who we serve',
   aboutClientsHeading: 'For companies',
   aboutClientsLabel2: 'that value predictability.',

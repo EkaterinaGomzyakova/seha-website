@@ -24,6 +24,10 @@
 .about-main em {
   font-style: normal;
 }
+.about-main .header-container {
+  min-height: 25px;
+  padding-block: 5px;
+}
 .about-main p {
   color: var(--color-dark-gray);
 }
@@ -108,37 +112,39 @@
 }
 .about-numbers > div {
   border-top: 1px solid var(--color-green-overlay-light);
-  padding-top: 18px;
+  padding-top: 15px;
 }
 .about-numbers b {
   display: block;
   font: 900 48px/0.9 var(--font-sans);
   letter-spacing: -0.04em;
-  margin: 8px 0 30px;
+  margin: 8px 0 20.8px;
 }
 .about-numbers p {
+  white-space: pre-line;
   font: 700 13.1px/1.55 var(--font-sans);
   letter-spacing: 1.181px;
   text-transform: uppercase;
   color: var(--color-green-brand);
 }
 .about-approach {
-  padding-top: 48px;
+  padding-top: 44px;
 }
 .about-principles {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 50px;
+  margin-top: 49.44px;
 }
 .about-principle {
   min-height: 360px;
   border-radius: 8px;
   background: var(--about-panel);
   padding: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  display: grid;
+  grid-template-rows: 16px minmax(0, 1fr) minmax(82.56px, auto);
+  row-gap: 18px;
+  justify-items: start;
 }
 .about-principle--dark {
   background: var(--color-green-brand);
@@ -150,10 +156,14 @@
 }
 .about-principle h3 {
   font: 900 34.4px/1.1 var(--font-sans);
-  margin: auto 0 28px;
-  padding-top: 64px;
+  align-self: end;
+  margin: 0;
+}
+.about-principle:last-child h3 {
+  max-width: 429px;
 }
 .about-principle p {
+  align-self: end;
   font: 500 16px/1.72 var(--font-sans);
 }
 .about-principle--dark > span,
@@ -174,7 +184,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
 }
 .about-shift-copy .header-container {
   color: var(--color-text-on-green);
@@ -215,13 +225,13 @@
   left: -30.93%;
 }
 .about-timeline {
-  padding-bottom: 64px;
+  padding-bottom: 52.8px;
 }
 .about-timeline-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 78px;
+  margin-top: 79px;
 }
 .about-timeline-grid article {
   min-height: 320px;
@@ -246,10 +256,11 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 70px;
-  align-items: end;
+  align-items: start;
+  min-height: 271px;
 }
 .about-clients h2 {
-  margin-top: 34px;
+  margin-top: 52.7px;
   max-width: 610px;
 }
 .about-client-list {
@@ -258,6 +269,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 46.9px;
 }
 .about-client-list > li {
   min-width: 0;
@@ -278,23 +290,26 @@
 }
 .about-cta {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 70px;
-  padding: 80px 100px 70px;
+  grid-template-columns: minmax(0, 801fr) minmax(0, 573fr);
+  gap: 74px;
+  padding: 81.54px 100px 72.46px;
   min-height: 335px;
   border-radius: 22px;
   background: var(--color-yellow-brand);
-  align-items: center;
+  align-items: start;
 }
 .about-cta h2 {
-  margin-top: 34px;
+  margin-top: 44px;
 }
 .about-cta-copy {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 29.54px;
 }
 .about-cta-copy p {
+  min-height: 95.46px;
+  padding-left: 13.17px;
+  padding-top: 9.6px;
   color: var(--color-green-brand);
 }
 .about-cta-copy .button {
@@ -302,6 +317,36 @@
   background: var(--color-green-brand);
 }
 @media (max-width: 1280px) {
+  .about-principle {
+    grid-template-rows: 16px minmax(0, 1fr) minmax(96.32px, auto);
+  }
+  .about-principle h3 {
+    padding-top: 32px;
+  }
+  .about-cta {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  }
+  .about-cta h2 {
+    margin-top: 34px;
+  }
+  .about-cta-copy {
+    gap: 28px;
+  }
+  .about-cta-copy p {
+    min-height: 0;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .about-clients {
+    min-height: 0;
+    align-items: center;
+  }
+  .about-clients h2 {
+    margin-top: 34px;
+  }
+  .about-client-list {
+    margin-top: 0;
+  }
   .about-main {
     gap: 56px;
     padding-bottom: 56px;
@@ -457,6 +502,16 @@
   }
 }
 @media (max-width: 440px) {
+  .about-principle {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 0;
+  }
+  .about-principle h3,
+  .about-principle p {
+    align-self: auto;
+  }
   .about-main {
     gap: 40px;
     padding-bottom: 40px;

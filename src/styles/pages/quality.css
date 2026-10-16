@@ -24,6 +24,10 @@
 .quality-main em {
   font-style: normal;
 }
+.quality-main .header-container {
+  min-height: 25px;
+  padding-block: 5px;
+}
 .quality-main p {
   color: var(--color-dark-gray);
 }
@@ -42,7 +46,7 @@
   min-height: 514px;
   border-radius: 22px;
   background: var(--color-green-brand);
-  padding: 96px clamp(10px, calc(10vw - 118px), 74px) 64px;
+  padding: 96px clamp(10px, calc(10vw - 118px), 74px) 84px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,6 +96,9 @@
 }
 .quality-section-heading > p {
   line-height: 1.75;
+}
+.quality-standards .quality-section-heading > p {
+  font-size: 16px;
 }
 .quality-standards .quality-section-heading {
   display: flex;
@@ -161,7 +168,7 @@
 }
 .quality-proof {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 744fr) minmax(0, 904fr);
   border-radius: 22px;
   overflow: hidden;
   background: var(--quality-panel);
@@ -183,26 +190,27 @@
   top: 0;
 }
 .quality-proof-photo {
-  width: 218.39%;
+  width: 241.87%;
   height: 109.54%;
-  left: -71.02%;
+  left: -78.66%;
   top: -4.18%;
 }
 .quality-proof-copy {
-  padding: 64px 80px 40px;
+  padding: 64px 0 40px 80px;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 34px;
 }
 .quality-proof-list {
-  margin-top: auto;
+  margin-top: 68px;
   border-top: 1px solid #b9c3aa;
   width: 100%;
 }
 .quality-proof-list article {
   display: grid;
   grid-template-columns: 42px minmax(0, 1fr);
+  grid-template-rows: 33.34px minmax(50.66px, auto);
   gap: 18px;
   border-bottom: 1px solid #b9c3aa;
   padding: 20px 0;
@@ -214,14 +222,19 @@
   color: var(--color-dark-gray);
 }
 .quality-proof-list h3 {
+  align-self: start;
   font: 900 21.1px/1.2 var(--font-sans);
 }
 .quality-proof-list p {
   grid-column: 2;
+  max-width: 572px;
   font: 500 15.4px/1.65 var(--font-sans);
 }
 .quality-documents .quality-section-heading {
   min-height: 150px;
+}
+.quality-documents .quality-section-heading > h2 {
+  align-self: center;
 }
 .quality-document-grid {
   display: grid;
@@ -244,12 +257,16 @@
   display: grid;
   grid-template-columns: minmax(0, 1.57fr) minmax(0, 1fr);
   gap: 70px;
-  padding-block: 20px;
+  padding-block: 0 50px;
   align-items: end;
 }
 .quality-role h2 {
   margin-top: 34px;
-  max-width: 650px;
+  max-width: none;
+  white-space: pre-line;
+}
+.quality-role > div:first-child {
+  padding-top: 4px;
 }
 .quality-role-copy {
   display: flex;
@@ -269,23 +286,26 @@
 }
 .quality-cta {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 70px;
-  padding: 80px 100px 70px;
+  grid-template-columns: minmax(0, 801fr) minmax(0, 573fr);
+  gap: 74px;
+  padding: 81.54px 100px 72.46px;
   min-height: 335px;
   border-radius: 22px;
   background: var(--color-yellow-brand);
-  align-items: center;
+  align-items: start;
 }
 .quality-cta h2 {
-  margin-top: 34px;
+  margin-top: 44px;
 }
 .quality-cta-copy {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 29.54px;
 }
 .quality-cta-copy p {
+  min-height: 95.46px;
+  padding-left: 13.17px;
+  padding-top: 9.6px;
   color: var(--color-green-brand);
 }
 .quality-cta-copy .button {
@@ -293,6 +313,29 @@
   background: var(--color-green-brand);
 }
 @media (max-width: 1280px) {
+  .quality-proof {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .quality-proof-list {
+    margin-top: auto;
+  }
+  .quality-cta {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  }
+  .quality-cta h2 {
+    margin-top: 34px;
+  }
+  .quality-cta-copy {
+    gap: 28px;
+  }
+  .quality-cta-copy p {
+    min-height: 0;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .quality-role {
+    padding-block: 20px;
+  }
   .quality-standards .quality-section-heading h2 {
     flex-basis: 600px;
   }
@@ -337,6 +380,7 @@
   }
   .quality-proof-list article {
     grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-rows: auto auto;
     column-gap: 12px;
   }
   .quality-proof-list h3 {
@@ -415,6 +459,10 @@
   .quality-proof-image {
     min-height: 0;
     height: 500px;
+  }
+  .quality-proof-photo {
+    width: 218.39%;
+    left: -71.02%;
   }
   .quality-proof-copy {
     padding: 40px 32px;
