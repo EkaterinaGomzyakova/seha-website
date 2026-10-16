@@ -11,6 +11,195 @@
     "avifQuality": 55
   },
   "images": {
+    "/assets/images/about/coconut.png": {
+      "fingerprint": "1afea54fcfbda89a31604170580578b8c22c3b73288659a4092004b3c2b7af82",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/about/coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 9962
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 6335
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 32766
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 20547
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 61162
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 39455
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 109520
+        },
+        {
+          "src": "/assets/images/generated/about/coconut.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 70780
+        }
+      ]
+    },
+    "/assets/images/about/facility-base.png": {
+      "fingerprint": "a95594a76e59b9c0c5ae452be54c7bf1be8f26007e2812b27318ac41f8a7cdaf",
+      "width": 1942,
+      "height": 809,
+      "variants": [
+        {
+          "src": "/assets/images/generated/about/facility-base.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 133,
+          "bytes": 10064
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 133,
+          "bytes": 5786
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 266,
+          "bytes": 33476
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 266,
+          "bytes": 18728
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 400,
+          "bytes": 68226
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 400,
+          "bytes": 38233
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 600,
+          "bytes": 131686
+        },
+        {
+          "src": "/assets/images/generated/about/facility-base.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 600,
+          "bytes": 76567
+        }
+      ]
+    },
+    "/assets/images/about/facility.png": {
+      "fingerprint": "51c873f6d33bcd02b8aeaf6500dc435725738ce4d392761abe89d260a7afd0c2",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/about/facility.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 9798
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 5596
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 31980
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 18958
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 64044
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 39063
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 123800
+        },
+        {
+          "src": "/assets/images/generated/about/facility.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 79172
+        }
+      ]
+    },
     "/assets/images/common/category-fiber.png": {
       "fingerprint": "babb86d9d62c52ae18c89d367c9e4ff06a1b1cbdea4df74c7452b25dc4fa7766",
       "width": 1254,

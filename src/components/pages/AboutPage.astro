@@ -1,6 +1,9 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
+import HeaderContainer from '../ui/HeaderContainer.astro';
+import Tag from '../ui/Tag.astro';
+import ResponsiveImage from '../ResponsiveImage.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { aboutPageCopy } from '../../data/about-page';
 import type { Locale } from '../../data/translations';
@@ -11,208 +14,179 @@ interface Props {
 }
 const { locale, rootAlias = false } = Astro.props;
 const copy = aboutPageCopy[locale];
-const path = '/about';
-const href = (path: string) =>
-  path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
+const href = (path: string) => (rootAlias ? withBase(path) : localizedPath(path, locale));
+const facts = [
+  ['40+', copy.aboutNumbersLabel],
+  ['Pollachi', copy.aboutNumbersLabel2],
+  ['4', copy.aboutNumbersLabel3],
+  ['B2B', copy.aboutNumbersLabel4]
+];
+const principles = [
+  [copy.aboutApproachCardTitle, copy.aboutApproachText2],
+  [copy.aboutApproachCardTitle2, copy.aboutApproachText3],
+  [copy.aboutApproachCardTitle3, copy.aboutApproachText4],
+  [copy.aboutApproachCardTitle4, copy.aboutApproachText5]
+];
+const milestones = [
+  [copy.aboutTimelineLabel3, copy.aboutTimelineCardTitle, copy.aboutTimelineText],
+  [copy.aboutTimelineLabel4, copy.aboutTimelineCardTitle2, copy.aboutTimelineText2],
+  ['2019', copy.aboutTimelineCardTitle3, copy.aboutTimelineText3],
+  [copy.aboutTimelineLabel5, copy.aboutTimelineCardTitle4, copy.aboutTimelineText4]
+];
+const clients = [
+  copy.aboutClientsLabel3,
+  copy.aboutClientsLabel4,
+  copy.aboutClientsLabel5,
+  copy.aboutClientsLabel6,
+  copy.aboutClientsLabel7,
+  copy.aboutClientsLabel8,
+  copy.aboutClientsLabel9,
+  copy.aboutClientsLabel10
+];
+const photoSizes =
+  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 216px) / 2), calc((100vw - 296px) / 2)';
 ---
 
 <SiteLayout
   locale={locale}
-  path={path}
+  path="/about"
   title={copy.title}
   description={copy.description}
-  bodyClass="home about"
+  bodyClass="about"
   skipText={copy.skipText}
-  skipHref={href('#approach')}
+  skipHref="#approach"
+  image="/assets/images/about/coconut.png"
 >
   <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
     <a href={href('/')}>{copy.pageLink}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{copy.pageLabel}</span>
   </nav>
-  <main>
+  <main id="main-content" class="about-main">
     <section class="about-hero" aria-labelledby="about-title">
-      <div class="hero-topline">
-        <span>{copy.aboutHeroLabel}</span>
-        <span>{copy.aboutHeroLabel2}</span>
-      </div>
-      <div class="about-hero-copy">
-        <h1 id="about-title" class="type-h1">
-          {copy.aboutHeroTitle}
-          <br />
-          <em>{copy.aboutHeroEmphasis}</em>
-        </h1>
-        <p class="type-p">{copy.aboutHeroText}</p>
-        <div class="production-actions">
-          <Button variant="secondary" href={href('/products')}>
-            {copy.aboutHeroLink} <span>↗</span>
-          </Button>
-          <Button variant="tertiary" href={href('/production')}>
-            {copy.aboutHeroLink2}
-          </Button>
-        </div>
-      </div>
-      <div class="about-hero-note">
-        <span>{copy.aboutHeroLabel3}</span>
-      </div>
+      <h1 id="about-title" class="type-h1">
+        {copy.aboutHeroTitle}
+      </h1>
+      <p class="type-p">{copy.aboutHeroText}</p>
     </section>
-    <section class="about-intro">
-      <figure class="about-photo reveal">
-        <img
-          src={withBase('/assets/images/common/home-coconut.webp')}
+    <section class="about-intro" aria-labelledby="about-intro-title">
+      <figure class="about-photo">
+        <ResponsiveImage
+          src="/assets/images/about/coconut.png"
           alt={copy.aboutIntroAlt}
-          width="1536"
-          height="1024"
+          sizes={photoSizes}
           loading="lazy"
+          class="about-photo__image"
         />
         <figcaption>{copy.aboutIntroCaption}</figcaption>
       </figure>
       <div class="about-intro-copy">
-        <span class="section-label reveal">{copy.aboutIntroLabel}</span>
-        <h2 class="reveal type-h2">
+        <h2 id="about-intro-title" class="about-display-title">
           {copy.aboutIntroHeading}
           <br />
           <span>{copy.aboutIntroLabel2}</span>
         </h2>
-        <p class="reveal type-p">{copy.aboutIntroText}</p>
-        <p class="reveal type-p">{copy.aboutIntroText2}</p>
+        <p>{copy.aboutIntroText}</p>
+        <p>{copy.aboutIntroText2}</p>
       </div>
     </section>
     <section class="about-numbers" aria-label={copy.aboutNumbersAriaLabel}>
-      <div class="reveal">
-        <b>40+</b>
-        <span>{copy.aboutNumbersLabel}</span>
-      </div>
-      <div class="reveal">
-        <b>Pollachi</b>
-        <span>{copy.aboutNumbersLabel2}</span>
-      </div>
-      <div class="reveal">
-        <b>4</b>
-        <span>{copy.aboutNumbersLabel3}</span>
-      </div>
-      <div class="reveal">
-        <b>B2B</b>
-        <span>{copy.aboutNumbersLabel4}</span>
-      </div>
+      {facts.map(([value, text]) => (
+        <div>
+          <b>{value}</b>
+          <p>{text}</p>
+        </div>
+      ))}
     </section>
-    <section class="home-section about-approach" id="approach">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.aboutApproachLabel}</span>
-        <span class="section-note">{copy.aboutApproachLabel2}</span>
-      </div>
-      <div class="section-heading reveal">
-        <h2 class="type-h2">
-          {copy.aboutApproachHeading}
-          <br />
-          <span>{copy.aboutApproachLabel3}</span>
-        </h2>
-        <p class="type-p">{copy.aboutApproachText}</p>
-      </div>
+    <section class="about-approach about-inset" id="approach" aria-labelledby="approach-title">
+      <h2 id="approach-title" class="type-h2">
+        {copy.aboutApproachHeading}
+        <br />
+        <span>{copy.aboutApproachLabel3}</span>
+      </h2>
       <div class="about-principles">
-        <article class="reveal">
-          <span>01</span>
-          <h3 class="type-h3">{copy.aboutApproachCardTitle}</h3>
-          <p class="type-p">{copy.aboutApproachText2}</p>
-        </article>
-        <article class="reveal">
-          <span>02</span>
-          <h3 class="type-h3">{copy.aboutApproachCardTitle2}</h3>
-          <p class="type-p">{copy.aboutApproachText3}</p>
-        </article>
-        <article class="reveal">
-          <span>03</span>
-          <h3 class="type-h3">{copy.aboutApproachCardTitle3}</h3>
-          <p class="type-p">{copy.aboutApproachText4}</p>
-        </article>
-        <article class="reveal">
-          <span>04</span>
-          <h3 class="type-h3">{copy.aboutApproachCardTitle4}</h3>
-          <p class="type-p">{copy.aboutApproachText5}</p>
-        </article>
+        {principles.map(([title, text], index) => (
+          <article
+            class:list={[
+              'about-principle',
+              (index === 1 || index === 2) && 'about-principle--dark'
+            ]}
+          >
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
       </div>
     </section>
-    <section class="about-shift">
+    <section class="about-shift" aria-labelledby="shift-title">
       <div class="about-shift-copy">
-        <span class="section-label reveal">{copy.aboutShiftLabel}</span>
-        <h2 class="reveal type-h2">
+        <HeaderContainer>{copy.aboutShiftLabel}</HeaderContainer>
+        <h2 id="shift-title" class="type-h2">
           {copy.aboutShiftHeading}
           <br />
           <em>{copy.aboutShiftEmphasis}</em>
         </h2>
-        <p class="reveal type-p">{copy.aboutShiftText}</p>
+        <p>{copy.aboutShiftText}</p>
       </div>
-      <figure class="about-shift-image reveal">
-        <img
-          src={withBase('/assets/images/common/production-hero.webp')}
-          alt={copy.aboutShiftAlt}
-          width="1536"
-          height="1024"
+      <figure class="about-shift-image">
+        <ResponsiveImage
+          src="/assets/images/about/facility-base.png"
+          alt=""
+          sizes={photoSizes}
           loading="lazy"
+          class="about-shift-image__base"
         />
-        <figcaption>{copy.aboutShiftCaption}</figcaption>
+        <ResponsiveImage
+          src="/assets/images/about/facility.png"
+          alt={copy.aboutShiftAlt}
+          sizes={photoSizes}
+          loading="lazy"
+          class="about-shift-image__photo"
+        />
       </figure>
     </section>
-    <section class="home-section about-timeline">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.aboutTimelineLabel}</span>
-        <span class="section-note">{copy.aboutTimelineLabel2}</span>
-      </div>
-      <div class="timeline-grid">
-        <article class="reveal">
-          <span>{copy.aboutTimelineLabel3}</span>
-          <h3 class="type-h3">{copy.aboutTimelineCardTitle}</h3>
-          <p class="type-p">{copy.aboutTimelineText}</p>
-        </article>
-        <article class="reveal">
-          <span>{copy.aboutTimelineLabel4}</span>
-          <h3 class="type-h3">{copy.aboutTimelineCardTitle2}</h3>
-          <p class="type-p">{copy.aboutTimelineText2}</p>
-        </article>
-        <article class="reveal">
-          <span>2019</span>
-          <h3 class="type-h3">{copy.aboutTimelineCardTitle3}</h3>
-          <p class="type-p">{copy.aboutTimelineText3}</p>
-        </article>
-        <article class="reveal">
-          <span>{copy.aboutTimelineLabel5}</span>
-          <h3 class="type-h3">{copy.aboutTimelineCardTitle4}</h3>
-          <p class="type-p">{copy.aboutTimelineText4}</p>
-        </article>
+    <section class="about-timeline about-inset" aria-label={copy.aboutTimelineLabel}>
+      <HeaderContainer tone="green">{copy.aboutTimelineLabel}</HeaderContainer>
+      <div class="about-timeline-grid">
+        {milestones.map(([year, title, text]) => (
+          <article>
+            <span>{year}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
       </div>
     </section>
-    <section class="about-clients">
+    <section class="about-clients about-inset" aria-labelledby="clients-title">
       <div>
-        <span class="section-label reveal">{copy.aboutClientsLabel}</span>
-        <h2 class="reveal type-h2">
+        <HeaderContainer tone="green">{copy.aboutClientsLabel}</HeaderContainer>
+        <h2 id="clients-title" class="type-h2">
           {copy.aboutClientsHeading}
           <br />
           <span>{copy.aboutClientsLabel2}</span>
         </h2>
       </div>
-      <div class="client-list reveal">
-        <span>{copy.aboutClientsLabel3}</span>
-        <span>{copy.aboutClientsLabel4}</span>
-        <span>{copy.aboutClientsLabel5}</span>
-        <span>{copy.aboutClientsLabel6}</span>
-        <span>{copy.aboutClientsLabel7}</span>
-        <span>{copy.aboutClientsLabel8}</span>
-        <span>{copy.aboutClientsLabel9}</span>
-        <span>{copy.aboutClientsLabel10}</span>
-      </div>
+      <ul class="about-client-list">
+        {clients.map((client) => (
+          <li>
+            <Tag class="about-client-tag">{client}</Tag>
+          </li>
+        ))}
+      </ul>
     </section>
-    <section class="cert-preview about-cta">
-      <div class="reveal">
-        <span class="section-label">{copy.certPreviewLabel}</span>
-        <h2 class="type-h2">
+    <section class="about-cta" aria-labelledby="about-cta-title">
+      <div>
+        <HeaderContainer tone="green">{copy.certPreviewLabel}</HeaderContainer>
+        <h2 id="about-cta-title" class="type-h2">
           {copy.certPreviewHeading}
           <br />
           <span>{copy.certPreviewLabel2}</span>
         </h2>
       </div>
-      <div class="cert-copy reveal">
+      <div class="about-cta-copy">
         <p class="type-p">{copy.certPreviewText}</p>
-        <Button variant="tertiary" href={href('#contacts')}>
+        <Button variant="primary" href="#contacts">
           {copy.certPreviewLink}
         </Button>
       </div>
