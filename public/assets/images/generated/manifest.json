@@ -2097,6 +2097,762 @@
         }
       ]
     },
+    "/assets/images/production/laurico-facility.png": {
+      "fingerprint": "0454878f97c0de8e99fd4d048de686494dfc7ab03c7905055a21b98d1f3314ae",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 11632
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 6651
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 33978
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 20182
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 60950
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 37743
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 106120
+        },
+        {
+          "src": "/assets/images/generated/production/laurico-facility.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 66271
+        }
+      ]
+    },
+    "/assets/images/production/manufacturing-hero.png": {
+      "fingerprint": "a95594a76e59b9c0c5ae452be54c7bf1be8f26007e2812b27318ac41f8a7cdaf",
+      "width": 1942,
+      "height": 809,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 133,
+          "bytes": 10064
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 133,
+          "bytes": 5786
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 266,
+          "bytes": 33476
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 266,
+          "bytes": 18728
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 400,
+          "bytes": 68226
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 400,
+          "bytes": 38233
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 600,
+          "bytes": 131686
+        },
+        {
+          "src": "/assets/images/generated/production/manufacturing-hero.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 600,
+          "bytes": 76567
+        }
+      ]
+    },
+    "/assets/images/production/packaging-facility.png": {
+      "fingerprint": "bf7a3548a29bf07d4cf94781468c988d6ea44e0037af74c62fbf2d4da3b983be",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 9876
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 6064
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 29344
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 18496
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 55698
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 35928
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 101432
+        },
+        {
+          "src": "/assets/images/generated/production/packaging-facility.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 67045
+        }
+      ]
+    },
+    "/assets/images/production/process-food-base.png": {
+      "fingerprint": "73b37fc57d62f52643b220552440395fc5bb0956e2dfa68266a524635934cd5e",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 17330
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 9304
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 57332
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 31491
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 111132
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 61506
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 209926
+        },
+        {
+          "src": "/assets/images/generated/production/process-food-base.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 115345
+        }
+      ]
+    },
+    "/assets/images/production/process-food.png": {
+      "fingerprint": "19bcbf76b279d3529ee68d5e6bf9ef6a2b00c4fd346a69f7347a046ecbe3a9ce",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-food.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 9884
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 6132
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 29522
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 18354
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 54366
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 33894
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 95534
+        },
+        {
+          "src": "/assets/images/generated/production/process-food.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 62496
+        }
+      ]
+    },
+    "/assets/images/production/process-fractionation.png": {
+      "fingerprint": "912e87aae61510850d409efe8c435b9411c400e81f79e5da339e2993e2df71de",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 15842
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 8570
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 51318
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 28176
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 96774
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 53743
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 177856
+        },
+        {
+          "src": "/assets/images/generated/production/process-fractionation.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 99647
+        }
+      ]
+    },
+    "/assets/images/production/process-packing-base.png": {
+      "fingerprint": "2f7446b87ceb858b958729180e056e211e66df69faf6cdc63c787bde7ab047d6",
+      "width": 1672,
+      "height": 941,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 15350
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 8132
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 44524
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 24623
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 77726
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 47227
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 132290
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing-base.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 85319
+        }
+      ]
+    },
+    "/assets/images/production/process-packing.png": {
+      "fingerprint": "8fc9b95b829185518f758c805710e6021ec12430f5d8d8650eec5ccbabfe0d28",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-packing.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 6738
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 4549
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 18508
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 12796
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 33628
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 23078
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 59128
+        },
+        {
+          "src": "/assets/images/generated/production/process-packing.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 40105
+        }
+      ]
+    },
+    "/assets/images/production/process-raw-materials.png": {
+      "fingerprint": "56a0545e9523966498da808d5de82d65e9fe046df2ea48f10d1f4b9912f58075",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 10212
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 5814
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 33292
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 19578
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 66346
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 40349
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 129396
+        },
+        {
+          "src": "/assets/images/generated/production/process-raw-materials.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 82254
+        }
+      ]
+    },
+    "/assets/images/production/process-shipment.png": {
+      "fingerprint": "bf69a5954f0cf7c9d70e7aa127a681cd05d4fd7204f130109b2505fb5ba1535b",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 11518
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 6589
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 35202
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 21054
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 64862
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 40585
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 120540
+        },
+        {
+          "src": "/assets/images/generated/production/process-shipment.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 75785
+        }
+      ]
+    },
+    "/assets/images/production/process-storage-base.png": {
+      "fingerprint": "7ef960764e4d262427245102532cd2c02546574d15262ad3c0f82c895e00b20e",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 20268
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 10732
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 71384
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 38885
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 148600
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 81488
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 286336
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage-base.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 161624
+        }
+      ]
+    },
+    "/assets/images/production/process-storage.png": {
+      "fingerprint": "5fbefac6b40d329de64b366c8c5ce90c0aa7232f817b0216d70cde7d0c0f611b",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/production/process-storage.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 12756
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 7235
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 38012
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 22358
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 70554
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 42828
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 124282
+        },
+        {
+          "src": "/assets/images/generated/production/process-storage.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 79022
+        }
+      ]
+    },
     "/assets/images/products/coconut-products.png": {
       "fingerprint": "ca535edbe2854302688d3c7e82406eb0ab95eead8fb74fd7e535de07a10b46a0",
       "width": 2171,

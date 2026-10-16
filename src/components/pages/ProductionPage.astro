@@ -1,320 +1,311 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
+import ResponsiveImage from '../ResponsiveImage.astro';
+import HeaderContainer from '../ui/HeaderContainer.astro';
 import { withBase, localizedPath } from '../../lib/paths';
+import { bindShortWords } from '../../lib/typography';
 import { productionPageCopy } from '../../data/production-page';
 import type { Locale } from '../../data/translations';
-
 interface Props {
   locale: Locale;
   rootAlias?: boolean;
 }
 const { locale, rootAlias = false } = Astro.props;
 const copy = productionPageCopy[locale];
-const path = '/production';
 const href = (path: string) =>
   path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
+const text = (value: string) => bindShortWords(value, locale);
+const image = (name: string) => '/assets/images/production/' + name + '.png';
+const sizes =
+  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc(100vw - 192px), calc(100vw - 272px)';
+const stepSizes =
+  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 128px), (max-width: 1280px) calc((100vw - 280px) / 2), 514px';
+const steps = [
+  {
+    title: copy.processSectionCardTitle,
+    description: copy.processSectionText2,
+    alt: copy.processSectionAlt,
+    caption: copy.processSectionCaption,
+    base: 'manufacturing-hero',
+    photo: 'process-raw-materials'
+  },
+  {
+    title: copy.processSectionCardTitle2,
+    description: copy.processSectionText3,
+    alt: copy.processSectionAlt2,
+    caption: copy.processSectionCaption2,
+    base: 'process-storage-base',
+    photo: 'process-storage'
+  },
+  {
+    title: copy.processSectionCardTitle3,
+    description: copy.processSectionText4,
+    alt: copy.processSectionAlt3,
+    caption: copy.processSectionCaption3,
+    base: 'process-food-base',
+    photo: 'process-food'
+  },
+  {
+    title: copy.processSectionCardTitle4,
+    description: copy.processSectionText5,
+    alt: copy.processSectionAlt4,
+    caption: copy.processSectionCaption4,
+    base: 'process-food-base',
+    photo: 'process-fractionation'
+  },
+  {
+    title: copy.processSectionCardTitle5,
+    description: copy.processSectionText6,
+    alt: copy.processSectionAlt5,
+    caption: copy.processSectionCaption5,
+    base: 'process-packing-base',
+    photo: 'process-packing'
+  },
+  {
+    title: copy.processSectionCardTitle6,
+    description: copy.processSectionText7,
+    alt: copy.processSectionAlt6,
+    caption: copy.processSectionCaption6,
+    base: 'process-packing-base',
+    photo: 'process-shipment'
+  }
+];
+const units = [
+  { title: copy.facilityShowcaseTerm, description: copy.facilityShowcaseLabel3 },
+  { title: copy.facilityShowcaseTerm2, description: copy.facilityShowcaseLabel4 },
+  { title: copy.facilityShowcaseTerm3, description: copy.facilityShowcaseLabel5 },
+  { title: copy.facilityShowcaseTerm4, description: copy.facilityShowcaseLabel6 }
+];
+const assurance = [
+  { title: copy.assuranceSectionCardTitle, description: copy.assuranceSectionText2 },
+  { title: copy.assuranceSectionCardTitle2, description: copy.assuranceSectionText3 },
+  { title: copy.assuranceSectionCardTitle3, description: copy.assuranceSectionText4 }
+];
 ---
 
 <SiteLayout
   locale={locale}
-  path={path}
+  path="/production/"
   title={copy.title}
   description={copy.description}
-  bodyClass="home production"
+  image={image('manufacturing-hero')}
+  bodyClass="production"
   skipText={copy.skipText}
-  skipHref={href('#process')}
+  skipHref="#process"
 >
   <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
     <a href={href('/')}>{copy.pageLink}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{copy.pageLabel}</span>
   </nav>
-  <main>
+  <main class="production-main">
     <section class="production-hero" aria-labelledby="production-title">
-      <img
-        src={withBase('/assets/images/common/production-hero.webp')}
+      <ResponsiveImage
+        src={image('manufacturing-hero')}
+        class="production-hero__photo"
         alt={copy.productionHeroAlt}
-        width="2048"
-        height="1024"
+        sizes={sizes}
+        loading="eager"
         fetchpriority="high"
       />
-      <div class="production-hero-wash"></div>
+      <div class="production-hero-wash" aria-hidden="true"></div>
       <div class="production-hero-copy">
         <h1 id="production-title" class="type-h1">
           {copy.productionHeroTitle}
           <br />
           <em>{copy.productionHeroEmphasis}</em>
         </h1>
-        <p class="type-p">{copy.productionHeroText}</p>
+        <p class="type-p">{text(copy.productionHeroText)}</p>
       </div>
     </section>
-    <section class="home-section production-branches" aria-labelledby="branches-title">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.productionBranchesLabel}</span>
-        <span class="section-note">{copy.productionBranchesLabel2}</span>
-      </div>
-      <div class="section-heading reveal">
-        <h2 id="branches-title" class="type-h2">
-          {copy.productionBranchesHeading}
-          <br />
-          <span>{copy.productionBranchesLabel3}</span>
-        </h2>
-        <p class="type-p">{copy.productionBranchesText}</p>
-      </div>
+    <section class="production-branches" aria-labelledby="branches-title">
+      <h2 id="branches-title" class="type-h2">
+        {copy.productionBranchesHeading}
+        <br />
+        <span>{copy.productionBranchesLabel3}</span>
+      </h2>
       <div class="branch-grid">
-        <article class="branch-card reveal">
+        <article class="branch-card">
           <span>NM COCOS</span>
-          <h3 class="type-h3">{copy.productionBranchesCardTitle}</h3>
-          <p class="type-p">{copy.productionBranchesText2}</p>
+          <h3>{copy.productionBranchesCardTitle}</h3>
+          <p>{text(copy.productionBranchesText2)}</p>
           <ul>
-            <li>{copy.productionBranchesItem}</li>
-            <li>{copy.productionBranchesItem2}</li>
-            <li>{copy.productionBranchesItem3}</li>
+            {[
+              copy.productionBranchesItem,
+              copy.productionBranchesItem2,
+              copy.productionBranchesItem3
+            ].map((label) => (
+              <li>{text(label)}</li>
+            ))}
           </ul>
         </article>
-        <article class="branch-card branch-card-food reveal">
+        <article class="branch-card branch-card-food">
           <span>LAURICO NUTRACEUTICALS</span>
-          <h3 class="type-h3">{copy.productionBranchesCardTitle2}</h3>
-          <p class="type-p">{copy.productionBranchesText3}</p>
+          <h3>{copy.productionBranchesCardTitle2}</h3>
+          <p>{text(copy.productionBranchesText3)}</p>
           <ul>
-            <li>{copy.productionBranchesItem4}</li>
-            <li>{copy.productionBranchesItem5}</li>
-            <li>{copy.productionBranchesItem6}</li>
+            {[
+              copy.productionBranchesItem4,
+              copy.productionBranchesItem5,
+              copy.productionBranchesItem6
+            ].map((label) => (
+              <li>{text(label)}</li>
+            ))}
           </ul>
         </article>
       </div>
     </section>
-    <section class="process-section" id="process">
+    <section class="process-section" id="process" aria-labelledby="process-title">
       <div class="process-sticky">
-        <span class="section-label reveal">{copy.processSectionLabel}</span>
-        <h2 class="reveal type-h2">
+        <HeaderContainer tone="green">{copy.processSectionLabel}</HeaderContainer>
+        <h2 id="process-title">
           {copy.processSectionHeading}
           <br />
           {copy.processSectionLine}
           <br />
           <em>{copy.processSectionEmphasis}</em>
         </h2>
-        <p class="reveal type-p">{copy.processSectionText}</p>
+        <p>{text(copy.processSectionText)}</p>
       </div>
       <div class="process-list">
-        <article class="process-item reveal">
-          <span>01</span>
-          <div>
-            <h3 class="type-h3">{copy.processSectionCardTitle}</h3>
-            <p class="type-p">{copy.processSectionText2}</p>
-            <figure class="process-media">
-              <img
-                src={withBase('/assets/images/common/production-hero.webp')}
-                alt={copy.processSectionAlt}
-                width="2048"
-                height="1024"
-                loading="lazy"
-              />
-              <figcaption>{copy.processSectionCaption}</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="process-item reveal">
-          <span>02</span>
-          <div>
-            <h3 class="type-h3">{copy.processSectionCardTitle2}</h3>
-            <p class="type-p">{copy.processSectionText3}</p>
-            <figure class="process-media">
-              <img
-                src={withBase('/assets/images/common/materials.webp')}
-                alt={copy.processSectionAlt2}
-                width="1536"
-                height="1024"
-                loading="lazy"
-              />
-              <figcaption>{copy.processSectionCaption2}</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="process-item reveal">
-          <span>03</span>
-          <div>
-            <h3 class="type-h3">{copy.processSectionCardTitle3}</h3>
-            <p class="type-p">{copy.processSectionText4}</p>
-            <figure class="process-media">
-              <img
-                src={withBase('/assets/images/common/production-processing.webp')}
-                alt={copy.processSectionAlt3}
-                width="1536"
-                height="1024"
-                loading="lazy"
-              />
-              <figcaption>{copy.processSectionCaption3}</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="process-item reveal">
-          <span>04</span>
-          <div>
-            <h3 class="type-h3">{copy.processSectionCardTitle4}</h3>
-            <p class="type-p">{copy.processSectionText5}</p>
-            <figure class="process-media">
-              <img
-                src={withBase('/assets/images/common/production-processing.webp')}
-                alt={copy.processSectionAlt4}
-                width="1536"
-                height="1024"
-                loading="lazy"
-              />
-              <figcaption>{copy.processSectionCaption4}</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="process-item reveal">
-          <span>05</span>
-          <div>
-            <h3 class="type-h3">{copy.processSectionCardTitle5}</h3>
-            <p class="type-p">{copy.processSectionText6}</p>
-            <figure class="process-media">
-              <img
-                src={withBase('/assets/images/common/production-packing.webp')}
-                alt={copy.processSectionAlt5}
-                width="1680"
-                height="943"
-                loading="lazy"
-              />
-              <figcaption>{copy.processSectionCaption5}</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="process-item reveal">
-          <span>06</span>
-          <div>
-            <h3 class="type-h3">{copy.processSectionCardTitle6}</h3>
-            <p class="type-p">{copy.processSectionText7}</p>
-            <figure class="process-media">
-              <img
-                src={withBase('/assets/images/common/production-packing.webp')}
-                alt={copy.processSectionAlt6}
-                width="1680"
-                height="943"
-                loading="lazy"
-              />
-              <figcaption>{copy.processSectionCaption6}</figcaption>
-            </figure>
-          </div>
-        </article>
+        {steps.map((step, index) => (
+          <article class="process-item">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{text(step.description)}</p>
+              <figure class:list={['process-media', 'process-media--' + (index + 1)]}>
+                <ResponsiveImage
+                  src={image(step.base)}
+                  class="process-media__base"
+                  alt=""
+                  sizes={stepSizes}
+                  loading="lazy"
+                />
+                <ResponsiveImage
+                  src={image(step.photo)}
+                  class="process-media__photo"
+                  alt={step.alt}
+                  sizes={stepSizes}
+                  loading="lazy"
+                />
+                <figcaption>{step.caption}</figcaption>
+              </figure>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
-    <section class="facility-showcase">
-      <div class="facility-image reveal">
-        <img
-          src={withBase('/assets/images/common/production-processing.webp')}
+    <section class="facility-showcase" aria-labelledby="facility-title">
+      <div class="facility-image">
+        <ResponsiveImage
+          src={image('process-food-base')}
+          class="facility-image__base"
+          alt=""
+          sizes={sizes}
+          loading="lazy"
+        />
+        <ResponsiveImage
+          src={image('laurico-facility')}
+          class="facility-image__photo"
           alt={copy.facilityShowcaseAlt}
-          width="1536"
-          height="1024"
+          sizes="(max-width: 800px) 180vw, 110vw"
           loading="lazy"
         />
       </div>
       <div class="facility-copy">
-        <span class="section-label reveal">{copy.facilityShowcaseLabel}</span>
-        <h2 class="reveal type-h2">
+        <HeaderContainer>{copy.facilityShowcaseLabel}</HeaderContainer>
+        <h2 id="facility-title" class="type-h2">
           {copy.facilityShowcaseHeading}
           <br />
           <span>{copy.facilityShowcaseLabel2}</span>
         </h2>
-        <p class="reveal type-p">{copy.facilityShowcaseText}</p>
+        <p>{text(copy.facilityShowcaseText)}</p>
         <div class="facility-units">
-          <div class="reveal">
-            <b>{copy.facilityShowcaseTerm}</b>
-            <span>{copy.facilityShowcaseLabel3}</span>
-          </div>
-          <div class="reveal">
-            <b>{copy.facilityShowcaseTerm2}</b>
-            <span>{copy.facilityShowcaseLabel4}</span>
-          </div>
-          <div class="reveal">
-            <b>{copy.facilityShowcaseTerm3}</b>
-            <span>{copy.facilityShowcaseLabel5}</span>
-          </div>
-          <div class="reveal">
-            <b>{copy.facilityShowcaseTerm4}</b>
-            <span>{copy.facilityShowcaseLabel6}</span>
-          </div>
+          {units.map((unit) => (
+            <div>
+              <h3>{unit.title}</h3>
+              <p>{text(unit.description)}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
-    <section class="packing-band">
-      <img
-        src={withBase('/assets/images/common/production-packing.webp')}
-        alt={copy.packingBandAlt}
-        width="1680"
-        height="943"
+    <section class="packing-band" aria-label={copy.packingBandLabel}>
+      <ResponsiveImage
+        src={image('process-packing-base')}
+        class="packing-band__base"
+        alt=""
+        sizes={sizes}
         loading="lazy"
       />
-      <div>
-        <span class="section-label reveal">{copy.packingBandLabel}</span>
-        <p class="reveal type-p">{copy.packingBandText}</p>
+      <ResponsiveImage
+        src={image('packaging-facility')}
+        class="packing-band__photo"
+        alt={copy.packingBandAlt}
+        sizes={sizes}
+        loading="lazy"
+      />
+      <div class="packing-band__copy">
+        <span>{copy.packingBandLabel}</span>
+        <p>{text(copy.packingBandText)}</p>
       </div>
     </section>
-    <section class="home-section assurance-section">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.assuranceSectionLabel}</span>
-        <span class="section-note">{copy.assuranceSectionLabel2}</span>
-      </div>
-      <div class="section-heading reveal">
-        <h2 class="type-h2">
+    <section class="assurance-section" aria-labelledby="assurance-title">
+      <div class="production-section-heading">
+        <h2 id="assurance-title" class="type-h2">
           {copy.assuranceSectionHeading}
           <br />
           <span>{copy.assuranceSectionLabel3}</span>
         </h2>
-        <p class="type-p">{copy.assuranceSectionText}</p>
+        <p>{text(copy.assuranceSectionText)}</p>
       </div>
-      <div class="quality-grid assurance-grid">
-        <article class="reveal">
-          <span class="quality-index">01</span>
-          <h3 class="type-h3">{copy.assuranceSectionCardTitle}</h3>
-          <p class="type-p">{copy.assuranceSectionText2}</p>
-        </article>
-        <article class="reveal">
-          <span class="quality-index">02</span>
-          <h3 class="type-h3">{copy.assuranceSectionCardTitle2}</h3>
-          <p class="type-p">{copy.assuranceSectionText3}</p>
-        </article>
-        <article class="reveal">
-          <span class="quality-index">03</span>
-          <h3 class="type-h3">{copy.assuranceSectionCardTitle3}</h3>
-          <p class="type-p">{copy.assuranceSectionText4}</p>
-        </article>
+      <div class="assurance-grid">
+        {assurance.map((item, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.title}</h3>
+            <p>{text(item.description)}</p>
+          </article>
+        ))}
       </div>
     </section>
-    <section class="russia-section">
-      <div class="russia-copy reveal">
-        <span class="section-label">{copy.russiaSectionLabel}</span>
-        <h2 class="type-h2">
+    <section class="russia-section" aria-labelledby="russia-title">
+      <div class="russia-copy">
+        <HeaderContainer tone="green">{copy.russiaSectionLabel}</HeaderContainer>
+        <h2 id="russia-title" class="type-h2">
           {copy.russiaSectionHeading}
           <br />
           <em>{copy.russiaSectionEmphasis}</em>
         </h2>
       </div>
       <div class="russia-points">
-        <p class="reveal type-p">{copy.russiaSectionText}</p>
-        <div class="russia-list reveal">
-          <span>{copy.russiaSectionLabel2}</span>
-          <span>{copy.russiaSectionLabel3}</span>
-          <span>{copy.russiaSectionLabel4}</span>
-          <span>{copy.russiaSectionLabel5}</span>
-        </div>
+        <p class="type-p">{text(copy.russiaSectionText)}</p>
+        <ul class="russia-list">
+          {[
+            copy.russiaSectionLabel2,
+            copy.russiaSectionLabel3,
+            copy.russiaSectionLabel4,
+            copy.russiaSectionLabel5
+          ].map((label) => (
+            <li>{text(label)}</li>
+          ))}
+        </ul>
       </div>
     </section>
-    <section class="cert-preview">
-      <div class="reveal">
-        <span class="section-label">{copy.certPreviewLabel}</span>
-        <h2 class="type-h2">
+    <section class="cert-preview" aria-labelledby="cert-title">
+      <div>
+        <HeaderContainer tone="green">{copy.certPreviewLabel}</HeaderContainer>
+        <h2 id="cert-title" class="type-h2">
           {copy.certPreviewHeading}
           <br />
           <span>{copy.certPreviewLabel2}</span>
         </h2>
       </div>
-      <div class="cert-copy reveal">
-        <p class="type-p">{copy.certPreviewText}</p>
-        <Button variant="tertiary" href={href('/quality')}>
+      <div class="cert-copy">
+        <p class="type-p">{text(copy.certPreviewText)}</p>
+        <Button class="production-quality-action" href={href('/quality/')}>
           {copy.certPreviewLink}
         </Button>
       </div>

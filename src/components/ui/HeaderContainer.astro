@@ -1,0 +1,10 @@
+---
+interface Props {
+  tone?: 'green' | 'gray';
+}
+const { tone = 'gray' } = Astro.props;
+---
+
+<span class:list={['header-container', `header-container--${tone}`]}>
+  <slot />
+</span>
