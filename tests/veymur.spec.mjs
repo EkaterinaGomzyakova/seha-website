@@ -133,8 +133,7 @@ for (const locale of ['ru', 'en']) {
     await page.locator(`.products-list a[href="${path}"]`).click();
     await expect(page.locator('.product-item')).toHaveCount(5);
     await page.goto(`${base}/${locale}/products/food/`);
-    await page.locator(`.product-hero a[href="${path}"]`).click();
-    await expect(page.locator('.product-item')).toHaveCount(5);
+    await expect(page.locator('.product-hero .button')).toHaveCount(0);
     await context.close();
   });
   test(`veymur ${locale} mobile menu opens and closes`, async ({ page }) => {

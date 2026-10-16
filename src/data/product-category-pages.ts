@@ -23,7 +23,6 @@ export interface ProductCategoryPageDefinition {
   listTitle: LocalizedValue;
   cta: LocalizedValue;
   items: ProductPageItem[];
-  relatedRange?: { path: string; label: LocalizedValue };
 }
 
 const text = (ru: string, en: string): LocalizedValue => ({ ru, en });
@@ -44,11 +43,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     listLabel: text('для пищевого производства', 'for food manufacturing'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
-    items: productsForCategory('food'),
-    relatedRange: {
-      path: '/products/veymur',
-      label: text('Розничная линейка Veymur', 'Veymur Retail Range')
-    }
+    items: productsForCategory('food')
   },
   substrates: {
     slug: 'substrates',
