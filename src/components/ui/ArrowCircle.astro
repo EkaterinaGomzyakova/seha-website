@@ -1,0 +1,11 @@
+---
+import { withBase } from '../../lib/paths';
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<span class:list={['arrow-circle', className]} aria-hidden="true">
+  <img src={withBase('/assets/images/common/arrow-right.svg')} alt="" width="24" height="24" />
+</span>

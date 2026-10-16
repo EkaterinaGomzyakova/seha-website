@@ -8,12 +8,17 @@ import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
 interface Props {
   locale: Locale;
-  variant?: 'default' | 'product-category';
+  variant?: 'default' | 'product-category' | 'product-overview';
 }
 const { locale, variant = 'default' } = Astro.props;
 const copy = getInterfaceCopy(locale);
-const isProductCategory = variant === 'product-category';
-const title = isProductCategory ? copy.title.replaceAll('<br />', '<br /> ') : copy.title;
+const isProductPage = variant !== 'default';
+const title =
+  variant === 'product-overview'
+    ? copy.title.replaceAll('<br />', ' ')
+    : isProductPage
+      ? copy.title.replaceAll('<br />', '<br /> ')
+      : copy.title;
 ---
 
 <footer class="quote-footer" id="contacts">
@@ -44,7 +49,7 @@ const title = isProductCategory ? copy.title.replaceAll('<br />', '<br /> ') : c
   </div>
   <div class="quote-bottom">
     <div class="quote-brand">
-      <Logo locale={locale} tone={isProductCategory ? 'accent' : 'brand'} />
+      <Logo locale={locale} tone={isProductPage ? 'accent' : 'brand'} />
       <span set:html={copy.brand} />
     </div>
     <Link href={localizedPath('/privacy/', locale)}>{copy.privacy.toUpperCase()}</Link>

@@ -1712,66 +1712,66 @@
         }
       ]
     },
-    "/assets/images/products/coconut.webp": {
-      "fingerprint": "2ccfe44db74ab0ffd2fb3ccf530a7683ae7b866c6d00630938972c56edf7d159",
-      "width": 1536,
-      "height": 1024,
+    "/assets/images/products/coconut-products.png": {
+      "fingerprint": "ca535edbe2854302688d3c7e82406eb0ab95eead8fb74fd7e535de07a10b46a0",
+      "width": 2171,
+      "height": 724,
       "variants": [
         {
-          "src": "/assets/images/generated/products/coconut.webp-320.webp",
+          "src": "/assets/images/generated/products/coconut-products.png-320.webp",
           "format": "webp",
           "width": 320,
-          "height": 213,
-          "bytes": 6704
+          "height": 107,
+          "bytes": 3840
         },
         {
-          "src": "/assets/images/generated/products/coconut.webp-320.avif",
+          "src": "/assets/images/generated/products/coconut-products.png-320.avif",
           "format": "avif",
           "width": 320,
+          "height": 107,
+          "bytes": 2662
+        },
+        {
+          "src": "/assets/images/generated/products/coconut-products.png-640.webp",
+          "format": "webp",
+          "width": 640,
           "height": 213,
-          "bytes": 4567
+          "bytes": 13134
         },
         {
-          "src": "/assets/images/generated/products/coconut.webp-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 427,
-          "bytes": 23490
-        },
-        {
-          "src": "/assets/images/generated/products/coconut.webp-640.avif",
+          "src": "/assets/images/generated/products/coconut-products.png-640.avif",
           "format": "avif",
           "width": 640,
-          "height": 427,
-          "bytes": 14964
+          "height": 213,
+          "bytes": 8233
         },
         {
-          "src": "/assets/images/generated/products/coconut.webp-960.webp",
+          "src": "/assets/images/generated/products/coconut-products.png-960.webp",
           "format": "webp",
           "width": 960,
-          "height": 640,
-          "bytes": 48772
+          "height": 320,
+          "bytes": 27458
         },
         {
-          "src": "/assets/images/generated/products/coconut.webp-960.avif",
+          "src": "/assets/images/generated/products/coconut-products.png-960.avif",
           "format": "avif",
           "width": 960,
-          "height": 640,
-          "bytes": 30455
+          "height": 320,
+          "bytes": 16358
         },
         {
-          "src": "/assets/images/generated/products/coconut.webp-1440.webp",
+          "src": "/assets/images/generated/products/coconut-products.png-1440.webp",
           "format": "webp",
           "width": 1440,
-          "height": 960,
-          "bytes": 94122
+          "height": 480,
+          "bytes": 56180
         },
         {
-          "src": "/assets/images/generated/products/coconut.webp-1440.avif",
+          "src": "/assets/images/generated/products/coconut-products.png-1440.avif",
           "format": "avif",
           "width": 1440,
-          "height": 960,
-          "bytes": 60552
+          "height": 480,
+          "bytes": 33490
         }
       ]
     },

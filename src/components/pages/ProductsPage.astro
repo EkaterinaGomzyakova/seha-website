@@ -1,10 +1,13 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import ResponsiveImage from '../ResponsiveImage.astro';
+import ArrowCircle from '../ui/ArrowCircle.astro';
 import { withBase, localizedPath } from '../../lib/paths';
+import { bindShortWords } from '../../lib/typography';
 import { productsPageCopy } from '../../data/products-page';
-import type { Locale } from '../../data/translations';
+import { productCategories } from '../../data/products';
 import { productPages } from '../../data/product-category-pages';
-import imageManifest from '../../../public/assets/images/generated/manifest.json';
+import type { Locale } from '../../data/translations';
 
 interface Props {
   locale: Locale;
@@ -12,188 +15,76 @@ interface Props {
 }
 const { locale, rootAlias = false } = Astro.props;
 const copy = productsPageCopy[locale];
-const path = '/products';
-const retail = productPages.veymur;
-const retailImage = imageManifest.images['/assets/images/veymur/veymur-products.png'];
-const retailThumbnail =
-  retailImage.variants.find((variant) => variant.format === 'webp' && variant.width === 640)?.src ??
-  retail.heroImage;
+const heroImage = '/assets/images/products/coconut-products.png';
 const href = (path: string) =>
   path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
 ---
 
 <SiteLayout
   locale={locale}
-  path={path}
+  path="/products"
   title={copy.title}
   description={copy.description}
-  bodyClass="product-overview"
+  image={heroImage}
+  bodyClass="product-overview page-product-category"
   skipText={copy.skipText}
-  skipHref={href('#catalog')}
+  skipHref="#catalog"
+  footerVariant="product-overview"
 >
   <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
     <a href={href('/')}>{copy.pageLink}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{copy.pageLabel}</span>
   </nav>
-  <main>
-    <section class="hero product-overview-hero" aria-labelledby="title">
-      <img
-        class="hero-image"
-        src={withBase('/assets/images/products/coconut.webp')}
+  <main id="main-content" tabindex="-1">
+    <section class="overview-hero" aria-labelledby="title">
+      <ResponsiveImage
+        src={heroImage}
         alt={copy.heroAlt}
-        width="1536"
-        height="1024"
+        class="overview-hero__image"
+        sizes="(max-width: 440px) 900px, (max-width: 800px) 1200px, (max-width: 1280px) 1440px, 1500px"
         fetchpriority="high"
       />
-      <div class="hero-shade"></div>
-      <div class="hero-content">
+      <div class="overview-hero__shade" aria-hidden="true"></div>
+      <div class="overview-hero__content">
         <h1 id="title" class="type-h1">
           {copy.heroTitle}
           <br />
-          <span>{copy.heroLabel}</span>
+          {copy.heroLabel}
         </h1>
-        <div class="hero-bottom">
-          <p class="type-p">
-            {copy.heroText}
-            <br />
-            {copy.heroLine}
-            <br />
-            {copy.heroLine2}
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="products-catalog" id="catalog" aria-labelledby="catalog-title">
-      <div class="products-catalog-heading">
-        <div>
-          <span class="products-eyebrow">{copy.productsCatalogLabel}</span>
-          <h2 id="catalog-title" class="type-h2">
-            {copy.productsCatalogHeading}
-            <br />
-            {copy.productsCatalogLine}
-          </h2>
-        </div>
         <p class="type-p">
-          {copy.productsCatalogText}
+          {bindShortWords(copy.heroText, locale)}
           <br />
-          {copy.productsCatalogLine2}
+          {bindShortWords(copy.heroLine, locale)}
         </p>
       </div>
+    </section>
+    <section class="products-catalog" id="catalog" aria-label={copy.catalogTitle}>
       <div class="products-list" id="products-list">
-        <a class="product-category" href={href('/products/substrates/')}>
-          <div
-            class="category-image-frame product-category-image"
-            role="img"
-            aria-label={copy.productsCatalogAriaLabel}
-          >
-            <img src={withBase('/assets/images/common/category-substrates.png')} alt="" />
-          </div>
-          <span class="product-category-number">01</span>
-          <div class="product-category-title">
-            <span>{copy.productsCatalogLabel2}</span>
-            <h3 class="type-h3">{copy.productsCatalogCardTitle}</h3>
-          </div>
-          <p class="type-p">
-            {copy.productsCatalogText2}
-            <br />
-            {copy.productsCatalogLine3}
-          </p>
-          <span class="product-category-arrow" aria-hidden="true">
-            ↗
-          </span>
-        </a>
-        <a class="product-category" href={href('/products/food/')}>
-          <div
-            class="category-image-frame product-category-image"
-            role="img"
-            aria-label={copy.productsCatalogAriaLabel2}
-          >
-            <img src={withBase('/assets/images/common/category-food.png')} alt="" />
-          </div>
-          <span class="product-category-number">02</span>
-          <div class="product-category-title">
-            <span>{copy.productsCatalogLabel3}</span>
-            <h3 class="type-h3">{copy.productsCatalogCardTitle2}</h3>
-          </div>
-          <p class="type-p">
-            {copy.productsCatalogText3}
-            <br />
-            {copy.productsCatalogLine4}
-          </p>
-          <span class="product-category-arrow" aria-hidden="true">
-            ↗
-          </span>
-        </a>
-        <a class="product-category" href={href('/products/fiber/')}>
-          <div
-            class="category-image-frame product-category-image"
-            role="img"
-            aria-label={copy.productsCatalogAriaLabel3}
-          >
-            <img src={withBase('/assets/images/common/category-fiber.png')} alt="" />
-          </div>
-          <span class="product-category-number">03</span>
-          <div class="product-category-title">
-            <span>{copy.productsCatalogLabel4}</span>
-            <h3 class="type-h3">{copy.productsCatalogCardTitle3}</h3>
-          </div>
-          <p class="type-p">
-            {copy.productsCatalogText4}
-            <br />
-            {copy.productsCatalogLine5}
-          </p>
-          <span class="product-category-arrow" aria-hidden="true">
-            ↗
-          </span>
-        </a>
-        <a class="product-category" href={href('/products/shell/')}>
-          <div
-            class="category-image-frame product-category-image"
-            role="img"
-            aria-label={copy.productsCatalogAriaLabel4}
-          >
-            <img src={withBase('/assets/images/common/category-shell.png')} alt="" />
-          </div>
-          <span class="product-category-number">04</span>
-          <div class="product-category-title">
-            <span>{copy.productsCatalogLabel5}</span>
-            <h3 class="type-h3">{copy.productsCatalogCardTitle4}</h3>
-          </div>
-          <p class="type-p">
-            {copy.productsCatalogText5}
-            <br />
-            {copy.productsCatalogLine6}
-          </p>
-          <span class="product-category-arrow" aria-hidden="true">
-            ↗
-          </span>
-        </a>
-        <a class="product-category" href={href(`${retail.path}/`)}>
-          <div
-            class="category-image-frame product-category-image"
-            role="img"
-            aria-label={retail.title[locale]}
-          >
-            <img
-              src={withBase(retailThumbnail)}
-              alt=""
-              width={retailImage.width}
-              height={retailImage.height}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <span class="product-category-number">05</span>
-          <div class="product-category-title">
-            <span>{retail.listLabel[locale]}</span>
-            <h3 class="type-h3">{retail.title[locale]}</h3>
-          </div>
-          <p class="type-p">{retail.intro[locale]}</p>
-          <span class="product-category-arrow" aria-hidden="true">
-            ↗
-          </span>
-        </a>
+        {productCategories.map((category, index) => {
+          const definition = productPages[category.slug];
+          return (
+            <a class="product-category" href={href(`/products/${category.slug}/`)}>
+              <div class="category-image-frame product-category-image">
+                <ResponsiveImage
+                  src={definition.heroImage}
+                  alt=""
+                  sizes="(max-width: 440px) 64px, 94px"
+                  loading="lazy"
+                />
+              </div>
+              <span class="product-category-number" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div class="product-category-title">
+                <span>{bindShortWords(definition.listLabel[locale], locale)}</span>
+                <h2 class="type-h2">{bindShortWords(category.title[locale], locale)}</h2>
+              </div>
+              <p class="type-p">{bindShortWords(category.description[locale], locale)}</p>
+              <ArrowCircle class="product-category-arrow" />
+            </a>
+          );
+        })}
       </div>
     </section>
   </main>

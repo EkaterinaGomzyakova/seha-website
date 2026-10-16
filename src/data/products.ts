@@ -28,49 +28,49 @@ export interface ProductItem {
 }
 export const productCategories: ProductCategory[] = [
   {
-    slug: 'food',
-    title: text('Пищевые продукты', 'Food Products'),
-    description: text(
-      'Кокосовые ингредиенты для пищевых производств, ресторанов и дистрибуции.',
-      'Coconut ingredients for food manufacturing, hospitality, and distribution.'
-    ),
-    image: '/assets/images/common/category-food.png'
-  },
-  {
     slug: 'substrates',
     title: text('Кокосовые субстраты', 'Coconut Substrates'),
     description: text(
-      'Торф, брикеты, диски и чипсы для профессионального растениеводства.',
-      'Peat, bricks, discs, and chips for professional horticulture.'
+      'Торф, чипсы, брикеты и диски для теплиц, гидропоники и рассады.',
+      'Coir pith, chips, bricks, and discs for greenhouses, hydroponics, and seedlings.'
     ),
-    image: '/assets/images/common/category-substrates.png'
+    image: '/assets/images/substrates/coconut-substrates.png'
   },
   {
-    slug: 'fiber',
-    title: text('Кокосовое волокно', 'Coconut Fibre'),
+    slug: 'food',
+    title: text('Пищевые продукты', 'Food Products'),
     description: text(
-      'Материалы для производства, сельского хозяйства и озеленения.',
-      'Materials for manufacturing, agriculture, and landscaping.'
+      'Ингредиенты для пищевой промышленности, масла, сахар, стружка.',
+      'Food ingredients, oils, sugar, and desiccated coconut for food manufacturing.'
     ),
-    image: '/assets/images/common/category-fiber.png'
-  },
-  {
-    slug: 'shell',
-    title: text('Кокосовая скорлупа', 'Coconut Shell'),
-    description: text(
-      'Сырьё для производства угля, фильтрации и промышленного применения.',
-      'Raw material for charcoal, filtration, and industrial applications.'
-    ),
-    image: '/assets/images/common/category-shell.png'
+    image: '/assets/images/food/food-products.png'
   },
   {
     slug: 'veymur',
     title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     description: text(
-      'Кокосовые масла, сахар, стружка и молоко Veymur в розничной упаковке.',
-      'Veymur coconut oils, sugar, desiccated coconut, and milk in retail packaging.'
+      'Премиальные кокосовые пищевые продукты для розничной продажи.',
+      'Premium coconut food products for retail.'
     ),
     image: '/assets/images/veymur/veymur-products.png'
+  },
+  {
+    slug: 'fiber',
+    title: text('Кокосовое волокно', 'Coconut Fibre'),
+    description: text(
+      'Натуральное волокно и изделия для производства, ландшафта и защиты почвы.',
+      'Natural fibre and fibre-based products for manufacturing, landscaping, and soil protection.'
+    ),
+    image: '/assets/images/fiber/coir-products.png'
+  },
+  {
+    slug: 'shell',
+    title: text('Кокосовая скорлупа', 'Coconut Shell'),
+    description: text(
+      'Сырьё для активированного угля, топлива, фильтрации и переработки.',
+      'Raw material for activated carbon, fuel, filtration, and processing.'
+    ),
+    image: '/assets/images/shell/coco-shell-products.png'
   }
 ];
 type Row = [

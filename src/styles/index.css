@@ -24,6 +24,7 @@
 @import url('./components/editorial.css') layer(components);
 @import url('./components/hero.css') layer(components);
 @import url('./components/buttons.css') layer(components);
+@import url('./components/arrows.css') layer(components);
 @import url('./components/tags.css') layer(components);
 @import url('./components/forms.css') layer(components);
 @import url('./components/header.css') layer(components);

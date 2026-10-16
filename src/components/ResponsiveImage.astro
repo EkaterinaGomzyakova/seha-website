@@ -1,0 +1,43 @@
+---
+import manifest from '../../public/assets/images/generated/manifest.json';
+import { withBase } from '../lib/paths';
+
+interface Props {
+  src: string;
+  alt: string;
+  sizes: string;
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  fetchpriority?: 'high' | 'low' | 'auto';
+}
+interface ImageEntry {
+  width: number;
+  height: number;
+  variants: { src: string; width: number; format: string }[];
+}
+const { src, alt, sizes, class: className, loading, fetchpriority } = Astro.props;
+const entry = (manifest.images as Record<string, ImageEntry>)[src];
+if (!entry) throw new Error(`Missing responsive image: ${src}. Run images:optimize.`);
+const srcset = (format: string) =>
+  entry.variants
+    .filter((variant) => variant.format === format)
+    .map((variant) => `${withBase(variant.src)} ${variant.width}w`)
+    .join(', ');
+const fallback =
+  entry.variants.find((variant) => variant.format === 'webp' && variant.width >= 640)?.src ?? src;
+---
+
+<picture>
+  <source type="image/avif" srcset={srcset('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={srcset('webp')} sizes={sizes} />
+  <img
+    class={className}
+    src={withBase(fallback)}
+    alt={alt}
+    width={entry.width}
+    height={entry.height}
+    loading={loading}
+    fetchpriority={fetchpriority}
+    decoding="async"
+  />
+</picture>
