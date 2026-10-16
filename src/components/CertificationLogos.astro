@@ -1,0 +1,173 @@
+---
+import { withBase } from '../lib/paths';
+import ResponsiveImage from './ResponsiveImage.astro';
+interface Props {
+  kind: 'organic' | 'food' | 'ethical';
+}
+const { kind } = Astro.props;
+const asset = (name: string) => withBase('/assets/images/quality/' + name);
+// The USDA mark is supplied by Figma as separate, unmodified SVG layers.
+const letters = [
+  [24.24, 26.07],
+  [37.43, 25.62],
+  [50.62, 26.07],
+  [63.53, 26.07],
+  [17.19, 55.29],
+  [27.6, 55.62],
+  [37.81, 55.29],
+  [47.75, 55.62],
+  [58.75, 55.62],
+  [69.28, 55.62],
+  [74.25, 55.29]
+];
+---
+
+<div class:list={['certification-logos', 'certification-logos--' + kind]}>
+  {kind === 'organic' && (
+    <>
+      <span class="usda-mark" role="img" aria-label="USDA Organic">
+        <img
+          class="usda-mark__background"
+          src={asset('usda-background.svg')}
+          alt=""
+          loading="lazy"
+        />
+        <span
+          class="usda-mark__landscape"
+          style={{ maskImage: 'url("' + asset('usda-mask.svg') + '")' }}
+          aria-hidden="true"
+        >
+          <img src={asset('usda-landscape.svg')} alt="" loading="lazy" />
+        </span>
+        <img class="usda-mark__outline" src={asset('usda-outline.svg')} alt="" loading="lazy" />
+        {letters.map(([left, top], index) => (
+          <img
+            class="usda-mark__letter"
+            style={{ left: left + '%', top: top + '%' }}
+            src={asset('usda-letter-' + (index + 1) + '.svg')}
+            alt=""
+            loading="lazy"
+          />
+        ))}
+      </span>
+      <span class="eu-organic-mark">
+        <img src={asset('eu-organic.svg')} alt="EU Organic" loading="lazy" />
+        <span>EU Organic</span>
+      </span>
+      <span class="npop-mark">
+        <ResponsiveImage
+          src="/assets/images/quality/npop-organic.png"
+          alt="NPOP Organic — India Organic"
+          sizes="44px"
+          loading="lazy"
+        />
+      </span>
+    </>
+  )}
+  {kind === 'food' && (
+    <>
+      <span class="brcgs-mark">
+        <ResponsiveImage
+          src="/assets/images/quality/brcgs.png"
+          alt="BRCGS"
+          sizes="52px"
+          loading="lazy"
+        />
+      </span>
+      <img src={asset('fssc-22000.svg')} alt="FSSC 22000" loading="lazy" />
+      <span class="haccp-mark">
+        <b>HACCP</b>
+        <span>Verified by Eurofins</span>
+      </span>
+    </>
+  )}
+  {kind === 'ethical' && <img src={asset('fairtrade.svg')} alt="Fairtrade" loading="lazy" />}
+</div>
+
+<style>
+  .certification-logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    min-height: 44px;
+  }
+  .certification-logos--food {
+    gap: 20px;
+  }
+  .certification-logos img {
+    flex: none;
+    max-width: none;
+  }
+  .npop-mark {
+    width: 44px;
+    height: 44px;
+  }
+  .brcgs-mark {
+    width: 51.622px;
+    height: 40px;
+  }
+  :is(.npop-mark, .brcgs-mark) :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .eu-organic-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .eu-organic-mark > span {
+    font: 600 5px/1.3 var(--font-sans);
+    color: var(--color-green-brand);
+  }
+  .haccp-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    height: 40px;
+    width: 67px;
+    border-radius: 7px;
+    background: var(--color-background-light);
+    color: var(--color-green-brand);
+  }
+  .haccp-mark > b {
+    color: var(--color-green-brand);
+    font: 900 8.115px/1.5 var(--font-sans);
+    letter-spacing: 1.0143px;
+  }
+  .haccp-mark > span {
+    width: 43px;
+    font: 600 8px/1.3 var(--font-sans);
+    text-align: center;
+  }
+  .usda-mark {
+    position: relative;
+    flex: none;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+  }
+  .usda-mark img {
+    position: absolute;
+  }
+  .usda-mark__background {
+    left: 6.8%;
+    top: 50%;
+  }
+  .usda-mark__landscape {
+    position: absolute;
+    inset: 50% 6.79% 4.16% 4.79%;
+    mask-repeat: no-repeat;
+    mask-size: 38.016px 19.008px;
+    mask-position: 0.883px 0;
+  }
+  .usda-mark__outline {
+    left: 0;
+    top: 0;
+    transform: rotate(-45deg);
+  }
+</style>

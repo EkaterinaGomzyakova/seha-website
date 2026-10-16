@@ -2916,6 +2916,384 @@
         }
       ]
     },
+    "/assets/images/quality/batch-control-base.png": {
+      "fingerprint": "2f7446b87ceb858b958729180e056e211e66df69faf6cdc63c787bde7ab047d6",
+      "width": 1672,
+      "height": 941,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 15350
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 8132
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 44524
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 24623
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 77726
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 47227
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 132290
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control-base.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 85319
+        }
+      ]
+    },
+    "/assets/images/quality/batch-control.png": {
+      "fingerprint": "bf7a3548a29bf07d4cf94781468c988d6ea44e0037af74c62fbf2d4da3b983be",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 9876
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 6064
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 29344
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 18496
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 55698
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 35928
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 101432
+        },
+        {
+          "src": "/assets/images/generated/quality/batch-control.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 67045
+        }
+      ]
+    },
+    "/assets/images/quality/brcgs.png": {
+      "fingerprint": "b05c90c7b42c1ba5858200145c518f4969b8845fa5cc42b8f48bb4f8a1254208",
+      "width": 2363,
+      "height": 1831,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 248,
+          "bytes": 19686
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 248,
+          "bytes": 12869
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 496,
+          "bytes": 39706
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 496,
+          "bytes": 26762
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 744,
+          "bytes": 59264
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 744,
+          "bytes": 42542
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 1116,
+          "bytes": 87386
+        },
+        {
+          "src": "/assets/images/generated/quality/brcgs.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 1116,
+          "bytes": 64979
+        }
+      ]
+    },
+    "/assets/images/quality/npop-organic.png": {
+      "fingerprint": "a4d28a6cefcc22d92394c5c8607e9ed2b138f7738f63942d862f70c06d6ab235",
+      "width": 2500,
+      "height": 2500,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33690
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19347
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 83822
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 43916
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 133776
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 64911
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 1440,
+          "bytes": 213042
+        },
+        {
+          "src": "/assets/images/generated/quality/npop-organic.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 1440,
+          "bytes": 96213
+        }
+      ]
+    },
+    "/assets/images/quality/quality-hero-gradient.png": {
+      "fingerprint": "2905f802129c615227525e3fd092774bc6a9b0a9a75c942a5a3ae6f263733115",
+      "width": 1024,
+      "height": 576,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 19742
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 10756
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 61036
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 32548
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 109346
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 59666
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-1024.webp",
+          "format": "webp",
+          "width": 1024,
+          "height": 576,
+          "bytes": 122622
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero-gradient.png-1024.avif",
+          "format": "avif",
+          "width": 1024,
+          "height": 576,
+          "bytes": 66194
+        }
+      ]
+    },
+    "/assets/images/quality/quality-hero.png": {
+      "fingerprint": "73b37fc57d62f52643b220552440395fc5bb0956e2dfa68266a524635934cd5e",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 17330
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 9304
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 57332
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 31491
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 111132
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 61506
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 209926
+        },
+        {
+          "src": "/assets/images/generated/quality/quality-hero.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 115345
+        }
+      ]
+    },
     "/assets/images/shell/coco-shell-activated-carbon.png": {
       "fingerprint": "96d753658c3e1887578edc008b1c223fb9c86fadbc1773b69f429dd7abeb9a79",
       "width": 1254,
