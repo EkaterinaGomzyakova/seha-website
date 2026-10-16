@@ -1,6 +1,6 @@
 import type { Locale } from './translations';
 
-export type ProductCategorySlug = 'food' | 'substrates' | 'fiber' | 'shell';
+export type ProductCategorySlug = 'food' | 'substrates' | 'fiber' | 'shell' | 'veymur';
 export interface LocalizedText {
   ru: string;
   en: string;
@@ -18,6 +18,8 @@ export interface ProductItem {
   slug: string;
   category: ProductCategorySlug;
   name: LocalizedText;
+  /** Optional unambiguous form value for branded or packaged product ranges. */
+  quoteName?: LocalizedText;
   label: LocalizedText;
   description: LocalizedText;
   alt: LocalizedText;
@@ -60,6 +62,15 @@ export const productCategories: ProductCategory[] = [
       'Raw material for charcoal, filtration, and industrial applications.'
     ),
     image: '/assets/images/common/category-shell.png'
+  },
+  {
+    slug: 'veymur',
+    title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
+    description: text(
+      'Кокосовые масла, сахар, стружка и молоко Veymur в розничной упаковке.',
+      'Veymur coconut oils, sugar, desiccated coconut, and milk in retail packaging.'
+    ),
+    image: '/assets/images/veymur/veymur-products.png'
   }
 ];
 type Row = [
@@ -339,6 +350,58 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Soil Stabilization'
     ]
   ],
+  veymur: [
+    [
+      'veymur-mct-oil',
+      'veymur-mct-oil.png',
+      'MCT масло',
+      'MCT Oil',
+      'Масло на основе среднецепочечных триглицеридов кокосового масла. Подходит для добавления в напитки, смузи и готовые блюда.',
+      'Oil made from medium-chain triglycerides derived from coconut oil. Suitable for adding to drinks, smoothies, and prepared dishes.',
+      '500\u00a0мл',
+      '500\u00a0ml'
+    ],
+    [
+      'veymur-virgin-coconut-oil',
+      'veymur-virgin-coconut-oil.png',
+      'Нерафинированное кокосовое масло',
+      'Virgin Coconut Oil',
+      'Нерафинированное кокосовое масло с характерным кокосовым ароматом. Подходит для выпечки, десертов и приготовления блюд.',
+      'Unrefined coconut oil with a distinctive coconut aroma. Suitable for baking, desserts, and everyday cooking.',
+      '500\u00a0мл',
+      '500\u00a0ml'
+    ],
+    [
+      'veymur-coconut-sugar',
+      'veymur-coconut-sugar.png',
+      'Кокосовый сахар',
+      'Coconut Sugar',
+      'Сахар из сока соцветий кокосовой пальмы с карамельными нотами. Используется в напитках, выпечке и десертах.',
+      'Sugar made from coconut palm blossom sap, with caramel notes. Use it in drinks, baking, and desserts.',
+      '500\u00a0г',
+      '500\u00a0g'
+    ],
+    [
+      'veymur-desiccated-coconut',
+      'veymur-desiccated-coconut.png',
+      'Кокосовая стружка',
+      'Desiccated Coconut',
+      'Высушенная измельчённая мякоть кокоса с натуральным вкусом и ароматом. Для выпечки, начинок и украшения десертов.',
+      'Dried, shredded coconut flesh with a natural coconut flavour and aroma. For baking, fillings, and decorating desserts.',
+      '500\u00a0г',
+      '500\u00a0g'
+    ],
+    [
+      'veymur-coconut-milk',
+      'veymur-coconut-milk.png',
+      'Кокосовое молоко',
+      'Coconut Milk',
+      'Кокосовое молоко с мягким вкусом для напитков, каш, соусов и десертов. Удобный формат для домашней кухни и кулинарных экспериментов.',
+      'Mild-tasting coconut milk for drinks, porridge, sauces, and desserts. A convenient format for home cooking and trying new recipes.',
+      '1\u00a0л',
+      '1\u00a0L'
+    ]
+  ],
   shell: [
     [
       'coco-shell',
@@ -379,6 +442,9 @@ export const products: ProductItem[] = (Object.keys(rows) as ProductCategorySlug
       slug,
       category,
       name: text(ru, en),
+      ...(category === 'veymur'
+        ? { quoteName: text(`${ru} Veymur, ${labelRu}`, `${en} Veymur, ${labelEn}`) }
+        : {}),
       alt: text(ru, en),
       label: text(labelRu ?? ru, labelEn ?? en),
       description: text(descriptionRu, descriptionEn),

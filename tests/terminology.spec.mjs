@@ -11,7 +11,8 @@ const paths = [
   '/products/food/',
   '/products/substrates/',
   '/products/fiber/',
-  '/products/shell/'
+  '/products/shell/',
+  '/products/veymur/'
 ];
 
 test('public copy uses fibre while technical fiber URLs stay unchanged', async ({ request }) => {

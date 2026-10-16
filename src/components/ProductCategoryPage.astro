@@ -90,6 +90,13 @@ const sizes =
         {bindShortWords(t(page.title), locale)}
       </h1>
       <p class="type-p">{t(page.intro)}</p>
+      {page.relatedRange && (
+        <p class="type-p">
+          <Button href={localizedPath(page.relatedRange.path, locale)} variant="tertiary">
+            {t(page.relatedRange.label)}
+          </Button>
+        </p>
+      )}
     </section>
     <section class="product-list-section" id="products-list" aria-labelledby="products-title">
       <div class="product-list-heading">
@@ -119,7 +126,7 @@ const sizes =
             <Button
               href="#contacts"
               full
-              data-quote-product={t(item.name)}
+              data-quote-product={t(item.quoteName ?? item.name)}
               data-product-id={item.id}
             >
               {bindShortWords(t(page.cta), locale)}

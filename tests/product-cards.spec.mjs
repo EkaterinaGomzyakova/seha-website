@@ -18,7 +18,7 @@ test('card typography binds connecting words without changing ordinary words', (
   expect(bindShortWords(formatted, 'ru')).toBe(formatted);
 });
 
-for (const category of ['food', 'substrates', 'fiber', 'shell']) {
+for (const category of ['food', 'substrates', 'fiber', 'shell', 'veymur']) {
   for (const locale of ['ru', 'en']) {
     test(`${category} ${locale} cards have equal heights and 20px description clearance`, async ({
       page

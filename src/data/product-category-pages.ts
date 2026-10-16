@@ -23,6 +23,7 @@ export interface ProductCategoryPageDefinition {
   listTitle: LocalizedValue;
   cta: LocalizedValue;
   items: ProductPageItem[];
+  relatedRange?: { path: string; label: LocalizedValue };
 }
 
 const text = (ru: string, en: string): LocalizedValue => ({ ru, en });
@@ -43,7 +44,11 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     listLabel: text('для пищевого производства', 'for food manufacturing'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
-    items: productsForCategory('food')
+    items: productsForCategory('food'),
+    relatedRange: {
+      path: '/products/veymur',
+      label: text('Розничная линейка Veymur', 'Veymur Retail Range')
+    }
   },
   substrates: {
     slug: 'substrates',
@@ -78,6 +83,23 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
     items: productsForCategory('fiber')
+  },
+  veymur: {
+    slug: 'veymur',
+    bodyClass: 'product-category--veymur',
+    path: '/products/veymur',
+    heroImage: '/assets/images/veymur/veymur-products.png',
+    section: text('ПИЩЕВЫЕ ПРОДУКТЫ VEYMUR', 'VEYMUR FOOD PRODUCTS'),
+    breadcrumb: text('Пищевые продукты Veymur', 'Veymur Food Products'),
+    title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
+    intro: text(
+      'Кокосовые продукты Veymur для повседневной кухни: масла, сахар, стружка и молоко в розничной упаковке. Для приготовления напитков, выпечки, десертов и любимых блюд.',
+      'Veymur coconut products for everyday cooking: oils, sugar, desiccated coconut, and milk in retail packaging. For making drinks, baking, desserts, and your favourite dishes.'
+    ),
+    listLabel: text('Розничные продукты', 'Retail Products'),
+    listTitle: text('Розничная<br>линейка', 'Retail<br>Product Range'),
+    cta: text('Заказать', 'Request a Quote'),
+    items: productsForCategory('veymur')
   },
   shell: {
     slug: 'shell',

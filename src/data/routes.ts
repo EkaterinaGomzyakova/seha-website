@@ -9,5 +9,6 @@ export const publicRoutes = [
   '/products/food/',
   '/products/fiber/',
   '/products/shell/',
-  '/products/substrates/'
+  '/products/substrates/',
+  '/products/veymur/'
 ] as const;

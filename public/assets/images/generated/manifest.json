@@ -2782,6 +2782,384 @@
           "bytes": 132635
         }
       ]
+    },
+    "/assets/images/veymur/veymur-coconut-milk.png": {
+      "fingerprint": "15d967e12be43fb356fd458d85b463c9a3228d9c8e6e010a5cad597d5f293700",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 5012
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 3871
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 13586
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 10609
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 24654
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 18442
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 36568
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-milk.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 26809
+        }
+      ]
+    },
+    "/assets/images/veymur/veymur-coconut-sugar.png": {
+      "fingerprint": "04b7980ac64eee0589b9ad76ff381d973c2fbfa0bcf5128563a771319ee402a1",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7852
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 5707
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 21556
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 15263
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 39662
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 27057
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 58184
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-coconut-sugar.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 39286
+        }
+      ]
+    },
+    "/assets/images/veymur/veymur-desiccated-coconut.png": {
+      "fingerprint": "eb9eb15f0ace23ae9f26290c35594c07066431a941039715927beb272000b1b8",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7276
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 5330
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 19894
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 14391
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 37124
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 26041
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 55516
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-desiccated-coconut.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 39249
+        }
+      ]
+    },
+    "/assets/images/veymur/veymur-mct-oil.png": {
+      "fingerprint": "2e4167a9fae5e11aca1324b45bb65d137c8303a86949fcb218230ed626162d11",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 5590
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 4072
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 14718
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 11050
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 27196
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 18848
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 39904
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-mct-oil.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 27351
+        }
+      ]
+    },
+    "/assets/images/veymur/veymur-products.png": {
+      "fingerprint": "e7bfd4a495406801647f4b4cfbd6763bd7af6945af7058203521a3ba1cdb2295",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20830
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11959
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 57326
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 36572
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 98932
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 67159
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 142098
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-products.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 97110
+        }
+      ]
+    },
+    "/assets/images/veymur/veymur-virgin-coconut-oil.png": {
+      "fingerprint": "600079e9bccc97c1cba8e814cc1a8f2c9f19fdf818a6b00da5684cb932824681",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 6084
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 4636
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 16634
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 12363
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 30724
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 22080
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 44876
+        },
+        {
+          "src": "/assets/images/generated/veymur/veymur-virgin-coconut-oil.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 32126
+        }
+      ]
     }
   },
   "errors": {}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "veymur-mct-oil",
+    "image": "veymur-mct-oil.png",
+    "ru": {
+      "name": "MCT масло",
+      "label": "500 мл",
+      "description": "Масло на основе среднецепочечных триглицеридов кокосового масла. Подходит для добавления в напитки, смузи и готовые блюда."
+    },
+    "en": {
+      "name": "MCT Oil",
+      "label": "500 ml",
+      "description": "Oil made from medium-chain triglycerides derived from coconut oil. Suitable for adding to drinks, smoothies, and prepared dishes."
+    }
+  },
+  {
+    "id": "veymur-virgin-coconut-oil",
+    "image": "veymur-virgin-coconut-oil.png",
+    "ru": {
+      "name": "Нерафинированное кокосовое масло",
+      "label": "500 мл",
+      "description": "Нерафинированное кокосовое масло с характерным кокосовым ароматом. Подходит для выпечки, десертов и приготовления блюд."
+    },
+    "en": {
+      "name": "Virgin Coconut Oil",
+      "label": "500 ml",
+      "description": "Unrefined coconut oil with a distinctive coconut aroma. Suitable for baking, desserts, and everyday cooking."
+    }
+  },
+  {
+    "id": "veymur-coconut-sugar",
+    "image": "veymur-coconut-sugar.png",
+    "ru": {
+      "name": "Кокосовый сахар",
+      "label": "500 г",
+      "description": "Сахар из сока соцветий кокосовой пальмы с карамельными нотами. Используется в напитках, выпечке и десертах."
+    },
+    "en": {
+      "name": "Coconut Sugar",
+      "label": "500 g",
+      "description": "Sugar made from coconut palm blossom sap, with caramel notes. Use it in drinks, baking, and desserts."
+    }
+  },
+  {
+    "id": "veymur-desiccated-coconut",
+    "image": "veymur-desiccated-coconut.png",
+    "ru": {
+      "name": "Кокосовая стружка",
+      "label": "500 г",
+      "description": "Высушенная измельчённая мякоть кокоса с натуральным вкусом и ароматом. Для выпечки, начинок и украшения десертов."
+    },
+    "en": {
+      "name": "Desiccated Coconut",
+      "label": "500 g",
+      "description": "Dried, shredded coconut flesh with a natural coconut flavour and aroma. For baking, fillings, and decorating desserts."
+    }
+  },
+  {
+    "id": "veymur-coconut-milk",
+    "image": "veymur-coconut-milk.png",
+    "ru": {
+      "name": "Кокосовое молоко",
+      "label": "1 л",
+      "description": "Кокосовое молоко с мягким вкусом для напитков, каш, соусов и десертов. Удобный формат для домашней кухни и кулинарных экспериментов."
+    },
+    "en": {
+      "name": "Coconut Milk",
+      "label": "1 L",
+      "description": "Mild-tasting coconut milk for drinks, porridge, sauces, and desserts. A convenient format for home cooking and trying new recipes."
+    }
+  }
+]

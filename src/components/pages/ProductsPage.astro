@@ -3,6 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { productsPageCopy } from '../../data/products-page';
 import type { Locale } from '../../data/translations';
+import { productPages } from '../../data/product-category-pages';
+import imageManifest from '../../../public/assets/images/generated/manifest.json';
 
 interface Props {
   locale: Locale;
@@ -11,6 +13,11 @@ interface Props {
 const { locale, rootAlias = false } = Astro.props;
 const copy = productsPageCopy[locale];
 const path = '/products';
+const retail = productPages.veymur;
+const retailImage = imageManifest.images['/assets/images/veymur/veymur-products.png'];
+const retailThumbnail =
+  retailImage.variants.find((variant) => variant.format === 'webp' && variant.width === 640)?.src ??
+  retail.heroImage;
 const href = (path: string) =>
   path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
 ---
@@ -158,6 +165,31 @@ const href = (path: string) =>
             <br />
             {copy.productsCatalogLine6}
           </p>
+          <span class="product-category-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a class="product-category" href={href(`${retail.path}/`)}>
+          <div
+            class="category-image-frame product-category-image"
+            role="img"
+            aria-label={retail.title[locale]}
+          >
+            <img
+              src={withBase(retailThumbnail)}
+              alt=""
+              width={retailImage.width}
+              height={retailImage.height}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <span class="product-category-number">05</span>
+          <div class="product-category-title">
+            <span>{retail.listLabel[locale]}</span>
+            <h3 class="type-h3">{retail.title[locale]}</h3>
+          </div>
+          <p class="type-p">{retail.intro[locale]}</p>
           <span class="product-category-arrow" aria-hidden="true">
             ↗
           </span>

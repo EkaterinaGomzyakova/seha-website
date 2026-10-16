@@ -11,7 +11,8 @@ const paths = [
   '/products/food/',
   '/products/substrates/',
   '/products/fiber/',
-  '/products/shell/'
+  '/products/shell/',
+  '/products/veymur/'
 ];
 const routes = paths.flatMap((path) => [path, `/ru${path}`, `/en${path}`]);
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
