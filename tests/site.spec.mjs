@@ -135,6 +135,12 @@ test('home page visual baseline @visual', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(url('/en/'), { waitUntil: 'domcontentloaded', timeout: 90_000 });
   await page.evaluate(() => document.fonts.ready);
+  await page.locator('img').evaluateAll(async (images) => {
+    images.forEach((image) => {
+      image.loading = 'eager';
+    });
+    await Promise.all(images.map((image) => image.decode()));
+  });
   await testInfo.attach('footer-top', {
     body: JSON.stringify({ y: Math.floor((await page.locator('footer').boundingBox()).y) }),
     contentType: 'application/json'
@@ -149,6 +155,13 @@ test('home page visual baseline @visual', async ({ page }, testInfo) => {
 test('mobile menu visual baseline @visual', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(url('/en/'), { waitUntil: 'domcontentloaded', timeout: 90_000 });
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('img').evaluateAll(async (images) => {
+    images.forEach((image) => {
+      image.loading = 'eager';
+    });
+    await Promise.all(images.map((image) => image.decode()));
+  });
   await page.locator('.menu-toggle').click();
   await testInfo.attach('footer-top', {
     body: JSON.stringify({ y: Math.floor((await page.locator('footer').boundingBox()).y) }),

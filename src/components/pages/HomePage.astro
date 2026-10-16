@@ -3,7 +3,9 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import Link from '../ui/Link.astro';
 import Tag from '../ui/Tag.astro';
+import ResponsiveImage from '../ResponsiveImage.astro';
 import { withBase, localizedPath } from '../../lib/paths';
+import { bindShortWords } from '../../lib/typography';
 import { homePageCopy } from '../../data/home-page';
 import type { Locale } from '../../data/translations';
 
@@ -13,162 +15,197 @@ interface Props {
 }
 const { locale, rootAlias = false } = Astro.props;
 const copy = homePageCopy[locale];
-const path = '/';
 const href = (path: string) =>
   path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
+const text = (value: string) => bindShortWords(value, locale);
+const image = (name: string) => '/assets/images/home/' + name;
+const wideSizes =
+  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc(100vw - 192px), calc(100vw - 272px)';
+const categories = [
+  {
+    slug: 'food',
+    title: copy.directionsCardTitle,
+    label: copy.directionsLabel4,
+    description: copy.directionsText2 + ' ' + copy.directionsLine,
+    alt: copy.directionsAriaLabel
+  },
+  {
+    slug: 'substrates',
+    title: copy.directionsCardTitle2,
+    label: copy.directionsLabel5,
+    description: copy.directionsText3 + ' ' + copy.directionsLine2,
+    alt: copy.directionsAriaLabel2
+  },
+  {
+    slug: 'fiber',
+    title: copy.directionsCardTitle3,
+    label: copy.directionsLabel6,
+    description: copy.directionsText4 + ' ' + copy.directionsLine3,
+    alt: copy.directionsAriaLabel3
+  },
+  {
+    slug: 'shell',
+    title: copy.directionsCardTitle4,
+    label: copy.directionsLabel7,
+    description: copy.directionsText5 + ' ' + copy.directionsLine4,
+    alt: copy.directionsAriaLabel4
+  }
+];
+const industries = [
+  {
+    icon: 'distributor',
+    title: copy.homeIndustriesCardTitle,
+    description: copy.homeIndustriesText2
+  },
+  { icon: 'retailer', title: copy.homeIndustriesCardTitle2, description: copy.homeIndustriesText3 },
+  {
+    icon: 'food-manufacturer',
+    title: copy.homeIndustriesCardTitle3,
+    description: copy.homeIndustriesText4
+  },
+  {
+    icon: 'hydroponics',
+    title: copy.homeIndustriesCardTitle4,
+    description: copy.homeIndustriesText5
+  },
+  {
+    icon: 'horticulture',
+    title: copy.homeIndustriesCardTitle5,
+    description: copy.homeIndustriesText6
+  },
+  {
+    icon: 'food-brand',
+    title: copy.homeIndustriesCardTitle6,
+    description: copy.homeIndustriesText7
+  },
+  {
+    icon: 'cosmetics',
+    title: copy.homeIndustriesCardTitle7,
+    description: copy.homeIndustriesText8
+  },
+  {
+    icon: 'pharmaceuticals',
+    title: copy.homeIndustriesCardTitle8,
+    description: copy.homeIndustriesText9
+  },
+  {
+    icon: 'natural-materials',
+    title: copy.homeIndustriesCardTitle9,
+    description: copy.homeIndustriesText10
+  },
+  {
+    icon: 'contract-manufacturer',
+    title: copy.homeIndustriesCardTitle10,
+    description: copy.homeIndustriesText11
+  }
+];
+const originSteps = [
+  { title: copy.originSectionCardTitle, description: copy.originSectionText2 },
+  { title: copy.originSectionCardTitle2, description: copy.originSectionText3 },
+  { title: copy.originSectionCardTitle3, description: copy.originSectionText4 }
+];
+const quality = [
+  { title: copy.qualitySectionCardTitle, description: copy.qualitySectionText2 },
+  { title: copy.qualitySectionCardTitle2, description: copy.qualitySectionText3 },
+  { title: copy.qualitySectionCardTitle3, description: copy.qualitySectionText4 }
+];
+const supply = [
+  { title: copy.supplySectionCardTitle, description: copy.supplySectionText2 },
+  { title: copy.supplySectionCardTitle2, description: copy.supplySectionText3 },
+  { title: copy.supplySectionCardTitle3, description: copy.supplySectionText4 },
+  { title: copy.supplySectionCardTitle4, description: copy.supplySectionText5 }
+];
 ---
 
 <SiteLayout
   locale={locale}
-  path={path}
+  path="/"
   title={copy.title}
   description={copy.description}
+  image={image('hero-coconut.png')}
   bodyClass="home"
   skipText={copy.skipText}
   skipHref={href('#directions')}
 >
-  <main>
+  <main class="home-main">
     <section class="home-hero" aria-labelledby="home-title">
-      <img
-        src={withBase('/assets/images/common/home-coconut.webp')}
+      <ResponsiveImage
+        src={image('hero-coconut.png')}
         class="home-hero-photo"
-        width="1536"
-        height="1024"
         alt={copy.homeHeroAlt}
+        sizes={wideSizes}
+        loading="eager"
         fetchpriority="high"
       />
-      <div class="home-hero-wash"></div>
-      <div class="hero-topline">
-        <span>{copy.homeHeroLabel}</span>
-        <span>{copy.homeHeroLabel2}</span>
-      </div>
+      <div class="home-hero-wash" aria-hidden="true"></div>
       <div class="home-hero-copy">
         <h1 id="home-title" class="type-h1">
-          {copy.homeHeroTitle}
-          <br />
-          {copy.homeHeroLine}
-          <br />
+          {copy.homeHeroTitle} {copy.homeHeroLine}
           <em>
             {copy.homeHeroEmphasis}
             <br />
             {copy.homeHeroLine2}
           </em>
         </h1>
-        <p class="type-p">
-          {copy.homeHeroText}
-          <br class="desktop-only" />
-          {copy.homeHeroLine3}
-        </p>
-        <Button variant="secondary" href={href('/products')}>
-          {copy.homeHeroLink} <span>↗</span>
+        <p>{text(copy.homeHeroText + ' ' + copy.homeHeroLine3)}</p>
+        <Button variant="secondary" href={href('/products/')}>
+          {copy.homeHeroLink}
         </Button>
       </div>
-      <div class="hero-foot">
-        <span>
-          {copy.homeHeroLabel3}
-          <br />
-          {copy.homeHeroLine4}
-        </span>
-        <a href={href('#directions')} class="hero-scroll" aria-label={copy.homeHeroAriaLabel}>
-          ↓
-        </a>
-        <span>
-          {copy.homeHeroLabel4}
-          <br />
-          {copy.homeHeroLine5}
-        </span>
-      </div>
     </section>
-    <section class="home-section directions" id="directions">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.directionsLabel}</span>
-        <span class="section-note">{copy.directionsLabel2}</span>
-      </div>
-      <div class="section-heading reveal">
-        <h2 class="type-h2">
+    <section class="home-section directions" id="directions" aria-labelledby="directions-title">
+      <div class="section-heading">
+        <h2 id="directions-title" class="type-h2">
           {copy.directionsHeading}
           <br />
-          <span>{copy.directionsLabel3}</span>
+          {copy.directionsLabel3}
         </h2>
-        <p class="type-p">{copy.directionsText}</p>
+        <p class="type-p">{text(copy.directionsText)}</p>
       </div>
       <div class="product-direction-grid">
-        <a class="product-direction-card reveal" href={href('/products/food/')}>
-          <div class="material-photo food-photo" role="img" aria-label={copy.directionsAriaLabel}>
-            <span class="card-index">{copy.directionsLabel4}</span>
-            <span class="card-go">↗</span>
-          </div>
-          <div class="product-direction-copy">
-            <h3 class="type-h3">{copy.directionsCardTitle}</h3>
-            <p class="type-p">
-              {copy.directionsText2}
-              <br />
-              {copy.directionsLine}
-            </p>
-          </div>
-        </a>
-        <a class="product-direction-card reveal" href={href('/products/substrates/')}>
-          <div class="material-photo peat-photo" role="img" aria-label={copy.directionsAriaLabel2}>
-            <span class="card-index">{copy.directionsLabel5}</span>
-            <span class="card-go">↗</span>
-          </div>
-          <div class="product-direction-copy">
-            <h3 class="type-h3">{copy.directionsCardTitle2}</h3>
-            <p class="type-p">
-              {copy.directionsText3}
-              <br />
-              {copy.directionsLine2}
-            </p>
-          </div>
-        </a>
-        <a class="product-direction-card reveal" href={href('/products/fiber/')}>
-          <div class="material-photo fiber-photo" role="img" aria-label={copy.directionsAriaLabel3}>
-            <span class="card-index">{copy.directionsLabel6}</span>
-            <span class="card-go">↗</span>
-          </div>
-          <div class="product-direction-copy">
-            <h3 class="type-h3">{copy.directionsCardTitle3}</h3>
-            <p class="type-p">
-              {copy.directionsText4}
-              <br />
-              {copy.directionsLine3}
-            </p>
-          </div>
-        </a>
-        <a class="product-direction-card reveal" href={href('/products/shell/')}>
-          <div class="material-photo shell-photo" role="img" aria-label={copy.directionsAriaLabel4}>
-            <span class="card-index">{copy.directionsLabel7}</span>
-            <span class="card-go">↗</span>
-          </div>
-          <div class="product-direction-copy">
-            <h3 class="type-h3">{copy.directionsCardTitle4}</h3>
-            <p class="type-p">
-              {copy.directionsText5}
-              <br />
-              {copy.directionsLine4}
-            </p>
-          </div>
-        </a>
+        {categories.map((category) => (
+          <a class="product-direction-card" href={href('/products/' + category.slug + '/')}>
+            <div class:list={['material-photo', 'material-photo--' + category.slug]}>
+              <ResponsiveImage
+                src={image('category-materials.png')}
+                alt={category.alt}
+                sizes="(max-width: 440px) 200vw, 100vw"
+                loading="lazy"
+              />
+              <span class="card-index">{category.label}</span>
+              <span class="card-go" aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <div class="product-direction-copy">
+              <h3>{category.title}</h3>
+              <p class="type-p">{text(category.description)}</p>
+            </div>
+          </a>
+        ))}
       </div>
-      <Link variant="text" class="text-link reveal" href={href('/products')}>
-        {copy.directionsLink} <span>↗</span>
+      <Link variant="text" class="text-link" href={href('/products/')}>
+        {copy.directionsLink}
+        <span aria-hidden="true">↗</span>
       </Link>
     </section>
     <section class="home-industries" aria-labelledby="industries-title">
-      <div class="industries-heading reveal">
-        <span class="section-label">{copy.homeIndustriesLabel}</span>
-        <h2 id="industries-title" class="type-h2">
-          {copy.homeIndustriesHeading}
-          <br />
-          <span>{copy.homeIndustriesLabel2}</span>
-        </h2>
-        <p class="type-p">{copy.homeIndustriesText}</p>
+      <div class="industries-heading">
+        <div>
+          <h2 id="industries-title" class="type-h2">
+            {copy.homeIndustriesHeading}
+            <br />
+            <span>{copy.homeIndustriesLabel2}</span>
+          </h2>
+          <p class="type-p">{text(copy.homeIndustriesText)}</p>
+        </div>
         <div class="industry-controls" aria-label={copy.homeIndustriesAriaLabel}>
           <button
             class="industry-arrow"
             type="button"
             data-industry-prev
             aria-label={copy.homeIndustriesAriaLabel2}
+            aria-controls="industry-track"
           >
             ←
           </button>
@@ -177,245 +214,73 @@ const href = (path: string) =>
             type="button"
             data-industry-next
             aria-label={copy.homeIndustriesAriaLabel3}
+            aria-controls="industry-track"
           >
             →
           </button>
         </div>
       </div>
       <div
+        id="industry-track"
         class="industry-track"
         role="region"
         tabindex="0"
         aria-label={copy.homeIndustriesAriaLabel4}
       >
-        <article class="industry-card reveal">
-          <span>001</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M13 18h14v12H13z" />
-              <path d="M27 22h7l4 5v3H27z" />
-              <path d="M16 34a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-              <path d="M34 34a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-              <path d="M17 14h12" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle}</h3>
-          <p class="type-p">{copy.homeIndustriesText2}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>002</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M14 18h20l-2 18H16z" />
-              <path d="M18 18a6 6 0 0 1 12 0" />
-              <path d="M18 28h12" />
-              <path d="M21 34h6" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle2}</h3>
-          <p class="type-p">{copy.homeIndustriesText3}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>003</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 31h24" />
-              <path d="M16 31V19h16v12" />
-              <path d="M20 19v-5h8v5" />
-              <path d="M18 37h12" />
-              <path d="M33 24h4v7" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle3}</h3>
-          <p class="type-p">{copy.homeIndustriesText4}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>004</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M24 36V20" />
-              <path d="M24 24c-7 0-10-4-10-9 7 0 10 4 10 9Z" />
-              <path d="M24 28c7 0 10-4 10-9-7 0-10 4-10 9Z" />
-              <path d="M12 38h24" />
-              <path d="M15 32h18" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle4}</h3>
-          <p class="type-p">{copy.homeIndustriesText5}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>005</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M14 35h20" />
-              <path d="M18 35V21" />
-              <path d="M30 35V21" />
-              <path d="M18 24c-5 0-7-3-7-7 5 0 7 3 7 7Z" />
-              <path d="M30 24c5 0 7-3 7-7-5 0-7 3-7 7Z" />
-              <path d="M24 35V16" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle5}</h3>
-          <p class="type-p">{copy.homeIndustriesText6}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>006</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M15 17h18v24H15z" />
-              <path d="M19 13h10v4H19z" />
-              <path d="M19 25h10" />
-              <path d="M19 31h7" />
-              <path d="M31 36l4 4 6-8" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle6}</h3>
-          <p class="type-p">{copy.homeIndustriesText7}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>007</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M18 19h12" />
-              <path d="M20 19v-6h8v6" />
-              <path d="M16 23h16l3 16H13z" />
-              <path d="M20 29c2 2 6 2 8 0" />
-              <path d="M22 35h4" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle7}</h3>
-          <p class="type-p">{copy.homeIndustriesText8}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>008</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M19 13h10" />
-              <path d="M21 13v10l-7 12a5 5 0 0 0 4 8h12a5 5 0 0 0 4-8l-7-12V13" />
-              <path d="M18 34h12" />
-              <path d="M22 39h4" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle8}</h3>
-          <p class="type-p">{copy.homeIndustriesText9}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>009</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M14 16c8 0 16 6 20 16" />
-              <path d="M14 24c7 0 13 4 17 10" />
-              <path d="M14 32h22" />
-              <path d="M14 38h18" />
-              <path d="M14 16v22" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle9}</h3>
-          <p class="type-p">{copy.homeIndustriesText10}</p>
-        </article>
-        <article class="industry-card reveal">
-          <span>010</span>
-          <div class="industry-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M13 17h22v22H13z" />
-              <path d="M18 17v-4h12v4" />
-              <path d="M18 25h12" />
-              <path d="M18 31h8" />
-              <path d="M32 32h5l-3 5" />
-            </svg>
-          </div>
-          <h3 class="type-h3">{copy.homeIndustriesCardTitle10}</h3>
-          <p class="type-p">{copy.homeIndustriesText11}</p>
-        </article>
+        {industries.map((industry, index) => (
+          <article class="industry-card">
+            <span class="industry-index">{String(index + 1).padStart(3, '0')}</span>
+            <div class="industry-icon" aria-hidden="true">
+              <img
+                src={withBase(image('industry-' + industry.icon + '.svg'))}
+                alt=""
+                width="58"
+                height="58"
+                loading="lazy"
+              />
+            </div>
+            <h3>{industry.title}</h3>
+            <p>{text(industry.description)}</p>
+          </article>
+        ))}
       </div>
     </section>
     <section class="ingredient-match" aria-labelledby="ingredient-title">
-      <div class="ingredient-copy reveal">
-        <span class="section-label">{copy.ingredientMatchLabel}</span>
+      <div class="ingredient-copy">
         <h2 id="ingredient-title" class="type-h2">
           {copy.ingredientMatchHeading}
         </h2>
-        <p class="type-p">{copy.ingredientMatchText}</p>
+        <p class="type-p">{text(copy.ingredientMatchText)}</p>
         <div class="ingredient-points">
-          <Tag>{copy.ingredientMatchLabel2}</Tag>
-          <Tag>{copy.ingredientMatchLabel3}</Tag>
-          <Tag>{copy.ingredientMatchLabel4}</Tag>
-          <Tag>{copy.ingredientMatchLabel5}</Tag>
-          <Tag>{copy.ingredientMatchLabel6}</Tag>
+          {[
+            copy.ingredientMatchLabel2,
+            copy.ingredientMatchLabel3,
+            copy.ingredientMatchLabel4,
+            copy.ingredientMatchLabel5,
+            copy.ingredientMatchLabel6
+          ].map((label) => (
+            <Tag>{label}</Tag>
+          ))}
         </div>
       </div>
-      <a class="ingredient-action reveal" href={href('#contacts')}>
-        <span>{copy.ingredientMatchLabel7}</span>
-        <b aria-hidden="true">↗</b>
-      </a>
+      <Button class="ingredient-action" href={href('#contacts')}>
+        {copy.ingredientMatchLabel7}
+      </Button>
     </section>
-    <section class="origin-section" id="origin">
+    <section class="origin-section" id="origin" aria-labelledby="origin-title">
       <div class="origin-image">
-        <img
-          src={withBase('/assets/images/common/home-coconut.webp')}
+        <ResponsiveImage
+          src={image('hero-coconut.png')}
+          class="origin-image__base"
+          alt=""
+          sizes={wideSizes}
+          loading="lazy"
+        />
+        <ResponsiveImage
+          src={image('coconut-palms.png')}
+          class="origin-image__palms"
           alt={copy.originSectionAlt}
-          width="1536"
-          height="1024"
+          sizes="(max-width: 800px) 130vw, 110vw"
           loading="lazy"
         />
         <span>
@@ -425,132 +290,83 @@ const href = (path: string) =>
         </span>
       </div>
       <div class="origin-copy">
-        <span class="section-label reveal">{copy.originSectionLabel2}</span>
-        <h2 class="reveal type-h2">
+        <h2 id="origin-title" class="type-h2">
           {copy.originSectionHeading}
           <br />
           <span>{copy.originSectionLabel3}</span>
         </h2>
-        <p class="origin-intro reveal type-p">{copy.originSectionText}</p>
-        <div class="origin-step reveal">
-          <span>01</span>
-          <div>
-            <h3 class="type-h3">{copy.originSectionCardTitle}</h3>
-            <p class="type-p">{copy.originSectionText2}</p>
+        <p class="origin-intro">{text(copy.originSectionText)}</p>
+        {originSteps.map((step, index) => (
+          <div class="origin-step">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3 class="type-h3">{step.title}</h3>
+              <p class="type-p">{text(step.description)}</p>
+            </div>
           </div>
-        </div>
-        <div class="origin-step reveal">
-          <span>02</span>
-          <div>
-            <h3 class="type-h3">{copy.originSectionCardTitle2}</h3>
-            <p class="type-p">{copy.originSectionText3}</p>
-          </div>
-        </div>
-        <div class="origin-step reveal">
-          <span>03</span>
-          <div>
-            <h3 class="type-h3">{copy.originSectionCardTitle3}</h3>
-            <p class="type-p">{copy.originSectionText4}</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
-    <section class="home-section quality-section" id="quality">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.qualitySectionLabel}</span>
-        <span class="section-note">{copy.qualitySectionLabel2}</span>
-      </div>
-      <div class="section-heading reveal">
-        <h2 class="type-h2">
+    <section class="home-section quality-section" id="quality" aria-labelledby="quality-title">
+      <div class="section-heading">
+        <h2 id="quality-title" class="type-h2">
           {copy.qualitySectionHeading}
           <br />
           <span>{copy.qualitySectionLabel3}</span>
         </h2>
-        <p class="type-p">
-          {copy.qualitySectionText}
-          <br />
-          {copy.qualitySectionLine}
-          <br />
-          {copy.qualitySectionLine2}
-        </p>
       </div>
       <div class="quality-grid">
-        <article class="reveal">
-          <span class="quality-index">01</span>
-          <h3 class="type-h3">{copy.qualitySectionCardTitle}</h3>
-          <p class="type-p">{copy.qualitySectionText2}</p>
-        </article>
-        <article class="reveal">
-          <span class="quality-index">02</span>
-          <h3 class="type-h3">{copy.qualitySectionCardTitle2}</h3>
-          <p class="type-p">{copy.qualitySectionText3}</p>
-        </article>
-        <article class="reveal">
-          <span class="quality-index">03</span>
-          <h3 class="type-h3">{copy.qualitySectionCardTitle3}</h3>
-          <p class="type-p">{copy.qualitySectionText4}</p>
-        </article>
+        {quality.map((item, index) => (
+          <article>
+            <span class="quality-index">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.title}</h3>
+            <p class="type-p">{text(item.description)}</p>
+          </article>
+        ))}
       </div>
-      <Link variant="text" href={href('/quality')} class="text-link reveal">
-        {copy.qualitySectionLink} <span>↗</span>
+      <Link variant="text" href={href('/quality/')} class="text-link">
+        {copy.qualitySectionLink}
+        <span aria-hidden="true">↗</span>
       </Link>
     </section>
-    <section class="material-banner">
-      <img
-        src={withBase('/assets/images/common/home-coconut.webp')}
+    <section class="material-banner" aria-labelledby="material-title">
+      <ResponsiveImage
+        src={image('hero-coconut.png')}
+        class="material-banner__photo"
         alt={copy.materialBannerAlt}
+        sizes="200vw"
         loading="lazy"
-        width="1536"
-        height="1024"
       />
-      <div>
-        <span class="section-label reveal">{copy.materialBannerLabel}</span>
-        <p class="reveal type-p">
+      <div class="material-banner__copy">
+        <span>{copy.materialBannerLabel}</span>
+        <h2 id="material-title" class="type-h2">
           {copy.materialBannerText}
           <br />
           <em>{copy.materialBannerEmphasis}</em>
-        </p>
+        </h2>
       </div>
     </section>
-    <section class="home-section supply-section" id="supply">
-      <div class="section-top reveal">
-        <span class="section-label">{copy.supplySectionLabel}</span>
-      </div>
-      <div class="section-heading reveal">
-        <h2 class="type-h2">
+    <section class="home-section supply-section" id="supply" aria-labelledby="supply-title">
+      <div class="section-heading">
+        <h2 id="supply-title" class="type-h2">
           {copy.supplySectionHeading}
           <br />
           <span>{copy.supplySectionLabel2}</span>
         </h2>
-        <p class="type-p">
-          {copy.supplySectionText}
-          <br />
-          {copy.supplySectionLine}
-          <br />
-          {copy.supplySectionLine2}
+        <p>
+          {text(
+            copy.supplySectionText + ' ' + copy.supplySectionLine + ' ' + copy.supplySectionLine2
+          )}
         </p>
       </div>
       <ol class="supply-grid">
-        <li class="reveal">
-          <span>01</span>
-          <h3 class="type-h3">{copy.supplySectionCardTitle}</h3>
-          <p class="type-p">{copy.supplySectionText2}</p>
-        </li>
-        <li class="reveal">
-          <span>02</span>
-          <h3 class="type-h3">{copy.supplySectionCardTitle2}</h3>
-          <p class="type-p">{copy.supplySectionText3}</p>
-        </li>
-        <li class="reveal">
-          <span>03</span>
-          <h3 class="type-h3">{copy.supplySectionCardTitle3}</h3>
-          <p class="type-p">{copy.supplySectionText4}</p>
-        </li>
-        <li class="reveal">
-          <span>04</span>
-          <h3 class="type-h3">{copy.supplySectionCardTitle4}</h3>
-          <p class="type-p">{copy.supplySectionText5}</p>
-        </li>
+        {supply.map((step, index) => (
+          <li>
+            <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3 class="type-h3">{step.title}</h3>
+            <p>{text(step.description)}</p>
+          </li>
+        ))}
       </ol>
     </section>
   </main>

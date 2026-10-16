@@ -1712,6 +1712,195 @@
         }
       ]
     },
+    "/assets/images/home/category-materials.png": {
+      "fingerprint": "7ef960764e4d262427245102532cd2c02546574d15262ad3c0f82c895e00b20e",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/category-materials.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 20268
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 10732
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 71384
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 38885
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 148600
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 81488
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 286336
+        },
+        {
+          "src": "/assets/images/generated/home/category-materials.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 161624
+        }
+      ]
+    },
+    "/assets/images/home/coconut-palms.png": {
+      "fingerprint": "674454b8678c85f731f0af4ba83f2b5a6d41dc16e9f8261d013404fd2333f75d",
+      "width": 1536,
+      "height": 688,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 143,
+          "bytes": 15658
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 143,
+          "bytes": 8358
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 287,
+          "bytes": 52360
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 287,
+          "bytes": 27918
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 430,
+          "bytes": 99422
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 430,
+          "bytes": 54417
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 645,
+          "bytes": 167938
+        },
+        {
+          "src": "/assets/images/generated/home/coconut-palms.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 645,
+          "bytes": 100265
+        }
+      ]
+    },
+    "/assets/images/home/hero-coconut.png": {
+      "fingerprint": "1afea54fcfbda89a31604170580578b8c22c3b73288659a4092004b3c2b7af82",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 9962
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 6335
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 32766
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 20547
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 61162
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 39455
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 109520
+        },
+        {
+          "src": "/assets/images/generated/home/hero-coconut.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 70780
+        }
+      ]
+    },
     "/assets/images/products/coconut-products.png": {
       "fingerprint": "ca535edbe2854302688d3c7e82406eb0ab95eead8fb74fd7e535de07a10b46a0",
       "width": 2171,
