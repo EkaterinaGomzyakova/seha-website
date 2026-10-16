@@ -1712,6 +1712,104 @@
         }
       ]
     },
+    "/assets/images/home/category-fiber.png": {
+      "fingerprint": "2fba16597e924846a40813c694ba4b9e7a6b9739f7efafabe41e302fdabdce07",
+      "width": 768,
+      "height": 512,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/category-fiber.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 23760
+        },
+        {
+          "src": "/assets/images/generated/home/category-fiber.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 12408
+        },
+        {
+          "src": "/assets/images/generated/home/category-fiber.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 88172
+        },
+        {
+          "src": "/assets/images/generated/home/category-fiber.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 46655
+        },
+        {
+          "src": "/assets/images/generated/home/category-fiber.png-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 119344
+        },
+        {
+          "src": "/assets/images/generated/home/category-fiber.png-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 512,
+          "bytes": 68545
+        }
+      ]
+    },
+    "/assets/images/home/category-food.png": {
+      "fingerprint": "e90270726ff37857f2cb6e02ed69f90e8b30b88b758d892fdce6084553f0ed58",
+      "width": 768,
+      "height": 512,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/category-food.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 10254
+        },
+        {
+          "src": "/assets/images/generated/home/category-food.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 6962
+        },
+        {
+          "src": "/assets/images/generated/home/category-food.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 27046
+        },
+        {
+          "src": "/assets/images/generated/home/category-food.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 21650
+        },
+        {
+          "src": "/assets/images/generated/home/category-food.png-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 34554
+        },
+        {
+          "src": "/assets/images/generated/home/category-food.png-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 512,
+          "bytes": 29392
+        }
+      ]
+    },
     "/assets/images/home/category-materials.png": {
       "fingerprint": "7ef960764e4d262427245102532cd2c02546574d15262ad3c0f82c895e00b20e",
       "width": 1536,
@@ -1772,6 +1870,104 @@
           "width": 1440,
           "height": 960,
           "bytes": 161624
+        }
+      ]
+    },
+    "/assets/images/home/category-shell.png": {
+      "fingerprint": "d48f3a5745d7bc83063bb3919f356cce7f5db0f5f1d9a43727619f3effa96fdc",
+      "width": 768,
+      "height": 512,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/category-shell.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 14288
+        },
+        {
+          "src": "/assets/images/generated/home/category-shell.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 8377
+        },
+        {
+          "src": "/assets/images/generated/home/category-shell.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 49378
+        },
+        {
+          "src": "/assets/images/generated/home/category-shell.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 29841
+        },
+        {
+          "src": "/assets/images/generated/home/category-shell.png-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 65672
+        },
+        {
+          "src": "/assets/images/generated/home/category-shell.png-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 512,
+          "bytes": 42993
+        }
+      ]
+    },
+    "/assets/images/home/category-substrates.png": {
+      "fingerprint": "4a840c32e681f9e58153bca6b049735c33d7eb94371f83c8816ba71a195e2ee8",
+      "width": 768,
+      "height": 512,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/category-substrates.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 23838
+        },
+        {
+          "src": "/assets/images/generated/home/category-substrates.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 12355
+        },
+        {
+          "src": "/assets/images/generated/home/category-substrates.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 73774
+        },
+        {
+          "src": "/assets/images/generated/home/category-substrates.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 41091
+        },
+        {
+          "src": "/assets/images/generated/home/category-substrates.png-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 96290
+        },
+        {
+          "src": "/assets/images/generated/home/category-substrates.png-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 512,
+          "bytes": 57333
         }
       ]
     },

@@ -165,11 +165,11 @@ const supply = [
       <div class="product-direction-grid">
         {categories.map((category) => (
           <a class="product-direction-card" href={href('/products/' + category.slug + '/')}>
-            <div class:list={['material-photo', 'material-photo--' + category.slug]}>
+            <div class="material-photo">
               <ResponsiveImage
-                src={image('category-materials.png')}
+                src={image('category-' + category.slug + '.png')}
                 alt={category.alt}
-                sizes="(max-width: 440px) 200vw, 100vw"
+                sizes="(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc((100vw - 88px) / 2), (max-width: 1280px) calc((100vw - 216px) / 2), (max-width: 1872px) calc((100vw - 468px) / 2), 702px"
                 loading="lazy"
               />
               <span class="card-index">{category.label}</span>

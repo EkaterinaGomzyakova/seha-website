@@ -7,7 +7,7 @@ export const siteTranslations = {
     production: 'Производство',
     quality: 'Качество',
     about: 'О компании',
-    offer: 'Получить предложение',
+    offer: 'Рассчитать поставку',
     language: 'Переключить язык',
     menu: 'Открыть меню',
     logoAlt: 'Сеха'
@@ -18,7 +18,7 @@ export const siteTranslations = {
     production: 'Manufacturing',
     quality: 'Quality & Certifications',
     about: 'About us',
-    offer: 'Request a quote',
+    offer: 'Request a delivery quote',
     language: 'Switch language',
     menu: 'Open menu',
     logoAlt: 'SEHA — international'

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { homePageCopy } from '../src/data/home-page.ts';
 
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 
@@ -26,7 +27,41 @@ for (const locale of ['ru', 'en']) {
           'href',
           `${base}/${locale}/products/${slug}/`
         );
+        const photo = page.locator(`.product-direction-card[href$="/${slug}/"] img`);
+        await expect(photo).toHaveCSS('object-fit', 'cover');
+        await expect(photo).toHaveAttribute('src', new RegExp(`category-${slug}\\.png-`));
       }
+      const banner = page.locator('.ingredient-match');
+      await expect(banner.locator('h2')).toHaveText(homePageCopy[locale].ingredientMatchHeading);
+      await expect(banner.locator('.ingredient-copy > p')).toHaveText(
+        homePageCopy[locale].ingredientMatchText
+      );
+      await expect(banner.locator('.ingredient-copy > p')).toHaveCSS('color', 'rgb(0, 77, 37)');
+      for (const button of [
+        page.locator('.home-hero-copy > .button'),
+        page.locator('.ingredient-action')
+      ]) {
+        const size = await button.boundingBox();
+        expect(size.height).toBe(width > 1280 ? 56 : 48);
+        await button.hover();
+        await expect(button).toHaveCSS('opacity', '1');
+      }
+      for (const tag of await banner.locator('.tag').all()) {
+        await tag.hover();
+        await expect(tag).toHaveCSS('color', 'rgb(0, 77, 37)');
+      }
+      const bannerContent = await banner.evaluate((element) => {
+        const copy = element.querySelector('.ingredient-copy').getBoundingClientRect();
+        const action = element.querySelector('.ingredient-action').getBoundingClientRect();
+        const description = element.querySelector('.ingredient-copy > p');
+        return {
+          overlap: !(copy.right <= action.left || copy.bottom <= action.top),
+          clipped:
+            description.scrollWidth > description.clientWidth ||
+            description.scrollHeight > description.clientHeight
+        };
+      });
+      expect(bannerContent).toEqual({ overlap: false, clipped: false });
       const assets = await page.locator('.home-main img').evaluateAll(async (images) => {
         images.forEach((image) => {
           image.loading = 'eager';

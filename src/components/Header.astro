@@ -36,10 +36,10 @@ const languageTarget = localizedPath(
       </a>
     ))}
   </nav>
-  <Button variant="primary" compact href={localizedPath('/#contacts', locale)}>
-    {copy.offer} <span aria-hidden="true">↗</span>
-  </Button>
   <LanguageSwitcher locale={locale} target={languageTarget} label={copy.language} />
+  <Button variant="primary" compact href={localizedPath('/#contacts', locale)}>
+    {copy.offer}
+  </Button>
   <button
     id="menu-toggle"
     class="menu-toggle"

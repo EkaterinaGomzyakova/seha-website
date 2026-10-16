@@ -78,6 +78,8 @@
 }
 .home-hero-copy > .button {
   width: fit-content;
+  min-height: 56px;
+  --focus-outline: 3px solid var(--color-yellow-brand);
 }
 .home-main > .directions {
   padding-top: 50px;
@@ -101,21 +103,14 @@
 }
 .home .material-photo img {
   position: absolute;
-  width: 200%;
-  height: 200%;
-  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   left: 0;
   top: 0;
 }
-.home .material-photo--substrates img {
-  left: -100%;
-}
-.home .material-photo--fiber img {
-  top: -100%;
-}
-.home .material-photo--shell img {
-  left: -100%;
-  top: -100%;
+.home .product-direction-card:hover .card-go {
+  transform: none;
 }
 .home .card-index {
   font-weight: 700;
@@ -225,24 +220,29 @@
 }
 .ingredient-match {
   display: grid;
-  grid-template-columns: minmax(0, 896.63fr) minmax(0, 425fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 425px);
   gap: 40px;
   align-items: end;
   border-radius: 22px;
   background: var(--color-yellow-brand);
+  color: var(--color-green-brand);
 }
 .home-main > .ingredient-match {
   width: min(1568px, var(--grid-content-width));
   min-height: 341.75px;
   padding: 55px 103.19px 44px;
 }
+.ingredient-copy {
+  min-width: 0;
+}
 .ingredient-copy h2 {
   max-width: 580px;
   margin-bottom: 18px;
 }
 .ingredient-copy p {
-  max-width: 570px;
+  max-width: 720px;
   color: var(--color-green-brand);
+  overflow-wrap: anywhere;
 }
 .ingredient-points {
   display: flex;
@@ -259,9 +259,29 @@
   font: 700 11px/1.2 var(--font-sans);
   text-transform: uppercase;
   letter-spacing: 0.09em;
+  white-space: normal;
+  max-width: 100%;
+}
+.ingredient-points .tag:hover {
+  color: var(--color-green-brand);
+  border-color: var(--color-green-brand);
 }
 .ingredient-action {
+  min-width: 0;
+  min-height: 56px;
   background: var(--color-green-brand);
+  color: var(--color-background-light);
+  text-align: center;
+}
+.home-main .button:hover {
+  opacity: 1;
+  transform: none;
+}
+.home-main .button--secondary:hover {
+  background: color-mix(in srgb, var(--color-yellow-brand) 88%, var(--color-green-brand));
+}
+.ingredient-action:hover {
+  background: var(--color-green-light);
 }
 .origin-section {
   display: grid;
@@ -443,6 +463,10 @@
   }
   .home-hero h1 {
     max-width: 460px;
+  }
+  .home-hero-copy > .button,
+  .ingredient-action {
+    min-height: 48px;
   }
   .home-hero-copy > p {
     max-width: 400px;

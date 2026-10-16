@@ -16,7 +16,7 @@
     "test:screenshots": "playwright test --grep @visual",
     "test:update": "playwright test --update-snapshots",
     "test:a11y": "playwright test -g \"accessibility\"",
-    "images:optimize": "node scripts/optimize-images.mjs",
+    "images:optimize": "node scripts/prepare-home-images.mjs && node scripts/optimize-images.mjs",
     "lint": "eslint . --max-warnings 0",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
