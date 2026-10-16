@@ -1,123 +1,76 @@
-/* components/footer.css: shared styles. */
+/* Unified footer — Figma 150:5668. No page-specific variants. */
 .quote-footer {
   --focus-outline: 3px solid var(--color-yellow-brand);
-}
-footer {
-  max-width: 1600px;
-  margin: auto;
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-  padding: 24px 4.2%;
-  gap: 36px;
-}
-footer a:not(.logo) {
-  font-size: 13px;
-}
-footer a:nth-last-child(2) {
-  margin-left: auto;
-}
-footer a:not(.logo):hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-@media (max-width: 800px) {
-  footer {
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .footer-note {
-    flex: 1;
-  }
-  footer a:nth-last-child(2) {
-    margin-left: 0;
-  }
-  footer a:last-child {
-    margin-left: auto;
-  }
-}
-@media (max-width: 480px) {
-  footer {
-    padding: 30px 22px;
-    gap: 24px 18px;
-  }
-  footer a:not(.logo) {
-    font-size: 12px;
-  }
-  footer a:last-child {
-    margin-left: 0;
-  }
-}
-.quote-footer {
-  display: block;
+  --footer-copy-size: 16px;
+  width: min(1880px, calc(100% - 32px));
+  margin: 0 auto 16px;
+  padding: 54px clamp(80px, 13.333vw, 256px);
+  border-radius: 40px;
   background: var(--color-green-brand);
   color: var(--color-background-light);
 }
 .quote-layout {
   display: grid;
-  justify-content: space-between;
+  grid-template-columns: minmax(0, 668fr) minmax(0, 388fr);
+  column-gap: clamp(48px, 16.25vw, 312px);
 }
-.quote-main h2 {
+.quote-main,
+.quote-contacts {
+  min-width: 0;
+}
+.quote-title {
   margin: 0 0 48px;
   color: var(--color-yellow-brand);
-  font-family: var(--font-sans);
-  font-weight: 900;
 }
-.quote-footer button:focus-visible,
-.quote-footer a:focus-visible {
-  outline: 2px solid var(--color-yellow-brand);
-  outline-offset: 5px;
+:lang(en) .quote-title > span:first-child {
+  display: block;
 }
 .quote-contacts {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
+.quote-kicker,
+.contact-item > span,
+.quote-brand__tagline,
+.quote-bottom > a {
+  color: var(--color-text-on-green);
+  font: 700 11px/1.2 var(--font-sans);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
 .quote-contact-list {
   display: flex;
   flex-direction: column;
-  gap: inherit;
-}
-.quote-kicker {
-  display: block;
-  color: var(--color-yellow-transparent);
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.99px;
-  text-transform: uppercase;
-  opacity: 0.5;
+  gap: 48px;
 }
 .contact-item {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.contact-item strong {
-  color: var(--color-yellow-brand);
-  font: 900 25px/1.15 var(--font-sans);
-  letter-spacing: -0.5px;
-}
-.contact-item > span {
-  color: var(--color-yellow-transparent);
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.99px;
-  text-transform: uppercase;
-}
+.contact-item strong,
 .quote-footer .contact-item a {
+  width: auto;
+  max-width: none;
   color: var(--color-yellow-brand);
-  font: 900 25px/1.15 var(--font-sans);
-  letter-spacing: -0.5px;
+  font: 900 var(--type-h3-size)/var(--type-h3-line-height) var(--font-sans);
+  letter-spacing: -0.02em;
   overflow-wrap: anywhere;
 }
 .contact-item p {
   margin: 0;
-  color: var(--color-yellow-transparent);
-  font: 500 16px/1.45 var(--font-sans);
+  color: var(--color-text-on-green);
+  font: 500 var(--footer-copy-size)/1.45 var(--font-sans);
 }
 .quote-bottom {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 50px;
   border-top: 2px solid var(--color-yellow-transparent);
 }
 .quote-brand {
@@ -125,164 +78,69 @@ footer a:not(.logo):hover {
   align-items: center;
   gap: 16px;
 }
-.quote-bottom .logo {
+.quote-brand .logo {
   width: 95px;
-  flex: 0 0 95px;
+  flex: 0 0 auto;
 }
-.quote-bottom > div > span {
-  color: var(--color-yellow-transparent);
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.99px;
-  text-transform: uppercase;
+.quote-brand__tagline {
+  max-width: 222px;
 }
-.quote-footer .quote-bottom > a:last-child {
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.99px;
-  text-transform: uppercase;
+.quote-bottom > a {
+  flex-shrink: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
-@media (max-width: 1100px) {
-  .quote-footer {
-    padding-left: 10vw;
-    padding-right: 10vw;
-  }
-  .quote-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(230px, 34%);
-  }
+.quote-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
-@media (max-width: 700px) {
-  .quote-footer {
-    width: calc(100% - 20px);
-    margin: 0 10px 10px;
-    padding: 34px 22px;
-    border-radius: 24px;
-  }
-  .quote-layout {
-    grid-template-columns: 1fr;
-    gap: 44px;
-  }
-  .quote-main h2 {
-    font-size: 48px;
-    letter-spacing: -2px;
-  }
-  .quote-contacts {
-    gap: 24px;
-  }
-  .quote-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 32px;
-    padding-top: 32px;
-  }
-  .quote-footer .quote-bottom > a:last-child {
-    margin-left: 0;
-  }
+.quote-footer :is(button, a):focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 5px;
 }
-@media (max-width: 420px) {
-  .quote-main h2 {
-    font-size: 42px;
-  }
-}
-footer .logo {
-  width: 130px;
-}
-@media (max-width: 800px) {
-  .quote-footer .quote-kicker {
-    font-size: 12px;
-  }
-}
-.quote-footer {
-  width: var(--grid-content-width, calc(100% - 32px));
-  max-width: 1880px;
-  margin: 0 auto 16px;
-  padding: 54px clamp(80px, 13.33vw, 256px);
-  border-radius: 40px;
-}
-.quote-layout {
-  grid-template-columns: minmax(0, 668px) minmax(250px, 394px);
-  gap: 80px;
-}
-.quote-main h2 {
-  font-size: clamp(52px, 3.75vw, 72px);
-  line-height: 1;
-  letter-spacing: -2.88px;
-}
-.quote-bottom {
-  margin-top: 48px;
-  padding-top: 50px;
-}
-
 @media (max-width: 1280px) {
   .quote-footer {
+    --footer-copy-size: 14px;
     padding: 48px 80px;
   }
   .quote-layout {
-    grid-template-columns: minmax(0, 532px) minmax(230px, 1fr);
-    gap: 56px;
+    grid-template-columns: minmax(0, 532fr) minmax(0, 388fr);
+    column-gap: clamp(32px, 13.125vw, 168px);
   }
-  .quote-main h2 {
-    font-size: 52px;
-    letter-spacing: -2.08px;
-  }
-}
-
-@media (max-width: 800px) {
-  .quote-footer {
-    padding: 48px 32px;
-    border-radius: 40px;
-  }
-  .quote-layout {
-    grid-template-columns: 1fr;
-    gap: 54px;
-  }
-  .quote-main h2 {
-    font-size: 52px;
-    letter-spacing: -2.08px;
+  .quote-title > span:first-child {
+    display: block;
   }
   .quote-bottom {
-    align-items: flex-end;
-  }
-}
-
-@media (max-width: 440px) {
-  .quote-footer {
-    padding: 40px 24px;
-    border-radius: 40px;
-  }
-  .quote-layout {
-    gap: 40px;
-  }
-  .quote-main h2 {
-    font-size: 32px;
-    letter-spacing: -1.28px;
-  }
-  .quote-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 32px;
-    margin-top: 32px;
+    margin-top: 40px;
     padding-top: 42px;
   }
 }
-
 @media (max-width: 800px) {
   .quote-footer {
-    width: var(--grid-content-width);
-    margin-left: auto;
-    margin-right: auto;
+    padding: 48px 32px;
+    margin-bottom: 0;
+    border-radius: 40px 40px 0 0;
+  }
+  .quote-layout {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 54px;
   }
 }
-.quote-footer .quote-kicker,
-.quote-footer .contact-item > span,
-.quote-footer .contact-item p,
-.quote-footer .quote-bottom > div > span,
-.quote-footer .quote-bottom > a:last-child {
-  color: var(--color-text-on-green);
-  opacity: 1;
-}
-
-.quote-footer .quote-bottom > a {
-  color: var(--color-yellow-brand);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+@media (max-width: 440px) {
+  .quote-footer {
+    width: 100%;
+    padding: 40px 24px;
+  }
+  .quote-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .quote-brand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .quote-brand__tagline br {
+    display: none;
+  }
 }

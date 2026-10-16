@@ -62,9 +62,6 @@
   line-height: 1;
   letter-spacing: 0;
 }
-.quote-footer .button:focus-visible {
-  outline-color: var(--color-yellow-brand);
-}
 @media (max-width: 800px) {
   .button--compact {
     padding: 11px 18px;

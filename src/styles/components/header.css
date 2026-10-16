@@ -404,9 +404,6 @@ body.menu-open {
   background: var(--color-green-brand, #004d25);
   color: var(--color-yellow-brand, #d9f400);
 }
-.quote-footer .language-switch {
-  color: var(--color-yellow-brand);
-}
 .site-nav a,
 .mobile-nav-links a {
   color: var(--color-black, #263223);

@@ -112,12 +112,6 @@
   min-height: 56px;
   height: 56px;
 }
-.page-product-category .quote-footer {
-  width: calc(100% - 32px);
-  max-width: 1880px;
-  padding: 54px 256px;
-  margin: 0 auto 16px;
-}
 .product-category--fiber .product-hero h1,
 .product-category--fiber .product-hero > p {
   width: min(1088px, 100%);
@@ -147,9 +141,6 @@
     min-height: 48px;
     height: 48px;
   }
-  .page-product-category .quote-footer {
-    padding: 48px 80px;
-  }
   .product-category--fiber .product-hero h1,
   .product-category--fiber .product-hero > p {
     max-width: 810px;
@@ -161,10 +152,6 @@
   }
   .product-grid-page {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .page-product-category .quote-footer {
-    width: var(--grid-content-width);
-    padding: 48px 32px;
   }
   .product-category--fiber .product-hero h1,
   .product-category--fiber .product-hero > p,
@@ -221,81 +208,5 @@
   .product-list-heading > span,
   .product-item > span {
     padding: 6px 8px;
-  }
-  .page-product-category .quote-footer {
-    width: 100%;
-    margin: 0;
-    padding: 40px 24px;
-    border-radius: 40px 40px 0 0;
-  }
-  .page-product-category .quote-layout {
-    grid-template-columns: 1fr;
-    gap: 54px;
-  }
-  .page-product-category .quote-main h2 {
-    --type-h2-size: 32px;
-    --type-h2-line-height: 1;
-    letter-spacing: -0.04em;
-  }
-  .page-product-category .quote-main h2 br:last-of-type {
-    display: none;
-  }
-  .page-product-category .form-grid {
-    grid-template-columns: 1fr;
-    row-gap: 32px;
-  }
-  .page-product-category .form-field input,
-  .page-product-category .form-field textarea {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-  .page-product-category .business-choices {
-    margin-top: 22px;
-    gap: 8px 4px;
-  }
-  .page-product-category .business-choices span.tag {
-    padding-inline: 22px;
-    font-size: 14px;
-  }
-  .page-product-category .consent {
-    font-size: 14px;
-    margin-top: 40px;
-  }
-  .page-product-category #quote-form > .button {
-    min-height: 48px;
-    height: 48px;
-  }
-  .page-product-category .quote-contacts {
-    gap: 32px;
-  }
-  .page-product-category .quote-contact-list {
-    gap: 48px;
-  }
-  .page-product-category .quote-kicker {
-    font-size: 11px;
-  }
-  .page-product-category .contact-item strong,
-  .page-product-category .contact-item a {
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-  }
-  .page-product-category .contact-item p {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-  .page-product-category .quote-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 32px;
-    margin-top: 40px;
-    padding-top: 42px;
-  }
-  .page-product-category .quote-brand {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .page-product-category .quote-brand .logo {
-    flex-basis: auto;
   }
 }

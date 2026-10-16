@@ -8,23 +8,17 @@ import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
 interface Props {
   locale: Locale;
-  variant?: 'default' | 'product-category' | 'product-overview';
 }
-const { locale, variant = 'default' } = Astro.props;
+const { locale } = Astro.props;
 const copy = getInterfaceCopy(locale);
-const isProductPage = variant !== 'default';
-const title =
-  variant === 'product-overview'
-    ? copy.title.replaceAll('<br />', ' ')
-    : isProductPage
-      ? copy.title.replaceAll('<br />', '<br /> ')
-      : copy.title;
 ---
 
 <footer class="quote-footer" id="contacts">
   <div class="quote-layout">
     <section class="quote-main" aria-labelledby="quote-title">
-      <h2 id="quote-title" class="type-h2" set:html={title} />
+      <h2 id="quote-title" class="quote-title type-h1">
+        <span>{copy.quoteTitleLead}</span> <span>{copy.quoteTitleTail}</span>
+      </h2>
       <ContactForm locale={locale} />
     </section>
     <aside class="quote-contacts" aria-labelledby="contacts-title">
@@ -34,7 +28,7 @@ const title =
       <div class="quote-contact-list">
         <div class="contact-item address">
           <strong>{copy.address}</strong>
-          <p class="type-p" set:html={copy.addressText} />
+          <p set:html={copy.addressText} />
         </div>
         <div class="contact-item">
           <span>{copy.phoneLabel}</span>
@@ -49,8 +43,8 @@ const title =
   </div>
   <div class="quote-bottom">
     <div class="quote-brand">
-      <Logo locale={locale} tone={isProductPage ? 'accent' : 'brand'} />
-      <span set:html={copy.brand} />
+      <Logo locale={locale} tone="accent" />
+      <span class="quote-brand__tagline" set:html={copy.brand} />
     </div>
     <Link href={localizedPath('/privacy/', locale)}>{copy.privacy.toUpperCase()}</Link>
   </div>

@@ -1,11 +1,11 @@
 /* pages/home.css: page-specific rules. */
-.home h2 {
+.home :where(main) h2 {
   font-size: clamp(38px, 4.7vw, 72px);
   line-height: 1.08;
   letter-spacing: -0.055em;
   margin: 0;
 }
-.home h2 span {
+.home :where(main) h2 span {
   color: var(--color-dark-gray);
 }
 .home em {
@@ -230,20 +230,6 @@
   color: var(--color-dark-gray);
   margin: 0;
 }
-.home .quote-main h2 {
-  color: var(--color-yellow-brand);
-  font-size: clamp(38px, 4.6vw, 68px);
-}
-.home .quote-main h2 span {
-  color: var(--color-background-light);
-}
-.home .quote-footer {
-  max-width: none;
-}
-.home .quote-layout {
-  max-width: 1400px;
-  margin: auto;
-}
 .quality-grid article:nth-child(2),
 .supply-grid li:nth-child(2) {
   transition-delay: 0.08s;
@@ -325,7 +311,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 38px;
   }
-  .home h2 {
+  .home :where(main) h2 {
     font-size: 46px;
   }
 }
@@ -356,7 +342,7 @@
       linear-gradient(180deg, var(--color-green-overlay), transparent 80%),
       linear-gradient(90deg, var(--color-green-overlay), transparent);
   }
-  .home h2 {
+  .home :where(main) h2 {
     font-size: 39px;
   }
   .origin-image {
@@ -397,12 +383,6 @@
   }
   .supply-grid p {
     font-size: 14px;
-  }
-  .home .quote-main h2 {
-    font-size: 38px;
-  }
-  .home .quote-main h2 br {
-    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -744,13 +724,13 @@
   font-style: normal;
   font-weight: 900;
 }
-.home h1,
-.home h2,
-.home h3 {
+.home :where(main) h1,
+.home :where(main) h2,
+.home :where(main) h3 {
   font-family: var(--font-sans);
   font-weight: 900;
 }
-.home p,
+.home :where(main) p,
 .home .product-direction-copy p,
 .home .industry-card p,
 .home .section-note {

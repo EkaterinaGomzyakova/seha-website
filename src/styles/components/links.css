@@ -44,8 +44,7 @@
   }
 }
 .link-component--phone,
-.link-component--email,
-.contact-item > a {
+.link-component--email {
   display: flex;
   align-items: center;
   width: 100%;
@@ -57,12 +56,10 @@
   transition: color 0.2s ease;
 }
 .link-component--phone:hover,
-.link-component--email:hover,
-.contact-item > a:hover {
+.link-component--email:hover {
   color: var(--color-yellow-transparent);
 }
-.link-component--privacy,
-.quote-bottom > a {
+.link-component--privacy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,8 +69,7 @@
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
-.link-component--privacy:hover,
-.quote-bottom > a:hover {
+.link-component--privacy:hover {
   color: var(--color-yellow-brand);
 }
 .link-component--menu {

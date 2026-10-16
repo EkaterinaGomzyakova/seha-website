@@ -20,7 +20,7 @@ const logo = (variant: string) =>
       src={withBase(`/assets/images/common/logo-${language}-accent.svg`)}
       alt={copy.logoAlt}
       width="95"
-      height="32"
+      height={locale === 'en' ? 29.989 : 30.331}
     />
   ) : (
     <picture>

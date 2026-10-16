@@ -16,7 +16,6 @@ interface Props {
   skipText: string;
   skipHref?: string;
   showFooter?: boolean;
-  footerVariant?: 'default' | 'product-category' | 'product-overview';
   image?: string;
 }
 
@@ -29,7 +28,6 @@ const {
   skipText,
   skipHref = '#main-content',
   showFooter = true,
-  footerVariant = 'default',
   image
 } = Astro.props;
 ---
@@ -52,7 +50,7 @@ const {
     </a>
     <Header locale={locale} />
     <slot />
-    {showFooter && <Footer locale={locale} variant={footerVariant} />}
+    {showFooter && <Footer locale={locale} />}
     <CookieBanner locale={locale} />
     <script>
       import '../scripts/site';

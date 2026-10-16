@@ -131,10 +131,14 @@ test('main routes have no serious accessibility violations', async ({ page }) =>
   }
 });
 
-test('home page visual baseline @visual', async ({ page }) => {
+test('home page visual baseline @visual', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(url('/en/'), { waitUntil: 'domcontentloaded', timeout: 90_000 });
   await page.evaluate(() => document.fonts.ready);
+  await testInfo.attach('footer-top', {
+    body: JSON.stringify({ y: Math.floor((await page.locator('footer').boundingBox()).y) }),
+    contentType: 'application/json'
+  });
   await expect(page).toHaveScreenshot('home-en-desktop.png', {
     fullPage: true,
     animations: 'disabled',
@@ -142,10 +146,14 @@ test('home page visual baseline @visual', async ({ page }) => {
   });
 });
 
-test('mobile menu visual baseline @visual', async ({ page }) => {
+test('mobile menu visual baseline @visual', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(url('/en/'), { waitUntil: 'domcontentloaded', timeout: 90_000 });
   await page.locator('.menu-toggle').click();
+  await testInfo.attach('footer-top', {
+    body: JSON.stringify({ y: Math.floor((await page.locator('footer').boundingBox()).y) }),
+    contentType: 'application/json'
+  });
   await expect(page).toHaveScreenshot('home-en-mobile-menu.png', {
     fullPage: true,
     animations: 'disabled',
