@@ -22,10 +22,10 @@ const ru = {
     'USDA Organic, EU Organic и NPOP Organic подтверждают соответствие органическим требованиям в релевантных системах сертификации. Применимость уточняется по конкретному продукту и партии.',
   qualityMapCardTitle2: 'Пищевая безопасность',
   qualityMapText3:
-    'Для пищевой линейки Laurico заявлены BRCGS, HACCP и FSSC 22000. Эти стандарты важны для производителей, ритейла, private label и дистрибьюторов пищевых ингредиентов.',
+    'Для пищевой линейки SEHA заявлены BRCGS, HACCP и FSSC 22000. Применимость уточняется по продукту, партии и документам площадки. Эти стандарты важны для пищевых производств, ритейла и private label.',
   qualityMapText4:
     'Fairtrade относится к этичной цепочке поставки и условиям работы с сельскохозяйственным сырьем. Его применимость уточняется по продукту, партии и документам поставки.',
-  qualityProofAlt: 'Производственный цех и склад упакованной продукции Laurico',
+  qualityProofAlt: 'Производственный цех и склад упакованной продукции SEHA',
   qualityProofLabel: 'Контроль партии',
   qualityProofHeading: 'Что проверяется',
   qualityProofLabel2: 'до отгрузки.',
@@ -94,10 +94,10 @@ const en = {
     'USDA Organic, EU Organic and NPOP Organic confirm compliance with organic requirements in the relevant certification systems. Applicability is clarified for the specific product and batch.',
   qualityMapCardTitle2: 'Food safety',
   qualityMapText3:
-    'BRCGS, HACCP and FSSC 22000 are stated for the Laurico food range. These standards are important for manufacturers, retail, private label and food ingredient distributors.',
+    'BRCGS, HACCP and FSSC 22000 are stated for the SEHA food range. Applicability is checked against the product, batch and facility documents. These standards matter for food manufacturing, retail and private label.',
   qualityMapText4:
     'Fairtrade relates to an ethical supply chain and working conditions for agricultural raw materials. Its applicability is clarified by product, batch and supply documents.',
-  qualityProofAlt: 'Laurico production workshop and packaged goods warehouse',
+  qualityProofAlt: 'SEHA production workshop and packaged goods warehouse',
   qualityProofLabel: 'Batch control',
   qualityProofHeading: 'What is checked',
   qualityProofLabel2: 'before shipment.',

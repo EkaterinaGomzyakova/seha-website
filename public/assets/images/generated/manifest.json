@@ -2286,62 +2286,62 @@
         }
       ]
     },
-    "/assets/images/production/laurico-facility.png": {
+    "/assets/images/production/food-facility.png": {
       "fingerprint": "0454878f97c0de8e99fd4d048de686494dfc7ab03c7905055a21b98d1f3314ae",
       "width": 1920,
       "height": 1080,
       "variants": [
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-320.webp",
+          "src": "/assets/images/generated/production/food-facility.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 180,
           "bytes": 11632
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-320.avif",
+          "src": "/assets/images/generated/production/food-facility.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 180,
           "bytes": 6651
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-640.webp",
+          "src": "/assets/images/generated/production/food-facility.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 360,
           "bytes": 33978
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-640.avif",
+          "src": "/assets/images/generated/production/food-facility.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 360,
           "bytes": 20182
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-960.webp",
+          "src": "/assets/images/generated/production/food-facility.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 540,
           "bytes": 60950
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-960.avif",
+          "src": "/assets/images/generated/production/food-facility.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 540,
           "bytes": 37743
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-1440.webp",
+          "src": "/assets/images/generated/production/food-facility.png-1440.webp",
           "format": "webp",
           "width": 1440,
           "height": 810,
           "bytes": 106120
         },
         {
-          "src": "/assets/images/generated/production/laurico-facility.png-1440.avif",
+          "src": "/assets/images/generated/production/food-facility.png-1440.avif",
           "format": "avif",
           "width": 1440,
           "height": 810,

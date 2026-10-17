@@ -127,7 +127,7 @@ const assurance = [
       </h2>
       <div class="branch-grid">
         <article class="branch-card">
-          <span>NM COCOS</span>
+          <span>{copy.productionSubstratesLabel}</span>
           <h3>{copy.productionBranchesCardTitle}</h3>
           <p>{text(copy.productionBranchesText2)}</p>
           <ul>
@@ -141,7 +141,7 @@ const assurance = [
           </ul>
         </article>
         <article class="branch-card branch-card-food">
-          <span>LAURICO NUTRACEUTICALS</span>
+          <span>{copy.productionFoodLabel}</span>
           <h3>{copy.productionBranchesCardTitle2}</h3>
           <p>{text(copy.productionBranchesText3)}</p>
           <ul>
@@ -207,7 +207,7 @@ const assurance = [
           loading="lazy"
         />
         <ResponsiveImage
-          src={image('laurico-facility')}
+          src={image('food-facility')}
           class="facility-image__photo"
           alt={copy.facilityShowcaseAlt}
           sizes="(max-width: 800px) 180vw, 110vw"

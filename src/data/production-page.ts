@@ -3,7 +3,7 @@ import type { Locale } from './translations';
 const ru = {
   title: 'Производство — Сеха',
   description:
-    'Производство кокосовых продуктов Сеха: сертифицированные площадки в Индии, пищевые продукты Laurico Nutraceuticals, субстраты, волокно, скорлупа и поставки для российского B2B-рынка.',
+    'Производство SEHA в Индии: две отдельные площадки для пищевых кокосовых продуктов и для субстратов, волокна и скорлупы. Контроль качества, упаковка и B2B-поставки в Россию.',
   skipText: 'К процессу',
   pageAriaLabel: 'Хлебные крошки',
   pageLink: 'Главная',
@@ -12,18 +12,20 @@ const ru = {
   productionHeroTitle: 'Процесс',
   productionHeroEmphasis: 'производства',
   productionHeroText:
-    'Сеха работает с производственными площадками NMCocos и Laurico Nutraceuticals, чтобы поставлять кокосовые продукты с понятным контролем сырья, переработки, упаковки и документов.',
-  productionBranchesHeading: 'Две площадки',
+    'SEHA объединяет две производственные площадки в Индии: отдельное производство пищевой продукции и площадку для кокосовых субстратов, волокна и скорлупы. На каждой контролируются сырьё, переработка, упаковка и подготовка партии к поставке.',
+  productionBranchesHeading: 'Две площадки SEHA',
   productionBranchesLabel3: 'для разных категорий',
+  productionSubstratesLabel: 'SEHA / СУБСТРАТЫ',
+  productionFoodLabel: 'SEHA / ПИЩЕВАЯ ЛИНИЯ',
   productionBranchesCardTitle: 'Субстраты, волокно и скорлупа',
   productionBranchesText2:
-    'Площадка для непищевой линейки: подготовка кокосового сырья, сортировка, сушка, контроль фракции, упаковка и экспортная отгрузка.',
+    'Площадка SEHA для субстратов, волокна и продуктов из скорлупы: подготовка кокосового сырья, сортировка, сушка и контроль фракции. Здесь продукцию прессуют, упаковывают и готовят к экспортной отгрузке.',
   productionBranchesItem: 'кокосовый торф и чипсы',
   productionBranchesItem2: 'материалы из волокна',
   productionBranchesItem3: 'продукты из скорлупы',
   productionBranchesCardTitle2: 'Пищевая кокосовая линейка',
   productionBranchesText3:
-    'Сертифицированная площадка для кокосовых масел, MCT, кокосовой стружки, сахара и других пищевых продуктов. Акцент — на пищевой безопасности, фильтрации, фракционировании и упаковке.',
+    'Отдельная площадка SEHA для кокосовых масел, MCT, стружки, сахара и других пищевых продуктов. Пищевые технологические процессы, фильтрация, фракционирование и фасовка выполняются отдельно от производства субстратов.',
   productionBranchesItem4: 'кокосовые масла',
   productionBranchesItem5: 'MCT и жидкое кокосовое масло',
   productionBranchesItem6: 'кокосовая стружка и сахар',
@@ -43,7 +45,7 @@ const ru = {
     'Сырье очищают, сортируют и подготавливают к дальнейшей переработке. Для закупщика это снижает риск нестабильной партии.',
   processSectionAlt2: 'Склад и оборудование для подготовки кокосового сырья',
   processSectionCaption2: 'Склад, сортировка и подготовка сырья',
-  processSectionCardTitle3: 'Пищевая переработка Laurico',
+  processSectionCardTitle3: 'Пищевая переработка SEHA',
   processSectionText4:
     'Для пищевой линейки используются отдельные процессы: холодное прессование, фильтрация, удаление влаги и фракционирование масел.',
   processSectionAlt3: 'Пищевой производственный цех со стальными емкостями',
@@ -64,11 +66,11 @@ const ru = {
   processSectionAlt6: 'Подготовленная партия кокосовых продуктов к поставке',
   processSectionCaption6: 'Комплект документов и условия отгрузки',
   facilityShowcaseAlt: 'Пищевой производственный цех со стальными емкостями и линиями фильтрации',
-  facilityShowcaseLabel: 'ПИЩЕВАЯ ЛИНИЯ LAURICO',
+  facilityShowcaseLabel: 'ПИЩЕВОЕ ПРОИЗВОДСТВО SEHA',
   facilityShowcaseHeading: 'Отдельная площадка',
   facilityShowcaseLabel2: 'для пищевой переработки.',
   facilityShowcaseText:
-    'Пищевая линейка производится на площадке Laurico Nutraceuticals в районе Pollachi, Tamil Nadu. Производство включает холодное прессование, удаление влаги, фильтрацию, молекулярную дистилляцию, хранение, фасовку и маркировку готовой продукции.',
+    'Пищевая линейка SEHA производится на отдельной площадке нашей группы компаний в Поллачи, штат Тамилнад, Индия. Производство включает холодное прессование, удаление влаги, фильтрацию, молекулярную дистилляцию, хранение, фасовку и маркировку готовой продукции.',
   facilityShowcaseTerm: 'Холодное прессование',
   facilityShowcaseLabel3: 'Кокосовое масло первого отжима, фильтрация и контроль влажности.',
   facilityShowcaseTerm2: 'MCT и фракционирование',
@@ -116,7 +118,7 @@ export type ProductionPageCopy = { readonly [Key in keyof typeof ru]: string };
 const en = {
   title: 'Coconut Product Manufacturing — Seha',
   description:
-    'Manufacturing of Seha coconut products: certified facilities in India, Laurico Nutraceuticals food products, substrates, fibre, shell and supply for the Russian B2B market.',
+    'SEHA manufacturing in India: two dedicated facilities for coconut food products and for substrates, fibre and shell products. Quality control, packaging and B2B supply to Russia.',
   skipText: 'Skip to the process',
   pageAriaLabel: 'Breadcrumbs',
   pageLink: 'Home',
@@ -125,18 +127,20 @@ const en = {
   productionHeroTitle: 'Manufacturing',
   productionHeroEmphasis: 'process',
   productionHeroText:
-    'Seha works with the NMCocos and Laurico Nutraceuticals manufacturing facilities to supply coconut products with clear controls over raw materials, processing, packaging and documents.',
-  productionBranchesHeading: 'Two facilities',
+    'SEHA operates two manufacturing facilities in India: a dedicated food production facility and a site for coconut substrates, fibre and shell products. Each follows controls for raw materials, processing, packaging and shipment preparation.',
+  productionBranchesHeading: 'Two SEHA facilities',
   productionBranchesLabel3: 'for different categories',
+  productionSubstratesLabel: 'SEHA / SUBSTRATES',
+  productionFoodLabel: 'SEHA / FOOD PRODUCTION',
   productionBranchesCardTitle: 'Substrates, fibre and shell',
   productionBranchesText2:
-    'A facility for the non-food range: coconut raw material preparation, sorting, drying, particle size control, packaging and export shipment.',
+    'The SEHA facility for substrates, fibre and coconut shell products prepares, sorts and dries raw materials, controls particle size, and presses and packs finished products for export shipment.',
   productionBranchesItem: 'coir pith and chips',
   productionBranchesItem2: 'fibre materials',
   productionBranchesItem3: 'shell products',
   productionBranchesCardTitle2: 'Coconut food product range',
   productionBranchesText3:
-    'A certified facility for coconut oils, MCT, desiccated coconut, sugar and other food products. The focus is on food safety, filtration, fractionation and packaging.',
+    'A dedicated SEHA facility for coconut oils, MCT, desiccated coconut, sugar and other food products. Food processing, filtration, fractionation and packing are kept separate from substrate manufacturing.',
   productionBranchesItem4: 'coconut oils',
   productionBranchesItem5: 'MCT and liquid coconut oil',
   productionBranchesItem6: 'desiccated coconut and sugar',
@@ -156,7 +160,7 @@ const en = {
     'Raw materials are cleaned, sorted and prepared for further processing. For buyers, this reduces the risk of an inconsistent batch.',
   processSectionAlt2: 'Warehouse and equipment for coconut raw material preparation',
   processSectionCaption2: 'Storage, sorting and raw material preparation',
-  processSectionCardTitle3: 'Laurico food processing',
+  processSectionCardTitle3: 'SEHA food processing',
   processSectionText4:
     'Separate processes are used for the food range: cold pressing, filtration, moisture removal and oil fractionation.',
   processSectionAlt3: 'Food production workshop with steel tanks',
@@ -177,11 +181,11 @@ const en = {
   processSectionAlt6: 'A prepared batch of coconut products ready for supply',
   processSectionCaption6: 'Document package and shipment terms',
   facilityShowcaseAlt: 'Food production workshop with steel tanks and filtration lines',
-  facilityShowcaseLabel: 'LAURICO FOOD LINE',
+  facilityShowcaseLabel: 'SEHA FOOD PRODUCTION',
   facilityShowcaseHeading: 'A dedicated facility',
   facilityShowcaseLabel2: 'for food processing.',
   facilityShowcaseText:
-    'The food range is manufactured at the Laurico Nutraceuticals facility in the Pollachi area of Tamil Nadu. Manufacturing includes cold pressing, moisture removal, filtration, molecular distillation, storage, packing and labelling of finished products.',
+    'The SEHA food range is manufactured at our group’s dedicated facility in Pollachi, Tamil Nadu, India. Manufacturing includes cold pressing, moisture removal, filtration, molecular distillation, storage, packing and labelling of finished products.',
   facilityShowcaseTerm: 'Cold pressing',
   facilityShowcaseLabel3: 'Virgin coconut oil, filtration and moisture control.',
   facilityShowcaseTerm2: 'MCT and fractionation',
