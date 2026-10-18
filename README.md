@@ -36,12 +36,11 @@ npm run check
 npm run lint
 npm run format:check
 npm run test:functional
-npm run test:visual
 ```
 
 Browser tests build fresh output and start their own preview. Install Chromium with `npx playwright install chromium` before the first run. Tests cover routes, image decoding, language consistency, no-JavaScript content, form responses, selected products, keyboard navigation, SEO and accessibility.
 
-Visual baselines are captured on Windows and verified by a separate Windows CI job. Ubuntu CI runs functional/accessibility checks both at the root and under `/seha-website/`. Never automatically accept changed baselines in CI; inspect intentional visual changes before updating them with `npm run test:update -- --grep "@visual"`.
+Ubuntu CI runs the basic functional/accessibility suite on desktop and mobile, both at the root and under `/seha-website/`. Pixel-by-pixel snapshots and repeated viewport matrices are not deployment gates; review visual changes manually against the approved designs.
 
 ```sh
 npm run images:optimize
@@ -61,10 +60,10 @@ Until a handler is configured, the form prepares a localized draft and offers co
 
 ## Publication
 
-GitHub checks pull requests and main-branch pushes. Deployment waits for type, lint, formatting, functional/accessibility and Windows visual checks, then builds with the actual Pages origin/base. There is no post-build text rewriting.
+GitHub checks pull requests and main-branch pushes. Deployment waits for type, lint, formatting, functional/accessibility checks, then builds with the actual Pages origin/base. There is no post-build text rewriting.
 
 An alternative static host serves `dist/`, preserves directory URLs and serves `404.html` with a 404 status for unknown paths. SEO includes localized canonical/hreflang, Open Graph, sitemap, robots, organization data and collection/item-list markup for categories. Error pages are not indexed.
 
 The storage notice records only dismissal in `localStorage`. No analytics/tracking scripts are installed. Adding analytics requires updating both its implementation and the policy text.
 
-Before public release, manually review RU/EN copy and company details, configure and test direct email delivery, and review the refreshed visual baselines against the approved designs.
+Before public release, manually review RU/EN copy and company details, configure and test direct email delivery, and review desktop and mobile layouts against the approved designs.

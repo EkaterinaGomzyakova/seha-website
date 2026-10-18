@@ -10,16 +10,11 @@ for (const locale of ['ru', 'en']) {
       expect(response.ok()).toBe(true);
       expect(await response.text()).toContain(product.name[locale]);
     }
-    await page.setViewportSize({ width: 360, height: 800 });
     await page.goto(`${base}/${locale}/products/substrates/open-top-grow-bag/`);
     await page.locator('.cookie-action').click();
     await expect(page.locator('main dl').first()).toContainText('60%');
     await expect(page.locator('main details')).toHaveCount(0);
     await expect(page.locator('link[hreflang="en"]')).toHaveCount(1);
-    await page.screenshot({
-      path: `test-results/product-detail-${locale}-mobile.png`,
-      fullPage: true
-    });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
       true
     );

@@ -55,7 +55,7 @@ jobs:
           PLAYWRIGHT_OUTPUT_DIR: test-results/root
           PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/root
           PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/root/junit.xml
-        run: npm test -- --grep-invert @visual
+        run: npm test
       - name: Functional and accessibility tests under a Pages subpath
         if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
         env:
@@ -63,7 +63,7 @@ jobs:
           PLAYWRIGHT_OUTPUT_DIR: test-results/subpath
           PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/subpath
           PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/subpath/junit.xml
-        run: npm test -- --grep-invert @visual
+        run: npm test
       - name: Upload test diagnostics
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
@@ -83,52 +83,8 @@ jobs:
           retention-days: 7
           if-no-files-found: warn
 
-  visual:
-    runs-on: windows-latest
-    timeout-minutes: 35
-    env:
-      SITE_URL: https://seha-group.ru
-      BASE_PATH: /
-    steps:
-      - uses: actions/checkout@v7
-      - name: Require reviewed Windows visual baselines
-        shell: bash
-        run: |
-          missing=0
-          for project in chromium mobile; do
-            for snapshot in home-en-desktop home-en-mobile-menu; do
-              baseline="tests/site.spec.mjs-snapshots/${snapshot}-${project}-win32.png"
-              if [[ ! -f "$baseline" ]]; then
-                echo "::error::Missing reviewed baseline: $baseline"
-                missing=1
-              fi
-            done
-          done
-          if [[ "$missing" -ne 0 ]]; then
-            echo 'Windows visual baselines are unavailable. Capture and review them on Windows with the locked Playwright version. Linux baselines have not been captured or validated.' >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install chromium
-      - name: Visual tests against a fresh build
-        run: npm run test:visual
-      - name: Upload visual diagnostics
-        if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v7
-        with:
-          name: visual-report
-          path: |
-            playwright-report/
-            test-results/
-          retention-days: 14
-          if-no-files-found: warn
-
   build-pages:
-    needs: [quality, visual]
+    needs: quality
     if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 15

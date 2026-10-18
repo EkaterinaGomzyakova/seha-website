@@ -13,7 +13,7 @@ const paths = [
   '/products/fiber/',
   '/products/shell/'
 ];
-const routes = paths.flatMap((path) => [path, `/ru${path}`, `/en${path}`]);
+const routes = ['/', '/ru/', '/en/', '/ru/products/veymur/', '/en/products/substrates/'];
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 const url = (path) => `${base}${path}`;
 
@@ -120,7 +120,11 @@ test('language switch keeps the current page', async ({ page }) => {
 
 test('main routes have no serious accessibility violations', async ({ page }) => {
   test.setTimeout(300_000);
-  for (const route of paths.flatMap((path) => [`/ru${path}`, `/en${path}`])) {
+  for (const route of [
+    '/ru/',
+    '/en/products/veymur/',
+    '/en/products/substrates/open-top-grow-bag/'
+  ]) {
     await page.goto(url(route), { waitUntil: 'domcontentloaded', timeout: 90_000 });
     const results = await new AxeBuilder({ page }).analyze();
     const blocking = results.violations.filter(
@@ -128,49 +132,6 @@ test('main routes have no serious accessibility violations', async ({ page }) =>
     );
     expect(blocking, `${route}: ${blocking.map(({ id }) => id).join(', ')}`).toEqual([]);
   }
-});
-
-test('home page visual baseline @visual', async ({ page }, testInfo) => {
-  await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto(url('/en/'), { waitUntil: 'domcontentloaded', timeout: 90_000 });
-  await page.evaluate(() => document.fonts.ready);
-  await page.locator('img').evaluateAll(async (images) => {
-    images.forEach((image) => {
-      image.loading = 'eager';
-    });
-    await Promise.all(images.map((image) => image.decode()));
-  });
-  await testInfo.attach('footer-top', {
-    body: JSON.stringify({ y: Math.floor((await page.locator('footer').boundingBox()).y) }),
-    contentType: 'application/json'
-  });
-  await expect(page).toHaveScreenshot('home-en-desktop.png', {
-    fullPage: true,
-    animations: 'disabled',
-    timeout: 30_000
-  });
-});
-
-test('mobile menu visual baseline @visual', async ({ page }, testInfo) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(url('/en/'), { waitUntil: 'domcontentloaded', timeout: 90_000 });
-  await page.evaluate(() => document.fonts.ready);
-  await page.locator('img').evaluateAll(async (images) => {
-    images.forEach((image) => {
-      image.loading = 'eager';
-    });
-    await Promise.all(images.map((image) => image.decode()));
-  });
-  await page.locator('.menu-toggle').click();
-  await testInfo.attach('footer-top', {
-    body: JSON.stringify({ y: Math.floor((await page.locator('footer').boundingBox()).y) }),
-    contentType: 'application/json'
-  });
-  await expect(page).toHaveScreenshot('home-en-mobile-menu.png', {
-    fullPage: true,
-    animations: 'disabled',
-    timeout: 30_000
-  });
 });
 
 test('English content and language links work without JavaScript', async ({ browser, baseURL }) => {

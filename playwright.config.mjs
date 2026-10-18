@@ -8,11 +8,10 @@ export default defineConfig({
   testDir: './tests',
   timeout: 120_000,
   fullyParallel: true,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 2,
   globalTimeout: 20 * 60 * 1000,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  updateSnapshots: 'none',
   outputDir: process.env.PLAYWRIGHT_OUTPUT_DIR || 'test-results',
   reporter: [
     [process.env.CI ? 'github' : 'list'],
