@@ -1,6 +1,12 @@
 import type { Locale } from './translations';
 
 const ru = {
+  manufacturingOrigin: 'Вся продукция производится группой компаний SEHA в Индии.',
+  farmTitle: 'От кокосовой плантации до готовой продукции',
+  farmText:
+    'Наши фермерские хозяйства в Индии — основа производственной цепочки SEHA. Выращивание кокосов, подготовка сырья и переработка связывают сельскохозяйственный опыт нашей группы с производством пищевых продуктов и субстратов.',
+  farmAlt: 'Реальная кокосовая плантация SEHA и здания фермы, вид с дрона',
+  farmVideoLink: 'Смотреть видео фермы',
   title: 'Сеха — кокосовые продукты для вашего бизнеса',
   description:
     'Органические кокосовые продукты Сеха. Пищевые ингредиенты, субстраты для выращивания, кокосовое волокно и скорлупа. Прямые поставки от производителя.',
@@ -141,6 +147,12 @@ const en = {
   homeHeroLine: 'products',
   homeHeroEmphasis: 'for your',
   homeHeroLine2: 'business',
+  manufacturingOrigin: 'All products are manufactured by SEHA Group of Companies, India.',
+  farmTitle: 'From coconut farm to finished product',
+  farmText:
+    'Our farms in India are the foundation of SEHA’s production chain. Coconut cultivation, raw material preparation and processing connect our group’s agricultural experience with the manufacture of food products and growing substrates.',
+  farmAlt: 'An aerial photograph of the SEHA coconut plantation and farm buildings',
+  farmVideoLink: 'Watch the farm video',
   homeHeroText: 'Organic coconut products for food manufacturing,',
   homeHeroLine3: 'horticulture and industry.',
   homeHeroLink: 'Choose products',

@@ -2286,6 +2286,69 @@
         }
       ]
     },
+    "/assets/images/home/seha-farm.webp": {
+      "fingerprint": "e58fb47d0a75c9ec91d5209ebd3d68c166dc3011356bb8f2f79bc842b5adaa20",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 19566
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 10340
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 76432
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 37754
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 168868
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 83809
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 318582
+        },
+        {
+          "src": "/assets/images/generated/home/seha-farm.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 165316
+        }
+      ]
+    },
     "/assets/images/production/food-facility.png": {
       "fingerprint": "0454878f97c0de8e99fd4d048de686494dfc7ab03c7905055a21b98d1f3314ae",
       "width": 1920,

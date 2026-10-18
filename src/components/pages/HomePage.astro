@@ -153,6 +153,27 @@ const supply = [
         </Button>
       </div>
     </section>
+    <p class="home-manufacturing-origin type-h3">{text(copy.manufacturingOrigin)}</p>
+    <section class="home-section home-farm" aria-labelledby="farm-title">
+      <div class="section-heading">
+        <h2 id="farm-title" class="type-h2">
+          {text(copy.farmTitle)}
+        </h2>
+        <p class="type-p">{text(copy.farmText)}</p>
+      </div>
+      <ResponsiveImage
+        src={image('seha-farm.webp')}
+        alt={copy.farmAlt}
+        sizes={wideSizes}
+        loading="lazy"
+      />
+      <Link
+        variant="text"
+        href="https://drive.google.com/file/d/1WalWQAXUD65L71zdU3z7Sti5yQkavX5n/view"
+      >
+        {copy.farmVideoLink}
+      </Link>
+    </section>
     <section class="home-section directions" id="directions" aria-labelledby="directions-title">
       <div class="section-heading">
         <h2 id="directions-title" class="type-h2">
