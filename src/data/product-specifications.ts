@@ -265,6 +265,136 @@ export function specificationsFor(product: ProductItem): Specification[] {
         )
       )
     );
+  } else if (product.id === 'grow-cube-sleeve') {
+    // Client-supplied suggested specifications; dimensions and volume await reconciliation.
+    rows.push(
+      field(
+        'Статус параметров',
+        'Specification status',
+        text(
+          'Предлагаемые параметры; согласовываются при заказе',
+          'Suggested specifications; agreed when ordering'
+        )
+      ),
+      field(
+        'Сырьё',
+        'Raw material',
+        text('Натуральный кокосовый торф', 'Natural coconut coir pith')
+      ),
+      field('Состав и соотношение компонентов', 'Composition and component ratio'),
+      field(
+        'Формат',
+        'Format',
+        text(
+          'Сформированный куб в защитной оболочке',
+          'Pre-formed cube enclosed in a protective sleeve'
+        )
+      ),
+      field(
+        'Размеры после увлажнения',
+        'Expanded dimensions',
+        text(
+          '10 × 10 × 10 см — предлагаемый стандарт; уточнить',
+          '10 × 10 × 10 cm — suggested standard; to be confirmed'
+        )
+      ),
+      field(
+        'Объём после увлажнения',
+        'Expanded volume',
+        text(
+          'Около 850–900 мл для указанного формата; уточнить соответствие размерам',
+          'Approximately 850–900 ml for the referenced format; consistency with dimensions to be confirmed'
+        )
+      ),
+      field('Сухая масса', 'Dry weight'),
+      field('pH', 'pH', text('Целевой диапазон: 5,5–6,5', 'Target range: 5.5–6.5')),
+      field(
+        'Электропроводность (EC)',
+        'Electrical conductivity (EC)',
+        text(
+          'Целевое значение ниже 0,5 мСм/см — для варианта с низким EC',
+          'Target below 0.5 mS/cm for the low-EC grade'
+        )
+      ),
+      field('Метод измерения EC', 'EC test method'),
+      field(
+        'Влажность при отгрузке',
+        'Moisture at dispatch',
+        text('Целевое значение: ниже 20%', 'Target below 20%')
+      ),
+      field(
+        'Фракция',
+        'Particle size',
+        text(
+          'Мелкий кокосовый торф, просеянный до согласованной фракции',
+          'Fine coir pith, screened to the agreed grade'
+        )
+      ),
+      field(
+        'Материал оболочки',
+        'Sleeve material',
+        text(
+          'УФ-стабилизированная плёнка LDPE, биоразлагаемая сетка или нетканый материал — в зависимости от исполнения',
+          'UV-treated LDPE film, biodegradable net or non-woven material, depending on product design'
+        )
+      ),
+      field(
+        'Посадочное отверстие',
+        'Planting hole',
+        text(
+          'Предварительно сформированное; размер и расположение — по заказу',
+          'Pre-formed; size and position customisable'
+        )
+      ),
+      field(
+        'Дренажные отверстия',
+        'Drainage holes',
+        text(
+          'Опционально, в зависимости от системы выращивания',
+          'Optional, according to the growing system'
+        )
+      ),
+      field(
+        'Обработка',
+        'Processing',
+        text(
+          'Промывка или промывка с буферизацией — согласно спецификации',
+          'Washed or washed and buffered, according to specification'
+        )
+      ),
+      field(
+        'Применение',
+        'Applications',
+        text(
+          'Проращивание семян, укоренение черенков, прививка, выращивание рассады и пересадка в тепличные системы',
+          'Seed germination, rooting cuttings, grafting, nursery propagation and greenhouse transplanting'
+        )
+      ),
+      field(
+        'Культуры',
+        'Crops',
+        text(
+          'Томаты, огурцы, перец, баклажаны, клубника и другие ягодные культуры',
+          'Tomatoes, cucumbers, peppers, aubergines, strawberries and other soft fruits'
+        )
+      ),
+      field(
+        'Варианты упаковки',
+        'Packaging options',
+        text(
+          'Коробки, отгрузка на палетах или экспортная упаковка по заказу',
+          'Cartons, palletised shipments or customised export packaging'
+        )
+      ),
+      field(
+        'Параметры под заказ',
+        'Customisation',
+        text(
+          'Размер и масса куба, состав смеси, оболочка, конфигурация отверстий и упаковка',
+          'Cube size and weight, coir blend, sleeve type, hole configuration and packaging'
+        )
+      )
+    );
   } else if (product.category === 'substrates') {
     rows.push(
       field(
