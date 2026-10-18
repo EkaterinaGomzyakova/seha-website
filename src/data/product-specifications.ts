@@ -118,7 +118,81 @@ export function specificationsFor(product: ProductItem): Specification[] {
       text('SEHA Group of Companies, Индия', 'SEHA Group of Companies, India')
     )
   ];
-  if (product.category === 'substrates') {
+  if (product.id === 'coconut-chips') {
+    // Client-supplied suggested specifications; grade-specific conditions must remain explicit.
+    rows.push(
+      field(
+        'Статус параметров',
+        'Specification status',
+        text(
+          'Предлагаемые параметры; согласовываются при заказе',
+          'Suggested specifications; agreed when ordering'
+        )
+      ),
+      field('Сырьё', 'Raw material', text('Натуральная кокосовая шелуха', 'Natural coconut husk')),
+      field(
+        'Состав',
+        'Composition',
+        text(
+          '100% чипсов из кокосовой шелухи при поставке чистых чипсов',
+          '100% coconut husk chips when supplied as pure chips'
+        )
+      ),
+      field(
+        'Внешний вид',
+        'Appearance',
+        text('Чипсы от коричневого до тёмно-коричневого цвета', 'Natural brown to dark-brown chips')
+      ),
+      field(
+        'Фракция',
+        'Particle size',
+        text('6–12 мм, 12–18 мм или по заказу', '6–12 mm, 12–18 mm or customised')
+      ),
+      field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
+      field(
+        'Электропроводность (EC)',
+        'Electrical conductivity (EC)',
+        text(
+          'Ниже 0,5 мСм/см — для согласованной промытой фракции с низким EC',
+          'Below 0.5 mS/cm for a specified low-EC washed grade'
+        )
+      ),
+      field('Метод измерения EC', 'EC test method'),
+      field('Влажность', 'Moisture content', text('Обычно 15–20%', 'Typically 15–20%')),
+      field(
+        'Обработка',
+        'Processing',
+        text(
+          'Промывка, просеивание и сортировка по фракциям — согласно заказу',
+          'Washed, screened and graded as ordered'
+        )
+      ),
+      field(
+        'Формат поставки',
+        'Supply format',
+        text(
+          'Прессованные блоки, россыпью или упаковка по заказу',
+          'Compressed blocks, loose chips or customised packaging'
+        )
+      ),
+      field(
+        'Применение',
+        'Applications',
+        text(
+          'Теплицы, гидропоника, питомники и приготовление субстратных смесей',
+          'Greenhouse cultivation, hydroponics, nurseries and substrate blending'
+        )
+      ),
+      field(
+        'Культуры',
+        'Crops',
+        text(
+          'Клубника и другие ягодные культуры, томаты, огурцы, орхидеи и декоративные растения',
+          'Strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants'
+        )
+      )
+    );
+  } else if (product.category === 'substrates') {
     rows.push(
       field(
         'Состав и соотношение компонентов',

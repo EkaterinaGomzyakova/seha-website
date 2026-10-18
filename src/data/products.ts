@@ -121,8 +121,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-husk-chips.png',
       'Кокосовые чипсы',
       'Coco Husk Chips',
-      'Крупные частицы кокосовой шелухи для улучшения аэрации и дренажа. Подходят для орхидей, гидропоники и специализированных культур.',
-      'Large coconut husk particles for improved aeration and drainage. Suitable for orchids, hydroponics, and specialty crops.',
+      'Фракционированные чипсы из кокосовой шелухи для аэрации корневой зоны, дренажа и регулирования влажности. Используются самостоятельно или в смеси с кокосовым торфом.',
+      'Graded coconut husk chips for root-zone aeration, drainage and moisture management. Suitable for standalone use or blending with coco pith.',
       'Coco Husk Chips',
       'Aeration'
     ],

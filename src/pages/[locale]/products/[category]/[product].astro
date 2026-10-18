@@ -81,7 +81,7 @@ const path = `/products/${item.category}/${item.slug}/`;
         ))}
       </dl>
     </section>
-    {item.category === 'substrates' && (
+    {item.category === 'substrates' && item.id !== 'coconut-chips' && (
       <section aria-labelledby="catalogue-title">
         <h2 id="catalogue-title" class="type-h3">
           {ru
