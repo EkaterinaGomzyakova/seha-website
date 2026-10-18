@@ -8,11 +8,10 @@ const paths = [
   '/quality/',
   '/privacy/',
   '/products/',
-  '/products/food/',
+  '/products/veymur/',
   '/products/substrates/',
   '/products/fiber/',
-  '/products/shell/',
-  '/products/veymur/'
+  '/products/shell/'
 ];
 const routes = paths.flatMap((path) => [path, `/ru${path}`, `/en${path}`]);
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
@@ -58,7 +57,7 @@ test.describe('published routes', () => {
 test('production metadata endpoints are published', async ({ request }) => {
   const sitemap = await request.get(url('/sitemap.xml'));
   expect(sitemap.ok()).toBeTruthy();
-  expect(await sitemap.text()).toContain(`${base}/en/products/food/`);
+  expect(await sitemap.text()).toContain(`${base}/en/products/veymur/`);
 
   const robots = await request.get(url('/robots.txt'));
   expect(robots.ok()).toBeTruthy();
@@ -112,10 +111,10 @@ test('mobile menu opens and closes', async ({ page }) => {
 });
 
 test('language switch keeps the current page', async ({ page }) => {
-  await page.goto(url('/en/products/food/'), { waitUntil: 'domcontentloaded' });
+  await page.goto(url('/en/products/veymur/'), { waitUntil: 'domcontentloaded' });
   await page.locator('[data-language-toggle]').click();
   await page.locator('[data-set-language="ru"]').click();
-  await expect(page).toHaveURL(/\/ru\/products\/food\/$/);
+  await expect(page).toHaveURL(/\/ru\/products\/veymur\/$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
 });
 
@@ -224,7 +223,7 @@ async function fillInquiry(page) {
 }
 
 test('product inquiry sends selection and shows success only after response', async ({ page }) => {
-  await page.goto(url('/en/products/food/'));
+  await page.goto(url('/en/products/veymur/'));
   await page.locator('[data-quote-product]').first().click();
   await expect(page.locator('[name="product"]')).not.toHaveValue('');
   await expect(page.locator('[name="productId"]')).not.toHaveValue('');
@@ -282,7 +281,7 @@ test('inquiry without a handler stays a draft and does not navigate away', async
 });
 
 test('category structured data describes a collection and 404 is not indexed', async ({ page }) => {
-  await page.goto(url('/en/products/food/'));
+  await page.goto(url('/en/products/veymur/'));
   const data = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
   expect(data['@graph'].some((item) => item['@type'] === 'CollectionPage')).toBeTruthy();
   expect(data['@graph'].some((item) => item['@type'] === 'Product')).toBeFalsy();

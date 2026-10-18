@@ -23,7 +23,7 @@ const wideSizes =
   '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc(100vw - 192px), calc(100vw - 272px)';
 const categories = [
   {
-    slug: 'food',
+    slug: 'veymur',
     title: copy.directionsCardTitle,
     label: copy.directionsLabel4,
     description: copy.directionsText2 + ' ' + copy.directionsLine,
@@ -167,12 +167,22 @@ const supply = [
         sizes={wideSizes}
         loading="lazy"
       />
-      <Link
-        variant="text"
-        href="https://drive.google.com/file/d/1WalWQAXUD65L71zdU3z7Sti5yQkavX5n/view"
+      <video
+        controls
+        playsinline
+        preload="none"
+        width="1280"
+        height="720"
+        poster={withBase('/assets/videos/home/seha-farm-poster.webp')}
+        aria-label={copy.farmVideoLink}
+        aria-describedby="farm-video-description"
       >
-        {copy.farmVideoLink}
-      </Link>
+        <source src={withBase('/assets/videos/home/seha-farm.mp4')} type="video/mp4" />
+        <a href={withBase('/assets/videos/home/seha-farm.mp4')}>{copy.farmVideoLink}</a>
+      </video>
+      <p id="farm-video-description" class="type-p">
+        {text(copy.farmVideoDescription)}
+      </p>
     </section>
     <section class="home-section directions" id="directions" aria-labelledby="directions-title">
       <div class="section-heading">
@@ -188,7 +198,9 @@ const supply = [
           <a class="product-direction-card" href={href('/products/' + category.slug + '/')}>
             <div class="material-photo">
               <ResponsiveImage
-                src={image('category-' + category.slug + '.png')}
+                src={image(
+                  'category-' + (category.slug === 'veymur' ? 'food' : category.slug) + '.png'
+                )}
                 alt={category.alt}
                 sizes="(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc((100vw - 88px) / 2), (max-width: 1280px) calc((100vw - 216px) / 2), (max-width: 1872px) calc((100vw - 468px) / 2), 702px"
                 loading="lazy"

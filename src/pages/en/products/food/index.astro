@@ -1,5 +1,6 @@
 ---
-import ProductCategoryPage from '@components/ProductCategoryPage.astro';
+import { localizedPath } from '../../../../lib/paths';
+return Astro.redirect(localizedPath('/products/veymur/', 'en'), 301);
 ---
 
-<ProductCategoryPage locale="en" category="food" />
+

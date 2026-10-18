@@ -3,7 +3,8 @@
   display: grid;
   gap: 24px;
 }
-.home-farm img {
+.home-farm img,
+.home-farm video {
   display: block;
   width: 100%;
   height: auto;

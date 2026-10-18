@@ -1,3 +1,4 @@
+import { products } from './products';
 /** Indexable routes, shared by sitemap generation and deployment checks. */
 export const publicRoutes = [
   '/',
@@ -6,9 +7,9 @@ export const publicRoutes = [
   '/quality/',
   '/privacy/',
   '/products/',
-  '/products/food/',
   '/products/fiber/',
   '/products/shell/',
   '/products/substrates/',
-  '/products/veymur/'
+  '/products/veymur/',
+  ...products.map((product) => `/products/${product.category}/${product.slug}/`)
 ] as const;

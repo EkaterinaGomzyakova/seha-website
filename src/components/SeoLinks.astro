@@ -1,7 +1,13 @@
 ---
 import { localizedPath, withBase } from '../lib/paths';
 import { siteContact } from '../data/site';
-import { productCategories, productsForCategory, type ProductCategorySlug } from '../data/products';
+import {
+  products,
+  productCategories,
+  productsForCategory,
+  type ProductCategorySlug
+} from '../data/products';
+import { publicRoutes } from '../data/routes';
 
 interface Props {
   locale: 'ru' | 'en';
@@ -20,6 +26,9 @@ const category = productCategories.find(
   (category) => normalizedPath === '/products/' + category.slug
 );
 const isCatalog = normalizedPath === '/products';
+const detailProduct = products.find(
+  (product) => normalizedPath === `/products/${product.category}/${product.slug}`
+);
 const absolute = (url: string) => new URL(url, site).toString();
 const canonical = absolute(is404 ? withBase('/404/') : localizedPath(normalizedPath, locale));
 const rootUrl = absolute(withBase('/'));
@@ -42,10 +51,12 @@ const absoluteImage = absolute(
 const routes = Object.keys(import.meta.glob('../pages/**/*.astro'));
 const alternateLocales = robotsNoindex
   ? []
-  : (['ru', 'en'] as const).filter((language) =>
-      routes.includes(
-        '../pages/' + language + (normalizedPath === '/' ? '' : normalizedPath) + '/index.astro'
-      )
+  : (['ru', 'en'] as const).filter(
+      (language) =>
+        publicRoutes.includes(`${normalizedPath === '/' ? '' : normalizedPath}/`) ||
+        routes.includes(
+          '../pages/' + language + (normalizedPath === '/' ? '' : normalizedPath) + '/index.astro'
+        )
     );
 const breadcrumbs = [
   { name: locale === 'en' ? 'Home' : 'Главная', url: absolute(localizedPath('/', locale)) },
@@ -65,8 +76,8 @@ const listItems = category
       position: index + 1,
       item: {
         '@type': 'Thing',
-        '@id': canonical + '#' + product.id,
-        url: canonical + '#' + product.id,
+        '@id': absolute(localizedPath(`/products/${product.category}/${product.slug}/`, locale)),
+        url: absolute(localizedPath(`/products/${product.category}/${product.slug}/`, locale)),
         name: localized(product.name),
         description: localized(product.description),
         image: absolute(withBase(product.image))
@@ -86,6 +97,22 @@ const listItems = category
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
+    ...(detailProduct
+      ? [
+          {
+            '@type': 'Product',
+            name: localized(detailProduct.name),
+            description: localized(detailProduct.description),
+            image: absoluteImage,
+            url: canonical,
+            manufacturer: {
+              '@type': 'Organization',
+              name: 'SEHA Group of Companies',
+              address: { '@type': 'PostalAddress', addressCountry: 'IN' }
+            }
+          }
+        ]
+      : []),
     {
       '@type': 'Organization',
       '@id': rootUrl + '#organization',

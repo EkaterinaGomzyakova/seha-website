@@ -3,9 +3,14 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 // Product names, packaging and image order from Figma 159:5519; descriptions are newly written editorial copy.
-const catalog = JSON.parse(
+const retailCatalog = JSON.parse(
   readFileSync(new URL('./fixtures/veymur-catalog.json', import.meta.url), 'utf8')
 );
+const foodCatalog = JSON.parse(
+  readFileSync(new URL('./fixtures/food-catalog.json', import.meta.url), 'utf8')
+);
+const existing = new Set(retailCatalog.map((product) => product.id.replace(/^veymur-/, '')));
+const catalog = [...retailCatalog, ...foodCatalog.filter((product) => !existing.has(product.id))];
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 
 for (const locale of ['ru', 'en']) {
@@ -21,7 +26,7 @@ for (const locale of ['ru', 'en']) {
       await expect(page.locator('.breadcrumbs [aria-current="page"]')).toHaveText(
         locale === 'ru' ? 'Пищевые продукты Veymur' : 'Veymur Food Products'
       );
-      await expect(cards).toHaveCount(5);
+      await expect(cards).toHaveCount(9);
       await expect(cards.locator('h3')).toHaveText(catalog.map((product) => product[locale].name));
       await expect(cards.locator('p')).toHaveText(
         catalog.map((product) => product[locale].description)
@@ -30,7 +35,7 @@ for (const locale of ['ru', 'en']) {
         catalog.map((product) => product[locale].label)
       );
       await expect(cards.locator('.button')).toHaveText(
-        Array(5).fill(locale === 'ru' ? 'Заказать' : 'Request a Quote')
+        Array(9).fill(locale === 'ru' ? 'Заказать' : 'Request a Quote')
       );
       await expect
         .poll(() => page.locator('.product-hero-icon img').evaluate((image) => image.currentSrc))
@@ -40,7 +45,7 @@ for (const locale of ['ru', 'en']) {
         await photo.scrollIntoViewIfNeeded();
         await photo.evaluate((image) => image.decode());
         expect(await photo.evaluate((image) => image.currentSrc)).toContain(
-          `/assets/images/generated/veymur/${product.image}-`
+          `/assets/images/generated/${product.id.startsWith('veymur-') ? 'veymur' : 'food'}/${product.image}-`
         );
         const bounds = await cards.nth(index).locator('figure').boundingBox();
         expect(Math.abs(bounds.width - bounds.height)).toBeLessThan(1);
@@ -116,7 +121,7 @@ for (const locale of ['ru', 'en']) {
     await expect(page.locator('h1')).toHaveText(
       locale === 'ru' ? 'Пищевые продукты Veymur' : 'Veymur Food Products'
     );
-    await expect(page.locator('.product-item')).toHaveCount(5);
+    await expect(page.locator('.product-item')).toHaveCount(9);
     const path = `${base}/${locale}/products/veymur/`;
     expect(new URL(await page.locator('link[rel="canonical"]').getAttribute('href')).pathname).toBe(
       path
@@ -131,7 +136,7 @@ for (const locale of ['ru', 'en']) {
     expect(await sitemap.text()).toContain(path);
     await page.goto(`${base}/${locale}/products/`);
     await page.locator(`.products-list a[href="${path}"]`).click();
-    await expect(page.locator('.product-item')).toHaveCount(5);
+    await expect(page.locator('.product-item')).toHaveCount(9);
     await page.goto(`${base}/${locale}/products/food/`);
     await expect(page.locator('.product-hero .button')).toHaveCount(0);
     await context.close();

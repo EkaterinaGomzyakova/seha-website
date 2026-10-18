@@ -2,10 +2,9 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
-const slugs = ['substrates', 'food', 'veymur', 'fiber', 'shell'];
+const slugs = ['substrates', 'veymur', 'fiber', 'shell'];
 const images = [
   'substrates/coconut-substrates.png',
-  'food/food-products.png',
   'veymur/veymur-products.png',
   'fiber/coir-products.png',
   'shell/coco-shell-products.png'
@@ -15,32 +14,23 @@ const copy = {
     heading: ['Один кокос', 'Больше возможностей'],
     titles: [
       'Кокосовые субстраты',
-      'Пищевые продукты',
       'Пищевые продукты Veymur',
       'Кокосовое волокно',
       'Кокосовая скорлупа'
     ],
     descriptions: [
       'Торф, чипсы, брикеты и диски для теплиц, гидропоники и рассады.',
-      'Ингредиенты для пищевой промышленности, масла, сахар, стружка.',
-      'Премиальные кокосовые пищевые продукты для розничной продажи.',
+      'Кокосовые пищевые продукты и ингредиенты для розницы и производства.',
       'Натуральное волокно и изделия для производства, ландшафта и защиты почвы.',
       'Сырьё для активированного угля, топлива, фильтрации и переработки.'
     ]
   },
   en: {
     heading: ['One coconut', 'More possibilities'],
-    titles: [
-      'Coconut Substrates',
-      'Food Products',
-      'Veymur Food Products',
-      'Coconut Fibre',
-      'Coconut Shell'
-    ],
+    titles: ['Coconut Substrates', 'Veymur Food Products', 'Coconut Fibre', 'Coconut Shell'],
     descriptions: [
       'Coir pith, chips, bricks, and discs for greenhouses, hydroponics, and seedlings.',
-      'Food ingredients, oils, sugar, and desiccated coconut for food manufacturing.',
-      'Premium coconut food products for retail.',
+      'Coconut food products and ingredients for retail and manufacturing.',
       'Natural fibre and fibre-based products for manufacturing, landscaping, and soil protection.',
       'Raw material for activated carbon, fuel, filtration, and processing.'
     ]
@@ -57,16 +47,10 @@ for (const locale of ['ru', 'en']) {
       await page.locator('.cookie-action').click();
       await page.evaluate(() => document.fonts.ready);
       await expect(page.locator('h1')).toHaveText(copy[locale].heading.join(''));
-      await expect(page.locator('.product-category')).toHaveCount(5);
+      await expect(page.locator('.product-category')).toHaveCount(4);
       await expect(page.locator('.product-category h2')).toHaveText(copy[locale].titles);
       await expect(page.locator('.product-category > p')).toHaveText(copy[locale].descriptions);
-      await expect(page.locator('.product-category-number')).toHaveText([
-        '01',
-        '02',
-        '03',
-        '04',
-        '05'
-      ]);
+      await expect(page.locator('.product-category-number')).toHaveText(['01', '02', '03', '04']);
       for (const [index, slug] of slugs.entries()) {
         const category = page.locator('.product-category').nth(index);
         await expect(category).toHaveAttribute('href', `${base}/${locale}/products/${slug}/`);
@@ -171,8 +155,8 @@ for (const locale of ['ru', 'en']) {
     await page.locator(`[data-set-language="${other}"]`).click();
     await expect(page).toHaveURL(new RegExp(`/${other}/products/$`));
     await expect(page.locator('.product-category h2')).toHaveText(copy[other].titles);
-    await page.locator('.product-category').nth(2).click();
+    await page.locator('.product-category').nth(1).click();
     await expect(page).toHaveURL(new RegExp(`/${other}/products/veymur/$`));
-    await expect(page.locator('.product-item')).toHaveCount(5);
+    await expect(page.locator('.product-item')).toHaveCount(9);
   });
 }

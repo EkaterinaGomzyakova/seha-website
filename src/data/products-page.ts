@@ -3,7 +3,7 @@ import type { Locale } from './translations';
 const ru = {
   title: 'Кокосовые продукты — Сеха',
   description:
-    'Каталог кокосовых продуктов Сеха: субстраты, пищевые ингредиенты, розничная линейка Veymur, волокно и скорлупа. Поставки для разных рынков и задач.',
+    'Каталог кокосовых продуктов Сеха: субстраты, пищевые продукты Veymur, волокно и скорлупа. Поставки для разных рынков и задач.',
   skipText: 'К каталогу',
   pageAriaLabel: 'Хлебные крошки',
   pageLink: 'Главная',
@@ -21,7 +21,7 @@ export type ProductsPageCopy = { readonly [Key in keyof typeof ru]: string };
 const en = {
   title: 'Coconut Products — Seha',
   description:
-    'Explore Seha coconut products: growing substrates, food ingredients, the Veymur retail range, coir fibre, and coconut shell. Supply for different markets and applications.',
+    'Explore Seha coconut products: growing substrates, Veymur food products, coir fibre, and coconut shell. Supply for different markets and applications.',
   skipText: 'Skip to the catalogue',
   pageAriaLabel: 'Breadcrumbs',
   pageLink: 'Home',

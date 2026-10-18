@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 
-for (const category of ['food', 'substrates', 'fiber', 'shell', 'veymur']) {
+for (const category of ['substrates', 'fiber', 'shell', 'veymur']) {
   for (const locale of ['ru', 'en']) {
     test(`mobile product layout: ${category} ${locale}`, async ({ page }) => {
       for (const width of [360, 390, 440, 441, 480, 560, 600, 800]) {

@@ -28,23 +28,6 @@ export interface ProductCategoryPageDefinition {
 const text = (ru: string, en: string): LocalizedValue => ({ ru, en });
 
 export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDefinition> = {
-  food: {
-    slug: 'food',
-    bodyClass: 'product-category--food',
-    path: '/products/food',
-    heroImage: '/assets/images/food/food-products.png',
-    section: text('02 / ПИЩЕВЫЕ ПРОДУКТЫ', '02 / FOOD PRODUCTS'),
-    breadcrumb: text('Пищевые продукты', 'Food Products'),
-    title: text('Пищевые продукты', 'Food Products'),
-    intro: text(
-      'Кокосовые продукты и ингредиенты для пищевых производств, HoReCa и оптовых поставок. Различные спецификации, форматы упаковки и объёмы партий для задач вашего бизнеса.',
-      'Coconut products and ingredients for food manufacturing, HoReCa, and wholesale supply. Various specifications, packaging formats, and order volumes to meet your business needs.'
-    ),
-    listLabel: text('для пищевого производства', 'for food manufacturing'),
-    listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Заказать', 'Request a Quote'),
-    items: productsForCategory('food')
-  },
   substrates: {
     slug: 'substrates',
     bodyClass: 'product-category--substrates',
@@ -88,11 +71,11 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     breadcrumb: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     intro: text(
-      'Кокосовые продукты Veymur для повседневной кухни: масла, сахар, стружка и молоко в розничной упаковке. Для приготовления напитков, выпечки, десертов и любимых блюд.',
-      'Veymur coconut products for everyday cooking: oils, sugar, desiccated coconut, and milk in retail packaging. For making drinks, baking, desserts, and your favourite dishes.'
+      'Кокосовые пищевые продукты Veymur: масла, сахар, стружка, молоко, вода, свежие кокосы и копра. Для розницы, пищевых производств и HoReCa.',
+      'Veymur coconut food products: oils, sugar, desiccated coconut, milk, water, fresh coconuts and copra. For retail, food manufacturing and HoReCa.'
     ),
-    listLabel: text('Розничные продукты', 'Retail Products'),
-    listTitle: text('Розничная<br>линейка', 'Retail<br>Product Range'),
+    listLabel: text('Пищевые продукты Veymur', 'Veymur Food Products'),
+    listTitle: text('Продукция<br>Veymur', 'Veymur<br>Product Range'),
     cta: text('Заказать', 'Request a Quote'),
     items: productsForCategory('veymur')
   },

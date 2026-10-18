@@ -7,6 +7,8 @@ const ru = {
     'Наши фермерские хозяйства в Индии — основа производственной цепочки SEHA. Выращивание кокосов, подготовка сырья и переработка связывают сельскохозяйственный опыт нашей группы с производством пищевых продуктов и субстратов.',
   farmAlt: 'Реальная кокосовая плантация SEHA и здания фермы, вид с дрона',
   farmVideoLink: 'Смотреть видео фермы',
+  farmVideoDescription:
+    'Короткая съёмка с дрона: ряды кокосовых пальм на плантации SEHA в Индии. Видео без звука.',
   title: 'Сеха — кокосовые продукты для вашего бизнеса',
   description:
     'Органические кокосовые продукты Сеха. Пищевые ингредиенты, субстраты для выращивания, кокосовое волокно и скорлупа. Прямые поставки от производителя.',
@@ -25,7 +27,7 @@ const ru = {
     'Подберем категорию, фракцию, упаковку и объем партии под вашу производственную или коммерческую задачу.',
   directionsAriaLabel: 'Кокосовая стружка',
   directionsLabel4: '01 / ДЛЯ ПИТАНИЯ',
-  directionsCardTitle: 'Пищевые продукты',
+  directionsCardTitle: 'Пищевые продукты Veymur',
   directionsText2: 'Кокосовые ингредиенты для производств,',
   directionsLine: 'HoReCa и дистрибуции.',
   directionsAriaLabel2: 'Кокосовый субстрат',
@@ -153,6 +155,8 @@ const en = {
     'Our farms in India are the foundation of SEHA’s production chain. Coconut cultivation, raw material preparation and processing connect our group’s agricultural experience with the manufacture of food products and growing substrates.',
   farmAlt: 'An aerial photograph of the SEHA coconut plantation and farm buildings',
   farmVideoLink: 'Watch the farm video',
+  farmVideoDescription:
+    'A short aerial view of rows of coconut palms on the SEHA plantation in India. This video has no audio.',
   homeHeroText: 'Organic coconut products for food manufacturing,',
   homeHeroLine3: 'horticulture and industry.',
   homeHeroLink: 'Choose products',
@@ -162,7 +166,7 @@ const en = {
     'We will select the category, particle size, packaging and batch volume to suit your manufacturing or commercial needs.',
   directionsAriaLabel: 'Desiccated coconut',
   directionsLabel4: '01 / FOR FOOD',
-  directionsCardTitle: 'Food products',
+  directionsCardTitle: 'Veymur food products',
   directionsText2: 'Coconut ingredients for manufacturers,',
   directionsLine: 'HoReCa and distribution.',
   directionsAriaLabel2: 'Coconut substrate',

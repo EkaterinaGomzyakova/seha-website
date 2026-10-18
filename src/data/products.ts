@@ -1,6 +1,6 @@
 import type { Locale } from './translations';
 
-export type ProductCategorySlug = 'food' | 'substrates' | 'fiber' | 'shell' | 'veymur';
+export type ProductCategorySlug = 'substrates' | 'fiber' | 'shell' | 'veymur';
 export interface LocalizedText {
   ru: string;
   en: string;
@@ -37,20 +37,11 @@ export const productCategories: ProductCategory[] = [
     image: '/assets/images/substrates/coconut-substrates.png'
   },
   {
-    slug: 'food',
-    title: text('Пищевые продукты', 'Food Products'),
-    description: text(
-      'Ингредиенты для пищевой промышленности, масла, сахар, стружка.',
-      'Food ingredients, oils, sugar, and desiccated coconut for food manufacturing.'
-    ),
-    image: '/assets/images/food/food-products.png'
-  },
-  {
     slug: 'veymur',
     title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     description: text(
-      'Премиальные кокосовые пищевые продукты для розничной продажи.',
-      'Premium coconut food products for retail.'
+      'Кокосовые пищевые продукты и ингредиенты для розницы и производства.',
+      'Coconut food products and ingredients for retail and manufacturing.'
     ),
     image: '/assets/images/veymur/veymur-products.png'
   },
@@ -84,98 +75,6 @@ type Row = [
   labelEn?: string
 ];
 const rows: Record<ProductCategorySlug, Row[]> = {
-  food: [
-    [
-      'fresh-coconut',
-      'fresh-coconut.png',
-      'Свежие кокосы',
-      'Fresh Coconut',
-      'Отборные кокосы из индийского региона Поллачи проходят контроль по размеру, зрелости и свежести. Подходят для переработки.',
-      'Selected coconuts from the Pollachi region of India are carefully inspected for size, maturity, and freshness. Suitable for further processing.',
-      'Fresh Coconut',
-      'Farm Selected'
-    ],
-    [
-      'coconut-copra',
-      'coconut-copra.png',
-      'Кокосовая копра',
-      'Coconut Copra',
-      'Сушёная мякоть зрелого кокоса с высоким содержанием масла. Применяется для производства кокосового масла и переработки.',
-      'Dried flesh of mature coconuts with a high oil content. Used for coconut oil production and further processing.',
-      'Coconut Copra',
-      'Oil Rich'
-    ],
-    [
-      'coconut-sugar',
-      'coconut-sugar.png',
-      'Кокосовый сахар',
-      'Coconut Sugar',
-      'Натуральный подсластитель, получаемый из сока кокосовой пальмы. Подвергается минимальной обработке, сохраняет полезные вещества.',
-      'A natural sweetener made from coconut palm sap. Minimally processed to retain its natural nutrients.',
-      'Coconut Sugar',
-      'Natural Sweetener'
-    ],
-    [
-      'desiccated-coconut',
-      'desiccated-coconut.png',
-      'Кокосовая стружка',
-      'Desiccated Coconut Powder',
-      'Производится из мелко натёртой и высушенной кокосовой мякоти. Используется в выпечке, кондитерских изделиях и пищевой промышленности.',
-      'Made from finely grated and dried coconut flesh. Used in bakery, confectionery, and food manufacturing.',
-      'Desiccated Coconut Powder',
-      'Fine Texture'
-    ],
-    [
-      'coconut-water',
-      'coconut-water.png',
-      'Кокосовая вода',
-      'Coconut Water',
-      'Производится из молодых кокосов, обладает освежающим вкусом. Используется в напитках и продуктах для здорового питания.',
-      'Made from young coconuts with a naturally refreshing taste. Used in beverages and health-focused food products.',
-      'Coconut Water',
-      'Pure Hydration'
-    ],
-    [
-      'coconut-milk',
-      'coconut-milk.png',
-      'Кокосовое молоко',
-      'Coconut Milk',
-      'Производится из мякоти зрелых кокосов путём измельчения и отжима. Используется в производстве напитков, десертов, соусов, выпечки и других пищевых продуктов.',
-      'Made from the flesh of mature coconuts through grinding and pressing. Used in beverages, desserts, sauces, bakery products, and other food applications.',
-      'Coconut Milk',
-      'Creamy Texture'
-    ],
-    [
-      'virgin-coconut-oil',
-      'virgin-coconut-oil.png',
-      'Нерафинированное кокосовое масло',
-      'Virgin Coconut Oil',
-      'Производится из свежей мякоти зрелых кокосов с сохранением естественного вкуса и аромата. Используется в пищевой промышленности и косметике.',
-      'Made from fresh mature coconut flesh, retaining its natural taste and aroma. Used in food manufacturing and cosmetics.',
-      'Virgin Coconut Oil',
-      'Natural Aroma'
-    ],
-    [
-      'rbd-coconut-oil',
-      'rbd-coconut-oil.png',
-      'Рафинированное кокосовое масло (RBD)',
-      'RBD Coconut Oil',
-      'Производится из кокосового сырья методом рафинации, отбеливания и дезодорации. Для производства выпечки и других пищевых продуктов.',
-      'Made from coconut-derived raw materials through refining, bleaching, and deodorization. Used in bakery products and other food applications.',
-      'RBD Coconut Oil',
-      'Neutral Taste'
-    ],
-    [
-      'mct-oil',
-      'mct-oil.png',
-      'MCT-масло',
-      'MCT Oil',
-      'Производится из среднецепочечных триглицеридов, получаемых из кокосового масла. Используется в функциональном, спортивном и специализированном питании.',
-      'Made from medium-chain triglycerides derived from coconut oil. Used in functional foods, sports nutrition, and specialized nutrition products.',
-      'MCT Oil',
-      'Fast Energy'
-    ]
-  ],
   substrates: [
     [
       'grow-bag',
@@ -358,8 +257,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'MCT Oil',
       'Масло на основе среднецепочечных триглицеридов кокосового масла. Подходит для добавления в напитки, смузи и готовые блюда.',
       'Oil made from medium-chain triglycerides derived from coconut oil. Suitable for adding to drinks, smoothies, and prepared dishes.',
-      '500\u00a0мл',
-      '500\u00a0ml'
+      '500 мл',
+      '500 ml'
     ],
     [
       'veymur-virgin-coconut-oil',
@@ -368,8 +267,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Virgin Coconut Oil',
       'Нерафинированное кокосовое масло с характерным кокосовым ароматом. Подходит для выпечки, десертов и приготовления блюд.',
       'Unrefined coconut oil with a distinctive coconut aroma. Suitable for baking, desserts, and everyday cooking.',
-      '500\u00a0мл',
-      '500\u00a0ml'
+      '500 мл',
+      '500 ml'
     ],
     [
       'veymur-coconut-sugar',
@@ -378,8 +277,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Coconut Sugar',
       'Сахар из сока соцветий кокосовой пальмы с карамельными нотами. Используется в напитках, выпечке и десертах.',
       'Sugar made from coconut palm blossom sap, with caramel notes. Use it in drinks, baking, and desserts.',
-      '500\u00a0г',
-      '500\u00a0g'
+      '500 г',
+      '500 g'
     ],
     [
       'veymur-desiccated-coconut',
@@ -388,8 +287,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Desiccated Coconut',
       'Высушенная измельчённая мякоть кокоса с натуральным вкусом и ароматом. Для выпечки, начинок и украшения десертов.',
       'Dried, shredded coconut flesh with a natural coconut flavour and aroma. For baking, fillings, and decorating desserts.',
-      '500\u00a0г',
-      '500\u00a0g'
+      '500 г',
+      '500 g'
     ],
     [
       'veymur-coconut-milk',
@@ -398,8 +297,48 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Coconut Milk',
       'Кокосовое молоко с мягким вкусом для напитков, каш, соусов и десертов. Удобный формат для домашней кухни и кулинарных экспериментов.',
       'Mild-tasting coconut milk for drinks, porridge, sauces, and desserts. A convenient format for home cooking and trying new recipes.',
-      '1\u00a0л',
-      '1\u00a0L'
+      '1 л',
+      '1 L'
+    ],
+    [
+      'fresh-coconut',
+      '/assets/images/food/fresh-coconut.png',
+      'Свежие кокосы',
+      'Fresh Coconut',
+      'Отборные кокосы из индийского региона Поллачи проходят контроль по размеру, зрелости и свежести. Подходят для переработки.',
+      'Selected coconuts from the Pollachi region of India are carefully inspected for size, maturity, and freshness. Suitable for further processing.',
+      'Fresh Coconut',
+      'Farm Selected'
+    ],
+    [
+      'coconut-copra',
+      '/assets/images/food/coconut-copra.png',
+      'Кокосовая копра',
+      'Coconut Copra',
+      'Сушёная мякоть зрелого кокоса с высоким содержанием масла. Применяется для производства кокосового масла и переработки.',
+      'Dried flesh of mature coconuts with a high oil content. Used for coconut oil production and further processing.',
+      'Coconut Copra',
+      'Oil Rich'
+    ],
+    [
+      'coconut-water',
+      '/assets/images/food/coconut-water.png',
+      'Кокосовая вода',
+      'Coconut Water',
+      'Производится из молодых кокосов, обладает освежающим вкусом. Используется в напитках и продуктах для здорового питания.',
+      'Made from young coconuts with a naturally refreshing taste. Used in beverages and health-focused food products.',
+      'Coconut Water',
+      'Pure Hydration'
+    ],
+    [
+      'rbd-coconut-oil',
+      '/assets/images/food/rbd-coconut-oil.png',
+      'Рафинированное кокосовое масло (RBD)',
+      'RBD Coconut Oil',
+      'Производится из кокосового сырья методом рафинации, отбеливания и дезодорации. Для производства выпечки и других пищевых продуктов.',
+      'Made from coconut-derived raw materials through refining, bleaching, and deodorization. Used in bakery products and other food applications.',
+      'RBD Coconut Oil',
+      'Neutral Taste'
     ]
   ],
   shell: [
@@ -442,13 +381,15 @@ export const products: ProductItem[] = (Object.keys(rows) as ProductCategorySlug
       slug,
       category,
       name: text(ru, en),
-      ...(category === 'veymur'
+      ...(slug.startsWith('veymur-')
         ? { quoteName: text(`${ru} Veymur, ${labelRu}`, `${en} Veymur, ${labelEn}`) }
         : {}),
       alt: text(ru, en),
       label: text(labelRu ?? ru, labelEn ?? en),
       description: text(descriptionRu, descriptionEn),
-      image: `/assets/images/${category}/${image.endsWith('.png') ? image : `${category}-${image}-photorealistic.png`}`
+      image: image.startsWith('/')
+        ? image
+        : `/assets/images/${category}/${image.endsWith('.png') ? image : `${category}-${image}-photorealistic.png`}`
     }))
 );
 export function localized<T extends LocalizedText>(value: T, locale: Locale) {

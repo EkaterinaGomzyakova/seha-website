@@ -16,20 +16,33 @@ for (const locale of ['ru', 'en']) {
         width > 1280 ? '72px' : width > 440 ? '52px' : '32px'
       );
       await expect(page.locator('footer')).toHaveCount(1);
+      const farmVideo = page.locator('.home-farm video');
+      await expect(farmVideo).toHaveAttribute('preload', 'none');
+      await farmVideo.evaluate(async (video) => {
+        video.muted = true;
+        await video.play();
+      });
+      await expect.poll(() => farmVideo.evaluate((video) => video.currentTime)).toBeGreaterThan(0);
+      await farmVideo.evaluate((video) => {
+        if (video instanceof HTMLVideoElement) video.pause();
+      });
       await expect(page.locator('.product-direction-card')).toHaveCount(4);
       await expect(page.locator('.industry-card')).toHaveCount(10);
       const cards = page.locator('.product-direction-card');
       const first = await cards.nth(0).boundingBox();
       const second = await cards.nth(1).boundingBox();
       expect(Math.abs(first.y - second.y) < 1).toBe(width > 440);
-      for (const slug of ['food', 'substrates', 'fiber', 'shell']) {
+      for (const slug of ['veymur', 'substrates', 'fiber', 'shell']) {
         await expect(page.locator(`.product-direction-card[href$="/${slug}/"]`)).toHaveAttribute(
           'href',
           `${base}/${locale}/products/${slug}/`
         );
         const photo = page.locator(`.product-direction-card[href$="/${slug}/"] img`);
         await expect(photo).toHaveCSS('object-fit', 'cover');
-        await expect(photo).toHaveAttribute('src', new RegExp(`category-${slug}\\.png-`));
+        await expect(photo).toHaveAttribute(
+          'src',
+          new RegExp(`category-${slug === 'veymur' ? 'food' : slug}\\.png-`)
+        );
       }
       const banner = page.locator('.ingredient-match');
       await expect(banner.locator('h2')).toHaveText(homePageCopy[locale].ingredientMatchHeading);
@@ -74,7 +87,7 @@ for (const locale of ['ru', 'en']) {
           height: image.getBoundingClientRect().height
         }));
       });
-      expect(assets).toHaveLength(18);
+      expect(assets).toHaveLength(19);
       for (const asset of assets) {
         expect(asset.loaded).toBe(true);
         expect(asset.src).toContain('/home/');
