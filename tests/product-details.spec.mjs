@@ -28,7 +28,16 @@ for (const locale of ['ru', 'en']) {
     await page.goto(`${base}/${locale}/products/food/`);
     await expect(page).toHaveURL(new RegExp(`/${locale}/products/veymur/`));
     await expect(page.locator('.product-item')).toHaveCount(9);
-    await page.locator('.product-item h3 a').first().click();
-    await expect(page.locator('main h1')).toBeVisible();
+    const productUrl = await page.locator('.product-item__link').first().getAttribute('href');
+    for (const target of ['figure', 'p']) {
+      await page.goto(`${base}/${locale}/products/veymur/`);
+      const area = page.locator(`.product-item ${target}`).first();
+      await area.scrollIntoViewIfNeeded();
+      const bounds = await area.boundingBox();
+      // Real pointer click: the stretched link must cover both the image and description.
+      await page.mouse.click(bounds.x + bounds.width / 2, bounds.y + bounds.height / 2);
+      await expect(page).toHaveURL(new RegExp(`${productUrl}$`));
+      await expect(page.locator('main h1')).toBeVisible();
+    }
   });
 }

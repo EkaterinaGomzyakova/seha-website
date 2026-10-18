@@ -8,7 +8,7 @@ const ru = {
   pageAriaLabel: 'Хлебные крошки',
   pageLink: 'Главная',
   pageLabel: 'Производство',
-  productionHeroAlt: 'Современная производственная площадка среди кокосовых пальм в Индии',
+  productionHeroAlt: 'Производство SEHA среди кокосовых пальм в Индии',
   productionHeroTitle: 'Процесс',
   productionHeroEmphasis: 'производства',
   productionHeroText:
@@ -123,7 +123,7 @@ const en = {
   pageAriaLabel: 'Breadcrumbs',
   pageLink: 'Home',
   pageLabel: 'Manufacturing',
-  productionHeroAlt: 'Modern manufacturing facility among coconut palms in India',
+  productionHeroAlt: 'SEHA manufacturing site among coconut palms in India',
   productionHeroTitle: 'Manufacturing',
   productionHeroEmphasis: 'process',
   productionHeroText:

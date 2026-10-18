@@ -3546,6 +3546,132 @@
         }
       ]
     },
+    "/assets/images/shared/plantation-palms.webp": {
+      "fingerprint": "8f955fecb79814125f50561b4e89a6c1bba175662a6a3ac0e771695c91b154c8",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 16328
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 8604
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 62946
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 31543
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 143378
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 72174
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 275520
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-palms.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 147949
+        }
+      ]
+    },
+    "/assets/images/shared/plantation-river.webp": {
+      "fingerprint": "cda7bfaf7c09c4042b7bf137b7cfb1d71995f0173df4618ebd772a786da9dae3",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 18342
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 9435
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 67346
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 34914
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 147022
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 75904
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 276042
+        },
+        {
+          "src": "/assets/images/generated/shared/plantation-river.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 148977
+        }
+      ]
+    },
     "/assets/images/shell/coco-shell-activated-carbon.png": {
       "fingerprint": "96d753658c3e1887578edc008b1c223fb9c86fadbc1773b69f429dd7abeb9a79",
       "width": 1254,

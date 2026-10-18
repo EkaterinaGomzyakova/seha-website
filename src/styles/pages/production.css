@@ -48,11 +48,10 @@
 .production-hero__photo {
   position: absolute;
   z-index: -3;
-  width: 104.88%;
-  height: 140.08%;
+  width: 100%;
+  height: 100%;
   max-width: none;
-  left: -2.44%;
-  top: 0.04%;
+  inset: 0;
   object-fit: cover;
 }
 .production-hero-wash {

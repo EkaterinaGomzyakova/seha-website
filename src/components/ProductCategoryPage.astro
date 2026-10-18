@@ -114,7 +114,10 @@ const sizes =
             </figure>
             <span>{bindShortWords(t(item.label), locale)}</span>
             <h3 class="type-h3">
-              <a href={localizedPath(`/products/${category}/${item.slug}/`, locale)}>
+              <a
+                class="product-item__link"
+                href={localizedPath(`/products/${category}/${item.slug}/`, locale)}
+              >
                 {bindShortWords(t(item.name), locale)}
               </a>
             </h3>

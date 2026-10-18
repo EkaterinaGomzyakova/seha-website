@@ -11,7 +11,7 @@ const ru = {
   aboutHeroTitle: 'О компании',
   aboutHeroText:
     'Сеха помогает российским компаниям закупать органические кокосовые продукты премиального качества: от пищевых ингредиентов до субстратов, волокна и скорлупы.',
-  aboutIntroAlt: 'Половинка кокоса с белой мякотью и волокнистой скорлупой',
+  aboutIntroAlt: 'Кокосовые пальмы на плантации SEHA в Индии',
   aboutIntroCaption: 'Пищевые, агро- и промышленные продукты из одного сырья.',
   aboutIntroHeading: 'Производим и',
   aboutIntroLabel2: 'поставляем кокосовые продукты',
@@ -45,7 +45,7 @@ const ru = {
   aboutShiftEmphasis: 'к коммерческому решению.',
   aboutShiftText:
     'Мы смотрим на кокосовую продукцию как на часть цепочки клиента: рецептуры, выращивания, производства, складской обработки и дальнейшей продажи.',
-  aboutShiftAlt: 'Производственное здание и территория переработки кокосовой продукции',
+  aboutShiftAlt: 'Производственные здания SEHA среди кокосовых плантаций в Индии',
   aboutTimelineLabel: 'Наш опыт',
   aboutTimelineLabel3: '1980-е',
   aboutTimelineCardTitle: 'Начало в кокосовой отрасли',
@@ -94,7 +94,7 @@ const en = {
   aboutHeroTitle: 'About us',
   aboutHeroText:
     'Seha helps Russian companies purchase premium organic coconut products: from food ingredients to substrates, fibre and shell.',
-  aboutIntroAlt: 'A coconut half with white flesh and a fibrous shell',
+  aboutIntroAlt: 'Coconut palms on the SEHA plantation in India',
   aboutIntroCaption: 'Food, agricultural and industrial products from a single raw material.',
   aboutIntroHeading: 'We produce and',
   aboutIntroLabel2: 'supply coconut products',
@@ -128,7 +128,7 @@ const en = {
   aboutShiftEmphasis: 'to a commercial solution.',
   aboutShiftText:
     'We view coconut products as part of the customer’s chain: formulation, growing, manufacturing, warehouse handling and onward sale.',
-  aboutShiftAlt: 'Manufacturing building and coconut processing site',
+  aboutShiftAlt: 'SEHA manufacturing buildings among coconut plantations in India',
   aboutTimelineLabel: 'Our experience',
   aboutTimelineLabel3: '1980s',
   aboutTimelineCardTitle: 'Entering the coconut industry',

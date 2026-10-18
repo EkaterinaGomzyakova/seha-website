@@ -4,6 +4,7 @@ import Button from '../ui/Button.astro';
 import Link from '../ui/Link.astro';
 import Tag from '../ui/Tag.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
+import BackgroundVideo from '../BackgroundVideo.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { bindShortWords } from '../../lib/typography';
 import { homePageCopy } from '../../data/home-page';
@@ -122,21 +123,14 @@ const supply = [
   path="/"
   title={copy.title}
   description={copy.description}
-  image={image('hero-coconut.png')}
+  image={image('seha-farm.webp')}
   bodyClass="home"
   skipText={copy.skipText}
   skipHref={href('#directions')}
 >
   <main class="home-main">
     <section class="home-hero" aria-labelledby="home-title">
-      <ResponsiveImage
-        src={image('hero-coconut.png')}
-        class="home-hero-photo"
-        alt={copy.homeHeroAlt}
-        sizes={wideSizes}
-        loading="eager"
-        fetchpriority="high"
-      />
+      <BackgroundVideo locale={locale} />
       <div class="home-hero-wash" aria-hidden="true"></div>
       <div class="home-hero-copy">
         <h1 id="home-title" class="type-h1">
@@ -153,13 +147,12 @@ const supply = [
         </Button>
       </div>
     </section>
-    <p class="home-manufacturing-origin type-h3">{text(copy.manufacturingOrigin)}</p>
     <section class="home-section home-farm" aria-labelledby="farm-title">
       <div class="section-heading">
         <h2 id="farm-title" class="type-h2">
           {text(copy.farmTitle)}
         </h2>
-        <p class="type-p">{text(copy.farmText)}</p>
+        <p class="type-p">{text(copy.manufacturingOrigin + ' ' + copy.farmText)}</p>
       </div>
       <ResponsiveImage
         src={image('seha-farm.webp')}
@@ -167,22 +160,6 @@ const supply = [
         sizes={wideSizes}
         loading="lazy"
       />
-      <video
-        controls
-        playsinline
-        preload="none"
-        width="1280"
-        height="720"
-        poster={withBase('/assets/videos/home/seha-farm-poster.webp')}
-        aria-label={copy.farmVideoLink}
-        aria-describedby="farm-video-description"
-      >
-        <source src={withBase('/assets/videos/home/seha-farm.mp4')} type="video/mp4" />
-        <a href={withBase('/assets/videos/home/seha-farm.mp4')}>{copy.farmVideoLink}</a>
-      </video>
-      <p id="farm-video-description" class="type-p">
-        {text(copy.farmVideoDescription)}
-      </p>
     </section>
     <section class="home-section directions" id="directions" aria-labelledby="directions-title">
       <div class="section-heading">
@@ -303,17 +280,10 @@ const supply = [
     <section class="origin-section" id="origin" aria-labelledby="origin-title">
       <div class="origin-image">
         <ResponsiveImage
-          src={image('hero-coconut.png')}
+          src="/assets/images/shared/plantation-palms.webp"
           class="origin-image__base"
-          alt=""
-          sizes={wideSizes}
-          loading="lazy"
-        />
-        <ResponsiveImage
-          src={image('coconut-palms.png')}
-          class="origin-image__palms"
           alt={copy.originSectionAlt}
-          sizes="(max-width: 800px) 130vw, 110vw"
+          sizes={wideSizes}
           loading="lazy"
         />
         <span>
@@ -363,13 +333,7 @@ const supply = [
       </Link>
     </section>
     <section class="material-banner" aria-labelledby="material-title">
-      <ResponsiveImage
-        src={image('hero-coconut.png')}
-        class="material-banner__photo"
-        alt={copy.materialBannerAlt}
-        sizes="200vw"
-        loading="lazy"
-      />
+      <BackgroundVideo locale={locale} />
       <div class="material-banner__copy">
         <span>{copy.materialBannerLabel}</span>
         <h2 id="material-title" class="type-h2">

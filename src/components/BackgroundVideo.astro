@@ -1,0 +1,98 @@
+---
+import { withBase } from '../lib/paths';
+import type { Locale } from '../data/translations';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const labels =
+  locale === 'ru'
+    ? { play: 'Включить видео', pause: 'Остановить видео' }
+    : { play: 'Play video', pause: 'Pause video' };
+---
+
+<div class="background-video" data-background-video>
+  <video
+    muted
+    loop
+    playsinline
+    preload="none"
+    aria-hidden="true"
+    width="1280"
+    height="720"
+    poster={withBase('/assets/videos/home/seha-farm-poster.webp')}
+    data-src={withBase('/assets/videos/home/seha-farm.mp4')}
+  ></video>
+  <button type="button" hidden data-play={labels.play} data-pause={labels.pause}>
+    {labels.play}
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-background-video]').forEach((root) => {
+    const video = root.querySelector('video')!;
+    const button = root.querySelector('button')!;
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let pausedByUser = false;
+    let visible = false;
+    const play = async () => {
+      if (!video.getAttribute('src')) video.src = video.dataset.src!;
+      video.muted = true;
+      try {
+        await video.play();
+      } catch {
+        /* Poster remains visible if playback is blocked. */
+      }
+    };
+    const sync = () => {
+      button.textContent = video.paused ? button.dataset.play! : button.dataset.pause!;
+    };
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      pausedByUser = !video.paused;
+      if (video.paused) void play();
+      else video.pause();
+    });
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible && !pausedByUser && !reducedMotion.matches) void play();
+      else video.pause();
+    }).observe(video);
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) video.pause();
+      else if (visible && !pausedByUser) void play();
+    });
+  });
+</script>
+
+<style>
+  .background-video {
+    display: contents;
+  }
+  .background-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .background-video button {
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+    z-index: 2;
+    padding: 10px 14px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: #004d25;
+    color: #fff;
+    cursor: pointer;
+    font: 500 12px/1.4 var(--font-sans);
+  }
+  .background-video button[hidden] {
+    display: none;
+  }
+</style>

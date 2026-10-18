@@ -38,6 +38,9 @@
   width: min(1432px, var(--grid-content-width));
 }
 .about-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   min-height: 514px;
   border-radius: 22px;
   background: var(--color-green-brand);
@@ -47,6 +50,21 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 80px;
+}
+.about-hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 38, 26, 0.7);
 }
 .about-hero p {
   max-width: 673px;
@@ -70,9 +88,9 @@
 }
 .about-photo__image {
   position: absolute;
-  left: -56.65%;
+  left: 0;
   top: 0;
-  width: 156.65%;
+  width: 100%;
   height: 100%;
   max-width: none;
   object-fit: cover;
@@ -212,17 +230,10 @@
   max-width: none;
   object-fit: cover;
 }
-.about-shift-image__base {
-  height: 100%;
-  width: 198.1%;
-  top: 0;
-  left: -49.05%;
-}
 .about-shift-image__photo {
-  height: 110.33%;
-  width: 161.86%;
-  top: -5.16%;
-  left: -30.93%;
+  height: 100%;
+  width: 100%;
+  inset: 0;
 }
 .about-timeline {
   padding-bottom: 52.8px;
@@ -458,10 +469,6 @@
     min-height: 0;
     height: 480px;
   }
-  .about-photo__image {
-    left: -20%;
-    width: 120%;
-  }
   .about-display-title {
     max-width: 650px;
   }
@@ -486,11 +493,6 @@
   .about-shift-image {
     min-height: 0;
     height: 440px;
-  }
-  .about-shift-image__photo {
-    inset: -5.16% auto auto -30.93%;
-    height: 110.33%;
-    width: 161.86%;
   }
   .about-clients {
     grid-template-columns: minmax(0, 1fr);
