@@ -10,36 +10,64 @@ const field = (ru: string, en: string, value = pending): Specification => ({
   label: text(ru, en),
   value
 });
-// Source: SEHA_Coco_Grow_Bags_and_Substrates.pdf, supplied by the client.
-export const specificationSource =
-  'https://drive.google.com/file/d/1_1QlwlSco7Msxju9gm-ePZhI8i9t5UGD/view';
-// These are catalogue-wide substrate figures, not verified per-SKU guarantees.
-export const substrateCatalogueSpecifications = [
-  field('pH', 'pH', text('5,5–6,5', '5.5–6.5')),
-  field(
-    'Электропроводность (EC)',
-    'Electrical conductivity (EC)',
-    text('менее 0,5 мСм/см', 'below 0.5 mS/cm')
-  ),
-  field(
-    'Коэффициент расширения',
-    'Expansion ratio',
-    text('5:1 или выше — по спецификации', '5:1 or higher, according to the specification')
-  ),
-  field(
-    'Влажность при поставке',
-    'Moisture at delivery',
-    text('менее 20%; для блоков торфа — 12–15%', 'below 20%; peat blocks: 12–15%')
-  ),
-  field(
-    'Доля волокна и чипсов',
-    'Fibre and chip ratio',
-    text('подбирается индивидуально', 'customised')
-  ),
-  field('Влагоудержание, метод измерения', 'Water retention and test method'),
-  field('Допуск по примесям', 'Impurity tolerance'),
-  field('Метод измерения EC', 'EC test method')
-];
+// Catalogue values are attached only to relevant product types and remain qualified
+// as targets until confirmed for the ordered grade or batch.
+function substrateCatalogueFields(product: ProductItem): Specification[] {
+  const applicability = text(
+    'ориентир каталога; подтвердить для заказанной марки',
+    'catalogue target; confirm for the ordered grade'
+  );
+  const rows: Specification[] = [];
+
+  if (['grow-bag', 'open-top-grow-bag', 'coco-peat', 'coco-peat-briquettes'].includes(product.id)) {
+    rows.push(
+      field(
+        'pH субстрата (ориентир каталога)',
+        'Substrate pH (catalogue target)',
+        text('5,5–6,5; ' + applicability.ru, '5.5–6.5; ' + applicability.en)
+      ),
+      field(
+        'EC (для согласованной промытой марки с низким EC)',
+        'EC (specified washed low-EC grade)',
+        text('менее 0,5 мСм/см; ' + applicability.ru, 'below 0.5 mS/cm; ' + applicability.en)
+      ),
+      field('Метод измерения EC', 'EC test method')
+    );
+  }
+
+  if (['coco-peat', 'coco-peat-briquettes'].includes(product.id)) {
+    rows.push(
+      field(
+        'Коэффициент расширения после увлажнения',
+        'Expansion ratio after hydration',
+        text(
+          '5:1 или выше — по спецификации; ' + applicability.ru,
+          '5:1 or higher, according to specification; ' + applicability.en
+        )
+      ),
+      field(
+        'Влажность при поставке',
+        'Moisture at delivery',
+        product.id === 'coco-peat-briquettes'
+          ? text(
+              '12–15% для торфяных блоков; подтвердить для заказанной марки',
+              '12–15% for peat blocks; confirm for the ordered grade'
+            )
+          : text(
+              'менее 20%; подтвердить для заказанной марки',
+              'below 20%; confirm for the ordered grade'
+            )
+      ),
+      field('Влагоудержание и метод измерения', 'Water retention and test method')
+    );
+  }
+
+  if (['coco-peat', 'coco-peat-briquettes'].includes(product.id)) {
+    rows.push(field('Допуск по примесям', 'Impurity tolerance'));
+  }
+
+  return rows;
+}
 
 // Source: client-confirmed SEHA brochure, laboratory report, pages 06–07.
 // Preserve specification limits (not measured results for an individual batch).
@@ -447,10 +475,16 @@ export function specificationsFor(product: ProductItem): Specification[] {
     rows.push(
       field('Объём после увлажнения', 'Hydrated volume'),
       field('Фракция', 'Particle size'),
-      field('pH продукта', 'Product pH'),
-      field('EC продукта и метод измерения', 'Product EC and test method'),
       field('Промывка / буферизация', 'Washing / buffering')
     );
+    if (
+      !['grow-bag', 'open-top-grow-bag', 'coco-peat', 'coco-peat-briquettes'].includes(product.id)
+    ) {
+      rows.push(
+        field('pH продукта', 'Product pH'),
+        field('EC продукта и метод измерения', 'Product EC and test method')
+      );
+    }
     if (product.id.includes('grow-bag'))
       rows.push(
         field(
@@ -462,6 +496,7 @@ export function specificationsFor(product: ProductItem): Specification[] {
           )
         )
       );
+    rows.push(...substrateCatalogueFields(product));
   } else if (product.id === 'veymur-mct-oil') {
     rows.push(...mctSpecifications, field('Фасовка', 'Pack size', product.label));
   } else if (product.category === 'fiber') {

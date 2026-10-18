@@ -1,16 +1,11 @@
 ---
 import { products, type ProductItem } from '../../../../data/products';
 import type { Locale } from '../../../../data/translations';
-import { productCopyUpdates } from '../../../../data/product-copy-updates';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
 import ResponsiveImage from '../../../../components/ResponsiveImage.astro';
 import Button from '../../../../components/ui/Button.astro';
 import { localizedPath } from '../../../../lib/paths';
-import {
-  specificationsFor,
-  substrateCatalogueSpecifications,
-  specificationSource
-} from '../../../../data/product-specifications';
+import { specificationsFor } from '../../../../data/product-specifications';
 export function getStaticPaths() {
   return (['ru', 'en'] as const).flatMap((locale) =>
     products.map((item) => ({
@@ -54,11 +49,6 @@ const path = `/products/${item.category}/${item.slug}/`;
           {item.name[locale]}
         </h1>
         <p class="type-p">{item.description[locale]}</p>
-        <p class="type-p">
-          {ru
-            ? 'Вся продукция производится группой компаний SEHA в Индии.'
-            : 'All products are manufactured by SEHA Group of Companies, India.'}
-        </p>
         <Button
           href="#contacts"
           full
@@ -82,31 +72,6 @@ const path = `/products/${item.category}/${item.slug}/`;
         ))}
       </dl>
     </section>
-    {item.category === 'substrates' &&
-      !productCopyUpdates[item.id]?.specifications &&
-      !['coconut-chips', 'coco-husk-chips-bricks', 'grow-cube-sleeve'].includes(item.id) && (
-        <section aria-labelledby="catalogue-title">
-          <h2 id="catalogue-title" class="type-h3">
-            {ru
-              ? 'Общие параметры субстратов из каталога'
-              : 'General substrate parameters from the catalogue'}
-          </h2>
-          <p>
-            {ru
-              ? 'Применимость к выбранному продукту и партии согласовывается отдельно.'
-              : 'Applicability to the selected product and batch is agreed separately.'}
-          </p>
-          <dl>
-            {substrateCatalogueSpecifications.map((row) => (
-              <div>
-                <dt>{row.label[locale]}</dt>
-                <dd>{row.value[locale]}</dd>
-              </div>
-            ))}
-          </dl>
-          <a href={specificationSource}>{ru ? 'Каталог SEHA' : 'SEHA catalogue'}</a>
-        </section>
-      )}
   </main>
 </SiteLayout>
 <style>
