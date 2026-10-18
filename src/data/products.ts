@@ -139,8 +139,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'grow-cube-sleeve',
       'grow-cube-sleeve.png',
-      'Кокосовый куб в оболочке',
-      'Coco Coir Grow Cube Sleeve',
+      'Кубический субстрат',
+      'Grow Cube Sleeve',
       'Куб из кокосового торфа для проращивания семян и укоренения черенков. Защитная оболочка сохраняет форму при поливе и пересадке; куб можно переносить целиком в гроубэг или субстратный мат.',
       'A coco pith cube for seed germination and rooting cuttings. The protective sleeve maintains its shape during irrigation and transplanting; the whole cube can be transferred to a grow bag or growing slab.',
       'Grow Cube Sleeve',
