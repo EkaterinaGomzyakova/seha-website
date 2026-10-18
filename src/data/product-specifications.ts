@@ -1,4 +1,5 @@
 import { text, type LocalizedText, type ProductItem } from './products';
+import { productCopyUpdates } from './product-copy-updates';
 
 export interface Specification {
   label: LocalizedText;
@@ -107,7 +108,27 @@ const mctSpecifications: Specification[] = [
     text('2 года с даты производства', '2 years from the date of manufacture')
   ),
   field('Пищевая ценность на 100 г / 100 мл', 'Nutrition per 100 g / 100 ml'),
-  field('Условия хранения', 'Storage conditions')
+  field(
+    'Условия хранения',
+    'Storage conditions',
+    text(
+      'В плотно закрытой упаковке, в прохладном сухом месте, вдали от прямого солнечного света и тепла',
+      'Keep tightly sealed in a cool, dry place, away from direct sunlight and heat'
+    )
+  ),
+  field(
+    'Варианты упаковки',
+    'Packaging options',
+    text(
+      'Пищевые бутылки, бочки или другие согласованные ёмкости',
+      'Food-grade bottles, drums or other approved containers'
+    )
+  ),
+  field(
+    'Органическая сертификация',
+    'Organic certification',
+    text('Подтверждена документами', 'Documented organic certification')
+  )
 ];
 
 export function specificationsFor(product: ProductItem): Specification[] {
@@ -118,7 +139,15 @@ export function specificationsFor(product: ProductItem): Specification[] {
       text('SEHA Group of Companies, Индия', 'SEHA Group of Companies, India')
     )
   ];
-  if (product.id === 'coconut-chips') {
+  const update = productCopyUpdates[product.id];
+  if (update?.specifications) {
+    rows.push(
+      ...update.specifications.map(([ru, en, valueRu, valueEn]) =>
+        field(ru, en, valueRu && valueEn ? text(valueRu, valueEn) : pending)
+      )
+    );
+    if (product.id.startsWith('veymur-')) rows.push(field('Фасовка', 'Pack size', product.label));
+  } else if (product.id === 'coconut-chips') {
     // Client-supplied suggested specifications; grade-specific conditions must remain explicit.
     rows.push(
       field(

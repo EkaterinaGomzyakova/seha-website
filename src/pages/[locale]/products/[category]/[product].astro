@@ -1,6 +1,7 @@
 ---
 import { products, type ProductItem } from '../../../../data/products';
 import type { Locale } from '../../../../data/translations';
+import { productCopyUpdates } from '../../../../data/product-copy-updates';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
 import ResponsiveImage from '../../../../components/ResponsiveImage.astro';
 import Button from '../../../../components/ui/Button.astro';
@@ -82,6 +83,7 @@ const path = `/products/${item.category}/${item.slug}/`;
       </dl>
     </section>
     {item.category === 'substrates' &&
+      !productCopyUpdates[item.id]?.specifications &&
       !['coconut-chips', 'coco-husk-chips-bricks', 'grow-cube-sleeve'].includes(item.id) && (
         <section aria-labelledby="catalogue-title">
           <h2 id="catalogue-title" class="type-h3">

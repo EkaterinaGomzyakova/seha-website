@@ -1,3 +1,4 @@
+import { productCopyUpdates } from './product-copy-updates';
 import type { Locale } from './translations';
 
 export type ProductCategorySlug = 'substrates' | 'fiber' | 'shell' | 'veymur';
@@ -151,8 +152,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-discs.png',
       'Кокосовые диски',
       'Coco Discs',
-      'Спрессованные диски из кокосового волокна. При увлажнении увеличиваются, образуют натуральный биоразлагаемый субстрат.',
-      'Compressed coconut fibre discs. They expand when moistened and form a natural biodegradable substrate.',
+      ...productCopyUpdates['coco-coir-discs'].description,
       'Coco Disc',
       'Biodegradable'
     ],
@@ -161,8 +161,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-peat-tablets.png',
       'Таблетки из кокосового торфа',
       'Coco Peat Tablets',
-      'Торфяные таблетки для проращивания семян и рассады. После полива расширяются и обеспечивают комфортные условия для роста.',
-      'Pressed tablets for seed germination and seedlings. They expand when moistened and form a convenient planting medium.',
+      ...productCopyUpdates['coco-peat-tablets'].description,
       'Coco Peat Tablets',
       'Seed Starting'
     ],
@@ -171,8 +170,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-peat-compost.png',
       'Компост из кокосового торфа',
       'Coco Peat Compost',
-      'Органический субстрат для выращивания растений и улучшения почвы. Удерживает влагу и поддерживает здоровье корней.',
-      'Organic natural substrate for growing plants and improving soil. Retains moisture and supports root health.',
+      ...productCopyUpdates['coco-peat-compost'].description,
       'Coco Peat Compost',
       'Root Growth'
     ],
@@ -181,8 +179,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'seeding-tray-media.png',
       'Субстрат для лотков рассады',
       'Seeding Tray Media',
-      'Кокосовый субстрат для выращивания рассады. Обеспечивает равномерное прорастание семян и здоровый рост корней.',
-      'Ready-made mix for seedling trays and plug trays. Ensures even germination, aeration, and healthy root development.',
+      ...productCopyUpdates['seeding-tray-media'].description,
       'Seeding Tray Media',
       'Nursery Production'
     ]
@@ -193,8 +190,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coir-fiber-bales.png',
       'Тюки кокосового волокна',
       'Coir Fibre Bales',
-      'Прессованное кокосовое волокно используется для производства матрасов, мебели, канатов и промышленной продукции.',
-      'Processed coconut husk fibres compressed into bales for easy transport. Widely used in mattresses, upholstery, ropes, and industrial products.',
+      ...productCopyUpdates['coir-fiber-bales'].description,
       'Coir Fibre Bales',
       'Industrial Use'
     ],
@@ -213,8 +209,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'machine-twisted-fiber.png',
       'Скрученное волокно',
       'Machine Twisted Fibre',
-      'Кокосовое волокно, скрученное механическим способом. Используется для производства геотекстиля, канатов и промышленных изделий.',
-      'Mechanically twisted coconut fibre. Used in the production of geotextiles, ropes, and various industrial products.',
+      ...productCopyUpdates['machine-twisted-fiber'].description,
       'Machine Twisted Fibre',
       'Rope Production'
     ],
@@ -255,8 +250,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'veymur-mct-oil.png',
       'MCT масло',
       'MCT Oil',
-      'Масло на основе среднецепочечных триглицеридов кокосового масла. Подходит для добавления в напитки, смузи и готовые блюда.',
-      'Oil made from medium-chain triglycerides derived from coconut oil. Suitable for adding to drinks, smoothies, and prepared dishes.',
+      ...productCopyUpdates['veymur-mct-oil'].description,
       '500 мл',
       '500 ml'
     ],
@@ -265,8 +259,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'veymur-virgin-coconut-oil.png',
       'Нерафинированное кокосовое масло',
       'Virgin Coconut Oil',
-      'Нерафинированное кокосовое масло с характерным кокосовым ароматом. Подходит для выпечки, десертов и приготовления блюд.',
-      'Unrefined coconut oil with a distinctive coconut aroma. Suitable for baking, desserts, and everyday cooking.',
+      ...productCopyUpdates['veymur-virgin-coconut-oil'].description,
       '500 мл',
       '500 ml'
     ],
@@ -275,8 +268,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'veymur-coconut-sugar.png',
       'Кокосовый сахар',
       'Coconut Sugar',
-      'Сахар из сока соцветий кокосовой пальмы с карамельными нотами. Используется в напитках, выпечке и десертах.',
-      'Sugar made from coconut palm blossom sap, with caramel notes. Use it in drinks, baking, and desserts.',
+      ...productCopyUpdates['veymur-coconut-sugar'].description,
       '500 г',
       '500 g'
     ],
@@ -285,8 +277,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'veymur-desiccated-coconut.png',
       'Кокосовая стружка',
       'Desiccated Coconut',
-      'Высушенная измельчённая мякоть кокоса с натуральным вкусом и ароматом. Для выпечки, начинок и украшения десертов.',
-      'Dried, shredded coconut flesh with a natural coconut flavour and aroma. For baking, fillings, and decorating desserts.',
+      ...productCopyUpdates['veymur-desiccated-coconut'].description,
       '500 г',
       '500 g'
     ],
@@ -295,8 +286,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'veymur-coconut-milk.png',
       'Кокосовое молоко',
       'Coconut Milk',
-      'Кокосовое молоко с мягким вкусом для напитков, каш, соусов и десертов. Удобный формат для домашней кухни и кулинарных экспериментов.',
-      'Mild-tasting coconut milk for drinks, porridge, sauces, and desserts. A convenient format for home cooking and trying new recipes.',
+      ...productCopyUpdates['veymur-coconut-milk'].description,
       '1 л',
       '1 L'
     ],
@@ -305,8 +295,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       '/assets/images/food/fresh-coconut.png',
       'Свежие кокосы',
       'Fresh Coconut',
-      'Отборные кокосы из индийского региона Поллачи проходят контроль по размеру, зрелости и свежести. Подходят для переработки.',
-      'Selected coconuts from the Pollachi region of India are carefully inspected for size, maturity, and freshness. Suitable for further processing.',
+      ...productCopyUpdates['fresh-coconut'].description,
       'Fresh Coconut',
       'Farm Selected'
     ],
