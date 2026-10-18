@@ -9,6 +9,15 @@ for (const locale of ['ru', 'en']) {
       );
       expect(response.ok()).toBe(true);
       expect(await response.text()).toContain(product.name[locale]);
+      if (product.id === 'veymur-mct-oil') {
+        const html = await response.text();
+        for (const value of ['55–65%', '35–45%', '325–345', 'Listeria monocytogenes']) {
+          expect(html).toContain(value);
+        }
+        expect(html).toContain(
+          locale === 'ru' ? '2 года с даты производства' : '2 years from the date of manufacture'
+        );
+      }
     }
     await page.goto(`${base}/${locale}/products/substrates/open-top-grow-bag/`);
     await page.locator('.cookie-action').click();
