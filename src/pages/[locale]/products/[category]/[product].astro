@@ -81,29 +81,30 @@ const path = `/products/${item.category}/${item.slug}/`;
         ))}
       </dl>
     </section>
-    {item.category === 'substrates' && item.id !== 'coconut-chips' && (
-      <section aria-labelledby="catalogue-title">
-        <h2 id="catalogue-title" class="type-h3">
-          {ru
-            ? 'Общие параметры субстратов из каталога'
-            : 'General substrate parameters from the catalogue'}
-        </h2>
-        <p>
-          {ru
-            ? 'Применимость к выбранному продукту и партии согласовывается отдельно.'
-            : 'Applicability to the selected product and batch is agreed separately.'}
-        </p>
-        <dl>
-          {substrateCatalogueSpecifications.map((row) => (
-            <div>
-              <dt>{row.label[locale]}</dt>
-              <dd>{row.value[locale]}</dd>
-            </div>
-          ))}
-        </dl>
-        <a href={specificationSource}>{ru ? 'Каталог SEHA' : 'SEHA catalogue'}</a>
-      </section>
-    )}
+    {item.category === 'substrates' &&
+      !['coconut-chips', 'coco-husk-chips-bricks'].includes(item.id) && (
+        <section aria-labelledby="catalogue-title">
+          <h2 id="catalogue-title" class="type-h3">
+            {ru
+              ? 'Общие параметры субстратов из каталога'
+              : 'General substrate parameters from the catalogue'}
+          </h2>
+          <p>
+            {ru
+              ? 'Применимость к выбранному продукту и партии согласовывается отдельно.'
+              : 'Applicability to the selected product and batch is agreed separately.'}
+          </p>
+          <dl>
+            {substrateCatalogueSpecifications.map((row) => (
+              <div>
+                <dt>{row.label[locale]}</dt>
+                <dd>{row.value[locale]}</dd>
+              </div>
+            ))}
+          </dl>
+          <a href={specificationSource}>{ru ? 'Каталог SEHA' : 'SEHA catalogue'}</a>
+        </section>
+      )}
   </main>
 </SiteLayout>
 <style>

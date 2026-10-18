@@ -131,8 +131,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-husk-chips-bricks.png',
       'Кокосовые чипсы в брикетах',
       'Coco Husk Chips Bricks',
-      'Прессованные блоки кокосовых чипсов для теплиц и приготовления субстратов. Улучшают аэрацию и дренаж, удобны в транспортировке.',
-      'Compressed coco chip bricks for greenhouses and substrate preparation. Improve aeration and drainage, and are easy to transport.',
+      'Компактные брикеты из кокосовой шелухи для хранения и перевозки. После увлажнения разрыхляются в крупные чипсы для аэрации корневой зоны и дренажа. Используются самостоятельно или в смеси с кокосовым торфом.',
+      'Compact coconut husk chip bricks for storage and transport. Hydration loosens the bricks into coarse chips for root-zone aeration and drainage. Suitable for standalone use or blending with coco pith.',
       'Coco Husk Chips Bricks',
       'Improved Drainage'
     ],

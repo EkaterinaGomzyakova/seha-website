@@ -192,6 +192,79 @@ export function specificationsFor(product: ProductItem): Specification[] {
         )
       )
     );
+  } else if (product.id === 'coco-husk-chips-bricks') {
+    // Client-supplied brick specifications; target ranges are not batch test results.
+    rows.push(
+      field('Сырьё', 'Raw material', text('Натуральная кокосовая шелуха', 'Natural coconut husk')),
+      field('Состав', 'Composition', text('Чипсы из кокосовой шелухи', 'Coconut husk chips')),
+      field(
+        'Цвет',
+        'Colour',
+        text('От коричневого до тёмно-коричневого', 'Natural brown to dark brown')
+      ),
+      field(
+        'Фракция чипсов',
+        'Chip size',
+        text('6–12 мм, 12–18 мм или по заказу', '6–12 mm, 12–18 mm or customised')
+      ),
+      field('pH', 'pH', text('Целевой диапазон: 5,5–6,8', 'Target range: 5.5–6.8')),
+      field(
+        'Электропроводность (EC)',
+        'Electrical conductivity (EC)',
+        text(
+          'По требованиям заказчика; вариант с низким EC — при подтверждении испытаниями',
+          'Customer-specific; a low-EC grade is available subject to testing'
+        )
+      ),
+      field('Метод измерения EC', 'EC test method'),
+      field(
+        'Влажность',
+        'Moisture content',
+        text('Целевой диапазон: 15–20%', 'Target range: 15–20%')
+      ),
+      field('Формат', 'Format', text('Прессованный брикет', 'Compressed brick')),
+      field('Масса при поставке', 'Weight at delivery', text('Блок 5 кг', '5 kg block')),
+      field(
+        'Расширение после увлажнения',
+        'Expansion after hydration',
+        text(
+          'Зависит от массы брикета, фракции чипсов и условий увлажнения',
+          'Depends on brick weight, chip size and hydration conditions'
+        )
+      ),
+      field(
+        'Обработка',
+        'Processing options',
+        text(
+          'Промывка, просеивание и сортировка по фракциям — согласно спецификации',
+          'Washed, screened and graded as specified'
+        )
+      ),
+      field(
+        'Варианты упаковки',
+        'Packaging options',
+        text(
+          'Отдельные брикеты, коробки или экспортная упаковка на палетах',
+          'Individual bricks, cartons or palletised export packaging'
+        )
+      ),
+      field(
+        'Применение',
+        'Applications',
+        text(
+          'Теплицы, гидропоника, питомники и приготовление субстратных смесей',
+          'Greenhouse cultivation, hydroponics, nurseries and substrate blending'
+        )
+      ),
+      field(
+        'Культуры',
+        'Crops',
+        text(
+          'Клубника и другие ягодные культуры, томаты, огурцы, орхидеи и декоративные растения',
+          'Strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants'
+        )
+      )
+    );
   } else if (product.category === 'substrates') {
     rows.push(
       field(
@@ -209,9 +282,7 @@ export function specificationsFor(product: ProductItem): Specification[] {
         'Weight at delivery',
         product.id === 'coco-peat-briquettes'
           ? text('брикет 650 г; блок 5 кг', '650 g brick; 5 kg block')
-          : product.id === 'coco-husk-chips-bricks'
-            ? text('блок 5 кг', '5 kg block')
-            : pending
+          : pending
       )
     );
     rows.push(
