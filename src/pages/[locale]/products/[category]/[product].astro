@@ -2,7 +2,7 @@
 import { products, type ProductItem } from '../../../../data/products';
 import type { Locale } from '../../../../data/translations';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
-import ResponsiveImage from '../../../../components/ResponsiveImage.astro';
+import ProductGallery from '../../../../components/ProductGallery.astro';
 import Button from '../../../../components/ui/Button.astro';
 import { localizedPath } from '../../../../lib/paths';
 import { specificationsFor } from '../../../../data/product-specifications';
@@ -37,12 +37,10 @@ const path = `/products/${item.category}/${item.slug}/`;
       {ru ? 'Назад к категории' : 'Back to category'}
     </a>
     <section class="product-detail__overview" aria-labelledby="product-name">
-      <ResponsiveImage
-        src={item.image}
+      <ProductGallery
+        images={[item.image, item.image, item.image, item.image]}
         alt={item.alt[locale]}
-        sizes="(max-width: 800px) calc(100vw - 64px), 50vw"
-        loading="eager"
-        fetchpriority="high"
+        locale={locale}
       />
       <div>
         <h1 id="product-name" class="type-h1">
@@ -93,7 +91,7 @@ const path = `/products/${item.category}/${item.slug}/`;
     gap: 24px;
     min-width: 0;
   }
-  .product-detail__overview :global(img) {
+  .product-detail__overview :global(.product-gallery__main img) {
     width: 100%;
     height: auto;
     border-radius: 32px;

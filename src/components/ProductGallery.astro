@@ -1,0 +1,122 @@
+---
+import type { Locale } from '../data/translations';
+import ResponsiveImage from './ResponsiveImage.astro';
+
+interface Props {
+  images: string[];
+  alt: string;
+  locale: Locale;
+}
+
+const { images, alt, locale } = Astro.props;
+const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Product photos';
+---
+
+<div class="product-gallery" data-product-gallery role="group" aria-label={galleryLabel}>
+  <div class="product-gallery__main" data-gallery-main>
+    <ResponsiveImage
+      src={images[0]}
+      alt={alt}
+      sizes="(max-width: 800px) calc(100vw - 64px), 50vw"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="product-gallery__thumbnails" role="group" aria-label={galleryLabel}>
+    {images.map((src, index) => (
+      <button
+        class="product-gallery__thumbnail"
+        type="button"
+        data-gallery-thumbnail
+        aria-label={locale === 'ru' ? `Показать фото ${index + 1}` : `Show photo ${index + 1}`}
+        aria-pressed={index === 0 ? 'true' : 'false'}
+      >
+        <ResponsiveImage src={src} alt="" sizes="(max-width: 800px) 20vw, 8vw" loading="lazy" />
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-product-gallery]').forEach((gallery) => {
+    const main = gallery.querySelector<HTMLElement>('[data-gallery-main]');
+    const thumbnails = gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-thumbnail]');
+    if (!main || thumbnails.length === 0) return;
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', () => {
+        const picture = thumbnail.querySelector('picture');
+        const currentPicture = main.querySelector('picture');
+        if (!picture || !currentPicture) return;
+
+        const replacement = picture.cloneNode(true) as HTMLPictureElement;
+        const image = replacement.querySelector('img');
+        if (image) {
+          image.loading = 'eager';
+          image.alt = gallery.querySelector<HTMLImageElement>('[data-gallery-main] img')?.alt ?? '';
+        }
+        currentPicture.replaceWith(replacement);
+        thumbnails.forEach((button) =>
+          button.setAttribute('aria-pressed', button === thumbnail ? 'true' : 'false')
+        );
+      });
+    });
+  });
+</script>
+
+<style>
+  .product-gallery {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .product-gallery__main {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
+  .product-gallery__thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-gallery__thumbnail {
+    aspect-ratio: 1;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .product-gallery__thumbnail[aria-pressed='true'] {
+    border-color: var(--color-green-brand);
+  }
+
+  .product-gallery__thumbnail:focus-visible {
+    outline: 3px solid var(--color-yellow-brand);
+    outline-offset: 3px;
+  }
+
+  .product-gallery__thumbnail :global(picture),
+  .product-gallery__thumbnail :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-gallery__thumbnail :global(img) {
+    object-fit: cover;
+  }
+
+  @media (max-width: 440px) {
+    .product-gallery__thumbnails {
+      gap: 8px;
+    }
+  }
+</style>
