@@ -1271,69 +1271,6 @@
         }
       ]
     },
-    "/assets/images/food/coconut-copra.png": {
-      "fingerprint": "d1e42498dfeb027df3c35a44e1d1863611680042f2e797b98260c40257c2cbd3",
-      "width": 1254,
-      "height": 1254,
-      "variants": [
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-320.webp",
-          "format": "webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 25756
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-320.avif",
-          "format": "avif",
-          "width": 320,
-          "height": 320,
-          "bytes": 13938
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 91696
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-640.avif",
-          "format": "avif",
-          "width": 640,
-          "height": 640,
-          "bytes": 51992
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-960.webp",
-          "format": "webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 174826
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-960.avif",
-          "format": "avif",
-          "width": 960,
-          "height": 960,
-          "bytes": 104138
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-1254.webp",
-          "format": "webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 256618
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-copra.png-1254.avif",
-          "format": "avif",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 156627
-        }
-      ]
-    },
     "/assets/images/food/coconut-milk.png": {
       "fingerprint": "ded49a4e23c06baacdea8b2b4589492b706da54714f12986f3a6e5bd71dc4e34",
       "width": 1254,
@@ -1457,69 +1394,6 @@
           "width": 1254,
           "height": 1254,
           "bytes": 153195
-        }
-      ]
-    },
-    "/assets/images/food/coconut-water.png": {
-      "fingerprint": "435cc602bc771638781d74c6a22394c929b948337ce1404a8389017acac4961b",
-      "width": 1254,
-      "height": 1254,
-      "variants": [
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-320.webp",
-          "format": "webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 15628
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-320.avif",
-          "format": "avif",
-          "width": 320,
-          "height": 320,
-          "bytes": 9483
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 39518
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-640.avif",
-          "format": "avif",
-          "width": 640,
-          "height": 640,
-          "bytes": 26311
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-960.webp",
-          "format": "webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 65142
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-960.avif",
-          "format": "avif",
-          "width": 960,
-          "height": 960,
-          "bytes": 45189
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-1254.webp",
-          "format": "webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 92568
-        },
-        {
-          "src": "/assets/images/generated/food/coconut-water.png-1254.avif",
-          "format": "avif",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 65258
         }
       ]
     },

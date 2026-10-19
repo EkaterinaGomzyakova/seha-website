@@ -248,8 +248,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-mct-oil',
       'veymur-mct-oil.png',
-      'MCT масло',
-      'MCT Oil',
+      'Органическое масло MCT',
+      'Organic MCT Oil',
       ...productCopyUpdates['veymur-mct-oil'].description,
       '500 мл',
       '500 ml'
@@ -257,8 +257,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-virgin-coconut-oil',
       'veymur-virgin-coconut-oil.png',
-      'Нерафинированное кокосовое масло',
-      'Virgin Coconut Oil',
+      'Органическое нерафинированное кокосовое масло',
+      'Organic Virgin Coconut Oil',
       ...productCopyUpdates['veymur-virgin-coconut-oil'].description,
       '500 мл',
       '500 ml'
@@ -266,8 +266,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-coconut-sugar',
       'veymur-coconut-sugar.png',
-      'Кокосовый сахар',
-      'Coconut Sugar',
+      'Органический кокосовый сахар',
+      'Organic Coconut Sugar',
       ...productCopyUpdates['veymur-coconut-sugar'].description,
       '500 г',
       '500 g'
@@ -275,8 +275,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-desiccated-coconut',
       'veymur-desiccated-coconut.png',
-      'Кокосовая стружка',
-      'Desiccated Coconut',
+      'Органическая кокосовая стружка',
+      'Organic Desiccated Coconut',
       ...productCopyUpdates['veymur-desiccated-coconut'].description,
       '500 г',
       '500 g'
@@ -284,8 +284,8 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-coconut-milk',
       'veymur-coconut-milk.png',
-      'Кокосовое молоко',
-      'Coconut Milk',
+      'Органическое кокосовое молоко',
+      'Organic Coconut Milk',
       ...productCopyUpdates['veymur-coconut-milk'].description,
       '1 л',
       '1 L'
@@ -293,37 +293,17 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'fresh-coconut',
       '/assets/images/food/fresh-coconut.png',
-      'Свежие кокосы',
-      'Fresh Coconut',
+      'Органические свежие кокосы',
+      'Organic Fresh Coconut',
       ...productCopyUpdates['fresh-coconut'].description,
       'Fresh Coconut',
       'Farm Selected'
     ],
     [
-      'coconut-copra',
-      '/assets/images/food/coconut-copra.png',
-      'Кокосовая копра',
-      'Coconut Copra',
-      'Сушёная мякоть зрелого кокоса с высоким содержанием масла. Применяется для производства кокосового масла и переработки.',
-      'Dried flesh of mature coconuts with a high oil content. Used for coconut oil production and further processing.',
-      'Coconut Copra',
-      'Oil Rich'
-    ],
-    [
-      'coconut-water',
-      '/assets/images/food/coconut-water.png',
-      'Кокосовая вода',
-      'Coconut Water',
-      'Производится из молодых кокосов, обладает освежающим вкусом. Используется в напитках и продуктах для здорового питания.',
-      'Made from young coconuts with a naturally refreshing taste. Used in beverages and health-focused food products.',
-      'Coconut Water',
-      'Pure Hydration'
-    ],
-    [
       'rbd-coconut-oil',
       '/assets/images/food/rbd-coconut-oil.png',
-      'Рафинированное кокосовое масло (RBD)',
-      'RBD Coconut Oil',
+      'Органическое рафинированное кокосовое масло (RBD)',
+      'Organic RBD Coconut Oil',
       'Производится из кокосового сырья методом рафинации, отбеливания и дезодорации. Для производства выпечки и других пищевых продуктов.',
       'Made from coconut-derived raw materials through refining, bleaching, and deodorization. Used in bakery products and other food applications.',
       'RBD Coconut Oil',
