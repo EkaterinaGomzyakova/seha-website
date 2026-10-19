@@ -545,9 +545,14 @@ export function specificationsFor(product: ProductItem): Specification[] {
       rows.push(field('Фракция и жирность', 'Grade and fat content'));
     if (product.id.startsWith('veymur-')) rows.push(field('Фасовка', 'Pack size', product.label));
   }
-  rows.push(
-    field('Упаковка и количество на палете', 'Packaging and pallet quantity'),
-    field('Допуски и документы партии', 'Tolerances and batch documents')
+  const specifiedLabels = new Set(
+    update?.specifications?.map(([, label]) => label.toLocaleLowerCase('en')) ?? []
   );
+  if (!specifiedLabels.has('packaging')) {
+    rows.push(field('Упаковка и количество на палете', 'Packaging and pallet quantity'));
+  }
+  if (!specifiedLabels.has('tolerances and batch documents')) {
+    rows.push(field('Допуски и документы партии', 'Tolerances and batch documents'));
+  }
   return rows;
 }

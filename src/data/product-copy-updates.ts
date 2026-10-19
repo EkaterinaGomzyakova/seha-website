@@ -689,6 +689,242 @@ export const productCopyUpdates: Record<string, Update> = {
       ]
     ]
   },
+  'coir-geo-textile': {
+    description: [
+      'Кокосовый геотекстиль — тканое сетчатое полотно из натурального кокосового волокна. Применяется для контроля эрозии, стабилизации склонов, защиты берегов и поддержки роста растительности. Открытая структура пропускает воду; срок биоразложения зависит от плотности полотна и условий на участке.',
+      'Woven open-mesh geotextile made from natural coconut coir fibre. Used for erosion control, slope stabilisation, riverbank protection and vegetation support. The mesh allows water to pass through; biodegradation time depends on the fabric grade and site conditions.'
+    ],
+    specifications: [
+      ['Сырьё', 'Raw material', 'Натуральное кокосовое волокно', 'Natural coconut coir fibre'],
+      [
+        'Тип полотна',
+        'Fabric type',
+        'Тканое полотно с открытой сетчатой структурой',
+        'Woven, open-mesh geotextile'
+      ],
+      ['Доступная плотность', 'Available grades', '400, 700 или 900 г/м²', '400, 700 or 900 g/m²'],
+      ['Ширина рулона', 'Roll width', '1 м, 2 м или по заказу', '1 m, 2 m or customised'],
+      ['Длина рулона', 'Roll length', '25 м, 50 м или по заказу', '25 m, 50 m or as required'],
+      [
+        'Размер ячейки',
+        'Mesh opening',
+        'Подбирается в зависимости от плотности полотна',
+        'Customised according to grade'
+      ],
+      ['Цвет', 'Colour', 'Натуральный коричневый', 'Natural brown'],
+      [
+        'Биоразложение',
+        'Biodegradability',
+        'Биоразлагаемый материал; срок зависит от плотности полотна и условий на участке',
+        'Biodegradable; duration depends on grade and site conditions'
+      ],
+      [
+        'Водопроницаемость',
+        'Water permeability',
+        'Открытая сетчатая структура пропускает воду',
+        'The open mesh allows water to pass through'
+      ],
+      [
+        'Назначение',
+        'Main function',
+        'Контроль эрозии почвы и поддержка роста растительности',
+        'Soil erosion control and vegetation support'
+      ]
+    ]
+  },
+  'coco-shell-charcoal-briquettes': {
+    description: [
+      'Брикеты из кокосового угля производятся из угля, полученного из скорлупы кокоса, и прессуются в удобную форму. Подходят для кальяна, гриля и других совместимых способов использования — в зависимости от марки, состава связующего и применимых требований. Форма, состав и поведение при горении зависят от спецификации продукта.',
+      'Coconut shell charcoal is processed and compressed into briquettes for convenient handling. Depending on the grade, binder composition and applicable regulations, they are suitable for shisha, hookah, barbecue grilling and other compatible charcoal-burning uses. Shape, composition and burning performance are product-specific.'
+    ],
+    specifications: [
+      [
+        'Статус параметров',
+        'Specification status',
+        'Ориентировочные целевые значения; подтвердить спецификацией производителя и анализом партии',
+        'Indicative target values; confirm against the factory specification and batch analysis'
+      ],
+      ['Сырьё', 'Raw material', 'Уголь из кокосовой скорлупы', 'Coconut shell charcoal'],
+      [
+        'Форма продукта',
+        'Product form',
+        'Прессованные угольные брикеты',
+        'Compressed charcoal briquettes'
+      ],
+      [
+        'Форма брикета',
+        'Briquette shape',
+        'Шестигранная, кубическая, подушкообразная или по заказу',
+        'Hexagonal, cube, pillow or customised'
+      ],
+      ['Цвет', 'Colour', 'От чёрного до тёмно-серого', 'Black to dark grey'],
+      [
+        'Содержание фиксированного углерода',
+        'Fixed carbon',
+        'Целевой диапазон: 70–85%; подтвердить анализом',
+        'Target range: 70–85%; confirm by laboratory testing'
+      ],
+      [
+        'Зольность',
+        'Ash content',
+        'Целевое значение: не более 3–6%, зависит от марки; уточнить',
+        'Target maximum: 3–6%, grade-dependent; confirm'
+      ],
+      [
+        'Влажность',
+        'Moisture content',
+        'Целевое значение: не более 5–8%, зависит от марки; уточнить',
+        'Target maximum: 5–8%, grade-dependent; confirm'
+      ],
+      [
+        'Летучие вещества',
+        'Volatile matter',
+        'Зависит от марки; уточнить по анализу',
+        'Grade-dependent; confirm by laboratory testing'
+      ],
+      [
+        'Теплотворная способность',
+        'Calorific value',
+        'Ориентировочно 6 500–7 500 ккал/кг; подтвердить анализом',
+        'Indicative range: approximately 6,500–7,500 kcal/kg; confirm by testing'
+      ],
+      [
+        'Продолжительность горения',
+        'Burning duration',
+        'Зависит от размера и плотности брикета, подачи воздуха и условий использования',
+        'Depends on briquette size and density, airflow and conditions of use'
+      ],
+      [
+        'Связующее',
+        'Binder',
+        'На основе крахмала или другое согласованное связующее',
+        'Starch-based or another approved binder, as applicable'
+      ],
+      [
+        'Запах',
+        'Odour',
+        'Без постороннего запаха при соблюдении технологии производства',
+        'No unusual odour when properly manufactured'
+      ],
+      [
+        'Упаковка',
+        'Packaging',
+        'Внутренний полиэтиленовый пакет с коробкой или экспортный мешок — по наличию',
+        'Inner polybag with carton or export sack, subject to availability'
+      ],
+      [
+        'Хранение и срок хранения',
+        'Storage and shelf life',
+        'Хранить в сухом месте; срок хранения заявлять только при наличии подтверждённых данных',
+        'Store dry; make a shelf-life claim only when supported by validated data'
+      ],
+      [
+        'Варианты исполнения',
+        'Customisation',
+        'Форма, размер, плотность, состав и упаковка — по согласованию',
+        'Shape, size, density, composition and packaging as agreed'
+      ]
+    ]
+  },
+  'coco-shell-activated-carbon': {
+    description: [
+      'Активированный уголь SEHA изготавливается из кокосовой скорлупы методом карбонизации и активации. Пористая структура используется для адсорбции загрязнений, органических соединений и нежелательных запахов; эффективность зависит от марки и условий применения. Выпускается в гранулированном или порошкообразном виде, если соответствующая марка доступна.',
+      'SEHA Coco Shell Activated Carbon is produced from coconut shells through carbonisation and activation. Its porous structure is used to adsorb contaminants, organic compounds and unwanted odours; performance depends on grade and application. Granular or powdered forms are available where the relevant grade is offered.'
+    ],
+    specifications: [
+      [
+        'Статус параметров',
+        'Specification status',
+        'Типовые ориентировочные диапазоны; подтвердить спецификацией производителя и анализом партии',
+        'Typical reference ranges; confirm against the factory specification and batch analysis'
+      ],
+      ['Сырьё', 'Raw material', 'Кокосовая скорлупа', 'Coconut shell'],
+      [
+        'Внешний вид',
+        'Appearance',
+        'Чёрные пористые гранулы или порошок',
+        'Black porous granules or powder'
+      ],
+      [
+        'Тип продукта',
+        'Product types',
+        'Гранулированный активированный уголь (GAC) или порошкообразный (PAC)',
+        'Granular activated carbon (GAC) or powdered activated carbon (PAC)'
+      ],
+      [
+        'Йодное число',
+        'Iodine number',
+        'Ориентировочно 900–1 200 мг/г; подтвердить испытанием',
+        'Indicative range: 900–1,200 mg/g; confirm by testing'
+      ],
+      [
+        'Удельная поверхность BET',
+        'BET surface area',
+        'Зависит от марки; уточнить по результатам испытаний',
+        'Grade-dependent; confirm by testing'
+      ],
+      [
+        'Влажность',
+        'Moisture content',
+        'Ориентировочно не более 5%; подтвердить анализом',
+        'Indicative maximum: 5%; confirm by testing'
+      ],
+      [
+        'Зольность',
+        'Ash content',
+        'Ориентировочно не более 3–5%; зависит от марки, уточнить',
+        'Indicative maximum: 3–5%, grade-dependent; confirm'
+      ],
+      [
+        'Насыпная плотность',
+        'Apparent density',
+        'Ориентировочно 450–550 кг/м³; подтвердить измерением',
+        'Indicative range: 450–550 kg/m³; confirm by measurement'
+      ],
+      [
+        'Прочность гранул по методу Ball-Pan',
+        'Ball-pan hardness',
+        'Не менее 95–98% для соответствующих гранулированных марок; уточнить',
+        'At least 95–98% for applicable granular grades; confirm'
+      ],
+      [
+        'Активность CTC',
+        'CTC activity',
+        'Ориентировочно 40–60% для отдельных марок; подтвердить испытанием',
+        'Approximately 40–60% for selected grades; confirm by testing'
+      ],
+      [
+        'pH',
+        'pH',
+        'Обычно 9–11 для отдельных марок; уточнить',
+        'Commonly 9–11 for certain grades; confirm'
+      ],
+      [
+        'Размер частиц',
+        'Particle size',
+        'Различные размеры ячеек сит — по спецификации',
+        'Available in different mesh sizes, as specified'
+      ],
+      [
+        'Метод активации',
+        'Activation method',
+        'Паровая или другая согласованная активация',
+        'Steam or another specified activation process'
+      ],
+      [
+        'Упаковка',
+        'Packaging',
+        'Мешки 25 кг или биг-бэги 500 кг — при наличии',
+        '25 kg bags or 500 kg jumbo bags, subject to availability'
+      ],
+      [
+        'Применение',
+        'Applications',
+        'Очистка воды, воздуха и газов, промышленная фильтрация, регенерация растворителей и другие процессы адсорбции',
+        'Water, air and gas treatment, industrial filtration, solvent recovery and other adsorption processes'
+      ]
+    ]
+  },
   'machine-twisted-fiber': {
     description: [
       'Механически скрученное волокно из кокосовой шелухи для производства канатов, шпагата, матов, сеток и противоэрозионных изделий. Диаметр, длина и степень скрутки — по спецификации заказчика.',
