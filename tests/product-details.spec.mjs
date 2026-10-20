@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { products } from '../src/data/products.ts';
+import { products, productsForCategory } from '../src/data/products.ts';
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 for (const locale of ['ru', 'en']) {
   test(`product pages ${locale} support specifications and ordering`, async ({ page, request }) => {
@@ -36,7 +36,7 @@ for (const locale of ['ru', 'en']) {
     );
     await page.goto(`${base}/${locale}/products/food/`);
     await expect(page).toHaveURL(new RegExp(`/${locale}/products/veymur/`));
-    await expect(page.locator('.product-item')).toHaveCount(9);
+    await expect(page.locator('.product-item')).toHaveCount(productsForCategory('veymur').length);
     const productUrl = await page.locator('.product-item__link').first().getAttribute('href');
     for (const target of ['figure', 'p']) {
       await page.goto(`${base}/${locale}/products/veymur/`);
