@@ -830,69 +830,6 @@
         }
       ]
     },
-    "/assets/images/fiber/bristle-fiber.png": {
-      "fingerprint": "7413c8f4c47fc602a213b23eeb25f8965cdf4ceb34837b956717b69de8ebceea",
-      "width": 1254,
-      "height": 1254,
-      "variants": [
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-320.webp",
-          "format": "webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 30410
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-320.avif",
-          "format": "avif",
-          "width": 320,
-          "height": 320,
-          "bytes": 16172
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 111382
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-640.avif",
-          "format": "avif",
-          "width": 640,
-          "height": 640,
-          "bytes": 59836
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-960.webp",
-          "format": "webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 214624
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-960.avif",
-          "format": "avif",
-          "width": 960,
-          "height": 960,
-          "bytes": 114437
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-1254.webp",
-          "format": "webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 312424
-        },
-        {
-          "src": "/assets/images/generated/fiber/bristle-fiber.png-1254.avif",
-          "format": "avif",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 167157
-        }
-      ]
-    },
     "/assets/images/fiber/coir-fiber-bales.png": {
       "fingerprint": "b6e0d6216bff4b90d4bde73ec12ebaf1449011b0c4f8c8e90608f3b3ffdc671d",
       "width": 1254,
@@ -1142,69 +1079,6 @@
           "width": 1254,
           "height": 1254,
           "bytes": 245044
-        }
-      ]
-    },
-    "/assets/images/fiber/erosion-control-blankets.png": {
-      "fingerprint": "2fe4cbc375f573012a75da1ef23c91f74a01f0a42f9fd7ef71365bd4fe41da73",
-      "width": 1254,
-      "height": 1254,
-      "variants": [
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-320.webp",
-          "format": "webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 40108
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-320.avif",
-          "format": "avif",
-          "width": 320,
-          "height": 320,
-          "bytes": 19863
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 156304
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-640.avif",
-          "format": "avif",
-          "width": 640,
-          "height": 640,
-          "bytes": 78941
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-960.webp",
-          "format": "webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 307904
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-960.avif",
-          "format": "avif",
-          "width": 960,
-          "height": 960,
-          "bytes": 150959
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-1254.webp",
-          "format": "webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 455542
-        },
-        {
-          "src": "/assets/images/generated/fiber/erosion-control-blankets.png-1254.avif",
-          "format": "avif",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 218646
         }
       ]
     },
@@ -3732,69 +3606,6 @@
           "width": 1254,
           "height": 1254,
           "bytes": 175385
-        }
-      ]
-    },
-    "/assets/images/shell/coco-shell.png": {
-      "fingerprint": "478087a2871c896287bd013ad619a87159e83db953566b854b51c07f843c1ae9",
-      "width": 1254,
-      "height": 1254,
-      "variants": [
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-320.webp",
-          "format": "webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 25522
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-320.avif",
-          "format": "avif",
-          "width": 320,
-          "height": 320,
-          "bytes": 13885
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 99854
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-640.avif",
-          "format": "avif",
-          "width": 640,
-          "height": 640,
-          "bytes": 54569
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-960.webp",
-          "format": "webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 207352
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-960.avif",
-          "format": "avif",
-          "width": 960,
-          "height": 960,
-          "bytes": 112786
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-1254.webp",
-          "format": "webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 311020
-        },
-        {
-          "src": "/assets/images/generated/shell/coco-shell.png-1254.avif",
-          "format": "avif",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 172266
         }
       ]
     },

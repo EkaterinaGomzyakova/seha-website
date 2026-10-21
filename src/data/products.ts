@@ -92,8 +92,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'open-top-grow-bag.png',
       'Открытый гроубэг',
       'Open-Top Grow Bag',
-      'Гроубэг для голубики и малины с 60% кокосового торфа и 40% кокосовых чипсов. Состав, размеры и дренаж под требования заказчика.',
-      'Grow bag for blueberries and raspberries with 60% coco peat and 40% chips. Customizable composition, size and drainage.',
+      ...productCopyUpdates['open-top-grow-bag'].description,
       'Open-top grow bag',
       'Well-Drained'
     ],
@@ -195,16 +194,6 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Industrial Use'
     ],
     [
-      'bristle-fiber',
-      'bristle-fiber.png',
-      'Кокосовая щетина',
-      'Bristle Fibre',
-      'Высококачественное волокно, полученное из кокосовой шелухи. Используется для производства щёток, ковриков и других изделий.',
-      'High-quality fibre obtained from coconut husks. Used in the production of brushes, mats, and other fibre-based products.',
-      'Bristle Fibre',
-      'High Strength'
-    ],
-    [
       'machine-twisted-fiber',
       'machine-twisted-fiber.png',
       'Скрученное волокно',
@@ -218,20 +207,9 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coir-weed-mat.png',
       'Мульчирующие маты',
       'Coir Weed Mat',
-      'Биоразлагаемые маты для сельского хозяйства и ландшафтного дизайна. Сдерживают рост сорняков, пропуская воду и питательные вещества.',
-      'Biodegradable mats for agriculture and landscaping. Help suppress weed growth while allowing water and nutrients to pass through.',
+      ...productCopyUpdates['coir-weed-mat'].description,
       'Coir Weed Mat',
       'Weed Control'
-    ],
-    [
-      'erosion-control-blankets',
-      'erosion-control-blankets.png',
-      'Противоэрозионные маты',
-      'Erosion Control Blankets',
-      'Кокосовые маты для защиты почвы от эрозии и укрепления склонов. Используются в строительстве и ландшафтных проектах.',
-      'Coconut fibre mats designed for erosion control and slope stabilization. Used in construction, landscaping, and environmental projects.',
-      'Erosion Control Blankets',
-      'Slope Protection'
     ],
     [
       'coir-geo-textile',
@@ -304,23 +282,12 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       '/assets/images/food/rbd-coconut-oil.png',
       'Органическое рафинированное кокосовое масло (RBD)',
       'Organic RBD Coconut Oil',
-      'Производится из кокосового сырья методом рафинации, отбеливания и дезодорации. Для производства выпечки и других пищевых продуктов.',
-      'Made from coconut-derived raw materials through refining, bleaching, and deodorization. Used in bakery products and other food applications.',
+      ...productCopyUpdates['rbd-coconut-oil'].description,
       'RBD Coconut Oil',
       'Neutral Taste'
     ]
   ],
   shell: [
-    [
-      'coco-shell',
-      'coco-shell.png',
-      'Кокосовая скорлупа',
-      'Coco Shell',
-      'Натуральная кокосовая скорлупа — востребованное сырьё для производства активированного угля, топлива и промышленной продукции.',
-      'Natural coconut shell is a widely used raw material for the production of activated carbon, fuel, and industrial products.',
-      'Coco Shell',
-      'Industrial Raw Material'
-    ],
     [
       'coco-shell-charcoal-briquettes',
       'coco-shell-charcoal-briquettes.png',

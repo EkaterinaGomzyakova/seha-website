@@ -13,6 +13,8 @@ const field = (ru: string, en: string, value = pending): Specification => ({
 // Catalogue values are attached only to relevant product types and remain qualified
 // as targets until confirmed for the ordered grade or batch.
 function substrateCatalogueFields(product: ProductItem): Specification[] {
+  if (product.id === 'open-top-grow-bag') return [];
+
   const applicability = text(
     'ориентир каталога; подтвердить для заказанной марки',
     'catalogue target; confirm for the ordered grade'
@@ -453,15 +455,8 @@ export function specificationsFor(product: ProductItem): Specification[] {
       )
     );
   } else if (product.category === 'substrates') {
-    rows.push(
-      field(
-        'Состав и соотношение компонентов',
-        'Composition and component ratio',
-        product.id === 'open-top-grow-bag'
-          ? text('60% кокосового торфа / 40% чипсов', '60% coco peat / 40% chips')
-          : pending
-      )
-    );
+    if (product.id !== 'open-top-grow-bag')
+      rows.push(field('Состав и соотношение компонентов', 'Composition and component ratio'));
     rows.push(field('Размеры (Д × Ш × В) / диаметр', 'Dimensions (L × W × H) / diameter'));
     rows.push(
       field(
@@ -472,11 +467,12 @@ export function specificationsFor(product: ProductItem): Specification[] {
           : pending
       )
     );
-    rows.push(
-      field('Объём после увлажнения', 'Hydrated volume'),
-      field('Фракция', 'Particle size'),
-      field('Промывка / буферизация', 'Washing / buffering')
-    );
+    if (product.id !== 'open-top-grow-bag')
+      rows.push(
+        field('Объём после увлажнения', 'Hydrated volume'),
+        field('Фракция', 'Particle size'),
+        field('Промывка / буферизация', 'Washing / buffering')
+      );
     if (
       !['grow-bag', 'open-top-grow-bag', 'coco-peat', 'coco-peat-briquettes'].includes(product.id)
     ) {
@@ -485,7 +481,7 @@ export function specificationsFor(product: ProductItem): Specification[] {
         field('EC продукта и метод измерения', 'Product EC and test method')
       );
     }
-    if (product.id.includes('grow-bag'))
+    if (product.id === 'grow-bag')
       rows.push(
         field(
           'Посадочные и дренажные отверстия',

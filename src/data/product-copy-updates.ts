@@ -20,6 +20,47 @@ const preliminary: Row = [
   'Preliminary specifications; confirm against the factory TDS and batch documentation'
 ];
 export const productCopyUpdates: Record<string, Update> = {
+  'open-top-grow-bag': {
+    description: [
+      'Открытый гроубэг для выращивания голубики и малины: 60% кокосового торфа и 40% кокосовых чипсов. Промытый и просеянный субстрат с низкой электропроводностью сочетает влагоудержание, аэрацию и дренаж. Параметры pH для голубики и малины согласуются отдельно.',
+      'An open-top grow bag for blueberries and raspberries, filled with 60% coco pith and 40% coco chips. The washed, screened, low-EC substrate combines moisture retention, aeration and drainage. The pH specification is agreed separately for blueberries and raspberries.'
+    ],
+    specifications: [
+      [
+        'Состав субстрата',
+        'Substrate composition',
+        '60% кокосового торфа / 40% кокосовых чипсов',
+        '60% coco pith / 40% coco chips'
+      ],
+      [
+        'Обработка субстрата',
+        'Substrate processing',
+        'Промыт и просеян; вариант с низкой электропроводностью',
+        'Washed and screened; low-EC grade'
+      ],
+      [
+        'Условия по pH',
+        'pH specification',
+        'Для голубики: 4,5–5,5; для малины — согласовать под культуру',
+        'Blueberry: 4.5–5.5; raspberry: adjust to the crop specification'
+      ],
+      [
+        'Электропроводность (EC)',
+        'Electrical conductivity (EC)',
+        'Менее 0,5 мСм/см; при согласовании метода измерения',
+        'Below 0.5 mS/cm, subject to the agreed test method'
+      ],
+      ['Влажность', 'Moisture content', '15–20%', '15–20%'],
+      [
+        'Конструкция и дренаж',
+        'Bag construction and drainage',
+        'Открытый верх; дренажные отверстия предусмотрены, конфигурация — по заказу',
+        'Open top with drainage holes; configuration customised to order'
+      ],
+      ['Материал мешка', 'Bag material', 'УФ-стабилизированный материал', 'UV-stabilised material'],
+      ['Культуры', 'Crops', 'Голубика и малина', 'Blueberries and raspberries']
+    ]
+  },
   'coco-coir-discs': {
     description: [
       'Прессованные круглые диски из кокосового торфа для проращивания семян и выращивания рассады. После увлажнения расширяются и образуют влагоёмкий субстрат.',
@@ -619,6 +660,158 @@ export const productCopyUpdates: Record<string, Update> = {
     description: [
       'Масло из кокоса с концентрированными среднецепочечными триглицеридами C8 и C10. Прозрачная бесцветная жидкость без вкуса и запаха для пищевых рецептур, отдельных напитков и специализированных продуктов питания.',
       'Coconut-derived oil with concentrated C8 and C10 medium-chain triglycerides. A clear, colourless, odourless and tasteless liquid for food formulations, selected beverages and specialised nutritional products.'
+    ]
+  },
+  'rbd-coconut-oil': {
+    description: [
+      'Органическое рафинированное кокосовое масло (RBD) получают из кокосового сырья с помощью рафинации, отбеливания и дезодорации. Обработка придаёт маслу чистый внешний вид и нейтральные вкус и аромат. Применяется в пищевом производстве и коммерческом приготовлении блюд.',
+      'SEHA Organic RBD Coconut Oil is produced from carefully selected coconuts and processed through refining, bleaching and deodorisation to achieve a clean appearance and a neutral aroma and taste. It is suitable for food manufacturing, commercial food preparation and other approved food applications.'
+    ],
+    specifications: [
+      ['Ботаническое название', 'Botanical name', 'Cocos nucifera', 'Cocos nucifera'],
+      [
+        'Тип продукта',
+        'Product type',
+        'Рафинированное, отбеленное и дезодорированное кокосовое масло (RBD)',
+        'Refined, bleached and deodorised coconut oil (RBD)'
+      ],
+      ['Сырьё', 'Raw material', 'Кокос', 'Coconut'],
+      [
+        'Внешний вид',
+        'Appearance',
+        'Прозрачная жидкость в тёплом состоянии; может затвердевать при понижении температуры',
+        'Clear liquid when warm; may solidify at lower temperatures'
+      ],
+      [
+        'Цвет',
+        'Colour',
+        'Прозрачный или бледно-жёлтый в жидком состоянии',
+        'Clear to pale yellow when liquid'
+      ],
+      [
+        'Запах и вкус',
+        'Odour and taste',
+        'Нейтральные, характерные для рафинированного кокосового масла',
+        'Neutral, characteristic of refined coconut oil'
+      ],
+      ['Влага и летучие вещества', 'Moisture and volatile matter'],
+      ['Свободные жирные кислоты (в пересчёте на лауриновую)', 'Free fatty acids (as lauric acid)'],
+      ['Перекисное число', 'Peroxide value'],
+      [
+        'Жирнокислотный профиль',
+        'Fatty acid profile',
+        'Типичный для кокосового масла',
+        'Typical coconut oil profile'
+      ],
+      [
+        'Обработка',
+        'Processing',
+        'Рафинация, отбеливание и дезодорация',
+        'Refining, bleaching and deodorisation'
+      ],
+      [
+        'Органический статус',
+        'Organic status',
+        'Органическая сертификация подтверждена документами',
+        'Documented organic certification'
+      ],
+      [
+        'Применение',
+        'Intended use',
+        'Пищевое производство и другие разрешённые пищевые применения',
+        'Food processing and other approved food applications'
+      ],
+      [
+        'Упаковка',
+        'Packaging',
+        'Пищевые ёмкости, бочки или оптовая упаковка — при наличии',
+        'Food-grade containers, drums or bulk packaging, subject to availability'
+      ],
+      origin,
+      [
+        'Хранение',
+        'Storage',
+        'В прохладном сухом месте, вдали от прямого солнечного света, влаги и сильных запахов',
+        'Store in a cool, dry place, away from direct sunlight, moisture and strong odours'
+      ],
+      shelf
+    ]
+  },
+  'coir-weed-mat': {
+    description: [
+      'Покровный мат из натурального кокосового волокна для сельского хозяйства, питомников, садов и ландшафтных проектов. Закрывает поверхность почвы и пропускает воду и воздух; степень подавления сорняков и сокращения испарения зависит от плотности и конструкции мата.',
+      'A ground-cover mat made from natural coconut coir fibre for agriculture, nurseries, gardens and landscaping. It covers the soil surface while allowing water and air to pass through; weed suppression and reduced evaporation depend on the mat construction and density.'
+    ],
+    specifications: [
+      ['Сырьё', 'Raw material', 'Натуральное кокосовое волокно', 'Natural coconut coir fibre'],
+      [
+        'Тип материала',
+        'Material type',
+        'Покровный мат из натурального волокна',
+        'Natural fibre ground-cover mat'
+      ],
+      ['Цвет', 'Colour', 'Натуральный коричневый', 'Natural brown'],
+      [
+        'Конструкция',
+        'Structure',
+        'Тканая или иглопробивная — в зависимости от исполнения',
+        'Woven or needle-punched, depending on product type'
+      ],
+      ['Тип волокна', 'Fibre type', 'Волокно из кокосовой шелухи', 'Coconut husk fibre'],
+      ['Толщина', 'Thickness'],
+      ['Масса / поверхностная плотность (GSM)', 'Weight / fabric mass (GSM)'],
+      ['Ширина рулона', 'Roll width'],
+      ['Длина рулона', 'Roll length'],
+      [
+        'Водопроницаемость',
+        'Water permeability',
+        'Зависит от конструкции',
+        'Depends on construction'
+      ],
+      [
+        'Воздухопроницаемость',
+        'Air permeability',
+        'Зависит от структуры и плотности',
+        'Depends on structure and density'
+      ],
+      [
+        'Подавление сорняков',
+        'Weed suppression',
+        'Покрытие почвы помогает ограничить прорастание сорняков',
+        'Soil coverage helps restrict weed emergence'
+      ],
+      [
+        'Влагообмен',
+        'Moisture management',
+        'Покрытие помогает уменьшить прямое испарение влаги с почвы',
+        'Soil coverage helps reduce direct evaporation from the soil'
+      ],
+      [
+        'Биоразложение',
+        'Biodegradability',
+        'Биоразлагаемый материал; срок зависит от условий окружающей среды',
+        'Biodegradable material; duration depends on environmental conditions'
+      ],
+      ['Устойчивость к УФ-излучению', 'UV resistance'],
+      [
+        'Размеры и исполнение',
+        'Dimensions and construction',
+        'Ширина, длина, масса и конструкция — по согласованной спецификации',
+        'Width, length, weight and construction according to the agreed specification'
+      ],
+      [
+        'Применение',
+        'Applications',
+        'Сельское хозяйство, питомники, садоводство и ландшафтный дизайн',
+        'Agriculture, horticulture, nurseries, gardening and landscaping'
+      ],
+      ['Страна происхождения', 'Country of origin', 'Индия', 'India'],
+      [
+        'Упаковка',
+        'Packaging',
+        'Рулоны, закреплённые для транспортировки',
+        'Rolls secured for transport'
+      ]
     ]
   },
   'coir-fiber-bales': {
