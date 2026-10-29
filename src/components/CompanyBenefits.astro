@@ -1,0 +1,45 @@
+---
+import { companyBenefitsCopy } from '../data/company-benefits';
+import type { Locale } from '../data/translations';
+import { localizedPath } from '../lib/paths';
+import { bindShortWords } from '../lib/typography';
+import Link from './ui/Link.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = companyBenefitsCopy[locale];
+const text = (value: string) => bindShortWords(value, locale);
+---
+
+<section class="home-section company-benefits" id="advantages" aria-labelledby="advantages-title">
+  <div class="company-benefits__heading">
+    <h2 id="advantages-title" class="type-h2">
+      {text(copy.heading)}
+    </h2>
+    <p class="type-p">{text(copy.introduction)}</p>
+  </div>
+  <div class="company-benefits__grid">
+    {copy.items.map((item, index) => (
+      <article class="company-benefits__item reveal">
+        <span class="company-benefits__number type-button" aria-hidden="true">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <h3 class="type-h3">{text(item.title)}</h3>
+        <p class="type-p">{text(item.description)}</p>
+      </article>
+    ))}
+  </div>
+  <div class="company-benefits__links">
+    <Link variant="text" class="text-link" href={localizedPath('/about/', locale)}>
+      {copy.aboutLink}
+      <span aria-hidden="true">↗</span>
+    </Link>
+    <Link variant="text" class="text-link" href={localizedPath('/quality/', locale)}>
+      {copy.qualityLink}
+      <span aria-hidden="true">↗</span>
+    </Link>
+  </div>
+</section>

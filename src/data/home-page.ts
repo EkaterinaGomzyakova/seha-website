@@ -102,18 +102,6 @@ const ru = {
   originSectionText3: 'Формат и обработка зависят от назначения готового продукта.',
   originSectionCardTitle3: 'Подготовка к поставке',
   originSectionText4: 'Согласование характеристик, упаковки и объема партии.',
-  qualitySectionHeading: 'Подтверждённое',
-  qualitySectionLabel3: 'качество',
-  qualitySectionCardTitle: 'Характеристики',
-  qualitySectionText2:
-    'Для субстратов — фракция, pH и EC. Для пищевых ингредиентов — состав и показатели качества. Для волокна и скорлупы — влажность, чистота и формат.',
-  qualitySectionCardTitle2: 'Документы',
-  qualitySectionText3:
-    'Уточним необходимые спецификации и документы на выбранный продукт. Область сертификации рассматривается для конкретной продукции.',
-  qualitySectionCardTitle3: 'Упаковка и объем',
-  qualitySectionText4:
-    'Обсудим фасовку, объем партии и требования к доставке. Эти параметры учитываются при подготовке коммерческого предложения.',
-  qualitySectionLink: 'Сертификаты качества',
   materialBannerLabel: 'КОКОС КАК СЫРЬЕ ДЛЯ РАЗНЫХ ОТРАСЛЕЙ',
   materialBannerText: 'Пищевые ингредиенты.',
   materialBannerEmphasis: 'Материалы. Субстраты.',
@@ -237,18 +225,6 @@ const en = {
     'Product format and processing depend on the intended use of the finished product.',
   originSectionCardTitle3: 'Preparation for supply',
   originSectionText4: 'Agreement on specifications, packaging and batch volume.',
-  qualitySectionHeading: 'Verified',
-  qualitySectionLabel3: 'quality',
-  qualitySectionCardTitle: 'Specifications',
-  qualitySectionText2:
-    'For substrates: particle size, pH and EC. For food ingredients: composition and quality indicators. For fibre and shell: moisture, cleanliness and format.',
-  qualitySectionCardTitle2: 'Documents',
-  qualitySectionText3:
-    'We will clarify the specifications and documents required for the selected product. Certification scope is considered for the specific product.',
-  qualitySectionCardTitle3: 'Packaging and volume',
-  qualitySectionText4:
-    'We will discuss pack sizes, batch volume and delivery requirements. These parameters are taken into account when preparing a quotation.',
-  qualitySectionLink: 'Quality certificates',
   materialBannerLabel: 'COCONUT AS A RAW MATERIAL FOR DIFFERENT INDUSTRIES',
   materialBannerText: 'Food ingredients.',
   materialBannerEmphasis: 'Materials. Substrates.',

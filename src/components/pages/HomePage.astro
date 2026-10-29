@@ -5,6 +5,7 @@ import Link from '../ui/Link.astro';
 import Tag from '../ui/Tag.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
 import BackgroundVideo from '../BackgroundVideo.astro';
+import CompanyBenefits from '../CompanyBenefits.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { bindShortWords } from '../../lib/typography';
 import { homePageCopy } from '../../data/home-page';
@@ -105,11 +106,6 @@ const originSteps = [
   { title: copy.originSectionCardTitle2, description: copy.originSectionText3 },
   { title: copy.originSectionCardTitle3, description: copy.originSectionText4 }
 ];
-const quality = [
-  { title: copy.qualitySectionCardTitle, description: copy.qualitySectionText2 },
-  { title: copy.qualitySectionCardTitle2, description: copy.qualitySectionText3 },
-  { title: copy.qualitySectionCardTitle3, description: copy.qualitySectionText4 }
-];
 const supply = [
   { title: copy.supplySectionCardTitle, description: copy.supplySectionText2 },
   { title: copy.supplySectionCardTitle2, description: copy.supplySectionText3 },
@@ -161,6 +157,7 @@ const supply = [
         loading="lazy"
       />
     </section>
+    <CompanyBenefits locale={locale} />
     <section class="home-section directions" id="directions" aria-labelledby="directions-title">
       <div class="section-heading">
         <h2 id="directions-title" class="type-h2">
@@ -309,28 +306,6 @@ const supply = [
           </div>
         ))}
       </div>
-    </section>
-    <section class="home-section quality-section" id="quality" aria-labelledby="quality-title">
-      <div class="section-heading">
-        <h2 id="quality-title" class="type-h2">
-          {copy.qualitySectionHeading}
-          <br />
-          <span>{copy.qualitySectionLabel3}</span>
-        </h2>
-      </div>
-      <div class="quality-grid">
-        {quality.map((item, index) => (
-          <article>
-            <span class="quality-index">{String(index + 1).padStart(2, '0')}</span>
-            <h3>{item.title}</h3>
-            <p class="type-p">{text(item.description)}</p>
-          </article>
-        ))}
-      </div>
-      <Link variant="text" href={href('/quality/')} class="text-link">
-        {copy.qualitySectionLink}
-        <span aria-hidden="true">↗</span>
-      </Link>
     </section>
     <section class="material-banner" aria-labelledby="material-title">
       <BackgroundVideo />

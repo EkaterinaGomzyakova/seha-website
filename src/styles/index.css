@@ -32,6 +32,7 @@
 @import url('./components/category-image.css') layer(components);
 @import url('./components/product-image.css') layer(components);
 @import url('./components/cookie.css') layer(components);
+@import url('./components/company-benefits.css') layer(components);
 @import url('./components/links.css') layer(components);
 @import url('./components/footer.css') layer(components);
 @import url('./pages/home.css') layer(pages);
