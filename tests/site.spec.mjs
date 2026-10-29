@@ -85,6 +85,42 @@ test('browser notice preference is stored only after an explicit action', async 
     .toBe('dismissed');
 });
 
+test('header uses one grid and responsive layout across page templates', async ({ page }) => {
+  for (const width of [1920, 1280, 800, 440]) {
+    await page.setViewportSize({ width, height: 900 });
+    const margin = width > 1280 ? 136 : width > 800 ? 96 : width > 440 ? 32 : 24;
+    for (const locale of ['ru', 'en']) {
+      let referenceHeight;
+      for (const path of ['/', '/products/substrates/', '/404/']) {
+        await page.goto(url(`/${locale}${path}`), { waitUntil: 'domcontentloaded' });
+        await page.evaluate(() => document.fonts.ready);
+        const header = page.locator('header.site-header');
+        await expect(header).toHaveCount(1);
+        const box = await header.boundingBox();
+        expect(box.x).toBe(margin);
+        expect(box.width).toBe(width - 2 * margin);
+        expect(box.y).toBe(0);
+        referenceHeight ??= box.height;
+        expect(box.height).toBe(referenceHeight);
+        await expect(header.locator('.site-nav')).toBeVisible({ visible: width > 1024 });
+        await expect(header.locator('.button')).toBeVisible({ visible: width > 1280 });
+        await expect(header.locator('.menu-toggle')).toBeVisible({ visible: width <= 1024 });
+        const actions = await header.locator('.site-header__actions').boundingBox();
+        expect(actions.x + actions.width).toBeLessThanOrEqual(width - margin + 1);
+        if (width <= 1024) {
+          expect(box.height).toBe(72);
+          const logo = await header.locator('.logo-image').boundingBox();
+          expect(logo).toMatchObject({ x: margin, y: 20, width: 95, height: 32 });
+          const toggle = await header.locator('.menu-toggle').boundingBox();
+          expect(toggle).toMatchObject({ x: width - margin - 32, y: 20, width: 32, height: 32 });
+          const language = await header.locator('.language-control').boundingBox();
+          expect(toggle.x - language.x - language.width).toBe(20);
+        }
+      }
+    }
+  }
+});
+
 test('mobile menu opens and closes', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(url('/en/'), { waitUntil: 'domcontentloaded' });

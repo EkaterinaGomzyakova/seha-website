@@ -18,7 +18,7 @@ export const siteTranslations = {
     production: 'Manufacturing',
     quality: 'Quality & Certifications',
     about: 'About us',
-    offer: 'Request a delivery quote',
+    offer: 'Request a Quote',
     language: 'Switch language',
     menu: 'Open menu',
     logoAlt: 'SEHA — international'

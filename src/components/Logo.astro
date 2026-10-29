@@ -26,7 +26,13 @@ const logo = (variant: string) =>
     <picture>
       <source media="(max-width: 1024px)" srcset={logo('mobile')} />
       <source media="(max-width: 1280px)" srcset={logo('small-desktop')} />
-      <img class="logo-image" src={logo('desktop')} alt={copy.logoAlt} width="240" height="48" />
+      <img
+        class="logo-image"
+        src={logo('desktop')}
+        alt={copy.logoAlt}
+        width="95"
+        height={locale === 'en' ? 29.989 : 30.331}
+      />
     </picture>
   )}
 </a>

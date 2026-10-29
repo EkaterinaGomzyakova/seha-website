@@ -24,8 +24,10 @@ const languageTarget = localizedPath(
 );
 ---
 
-<header class="header site-header">
-  <Logo locale={locale} />
+<header class:list={['site-header', `site-header--${locale}`]}>
+  <div class="site-header__brand">
+    <Logo locale={locale} />
+  </div>
   <nav class="site-nav" aria-label={ui.mainNavigation}>
     {links.map((link) => (
       <a
@@ -36,30 +38,32 @@ const languageTarget = localizedPath(
       </a>
     ))}
   </nav>
-  <LanguageSwitcher locale={locale} target={languageTarget} label={copy.language} />
-  <Button variant="primary" compact href={localizedPath('/#contacts', locale)}>
-    {copy.offer}
-  </Button>
-  <button
-    id="menu-toggle"
-    class="menu-toggle"
-    type="button"
-    aria-label={copy.menu}
-    aria-expanded="false"
-    aria-controls="mobile-nav"
-    data-open-label={copy.menu}
-    data-close-label={ui.closeMenu}
-  >
-    <img
-      class="menu-icon"
-      data-menu-icon
-      src={withBase('/assets/images/common/menu-icon-figma.svg')}
-      data-open-src={withBase('/assets/images/common/mobile-menu-xmark.svg')}
-      data-closed-src={withBase('/assets/images/common/menu-icon-figma.svg')}
-      alt=""
-      aria-hidden="true"
-    />
-  </button>
+  <div class="site-header__actions">
+    <LanguageSwitcher locale={locale} target={languageTarget} label={copy.language} />
+    <Button variant="primary" compact href={localizedPath('/#contacts', locale)}>
+      {copy.offer}
+    </Button>
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      type="button"
+      aria-label={copy.menu}
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      data-open-label={copy.menu}
+      data-close-label={ui.closeMenu}
+    >
+      <img
+        class="menu-icon"
+        data-menu-icon
+        src={withBase('/assets/images/common/menu-icon-figma.svg')}
+        data-open-src={withBase('/assets/images/common/mobile-menu-xmark.svg')}
+        data-closed-src={withBase('/assets/images/common/menu-icon-figma.svg')}
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
+  </div>
   <seha-mobile-menu trigger="menu-toggle">
     <div
       id="mobile-nav"

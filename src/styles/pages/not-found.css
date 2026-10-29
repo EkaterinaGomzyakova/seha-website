@@ -1,10 +1,4 @@
 /* pages/not-found.css: page-specific rules. */
-.not-found .site-header {
-  height: 94px;
-  max-width: 1680px;
-  position: relative;
-  gap: 30px;
-}
 .error-page {
   min-height: calc(100svh - 110px);
   margin: 0 16px 16px;
@@ -137,9 +131,6 @@
   }
 }
 @media (max-width: 900px) {
-  .not-found .site-header {
-    height: 80px;
-  }
   .error-page {
     margin: 0 10px 10px;
     padding: 36px 5%;

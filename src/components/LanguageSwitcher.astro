@@ -19,12 +19,14 @@ const other = locale === 'en' ? 'ru' : 'en';
     aria-expanded="false"
     aria-controls="language-options"
   >
-    <img
-      class="language-flag"
-      src={withBase(`/assets/images/common/menu-flag-${locale}.svg`)}
-      alt=""
-    />
-    <span data-language-code>{locale.toUpperCase()}</span>
+    <span class="language-switch__label">
+      <img
+        class="language-flag"
+        src={withBase(`/assets/images/common/menu-flag-${locale}.svg`)}
+        alt=""
+      />
+      <span data-language-code>{locale === 'ru' ? 'РУ' : 'EN'}</span>
+    </span>
     <img
       class="language-arrow"
       data-language-arrow
