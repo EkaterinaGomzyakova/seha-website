@@ -2,6 +2,8 @@
 import type { Locale } from '../data/translations';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { localizedPath, withBase } from '../lib/paths';
+import Button from './ui/Button.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 interface Props {
   locale: Locale;
 }
@@ -11,7 +13,14 @@ const copy = getInterfaceCopy(locale);
 
 <seha-cookie-banner class="cookie-banner" aria-label={copy.cookieTitle} hidden>
   <div class="cookie-header">
-    <span class="cookie-badge" aria-hidden="true"></span>
+    <span class="cookie-badge" aria-hidden="true">
+      <ResponsiveImage
+        src="/assets/images/common/cookie-coconut.png"
+        alt=""
+        sizes="80px"
+        loading="eager"
+      />
+    </span>
     <button class="cookie-close" type="button" aria-label={copy.close}>
       <img src={withBase('/assets/images/common/cookie-xmark.svg')} alt="" />
     </button>
@@ -20,8 +29,8 @@ const copy = getInterfaceCopy(locale);
     <p id="cookie-message" data-cookie-message>
       {copy.cookieText} <a href={localizedPath('/privacy/', locale)}>{copy.cookieLink}</a>.
     </p>
-    <button class="cookie-action" data-cookie-action type="button">
+    <Button variant="secondary" compact class="cookie-action" data-cookie-action>
       {copy.cookieAction}
-    </button>
+    </Button>
   </div>
 </seha-cookie-banner>

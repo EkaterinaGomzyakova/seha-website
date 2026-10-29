@@ -13,14 +13,14 @@ seha-cookie-banner[hidden] {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  width: 485px;
+  width: min(485px, calc(100% - 48px));
   height: auto;
+  max-height: calc(100dvh - 80px);
   padding: 32px;
-  overflow: hidden;
+  overflow: auto;
   border-radius: 40px;
   background: var(--color-green-brand);
   color: var(--color-background-light);
-  box-shadow: 0 18px 50px rgba(38, 50, 35, 0.24);
 }
 @media (min-width: 1281px) {
   .cookie-banner {
@@ -28,7 +28,7 @@ seha-cookie-banner[hidden] {
     bottom: 40px;
   }
 }
-.cookie-banner > div:first-child {
+.cookie-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -36,14 +36,22 @@ seha-cookie-banner[hidden] {
   min-height: 54px;
 }
 .cookie-badge {
+  position: relative;
   display: block;
   width: 54px;
   height: 54px;
   flex: 0 0 54px;
-  border-radius: 0;
-  background: url('/assets/images/common/cookie-coconut.png') center/80px 80px no-repeat;
-  filter: none;
-  box-shadow: none;
+  overflow: hidden;
+}
+.cookie-badge img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  max-width: none;
 }
 .cookie-close {
   position: static;
@@ -75,18 +83,10 @@ seha-cookie-banner[hidden] {
   max-width: none;
   font: 500 16px/1.45 var(--font-sans);
 }
-.cookie-action {
+.cookie-banner .cookie-action {
   min-width: 0;
   height: 40px;
   padding: 12px 24px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--color-yellow-brand);
-  color: var(--color-green-brand);
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.99px;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 .cookie-close:focus-visible,
 .cookie-action:focus-visible {
@@ -98,19 +98,21 @@ seha-cookie-banner[hidden] {
 }
 @media (max-width: 560px) {
   .cookie-banner {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    left: 24px;
+    right: 24px;
     width: auto;
     height: auto;
     min-height: 0;
-    padding: 28px;
-    border-radius: 36px;
   }
 }
 
 .cookie-banner p a {
   color: var(--color-yellow-brand);
+  /* Distinguish the link without relying on colour alone. */
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+.cookie-banner p a:focus-visible {
+  outline: 2px solid var(--color-yellow-brand);
+  outline-offset: 4px;
 }

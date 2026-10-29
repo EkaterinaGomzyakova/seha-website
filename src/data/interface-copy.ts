@@ -61,9 +61,8 @@ export const interfaceCopy = {
     none: 'Нет',
     mailConsent:
       'Согласен на обработку указанных данных для подготовки предложения и обратной связи.',
-    cookieTitle: 'Информация о хранении настроек',
-    cookieText:
-      'Мы сохраняем ваш выбор об уведомлении в браузере. Аналитика и отслеживание не используются. Подробнее — в',
+    cookieTitle: 'Уведомление о cookies',
+    cookieText: 'Мы используем куки для улучшения работы сайта. Подробнее — в',
     cookieLink: 'Политике конфиденциальности',
     cookieAction: 'ПОНЯТНО',
     noScript: 'Для отправки формы включите JavaScript или напишите нам по электронной почте.'
@@ -127,11 +126,10 @@ export const interfaceCopy = {
     none: 'None',
     mailConsent:
       'I consent to the processing of these details to prepare a quotation and contact me.',
-    cookieTitle: 'Browser storage notice',
-    cookieText:
-      'We save your notice preference in your browser. We do not use analytics or tracking. Learn more in our',
+    cookieTitle: 'Cookie notice',
+    cookieText: 'We use cookies to improve your experience on our website. Learn more in our',
     cookieLink: 'Privacy Policy',
-    cookieAction: 'GOT IT',
+    cookieAction: 'ACCEPT',
     noScript: 'Enable JavaScript to submit the form, or contact us by email.'
   }
 } as const;

@@ -83,6 +83,14 @@ test('browser notice preference is stored only after an explicit action', async 
   await expect
     .poll(() => page.evaluate(() => localStorage.getItem('seha-cookie-consent')))
     .toBe('dismissed');
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await expect(banner).toBeHidden();
+  await page.evaluate(() => localStorage.removeItem('seha-cookie-consent'));
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await page.locator('.cookie-close').click();
+  await expect(banner).toBeHidden();
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await expect(banner).toBeHidden();
 });
 
 test('header uses one grid and responsive layout across page templates', async ({ page }) => {
