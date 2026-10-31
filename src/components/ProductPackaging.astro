@@ -87,9 +87,11 @@ const context = formId || 'product-page';
         </div>
       );
     })}
-    <p class="product-packaging__note type-p">
-      {ru ? 'Показан общий остаток товара.' : 'Stock shown is the total for this product.'}
-    </p>
+    {!formId && (
+      <p class="product-packaging__note type-p">
+        {ru ? 'Показан общий остаток товара.' : 'Stock shown is the total for this product.'}
+      </p>
+    )}
   </div>
 )}
 <script>

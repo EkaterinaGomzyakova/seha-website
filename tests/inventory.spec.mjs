@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { products, productsForCategory } from '../src/data/products.ts';
+import { products } from '../src/data/products.ts';
 import { formatStock, parseInventory } from '../src/lib/inventory.ts';
 import { inventorySource } from '../src/data/inventory.ts';
 
@@ -66,25 +66,17 @@ for (const locale of ['ru', 'en']) {
       );
     });
     await page.goto(`${base}/${locale}/products/substrates/`);
-    const stock = page.locator('[data-product-stock="grow-bag"]');
-    await expect(stock).toHaveText(
-      locale === 'ru' ? 'В наличии: 37\u00a0шт.' : 'In stock: 37\u00a0pcs'
-    );
-    await expect(page.locator('[data-stock-state="available"]')).toHaveCount(
-      productsForCategory('substrates').length
-    );
-    expect(requests).toBe(1);
+    await expect(page.locator('[data-product-stock]')).toHaveCount(0);
+    expect(requests).toBe(0);
     const layout = await page.locator('.product-item').evaluateAll((cards) =>
       cards.map((card) => {
         const description = card
           .querySelector('.product-item__details > p')
           .getBoundingClientRect();
-        const stock = card.querySelector('[data-product-stock]').getBoundingClientRect();
         const button = card.querySelector('.button').getBoundingClientRect();
         return {
           height: card.getBoundingClientRect().height,
-          below: stock.top >= description.bottom,
-          gap: button.top - stock.bottom
+          gap: button.top - description.bottom
         };
       })
     );
@@ -92,19 +84,21 @@ for (const locale of ['ru', 'en']) {
       Math.max(...layout.map((card) => card.height)) -
         Math.min(...layout.map((card) => card.height))
     ).toBeLessThan(1);
-    expect(layout.every((card) => card.below && card.gap >= 19.5)).toBe(true);
+    expect(layout.every((card) => card.gap >= 19.5)).toBe(true);
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)
     ).toBe(true);
 
+    await page.goto(`${base}/${locale}/products/substrates/grow-bag/`);
+    const stock = page.locator('[data-product-stock="grow-bag"]');
+    await expect(stock).toHaveText(
+      locale === 'ru' ? 'В наличии: 37\u00a0шт.' : 'In stock: 37\u00a0pcs'
+    );
+    expect(requests).toBe(1);
     quantity = 42;
     await page.clock.fastForward(61_000);
     await expect(stock).toContainText('42');
     expect(requests).toBe(2);
-    await page.goto(`${base}/${locale}/products/substrates/grow-bag/`);
-    await expect(page.locator('[data-product-stock="grow-bag"]')).toHaveText(
-      locale === 'ru' ? 'В наличии: 42\u00a0шт.' : 'In stock: 42\u00a0pcs'
-    );
     await expect(page.locator('.product-detail__summary > p')).toBeVisible();
   });
 

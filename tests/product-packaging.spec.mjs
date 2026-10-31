@@ -25,6 +25,9 @@ for (const locale of ['ru', 'en']) {
     const dialog = page.locator('#product-inquiry');
     const form = dialog.locator('form');
     await expect(dialog).toBeVisible();
+    await expect(dialog.locator('#product-inquiry-next-step')).toContainText(
+      locale === 'ru' ? '3 рабочих дней' : '3 working days'
+    );
     await expect(form.locator('[value="industrial-25-l"]')).toBeChecked();
     await expect(form.locator('[data-supply-format][value="industrial"]')).toBeChecked();
     await expect(form.locator('[data-packaging-panel="consumer"]')).toBeHidden();
@@ -92,7 +95,7 @@ for (const locale of ['ru', 'en']) {
     await expect(page.locator('main')).not.toContainText(
       locale === 'ru' ? 'только для бизнеса' : 'businesses only'
     );
-    await expect(page.locator('main')).toContainText(
+    await expect(page.locator('main')).not.toContainText(
       locale === 'ru' ? '3 рабочих дней' : '3 working days'
     );
     await page.locator('main [data-supply-format][value="industrial"]').check();

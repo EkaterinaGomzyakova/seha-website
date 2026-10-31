@@ -1,8 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Button from './ui/Button.astro';
-import ProductStock from './ProductStock.astro';
-import { productInquiryCopy } from '../data/product-inquiry';
 import {
   getProductCategoryPage,
   type ProductCategoryPageSlug
@@ -97,7 +95,6 @@ const sizes =
       <div class="product-list-heading">
         <span>{t(page.listLabel)}</span>
         <h2 id="products-title" class="type-h2" set:html={t(page.listTitle)} />
-        <p class="type-p">{productInquiryCopy[locale].nextStep}</p>
       </div>
       <div class="product-grid-page">
         {page.items.map((item) => (
@@ -127,7 +124,6 @@ const sizes =
             </h3>
             <div class="product-item__details">
               <p class="type-p">{bindShortWords(t(item.description), locale)}</p>
-              <ProductStock productId={item.id} locale={locale} />
             </div>
             <Button
               href="#contacts"
