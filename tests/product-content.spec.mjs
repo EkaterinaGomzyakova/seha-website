@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { products } from '../src/data/products.ts';
 import { applications, productApplications } from '../src/data/product-applications.ts';
+import { productBenefits } from '../src/data/product-benefits.ts';
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 
 for (const locale of ['ru', 'en']) {
@@ -18,6 +19,12 @@ for (const locale of ['ru', 'en']) {
       expect(response.ok()).toBe(true);
       const html = await response.text();
       for (const key of items) expect(html).toContain(applications[key].label[locale]);
+      const benefits = productBenefits[product.id];
+      expect(benefits?.length).toBeGreaterThanOrEqual(2);
+      for (const benefit of benefits) {
+        expect(html).toContain(benefit.title[locale]);
+        expect(html).toContain(benefit.description[locale]);
+      }
       expect(html).toContain('data-order-quantity');
     }
     await page.goto(`${base}/${locale}/products/veymur/veymur-mct-oil/`);
@@ -62,6 +69,17 @@ for (const locale of ['ru', 'en']) {
       accessibility.violations.filter((item) => ['serious', 'critical'].includes(item.impact))
     ).toEqual([]);
     await page.locator('.cookie-action').click();
+    await expect(page.locator('.product-benefits li')).toHaveCount(
+      productBenefits['veymur-mct-oil'].length
+    );
+    expect(
+      await page
+        .locator('.product-benefits')
+        .evaluate((section) => section.scrollWidth <= section.clientWidth)
+    ).toBe(true);
+    await page.locator('.product-benefits').screenshot({
+      path: `test-results/benefits-${locale}-${test.info().project.name}.png`
+    });
     await page
       .locator('.product-applications')
       .screenshot({ path: `test-results/applications-${locale}-${test.info().project.name}.png` });

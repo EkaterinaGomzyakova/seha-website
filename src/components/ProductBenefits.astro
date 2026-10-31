@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../data/translations';
+import { productBenefits } from '../data/product-benefits';
+
+interface Props {
+  productId: string;
+  locale: Locale;
+}
+const { productId, locale } = Astro.props;
+const items = productBenefits[productId] ?? [];
+---
+
+{items.length > 0 && (
+  <section class="product-benefits" aria-labelledby="product-benefits-title">
+    <h2 class="type-h2" id="product-benefits-title">
+      {locale === 'ru' ? 'Преимущества' : 'Benefits'}
+    </h2>
+    <ul style={`--benefit-columns: ${Math.min(items.length, 3)}`}>
+      {items.map((item) => (
+        <li>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="m5 12 4 4L19 6"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>{item.title[locale]}</h3>
+            <p class="type-p">{item.description[locale]}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+<style>
+  h2 {
+    margin: 0 0 24px;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(var(--benefit-columns), minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-light-gray);
+    color: var(--color-green-brand);
+  }
+  h3 {
+    margin: 0;
+    font: 700 18px/1.35 var(--font-sans);
+    overflow-wrap: break-word;
+  }
+  p {
+    margin: 10px 0 0;
+    color: var(--color-dark-gray);
+  }
+  @media (max-width: 800px) {
+    ul {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+  }
+  @media (max-width: 440px) {
+    h3 {
+      font-size: 16px;
+    }
+  }
+</style>

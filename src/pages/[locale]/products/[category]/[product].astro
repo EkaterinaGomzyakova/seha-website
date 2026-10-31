@@ -6,6 +6,7 @@ import ProductGallery from '../../../../components/ProductGallery.astro';
 import ProductStock from '../../../../components/ProductStock.astro';
 import ProductQuantity from '../../../../components/ProductQuantity.astro';
 import ProductApplications from '../../../../components/ProductApplications.astro';
+import ProductBenefits from '../../../../components/ProductBenefits.astro';
 import ProductPackaging from '../../../../components/ProductPackaging.astro';
 import { productPackaging } from '../../../../data/product-packaging';
 import { productInquiryCopy } from '../../../../data/product-inquiry';
@@ -72,6 +73,7 @@ const path = `/products/${item.category}/${item.slug}/`;
         </Button>
       </div>
     </section>
+    <ProductBenefits productId={item.id} locale={locale} />
     <section aria-labelledby="specifications-title">
       <h2 id="specifications-title" class="type-h2">
         {ru ? 'Характеристики' : 'Specifications'}
