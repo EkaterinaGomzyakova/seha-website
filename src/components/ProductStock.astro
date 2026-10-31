@@ -1,0 +1,37 @@
+---
+import type { Locale } from '../data/translations';
+import { formatStock } from '../lib/inventory';
+
+interface Props {
+  productId: string;
+  locale: Locale;
+}
+const { productId, locale } = Astro.props;
+---
+
+<div
+  class="product-stock type-p"
+  data-product-stock={productId}
+  data-stock-locale={locale}
+  data-stock-state="pending"
+  role="status"
+  aria-atomic="true"
+>
+  {formatStock(undefined, locale)}
+</div>
+
+<script>
+  import { initProductStock } from '../scripts/product-stock';
+  initProductStock();
+</script>
+
+<style>
+  .product-stock {
+    min-height: 1.55em;
+    color: var(--color-dark-gray);
+    font-weight: 500;
+  }
+  .product-stock[data-stock-state='available'] {
+    color: var(--color-green-brand);
+  }
+</style>

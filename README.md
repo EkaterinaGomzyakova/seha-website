@@ -19,7 +19,7 @@ Copy `.env.example` to `.env` if deployment settings are needed. `SITE_URL` is t
 - `src/components/pages/`: shared templates for each page type.
 - `src/components/`: header, footer, form, logo, language switcher, category template and SEO. `ui/` contains reusable HTML primitives.
 - `src/data/*-page.ts`: complete RU/EN dictionaries rendered at build time. English copy is a draft for manual editorial review before release.
-- `src/data/products.ts`: the single catalog source, with 29 products, stable IDs/slugs, translated descriptions, and images. `product-category-pages.ts` supplies category presentation metadata and uses the canonical catalog.
+- `src/data/products.ts`: the single catalog source, with stable IDs/slugs, translated descriptions, and images. `product-category-pages.ts` supplies category presentation metadata and uses the canonical catalog.
 - `src/data/site.ts`: shared contact and organization details.
 - `src/scripts/`: bundled interaction modules. Light-DOM Web Components enhance server-rendered menu and browser-storage notice; other small interactions use native HTML and TypeScript.
 - `src/styles/`: one entrypoint, semantic cascade layers, component ownership and per-page styles. See `src/styles/README.md`.
@@ -57,6 +57,16 @@ Set `PUBLIC_FORM_ENDPOINT` locally or as a GitHub repository variable when a han
 Return a successful 2xx response after accepting the inquiry (optionally JSON `{ "success": true }`); return a non-2xx response or JSON `{ "success": false }` on failure. The form distinguishes sending, success, failure and a prepared email draft, blocks duplicate submissions and retains entered data on failure.
 
 Until a handler is configured, the form prepares a localized draft and offers copying or an explicit button to open an email application. It never opens an email application automatically or claims that the website has sent an email. SMTP credentials must never be placed in `PUBLIC_*` variables or browser code.
+
+## Product availability
+
+`src/data/inventory.ts` connects the public inventory spreadsheet to the shared `ProductStock.astro` component. Both product detail pages and category cards read it in the browser; changing quantities does not require rebuilding the site. One request serves every card on a page. Visible pages refresh once a minute; Google may cache recent edits briefly.
+
+On the `Inventory` tab (`gid=0`), keep these English-only columns in order: **A** Product ID, **B** Product, **C** Category, **D** Quantity, **E** Unit. Products are grouped as Substrates, Veymur, Coir Fibre, Coconut Shell. Names and categories are for the editor; the website matches column A to `src/data/products.ts`. Rows may be reordered, but do not rename IDs or reorder columns. The configured range supports up to 999 products.
+
+Edit D as a non-negative number and E separately as `pcs`, `kg`, `L` or `m²`. The website localizes units and numbers. Zero means out of stock; an empty/invalid quantity, unknown unit, duplicate ID, missing row or failed request displays “Наличие уточняется” / “Availability on request”. Stock is informational; the inquiry form does not reserve or decrement quantities.
+
+The sheet must remain readable without signing in to Google. The browser uses Google's public Visualization data-source protocol with a fixed JSONP callback, a timeout, and strict row validation; API keys and a server are unnecessary. Only columns A, D and E are requested. Keep customer details, orders and other private information in a separate spreadsheet.
 
 ## Publication
 

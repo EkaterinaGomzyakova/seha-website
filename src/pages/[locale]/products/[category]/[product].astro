@@ -3,6 +3,7 @@ import { products, type ProductItem } from '../../../../data/products';
 import type { Locale } from '../../../../data/translations';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
 import ProductGallery from '../../../../components/ProductGallery.astro';
+import ProductStock from '../../../../components/ProductStock.astro';
 import Button from '../../../../components/ui/Button.astro';
 import { localizedPath } from '../../../../lib/paths';
 import { specificationsFor } from '../../../../data/product-specifications';
@@ -46,7 +47,10 @@ const path = `/products/${item.category}/${item.slug}/`;
         <h1 id="product-name" class="type-h1">
           {item.name[locale]}
         </h1>
-        <p class="type-p">{item.description[locale]}</p>
+        <div class="product-detail__summary">
+          <p class="type-p">{item.description[locale]}</p>
+          <ProductStock productId={item.id} locale={locale} />
+        </div>
         <Button
           href="#contacts"
           full
@@ -90,6 +94,10 @@ const path = `/products/${item.category}/${item.slug}/`;
     display: grid;
     gap: 24px;
     min-width: 0;
+  }
+  .product-detail__summary {
+    display: grid;
+    gap: 12px;
   }
   .product-detail__overview :global(.product-gallery__main img) {
     width: 100%;

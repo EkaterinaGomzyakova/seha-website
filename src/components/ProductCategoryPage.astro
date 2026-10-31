@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Button from './ui/Button.astro';
+import ProductStock from './ProductStock.astro';
 import {
   getProductCategoryPage,
   type ProductCategoryPageSlug
@@ -121,7 +122,10 @@ const sizes =
                 {bindShortWords(t(item.name), locale)}
               </a>
             </h3>
-            <p class="type-p">{bindShortWords(t(item.description), locale)}</p>
+            <div class="product-item__details">
+              <p class="type-p">{bindShortWords(t(item.description), locale)}</p>
+              <ProductStock productId={item.id} locale={locale} />
+            </div>
             <Button
               href="#contacts"
               full
