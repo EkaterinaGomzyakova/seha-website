@@ -1,5 +1,6 @@
 import { text, type LocalizedText, type ProductItem } from './products';
 import { productCopyUpdates } from './product-copy-updates';
+import { productPackaging } from './product-packaging';
 
 export interface Specification {
   label: LocalizedText;
@@ -549,6 +550,24 @@ export function specificationsFor(product: ProductItem): Specification[] {
   }
   if (!specifiedLabels.has('tolerances and batch documents')) {
     rows.push(field('Допуски и документы партии', 'Tolerances and batch documents'));
+  }
+  const packaging = productPackaging[product.id];
+  if (packaging) {
+    const result = rows.filter((row) => row.label.en !== 'Pack size');
+    for (const kind of ['retail', 'bulk'] as const) {
+      const options = packaging.options.filter((option) => option.kind === kind);
+      result.push(
+        field(
+          kind === 'retail' ? 'Розничная фасовка' : 'Оптовая фасовка',
+          kind === 'retail' ? 'Retail packaging' : 'Bulk packaging',
+          text(
+            options.map((option) => option.label.ru).join(', '),
+            options.map((option) => option.label.en).join(', ')
+          )
+        )
+      );
+    }
+    return result;
   }
   return rows;
 }

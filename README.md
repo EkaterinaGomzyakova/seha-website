@@ -58,6 +58,12 @@ Return a successful 2xx response after accepting the inquiry (optionally JSON `{
 
 Until a handler is configured, the form prepares a localized draft and offers copying or an explicit button to open an email application. It never opens an email application automatically or claims that the website has sent an email. SMTP credentials must never be placed in `PUBLIC_*` variables or browser code.
 
+## Product packaging and inquiries
+
+Product-card order buttons open the separate `ProductInquiry.astro` dialog. `src/data/product-packaging.ts` is the shared source for the six food products' retail/bulk choices and specification rows. Selected product, pack size and requested quantity are included in the inquiry. Fresh coconuts and non-food products have no invented pack sizes. Stock remains a product-wide total, not per-variant inventory.
+
+The footer form is unchanged. For direct product inquiries, deploy the standalone Node.js + SMTP service and set `PUBLIC_PRODUCT_INQUIRY_ENDPOINT`; see [server setup](server/README.md). Without that configured endpoint, the dialog reports that sending is unavailable and never claims to have sent an email.
+
 ## Product availability
 
 `src/data/inventory.ts` connects the public inventory spreadsheet to the shared `ProductStock.astro` component. Both product detail pages and category cards read it in the browser; changing quantities does not require rebuilding the site. One request serves every card on a page. Visible pages refresh once a minute; Google may cache recent edits briefly.

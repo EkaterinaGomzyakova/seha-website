@@ -49,8 +49,12 @@ for (const locale of ['ru', 'en']) {
         `${base}/${locale === 'ru' ? 'en' : 'ru'}/products/veymur/${product.slug}/`
       );
       await page.locator('main [data-quote-product]').click();
-      await expect(page.locator('[name="productId"]')).toHaveValue(product.id);
-      await expect(page.locator('[name="product"]')).toHaveValue(product.name[locale]);
+      await expect(page.locator('#product-inquiry-form [name="productId"]')).toHaveValue(
+        product.id
+      );
+      await expect(page.locator('#product-inquiry-form [name="product"]')).toHaveValue(
+        product.name[locale]
+      );
     }
   });
 
@@ -80,7 +84,10 @@ for (const locale of ['ru', 'en']) {
       true
     );
     await page.locator('main [data-quote-product]').click();
-    await expect(page.locator('[name="productId"]')).toHaveValue('open-top-grow-bag');
+    await expect(page.locator('#product-inquiry-form [name="productId"]')).toHaveValue(
+      'open-top-grow-bag'
+    );
+    await page.keyboard.press('Escape');
     await page.locator('[data-language-toggle]').click();
     await page.locator('[data-set-language]').first().click();
     await expect(page).toHaveURL(

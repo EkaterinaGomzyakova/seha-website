@@ -1,0 +1,110 @@
+---
+import type { Locale } from '../data/translations';
+import type { ProductItem } from '../data/products';
+import { productPackaging } from '../data/product-packaging';
+interface Props {
+  product: ProductItem;
+  locale: Locale;
+  formId?: string;
+}
+const { product, locale, formId } = Astro.props;
+const packaging = productPackaging[product.id];
+const ru = locale === 'ru';
+---
+
+{packaging && (
+  <fieldset class="product-packaging">
+    <legend class="type-p">{ru ? 'Фасовка / объём' : 'Pack size / volume'}</legend>
+    {(['retail', 'bulk'] as const).map((kind) => {
+      const group = kind === 'retail' ? (ru ? 'Розница' : 'Retail') : ru ? 'Опт' : 'Bulk';
+      return (
+        <div class="product-packaging__group">
+          <p class="type-p">{group}</p>
+          <div class="product-packaging__options">
+            {packaging.options
+              .filter((option) => option.kind === kind)
+              .map((option) => (
+                <label class="product-packaging__option">
+                  <input
+                    type="radio"
+                    name={formId ? 'packagingId' : `packaging-${product.id}`}
+                    form={formId}
+                    value={option.id}
+                    checked={option.id === packaging.defaultId}
+                    data-product-packaging
+                    data-packaging-label={`${group} — ${option.label[locale]}`}
+                    data-packaging-product-id={product.id}
+                    data-packaging-product-name={product.name[locale]}
+                  />
+                  <span class="type-p">{option.label[locale]}</span>
+                </label>
+              ))}
+          </div>
+        </div>
+      );
+    })}
+    <p class="product-packaging__note type-p">
+      {ru
+        ? 'Наличие указано суммарно для всех фасовок.'
+        : 'Availability is the total across all pack sizes.'}
+    </p>
+  </fieldset>
+)}
+
+<style>
+  .product-packaging {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    border: 0;
+  }
+  legend {
+    margin-bottom: 12px;
+    padding: 0;
+    font-weight: 700;
+  }
+  .product-packaging__group + .product-packaging__group {
+    margin-top: 16px;
+  }
+  .product-packaging__group > p {
+    margin: 0 0 8px;
+    color: var(--color-dark-gray);
+  }
+  .product-packaging__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .product-packaging__option {
+    position: relative;
+    cursor: pointer;
+    max-width: 100%;
+  }
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  span {
+    display: block;
+    padding: 12px 16px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 12px;
+    color: var(--color-green-brand);
+    background: var(--color-white);
+  }
+  input:checked + span {
+    color: var(--color-background-light);
+    background: var(--color-green-brand);
+    border-color: var(--color-green-brand);
+  }
+  input:focus-visible + span {
+    outline: var(--focus-outline);
+    outline-offset: 3px;
+  }
+  .product-packaging__note {
+    margin: 12px 0 0;
+    color: var(--color-dark-gray);
+  }
+</style>

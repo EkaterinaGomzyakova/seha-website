@@ -4,7 +4,9 @@ import GlobalStyles from '@components/GlobalStyles.astro';
 import Header from '@components/Header.astro';
 import SeoLinks from '@components/SeoLinks.astro';
 import type { Locale } from '../data/translations';
+import type { ProductItem } from '../data/products';
 import CookieBanner from '../components/CookieBanner.astro';
+import ProductInquiry from '../components/ProductInquiry.astro';
 import { withBase } from '../lib/paths';
 
 interface Props {
@@ -17,6 +19,7 @@ interface Props {
   skipHref?: string;
   showFooter?: boolean;
   image?: string;
+  inquiryProducts?: ProductItem[];
 }
 
 const {
@@ -28,7 +31,8 @@ const {
   skipText,
   skipHref = '#main-content',
   showFooter = true,
-  image
+  image,
+  inquiryProducts = []
 } = Astro.props;
 ---
 
@@ -51,6 +55,7 @@ const {
     <Header locale={locale} />
     <slot />
     {showFooter && <Footer locale={locale} />}
+    {inquiryProducts.length > 0 && <ProductInquiry locale={locale} products={inquiryProducts} />}
     <CookieBanner locale={locale} />
     <script>
       import '../scripts/site';

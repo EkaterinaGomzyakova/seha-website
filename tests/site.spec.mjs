@@ -219,23 +219,24 @@ test('language options close with Escape and keep focus', async ({ page }) => {
   await expect(trigger).toHaveAttribute('aria-expanded', 'false');
 });
 
-async function fillInquiry(page) {
-  await page.locator('[name="company"]').fill('Example LLC');
-  await page.locator('[name="contact"]').fill('Jane Doe');
-  await page.locator('[name="email"]').fill('jane@example.com');
-  await page.locator('[name="phone"]').fill('+1 202 555 0100');
-  await page.locator('.consent__checkbox').click();
+async function fillInquiry(page, selector = '#quote-form') {
+  const form = page.locator(selector);
+  await form.locator('[name="company"]').fill('Example LLC');
+  await form.locator('[name="contact"]').fill('Jane Doe');
+  await form.locator('[name="email"]').fill('jane@example.com');
+  await form.locator('[name="phone"]').fill('+1 202 555 0100');
+  await form.locator('.consent__checkbox').click();
 }
 
 test('product inquiry sends selection and shows success only after response', async ({ page }) => {
   await page.goto(url('/en/products/veymur/'));
   await page.locator('[data-quote-product]').first().click();
-  await expect(page.locator('[name="product"]')).not.toHaveValue('');
-  await expect(page.locator('[name="productId"]')).not.toHaveValue('');
-  await fillInquiry(page);
+  await expect(page.locator('#product-inquiry-form [name="product"]')).not.toHaveValue('');
+  await expect(page.locator('#product-inquiry-form [name="productId"]')).not.toHaveValue('');
+  await fillInquiry(page, '#product-inquiry-form');
   await page
-    .locator('#quote-form')
-    .evaluate((form) => (form.dataset.formEndpoint = '/inquiry-test'));
+    .locator('#product-inquiry-form')
+    .evaluate((form) => (form.dataset.endpoint = '/inquiry-test'));
   let resolveRequest;
   let requests = 0;
   await page.route('**/inquiry-test', async (route) => {
@@ -244,13 +245,13 @@ test('product inquiry sends selection and shows success only after response', as
     await new Promise((resolve) => (resolveRequest = resolve));
     await route.fulfill({ json: { success: true } });
   });
-  const submit = page.locator('#quote-form [type="submit"]');
+  const submit = page.locator('#product-inquiry-form [type="submit"]');
   await submit.click();
   await expect(submit).toBeDisabled();
-  await expect(page.locator('#quote-result')).toBeHidden();
+  await expect(page.locator('[data-inquiry-result]')).toHaveText('');
   await expect.poll(() => requests).toBe(1);
   resolveRequest();
-  await expect(page.locator('[data-result-title]')).toHaveText('Inquiry sent');
+  await expect(page.locator('[data-inquiry-result]')).toContainText('Your inquiry has been sent');
   await expect(submit).toBeEnabled();
 });
 

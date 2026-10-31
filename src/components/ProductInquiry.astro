@@ -1,0 +1,251 @@
+---
+import type { Locale } from '../data/translations';
+import type { ProductItem } from '../data/products';
+import { productPackaging } from '../data/product-packaging';
+import { getInterfaceCopy } from '../data/interface-copy';
+import { siteContact } from '../data/site';
+import { localizedPath } from '../lib/paths';
+import ProductPackaging from './ProductPackaging.astro';
+import Input from './ui/Input.astro';
+import Checkbox from './ui/Checkbox.astro';
+import Button from './ui/Button.astro';
+interface Props {
+  locale: Locale;
+  products: ProductItem[];
+}
+const { locale, products } = Astro.props;
+const ru = locale === 'ru';
+const copy = getInterfaceCopy(locale);
+---
+
+<dialog
+  id="product-inquiry"
+  class="product-inquiry"
+  aria-labelledby="product-inquiry-title"
+  data-locale={locale}
+>
+  <div class="product-inquiry__panel">
+    <div class="product-inquiry__heading">
+      <h2 id="product-inquiry-title" class="type-h3">
+        {ru ? 'Заявка на продукт' : 'Product inquiry'}
+      </h2>
+      <button
+        class="product-inquiry__close"
+        type="button"
+        data-close-inquiry
+        aria-label={copy.close}
+      >
+        ×
+      </button>
+    </div>
+    <form
+      id="product-inquiry-form"
+      data-endpoint={import.meta.env.PUBLIC_PRODUCT_INQUIRY_ENDPOINT || undefined}
+    >
+      <input type="hidden" name="locale" value={locale} />
+      <input type="hidden" name="productId" />
+      <input type="hidden" name="packaging" />
+      <Input label={ru ? 'Выбранный продукт' : 'Selected product'} name="product" readonly />
+      <div data-inquiry-packaging></div>
+      <div data-inquiry-custom hidden>
+        <Input
+          label={ru ? 'Нужная фасовка' : 'Required pack size'}
+          name="customPackaging"
+          maxlength="80"
+          disabled
+        />
+      </div>
+      <div class="product-inquiry__fields">
+        <Input
+          label={copy.company}
+          name="company"
+          autocomplete="organization"
+          required
+          maxlength="160"
+        />
+        <Input label={copy.contact} name="contact" autocomplete="name" required maxlength="120" />
+        <Input
+          label={copy.email}
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          maxlength="254"
+        />
+        <Input label={copy.phone} name="phone" type="tel" autocomplete="tel" maxlength="40" />
+      </div>
+      <Input
+        label={ru ? 'Количество / объём заказа' : 'Order quantity / volume'}
+        name="quantity"
+        maxlength="100"
+      />
+      <label class="form-field">
+        {copy.message}
+        <textarea name="comment" rows="3" maxlength="1500"></textarea>
+      </label>
+      <div class="product-inquiry__trap" aria-hidden="true">
+        <label>
+          Website <input name="website" tabindex="-1" autocomplete="off" />
+        </label>
+      </div>
+      <Checkbox name="consent" required>
+        <span class="consent__text">
+          {copy.consentStart} <a href={localizedPath('/privacy/', locale)}>{copy.consentLink}</a>{' '}
+          {copy.consentEnd}
+        </span>
+      </Checkbox>
+      <Button full type="submit">
+        {ru ? 'Отправить заявку' : 'Send inquiry'}
+      </Button>
+      <p class="type-p" role="status" data-inquiry-result hidden></p>
+    </form>
+    <p class="product-inquiry__email type-p">
+      <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
+    </p>
+  </div>
+</dialog>
+{products
+  .filter((product) => productPackaging[product.id])
+  .map((product) => (
+    <template data-inquiry-options={product.id}>
+      <ProductPackaging product={product} locale={locale} formId="product-inquiry-form" />
+    </template>
+  ))}
+<noscript>
+  <p>
+    {ru
+      ? 'Для заявки из карточки включите JavaScript или напишите нам: '
+      : 'Enable JavaScript to enquire about a product, or email us: '}
+    <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
+  </p>
+</noscript>
+<script>
+  import { initProductInquiry } from '../scripts/product-inquiry';
+  initProductInquiry();
+</script>
+<style>
+  .product-inquiry {
+    width: min(680px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    padding: 0;
+    border: 0;
+    border-radius: 24px;
+    color: var(--color-green-brand);
+    background: var(--color-background-light);
+    overflow: auto;
+    scroll-padding-block: 80px 20px;
+  }
+  .product-inquiry::backdrop {
+    background: rgba(0, 35, 17, 0.65);
+  }
+  .product-inquiry__panel {
+    position: relative;
+    padding: 32px;
+  }
+  .product-inquiry__heading {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    background: var(--color-background-light);
+  }
+  h2 {
+    margin: 0;
+  }
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  .product-inquiry__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .product-inquiry__close {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: inherit;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .product-inquiry :global(.form-field) {
+    display: grid;
+    gap: 8px;
+    color: inherit;
+  }
+  .product-inquiry :global(input:not([type='radio']):not([type='checkbox']):not([type='hidden'])),
+  textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 8px;
+    background: var(--color-white);
+    color: var(--color-green-brand);
+    font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
+    letter-spacing: normal;
+    text-transform: none;
+  }
+  textarea {
+    resize: vertical;
+  }
+  .product-inquiry :global(input[readonly]) {
+    background: var(--color-light-gray);
+  }
+  .product-inquiry :global(.consent) {
+    color: inherit;
+    margin: 0;
+    font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
+  }
+  .product-inquiry :global(.consent__checkbox) {
+    border: 1px solid var(--color-green-brand);
+    border-radius: 4px;
+    background: var(--color-white);
+  }
+  .product-inquiry :global(.consent a) {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+  .product-inquiry :global(.consent__input:checked + .consent__checkbox) {
+    background: var(--color-green-brand);
+  }
+  .product-inquiry :global(.consent__input:checked + .consent__checkbox::after) {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 12px;
+    margin: 3px 8px;
+    border: solid var(--color-white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .product-inquiry__trap {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .product-inquiry__email {
+    margin: 20px 0 0;
+  }
+  [data-inquiry-result] {
+    margin: 0;
+  }
+  @media (max-width: 440px) {
+    .product-inquiry__panel {
+      padding: 24px 20px;
+    }
+    .product-inquiry__fields {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

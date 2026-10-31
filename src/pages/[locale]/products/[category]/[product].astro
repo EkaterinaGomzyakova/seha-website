@@ -4,6 +4,8 @@ import type { Locale } from '../../../../data/translations';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
 import ProductGallery from '../../../../components/ProductGallery.astro';
 import ProductStock from '../../../../components/ProductStock.astro';
+import ProductPackaging from '../../../../components/ProductPackaging.astro';
+import { productPackaging } from '../../../../data/product-packaging';
 import Button from '../../../../components/ui/Button.astro';
 import { localizedPath } from '../../../../lib/paths';
 import { specificationsFor } from '../../../../data/product-specifications';
@@ -31,6 +33,7 @@ const path = `/products/${item.category}/${item.slug}/`;
   description={item.description[locale]}
   image={item.image}
   bodyClass="page-product-detail"
+  inquiryProducts={[item]}
   skipText={ru ? 'К продукту' : 'To product'}
 >
   <main id="main-content" tabindex="-1" class="product-detail">
@@ -51,10 +54,13 @@ const path = `/products/${item.category}/${item.slug}/`;
           <p class="type-p">{item.description[locale]}</p>
           <ProductStock productId={item.id} locale={locale} />
         </div>
+        <ProductPackaging product={item} locale={locale} />
         <Button
           href="#contacts"
           full
-          data-quote-product={(item.quoteName ?? item.name)[locale]}
+          data-quote-product={
+            (productPackaging[item.id] ? item.name : (item.quoteName ?? item.name))[locale]
+          }
           data-product-id={item.id}
         >
           {ru ? 'Заказать' : 'Enquire now'}
