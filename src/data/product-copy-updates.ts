@@ -933,8 +933,8 @@ export const productCopyUpdates: Record<string, Update> = {
   },
   'coco-shell-charcoal-briquettes': {
     description: [
-      'Брикеты из кокосового угля производятся из угля, полученного из скорлупы кокоса, и прессуются в удобную форму. Подходят для кальяна, гриля и других совместимых способов использования — в зависимости от марки, состава связующего и применимых требований. Форма, состав и поведение при горении зависят от спецификации продукта.',
-      'Coconut shell charcoal is processed and compressed into briquettes for convenient handling. Depending on the grade, binder composition and applicable regulations, they are suitable for shisha, hookah, barbecue grilling and other compatible charcoal-burning uses. Shape, composition and burning performance are product-specific.'
+      'Брикеты из угля кокосовой скорлупы для гриля и барбекю. Прессованный формат удобен для хранения и использования. Форму, размеры и упаковку согласуем при заказе.',
+      'Coconut shell charcoal briquettes for grilling and barbecues. The compressed format is convenient to store and handle. Shape, dimensions and packaging are agreed when ordering.'
     ],
     specifications: [
       [

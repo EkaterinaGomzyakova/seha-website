@@ -302,8 +302,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-shell-charcoal-briquettes.png',
       'Брикеты из кокосового угля',
       'Coco Shell Charcoal Briquettes',
-      'Брикеты с высокой теплоотдачей и минимальным количеством золы. Подходят для гриля, барбекю и промышленного применения.',
-      'Briquettes with high heat output and low ash content. Suitable for grilling, barbecuing, and industrial applications.',
+      ...productCopyUpdates['coco-shell-charcoal-briquettes'].description,
       'Coco Shell Charcoal Briquettes',
       'High Heat Output'
     ],

@@ -1,10 +1,8 @@
-import type { LocalizedText } from './products';
 import type { ApplicationIconName } from './application-icons';
 
-const application = (ru: string, en: string, icon: ApplicationIconName, note?: LocalizedText) => ({
+const application = (ru: string, en: string, icon: ApplicationIconName) => ({
   label: { ru, en },
-  icon,
-  note
+  icon
 });
 export const applications = {
   tomatoes: application('Томаты', 'Tomatoes', 'tomato'),
@@ -32,10 +30,7 @@ export const applications = {
   sauces: application('Соусы и супы', 'Sauces and soups', 'cooking'),
   cooking: application('Приготовление пищи', 'Cooking', 'cooking'),
   food: application('Пищевое производство', 'Food manufacturing', 'factory'),
-  cosmetics: application('Косметика', 'Personal care', 'bottle', {
-    ru: 'Для подходящих марок масла.',
-    en: 'For suitable oil grades.'
-  }),
+  cosmetics: application('Косметика', 'Personal care', 'bottle'),
   fresh: application('Свежее употребление', 'Fresh consumption', 'coconut'),
   milk: application('Производство молока', 'Coconut milk production', 'bottle'),
   oil: application('Производство масла', 'Coconut oil production', 'oil'),
@@ -50,11 +45,7 @@ export const applications = {
   air: application('Очистка воздуха и газов', 'Air and gas treatment', 'air'),
   filtration: application('Промышленная фильтрация', 'Industrial filtration', 'filter'),
   solvents: application('Регенерация растворителей', 'Solvent recovery', 'factory'),
-  barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'grill'),
-  shisha: application('Кальяны', 'Shisha heating', 'flame', {
-    ru: 'Применение зависит от марки и связующего.',
-    en: 'Use depends on the grade and binder.'
-  })
+  barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'grill')
 } as const;
 
 // Product-specific applications drawn from client descriptions, not category-wide assumptions.
@@ -82,6 +73,6 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'young-coconut': ['fresh', 'drinks'],
   'mature-coconut': ['milk', 'oil', 'desiccated'],
   'rbd-coconut-oil': ['cooking', 'bakery', 'food'],
-  'coco-shell-charcoal-briquettes': ['barbecue', 'shisha'],
+  'coco-shell-charcoal-briquettes': ['barbecue'],
   'coco-shell-activated-carbon': ['water', 'air', 'filtration', 'solvents']
 };
