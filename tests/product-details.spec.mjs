@@ -7,7 +7,7 @@ for (const locale of ['ru', 'en']) {
   }) => {
     await page.setViewportSize({ width: 440, height: 900 });
     const coconuts = products.filter((product) =>
-      ['fresh-coconut', 'mature-coconut'].includes(product.id)
+      ['young-coconut', 'mature-coconut'].includes(product.id)
     );
     expect(coconuts).toHaveLength(2);
     expect(coconuts[0].image).toBe(coconuts[1].image);
@@ -17,6 +17,14 @@ for (const locale of ['ru', 'en']) {
       if (await notice.isVisible()) await notice.click();
       await page.locator(`.product-item__link[href$="/${product.slug}/"]`).click();
       await expect(page.locator('main h1')).toHaveText(product.name[locale]);
+      await expect
+        .poll(() =>
+          page
+            .locator('main img')
+            .first()
+            .evaluate((image) => image.complete && image.naturalWidth > 0)
+        )
+        .toBe(true);
       const mature = product.id === 'mature-coconut';
       const ownType =
         locale === 'ru'

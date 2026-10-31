@@ -1397,62 +1397,62 @@
         }
       ]
     },
-    "/assets/images/food/fresh-coconut.png": {
+    "/assets/images/food/young-coconut.png": {
       "fingerprint": "10fabb181ffaea027b4d42eae7b08335508ebe4dd08f1cdbd0cc75c165b85de7",
       "width": 1254,
       "height": 1254,
       "variants": [
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-320.webp",
+          "src": "/assets/images/generated/food/young-coconut.png-320.webp",
           "format": "webp",
           "width": 320,
           "height": 320,
           "bytes": 24650
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-320.avif",
+          "src": "/assets/images/generated/food/young-coconut.png-320.avif",
           "format": "avif",
           "width": 320,
           "height": 320,
           "bytes": 13396
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-640.webp",
+          "src": "/assets/images/generated/food/young-coconut.png-640.webp",
           "format": "webp",
           "width": 640,
           "height": 640,
           "bytes": 75698
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-640.avif",
+          "src": "/assets/images/generated/food/young-coconut.png-640.avif",
           "format": "avif",
           "width": 640,
           "height": 640,
           "bytes": 44993
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-960.webp",
+          "src": "/assets/images/generated/food/young-coconut.png-960.webp",
           "format": "webp",
           "width": 960,
           "height": 960,
           "bytes": 144438
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-960.avif",
+          "src": "/assets/images/generated/food/young-coconut.png-960.avif",
           "format": "avif",
           "width": 960,
           "height": 960,
           "bytes": 89779
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-1254.webp",
+          "src": "/assets/images/generated/food/young-coconut.png-1254.webp",
           "format": "webp",
           "width": 1254,
           "height": 1254,
           "bytes": 205878
         },
         {
-          "src": "/assets/images/generated/food/fresh-coconut.png-1254.avif",
+          "src": "/assets/images/generated/food/young-coconut.png-1254.avif",
           "format": "avif",
           "width": 1254,
           "height": 1254,

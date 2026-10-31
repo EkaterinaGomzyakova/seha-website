@@ -402,7 +402,7 @@ export const productCopyUpdates: Record<string, Update> = {
       ]
     ]
   },
-  'fresh-coconut': {
+  'young-coconut': {
     description: [
       'Молодые кокосы из Индии для свежего употребления и получения кокосовой воды. Сорт, степень зрелости, массу плода, содержание воды и формат очистки согласуем под заказ. Доступны оптовые поставки для ритейла, HoReCa и дистрибьюторов.',
       'Young coconuts from India for fresh consumption and coconut water extraction. Variety, maturity, fruit weight, water content and husk preparation are agreed to order. Bulk supply for retail, food service and distributors.'
