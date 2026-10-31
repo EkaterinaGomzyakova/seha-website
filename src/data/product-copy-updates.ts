@@ -19,6 +19,82 @@ const preliminary: Row = [
   'Предварительные параметры; подтвердить спецификацией производителя и документами партии',
   'Preliminary specifications; confirm against the factory TDS and batch documentation'
 ];
+
+/** Maturity-specific fields must not share weight, water or shelf-life limits. */
+function freshCoconutSpecifications(type: 'tender' | 'mature'): Row[] {
+  const mature = type === 'mature';
+  return [
+    ['Ботаническое название', 'Botanical name', 'Cocos nucifera', 'Cocos nucifera'],
+    [
+      'Происхождение',
+      'Origin',
+      'Индия — согласно документам отгрузки',
+      'India, subject to shipment documentation'
+    ],
+    [
+      'Тип продукта',
+      'Product type',
+      mature ? 'Зрелый кокос' : 'Молодой кокос',
+      mature ? 'Mature coconut' : 'Young (tender) coconut'
+    ],
+    [
+      'Степень зрелости',
+      'Maturity',
+      mature ? 'Полностью зрелый плод' : 'Молодой плод',
+      mature ? 'Fully mature fruit' : 'Tender fruit'
+    ],
+    [
+      'Сорт',
+      'Variety',
+      'По наличию и требованиям заказчика',
+      'According to availability and buyer requirements'
+    ],
+    ['Масса одного кокоса', 'Weight per coconut'],
+    ['Калибр / диаметр', 'Size grade / diameter'],
+    ['Содержание воды', 'Water content'],
+    ['Масса и характеристики мякоти', 'Kernel weight and characteristics'],
+    ...(mature
+      ? [['Скорлупа', 'Shell condition', 'Целая, без трещин', 'Sound and free from cracks'] as Row]
+      : []),
+    [
+      'Шелуха',
+      'Husk condition',
+      'С шелухой, очищенные или по заказу — при наличии',
+      'With husk, dehusked or customised, subject to availability'
+    ],
+    [
+      'Внешний вид',
+      'Appearance',
+      'Свежие, неповреждённые плоды без видимой плесени и серьёзных повреждений',
+      'Fresh, sound fruit without visible mould or serious damage'
+    ],
+    [
+      'Посторонние примеси и вредители',
+      'Foreign matter and pests',
+      'Без видимой земли, посторонних материалов, заражения вредителями и недопустимых повреждений',
+      'Free from visible soil, foreign material, infestation and unacceptable damage'
+    ],
+    [
+      'Назначение',
+      'Applications',
+      mature
+        ? 'Переработка мякоти, производство кокосового молока, масла и стружки'
+        : 'Свежее употребление и получение кокосовой воды',
+      mature
+        ? 'Kernel processing and production of coconut milk, oil and desiccated coconut'
+        : 'Fresh consumption and coconut water extraction'
+    ],
+    [
+      'Упаковка',
+      'Packaging',
+      'Экспортные коробки, сетчатые мешки или другая согласованная упаковка',
+      'Export cartons, mesh bags or other approved packaging'
+    ],
+    ['Условия хранения и перевозки', 'Storage and transport conditions'],
+    shelf,
+    organic
+  ];
+}
 export const productCopyUpdates: Record<string, Update> = {
   'open-top-grow-bag': {
     description: [
@@ -328,87 +404,17 @@ export const productCopyUpdates: Record<string, Update> = {
   },
   'fresh-coconut': {
     description: [
-      'Молодые кокосы для свежего употребления и зрелые — для переработки мякоти, молока, масла и стружки. Степень зрелости, размер и наличие шелухи согласовываются отдельно для каждого типа.',
-      'Tender coconuts for fresh consumption and mature coconuts for processing into kernel, milk, oil and desiccated coconut. Maturity, grading and husk condition are agreed separately for each type.'
+      'Молодые кокосы из Индии для свежего употребления и получения кокосовой воды. Сорт, степень зрелости, массу плода, содержание воды и формат очистки согласуем под заказ. Доступны оптовые поставки для ритейла, HoReCa и дистрибьюторов.',
+      'Young coconuts from India for fresh consumption and coconut water extraction. Variety, maturity, fruit weight, water content and husk preparation are agreed to order. Bulk supply for retail, food service and distributors.'
     ],
-    specifications: [
-      ['Ботаническое название', 'Botanical name', 'Cocos nucifera', 'Cocos nucifera'],
-      [
-        'Происхождение',
-        'Origin',
-        'Индия — согласно документам отгрузки',
-        'India, subject to shipment documentation'
-      ],
-      [
-        'Молодые кокосы — назначение',
-        'Tender coconuts — use',
-        'Свежее употребление и кокосовая вода',
-        'Fresh consumption and coconut water'
-      ],
-      [
-        'Молодые кокосы — сорт, масса, зрелость и содержание воды',
-        'Tender coconuts — variety, weight, maturity and water content'
-      ],
-      [
-        'Зрелые кокосы — назначение',
-        'Mature coconuts — use',
-        'Переработка мякоти, производство молока, масла и стружки',
-        'Kernel processing, milk, oil and desiccated coconut production'
-      ],
-      [
-        'Зрелые кокосы — сорт, масса, зрелость и содержание воды',
-        'Mature coconuts — variety, weight, maturity and water content'
-      ],
-      [
-        'Зрелые кокосы — скорлупа',
-        'Mature coconuts — shell',
-        'Целая, без трещин',
-        'Sound and free from cracks'
-      ],
-      [
-        'Критерии приёмки по типам',
-        'Type-specific acceptance criteria',
-        'Для молодых и зрелых кокосов согласовываются отдельные спецификации; единые нормы массы и содержания воды не применяются',
-        'Tender and mature coconuts require separate specifications; shared weight and water-content limits do not apply'
-      ],
-      [
-        'Сортировка',
-        'Grading',
-        'По согласованной массе или диаметру; сорт и зрелость — по заказу',
-        'By agreed weight or diameter; variety and maturity specified to order'
-      ],
-      [
-        'Шелуха',
-        'Husk condition',
-        'С шелухой, очищенные или по заказу — при наличии',
-        'With husk, dehusked or customised, subject to availability'
-      ],
-      [
-        'Внешний вид',
-        'Appearance',
-        'Свежие плоды без видимой плесени и серьёзных повреждений',
-        'Fresh, sound coconuts without visible mould or serious damage'
-      ],
-      [
-        'Посторонние примеси и вредители',
-        'Foreign matter and pests',
-        'Без видимой земли, посторонних материалов, заражения вредителями и недопустимых повреждений',
-        'Free from visible soil, foreign material, infestation and unacceptable damage'
-      ],
-      [
-        'Упаковка',
-        'Packaging',
-        'Экспортные коробки, сетчатые мешки или согласованная упаковка',
-        'Export cartons, mesh bags or other approved packaging'
-      ],
-      ['Условия хранения и перевозки', 'Storage and transport conditions'],
-      [
-        'Срок годности',
-        'Shelf life',
-        'уточнить отдельно по зрелости, подготовке, упаковке и условиям перевозки',
-        'to be confirmed separately by maturity, preparation, packaging and transport conditions'
-      ]
-    ]
+    specifications: freshCoconutSpecifications('tender')
+  },
+  'mature-coconut': {
+    description: [
+      'Зрелые кокосы из Индии для переработки мякоти, производства кокосового молока, масла и стружки. Отбираются по зрелости, размеру и целостности скорлупы. Массу плода, требования к мякоти, очистку и экспортную упаковку согласуем отдельно.',
+      'Mature coconuts from India for kernel processing and production of coconut milk, oil and desiccated coconut. Selected for maturity, size and shell integrity. Fruit weight, kernel requirements, husk preparation and export packaging are agreed separately.'
+    ],
+    specifications: freshCoconutSpecifications('mature')
   },
   'veymur-coconut-sugar': {
     description: [

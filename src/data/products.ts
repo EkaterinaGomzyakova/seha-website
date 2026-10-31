@@ -271,11 +271,20 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'fresh-coconut',
       '/assets/images/food/fresh-coconut.png',
-      'Органические свежие кокосы',
-      'Organic Fresh Coconut',
+      'Органические молодые кокосы',
+      'Organic Young Coconut',
       ...productCopyUpdates['fresh-coconut'].description,
-      'Fresh Coconut',
-      'Farm Selected'
+      'Young Coconut',
+      'Young Coconut'
+    ],
+    [
+      'mature-coconut',
+      '/assets/images/food/fresh-coconut.png',
+      'Органические зрелые кокосы',
+      'Organic Mature Coconut',
+      ...productCopyUpdates['mature-coconut'].description,
+      'Mature Coconut',
+      'Mature Coconut'
     ],
     [
       'rbd-coconut-oil',
