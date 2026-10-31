@@ -18,13 +18,22 @@ for (const locale of ['ru', 'en']) {
         expect(html.replace(/&nbsp;/g, '\u00a0')).toContain(option.label[locale]);
     }
     await page.goto(`${base}/${locale}/products/veymur/veymur-mct-oil/`);
-    await page.locator('main [data-product-packaging][value="bulk-25-l"]').check();
+    await page.locator('main [data-supply-format][value="industrial"]').check();
+    await page.locator('main [data-product-packaging][value="industrial-25-l"]').check();
     const trigger = page.locator('main [data-quote-product]');
     await trigger.click();
     const dialog = page.locator('#product-inquiry');
     const form = dialog.locator('form');
     await expect(dialog).toBeVisible();
-    await expect(form.locator('[value="bulk-25-l"]')).toBeChecked();
+    await expect(form.locator('[value="industrial-25-l"]')).toBeChecked();
+    await expect(form.locator('[data-supply-format][value="industrial"]')).toBeChecked();
+    await expect(form.locator('[data-packaging-panel="consumer"]')).toBeHidden();
+    await expect(form.locator('[data-packaging-panel="industrial"]')).toContainText(
+      locale === 'ru' ? 'без оформления Veymur' : 'without Veymur branding'
+    );
+    await dialog.screenshot({
+      path: `test-results/supply-format-${locale}-${test.info().project.name}.png`
+    });
     await expect(form.locator('[name="product"]')).toHaveValue(
       products.find((item) => item.id === 'veymur-mct-oil').name[locale]
     );
@@ -33,10 +42,15 @@ for (const locale of ['ru', 'en']) {
     expect(
       accessibility.violations.filter((item) => ['serious', 'critical'].includes(item.impact))
     ).toEqual([]);
-    await form.locator('[value="bulk-custom"]').check();
+    await form.locator('[value="industrial-custom"]').check();
     await expect(form.locator('[name="customPackaging"]')).toBeVisible();
     await expect(form.locator('[name="customPackaging"]')).toHaveAttribute('required', '');
-    await form.locator('[value="bulk-1000-l"]').check();
+    await form.locator('[value="industrial-1000-l"]').check();
+    await form.locator('[data-supply-format][value="consumer"]').check();
+    await expect(form.locator('[value="consumer-500-ml"]')).toBeChecked();
+    await expect(form.locator('[data-packaging-panel="industrial"]')).toBeHidden();
+    await form.locator('[data-supply-format][value="industrial"]').check();
+    await expect(form.locator('[value="industrial-1000-l"]')).toBeChecked();
     await form.locator('[name="company"]').fill('Buyer Ltd');
     await form.locator('[name="contact"]').fill('Jane');
     await form.locator('[name="email"]').fill('jane@example.com');
@@ -46,7 +60,8 @@ for (const locale of ['ru', 'en']) {
     await page.route('**/product-inquiry-test', async (route) => {
       const data = route.request().postDataJSON();
       expect(data.productId).toBe('veymur-mct-oil');
-      expect(data.packagingId).toBe('bulk-1000-l');
+      expect(data.packagingId).toBe('industrial-1000-l');
+      expect(data.supplyFormat).toBe('industrial');
       expect(data.packaging).toContain('1000');
       expect(data.quantity).toBe('2');
       expect(data.consent).toBe(true);

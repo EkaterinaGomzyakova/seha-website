@@ -1,3 +1,5 @@
+import { initProductPackaging } from './product-packaging';
+
 export function initProductInquiry() {
   const dialog = document.querySelector<HTMLDialogElement>('#product-inquiry');
   const form = document.querySelector<HTMLFormElement>('#product-inquiry-form');
@@ -11,8 +13,8 @@ export function initProductInquiry() {
   let pending = false;
   let previousOverflow = '';
   const updatePackaging = () => {
-    const option = panel.querySelector<HTMLInputElement>('input:checked');
-    const custom = option?.value === 'bulk-custom';
+    const option = panel.querySelector<HTMLInputElement>('[data-product-packaging]:checked');
+    const custom = option?.value === 'industrial-custom';
     form.querySelector<HTMLElement>('[data-inquiry-custom]')!.hidden = !custom;
     field('customPackaging').disabled = !custom;
     field('customPackaging').required = custom;
@@ -51,8 +53,10 @@ export function initProductInquiry() {
           ].find((input) => input.value === detailSelection.value);
           if (selected) selected.checked = true;
         }
+        initProductPackaging(panel);
         field('product').value =
-          panel.querySelector<HTMLInputElement>('input:checked')?.dataset.packagingProductName ||
+          panel.querySelector<HTMLInputElement>('[data-product-packaging]:checked')?.dataset
+            .packagingProductName ||
           link.dataset.quoteProduct ||
           '';
         if (field('productId').value !== productId) {
@@ -120,7 +124,9 @@ export function initProductInquiry() {
         : 'Your inquiry has been sent. We will contact you to discuss your order.';
       const product = field('product').value;
       const productId = field('productId').value;
-      const packagingId = panel.querySelector<HTMLInputElement>('input:checked')?.value;
+      const packagingId = panel.querySelector<HTMLInputElement>(
+        '[data-product-packaging]:checked'
+      )?.value;
       form.reset();
       field('product').value = product;
       field('productId').value = productId;
@@ -128,6 +134,7 @@ export function initProductInquiry() {
         (input) => input.value === packagingId
       );
       if (option) option.checked = true;
+      initProductPackaging(panel);
       updatePackaging();
     } catch {
       result.textContent = ru

@@ -9,6 +9,8 @@ const singleLine = (value, max) =>
 
 export function validateInquiry(data) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) return false;
+  if (data.supplyFormat !== undefined && !['consumer', 'industrial'].includes(data.supplyFormat))
+    return false;
   if (!['ru', 'en'].includes(data.locale) || data.consent !== true || data.website) return false;
   for (const [name, max] of [
     ['company', 160],
@@ -106,10 +108,11 @@ export function createInquiryServer(config, transport) {
     sending++;
     try {
       const text = [
-        'SEHA product inquiry',
+        'SEHA wholesale product inquiry',
         `Language: ${data.locale}`,
         `Product: ${data.product.trim()}`,
         `Product ID: ${data.productId}`,
+        `Supply format: ${data.supplyFormat === 'industrial' ? 'Industrial packaging, without Veymur branding' : data.supplyFormat === 'consumer' ? 'Consumer packaging supplied in wholesale quantities' : 'Agreed with the buyer'}`,
         `Pack size: ${data.packaging || 'Not specified'}`,
         `Packaging ID: ${data.packagingId || 'Not specified'}`,
         `Order quantity: ${data.quantity || 'Not specified'}`,

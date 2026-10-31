@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import type { ProductItem } from '../data/products';
-import { productPackaging } from '../data/product-packaging';
+import { productPackaging, wholesaleNotice } from '../data/product-packaging';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
@@ -27,7 +27,7 @@ const copy = getInterfaceCopy(locale);
   <div class="product-inquiry__panel">
     <div class="product-inquiry__heading">
       <h2 id="product-inquiry-title" class="type-h3">
-        {ru ? 'Заявка на продукт' : 'Product inquiry'}
+        {ru ? 'Запрос оптового предложения' : 'Request a wholesale quote'}
       </h2>
       <button
         class="product-inquiry__close"
@@ -38,6 +38,7 @@ const copy = getInterfaceCopy(locale);
         ×
       </button>
     </div>
+    <p class="type-p">{wholesaleNotice[locale]}</p>
     <form
       id="product-inquiry-form"
       data-endpoint={import.meta.env.PUBLIC_PRODUCT_INQUIRY_ENDPOINT || undefined}
@@ -75,7 +76,7 @@ const copy = getInterfaceCopy(locale);
         <Input label={copy.phone} name="phone" type="tel" autocomplete="tel" maxlength="40" />
       </div>
       <Input
-        label={ru ? 'Количество / объём заказа' : 'Order quantity / volume'}
+        label={ru ? 'Объём оптовой партии' : 'Wholesale order quantity'}
         name="quantity"
         maxlength="100"
       />

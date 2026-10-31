@@ -42,7 +42,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('для растениеводства', 'for horticulture'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Заказать', 'Request a Quote'),
+    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
     items: productsForCategory('substrates')
   },
   fiber: {
@@ -59,7 +59,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('Для промышленности и строительства', 'INDUSTRIAL & CONSTRUCTION USE'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Заказать', 'Request a Quote'),
+    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
     items: productsForCategory('fiber')
   },
   veymur: {
@@ -71,12 +71,12 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     breadcrumb: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     intro: text(
-      'Кокосовые пищевые продукты Veymur: масла, сахар, стружка, молоко, вода, свежие кокосы и копра. Для розницы, пищевых производств и HoReCa.',
-      'Veymur coconut food products: oils, sugar, desiccated coconut, milk, water, fresh coconuts and copra. For retail, food manufacturing and HoReCa.'
+      'Кокосовые пищевые продукты: масла, сахар, стружка, молоко, молодые и зрелые кокосы. Оптовые поставки для магазинов, дистрибьюторов, пищевых производств и HoReCa.',
+      'Coconut food products: oils, sugar, desiccated coconut, milk, young and mature coconuts. Wholesale supply for shops, distributors, food manufacturers and HoReCa.'
     ),
     listLabel: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     listTitle: text('Продукция<br>Veymur', 'Veymur<br>Product Range'),
-    cta: text('Заказать', 'Request a Quote'),
+    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
     items: productsForCategory('veymur')
   },
   shell: {
@@ -93,7 +93,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('Для промышленности и топлива', 'INDUSTRIAL & FUEL APPLICATIONS'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Заказать', 'Request a Quote'),
+    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
     items: productsForCategory('shell')
   }
 };

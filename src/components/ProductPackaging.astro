@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import type { ProductItem } from '../data/products';
-import { productPackaging } from '../data/product-packaging';
+import { productPackaging, packagingFormats, wholesaleNotice } from '../data/product-packaging';
 interface Props {
   product: ProductItem;
   locale: Locale;
@@ -9,20 +9,50 @@ interface Props {
 }
 const { product, locale, formId } = Astro.props;
 const packaging = productPackaging[product.id];
+const initialFormat = packaging?.options.find(
+  (option) => option.id === packaging.defaultId
+)?.format;
 const ru = locale === 'ru';
+const context = formId || 'product-page';
 ---
 
+{!formId && <p class="product-packaging__notice type-p">{wholesaleNotice[locale]}</p>}
 {packaging && (
-  <fieldset class="product-packaging">
-    <legend class="type-p">{ru ? 'Фасовка / объём' : 'Pack size / volume'}</legend>
-    {(['retail', 'bulk'] as const).map((kind) => {
-      const group = kind === 'retail' ? (ru ? 'Розница' : 'Retail') : ru ? 'Опт' : 'Bulk';
-      return (
-        <div class="product-packaging__group">
-          <p class="type-p">{group}</p>
+  <div class="product-packaging" data-packaging-selector>
+    <fieldset class="product-packaging__formats">
+      <legend class="type-p">{ru ? 'Формат поставки' : 'Supply format'}</legend>
+      <div class="product-packaging__format-options">
+        {(['consumer', 'industrial'] as const).map((format) => (
+          <label class="product-packaging__option">
+            <input
+              type="radio"
+              name={formId ? 'supplyFormat' : `supply-format-${product.id}`}
+              form={formId}
+              value={format}
+              checked={format === initialFormat}
+              data-supply-format
+              aria-describedby={`${context}-${product.id}-${format}-description`}
+            />
+            <span class="type-p">{packagingFormats[format].label[locale]}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+    {(['consumer', 'industrial'] as const).map((format) => (
+      <div data-packaging-panel={format} hidden={format !== initialFormat}>
+        <p
+          class="product-packaging__description type-p"
+          id={`${context}-${product.id}-${format}-description`}
+        >
+          {packagingFormats[format].description[locale]}
+        </p>
+        <fieldset>
+          <legend class="type-p">
+            {ru ? 'Фасовка одной упаковки / тары' : 'Individual pack / container size'}
+          </legend>
           <div class="product-packaging__options">
             {packaging.options
-              .filter((option) => option.kind === kind)
+              .filter((option) => option.format === format)
               .map((option) => (
                 <label class="product-packaging__option">
                   <input
@@ -31,8 +61,10 @@ const ru = locale === 'ru';
                     form={formId}
                     value={option.id}
                     checked={option.id === packaging.defaultId}
+                    disabled={format !== initialFormat}
                     data-product-packaging
-                    data-packaging-label={`${group} — ${option.label[locale]}`}
+                    data-supply-format-value={format}
+                    data-packaging-label={`${packagingFormats[format].label[locale]} — ${option.label[locale]}`}
                     data-packaging-product-id={product.id}
                     data-packaging-product-name={product.name[locale]}
                   />
@@ -40,19 +72,25 @@ const ru = locale === 'ru';
                 </label>
               ))}
           </div>
-        </div>
-      );
-    })}
+        </fieldset>
+      </div>
+    ))}
     <p class="product-packaging__note type-p">
       {ru
-        ? 'Наличие указано суммарно для всех фасовок.'
-        : 'Availability is the total across all pack sizes.'}
+        ? 'Наличие указано суммарно для всех форматов поставки.'
+        : 'Availability is the total across all supply formats.'}
     </p>
-  </fieldset>
+  </div>
 )}
-
+<script>
+  import { initProductPackaging } from '../scripts/product-packaging';
+  initProductPackaging();
+</script>
 <style>
   .product-packaging {
+    min-width: 0;
+  }
+  fieldset {
     margin: 0;
     padding: 0;
     min-width: 0;
@@ -63,12 +101,10 @@ const ru = locale === 'ru';
     padding: 0;
     font-weight: 700;
   }
-  .product-packaging__group + .product-packaging__group {
-    margin-top: 16px;
-  }
-  .product-packaging__group > p {
-    margin: 0 0 8px;
-    color: var(--color-dark-gray);
+  .product-packaging__format-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
   .product-packaging__options {
     display: flex;
@@ -87,7 +123,10 @@ const ru = locale === 'ru';
     opacity: 0;
   }
   span {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     padding: 12px 16px;
     border: 1px solid var(--color-dark-gray);
     border-radius: 12px;
@@ -103,8 +142,16 @@ const ru = locale === 'ru';
     outline: var(--focus-outline);
     outline-offset: 3px;
   }
+  .product-packaging__description {
+    margin: 16px 0;
+    color: var(--color-dark-gray);
+  }
   .product-packaging__note {
     margin: 12px 0 0;
     color: var(--color-dark-gray);
+  }
+  .product-packaging__notice {
+    margin: 0;
+    color: var(--color-green-brand);
   }
 </style>

@@ -30,8 +30,9 @@ test('product inquiries validate data and acknowledge only SMTP-accepted message
     phone: '',
     product: 'Organic MCT Oil',
     productId: 'veymur-mct-oil',
-    packaging: 'Bulk — 25 L',
-    packagingId: 'bulk-25-l',
+    packaging: 'Industrial packaging — 25 L',
+    packagingId: 'industrial-25-l',
+    supplyFormat: 'industrial',
     quantity: '2 drums',
     comment: 'Delivery enquiry',
     consent: true,
@@ -48,8 +49,9 @@ test('product inquiries validate data and acknowledge only SMTP-accepted message
   assert.deepEqual(await response.json(), { success: true });
   assert.equal(messages[0].to, 'sales@example.com');
   assert.equal(messages[0].replyTo.address, 'jane@example.com');
-  assert.match(messages[0].text, /Bulk — 25 L/);
+  assert.match(messages[0].text, /Industrial packaging — 25 L/);
   assert.match(messages[0].text, /2 drums/);
+  assert.match(messages[0].text, /without Veymur branding/);
   for (const invalid of [
     { ...data, consent: false },
     { ...data, email: 'bad' },

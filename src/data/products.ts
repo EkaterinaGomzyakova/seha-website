@@ -41,8 +41,8 @@ export const productCategories: ProductCategory[] = [
     slug: 'veymur',
     title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     description: text(
-      'Кокосовые пищевые продукты и ингредиенты для розницы и производства.',
-      'Coconut food products and ingredients for retail and manufacturing.'
+      'Кокосовые пищевые продукты и ингредиенты для торговых компаний и пищевых производств.',
+      'Coconut food products and ingredients for retailers and food manufacturers.'
     ),
     image: '/assets/images/veymur/veymur-products.png'
   },
