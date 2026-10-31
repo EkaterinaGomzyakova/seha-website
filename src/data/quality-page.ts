@@ -47,7 +47,7 @@ const ru = {
     'Состав документов зависит от продукта, объема, упаковки, требований клиента и условий поставки.',
   documentsSectionCardTitle: 'Спецификация продукта',
   documentsSectionText2:
-    'Характеристики, формат, упаковка, допустимые параметры и назначение продукта.',
+    'Согласованные характеристики, формат поставки, упаковку и допустимые параметры фиксируем в спецификации продукта.',
   documentsSectionCardTitle2: 'Сертификаты площадки',
   documentsSectionText3:
     'Органические стандарты, BRCGS, HACCP, FSSC 22000 и Fairtrade — при применимости к выбранной позиции.',
@@ -67,7 +67,7 @@ const ru = {
   certPreviewHeading: 'Уточните требования,',
   certPreviewLabel2: 'мы подготовим предложение',
   certPreviewText:
-    'Укажите продукт, объем и требования к документам. Мы уточним применимые сертификаты, упаковку, логистику и подготовим коммерческое предложение.',
+    'Укажите продукт, объём и требования к документам. Для ряда продуктов можно запросить образцы перед оптовым заказом — доступность и условия отправки согласуем отдельно. Подготовим спецификацию и коммерческое предложение.',
   certPreviewLink: 'Получить предложение'
 } as const;
 
@@ -118,7 +118,7 @@ const en = {
     'The document package depends on the product, volume, packaging, customer requirements and supply terms.',
   documentsSectionCardTitle: 'Product specification',
   documentsSectionText2:
-    'Characteristics, format, packaging, permitted parameters and intended use of the product.',
+    'Agreed characteristics, supply format, packaging and permitted parameter ranges are recorded in the product specification.',
   documentsSectionCardTitle2: 'Facility certificates',
   documentsSectionText3:
     'Organic standards, BRCGS, HACCP, FSSC 22000 and Fairtrade, where applicable to the selected product.',
@@ -138,7 +138,7 @@ const en = {
   certPreviewHeading: 'Tell us your requirements,',
   certPreviewLabel2: 'we will prepare a quotation',
   certPreviewText:
-    'Specify the product, volume and document requirements. We will clarify applicable certificates, packaging and logistics, and prepare a quotation.',
+    'Specify the product, volume and document requirements. Samples can be requested for selected products before a bulk order; availability and shipping terms are agreed separately. We will prepare a specification and quotation.',
   certPreviewLink: 'Request a quote'
 } satisfies QualityPageCopy;
 

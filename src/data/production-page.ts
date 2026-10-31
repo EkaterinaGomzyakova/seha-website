@@ -62,7 +62,7 @@ const ru = {
   processSectionCaption5: 'Фасовка, маркировка и подготовка партии',
   processSectionCardTitle6: 'Документы и отгрузка',
   processSectionText7:
-    'Перед поставкой согласуются спецификация, упаковка, объем, условия доставки и комплект документов. Сеха ведет коммуникацию с российским клиентом.',
+    'До отгрузки согласуем спецификацию, упаковку и документы. Маршрут поставки, включая морскую перевозку и импорт в Россию, а также доставку до склада заказчика определяем по согласованным условиям.',
   processSectionAlt6: 'Подготовленная партия кокосовых продуктов к поставке',
   processSectionCaption6: 'Комплект документов и условия отгрузки',
   facilityShowcaseAlt: 'Пищевой производственный цех со стальными емкостями и линиями фильтрации',
@@ -177,7 +177,7 @@ const en = {
   processSectionCaption5: 'Packing, labelling and batch preparation',
   processSectionCardTitle6: 'Documents and shipment',
   processSectionText7:
-    'Specifications, packaging, volume, delivery terms and the document package are agreed before supply. Seha handles communication with the Russian customer.',
+    'Specifications, packaging and documents are agreed before shipment. The shipping route, including sea freight and import into Russia, and delivery to the customer’s warehouse are arranged under the agreed supply terms.',
   processSectionAlt6: 'A prepared batch of coconut products ready for supply',
   processSectionCaption6: 'Document package and shipment terms',
   facilityShowcaseAlt: 'Food production workshop with steel tanks and filtration lines',

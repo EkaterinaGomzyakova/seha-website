@@ -36,14 +36,14 @@ export const companyBenefitsCopy = {
           'Органическая сертификация пищевых продуктов подтверждена документами. Применимые сертификаты уточняем для выбранной позиции.'
       },
       {
-        title: 'Опыт международных поставок',
+        title: 'Опыт поставок в 25+ стран',
         description:
-          'У индийской производственной базы есть опыт поставок кокосовых субстратов и сопутствующих продуктов покупателям в Европе и Китае.'
+          'У производственной базы SEHA в Индии есть опыт поставок кокосовых субстратов и сопутствующих продуктов в 25+ стран, включая страны Европы и Китай.'
       },
       {
         title: 'Сопровождение в России',
         description:
-          'На русском языке согласуем продукт, объём, упаковку, документы и условия доставки. Поддерживаем связь с производством в Индии.'
+          'Согласование заказа, документы, расчёты и сопровождение — через российскую компанию SEHA. Взаимодействие с производством в Индии берём на себя.'
       }
     ],
     aboutLink: 'Больше о компании',
@@ -75,14 +75,14 @@ export const companyBenefitsCopy = {
           'Organic certification for the food range is supported by documentation. We confirm the applicable certificates for the selected product.'
       },
       {
-        title: 'International supply experience',
+        title: 'Supply experience in 25+ countries',
         description:
-          'The Indian manufacturing base has experience supplying coconut substrates and related products to customers in Europe and China.'
+          'SEHA’s Indian manufacturing base has experience supplying coconut substrates and related products to 25+ countries, including European countries and China.'
       },
       {
         title: 'Local support in Russia',
         description:
-          'Our Russian-speaking team helps agree on products, volumes, packaging, documents and delivery terms, and coordinates with manufacturing in India.'
+          'Order coordination, documentation, payments and support are handled by SEHA’s Russian company, which liaises with manufacturing in India.'
       }
     ],
     aboutLink: 'More about SEHA',

@@ -16,7 +16,7 @@ const ru = {
   aboutIntroHeading: 'Производим и',
   aboutIntroLabel2: 'поставляем кокосовые продукты',
   aboutIntroText:
-    'Сеха — российский центр продаж и сопровождения B2B-поставок кокосовой продукции. Мы переводим производственную экспертизу Индии в понятные коммерческие условия: продукт, объем, упаковка, документы, логистика и сроки.',
+    'Сеха — российская компания, которая ведёт продажи и сопровождает B2B-поставки кокосовой продукции. Коммуникация, документы, расчёты и сопровождение заказа проходят через Сеха в России. Мы согласуем с производством в Индии продукт, объём, упаковку и сроки.',
   aboutIntroText2:
     'Наша индийская производственная база находится в Поллачи, штат Тамилнад — одном из крупнейших кокосовых кластеров страны. Более 40 лет отраслевого опыта и фермерские корни помогают понимать сырьё и задачи заказчиков: от сбора урожая до переработки и готовой продукции.',
   aboutNumbersAriaLabel: 'Ключевые факты',
@@ -61,7 +61,7 @@ const ru = {
   aboutTimelineLabel5: 'Сейчас',
   aboutTimelineCardTitle4: 'Сеха в России',
   aboutTimelineText4:
-    'Индийская база имеет опыт поставок в Европу и Китай. Сеха развивает поставки в Россию и помогает согласовать продукт, упаковку и логистику.',
+    'Индийская производственная база SEHA имеет опыт поставок в 25+ стран, включая страны Европы и Китай. Сеха развивает поставки в Россию и помогает согласовать продукт, упаковку и логистику.',
   aboutClientsLabel: 'Для кого',
   aboutClientsHeading: 'Для компаний,',
   aboutClientsLabel2: 'которым важна предсказуемость.',
@@ -99,7 +99,7 @@ const en = {
   aboutIntroHeading: 'We produce and',
   aboutIntroLabel2: 'supply coconut products',
   aboutIntroText:
-    'Seha is a Russian sales and support centre for B2B supply of coconut products. We translate manufacturing expertise from India into clear commercial terms: product, volume, packaging, documents, logistics and lead times.',
+    'Seha is a Russian company handling sales and support for B2B supply of coconut products. Communication, documentation, payments and order support are handled through Seha in Russia. We coordinate the product, volume, packaging and lead times with manufacturing in India.',
   aboutIntroText2:
     'Our Indian manufacturing base is in Pollachi, Tamil Nadu, one of the country’s largest coconut clusters. More than 40 years of industry experience and our farming roots help us understand raw materials and customer needs, from harvesting to processing and finished products.',
   aboutNumbersAriaLabel: 'Key facts',
@@ -144,7 +144,7 @@ const en = {
   aboutTimelineLabel5: 'Today',
   aboutTimelineCardTitle4: 'Seha in Russia',
   aboutTimelineText4:
-    'The Indian manufacturing base has experience supplying Europe and China. Seha is expanding supply in Russia and helps agree on products, packaging and logistics.',
+    'SEHA’s Indian manufacturing base has experience supplying 25+ countries, including European countries and China. Seha is expanding supply in Russia and helps agree on products, packaging and logistics.',
   aboutClientsLabel: 'Who we serve',
   aboutClientsHeading: 'For companies',
   aboutClientsLabel2: 'that value predictability.',

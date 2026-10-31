@@ -117,7 +117,8 @@ const ru = {
   supplySectionCardTitle3: 'Предложение',
   supplySectionText4: 'Рассчитываем стоимость и обсуждаем условия поставки.',
   supplySectionCardTitle4: 'Поставка',
-  supplySectionText5: 'Согласовываем сроки и порядок отгрузки продукции.'
+  supplySectionText5:
+    'Согласовываем сроки, маршрут поставки в Россию и условия доставки до вашего склада.'
 } as const;
 
 export type HomePageCopy = { readonly [Key in keyof typeof ru]: string };
@@ -240,7 +241,8 @@ const en = {
   supplySectionCardTitle3: 'Quotation',
   supplySectionText4: 'We calculate the cost and discuss supply terms.',
   supplySectionCardTitle4: 'Supply',
-  supplySectionText5: 'We agree on the timing and procedure for shipping the products.'
+  supplySectionText5:
+    'We agree on lead times, the shipping route to Russia and delivery terms to your warehouse.'
 } satisfies HomePageCopy;
 
 export const homePageCopy = { ru, en } satisfies Record<Locale, HomePageCopy>;
