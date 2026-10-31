@@ -1,6 +1,4 @@
 import { text, type LocalizedText, type ProductItem } from './products';
-import { productCopyUpdates } from './product-copy-updates';
-import { productPackaging } from './product-packaging';
 
 export interface Specification {
   label: LocalizedText;
@@ -11,69 +9,7 @@ const field = (ru: string, en: string, value = pending): Specification => ({
   label: text(ru, en),
   value
 });
-// Catalogue values are attached only to relevant product types and remain qualified
-// as targets until confirmed for the ordered grade or batch.
-function substrateCatalogueFields(product: ProductItem): Specification[] {
-  if (product.id === 'open-top-grow-bag') return [];
-
-  const applicability = text(
-    'ориентир каталога; подтвердить для заказанной марки',
-    'catalogue target; confirm for the ordered grade'
-  );
-  const rows: Specification[] = [];
-
-  if (['grow-bag', 'open-top-grow-bag', 'coco-peat', 'coco-peat-briquettes'].includes(product.id)) {
-    rows.push(
-      field(
-        'pH субстрата (ориентир каталога)',
-        'Substrate pH (catalogue target)',
-        text('5,5–6,5; ' + applicability.ru, '5.5–6.5; ' + applicability.en)
-      ),
-      field(
-        'EC (для согласованной промытой марки с низким EC)',
-        'EC (specified washed low-EC grade)',
-        text('менее 0,5 мСм/см; ' + applicability.ru, 'below 0.5 mS/cm; ' + applicability.en)
-      ),
-      field('Метод измерения EC', 'EC test method')
-    );
-  }
-
-  if (['coco-peat', 'coco-peat-briquettes'].includes(product.id)) {
-    rows.push(
-      field(
-        'Коэффициент расширения после увлажнения',
-        'Expansion ratio after hydration',
-        text(
-          '5:1 или выше — по спецификации; ' + applicability.ru,
-          '5:1 or higher, according to specification; ' + applicability.en
-        )
-      ),
-      field(
-        'Влажность при поставке',
-        'Moisture at delivery',
-        product.id === 'coco-peat-briquettes'
-          ? text(
-              '12–15% для торфяных блоков; подтвердить для заказанной марки',
-              '12–15% for peat blocks; confirm for the ordered grade'
-            )
-          : text(
-              'менее 20%; подтвердить для заказанной марки',
-              'below 20%; confirm for the ordered grade'
-            )
-      ),
-      field('Влагоудержание и метод измерения', 'Water retention and test method')
-    );
-  }
-
-  if (['coco-peat', 'coco-peat-briquettes'].includes(product.id)) {
-    rows.push(field('Допуск по примесям', 'Impurity tolerance'));
-  }
-
-  return rows;
-}
-
-// Source: client-confirmed SEHA brochure, laboratory report, pages 06–07.
-// Preserve specification limits (not measured results for an individual batch).
+// Client-confirmed SEHA laboratory report, pages 06–07. Preserve all limits.
 const mctSpecifications: Specification[] = [
   field('Состав', 'Ingredients', text('Органическое кокосовое масло', 'Organic coconut oil')),
   field(
@@ -138,7 +74,6 @@ const mctSpecifications: Specification[] = [
     'Shelf life',
     text('2 года с даты производства', '2 years from the date of manufacture')
   ),
-  field('Пищевая ценность на 100 г / 100 мл', 'Nutrition per 100 g / 100 ml'),
   field(
     'Условия хранения',
     'Storage conditions',
@@ -146,411 +81,527 @@ const mctSpecifications: Specification[] = [
       'В плотно закрытой упаковке, в прохладном сухом месте, вдали от прямого солнечного света и тепла',
       'Keep tightly sealed in a cool, dry place, away from direct sunlight and heat'
     )
-  ),
-  field(
-    'Варианты упаковки',
-    'Packaging options',
-    text(
-      'Пищевые бутылки, бочки или другие согласованные ёмкости',
-      'Food-grade bottles, drums or other approved containers'
-    )
-  ),
-  field(
-    'Органическая сертификация',
-    'Organic certification',
-    text('Подтверждена документами', 'Documented organic certification')
   )
 ];
 
-export function specificationsFor(product: ProductItem): Specification[] {
-  const rows = [
+// Field selection follows procurement tables from Coir Plus, E-Coir, Renuka,
+// EPL Group and Haycarb. Values are from the client's existing SEHA data only;
+// proposed values still require the client's final review. Missing values stay pending.
+const rawPith = field('Сырьё', 'Raw material', text('Кокосовый торф', 'Coconut coir pith'));
+const rawHusk = field('Сырьё', 'Raw material', text('Кокосовая шелуха', 'Coconut husk'));
+const rawFibre = field('Материал', 'Material', text('Кокосовое волокно', 'Coconut coir fibre'));
+const moisture = field('Влажность', 'Moisture content');
+const ph = field('pH', 'pH', text('5,5–6,5', '5.5–6.5'));
+const ec = field('Электропроводность (EC)', 'Electrical conductivity (EC)');
+const lowEc = field(
+  'Электропроводность (EC)',
+  'Electrical conductivity (EC)',
+  text('< 0,5 мСм/см', '< 0.5 mS/cm')
+);
+const dryWeight = field('Сухая масса', 'Dry weight');
+const dimensions = field('Размеры (Д × Ш × В)', 'Dimensions (L × W × H)');
+const expandedVolume = field('Объём после увлажнения', 'Expanded volume');
+const waterRetention = field('Влагоудерживающая способность', 'Water-holding capacity');
+const airPorosity = field('Воздушная пористость', 'Air-filled porosity');
+const impurities = field('Содержание примесей', 'Impurity content');
+const processing = field('Обработка', 'Processing');
+const shelfLife = field('Срок годности', 'Shelf life');
+const ingredients = field('Состав', 'Ingredients');
+const organic = field('Органический статус', 'Organic status', text('Органический', 'Organic'));
+const fat = field('Массовая доля жира', 'Fat content');
+const protein = field('Массовая доля белка', 'Protein content');
+const ash = field('Зольность', 'Ash content');
+const fattyAcids = field('Жирнокислотный состав', 'Fatty acid profile');
+const ffa = field(
+  'Свободные жирные кислоты (в пересчёте на лауриновую)',
+  'Free fatty acids (as lauric acid)'
+);
+const peroxide = field('Перекисное число', 'Peroxide value');
+const volatileMoisture = field('Влага и летучие вещества', 'Moisture and volatile matter');
+const microbiology = [
+  field('Общее количество аэробных микроорганизмов', 'Total aerobic microorganism count'),
+  field('Плесени и дрожжи', 'Moulds and yeasts'),
+  field('E. coli', 'E. coli'),
+  field('Salmonella', 'Salmonella')
+];
+const foodStorage = field(
+  'Условия хранения',
+  'Storage conditions',
+  text(
+    'В прохладном сухом месте, вдали от солнечного света и сильных запахов',
+    'Cool and dry, away from sunlight and strong odours'
+  )
+);
+const rollWidth = field('Ширина рулона', 'Roll width');
+const rollLength = field('Длина рулона', 'Roll length');
+const tensileStrength = field('Разрывная нагрузка', 'Tensile strength');
+const matWeight = field('Поверхностная плотность', 'Mass per unit area');
+
+const productSpecifications: Record<string, readonly Specification[]> = {
+  'grow-bag': [
+    field('Состав субстрата', 'Substrate composition'),
+    dimensions,
+    dryWeight,
+    expandedVolume,
+    field('Фракция', 'Particle size'),
+    ph,
+    lowEc,
+    moisture,
+    processing,
+    field('Материал оболочки', 'Sleeve material'),
+    field('Посадочные и дренажные отверстия', 'Planting and drainage holes'),
+    waterRetention,
+    airPorosity
+  ],
+  'open-top-grow-bag': [
     field(
-      'Производитель',
-      'Manufacturer',
-      text('SEHA Group of Companies, Индия', 'SEHA Group of Companies, India')
+      'Состав субстрата',
+      'Substrate composition',
+      text('60% кокосового торфа / 40% кокосовых чипсов', '60% coco pith / 40% coco chips')
+    ),
+    dimensions,
+    dryWeight,
+    expandedVolume,
+    // The crop-specific acidity is part of the product variant, not a generic pH claim.
+    field('pH — вариант для голубики', 'pH — blueberry grade', text('4,5–5,5', '4.5–5.5')),
+    field('pH — вариант для малины', 'pH — raspberry grade'),
+    lowEc,
+    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field('Обработка', 'Processing', text('Промывка и просеивание', 'Washed and screened')),
+    field(
+      'Материал мешка',
+      'Bag material',
+      text('УФ-стабилизированный материал', 'UV-stabilised material')
+    ),
+    field(
+      'Конструкция мешка',
+      'Bag construction',
+      text('Открытый верх, дренажные отверстия', 'Open top, drainage holes')
+    ),
+    waterRetention,
+    airPorosity
+  ],
+  'coco-peat': [
+    rawPith,
+    field('Фракция', 'Particle size'),
+    ph,
+    lowEc,
+    field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
+    field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
+    processing,
+    waterRetention,
+    airPorosity,
+    impurities
+  ],
+  'coco-peat-briquettes': [
+    rawPith,
+    field('Формат', 'Format', text('Прессованный брикет / блок', 'Compressed brick / block')),
+    field('Сухая масса', 'Dry weight', text('650 г / 5 кг', '650 g / 5 kg')),
+    dimensions,
+    expandedVolume,
+    field('Фракция', 'Particle size'),
+    ph,
+    lowEc,
+    field('Влажность', 'Moisture content', text('12–15%', '12–15%')),
+    field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
+    processing,
+    waterRetention,
+    impurities
+  ],
+  'coconut-chips': [
+    rawHusk,
+    field('Состав', 'Composition', text('Чипсы из кокосовой шелухи', 'Coconut husk chips')),
+    field('Фракция', 'Chip size', text('6–12 мм / 12–18 мм', '6–12 mm / 12–18 mm')),
+    field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
+    lowEc,
+    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field(
+      'Обработка',
+      'Processing',
+      text('Промывка, просеивание, сортировка по фракциям', 'Washed, screened and graded')
+    ),
+    waterRetention,
+    airPorosity,
+    impurities
+  ],
+  'coco-husk-chips-bricks': [
+    rawHusk,
+    field('Состав', 'Composition', text('Чипсы из кокосовой шелухи', 'Coconut husk chips')),
+    field('Формат', 'Format', text('Прессованный брикет', 'Compressed brick')),
+    field('Сухая масса', 'Dry weight', text('5 кг', '5 kg')),
+    dimensions,
+    expandedVolume,
+    field('Фракция чипсов', 'Chip size', text('6–12 мм / 12–18 мм', '6–12 mm / 12–18 mm')),
+    field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
+    ec,
+    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field(
+      'Обработка',
+      'Processing',
+      text('Промывка, просеивание, сортировка по фракциям', 'Washed, screened and graded')
+    ),
+    waterRetention,
+    airPorosity
+  ],
+  'grow-cube-sleeve': [
+    rawPith,
+    field('Формат', 'Format', text('Куб в защитной оболочке', 'Cube in a protective sleeve')),
+    field(
+      'Размеры после увлажнения',
+      'Expanded dimensions',
+      text('10 × 10 × 10 см', '10 × 10 × 10 cm')
+    ),
+    // The earlier 850–900 ml value conflicts with the stated cube dimensions;
+    // leave volume pending rather than infer net substrate volume.
+    expandedVolume,
+    dryWeight,
+    ph,
+    lowEc,
+    field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
+    field(
+      'Фракция',
+      'Particle size',
+      text('Мелкий просеянный кокосовый торф', 'Fine screened coco pith')
+    ),
+    field('Материал оболочки', 'Sleeve material'),
+    field('Посадочное отверстие', 'Planting hole'),
+    field('Дренажные отверстия', 'Drainage holes'),
+    processing
+  ],
+  'coco-coir-discs': [
+    rawPith,
+    field('Форма', 'Shape', text('Круглый диск', 'Circular disc')),
+    field('Диаметр', 'Diameter', text('30 / 36 / 40 / 50 мм', '30 / 36 / 40 / 50 mm')),
+    field('Толщина в сухом виде', 'Dry thickness'),
+    dryWeight,
+    field('Высота после увлажнения', 'Expanded height'),
+    expandedVolume,
+    ph,
+    ec,
+    moisture,
+    field('Обработка', 'Processing', text('Просеивание и прессование', 'Screened and compressed')),
+    field('Добавленные удобрения', 'Added fertiliser')
+  ],
+  'coco-peat-tablets': [
+    rawPith,
+    field('Форма', 'Shape', text('Круглая таблетка', 'Circular tablet')),
+    field('Диаметр', 'Diameter', text('30–100 мм', '30–100 mm')),
+    field('Толщина в сухом виде', 'Dry thickness'),
+    dryWeight,
+    expandedVolume,
+    ph,
+    lowEc,
+    field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
+    field('Степень прессования', 'Compression ratio'),
+    field('Обработка', 'Processing', text('Просеивание и прессование', 'Screened and compressed')),
+    field('Добавленные удобрения', 'Added fertiliser')
+  ],
+  'coco-peat-compost': [
+    rawPith,
+    field('Состав и соотношение компонентов', 'Composition and component ratio'),
+    field('Фракция', 'Particle size'),
+    ph,
+    ec,
+    moisture,
+    waterRetention,
+    field('Содержание органического вещества', 'Organic matter content'),
+    field('Содержание NPK', 'NPK content'),
+    processing,
+    impurities
+  ],
+  'seeding-tray-media': [
+    rawPith,
+    field('Фракция', 'Particle size'),
+    ph,
+    ec,
+    moisture,
+    waterRetention,
+    airPorosity,
+    field(
+      'Количество ячеек',
+      'Cell count',
+      text('50 / 72 / 98 / 104 / 128', '50 / 72 / 98 / 104 / 128')
+    ),
+    field('Объём ячейки', 'Cell volume'),
+    field('Форма ячеек', 'Cell shape'),
+    field('Размеры лотка', 'Tray dimensions'),
+    field('Материал лотка', 'Tray material'),
+    processing
+  ],
+  'coir-fiber-bales': [
+    rawHusk,
+    rawFibre,
+    field('Длина волокна', 'Fibre length'),
+    field(
+      'Цвет',
+      'Colour',
+      text('От золотисто-коричневого до тёмно-коричневого', 'Golden brown to dark brown')
+    ),
+    field('Размеры тюка', 'Bale dimensions'),
+    field('Масса нетто тюка', 'Net bale weight'),
+    moisture,
+    impurities,
+    tensileStrength,
+    field(
+      'Обработка',
+      'Processing',
+      text('Выделение волокна, очистка, сортировка', 'Fibre extraction, cleaning and grading')
     )
-  ];
-  const update = productCopyUpdates[product.id];
-  if (update?.specifications) {
-    rows.push(
-      ...update.specifications.map(([ru, en, valueRu, valueEn]) =>
-        field(ru, en, valueRu && valueEn ? text(valueRu, valueEn) : pending)
+  ],
+  'machine-twisted-fiber': [
+    rawFibre,
+    field('Обработка', 'Processing', text('Механическое скручивание', 'Mechanical twisting')),
+    field('Диаметр пряди', 'Strand diameter'),
+    field('Длина пряди', 'Strand length'),
+    field('Степень скрутки', 'Twist level'),
+    moisture,
+    tensileStrength,
+    impurities,
+    field('Цвет', 'Colour', text('Натуральный коричневый', 'Natural brown'))
+  ],
+  'coir-weed-mat': [
+    rawFibre,
+    field('Структура', 'Construction', text('Тканая / иглопробивная', 'Woven / needle-punched')),
+    matWeight,
+    field('Толщина', 'Thickness'),
+    rollWidth,
+    rollLength,
+    tensileStrength,
+    field('Водопроницаемость', 'Water permeability'),
+    field('Воздухопроницаемость', 'Air permeability'),
+    field('УФ-стабилизация', 'UV stabilisation')
+  ],
+  'coir-geo-textile': [
+    rawFibre,
+    field('Структура', 'Construction', text('Тканое сетчатое полотно', 'Woven open mesh')),
+    field(
+      'Поверхностная плотность',
+      'Mass per unit area',
+      text('400 / 700 / 900 г/м²', '400 / 700 / 900 g/m²')
+    ),
+    field('Ширина рулона', 'Roll width', text('1 / 2 м', '1 / 2 m')),
+    field('Длина рулона', 'Roll length', text('25 / 50 м', '25 / 50 m')),
+    field('Размер ячейки', 'Mesh opening'),
+    field('Открытая площадь', 'Open area'),
+    tensileStrength,
+    field('Удлинение при разрыве', 'Elongation at break')
+  ],
+  'veymur-mct-oil': [...mctSpecifications, organic],
+  'veymur-virgin-coconut-oil': [
+    field(
+      'Сырьё',
+      'Raw material',
+      text('Свежая мякоть зрелых кокосов', 'Fresh, mature coconut kernels')
+    ),
+    ingredients,
+    field('Способ извлечения', 'Extraction process'),
+    field(
+      'Обработка',
+      'Processing',
+      text('Без рафинации, отбеливания и дезодорации', 'Unrefined, unbleached and undeodorised')
+    ),
+    field(
+      'Внешний вид',
+      'Appearance',
+      text(
+        'Прозрачное масло в жидком состоянии; затвердевает при охлаждении',
+        'Clear when liquid; solidifies when cool'
       )
-    );
-    if (product.id.startsWith('veymur-')) rows.push(field('Фасовка', 'Pack size', product.label));
-  } else if (product.id === 'coconut-chips') {
-    // Client-supplied suggested specifications; grade-specific conditions must remain explicit.
-    rows.push(
-      field(
-        'Статус параметров',
-        'Specification status',
-        text(
-          'Предлагаемые параметры; согласовываются при заказе',
-          'Suggested specifications; agreed when ordering'
-        )
-      ),
-      field('Сырьё', 'Raw material', text('Натуральная кокосовая шелуха', 'Natural coconut husk')),
-      field(
-        'Состав',
-        'Composition',
-        text(
-          '100% чипсов из кокосовой шелухи при поставке чистых чипсов',
-          '100% coconut husk chips when supplied as pure chips'
-        )
-      ),
-      field(
-        'Внешний вид',
-        'Appearance',
-        text('Чипсы от коричневого до тёмно-коричневого цвета', 'Natural brown to dark-brown chips')
-      ),
-      field(
-        'Фракция',
-        'Particle size',
-        text('6–12 мм, 12–18 мм или по заказу', '6–12 mm, 12–18 mm or customised')
-      ),
-      field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
-      field(
-        'Электропроводность (EC)',
-        'Electrical conductivity (EC)',
-        text(
-          'Ниже 0,5 мСм/см — для согласованной промытой фракции с низким EC',
-          'Below 0.5 mS/cm for a specified low-EC washed grade'
-        )
-      ),
-      field('Метод измерения EC', 'EC test method'),
-      field('Влажность', 'Moisture content', text('Обычно 15–20%', 'Typically 15–20%')),
-      field(
-        'Обработка',
-        'Processing',
-        text(
-          'Промывка, просеивание и сортировка по фракциям — согласно заказу',
-          'Washed, screened and graded as ordered'
-        )
-      ),
-      field(
-        'Формат поставки',
-        'Supply format',
-        text(
-          'Прессованные блоки, россыпью или упаковка по заказу',
-          'Compressed blocks, loose chips or customised packaging'
-        )
-      ),
-      field(
-        'Применение',
-        'Applications',
-        text(
-          'Теплицы, гидропоника, питомники и приготовление субстратных смесей',
-          'Greenhouse cultivation, hydroponics, nurseries and substrate blending'
-        )
-      ),
-      field(
-        'Культуры',
-        'Crops',
-        text(
-          'Клубника и другие ягодные культуры, томаты, огурцы, орхидеи и декоративные растения',
-          'Strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants'
-        )
+    ),
+    field(
+      'Вкус и аромат',
+      'Taste and aroma',
+      text('Характерные кокосовые', 'Characteristic coconut flavour and aroma')
+    ),
+    field('Влага и летучие вещества', 'Moisture and volatile matter', text('≤ 0,1%', '≤ 0.1%')),
+    field(
+      'Свободные жирные кислоты (в пересчёте на лауриновую)',
+      'Free fatty acids (as lauric acid)',
+      text('≤ 0,2%', '≤ 0.2%')
+    ),
+    field('Перекисное число', 'Peroxide value', text('≤ 3 мэкв O₂/кг', '≤ 3 meq O₂/kg')),
+    field('Йодное число', 'Iodine value'),
+    field('Число омыления', 'Saponification value'),
+    field('Показатель преломления', 'Refractive index'),
+    fattyAcids,
+    organic,
+    shelfLife,
+    foodStorage
+  ],
+  'rbd-coconut-oil': [
+    field('Сырьё', 'Raw material', text('Кокос', 'Coconut')),
+    ingredients,
+    field(
+      'Обработка',
+      'Processing',
+      text('Рафинация, отбеливание и дезодорация', 'Refining, bleaching and deodorisation')
+    ),
+    field(
+      'Внешний вид',
+      'Appearance',
+      text(
+        'Прозрачное масло в жидком состоянии; затвердевает при охлаждении',
+        'Clear when liquid; solidifies when cool'
       )
-    );
-  } else if (product.id === 'coco-husk-chips-bricks') {
-    // Client-supplied brick specifications; target ranges are not batch test results.
-    rows.push(
-      field('Сырьё', 'Raw material', text('Натуральная кокосовая шелуха', 'Natural coconut husk')),
-      field('Состав', 'Composition', text('Чипсы из кокосовой шелухи', 'Coconut husk chips')),
-      field(
-        'Цвет',
-        'Colour',
-        text('От коричневого до тёмно-коричневого', 'Natural brown to dark brown')
-      ),
-      field(
-        'Фракция чипсов',
-        'Chip size',
-        text('6–12 мм, 12–18 мм или по заказу', '6–12 mm, 12–18 mm or customised')
-      ),
-      field('pH', 'pH', text('Целевой диапазон: 5,5–6,8', 'Target range: 5.5–6.8')),
-      field(
-        'Электропроводность (EC)',
-        'Electrical conductivity (EC)',
-        text(
-          'По требованиям заказчика; вариант с низким EC — при подтверждении испытаниями',
-          'Customer-specific; a low-EC grade is available subject to testing'
-        )
-      ),
-      field('Метод измерения EC', 'EC test method'),
-      field(
-        'Влажность',
-        'Moisture content',
-        text('Целевой диапазон: 15–20%', 'Target range: 15–20%')
-      ),
-      field('Формат', 'Format', text('Прессованный брикет', 'Compressed brick')),
-      field('Масса при поставке', 'Weight at delivery', text('Блок 5 кг', '5 kg block')),
-      field(
-        'Расширение после увлажнения',
-        'Expansion after hydration',
-        text(
-          'Зависит от массы брикета, фракции чипсов и условий увлажнения',
-          'Depends on brick weight, chip size and hydration conditions'
-        )
-      ),
-      field(
-        'Обработка',
-        'Processing options',
-        text(
-          'Промывка, просеивание и сортировка по фракциям — согласно спецификации',
-          'Washed, screened and graded as specified'
-        )
-      ),
-      field(
-        'Варианты упаковки',
-        'Packaging options',
-        text(
-          'Отдельные брикеты, коробки или экспортная упаковка на палетах',
-          'Individual bricks, cartons or palletised export packaging'
-        )
-      ),
-      field(
-        'Применение',
-        'Applications',
-        text(
-          'Теплицы, гидропоника, питомники и приготовление субстратных смесей',
-          'Greenhouse cultivation, hydroponics, nurseries and substrate blending'
-        )
-      ),
-      field(
-        'Культуры',
-        'Crops',
-        text(
-          'Клубника и другие ягодные культуры, томаты, огурцы, орхидеи и декоративные растения',
-          'Strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants'
-        )
-      )
-    );
-  } else if (product.id === 'grow-cube-sleeve') {
-    // Client-supplied suggested specifications; dimensions and volume await reconciliation.
-    rows.push(
-      field(
-        'Статус параметров',
-        'Specification status',
-        text(
-          'Предлагаемые параметры; согласовываются при заказе',
-          'Suggested specifications; agreed when ordering'
-        )
-      ),
-      field(
-        'Сырьё',
-        'Raw material',
-        text('Натуральный кокосовый торф', 'Natural coconut coir pith')
-      ),
-      field('Состав и соотношение компонентов', 'Composition and component ratio'),
-      field(
-        'Формат',
-        'Format',
-        text(
-          'Сформированный куб в защитной оболочке',
-          'Pre-formed cube enclosed in a protective sleeve'
-        )
-      ),
-      field(
-        'Размеры после увлажнения',
-        'Expanded dimensions',
-        text(
-          '10 × 10 × 10 см — предлагаемый стандарт; уточнить',
-          '10 × 10 × 10 cm — suggested standard; to be confirmed'
-        )
-      ),
-      field(
-        'Объём после увлажнения',
-        'Expanded volume',
-        text(
-          'Около 850–900 мл для указанного формата; уточнить соответствие размерам',
-          'Approximately 850–900 ml for the referenced format; consistency with dimensions to be confirmed'
-        )
-      ),
-      field('Сухая масса', 'Dry weight'),
-      field('pH', 'pH', text('Целевой диапазон: 5,5–6,5', 'Target range: 5.5–6.5')),
-      field(
-        'Электропроводность (EC)',
-        'Electrical conductivity (EC)',
-        text(
-          'Целевое значение ниже 0,5 мСм/см — для варианта с низким EC',
-          'Target below 0.5 mS/cm for the low-EC grade'
-        )
-      ),
-      field('Метод измерения EC', 'EC test method'),
-      field(
-        'Влажность при отгрузке',
-        'Moisture at dispatch',
-        text('Целевое значение: ниже 20%', 'Target below 20%')
-      ),
-      field(
-        'Фракция',
-        'Particle size',
-        text(
-          'Мелкий кокосовый торф, просеянный до согласованной фракции',
-          'Fine coir pith, screened to the agreed grade'
-        )
-      ),
-      field(
-        'Материал оболочки',
-        'Sleeve material',
-        text(
-          'УФ-стабилизированная плёнка LDPE, биоразлагаемая сетка или нетканый материал — в зависимости от исполнения',
-          'UV-treated LDPE film, biodegradable net or non-woven material, depending on product design'
-        )
-      ),
-      field(
-        'Посадочное отверстие',
-        'Planting hole',
-        text(
-          'Предварительно сформированное; размер и расположение — по заказу',
-          'Pre-formed; size and position customisable'
-        )
-      ),
-      field(
-        'Дренажные отверстия',
-        'Drainage holes',
-        text(
-          'Опционально, в зависимости от системы выращивания',
-          'Optional, according to the growing system'
-        )
-      ),
-      field(
-        'Обработка',
-        'Processing',
-        text(
-          'Промывка или промывка с буферизацией — согласно спецификации',
-          'Washed or washed and buffered, according to specification'
-        )
-      ),
-      field(
-        'Применение',
-        'Applications',
-        text(
-          'Проращивание семян, укоренение черенков, прививка, выращивание рассады и пересадка в тепличные системы',
-          'Seed germination, rooting cuttings, grafting, nursery propagation and greenhouse transplanting'
-        )
-      ),
-      field(
-        'Культуры',
-        'Crops',
-        text(
-          'Томаты, огурцы, перец, баклажаны, клубника и другие ягодные культуры',
-          'Tomatoes, cucumbers, peppers, aubergines, strawberries and other soft fruits'
-        )
-      ),
-      field(
-        'Варианты упаковки',
-        'Packaging options',
-        text(
-          'Коробки, отгрузка на палетах или экспортная упаковка по заказу',
-          'Cartons, palletised shipments or customised export packaging'
-        )
-      ),
-      field(
-        'Параметры под заказ',
-        'Customisation',
-        text(
-          'Размер и масса куба, состав смеси, оболочка, конфигурация отверстий и упаковка',
-          'Cube size and weight, coir blend, sleeve type, hole configuration and packaging'
-        )
-      )
-    );
-  } else if (product.category === 'substrates') {
-    if (product.id !== 'open-top-grow-bag')
-      rows.push(field('Состав и соотношение компонентов', 'Composition and component ratio'));
-    rows.push(field('Размеры (Д × Ш × В) / диаметр', 'Dimensions (L × W × H) / diameter'));
-    rows.push(
-      field(
-        'Масса при поставке',
-        'Weight at delivery',
-        product.id === 'coco-peat-briquettes'
-          ? text('брикет 650 г; блок 5 кг', '650 g brick; 5 kg block')
-          : pending
-      )
-    );
-    if (product.id !== 'open-top-grow-bag')
-      rows.push(
-        field('Объём после увлажнения', 'Hydrated volume'),
-        field('Фракция', 'Particle size'),
-        field('Промывка / буферизация', 'Washing / buffering')
-      );
-    if (
-      !['grow-bag', 'open-top-grow-bag', 'coco-peat', 'coco-peat-briquettes'].includes(product.id)
-    ) {
-      rows.push(
-        field('pH продукта', 'Product pH'),
-        field('EC продукта и метод измерения', 'Product EC and test method')
-      );
-    }
-    if (product.id === 'grow-bag')
-      rows.push(
-        field(
-          'Посадочные и дренажные отверстия',
-          'Planting and drainage holes',
-          text(
-            'количество и расположение согласовываются',
-            'number and positioning agreed to order'
-          )
-        )
-      );
-    rows.push(...substrateCatalogueFields(product));
-  } else if (product.id === 'veymur-mct-oil') {
-    rows.push(...mctSpecifications, field('Фасовка', 'Pack size', product.label));
-  } else if (product.category === 'fiber') {
-    rows.push(
-      field('Состав', 'Composition'),
-      field('Размеры / длина волокна', 'Dimensions / fibre length'),
-      field('Плотность / поверхностная плотность', 'Density / mass per unit area'),
-      field('Влажность', 'Moisture'),
-      field('Прочность', 'Strength'),
-      field('Содержание примесей', 'Impurity content')
-    );
-  } else if (product.category === 'shell') {
-    rows.push(
-      field('Фракция / размеры', 'Particle size / dimensions'),
-      field('Влажность', 'Moisture'),
-      field('Зольность', 'Ash content'),
-      field('Насыпная плотность', 'Bulk density')
-    );
-    if (product.id.includes('activated'))
-      rows.push(
-        field('Йодное число', 'Iodine number'),
-        field('Твёрдость', 'Hardness'),
-        field('Удельная поверхность', 'Specific surface area')
-      );
-    if (product.id.includes('briquettes'))
-      rows.push(
-        field('Теплотворная способность', 'Calorific value'),
-        field('Связующее и его доля', 'Binder and proportion'),
-        field('Время горения', 'Burn time')
-      );
-  } else {
-    rows.push(
-      field('Состав', 'Ingredients'),
-      field('Пищевая ценность на 100 г / 100 мл', 'Nutrition per 100 g / 100 ml'),
-      field('Влажность / сухие вещества', 'Moisture / total solids'),
-      field('Микробиологические показатели', 'Microbiological limits'),
-      field('Срок годности', 'Shelf life'),
-      field('Условия хранения', 'Storage conditions')
-    );
-    if (product.id.includes('oil'))
-      rows.push(
-        field('Жирнокислотный состав', 'Fatty acid composition'),
-        field('Кислотное и перекисное числа', 'Acid and peroxide values')
-      );
-    if (product.id.includes('desiccated'))
-      rows.push(field('Фракция и жирность', 'Grade and fat content'));
-    if (product.id.startsWith('veymur-')) rows.push(field('Фасовка', 'Pack size', product.label));
-  }
-  const specifiedLabels = new Set(
-    update?.specifications?.map(([, label]) => label.toLocaleLowerCase('en')) ?? []
-  );
-  if (!specifiedLabels.has('packaging')) {
-    rows.push(field('Упаковка и количество на палете', 'Packaging and pallet quantity'));
-  }
-  return rows.filter(
-    (row) =>
-      row.label.en !== 'Tolerances and batch documents' &&
-      !(productPackaging[product.id] && row.label.en === 'Pack size')
-  );
+    ),
+    field('Цвет', 'Colour', text('От бесцветного до бледно-жёлтого', 'Colourless to pale yellow')),
+    field('Вкус и аромат', 'Taste and aroma', text('Нейтральные', 'Neutral')),
+    volatileMoisture,
+    ffa,
+    peroxide,
+    field('Йодное число', 'Iodine value'),
+    field('Число омыления', 'Saponification value'),
+    fattyAcids,
+    organic,
+    shelfLife,
+    foodStorage
+  ],
+  'veymur-coconut-sugar': [
+    field(
+      'Сырьё',
+      'Raw material',
+      text('Сок соцветий кокосовой пальмы', 'Coconut palm flower sap')
+    ),
+    ingredients,
+    field('Форма', 'Form', text('Гранулы / порошок', 'Granules / powder')),
+    field(
+      'Цвет',
+      'Colour',
+      text('От золотисто-коричневого до тёмно-коричневого', 'Golden brown to dark brown')
+    ),
+    field(
+      'Вкус и аромат',
+      'Taste and aroma',
+      text('Сладкий, с карамельными нотами', 'Sweet, with caramel-like notes')
+    ),
+    field('Помол', 'Granulation', text('Мелкий / средний / крупный', 'Fine / medium / coarse')),
+    field('Влажность', 'Moisture content', text('≤ 3,0%', '≤ 3.0%')),
+    field('Содержание сахарозы', 'Sucrose content'),
+    field('Общее содержание сахаров', 'Total sugars'),
+    field('pH', 'pH'),
+    ash,
+    impurities,
+    ...microbiology,
+    organic,
+    shelfLife,
+    foodStorage
+  ],
+  'veymur-desiccated-coconut': [
+    field('Сырьё', 'Raw material', text('Мякоть зрелых кокосов', 'Mature coconut kernels')),
+    ingredients,
+    field('Добавки', 'Additives'),
+    field('Цвет', 'Colour', text('От белого до кремово-белого', 'White to creamy white')),
+    field(
+      'Вкус и аромат',
+      'Taste and aroma',
+      text('Характерные кокосовые', 'Characteristic coconut flavour and aroma')
+    ),
+    field('Фракция', 'Particle size', text('Мелкая / средняя / крупная', 'Fine / medium / coarse')),
+    field('Влажность', 'Moisture content', text('≤ 3,0%', '≤ 3.0%')),
+    fat,
+    protein,
+    ash,
+    ffa,
+    field('Остаточный диоксид серы (SO₂)', 'Residual sulphur dioxide (SO₂)'),
+    impurities,
+    ...microbiology,
+    organic,
+    shelfLife,
+    foodStorage
+  ],
+  'veymur-coconut-milk': [
+    field('Сырьё', 'Raw material', text('Мякоть зрелых кокосов', 'Mature coconut kernels')),
+    ingredients,
+    field('Добавки', 'Additives'),
+    field('Цвет', 'Colour', text('От белого до кремово-белого', 'White to creamy white')),
+    field('Консистенция', 'Texture', text('Однородная кремовая жидкость', 'Smooth, creamy liquid')),
+    fat,
+    field('Сухие вещества', 'Total solids'),
+    protein,
+    moisture,
+    field('pH', 'pH'),
+    field('Кислотность', 'Acidity'),
+    processing,
+    ...microbiology,
+    organic,
+    shelfLife,
+    field('Условия хранения', 'Storage conditions')
+  ],
+  'young-coconut': [
+    field('Тип продукта', 'Product type', text('Молодой кокос', 'Young (tender) coconut')),
+    field('Ботаническое название', 'Botanical name', text('Cocos nucifera', 'Cocos nucifera')),
+    field('Степень зрелости', 'Maturity', text('Молодой плод', 'Tender fruit')),
+    field('Сорт', 'Variety'),
+    field('Масса одного плода', 'Fruit weight'),
+    field('Диаметр плода', 'Fruit diameter'),
+    field('Объём кокосовой воды', 'Coconut water volume'),
+    field('Содержание растворимых сухих веществ (°Brix)', 'Soluble solids (°Brix)'),
+    field('Масса мякоти', 'Kernel weight'),
+    field('Степень очистки', 'Husk preparation'),
+    field('Температура хранения и перевозки', 'Storage and transport temperature'),
+    shelfLife,
+    organic
+  ],
+  'mature-coconut': [
+    field('Тип продукта', 'Product type', text('Зрелый кокос', 'Mature coconut')),
+    field('Ботаническое название', 'Botanical name', text('Cocos nucifera', 'Cocos nucifera')),
+    field('Степень зрелости', 'Maturity', text('Полностью зрелый плод', 'Fully mature fruit')),
+    field('Сорт', 'Variety'),
+    field('Масса одного плода', 'Fruit weight'),
+    field('Диаметр плода', 'Fruit diameter'),
+    field('Масса мякоти', 'Kernel weight'),
+    field('Толщина мякоти', 'Kernel thickness'),
+    field(
+      'Состояние скорлупы',
+      'Shell condition',
+      text('Целая, без трещин', 'Sound, free from cracks')
+    ),
+    field('Степень очистки', 'Husk preparation'),
+    field('Температура хранения и перевозки', 'Storage and transport temperature'),
+    shelfLife,
+    organic
+  ],
+  'coco-shell-charcoal-briquettes': [
+    field('Сырьё', 'Raw material', text('Уголь из кокосовой скорлупы', 'Coconut shell charcoal')),
+    field('Форма', 'Shape', text('Шестигранник / куб / подушечка', 'Hexagonal / cube / pillow')),
+    dimensions,
+    field('Масса брикета', 'Briquette weight'),
+    field('Плотность', 'Density'),
+    field('Содержание фиксированного углерода', 'Fixed carbon', text('70–85%', '70–85%')),
+    field('Зольность', 'Ash content', text('≤ 3–6%', '≤ 3–6%')),
+    field('Влажность', 'Moisture content', text('≤ 5–8%', '≤ 5–8%')),
+    field('Летучие вещества', 'Volatile matter'),
+    field(
+      'Теплотворная способность',
+      'Calorific value',
+      text('6 500–7 500 ккал/кг', '6,500–7,500 kcal/kg')
+    ),
+    field('Продолжительность горения', 'Burning duration'),
+    field('Связующее', 'Binder'),
+    field('Условия хранения', 'Storage conditions', text('В сухом месте', 'Keep dry'))
+  ],
+  'coco-shell-activated-carbon': [
+    field('Сырьё', 'Raw material', text('Кокосовая скорлупа', 'Coconut shell')),
+    field(
+      'Форма',
+      'Form',
+      text('Гранулы (GAC) / порошок (PAC)', 'Granular (GAC) / powdered (PAC)')
+    ),
+    field('Размер частиц', 'Particle size'),
+    field('Йодное число', 'Iodine number', text('900–1 200 мг/г', '900–1,200 mg/g')),
+    field('Удельная поверхность BET', 'BET surface area'),
+    field('Влажность', 'Moisture content', text('≤ 5%', '≤ 5%')),
+    field('Зольность', 'Ash content', text('≤ 3–5%', '≤ 3–5%')),
+    field('Насыпная плотность', 'Apparent density', text('450–550 кг/м³', '450–550 kg/m³')),
+    field('Прочность гранул', 'Granule hardness', text('≥ 95–98%', '≥ 95–98%')),
+    field('Активность CTC', 'CTC activity', text('40–60%', '40–60%')),
+    field('pH', 'pH', text('9–11', '9–11')),
+    field('Активация', 'Activation process')
+  ]
+};
+
+export function specificationsFor(product: ProductItem): Specification[] {
+  const rows = productSpecifications[product.id];
+  if (!rows) throw new Error(`Missing specifications for product: ${product.id}`);
+  return [...rows, field('Страна происхождения', 'Country of origin', text('Индия', 'India'))];
 }

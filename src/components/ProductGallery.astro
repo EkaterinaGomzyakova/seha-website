@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import ResponsiveImage from './ResponsiveImage.astro';
+import ArrowCircle from './ui/ArrowCircle.astro';
 
 interface Props {
   images: string[];
@@ -21,6 +22,36 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
       loading="eager"
       fetchpriority="high"
     />
+    {images.length > 1 && (
+      <>
+        <button
+          type="button"
+          class="product-gallery__arrow product-gallery__arrow--previous"
+          data-gallery-previous
+          hidden
+          aria-label={locale === 'ru' ? 'Предыдущее фото' : 'Previous photo'}
+        >
+          <ArrowCircle />
+        </button>
+        <button
+          type="button"
+          class="product-gallery__arrow product-gallery__arrow--next"
+          data-gallery-next
+          hidden
+          aria-label={locale === 'ru' ? 'Следующее фото' : 'Next photo'}
+        >
+          <ArrowCircle />
+        </button>
+        <span
+          class="product-gallery__count"
+          data-gallery-count
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          1 / {images.length}
+        </span>
+      </>
+    )}
   </div>
   <div class="product-gallery__thumbnails" role="group" aria-label={galleryLabel}>
     {images.map((src, index) => (
@@ -43,23 +74,52 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     const thumbnails = gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-thumbnail]');
     if (!main || thumbnails.length === 0) return;
 
-    thumbnails.forEach((thumbnail) => {
-      thumbnail.addEventListener('click', () => {
-        const picture = thumbnail.querySelector('picture');
-        const currentPicture = main.querySelector('picture');
-        if (!picture || !currentPicture) return;
+    const alt = main.querySelector<HTMLImageElement>('img')?.alt ?? '';
+    const sizes = main.querySelector('source')?.getAttribute('sizes');
+    const counter = gallery.querySelector<HTMLElement>('[data-gallery-count]');
+    let current = 0;
+    const show = (index: number) => {
+      const next = (index + thumbnails.length) % thumbnails.length;
+      if (next === current) return;
+      const thumbnail = thumbnails[next];
+      const picture = thumbnail.querySelector('picture');
+      const currentPicture = main.querySelector('picture');
+      if (!picture || !currentPicture) return;
 
-        const replacement = picture.cloneNode(true) as HTMLPictureElement;
-        const image = replacement.querySelector('img');
-        if (image) {
-          image.loading = 'eager';
-          image.alt = gallery.querySelector<HTMLImageElement>('[data-gallery-main] img')?.alt ?? '';
-        }
-        currentPicture.replaceWith(replacement);
-        thumbnails.forEach((button) =>
-          button.setAttribute('aria-pressed', button === thumbnail ? 'true' : 'false')
-        );
-      });
+      const replacement = picture.cloneNode(true) as HTMLPictureElement;
+      const image = replacement.querySelector('img');
+      if (image) {
+        image.loading = 'eager';
+        image.alt = alt;
+      }
+      if (sizes)
+        replacement
+          .querySelectorAll('source')
+          .forEach((source) => source.setAttribute('sizes', sizes));
+      currentPicture.replaceWith(replacement);
+      thumbnails.forEach((button) =>
+        button.setAttribute('aria-pressed', button === thumbnail ? 'true' : 'false')
+      );
+      current = next;
+      if (counter) counter.textContent = `${current + 1} / ${thumbnails.length}`;
+    };
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => show(index));
+    });
+    for (const [selector, direction] of [
+      ['[data-gallery-previous]', -1],
+      ['[data-gallery-next]', 1]
+    ] as const) {
+      const button = gallery.querySelector<HTMLButtonElement>(selector);
+      if (!button) continue;
+      button.hidden = false;
+      button.addEventListener('click', () => show(current + direction));
+    }
+    gallery.addEventListener('keydown', (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      show(current + (event.key === 'ArrowLeft' ? -1 : 1));
     });
   });
 </script>
@@ -72,9 +132,55 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
   }
 
   .product-gallery__main {
+    position: relative;
     min-width: 0;
     overflow: hidden;
     border-radius: 32px;
+  }
+  .product-gallery__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 50%;
+    background: var(--color-white);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .product-gallery__arrow--previous {
+    left: 12px;
+  }
+  .product-gallery__arrow--next {
+    right: 12px;
+  }
+  .product-gallery__arrow :global(.arrow-circle) {
+    width: 44px;
+    height: 44px;
+    border: 0;
+  }
+  .product-gallery__arrow--previous :global(.arrow-circle) {
+    transform: rotate(180deg);
+  }
+  .product-gallery__arrow:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 3px;
+  }
+  .product-gallery__count {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--color-white);
+    color: var(--color-green-brand);
+    font: 500 13px/1.5 var(--font-sans);
+    font-variant-numeric: tabular-nums;
   }
 
   .product-gallery__thumbnails {

@@ -3,6 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { products } from '../src/data/products.ts';
 import { applications, productApplications } from '../src/data/product-applications.ts';
 import { productBenefits } from '../src/data/product-benefits.ts';
+import { specificationsFor } from '../src/data/product-specifications.ts';
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 
 for (const locale of ['ru', 'en']) {
@@ -26,10 +27,42 @@ for (const locale of ['ru', 'en']) {
         expect(html).toContain(benefit.description[locale]);
       }
       expect(html).toContain('data-order-quantity');
+      const specifications = specificationsFor(product);
+      expect(specifications.length).toBeGreaterThan(5);
+      const names = specifications.map((row) => row.label.en.toLowerCase());
+      expect(new Set(names).size).toBe(names.length);
+      for (const row of specifications) {
+        expect(row.label.en).not.toMatch(
+          /catalog|test method|crops|pallet|specification status|customisation|applications/i
+        );
+        expect(`${row.label[locale]} ${row.value[locale]}`).not.toMatch(
+          /каталог|метод измерения|предварительн|подтвердить|catalog|test method|confirm (by|against)|suggested|target range|batch document/i
+        );
+        expect(row.value[locale].trim()).not.toBe('');
+        expect(html).toContain(row.label[locale]);
+      }
     }
     await page.goto(`${base}/${locale}/products/veymur/veymur-mct-oil/`);
     const quantity = page.locator('main [data-order-quantity]');
     const control = page.locator('[data-quantity-control]');
+    const gallery = page.locator('[data-product-gallery]');
+    const thumbnails = gallery.locator('[data-gallery-thumbnail]');
+    await gallery.locator('[data-gallery-next]').click();
+    await expect(thumbnails.nth(1)).toHaveAttribute('aria-pressed', 'true');
+    await gallery.locator('[data-gallery-previous]').click();
+    await gallery.locator('[data-gallery-previous]').click();
+    await expect(thumbnails.last()).toHaveAttribute('aria-pressed', 'true');
+    await page.keyboard.press('ArrowRight');
+    await expect(thumbnails.first()).toHaveAttribute('aria-pressed', 'true');
+    await thumbnails.nth(2).click();
+    await expect(gallery.locator('[data-gallery-count]')).toHaveText('3 / 4');
+    await gallery.screenshot({
+      path: `test-results/gallery-${locale}-${test.info().project.name}.png`
+    });
+    await expect(gallery.locator('[data-gallery-main] source').first()).toHaveAttribute(
+      'sizes',
+      /50vw/
+    );
     await expect(quantity).toHaveValue('1');
     await expect(control.locator('[data-quantity-minus]')).toBeDisabled();
     await control.locator('[data-quantity-plus]').click();
@@ -45,6 +78,17 @@ for (const locale of ['ru', 'en']) {
     await expect(quantity).toHaveValue('11');
     await page.locator('main [data-quote-product]').click();
     const dialog = page.locator('#product-inquiry');
+    const preview = dialog.locator('[data-inquiry-product-preview]');
+    await expect(preview).toContainText(
+      products.find((item) => item.id === 'veymur-mct-oil').name[locale]
+    );
+    await expect(dialog.locator('[name="product"]')).toHaveAttribute('type', 'hidden');
+    await expect
+      .poll(() => preview.locator('img').evaluate((img) => img.complete && img.naturalWidth > 0))
+      .toBe(true);
+    await dialog.screenshot({
+      path: `test-results/inquiry-product-${locale}-${test.info().project.name}.png`
+    });
     await expect(dialog.locator('[name="quantity"]')).toHaveValue('11');
     await expect(dialog.locator('[name="quantity"]')).not.toBeVisible();
     await expect(dialog.locator('[data-inquiry-quantity-summary]')).toContainText('11');
@@ -58,7 +102,11 @@ for (const locale of ['ru', 'en']) {
       'Consumer packs',
       'Consumer packaging',
       'Bulk packaging',
-      'Industrial packaging'
+      'Industrial packaging',
+      'Упаковка и количество на палете',
+      'Культуры',
+      'Packaging and pallet quantity',
+      'Crops'
     ])
       expect(labels).not.toContain(label);
     await expect(page.locator('.product-applications li')).toHaveCount(
@@ -92,5 +140,9 @@ for (const locale of ['ru', 'en']) {
     await page.locator('main [data-quote-product]').click();
     await expect(dialog.locator('[name="quantity"]')).toHaveValue('2.5');
     await expect(dialog.locator('[name="quantityUnit"]')).toHaveValue('m2');
+    await expect(preview).toContainText(
+      products.find((item) => item.id === 'coir-weed-mat').name[locale]
+    );
+    await expect(preview.locator('img')).toHaveCount(1);
   });
 }

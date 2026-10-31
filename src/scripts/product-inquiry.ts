@@ -41,6 +41,14 @@ export function initProductInquiry() {
       trigger = link;
       if (!pending) {
         const productId = link.dataset.productId;
+        const productPreview = form.querySelector<HTMLElement>('[data-inquiry-product-preview]')!;
+        const productTemplate = [
+          ...document.querySelectorAll<HTMLTemplateElement>(
+            'template[data-inquiry-product-template]'
+          )
+        ].find((item) => item.dataset.inquiryProductTemplate === productId);
+        productPreview.replaceChildren();
+        if (productTemplate) productPreview.append(productTemplate.content.cloneNode(true));
         const quantity = [
           ...document.querySelectorAll<HTMLInputElement>('main [data-order-quantity]')
         ].find((input) => input.dataset.orderQuantity === productId);

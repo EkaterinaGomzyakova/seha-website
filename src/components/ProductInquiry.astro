@@ -10,6 +10,7 @@ import ProductPackaging from './ProductPackaging.astro';
 import Input from './ui/Input.astro';
 import Checkbox from './ui/Checkbox.astro';
 import Button from './ui/Button.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 interface Props {
   locale: Locale;
   products: ProductItem[];
@@ -52,7 +53,8 @@ const inquiryCopy = productInquiryCopy[locale];
       <input type="hidden" name="packaging" />
       <input type="hidden" name="quantity" />
       <input type="hidden" name="quantityUnit" />
-      <Input label={ru ? 'Продукт' : 'Product'} name="product" readonly />
+      <input type="hidden" name="product" />
+      <div data-inquiry-product-preview></div>
       <p class="type-p" data-inquiry-quantity-summary hidden></p>
       <div data-inquiry-packaging></div>
       <div data-inquiry-custom hidden>
@@ -119,6 +121,14 @@ const inquiryCopy = productInquiryCopy[locale];
     </p>
   </div>
 </dialog>
+{products.map((product) => (
+  <template data-inquiry-product-template={product.id}>
+    <div class="product-inquiry__product">
+      <ResponsiveImage src={product.image} alt="" sizes="72px" loading="eager" />
+      <p class="type-p">{product.name[locale]}</p>
+    </div>
+  </template>
+))}
 {products
   .filter((product) => productPackaging[product.id])
   .map((product) => (
@@ -212,8 +222,23 @@ const inquiryCopy = productInquiryCopy[locale];
   textarea {
     resize: vertical;
   }
-  .product-inquiry :global(input[readonly]) {
-    background: var(--color-light-gray);
+  .product-inquiry__product {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+  }
+  .product-inquiry__product :global(img) {
+    display: block;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .product-inquiry__product p {
+    margin: 0;
+    font-weight: 700;
+    overflow-wrap: break-word;
   }
   .product-inquiry :global(.consent) {
     color: inherit;
