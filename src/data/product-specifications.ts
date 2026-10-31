@@ -1,6 +1,6 @@
 import { text, type LocalizedText, type ProductItem } from './products';
 import { productCopyUpdates } from './product-copy-updates';
-import { packagingFormats, productPackaging } from './product-packaging';
+import { productPackaging } from './product-packaging';
 
 export interface Specification {
   label: LocalizedText;
@@ -548,26 +548,9 @@ export function specificationsFor(product: ProductItem): Specification[] {
   if (!specifiedLabels.has('packaging')) {
     rows.push(field('Упаковка и количество на палете', 'Packaging and pallet quantity'));
   }
-  if (!specifiedLabels.has('tolerances and batch documents')) {
-    rows.push(field('Допуски и документы партии', 'Tolerances and batch documents'));
-  }
-  const packaging = productPackaging[product.id];
-  if (packaging) {
-    const result = rows.filter((row) => row.label.en !== 'Pack size');
-    for (const kind of ['consumer', 'industrial'] as const) {
-      const options = packaging.options.filter((option) => option.format === kind);
-      result.push(
-        field(
-          packagingFormats[kind].label.ru,
-          packagingFormats[kind].label.en,
-          text(
-            options.map((option) => option.label.ru).join(', '),
-            options.map((option) => option.label.en).join(', ')
-          )
-        )
-      );
-    }
-    return result;
-  }
-  return rows;
+  return rows.filter(
+    (row) =>
+      row.label.en !== 'Tolerances and batch documents' &&
+      !(productPackaging[product.id] && row.label.en === 'Pack size')
+  );
 }

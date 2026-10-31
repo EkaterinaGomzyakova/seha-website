@@ -61,6 +61,11 @@ test('product inquiries validate data and acknowledge only SMTP-accepted message
     assert.equal((await send(invalid)).status, 400);
   assert.equal((await send(data, 'https://unrelated.example')).status, 403);
   assert.equal(messages.length, 1);
+  assert.equal((await send({ ...data, quantity: '-1', quantityUnit: 'packs' })).status, 400);
+  assert.equal((await send({ ...data, quantity: '1.5', quantityUnit: 'pcs' })).status, 400);
+  assert.equal((await send({ ...data, quantity: '2', quantityUnit: 'unknown' })).status, 400);
+  assert.equal((await send({ ...data, quantity: '2', quantityUnit: 'packs' })).status, 200);
+  assert.match(messages.at(-1).text, /Order quantity: 2 packs/);
   mode = 'rejected';
   response = await send(data);
   assert.equal(response.status, 502);

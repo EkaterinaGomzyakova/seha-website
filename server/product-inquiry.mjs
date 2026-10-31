@@ -4,11 +4,23 @@ import { isIP } from 'node:net';
 import nodemailer from 'nodemailer';
 
 const emailPattern = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
+const quantityUnits = { packs: 'packs', pcs: 'pcs', kg: 'kg', m2: 'm²' };
 const singleLine = (value, max) =>
   typeof value === 'string' && value.trim().length <= max && !/[\r\n\0]/.test(value);
 
 export function validateInquiry(data) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) return false;
+  if (data.quantityUnit) {
+    if (
+      !Object.hasOwn(quantityUnits, data.quantityUnit) ||
+      typeof data.quantity !== 'string' ||
+      !/^\d+(\.\d{1,2})?$/.test(data.quantity)
+    )
+      return false;
+    const quantity = Number(data.quantity);
+    if (!Number.isFinite(quantity) || quantity <= 0 || quantity > 999999999) return false;
+    if (['packs', 'pcs'].includes(data.quantityUnit) && !Number.isInteger(quantity)) return false;
+  }
   if (data.supplyFormat !== undefined && !['consumer', 'industrial'].includes(data.supplyFormat))
     return false;
   if (!['ru', 'en'].includes(data.locale) || data.consent !== true || data.website) return false;
@@ -115,7 +127,7 @@ export function createInquiryServer(config, transport) {
         `Supply format: ${data.supplyFormat === 'industrial' ? 'Industrial packaging, without Veymur branding' : data.supplyFormat === 'consumer' ? 'Consumer packaging supplied in wholesale quantities' : 'Agreed with the buyer'}`,
         `Pack size: ${data.packaging || 'Not specified'}`,
         `Packaging ID: ${data.packagingId || 'Not specified'}`,
-        `Order quantity: ${data.quantity || 'Not specified'}`,
+        `Order quantity: ${data.quantity ? `${data.quantity}${data.quantityUnit ? ` ${quantityUnits[data.quantityUnit]}` : ''}` : 'Not specified'}`,
         '',
         `Company: ${data.company.trim()}`,
         `Contact: ${data.contact.trim()}`,

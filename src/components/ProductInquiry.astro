@@ -50,7 +50,10 @@ const inquiryCopy = productInquiryCopy[locale];
       <input type="hidden" name="locale" value={locale} />
       <input type="hidden" name="productId" />
       <input type="hidden" name="packaging" />
+      <input type="hidden" name="quantity" />
+      <input type="hidden" name="quantityUnit" />
       <Input label={ru ? 'Продукт' : 'Product'} name="product" readonly />
+      <p class="type-p" data-inquiry-quantity-summary hidden></p>
       <div data-inquiry-packaging></div>
       <div data-inquiry-custom hidden>
         <Input
@@ -91,11 +94,6 @@ const inquiryCopy = productInquiryCopy[locale];
           maxlength="40"
         />
       </div>
-      <Input
-        label={ru ? 'Количество для заказа' : 'Order quantity'}
-        name="quantity"
-        maxlength="100"
-      />
       <label class="form-field">
         {copy.message}
         <textarea name="comment" rows="3" maxlength="1500"></textarea>

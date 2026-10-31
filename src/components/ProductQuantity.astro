@@ -1,0 +1,126 @@
+---
+import type { Locale } from '../data/translations';
+import { orderingFor } from '../data/product-ordering';
+interface Props {
+  productId: string;
+  locale: Locale;
+}
+const { productId, locale } = Astro.props;
+const { unit, label, fractional } = orderingFor(productId);
+const ru = locale === 'ru';
+const id = `order-quantity-${productId}`;
+---
+
+<div class="product-quantity" data-quantity-control>
+  <label class="type-p" for={id}>
+    {ru ? 'Количество' : 'Quantity'}, {label[locale]}
+  </label>
+  <div class="product-quantity__field">
+    <button
+      type="button"
+      data-quantity-minus
+      aria-label={ru ? 'Уменьшить количество' : 'Decrease quantity'}
+      disabled={!fractional}
+    >
+      −
+    </button>
+    <input
+      id={id}
+      name={id}
+      type="number"
+      value="1"
+      min={fractional ? '0.01' : '1'}
+      max="999999999"
+      step={fractional ? '0.01' : '1'}
+      inputmode={fractional ? 'decimal' : 'numeric'}
+      required
+      data-order-quantity={productId}
+      data-quantity-unit={unit}
+      data-quantity-unit-label={label[locale]}
+    />
+    <button
+      type="button"
+      data-quantity-plus
+      aria-label={ru ? 'Увеличить количество' : 'Increase quantity'}
+    >
+      +
+    </button>
+  </div>
+</div>
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-quantity-control]')) {
+    const input = root.querySelector<HTMLInputElement>('input')!;
+    const minus = root.querySelector<HTMLButtonElement>('[data-quantity-minus]')!;
+    const plus = root.querySelector<HTMLButtonElement>('[data-quantity-plus]')!;
+    const update = () => {
+      minus.disabled = input.valueAsNumber <= Number(input.min);
+      plus.disabled = input.valueAsNumber >= Number(input.max);
+    };
+    const change = (delta: number) => {
+      const current = Number.isFinite(input.valueAsNumber) ? input.valueAsNumber : 1;
+      input.value = String(
+        Math.min(
+          Number(input.max),
+          Math.max(Number(input.min), Math.round((current + delta) * 100) / 100)
+        )
+      );
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    };
+    input.addEventListener('input', update);
+    minus.addEventListener('click', () => change(-1));
+    plus.addEventListener('click', () => change(1));
+    update();
+  }
+</script>
+<style>
+  .product-quantity {
+    display: grid;
+    gap: 10px;
+  }
+  label {
+    font-weight: 600;
+  }
+  .product-quantity__field {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 999px;
+    background: var(--color-white);
+    overflow: hidden;
+  }
+  .product-quantity__field:focus-within {
+    border-color: var(--color-green-brand);
+    box-shadow: 0 0 0 2px var(--color-green-brand);
+  }
+  button {
+    flex: 0 0 52px;
+    min-height: 48px;
+    border: 0;
+    background: transparent;
+    color: var(--color-green-brand);
+    font: 500 24px/1 var(--font-sans);
+    cursor: pointer;
+  }
+  button:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+  input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 4px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-green-brand);
+    font: 500 var(--type-p-size)/1.5 var(--font-sans);
+    text-align: center;
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+</style>

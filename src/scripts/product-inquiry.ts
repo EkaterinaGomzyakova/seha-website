@@ -41,6 +41,17 @@ export function initProductInquiry() {
       trigger = link;
       if (!pending) {
         const productId = link.dataset.productId;
+        const quantity = [
+          ...document.querySelectorAll<HTMLInputElement>('main [data-order-quantity]')
+        ].find((input) => input.dataset.orderQuantity === productId);
+        if (quantity && !quantity.reportValidity()) return;
+        field('quantity').value = quantity ? String(quantity.valueAsNumber) : '';
+        field('quantityUnit').value = quantity?.dataset.quantityUnit || '';
+        const summary = form.querySelector<HTMLElement>('[data-inquiry-quantity-summary]')!;
+        summary.hidden = !quantity;
+        summary.textContent = quantity
+          ? `${ru ? 'Количество' : 'Quantity'}: ${new Intl.NumberFormat(ru ? 'ru-RU' : 'en-GB').format(quantity.valueAsNumber)} ${quantity.dataset.quantityUnitLabel}`
+          : '';
         const detailSelection = [
           ...document.querySelectorAll<HTMLInputElement>('main [data-product-packaging]:checked')
         ].find((input) => input.dataset.packagingProductId === productId);
@@ -126,12 +137,16 @@ export function initProductInquiry() {
       result.textContent = copy.success;
       const product = field('product').value;
       const productId = field('productId').value;
+      const quantity = field('quantity').value;
+      const quantityUnit = field('quantityUnit').value;
       const packagingId = panel.querySelector<HTMLInputElement>(
         '[data-product-packaging]:checked'
       )?.value;
       form.reset();
       field('product').value = product;
       field('productId').value = productId;
+      field('quantity').value = quantity;
+      field('quantityUnit').value = quantityUnit;
       const option = [...panel.querySelectorAll<HTMLInputElement>('input')].find(
         (input) => input.value === packagingId
       );

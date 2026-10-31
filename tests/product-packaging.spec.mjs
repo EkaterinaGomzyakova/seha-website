@@ -20,6 +20,7 @@ for (const locale of ['ru', 'en']) {
     await page.goto(`${base}/${locale}/products/veymur/veymur-mct-oil/`);
     await page.locator('main [data-supply-format][value="industrial"]').check();
     await page.locator('main [data-product-packaging][value="industrial-25-l"]').check();
+    await page.locator('main [data-order-quantity]').fill('2');
     const trigger = page.locator('main [data-quote-product]');
     await trigger.click();
     const dialog = page.locator('#product-inquiry');
@@ -57,7 +58,8 @@ for (const locale of ['ru', 'en']) {
     await form.locator('[name="company"]').fill('Buyer Ltd');
     await form.locator('[name="contact"]').fill('Jane');
     await form.locator('[name="email"]').fill('jane@example.com');
-    await form.locator('[name="quantity"]').fill('2');
+    await expect(form.locator('[name="quantity"]')).toHaveValue('2');
+    await expect(form.locator('[name="quantity"]')).not.toBeVisible();
     await form.locator('[name="consent"]').check();
     await form.evaluate((element) => (element.dataset.endpoint = '/product-inquiry-test'));
     await page.route('**/product-inquiry-test', async (route) => {
@@ -67,6 +69,7 @@ for (const locale of ['ru', 'en']) {
       expect(data.supplyFormat).toBe('industrial');
       expect(data.packaging).toContain('1000');
       expect(data.quantity).toBe('2');
+      expect(data.quantityUnit).toBe('packs');
       expect(data.consent).toBe(true);
       await route.fulfill({ status: 502, json: { success: false } });
     });
