@@ -251,7 +251,8 @@ test('product inquiry sends selection and shows success only after response', as
   await expect(page.locator('[data-inquiry-result]')).toHaveText('');
   await expect.poll(() => requests).toBe(1);
   resolveRequest();
-  await expect(page.locator('[data-inquiry-result]')).toContainText('Your inquiry has been sent');
+  await expect(page.locator('[data-inquiry-result]')).toContainText('Request sent.');
+  await expect(page.locator('[data-inquiry-result]')).toContainText('3 working days');
   await expect(submit).toBeEnabled();
 });
 

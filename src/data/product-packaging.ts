@@ -2,24 +2,19 @@ import type { LocalizedText } from './products';
 
 export type SupplyFormat = 'consumer' | 'industrial';
 
-export const wholesaleNotice = {
-  ru: 'Оптовые поставки только для бизнеса. Минимальную партию и условия поставки согласуем при запросе.',
-  en: 'Wholesale supply for businesses only. Minimum order quantities and delivery terms are agreed when you enquire.'
-};
-
 export const packagingFormats = {
   consumer: {
-    label: { ru: 'Потребительская упаковка', en: 'Consumer packaging' },
+    label: { ru: 'Готовая упаковка', en: 'Consumer packs' },
     description: {
-      ru: 'Для магазинов и дистрибьюторов. Готовая фасовка поставляется оптовыми партиями.',
-      en: 'For shops and distributors. Finished consumer packs supplied in wholesale quantities.'
+      ru: 'Упаковка Veymur для продажи в магазинах.',
+      en: 'Veymur packs for resale.'
     }
   },
   industrial: {
-    label: { ru: 'Промышленная фасовка', en: 'Industrial packaging' },
+    label: { ru: 'Промышленная фасовка', en: 'Bulk packaging' },
     description: {
-      ru: 'В транспортной таре, без оформления Veymur. Тип тары и объём партии согласуем при запросе.',
-      en: 'In transport packaging without Veymur branding. Container type and order quantity are agreed when you enquire.'
+      ru: 'В транспортной таре без оформления Veymur.',
+      en: 'Transport packaging without Veymur branding.'
     }
   }
 } as const;
@@ -48,7 +43,7 @@ const size = (
 const custom: PackagingOption = {
   id: 'industrial-custom',
   format: 'industrial',
-  label: { ru: 'Под ваши требования', en: 'Custom pack size' }
+  label: { ru: 'Другая фасовка', en: 'Other size' }
 };
 
 // Client brochure: do not infer bulk capacities for products without specified sizes.

@@ -44,7 +44,7 @@ for (const locale of ['ru', 'en']) {
     ).toEqual([]);
     await form.locator('[value="industrial-custom"]').check();
     await expect(form.locator('[name="customPackaging"]')).toBeVisible();
-    await expect(form.locator('[name="customPackaging"]')).toHaveAttribute('required', '');
+    await expect(form.locator('[name="customPackaging"]')).not.toHaveAttribute('required');
     await form.locator('[value="industrial-1000-l"]').check();
     await form.locator('[data-supply-format][value="consumer"]').check();
     await expect(form.locator('[value="consumer-500-ml"]')).toBeChecked();
@@ -69,7 +69,7 @@ for (const locale of ['ru', 'en']) {
     });
     await form.locator('[type="submit"]').click();
     await expect(form.locator('[data-inquiry-result]')).toContainText(
-      locale === 'ru' ? 'Не удалось отправить' : 'could not be sent'
+      locale === 'ru' ? 'Не удалось отправить' : 'Could not send'
     );
     await expect(form.locator('[name="company"]')).toHaveValue('Buyer Ltd');
     await expect(page.locator('#quote-form [name="company"]')).toHaveValue('');
@@ -87,5 +87,25 @@ for (const locale of ['ru', 'en']) {
     await expect(dialog).toBeVisible();
     await expect(form.locator('[name="productId"]')).toHaveValue('grow-bag');
     await expect(form.locator('[data-product-packaging]')).toHaveCount(0);
+    await page.keyboard.press('Escape');
+    await page.goto(`${base}/${locale}/products/veymur/veymur-virgin-coconut-oil/`);
+    await expect(page.locator('main')).not.toContainText(
+      locale === 'ru' ? 'только для бизнеса' : 'businesses only'
+    );
+    await expect(page.locator('main')).toContainText(
+      locale === 'ru' ? '3 рабочих дней' : '3 working days'
+    );
+    await page.locator('main [data-supply-format][value="industrial"]').check();
+    const industrial = page.locator('main [data-packaging-panel="industrial"]');
+    await expect(industrial.locator('.product-packaging__option')).not.toBeVisible();
+    await expect(industrial.locator('legend')).toHaveCount(0);
+    await industrial.locator('[data-inline-custom-packaging]').fill('20 kg');
+    await page.locator('main .product-packaging').screenshot({
+      path: `test-results/custom-packaging-${locale}-${test.info().project.name}.png`
+    });
+    await page.locator('main [data-quote-product]').click();
+    await expect(form.locator('[name="customPackaging"]')).toHaveValue('20 kg');
+    await expect(form.locator('[name="customPackaging"]')).not.toHaveAttribute('required');
+    await expect(form.locator('[name="packaging"]')).toHaveValue(/20 kg/);
   });
 }

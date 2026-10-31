@@ -1,7 +1,8 @@
 ---
 import type { Locale } from '../data/translations';
 import type { ProductItem } from '../data/products';
-import { productPackaging, wholesaleNotice } from '../data/product-packaging';
+import { productPackaging } from '../data/product-packaging';
+import { productInquiryCopy } from '../data/product-inquiry';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
@@ -16,6 +17,7 @@ interface Props {
 const { locale, products } = Astro.props;
 const ru = locale === 'ru';
 const copy = getInterfaceCopy(locale);
+const inquiryCopy = productInquiryCopy[locale];
 ---
 
 <dialog
@@ -27,7 +29,7 @@ const copy = getInterfaceCopy(locale);
   <div class="product-inquiry__panel">
     <div class="product-inquiry__heading">
       <h2 id="product-inquiry-title" class="type-h3">
-        {ru ? 'Запрос оптового предложения' : 'Request a wholesale quote'}
+        {inquiryCopy.title}
       </h2>
       <button
         class="product-inquiry__close"
@@ -38,7 +40,9 @@ const copy = getInterfaceCopy(locale);
         ×
       </button>
     </div>
-    <p class="type-p">{wholesaleNotice[locale]}</p>
+    <p class="type-p" id="product-inquiry-next-step">
+      {inquiryCopy.nextStep}
+    </p>
     <form
       id="product-inquiry-form"
       data-endpoint={import.meta.env.PUBLIC_PRODUCT_INQUIRY_ENDPOINT || undefined}
@@ -46,11 +50,11 @@ const copy = getInterfaceCopy(locale);
       <input type="hidden" name="locale" value={locale} />
       <input type="hidden" name="productId" />
       <input type="hidden" name="packaging" />
-      <Input label={ru ? 'Выбранный продукт' : 'Selected product'} name="product" readonly />
+      <Input label={ru ? 'Продукт' : 'Product'} name="product" readonly />
       <div data-inquiry-packaging></div>
       <div data-inquiry-custom hidden>
         <Input
-          label={ru ? 'Нужная фасовка' : 'Required pack size'}
+          label={ru ? 'Объём или вес упаковки, если знаете' : 'Pack size, if known'}
           name="customPackaging"
           maxlength="80"
           disabled
@@ -58,25 +62,37 @@ const copy = getInterfaceCopy(locale);
       </div>
       <div class="product-inquiry__fields">
         <Input
-          label={copy.company}
+          label={ru ? 'Компания' : 'Company'}
           name="company"
           autocomplete="organization"
           required
           maxlength="160"
         />
-        <Input label={copy.contact} name="contact" autocomplete="name" required maxlength="120" />
         <Input
-          label={copy.email}
+          label={ru ? 'Ваше имя' : 'Your name'}
+          name="contact"
+          autocomplete="name"
+          required
+          maxlength="120"
+        />
+        <Input
+          label="Email"
           name="email"
           type="email"
           autocomplete="email"
           required
           maxlength="254"
         />
-        <Input label={copy.phone} name="phone" type="tel" autocomplete="tel" maxlength="40" />
+        <Input
+          label={ru ? 'Телефон' : 'Phone'}
+          name="phone"
+          type="tel"
+          autocomplete="tel"
+          maxlength="40"
+        />
       </div>
       <Input
-        label={ru ? 'Объём оптовой партии' : 'Wholesale order quantity'}
+        label={ru ? 'Количество для заказа' : 'Order quantity'}
         name="quantity"
         maxlength="100"
       />
@@ -95,8 +111,8 @@ const copy = getInterfaceCopy(locale);
           {copy.consentEnd}
         </span>
       </Checkbox>
-      <Button full type="submit">
-        {ru ? 'Отправить заявку' : 'Send inquiry'}
+      <Button full type="submit" aria-describedby="product-inquiry-next-step">
+        {inquiryCopy.submit}
       </Button>
       <p class="type-p" role="status" data-inquiry-result hidden></p>
     </form>

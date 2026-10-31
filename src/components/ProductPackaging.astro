@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import type { ProductItem } from '../data/products';
-import { productPackaging, packagingFormats, wholesaleNotice } from '../data/product-packaging';
+import { productPackaging, packagingFormats } from '../data/product-packaging';
 interface Props {
   product: ProductItem;
   locale: Locale;
@@ -16,11 +16,10 @@ const ru = locale === 'ru';
 const context = formId || 'product-page';
 ---
 
-{!formId && <p class="product-packaging__notice type-p">{wholesaleNotice[locale]}</p>}
 {packaging && (
   <div class="product-packaging" data-packaging-selector>
     <fieldset class="product-packaging__formats">
-      <legend class="type-p">{ru ? 'Формат поставки' : 'Supply format'}</legend>
+      <legend class="type-p">{ru ? 'Упаковка' : 'Packaging'}</legend>
       <div class="product-packaging__format-options">
         {(['consumer', 'industrial'] as const).map((format) => (
           <label class="product-packaging__option">
@@ -38,23 +37,24 @@ const context = formId || 'product-page';
         ))}
       </div>
     </fieldset>
-    {(['consumer', 'industrial'] as const).map((format) => (
-      <div data-packaging-panel={format} hidden={format !== initialFormat}>
-        <p
-          class="product-packaging__description type-p"
-          id={`${context}-${product.id}-${format}-description`}
-        >
-          {packagingFormats[format].description[locale]}
-        </p>
-        <fieldset>
-          <legend class="type-p">
-            {ru ? 'Фасовка одной упаковки / тары' : 'Individual pack / container size'}
-          </legend>
-          <div class="product-packaging__options">
-            {packaging.options
-              .filter((option) => option.format === format)
-              .map((option) => (
-                <label class="product-packaging__option">
+    {(['consumer', 'industrial'] as const).map((format) => {
+      const options = packaging.options.filter((option) => option.format === format);
+      const customOnly = options.length === 1 && options[0].id === 'industrial-custom';
+      return (
+        <div data-packaging-panel={format} hidden={format !== initialFormat}>
+          <p
+            class="product-packaging__description type-p"
+            id={`${context}-${product.id}-${format}-description`}
+          >
+            {packagingFormats[format].description[locale]}
+          </p>
+          <fieldset>
+            {!customOnly && (
+              <legend class="type-p">{ru ? 'Объём или вес упаковки' : 'Pack size'}</legend>
+            )}
+            <div class="product-packaging__options">
+              {options.map((option) => (
+                <label class="product-packaging__option" hidden={customOnly}>
                   <input
                     type="radio"
                     name={formId ? 'packagingId' : `packaging-${product.id}`}
@@ -71,14 +71,24 @@ const context = formId || 'product-page';
                   <span class="type-p">{option.label[locale]}</span>
                 </label>
               ))}
-          </div>
-        </fieldset>
-      </div>
-    ))}
+            </div>
+            {customOnly && !formId && (
+              <label class="product-packaging__custom type-p">
+                <span>{ru ? 'Объём или вес упаковки, если знаете' : 'Pack size, if known'}</span>
+                <input
+                  type="text"
+                  maxlength="80"
+                  data-inline-custom-packaging
+                  data-packaging-product-id={product.id}
+                />
+              </label>
+            )}
+          </fieldset>
+        </div>
+      );
+    })}
     <p class="product-packaging__note type-p">
-      {ru
-        ? 'Наличие указано суммарно для всех форматов поставки.'
-        : 'Availability is the total across all supply formats.'}
+      {ru ? 'Показан общий остаток товара.' : 'Stock shown is the total for this product.'}
     </p>
   </div>
 )}
@@ -116,13 +126,13 @@ const context = formId || 'product-page';
     cursor: pointer;
     max-width: 100%;
   }
-  input {
+  input[type='radio'] {
     position: absolute;
     width: 1px;
     height: 1px;
     opacity: 0;
   }
-  span {
+  .product-packaging__option > span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,8 +160,18 @@ const context = formId || 'product-page';
     margin: 12px 0 0;
     color: var(--color-dark-gray);
   }
-  .product-packaging__notice {
-    margin: 0;
+  .product-packaging__custom {
+    display: grid;
+    gap: 8px;
+  }
+  .product-packaging__custom input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 8px;
     color: var(--color-green-brand);
+    background: var(--color-white);
+    font: inherit;
   }
 </style>

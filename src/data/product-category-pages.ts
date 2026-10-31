@@ -1,4 +1,5 @@
 import type { Locale } from './translations';
+import { productInquiryCopy } from './product-inquiry';
 import { productsForCategory, type ProductItem, type ProductCategorySlug } from './products';
 
 export type ProductCategoryPageSlug = ProductCategorySlug;
@@ -26,6 +27,7 @@ export interface ProductCategoryPageDefinition {
 }
 
 const text = (ru: string, en: string): LocalizedValue => ({ ru, en });
+const quoteCta = text(productInquiryCopy.ru.cta, productInquiryCopy.en.cta);
 
 export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDefinition> = {
   substrates: {
@@ -42,7 +44,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('для растениеводства', 'for horticulture'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
+    cta: quoteCta,
     items: productsForCategory('substrates')
   },
   fiber: {
@@ -59,7 +61,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('Для промышленности и строительства', 'INDUSTRIAL & CONSTRUCTION USE'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
+    cta: quoteCta,
     items: productsForCategory('fiber')
   },
   veymur: {
@@ -76,7 +78,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     listTitle: text('Продукция<br>Veymur', 'Veymur<br>Product Range'),
-    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
+    cta: quoteCta,
     items: productsForCategory('veymur')
   },
   shell: {
@@ -93,7 +95,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     ),
     listLabel: text('Для промышленности и топлива', 'INDUSTRIAL & FUEL APPLICATIONS'),
     listTitle: text('Оптовая<br>линейка', 'Wholesale<br>Product Range'),
-    cta: text('Запросить оптовую цену', 'Request a wholesale quote'),
+    cta: quoteCta,
     items: productsForCategory('shell')
   }
 };

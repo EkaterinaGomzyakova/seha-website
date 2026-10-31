@@ -6,6 +6,7 @@ import ProductGallery from '../../../../components/ProductGallery.astro';
 import ProductStock from '../../../../components/ProductStock.astro';
 import ProductPackaging from '../../../../components/ProductPackaging.astro';
 import { productPackaging } from '../../../../data/product-packaging';
+import { productInquiryCopy } from '../../../../data/product-inquiry';
 import Button from '../../../../components/ui/Button.astro';
 import { localizedPath } from '../../../../lib/paths';
 import { specificationsFor } from '../../../../data/product-specifications';
@@ -23,6 +24,7 @@ interface Props {
 }
 const { locale, item } = Astro.props;
 const ru = locale === 'ru';
+const inquiryCopy = productInquiryCopy[locale];
 const path = `/products/${item.category}/${item.slug}/`;
 ---
 
@@ -63,8 +65,9 @@ const path = `/products/${item.category}/${item.slug}/`;
           }
           data-product-id={item.id}
         >
-          {ru ? 'Запросить оптовую цену' : 'Request a wholesale quote'}
+          {inquiryCopy.cta}
         </Button>
+        <p class="type-p">{inquiryCopy.nextStep}</p>
       </div>
     </section>
     <section aria-labelledby="specifications-title">

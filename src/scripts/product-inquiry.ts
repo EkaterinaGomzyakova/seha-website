@@ -1,10 +1,12 @@
 import { initProductPackaging } from './product-packaging';
+import { productInquiryCopy } from '../data/product-inquiry';
 
 export function initProductInquiry() {
   const dialog = document.querySelector<HTMLDialogElement>('#product-inquiry');
   const form = document.querySelector<HTMLFormElement>('#product-inquiry-form');
   if (!dialog || !form) return;
   const ru = dialog.dataset.locale === 'ru';
+  const copy = productInquiryCopy[ru ? 'ru' : 'en'];
   const panel = form.querySelector<HTMLElement>('[data-inquiry-packaging]')!;
   const result = form.querySelector<HTMLElement>('[data-inquiry-result]')!;
   const submit = form.querySelector<HTMLButtonElement>('[type="submit"]')!;
@@ -17,7 +19,7 @@ export function initProductInquiry() {
     const custom = option?.value === 'industrial-custom';
     form.querySelector<HTMLElement>('[data-inquiry-custom]')!.hidden = !custom;
     field('customPackaging').disabled = !custom;
-    field('customPackaging').required = custom;
+    field('customPackaging').required = false;
     const suffix =
       custom && field('customPackaging').value.trim()
         ? ` (${field('customPackaging').value.trim()})`
@@ -63,6 +65,10 @@ export function initProductInquiry() {
           field('comment').value = '';
           field('customPackaging').value = '';
         }
+        const inlineSize = [
+          ...document.querySelectorAll<HTMLInputElement>('main [data-inline-custom-packaging]')
+        ].find((input) => input.dataset.packagingProductId === productId);
+        if (inlineSize) field('customPackaging').value = inlineSize.value;
         field('productId').value = productId;
         updatePackaging();
         result.hidden = true;
@@ -96,9 +102,7 @@ export function initProductInquiry() {
     const endpoint = form.dataset.endpoint;
     result.hidden = false;
     if (!endpoint) {
-      result.textContent = ru
-        ? 'Отправка пока недоступна. Напишите нам по адресу ниже.'
-        : 'Sending is currently unavailable. Please email us using the address below.';
+      result.textContent = copy.unavailable;
       return;
     }
     pending = true;
@@ -119,9 +123,7 @@ export function initProductInquiry() {
       });
       const data = await response.json();
       if (!response.ok || data.success !== true) throw new Error('Inquiry rejected');
-      result.textContent = ru
-        ? 'Заявка отправлена. Мы свяжемся с вами для уточнения заказа.'
-        : 'Your inquiry has been sent. We will contact you to discuss your order.';
+      result.textContent = copy.success;
       const product = field('product').value;
       const productId = field('productId').value;
       const packagingId = panel.querySelector<HTMLInputElement>(
@@ -137,9 +139,7 @@ export function initProductInquiry() {
       initProductPackaging(panel);
       updatePackaging();
     } catch {
-      result.textContent = ru
-        ? 'Не удалось отправить заявку. Данные сохранены: попробуйте снова или напишите нам.'
-        : 'Your inquiry could not be sent. Your details are preserved: try again or email us.';
+      result.textContent = copy.error;
     } finally {
       window.clearTimeout(timeout);
       pending = false;
