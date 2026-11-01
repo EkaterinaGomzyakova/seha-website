@@ -17,8 +17,8 @@ export const productApplicationGuidance: Record<string, readonly ApplicationGuid
     },
     {
       title: {
-        ru: 'Добавка в смесь — примерно 20–40%',
-        en: 'Blend component — approximately 20–40%'
+        ru: 'Добавка в смесь — примерно 20–40% по объёму',
+        en: 'Blend component — approximately 20–40% by volume'
       },
       description: {
         ru: 'Добавляют в кокосовый торф или грунт, чтобы улучшить доступ воздуха к корням и отвод лишней воды. Долю подбирают с учётом растения, размера чипсов и режима полива.',

@@ -245,8 +245,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
     field('Кислотность (pH)', 'pH', text('5,5–6,8', '5.5–6.8')),
     field(
-      'Электропроводность (EC)',
-      'Electrical conductivity (EC)',
+      'Электропроводность (EC, засолённость)',
+      'Electrical conductivity (EC, salinity)',
       text(
         'Менее 0,5 мСм/см — для промытого варианта с низким EC; водная вытяжка 1:1,5',
         '< 0.5 mS/cm for the washed, low-EC grade; water extract 1:1.5'
