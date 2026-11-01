@@ -25,6 +25,7 @@
   --grid-margin: 136px;
   --grid-gutter: 32px;
   --grid-content-width: calc(100% - (var(--grid-margin) * 2));
+  --catalog-content-max-width: 1368px;
   --type-big-h1-size: 72px;
   --type-big-h2-size: 48px;
   --type-big-h3-size: 25px;

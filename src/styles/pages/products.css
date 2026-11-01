@@ -52,7 +52,7 @@
   color: var(--color-background-light);
 }
 .product-overview .products-catalog {
-  width: min(1368px, var(--grid-content-width));
+  width: min(var(--catalog-content-max-width), var(--grid-content-width));
   margin: 0 auto;
   padding: 64px 0;
 }

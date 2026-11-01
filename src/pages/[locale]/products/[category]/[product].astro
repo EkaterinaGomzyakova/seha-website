@@ -100,7 +100,7 @@ const category = productCategories.find((category) => category.slug === item.cat
 </SiteLayout>
 <style>
   .product-detail {
-    width: var(--grid-content-width);
+    width: min(var(--catalog-content-max-width), var(--grid-content-width));
     margin: 0 auto 80px;
     display: grid;
     gap: 48px;
