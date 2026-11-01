@@ -16,6 +16,15 @@ const initialFormat = packaging?.options.find(
 )?.format;
 const ru = locale === 'ru';
 const context = formId || 'product-page';
+const selectionLabel =
+  packaging?.selectionLabel?.[locale] ||
+  (weightOnly
+    ? ru
+      ? 'Масса упаковки'
+      : 'Pack weight'
+    : ru
+      ? 'Объём или вес упаковки'
+      : 'Pack size');
 ---
 
 {packaging && (
@@ -55,17 +64,7 @@ const context = formId || 'product-page';
             </p>
           )}
           <fieldset>
-            {!customOnly && (
-              <legend class="type-p">
-                {weightOnly
-                  ? ru
-                    ? 'Масса брикета / блока'
-                    : 'Brick / block weight'
-                  : ru
-                    ? 'Объём или вес упаковки'
-                    : 'Pack size'}
-              </legend>
-            )}
+            {!customOnly && <legend class="type-p">{selectionLabel}</legend>}
             <div class="product-packaging__options">
               {options.map((option) => (
                 <label class="product-packaging__option" hidden={customOnly}>

@@ -115,40 +115,51 @@ for (const locale of ['ru', 'en']) {
     await expect(form.locator('[name="customPackaging"]')).toHaveValue('20 kg');
     await expect(form.locator('[name="customPackaging"]')).not.toHaveAttribute('required');
     await expect(form.locator('[name="packaging"]')).toHaveValue(/20 kg/);
-    await page.goto(`${base}/${locale}/products/substrates/coco-peat-briquettes/`);
-    await expect(page.locator('main [data-supply-format]')).toHaveCount(0);
-    await expect(page.locator('main [data-product-packaging]')).toHaveCount(2);
-    await expect(page.locator('main dl')).not.toContainText(
-      locale === 'ru' ? 'Сухая масса' : 'Dry weight'
-    );
-    await expect(page.locator('main .product-packaging')).not.toContainText('Veymur');
-    await page.locator('main [data-product-packaging][value="industrial-5-kg"]').check();
-    await page.locator('main [data-order-quantity]').fill('3');
-    await page.locator('main [data-quote-product]').click();
-    await expect(form.locator('[value="industrial-5-kg"]')).toBeChecked();
-    await expect(form.locator('[name="quantityUnit"]')).toHaveValue('pcs');
-    await expect(form.locator('[name="packaging"]')).toHaveValue(
-      locale === 'ru' ? 'Масса — 5\u00a0кг' : 'Weight — 5\u00a0kg'
-    );
-    await form.locator('[name="company"]').fill('Buyer Ltd');
-    await form.locator('[name="contact"]').fill('Jane');
-    await form.locator('[name="email"]').fill('jane@example.com');
-    await form.locator('[name="consent"]').check();
-    await form.evaluate((element) => (element.dataset.endpoint = '/product-inquiry-test'));
-    await page.unroute('**/product-inquiry-test');
-    await page.route('**/product-inquiry-test', async (route) => {
-      const data = route.request().postDataJSON();
-      expect(data.productId).toBe('coco-peat-briquettes');
-      expect(data.packagingId).toBe('industrial-5-kg');
-      expect(data.packaging).toBe(locale === 'ru' ? 'Масса — 5\u00a0кг' : 'Weight — 5\u00a0kg');
-      expect(data.quantity).toBe('3');
-      expect(data.quantityUnit).toBe('pcs');
-      await route.fulfill({ status: 200, json: { success: true } });
-    });
-    await form.locator('[type="submit"]').click();
-    await expect(form.locator('[data-inquiry-result]')).toContainText(
-      locale === 'ru' ? '3 рабочих дней' : '3 working days'
-    );
-    await expect(form.locator('[value="industrial-5-kg"]')).toBeChecked();
+    for (const variant of [
+      { id: 'coco-peat-briquettes', category: 'substrates', weight: 5, unit: 'pcs' },
+      { id: 'coco-shell-activated-carbon', category: 'shell', weight: 500, unit: 'packs' }
+    ]) {
+      const selected = `industrial-${variant.weight}-kg`;
+      const label =
+        locale === 'ru'
+          ? `Масса — ${variant.weight}\u00a0кг`
+          : `Weight — ${variant.weight}\u00a0kg`;
+      await page.goto(`${base}/${locale}/products/${variant.category}/${variant.id}/`);
+      await expect(page.locator('main [data-supply-format]')).toHaveCount(0);
+      await expect(page.locator('main [data-product-packaging]')).toHaveCount(2);
+      await expect(page.locator('main dl')).not.toContainText(
+        locale === 'ru' ? 'Сухая масса' : 'Dry weight'
+      );
+      await expect(page.locator('main .product-packaging')).not.toContainText('Veymur');
+      await page.locator(`main [data-product-packaging][value="${selected}"]`).check();
+      await page.locator('main [data-order-quantity]').fill('3');
+      await page.locator('main .product-packaging').screenshot({
+        path: `test-results/weight-${variant.id}-${locale}-${test.info().project.name}.png`
+      });
+      await page.locator('main [data-quote-product]').click();
+      await expect(form.locator(`[value="${selected}"]`)).toBeChecked();
+      await expect(form.locator('[name="quantityUnit"]')).toHaveValue(variant.unit);
+      await expect(form.locator('[name="packaging"]')).toHaveValue(label);
+      await form.locator('[name="company"]').fill('Buyer Ltd');
+      await form.locator('[name="contact"]').fill('Jane');
+      await form.locator('[name="email"]').fill('jane@example.com');
+      await form.locator('[name="consent"]').check();
+      await form.evaluate((element) => (element.dataset.endpoint = '/product-inquiry-test'));
+      await page.unroute('**/product-inquiry-test');
+      await page.route('**/product-inquiry-test', async (route) => {
+        const data = route.request().postDataJSON();
+        expect(data.productId).toBe(variant.id);
+        expect(data.packagingId).toBe(selected);
+        expect(data.packaging).toBe(label);
+        expect(data.quantity).toBe('3');
+        expect(data.quantityUnit).toBe(variant.unit);
+        await route.fulfill({ status: 200, json: { success: true } });
+      });
+      await form.locator('[type="submit"]').click();
+      await expect(form.locator('[data-inquiry-result]')).toContainText(
+        locale === 'ru' ? '3 рабочих дней' : '3 working days'
+      );
+      await expect(form.locator(`[value="${selected}"]`)).toBeChecked();
+    }
   });
 }

@@ -26,6 +26,8 @@ export interface PackagingOption {
 }
 interface ProductPackaging {
   kind?: 'weight';
+  selectionLabel?: LocalizedText;
+  quantityUnit?: 'pcs' | 'packs';
   defaultId: string;
   options: PackagingOption[];
 }
@@ -51,8 +53,15 @@ const custom: PackagingOption = {
 export const productPackaging: Partial<Record<string, ProductPackaging>> = {
   'coco-peat-briquettes': {
     kind: 'weight',
+    selectionLabel: { ru: 'Масса брикета / блока', en: 'Brick / block weight' },
     defaultId: 'industrial-650-g',
     options: [size(650, 'g', 'industrial'), size(5, 'kg', 'industrial')]
+  },
+  'coco-shell-activated-carbon': {
+    kind: 'weight',
+    quantityUnit: 'packs',
+    defaultId: 'industrial-25-kg',
+    options: [size(25, 'kg', 'industrial'), size(500, 'kg', 'industrial')]
   },
   'veymur-mct-oil': {
     defaultId: 'consumer-500-ml',
