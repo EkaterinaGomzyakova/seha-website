@@ -265,8 +265,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Water-holding capacity',
       text('4–6 кг воды на 1 кг сухих чипсов', '4–6 kg of water per kg of dry chips')
     ),
-    airPorosity,
-    impurities
+    field('Воздухоёмкость (аэрация)', 'Air-filled porosity', text('30–45%', '30–45%'))
   ],
   'coco-husk-chips-bricks': [
     rawHusk,
