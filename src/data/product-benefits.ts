@@ -61,8 +61,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Удерживает влагу',
       'Moisture retention',
-      'Кокосовый торф удерживает воду в корневой зоне.',
-      'Coco pith retains water in the root zone.'
+      'Удерживает 7–9 кг воды на 1 кг сухого субстрата.',
+      'Holds 7–9 kg of water per kg of dry substrate.'
     ),
     benefit(
       'Основа для смесей',
@@ -115,6 +115,12 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Washed chips',
       'Доступна промытая марка с низкой электропроводностью (EC).',
       'A washed, low-EC grade is available.'
+    ),
+    benefit(
+      'Удерживает влагу',
+      'Moisture retention',
+      'Удерживает 4–6 кг воды на 1 кг сухих чипсов.',
+      'Holds 4–6 kg of water per kg of dry chips.'
     )
   ],
   'coco-husk-chips-bricks': [

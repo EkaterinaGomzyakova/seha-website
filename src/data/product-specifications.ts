@@ -189,7 +189,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
     field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
     processing,
-    waterRetention,
+    field(
+      'Влагоудерживающая способность',
+      'Water-holding capacity',
+      text('7–9 кг воды на 1 кг сухого субстрата', '7–9 kg of water per kg of dry substrate')
+    ),
     airPorosity,
     impurities
   ],
@@ -256,7 +260,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Loose chips, compressed blocks or custom packaging'
       )
     ),
-    waterRetention,
+    field(
+      'Влагоудерживающая способность',
+      'Water-holding capacity',
+      text('4–6 кг воды на 1 кг сухих чипсов', '4–6 kg of water per kg of dry chips')
+    ),
     airPorosity,
     impurities
   ],
