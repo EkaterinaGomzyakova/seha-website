@@ -643,11 +643,7 @@ export function specificationsFor(product: ProductItem): Specification[] {
   const rows = productSpecifications[product.id];
   if (!rows) throw new Error(`Missing specifications for product: ${product.id}`);
   return [
-    field(
-      'Производитель',
-      'Manufacturer',
-      text('SEHA Group of Companies', 'SEHA Group of Companies')
-    ),
+    field('Производитель', 'Manufacturer', text('Группа компаний СЕХА', 'SEHA Group of Companies')),
     field(
       'Страна происхождения',
       'Country of origin',
