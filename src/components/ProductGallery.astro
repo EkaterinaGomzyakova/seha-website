@@ -170,23 +170,6 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     outline: var(--focus-outline);
     outline-offset: 3px;
   }
-  @media (hover: hover) and (pointer: fine) {
-    .product-gallery__arrow {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .product-gallery__main:hover .product-gallery__arrow,
-    .product-gallery__main:focus-within .product-gallery__arrow {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-  @media (any-pointer: coarse) {
-    .product-gallery__arrow {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
   .product-gallery__count {
     position: absolute;
     bottom: 12px;
@@ -198,6 +181,49 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     color: var(--color-green-brand);
     font: 500 13px/1.5 var(--font-sans);
     font-variant-numeric: tabular-nums;
+  }
+  .product-gallery__arrow,
+  .product-gallery__count {
+    transition:
+      opacity 240ms ease,
+      transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .product-gallery__arrow,
+    .product-gallery__count {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .product-gallery__arrow {
+      transform: translateY(calc(-50% + 4px));
+    }
+    .product-gallery__count {
+      transform: translate(-50%, 4px);
+    }
+    .product-gallery__main:hover .product-gallery__arrow,
+    .product-gallery__main:focus-within .product-gallery__arrow {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(-50%);
+    }
+    .product-gallery__main:hover .product-gallery__count,
+    .product-gallery__main:focus-within .product-gallery__count {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  @media (any-pointer: coarse) {
+    .product-gallery__arrow,
+    .product-gallery__count {
+      opacity: 1;
+    }
+    .product-gallery__arrow {
+      pointer-events: auto;
+      transform: translateY(-50%);
+    }
+    .product-gallery__count {
+      transform: translate(-50%, 0);
+    }
   }
 
   .product-gallery__thumbnails {
