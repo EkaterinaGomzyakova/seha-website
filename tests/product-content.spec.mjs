@@ -47,6 +47,7 @@ for (const locale of ['ru', 'en']) {
     const control = page.locator('[data-quantity-control]');
     const gallery = page.locator('[data-product-gallery]');
     const thumbnails = gallery.locator('[data-gallery-thumbnail]');
+    if (!test.info().project.use.hasTouch) await gallery.locator('[data-gallery-main]').hover();
     await gallery.locator('[data-gallery-next]').click();
     await expect(thumbnails.nth(1)).toHaveAttribute('aria-pressed', 'true');
     await gallery.locator('[data-gallery-previous]').click();

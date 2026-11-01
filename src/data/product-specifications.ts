@@ -603,5 +603,13 @@ const productSpecifications: Record<string, readonly Specification[]> = {
 export function specificationsFor(product: ProductItem): Specification[] {
   const rows = productSpecifications[product.id];
   if (!rows) throw new Error(`Missing specifications for product: ${product.id}`);
-  return [...rows, field('Страна происхождения', 'Country of origin', text('Индия', 'India'))];
+  return [
+    field(
+      'Производитель',
+      'Manufacturer',
+      text('SEHA Group of Companies', 'SEHA Group of Companies')
+    ),
+    field('Страна происхождения', 'Country of origin', text('Индия', 'India')),
+    ...rows
+  ];
 }

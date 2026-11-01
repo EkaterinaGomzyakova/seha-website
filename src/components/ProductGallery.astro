@@ -170,6 +170,23 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     outline: var(--focus-outline);
     outline-offset: 3px;
   }
+  @media (hover: hover) and (pointer: fine) {
+    .product-gallery__arrow {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .product-gallery__main:hover .product-gallery__arrow,
+    .product-gallery__main:focus-within .product-gallery__arrow {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  @media (any-pointer: coarse) {
+    .product-gallery__arrow {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
   .product-gallery__count {
     position: absolute;
     bottom: 12px;
