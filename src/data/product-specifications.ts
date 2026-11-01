@@ -212,15 +212,6 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     impurities
   ],
   'coconut-chips': [
-    rawHusk,
-    field(
-      'Состав',
-      'Composition',
-      text(
-        '100% кокосовых чипсов — при поставке без других компонентов',
-        '100% coconut husk chips when supplied without other components'
-      )
-    ),
     field(
       'Внешний вид',
       'Appearance',
@@ -243,7 +234,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       )
     ),
     field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
-    field('Кислотность (pH)', 'pH', text('5,5–6,8', '5.5–6.8')),
+    field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,8', '5.5–6.8')),
     field(
       'EC (Электропроводность)',
       'EC (Electrical conductivity)',
