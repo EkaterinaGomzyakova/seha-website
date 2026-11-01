@@ -88,7 +88,7 @@ const mctSpecifications: Specification[] = [
 // EPL Group and Haycarb. Values are from the client's existing SEHA data only;
 // proposed values still require the client's final review. Missing values stay pending.
 const rawPith = field('Сырьё', 'Raw material', text('Кокосовый торф', 'Coconut coir pith'));
-const rawHusk = field('Сырьё', 'Raw material', text('Кокосовая шелуха', 'Coconut husk'));
+const rawHusk = field('Сырьё', 'Raw material', text('Волокнистая оболочка кокоса', 'Coconut husk'));
 const rawFibre = field('Материал', 'Material', text('Кокосовое волокно', 'Coconut coir fibre'));
 const moisture = field('Влажность', 'Moisture content');
 const ph = field('pH', 'pH', text('5,5–6,5', '5.5–6.5'));
@@ -228,10 +228,10 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ),
     field(
       'Размер чипсов (фракция)',
-      'Chip size',
+      'Chip sizes available',
       text(
-        '6–12 мм / 12–18 мм; другие размеры — по заказу',
-        '6–12 mm / 12–18 mm; other sizes to order'
+        'Мелкая 6–12 мм / Средняя 12–18 мм / По заказу',
+        'Fine 6–12 mm / Medium 12–18 mm / Custom'
       )
     ),
     field(
@@ -270,7 +270,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   ],
   'coco-husk-chips-bricks': [
     rawHusk,
-    field('Состав', 'Composition', text('Чипсы из кокосовой шелухи', 'Coconut husk chips')),
+    field(
+      'Состав',
+      'Composition',
+      text('Чипсы из волокнистой оболочки кокоса', 'Coconut husk chips')
+    ),
     field('Формат', 'Format', text('Прессованный брикет', 'Compressed brick')),
     field('Сухая масса', 'Dry weight', text('5 кг', '5 kg')),
     dimensions,
@@ -653,7 +657,13 @@ export function specificationsFor(product: ProductItem): Specification[] {
       'Manufacturer',
       text('SEHA Group of Companies', 'SEHA Group of Companies')
     ),
-    field('Страна происхождения', 'Country of origin', text('Индия', 'India')),
+    field(
+      'Страна происхождения',
+      'Country of origin',
+      product.id === 'coconut-chips'
+        ? text('Произведено в штате Тамилнад, Индия', 'Manufactured in Tamil Nadu, India')
+        : text('Индия', 'India')
+    ),
     ...rows
   ];
 }

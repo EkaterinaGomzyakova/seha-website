@@ -1,10 +1,6 @@
 ---
 import type { Locale } from '../data/translations';
-import {
-  applications,
-  productApplications,
-  productApplicationGuidance
-} from '../data/product-applications';
+import { applications, productApplications } from '../data/product-applications';
 import ApplicationIcon from './ApplicationIcon.astro';
 interface Props {
   productId: string;
@@ -12,7 +8,6 @@ interface Props {
 }
 const { productId, locale } = Astro.props;
 const items = productApplications[productId] || [];
-const guidance = productApplicationGuidance[productId] || [];
 ---
 
 {items.length > 0 && (
@@ -31,19 +26,6 @@ const guidance = productApplicationGuidance[productId] || [];
         );
       })}
     </ul>
-    {guidance.length > 0 && (
-      <div class="application-guidance">
-        <h3 class="type-h3">{locale === 'ru' ? 'Как использовать' : 'How to use'}</h3>
-        <dl>
-          {guidance.map((item) => (
-            <div>
-              <dt class="type-h3">{item.title[locale]}</dt>
-              <dd class="type-p">{item.description[locale]}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    )}
   </section>
 )}
 <style>
@@ -74,29 +56,7 @@ const guidance = productApplicationGuidance[productId] || [];
     margin: 0;
     overflow-wrap: anywhere;
   }
-  .application-guidance {
-    margin-top: 32px;
-  }
-  .application-guidance dl {
-    margin: 16px 0 0;
-  }
-  .application-guidance dl > div {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-    gap: 24px;
-    padding: 20px 0;
-    border-top: 1px solid var(--color-light-gray);
-  }
-  .application-guidance dt,
-  .application-guidance dd {
-    margin: 0;
-    overflow-wrap: anywhere;
-  }
   @media (max-width: 800px) {
-    .application-guidance dl > div {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 12px;
-    }
     ul {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;

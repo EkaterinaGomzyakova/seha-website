@@ -105,12 +105,6 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Chips improve drainage of excess water from the root zone.'
     ),
     benefit(
-      'Выбор фракции',
-      'Choice of chip size',
-      'Фракции 6–12 и 12–18 мм; другие размеры — по заказу.',
-      'Chip sizes of 6–12 and 12–18 mm; other sizes are available to order.'
-    ),
-    benefit(
       'Промытые чипсы',
       'Washed chips',
       'Промыты пресной водой. Доступен вариант с низким содержанием растворимых солей (EC).',
@@ -121,6 +115,18 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Moisture retention',
       'Удерживает 4–6 кг воды на 1 кг сухих чипсов.',
       'Holds 4–6 kg of water per kg of dry chips.'
+    ),
+    benefit(
+      'Самостоятельный субстрат',
+      'Standalone growing medium',
+      '100% чипсов — для орхидей, бромелиевых и других эпифитов, а также отдельных гидропонных систем.',
+      '100% chips for orchids, bromeliads and other epiphytes, as well as selected hydroponic systems.'
+    ),
+    benefit(
+      'Добавка в смесь',
+      'A component of growing mixes',
+      'Примерно 20–40% по объёму добавляют в кокосовый торф или грунт для улучшения аэрации и дренажа. Долю подбирают с учётом растения, размера чипсов и режима полива.',
+      'Approximately 20–40% by volume is added to coco pith or potting mixes to improve aeration and drainage. The proportion depends on the plant, chip size and irrigation regime.'
     )
   ],
   'coco-husk-chips-bricks': [

@@ -1,33 +1,4 @@
 import type { ApplicationIconName } from './application-icons';
-import type { LocalizedText } from './products';
-
-interface ApplicationGuidance {
-  title: LocalizedText;
-  description: LocalizedText;
-}
-
-export const productApplicationGuidance: Record<string, readonly ApplicationGuidance[]> = {
-  'coconut-chips': [
-    {
-      title: { ru: 'Самостоятельный субстрат — 100% чипсов', en: 'Standalone medium — 100% chips' },
-      description: {
-        ru: 'Для орхидей, бромелиевых и других эпифитов, а также отдельных гидропонных систем.',
-        en: 'For orchids, bromeliads and other epiphytes, as well as selected hydroponic systems.'
-      }
-    },
-    {
-      title: {
-        ru: 'Добавка в смесь — примерно 20–40% по объёму',
-        en: 'Blend component — approximately 20–40% by volume'
-      },
-      description: {
-        ru: 'Добавляют в кокосовый торф или грунт, чтобы улучшить доступ воздуха к корням и отвод лишней воды. Долю подбирают с учётом растения, размера чипсов и режима полива.',
-        en: 'Added to coco pith or potting mixes to improve aeration and drainage. The proportion depends on the plant, chip size and irrigation regime.'
-      }
-    }
-  ]
-};
-
 const application = (ru: string, en: string, icon: ApplicationIconName) => ({
   label: { ru, en },
   icon

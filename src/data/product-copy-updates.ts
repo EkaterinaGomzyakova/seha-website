@@ -6,7 +6,7 @@ interface ProductCopyUpdate {
 export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   'coconut-chips': {
     description: [
-      'Кусочки кокосовой шелухи, отсортированные по размеру. Помогают удерживать влагу, пропускают воздух к корням и отводят лишнюю воду. Используются как самостоятельный субстрат или в смеси с кокосовым торфом и грунтом — в теплицах, гидропонике и питомниках. Подходят для клубники и других ягодных культур, томатов, огурцов, орхидей и декоративных растений.',
+      'Кусочки волокнистой оболочки кокоса, отсортированные по размеру. Помогают удерживать влагу, пропускают воздух к корням и отводят лишнюю воду. Используются как самостоятельный субстрат или в смеси с кокосовым торфом и грунтом — в теплицах, гидропонике и питомниках. Подходят для клубники и других ягодных культур, томатов, огурцов, орхидей и декоративных растений.',
       'Graded coconut husk chips for root-zone aeration, drainage and moisture management. Suitable for standalone use or blending with coco pith in greenhouses, hydroponics and nurseries. Used for strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants.'
     ]
   },
@@ -96,7 +96,7 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   },
   'coir-fiber-bales': {
     description: [
-      'Волокно из кокосовой шелухи в тюках для производства канатов, шпагата, щёток, матов и противоэрозионных изделий. Длина волокна, размеры и масса тюка согласовываются при заказе.',
+      'Волокно из волокнистой оболочки кокоса в тюках для производства канатов, шпагата, щёток, матов и противоэрозионных изделий. Длина волокна, размеры и масса тюка согласовываются при заказе.',
       'Coconut husk fibre in bales for ropes, twine, brushes, mats and erosion-control products. Fibre length, bale dimensions and weight are agreed when ordering.'
     ]
   },
@@ -120,7 +120,7 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   },
   'machine-twisted-fiber': {
     description: [
-      'Механически скрученное волокно из кокосовой шелухи для производства канатов, шпагата, матов, сеток и противоэрозионных изделий. Диаметр, длина и степень скрутки — по спецификации заказчика.',
+      'Механически скрученное волокно из волокнистой оболочки кокоса для производства канатов, шпагата, матов, сеток и противоэрозионных изделий. Диаметр, длина и степень скрутки — по спецификации заказчика.',
       'Mechanically twisted coconut husk fibre for ropes, twine, mats, nets and erosion-control products. Diameter, length and twist level are specified to order.'
     ]
   }
