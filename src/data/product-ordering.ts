@@ -8,20 +8,23 @@ const units = {
   m2: { ru: 'м²', en: 'm²' }
 } as const;
 export function orderingFor(productId: string) {
-  const unit: QuantityUnit = productPackaging[productId]
-    ? 'packs'
-    : ['coir-weed-mat', 'coir-geo-textile'].includes(productId)
-      ? 'm2'
-      : [
-            'coco-peat',
-            'coconut-chips',
-            'coco-peat-compost',
-            'coir-fiber-bales',
-            'machine-twisted-fiber',
-            'coco-shell-charcoal-briquettes',
-            'coco-shell-activated-carbon'
-          ].includes(productId)
-        ? 'kg'
-        : 'pcs';
+  const unit: QuantityUnit =
+    productPackaging[productId]?.kind === 'weight'
+      ? 'pcs'
+      : productPackaging[productId]
+        ? 'packs'
+        : ['coir-weed-mat', 'coir-geo-textile'].includes(productId)
+          ? 'm2'
+          : [
+                'coco-peat',
+                'coconut-chips',
+                'coco-peat-compost',
+                'coir-fiber-bales',
+                'machine-twisted-fiber',
+                'coco-shell-charcoal-briquettes',
+                'coco-shell-activated-carbon'
+              ].includes(productId)
+            ? 'kg'
+            : 'pcs';
   return { unit, label: units[unit], fractional: unit === 'kg' || unit === 'm2' };
 }

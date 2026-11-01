@@ -13,7 +13,9 @@ export function initProductPackaging(root: ParentNode = document): void {
     const panels = [...selector.querySelectorAll<HTMLElement>('[data-packaging-panel]')];
     const remembered = new Map<string, string>();
     const update = () => {
-      const format = modes.find((input) => input.checked)?.value;
+      const format =
+        modes.find((input) => input.checked)?.value ||
+        sizes.find((input) => input.checked)?.dataset.supplyFormatValue;
       const options = sizes.filter((input) => input.dataset.supplyFormatValue === format);
       for (const panel of panels) panel.hidden = panel.dataset.packagingPanel !== format;
       for (const input of sizes) input.disabled = input.dataset.supplyFormatValue !== format;

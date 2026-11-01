@@ -196,7 +196,6 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'coco-peat-briquettes': [
     rawPith,
     field('Формат', 'Format', text('Прессованный брикет / блок', 'Compressed brick / block')),
-    field('Сухая масса', 'Dry weight', text('650 г / 5 кг', '650 g / 5 kg')),
     dimensions,
     expandedVolume,
     field('Фракция', 'Particle size'),

@@ -9,6 +9,8 @@ interface Props {
 }
 const { product, locale, formId } = Astro.props;
 const packaging = productPackaging[product.id];
+const weightOnly = packaging?.kind === 'weight';
+const formats = weightOnly ? (['industrial'] as const) : (['consumer', 'industrial'] as const);
 const initialFormat = packaging?.options.find(
   (option) => option.id === packaging.defaultId
 )?.format;
@@ -18,39 +20,51 @@ const context = formId || 'product-page';
 
 {packaging && (
   <div class="product-packaging" data-packaging-selector>
-    <fieldset class="product-packaging__formats">
-      <legend class="type-p">{ru ? 'Упаковка' : 'Packaging'}</legend>
-      <div class="product-packaging__format-options">
-        {(['consumer', 'industrial'] as const).map((format) => (
-          <label class="product-packaging__option">
-            <input
-              type="radio"
-              name={formId ? 'supplyFormat' : `supply-format-${product.id}`}
-              form={formId}
-              value={format}
-              checked={format === initialFormat}
-              data-supply-format
-              aria-describedby={`${context}-${product.id}-${format}-description`}
-            />
-            <span class="type-p">{packagingFormats[format].label[locale]}</span>
-          </label>
-        ))}
-      </div>
-    </fieldset>
-    {(['consumer', 'industrial'] as const).map((format) => {
+    {!weightOnly && (
+      <fieldset class="product-packaging__formats">
+        <legend class="type-p">{ru ? 'Упаковка' : 'Packaging'}</legend>
+        <div class="product-packaging__format-options">
+          {(['consumer', 'industrial'] as const).map((format) => (
+            <label class="product-packaging__option">
+              <input
+                type="radio"
+                name={formId ? 'supplyFormat' : `supply-format-${product.id}`}
+                form={formId}
+                value={format}
+                checked={format === initialFormat}
+                data-supply-format
+                aria-describedby={`${context}-${product.id}-${format}-description`}
+              />
+              <span class="type-p">{packagingFormats[format].label[locale]}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    )}
+    {formats.map((format) => {
       const options = packaging.options.filter((option) => option.format === format);
       const customOnly = options.length === 1 && options[0].id === 'industrial-custom';
       return (
         <div data-packaging-panel={format} hidden={format !== initialFormat}>
-          <p
-            class="product-packaging__description type-p"
-            id={`${context}-${product.id}-${format}-description`}
-          >
-            {packagingFormats[format].description[locale]}
-          </p>
+          {!weightOnly && (
+            <p
+              class="product-packaging__description type-p"
+              id={`${context}-${product.id}-${format}-description`}
+            >
+              {packagingFormats[format].description[locale]}
+            </p>
+          )}
           <fieldset>
             {!customOnly && (
-              <legend class="type-p">{ru ? 'Объём или вес упаковки' : 'Pack size'}</legend>
+              <legend class="type-p">
+                {weightOnly
+                  ? ru
+                    ? 'Масса брикета / блока'
+                    : 'Brick / block weight'
+                  : ru
+                    ? 'Объём или вес упаковки'
+                    : 'Pack size'}
+              </legend>
             )}
             <div class="product-packaging__options">
               {options.map((option) => (
@@ -64,7 +78,7 @@ const context = formId || 'product-page';
                     disabled={format !== initialFormat}
                     data-product-packaging
                     data-supply-format-value={format}
-                    data-packaging-label={`${packagingFormats[format].label[locale]} — ${option.label[locale]}`}
+                    data-packaging-label={`${weightOnly ? (ru ? 'Масса' : 'Weight') : packagingFormats[format].label[locale]} — ${option.label[locale]}`}
                     data-packaging-product-id={product.id}
                     data-packaging-product-name={product.name[locale]}
                   />

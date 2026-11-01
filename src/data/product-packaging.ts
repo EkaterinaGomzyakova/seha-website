@@ -25,6 +25,7 @@ export interface PackagingOption {
   label: LocalizedText;
 }
 interface ProductPackaging {
+  kind?: 'weight';
   defaultId: string;
   options: PackagingOption[];
 }
@@ -48,6 +49,11 @@ const custom: PackagingOption = {
 
 // Client brochure: do not infer bulk capacities for products without specified sizes.
 export const productPackaging: Partial<Record<string, ProductPackaging>> = {
+  'coco-peat-briquettes': {
+    kind: 'weight',
+    defaultId: 'industrial-650-g',
+    options: [size(650, 'g', 'industrial'), size(5, 'kg', 'industrial')]
+  },
   'veymur-mct-oil': {
     defaultId: 'consumer-500-ml',
     options: [
