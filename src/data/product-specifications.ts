@@ -92,10 +92,10 @@ const rawHusk = field('Сырьё', 'Raw material', text('Кокосовая ш�
 const rawFibre = field('Материал', 'Material', text('Кокосовое волокно', 'Coconut coir fibre'));
 const moisture = field('Влажность', 'Moisture content');
 const ph = field('pH', 'pH', text('5,5–6,5', '5.5–6.5'));
-const ec = field('Электропроводность (EC)', 'Electrical conductivity (EC)');
+const ec = field('EC (Электропроводность)', 'EC (Electrical conductivity)');
 const lowEc = field(
-  'Электропроводность (EC)',
-  'Electrical conductivity (EC)',
+  'EC (Электропроводность)',
+  'EC (Electrical conductivity)',
   text('< 0,5 мСм/см', '< 0.5 mS/cm')
 );
 const dryWeight = field('Сухая масса', 'Dry weight');
@@ -245,8 +245,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
     field('Кислотность (pH)', 'pH', text('5,5–6,8', '5.5–6.8')),
     field(
-      'Электропроводность (EC, засолённость)',
-      'Electrical conductivity (EC, salinity)',
+      'EC (Электропроводность)',
+      'EC (Electrical conductivity)',
       text(
         'Менее 0,5 мСм/см — для промытого варианта с низким EC; водная вытяжка 1:1,5',
         '< 0.5 mS/cm for the washed, low-EC grade; water extract 1:1.5'
