@@ -113,8 +113,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Промытые чипсы',
       'Washed chips',
-      'Доступна промытая марка с низкой электропроводностью (EC).',
-      'A washed, low-EC grade is available.'
+      'Доступна марка с низким EC, промытая пресной водой, без буферизации.',
+      'A fresh-water washed, low-EC grade is available without buffering.'
     ),
     benefit(
       'Удерживает влагу',

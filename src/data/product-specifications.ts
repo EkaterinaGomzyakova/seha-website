@@ -248,10 +248,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Обработка',
       'Processing',
       text(
-        'Промывка, просеивание и сортировка по фракциям — по заказу',
-        'Washed, screened and graded to order'
+        'Промывка пресной водой, просеивание и сортировка по фракциям — по заказу',
+        'Fresh-water washed, screened and graded to order'
       )
     ),
+    field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
     field(
       'Формат поставки',
       'Supply form',
