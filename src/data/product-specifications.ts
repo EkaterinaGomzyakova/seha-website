@@ -20,12 +20,12 @@ const mctSpecifications: Specification[] = [
   field('Вкус / аромат', 'Taste / odour', text('Без запаха и вкуса', 'Odourless and tasteless')),
   field('C8:0 — каприловая кислота', 'C8:0 — caprylic acid', text('55–65%', '55–65%')),
   field('C10:0 — каприновая кислота', 'C10:0 — capric acid', text('35–45%', '35–45%')),
-  field('C12:0 — лауриновая кислота', 'C12:0 — lauric acid', text('не более 1%', 'max. 1%')),
-  field('Кислотное число', 'Acid value', text('не более 0,2 мг/г', 'max. 0.2 mg/g')),
+  field('C12:0 — лауриновая кислота', 'C12:0 — lauric acid', text('≤ 1%', '≤ 1%')),
+  field('Кислотное число', 'Acid value', text('≤ 0,2 мг/г', '≤ 0.2 mg/g')),
   field('Число омыления', 'Saponification value', text('325–345 мг KOH/г', '325–345 mg KOH/g')),
-  field('Йодное число', 'Iodine value', text('не более 1 г I₂/100 г', 'max. 1 g I₂/100 g')),
-  field('Влажность', 'Moisture', text('не более 0,10%', 'max. 0.10%')),
-  field('Перекисное число', 'Peroxide value', text('не более 1 мэкв/кг', 'max. 1 meq/kg')),
+  field('Йодное число', 'Iodine value', text('≤ 1 г I₂/100 г', '≤ 1 g I₂/100 g')),
+  field('Влажность', 'Moisture', text('≤ 0,10%', '≤ 0.10%')),
+  field('Перекисное число', 'Peroxide value', text('≤ 1 мэкв/кг', '≤ 1 meq/kg')),
   field('Хлораты', 'Chlorates', text('< 0,1 мг/кг', '< 0.1 mg/kg')),
   field(
     'Показатель преломления n20/D',
@@ -40,14 +40,14 @@ const mctSpecifications: Specification[] = [
   field(
     'Общее количество аэробных микроорганизмов',
     'Total aerobic microorganism count',
-    text('не более 1000 КОЕ/г', 'max. 1000 CFU/g')
+    text('≤ 1000 КОЕ/г', '≤ 1000 CFU/g')
   ),
   field(
     'Бактерии группы кишечной палочки (Coliform)',
     'Coliform bacteria',
     text('< 10 КОЕ/г', '< 10 CFU/g')
   ),
-  field('Плесени и дрожжи', 'Moulds and yeasts', text('не более 100 КОЕ/г', 'max. 100 CFU/g')),
+  field('Плесени и дрожжи', 'Moulds and yeasts', text('≤ 100 КОЕ/г', '≤ 100 CFU/g')),
   field('E. coli', 'E. coli', text('< 10 КОЕ/г', '< 10 CFU/g')),
   field('Salmonella', 'Salmonella', text('не обнаружено в 25 г', 'not detected in 25 g')),
   field('Enterobacter', 'Enterobacter', text('< 10 КОЕ/г', '< 10 CFU/g')),
@@ -64,11 +64,11 @@ const mctSpecifications: Specification[] = [
   ),
   field('Афлатоксин B1', 'Aflatoxin B1', text('≤ 2,0 мкг/кг', '≤ 2.0 µg/kg')),
   field('Общие афлатоксины', 'Total aflatoxins', text('≤ 4,0 мкг/кг', '≤ 4.0 µg/kg')),
-  field('Мышьяк', 'Arsenic', text('не более 0,1 ppm', 'max. 0.1 ppm')),
-  field('Медь', 'Copper', text('не более 0,1 ppm', 'max. 0.1 ppm')),
-  field('Свинец', 'Lead', text('не более 0,1 ppm', 'max. 0.1 ppm')),
-  field('Никель', 'Nickel', text('не более 0,1 ppm', 'max. 0.1 ppm')),
-  field('Хром', 'Chromium', text('не более 0,05 ppm', 'max. 0.05 ppm')),
+  field('Мышьяк', 'Arsenic', text('≤ 0,1 ppm', '≤ 0.1 ppm')),
+  field('Медь', 'Copper', text('≤ 0,1 ppm', '≤ 0.1 ppm')),
+  field('Свинец', 'Lead', text('≤ 0,1 ppm', '≤ 0.1 ppm')),
+  field('Никель', 'Nickel', text('≤ 0,1 ppm', '≤ 0.1 ppm')),
+  field('Хром', 'Chromium', text('≤ 0,05 ppm', '≤ 0.05 ppm')),
   field(
     'Срок годности',
     'Shelf life',
@@ -248,7 +248,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'EC (Электропроводность)',
       'EC (Electrical conductivity)',
       text(
-        'Менее 0,5 мСм/см — для промытого варианта с низким EC; водная вытяжка 1:1,5',
+        '< 0,5 мСм/см — для промытого варианта с низким EC; водная вытяжка 1:1,5',
         '< 0.5 mS/cm for the washed, low-EC grade; water extract 1:1.5'
       )
     ),
