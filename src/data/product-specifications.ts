@@ -217,8 +217,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Состав',
       'Composition',
       text(
-        '100% чипсов из кокосовой шелухи — для чистых чипсов без смеси',
-        '100% coconut husk chips when supplied without a blend'
+        '100% кокосовых чипсов — при поставке без других компонентов',
+        '100% coconut husk chips when supplied without other components'
       )
     ),
     field(
@@ -227,46 +227,46 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Чипсы от коричневого до тёмно-коричневого цвета', 'Brown to dark-brown chips')
     ),
     field(
-      'Фракция',
+      'Размер чипсов (фракция)',
       'Chip size',
       text(
         '6–12 мм / 12–18 мм; другие размеры — по заказу',
         '6–12 mm / 12–18 mm; other sizes to order'
       )
     ),
-    field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
-    field(
-      'Электропроводность (EC)',
-      'Electrical conductivity (EC)',
-      text(
-        '< 0,5 мСм/см — для промытой марки с низким EC',
-        '< 0.5 mS/cm for the washed, low-EC grade'
-      )
-    ),
-    field('Влажность', 'Moisture content', text('Обычно 15–20%', 'Typically 15–20%')),
     field(
       'Обработка',
       'Processing',
       text(
-        'Промывка пресной водой, просеивание и сортировка по фракциям — по заказу',
-        'Fresh-water washed, screened and graded to order'
+        'Промывка пресной водой, просеивание и сортировка по размеру',
+        'Fresh-water washed, screened and graded'
       )
     ),
     field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
+    field('Кислотность (pH)', 'pH', text('5,5–6,8', '5.5–6.8')),
     field(
-      'Формат поставки',
-      'Supply form',
+      'Электропроводность (EC)',
+      'Electrical conductivity (EC)',
       text(
-        'Россыпью, прессованные блоки или упаковка по заказу',
-        'Loose chips, compressed blocks or custom packaging'
+        'Менее 0,5 мСм/см — для промытого варианта с низким EC; водная вытяжка 1:1,5',
+        '< 0.5 mS/cm for the washed, low-EC grade; water extract 1:1.5'
       )
     ),
+    field('Влажность', 'Moisture content', text('Обычно 15–20%', 'Typically 15–20%')),
     field(
       'Влагоудерживающая способность',
       'Water-holding capacity',
       text('4–6 кг воды на 1 кг сухих чипсов', '4–6 kg of water per kg of dry chips')
     ),
-    field('Воздухоёмкость (аэрация)', 'Air-filled porosity', text('30–45%', '30–45%'))
+    field('Воздухоёмкость', 'Air-filled porosity', text('30–45%', '30–45%')),
+    field(
+      'Формат поставки',
+      'Supply form',
+      text(
+        'Россыпью, в прессованных блоках или в упаковке по заказу',
+        'Loose chips, compressed blocks or custom packaging'
+      )
+    )
   ],
   'coco-husk-chips-bricks': [
     rawHusk,

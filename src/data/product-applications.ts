@@ -17,11 +17,11 @@ export const productApplicationGuidance: Record<string, readonly ApplicationGuid
     },
     {
       title: {
-        ru: 'Компонент смеси — ориентировочно 20–40%',
+        ru: 'Добавка в смесь — примерно 20–40%',
         en: 'Blend component — approximately 20–40%'
       },
       description: {
-        ru: 'Добавляют в кокосовый торф или почвогрунт для улучшения аэрации и дренажа. Долю подбирают под растение, фракцию чипсов и режим полива.',
+        ru: 'Добавляют в кокосовый торф или грунт, чтобы улучшить доступ воздуха к корням и отвод лишней воды. Долю подбирают с учётом растения, размера чипсов и режима полива.',
         en: 'Added to coco pith or potting mixes to improve aeration and drainage. The proportion depends on the plant, chip size and irrigation regime.'
       }
     }

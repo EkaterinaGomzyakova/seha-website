@@ -93,7 +93,7 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
   ],
   'coconut-chips': [
     benefit(
-      'Воздух у корней',
+      'Доступ воздуха к корням',
       'Root-zone aeration',
       'Крупные частицы помогают сохранять воздушные промежутки в субстрате.',
       'Coarse particles help maintain air spaces in the growing medium.'
@@ -113,8 +113,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Промытые чипсы',
       'Washed chips',
-      'Доступна марка с низким EC, промытая пресной водой, без буферизации.',
-      'A fresh-water washed, low-EC grade is available without buffering.'
+      'Промыты пресной водой. Доступен вариант с низким содержанием растворимых солей (EC).',
+      'Washed with fresh water. A low-EC grade with low soluble salt content is available.'
     ),
     benefit(
       'Удерживает влагу',
