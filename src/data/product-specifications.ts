@@ -209,15 +209,52 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   ],
   'coconut-chips': [
     rawHusk,
-    field('Состав', 'Composition', text('Чипсы из кокосовой шелухи', 'Coconut husk chips')),
-    field('Фракция', 'Chip size', text('6–12 мм / 12–18 мм', '6–12 mm / 12–18 mm')),
+    field(
+      'Состав',
+      'Composition',
+      text(
+        '100% чипсов из кокосовой шелухи — для чистых чипсов без смеси',
+        '100% coconut husk chips when supplied without a blend'
+      )
+    ),
+    field(
+      'Внешний вид',
+      'Appearance',
+      text('Чипсы от коричневого до тёмно-коричневого цвета', 'Brown to dark-brown chips')
+    ),
+    field(
+      'Фракция',
+      'Chip size',
+      text(
+        '6–12 мм / 12–18 мм; другие размеры — по заказу',
+        '6–12 mm / 12–18 mm; other sizes to order'
+      )
+    ),
     field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
-    lowEc,
-    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field(
+      'Электропроводность (EC)',
+      'Electrical conductivity (EC)',
+      text(
+        '< 0,5 мСм/см — для промытой марки с низким EC',
+        '< 0.5 mS/cm for the washed, low-EC grade'
+      )
+    ),
+    field('Влажность', 'Moisture content', text('Обычно 15–20%', 'Typically 15–20%')),
     field(
       'Обработка',
       'Processing',
-      text('Промывка, просеивание, сортировка по фракциям', 'Washed, screened and graded')
+      text(
+        'Промывка, просеивание и сортировка по фракциям — по заказу',
+        'Washed, screened and graded to order'
+      )
+    ),
+    field(
+      'Формат поставки',
+      'Supply form',
+      text(
+        'Россыпью, прессованные блоки или упаковка по заказу',
+        'Loose chips, compressed blocks or custom packaging'
+      )
     ),
     waterRetention,
     airPorosity,

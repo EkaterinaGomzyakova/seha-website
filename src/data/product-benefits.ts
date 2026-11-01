@@ -107,8 +107,14 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Выбор фракции',
       'Choice of chip size',
-      'Размер частиц подбирается для самостоятельного использования или смеси с торфом.',
-      'Particle size is selected for standalone use or blending with coco pith.'
+      'Фракции 6–12 и 12–18 мм; другие размеры — по заказу.',
+      'Chip sizes of 6–12 and 12–18 mm; other sizes are available to order.'
+    ),
+    benefit(
+      'Промытые чипсы',
+      'Washed chips',
+      'Доступна промытая марка с низкой электропроводностью (EC).',
+      'A washed, low-EC grade is available.'
     )
   ],
   'coco-husk-chips-bricks': [

@@ -4,6 +4,12 @@ interface ProductCopyUpdate {
   description: [ru: string, en: string];
 }
 export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
+  'coconut-chips': {
+    description: [
+      'Фракционированные чипсы из кокосовой шелухи для аэрации корневой зоны, дренажа и регулирования влажности. Используются самостоятельно или в смеси с кокосовым торфом в теплицах, гидропонике и питомниках. Подходят для клубники и других ягодных культур, томатов, огурцов, орхидей и декоративных растений.',
+      'Graded coconut husk chips for root-zone aeration, drainage and moisture management. Suitable for standalone use or blending with coco pith in greenhouses, hydroponics and nurseries. Used for strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants.'
+    ]
+  },
   'open-top-grow-bag': {
     description: [
       'Открытый гроубэг для выращивания голубики и малины: 60% кокосового торфа и 40% кокосовых чипсов. Промытый и просеянный субстрат с низкой электропроводностью сочетает влагоудержание, аэрацию и дренаж. Параметры pH для голубики и малины согласуются отдельно.',
