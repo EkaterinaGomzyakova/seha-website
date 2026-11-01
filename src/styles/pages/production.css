@@ -26,7 +26,6 @@
   overflow-wrap: anywhere;
 }
 .production-main p {
-  font: 500 16px/1.75 var(--font-sans);
   color: var(--color-dark-gray);
 }
 .production-main em {
@@ -83,8 +82,6 @@
 .production-hero p {
   max-width: 673px;
   color: var(--color-text-on-green);
-  font-size: 15px;
-  line-height: 1.55;
 }
 .production-main > .production-branches {
   width: min(1432px, var(--grid-content-width));
@@ -107,12 +104,11 @@
   flex-direction: column;
 }
 .branch-card > span {
-  font: 700 12px/1.25 var(--font-sans);
-  letter-spacing: 0.1em;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  letter-spacing: var(--type-button-letter-spacing);
   color: var(--color-dark-gray);
 }
 .branch-card h3 {
-  font: 900 37.6px/1.1 var(--font-sans);
   margin: 56px 0 40px;
   max-width: 500px;
 }
@@ -132,7 +128,7 @@
   border: 1px solid #afbaa4;
   border-radius: 999px;
   padding: 9px 13px;
-  font: 500 13.1px/1.2 var(--font-sans);
+  font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
 }
 .branch-card-food {
   background: var(--color-green-brand);
@@ -164,8 +160,6 @@
   margin-bottom: 32px;
 }
 .process-sticky h2 {
-  font: 900 clamp(52px, 3.66667vw, 70.4px)/1.04 var(--font-sans);
-  letter-spacing: -0.055em;
   margin-bottom: 32px;
 }
 .process-sticky h2 em {
@@ -189,7 +183,7 @@
   min-height: 333.86px;
 }
 .process-item > span {
-  font: 500 13.1px/1.25 var(--font-sans);
+  font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
   color: var(--color-dark-gray);
   padding-top: 7px;
 }
@@ -202,8 +196,6 @@
   align-items: start;
 }
 .process-item h3 {
-  font: 900 clamp(20px, 1.58333vw, 30.4px)/1.15 var(--font-sans);
-  letter-spacing: -0.02em;
   grid-column: 1;
 }
 .process-item p {
@@ -276,8 +268,8 @@
   right: 16px;
   bottom: 14px;
   color: var(--color-background-light);
-  font: 700 12.16px/1.25 var(--font-sans);
-  letter-spacing: 0.06em;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  letter-spacing: var(--type-button-letter-spacing);
   text-transform: uppercase;
 }
 .facility-showcase {
@@ -341,12 +333,10 @@
   padding-top: 18px;
 }
 .facility-units h3 {
-  font: 700 16.8px/1.2 var(--font-sans);
   margin-bottom: 8px;
   color: var(--color-yellow-brand);
 }
 .facility-units p {
-  font: 500 14.4px/1.55 var(--font-sans);
   color: var(--color-text-on-green);
 }
 .packing-band {
@@ -391,13 +381,12 @@
   align-items: end;
 }
 .packing-band__copy > span {
-  font: 700 12px/1.2 var(--font-sans);
-  letter-spacing: 0.09em;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  letter-spacing: var(--type-button-letter-spacing);
   color: var(--color-background-light);
 }
 .packing-band__copy p {
   color: var(--color-background-light);
-  font: 500 23.2px/1.45 var(--font-sans);
 }
 .production-main > .assurance-section {
   width: min(1600px, var(--grid-content-width));
@@ -422,11 +411,10 @@
   min-height: 237.39px;
 }
 .assurance-grid article > span {
-  font-size: 13px;
+  font-size: var(--type-p-size);
   color: var(--color-dark-gray);
 }
 .assurance-grid h3 {
-  font: 900 27px/1.2 var(--font-sans);
   margin: 35px 0 18px;
 }
 .production-main > .russia-section {
@@ -445,7 +433,6 @@
 .russia-copy h2 {
   margin-top: 15px;
   max-width: 625px;
-  line-height: 1.15;
 }
 .russia-points {
   min-width: 0;
@@ -467,7 +454,7 @@
   padding: 18px;
   border: 1px solid #c6d1b9;
   border-radius: 8px;
-  font: 500 15px/1.55 var(--font-sans);
+  font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
 }
 .cert-preview {
   display: grid;
@@ -493,7 +480,6 @@
 }
 .cert-copy p {
   color: var(--color-green-brand);
-  font: 500 15px/1.55 var(--font-sans);
   margin-bottom: 26px;
 }
 .production-quality-action {
@@ -524,19 +510,13 @@
   }
   .production-hero p {
     max-width: 560px;
-    font-size: 14px;
   }
   .branch-card {
     padding: 28px;
     min-height: 400px;
   }
   .branch-card h3 {
-    font-size: 28px;
     margin: 32px 0 24px;
-  }
-  .production-main p {
-    font-size: 14px;
-    line-height: 1.55;
   }
   .process-section {
     grid-template-columns: minmax(0, 1fr);
@@ -546,7 +526,6 @@
     position: static;
   }
   .process-sticky h2 {
-    font-size: 52px;
     max-width: 600px;
   }
   .process-sticky h2 em {
@@ -554,9 +533,6 @@
   }
   .process-item > div {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
-  .process-item h3 {
-    font-size: 25px;
   }
   .facility-image {
     min-height: 760px;
@@ -570,17 +546,8 @@
   .facility-units {
     margin-top: 40px;
   }
-  .facility-units h3 {
-    font-size: 14px;
-  }
-  .facility-units p {
-    font-size: 14px;
-  }
   .packing-band {
     min-height: 460px;
-  }
-  .packing-band__copy p {
-    font-size: 20px;
   }
   .production-section-heading {
     gap: 32px;
@@ -591,7 +558,6 @@
     margin-top: 56px;
   }
   .assurance-grid h3 {
-    font-size: 20px;
     margin-top: 24px;
   }
   .russia-section {
@@ -638,7 +604,6 @@
     padding: 32px;
   }
   .branch-card h3 {
-    font-size: var(--type-h3-size);
     max-width: none;
   }
   .branch-card p {
@@ -669,9 +634,6 @@
     width: 100%;
     height: 280px;
   }
-  .process-item h3 {
-    font-size: var(--type-h3-size);
-  }
   .facility-showcase {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -701,7 +663,6 @@
   }
   .packing-band__copy p {
     max-width: 520px;
-    font-size: 20px;
   }
   .packing-band__photo {
     inset: 0;
@@ -758,12 +719,7 @@
     margin: 24px 0 20px;
   }
   .branch-card li {
-    font-size: 12px;
-  }
-  .process-sticky h2 {
-    font-size: 32px;
-    line-height: 1;
-    letter-spacing: -0.04em;
+    font-size: var(--type-p-size);
   }
   .process-item {
     grid-template-columns: minmax(0, 1fr);
@@ -781,7 +737,7 @@
     left: 12px;
     right: 12px;
     bottom: 12px;
-    font-size: 11px;
+    font-size: var(--type-button-size);
   }
   .facility-image {
     height: 300px;
@@ -801,10 +757,7 @@
     padding: 24px;
   }
   .packing-band__copy > span {
-    font-size: 11px;
-  }
-  .production-main .packing-band__copy p {
-    font-size: 16px;
+    font-size: var(--type-button-size);
   }
   .assurance-grid article {
     padding: 24px;
@@ -814,7 +767,7 @@
   }
   .russia-list li {
     min-height: 72px;
-    font-size: 14px;
+    font-size: var(--type-p-size);
   }
   .production-main > .cert-preview {
     padding: 32px 24px;

@@ -1,5 +1,6 @@
 ---
-import { products, type ProductItem } from '../../../../data/products';
+import { products, productCategories, type ProductItem } from '../../../../data/products';
+import Breadcrumbs from '../../../../components/Breadcrumbs.astro';
 import type { Locale } from '../../../../data/translations';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
 import ProductGallery from '../../../../components/ProductGallery.astro';
@@ -29,6 +30,7 @@ const { locale, item } = Astro.props;
 const ru = locale === 'ru';
 const inquiryCopy = productInquiryCopy[locale];
 const path = `/products/${item.category}/${item.slug}/`;
+const category = productCategories.find((category) => category.slug === item.category)!;
 ---
 
 <SiteLayout
@@ -41,10 +43,16 @@ const path = `/products/${item.category}/${item.slug}/`;
   inquiryProducts={[item]}
   skipText={ru ? 'К продукту' : 'To product'}
 >
+  <Breadcrumbs
+    locale={locale}
+    items={[
+      { label: ru ? 'Главная' : 'Home', href: localizedPath('/', locale) },
+      { label: ru ? 'Продукты' : 'Products', href: localizedPath('/products/', locale) },
+      { label: category.title[locale], href: localizedPath(`/products/${item.category}/`, locale) },
+      { label: item.name[locale] }
+    ]}
+  />
   <main id="main-content" tabindex="-1" class="product-detail">
-    <a href={localizedPath(`/products/${item.category}/`, locale)}>
-      {ru ? 'Назад к категории' : 'Back to category'}
-    </a>
     <section class="product-detail__overview" aria-labelledby="product-name">
       <ProductGallery
         images={[item.image, item.image, item.image, item.image]}
@@ -93,7 +101,7 @@ const path = `/products/${item.category}/${item.slug}/`;
 <style>
   .product-detail {
     width: var(--grid-content-width);
-    margin: 32px auto 80px;
+    margin: 0 auto 80px;
     display: grid;
     gap: 48px;
     color: var(--color-green-brand);
@@ -103,6 +111,10 @@ const path = `/products/${item.category}/${item.slug}/`;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     align-items: start;
+  }
+  .product-detail > :global(section) {
+    width: 100%;
+    margin-inline: 0;
   }
   .product-detail__overview > div {
     display: grid;

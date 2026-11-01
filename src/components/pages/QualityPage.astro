@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import HeaderContainer from '../ui/HeaderContainer.astro';
@@ -65,11 +66,10 @@ const photoSizes =
   skipHref="#main-content"
   image="/assets/images/quality/quality-hero.png"
 >
-  <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
-    <a href={href('/')}>{copy.pageLink}</a>
-    <span aria-hidden="true">/</span>
-    <span aria-current="page">{copy.pageLabel}</span>
-  </nav>
+  <Breadcrumbs
+    locale={locale}
+    items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
+  />
   <main id="main-content" class="quality-main">
     <section class="quality-hero" aria-labelledby="quality-title">
       <div class="quality-hero-copy">
@@ -104,7 +104,7 @@ const photoSizes =
       aria-labelledby="standards-title"
     >
       <div class="quality-section-heading">
-        <h2 id="standards-title" class="quality-display-title">
+        <h2 id="standards-title" class="quality-display-title type-h2">
           {copy.qualityMapHeading}
           <br />
           <span>{copy.qualityMapLabel3}</span>
@@ -117,7 +117,7 @@ const photoSizes =
             class:list={['standard-card', standard.kind === 'food' && 'standard-card--dark']}
           >
             <span class="type-button">{standard.label}</span>
-            <h3>{standard.title}</h3>
+            <h3 class="type-h3">{standard.title}</h3>
             <p class="type-p">{standard.text}</p>
             <div class="standard-card__credentials">
               <b>{standard.summary}</b>
@@ -155,8 +155,8 @@ const photoSizes =
           {checks.map(([title, text], index) => (
             <article>
               <span>{String(index + 1).padStart(2, '0')}</span>
-              <h3>{title}</h3>
-              <p>{text}</p>
+              <h3 class="type-h3">{title}</h3>
+              <p class="type-p">{text}</p>
             </article>
           ))}
         </div>
@@ -195,7 +195,7 @@ const photoSizes =
         </h2>
       </div>
       <div class="quality-role-copy">
-        <p>{copy.siteRoleText}</p>
+        <p class="type-p">{copy.siteRoleText}</p>
         <Button variant="primary" class="quality-outline-button" href="#contacts">
           {copy.siteRoleLink}
         </Button>

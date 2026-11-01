@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from './Breadcrumbs.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Button from './ui/Button.astro';
 import {
@@ -55,13 +56,17 @@ const sizes =
   bodyClass={`page-product-category ${page.bodyClass}`}
   skipText={locale === 'en' ? 'To products' : 'К продуктам'}
 >
-  <nav class="breadcrumbs" aria-label={locale === 'en' ? 'Breadcrumbs' : 'Хлебные крошки'}>
-    <a href={localizedPath('/', locale)}>{locale === 'en' ? 'Home' : 'Главная'}</a>
-    <span aria-hidden="true"> / </span>
-    <a href={localizedPath('/products', locale)}>{locale === 'en' ? 'Products' : 'Продукты'}</a>
-    <span aria-hidden="true"> / </span>
-    <span aria-current="page">{t(page.breadcrumb)}</span>
-  </nav>
+  <Breadcrumbs
+    locale={locale}
+    items={[
+      { label: locale === 'ru' ? 'Главная' : 'Home', href: localizedPath('/', locale) },
+      {
+        label: locale === 'ru' ? 'Продукты' : 'Products',
+        href: localizedPath('/products/', locale)
+      },
+      { label: t(page.breadcrumb) }
+    ]}
+  />
   <main id="main-content" tabindex="-1">
     <section class="product-hero" aria-labelledby="product-title">
       <div class="product-hero-icon">

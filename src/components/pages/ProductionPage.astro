@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
@@ -94,11 +95,10 @@ const assurance = [
   skipText={copy.skipText}
   skipHref="#process"
 >
-  <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
-    <a href={href('/')}>{copy.pageLink}</a>
-    <span aria-hidden="true">/</span>
-    <span aria-current="page">{copy.pageLabel}</span>
-  </nav>
+  <Breadcrumbs
+    locale={locale}
+    items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
+  />
   <main class="production-main">
     <section class="production-hero" aria-labelledby="production-title">
       <ResponsiveImage
@@ -128,8 +128,8 @@ const assurance = [
       <div class="branch-grid">
         <article class="branch-card">
           <span>{copy.productionSubstratesLabel}</span>
-          <h3>{copy.productionBranchesCardTitle}</h3>
-          <p>{text(copy.productionBranchesText2)}</p>
+          <h3 class="type-h3">{copy.productionBranchesCardTitle}</h3>
+          <p class="type-p">{text(copy.productionBranchesText2)}</p>
           <ul>
             {[
               copy.productionBranchesItem,
@@ -142,8 +142,8 @@ const assurance = [
         </article>
         <article class="branch-card branch-card-food">
           <span>{copy.productionFoodLabel}</span>
-          <h3>{copy.productionBranchesCardTitle2}</h3>
-          <p>{text(copy.productionBranchesText3)}</p>
+          <h3 class="type-h3">{copy.productionBranchesCardTitle2}</h3>
+          <p class="type-p">{text(copy.productionBranchesText3)}</p>
           <ul>
             {[
               copy.productionBranchesItem4,
@@ -159,22 +159,22 @@ const assurance = [
     <section class="process-section" id="process" aria-labelledby="process-title">
       <div class="process-sticky">
         <HeaderContainer tone="green">{copy.processSectionLabel}</HeaderContainer>
-        <h2 id="process-title">
+        <h2 class="type-h2" id="process-title">
           {copy.processSectionHeading}
           <br />
           {copy.processSectionLine}
           <br />
           <em>{copy.processSectionEmphasis}</em>
         </h2>
-        <p>{text(copy.processSectionText)}</p>
+        <p class="type-p">{text(copy.processSectionText)}</p>
       </div>
       <div class="process-list">
         {steps.map((step, index) => (
           <article class="process-item">
             <span>{String(index + 1).padStart(2, '0')}</span>
             <div>
-              <h3>{step.title}</h3>
-              <p>{text(step.description)}</p>
+              <h3 class="type-h3">{step.title}</h3>
+              <p class="type-p">{text(step.description)}</p>
               <figure class:list={['process-media', 'process-media--' + (index + 1)]}>
                 <ResponsiveImage
                   src={image(step.base)}
@@ -221,12 +221,12 @@ const assurance = [
           <br />
           <span>{copy.facilityShowcaseLabel2}</span>
         </h2>
-        <p>{text(copy.facilityShowcaseText)}</p>
+        <p class="type-p">{text(copy.facilityShowcaseText)}</p>
         <div class="facility-units">
           {units.map((unit) => (
             <div>
-              <h3>{unit.title}</h3>
-              <p>{text(unit.description)}</p>
+              <h3 class="type-h3">{unit.title}</h3>
+              <p class="type-p">{text(unit.description)}</p>
             </div>
           ))}
         </div>
@@ -249,7 +249,7 @@ const assurance = [
       />
       <div class="packing-band__copy">
         <span>{copy.packingBandLabel}</span>
-        <p>{text(copy.packingBandText)}</p>
+        <p class="type-p">{text(copy.packingBandText)}</p>
       </div>
     </section>
     <section class="assurance-section" aria-labelledby="assurance-title">
@@ -259,14 +259,14 @@ const assurance = [
           <br />
           <span>{copy.assuranceSectionLabel3}</span>
         </h2>
-        <p>{text(copy.assuranceSectionText)}</p>
+        <p class="type-p">{text(copy.assuranceSectionText)}</p>
       </div>
       <div class="assurance-grid">
         {assurance.map((item, index) => (
           <article>
             <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{item.title}</h3>
-            <p>{text(item.description)}</p>
+            <h3 class="type-h3">{item.title}</h3>
+            <p class="type-p">{text(item.description)}</p>
           </article>
         ))}
       </div>

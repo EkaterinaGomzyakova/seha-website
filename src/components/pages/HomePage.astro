@@ -137,7 +137,7 @@ const supply = [
             {copy.homeHeroLine2}
           </em>
         </h1>
-        <p>{text(copy.homeHeroText + ' ' + copy.homeHeroLine3)}</p>
+        <p class="type-p">{text(copy.homeHeroText + ' ' + copy.homeHeroLine3)}</p>
         <Button variant="secondary" href={href('/products/')}>
           {copy.homeHeroLink}
         </Button>
@@ -185,7 +185,7 @@ const supply = [
               </span>
             </div>
             <div class="product-direction-copy">
-              <h3>{category.title}</h3>
+              <h3 class="type-h3">{category.title}</h3>
               <p class="type-p">{text(category.description)}</p>
             </div>
           </a>
@@ -246,8 +246,8 @@ const supply = [
                 loading="lazy"
               />
             </div>
-            <h3>{industry.title}</h3>
-            <p>{text(industry.description)}</p>
+            <h3 class="type-h3">{industry.title}</h3>
+            <p class="type-p">{text(industry.description)}</p>
           </article>
         ))}
       </div>
@@ -295,7 +295,7 @@ const supply = [
           <br />
           <span>{copy.originSectionLabel3}</span>
         </h2>
-        <p class="origin-intro">{text(copy.originSectionText)}</p>
+        <p class="origin-intro type-p">{text(copy.originSectionText)}</p>
         {originSteps.map((step, index) => (
           <div class="origin-step">
             <span>{String(index + 1).padStart(2, '0')}</span>
@@ -325,7 +325,7 @@ const supply = [
           <br />
           <span>{copy.supplySectionLabel2}</span>
         </h2>
-        <p>
+        <p class="type-p">
           {text(
             copy.supplySectionText + ' ' + copy.supplySectionLine + ' ' + copy.supplySectionLine2
           )}
@@ -336,7 +336,7 @@ const supply = [
           <li>
             <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             <h3 class="type-h3">{step.title}</h3>
-            <p>{text(step.description)}</p>
+            <p class="type-p">{text(step.description)}</p>
           </li>
         ))}
       </ol>

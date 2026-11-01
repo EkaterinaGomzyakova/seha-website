@@ -47,15 +47,11 @@
   gap: 22px;
 }
 .product-direction-copy h3 {
-  font-size: 26px;
-  letter-spacing: -1px;
   margin: 0;
   max-width: 240px;
 }
 .product-direction-copy p {
-  font-size: 14px;
   color: var(--color-dark-gray);
-  line-height: 1.65;
   margin: 0;
   max-width: 270px;
 }
@@ -77,9 +73,6 @@
 @media (max-width: 800px) {
   .product-direction-grid {
     gap: 32px 20px;
-  }
-  .product-direction-copy h3 {
-    font-size: 24px;
   }
   .material-photo {
     height: 245px;
@@ -104,11 +97,9 @@
     gap: 16px;
   }
   .product-direction-copy h3 {
-    font-size: 23px;
     max-width: 160px;
   }
   .product-direction-copy p {
-    font-size: 13px;
     margin: 0;
     max-width: 165px;
   }

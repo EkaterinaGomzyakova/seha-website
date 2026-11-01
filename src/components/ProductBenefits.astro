@@ -35,7 +35,7 @@ const items = productBenefits[productId] ?? [];
             />
           </svg>
           <div>
-            <h3>{item.title[locale]}</h3>
+            <h3 class="type-h3">{item.title[locale]}</h3>
             <p class="type-p">{item.description[locale]}</p>
           </div>
         </li>
@@ -66,7 +66,6 @@ const items = productBenefits[productId] ?? [];
   }
   h3 {
     margin: 0;
-    font: 700 18px/1.35 var(--font-sans);
     overflow-wrap: break-word;
   }
   p {
@@ -77,11 +76,6 @@ const items = productBenefits[productId] ?? [];
     ul {
       grid-template-columns: minmax(0, 1fr);
       gap: 20px;
-    }
-  }
-  @media (max-width: 440px) {
-    h3 {
-      font-size: 16px;
     }
   }
 </style>

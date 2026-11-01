@@ -60,8 +60,6 @@
 }
 .quality-hero-copy p {
   color: var(--color-text-on-green);
-  font-size: 15px;
-  line-height: 1.55;
 }
 .quality-hero-card {
   position: relative;
@@ -94,12 +92,6 @@
   gap: 48px;
   align-items: end;
 }
-.quality-section-heading > p {
-  line-height: 1.75;
-}
-.quality-standards .quality-section-heading > p {
-  font-size: 16px;
-}
 .quality-standards .quality-section-heading {
   display: flex;
   flex-wrap: wrap;
@@ -110,11 +102,6 @@
 .quality-standards .quality-section-heading > p {
   flex: 1 1 300px;
   max-width: 410px;
-}
-.quality-display-title {
-  font: 900 var(--type-h1-size)/1.04 var(--font-sans);
-  font-size: var(--type-h1-size);
-  letter-spacing: -0.055em;
 }
 .standards-grid {
   display: grid;
@@ -142,8 +129,6 @@
   color: var(--color-text-on-green);
 }
 .standard-card h3 {
-  font: 900 34.4px/1.1 var(--font-sans);
-  font-size: 34.4px;
   max-width: 340px;
   margin: 48px 0 18px;
 }
@@ -156,9 +141,9 @@
   width: 100%;
 }
 .standard-card__credentials > b {
-  font: 700 13.1px/1.3 var(--font-sans);
-  font-size: 13.1px;
-  letter-spacing: 0.9px;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  font-size: var(--type-button-size);
+  letter-spacing: var(--type-button-letter-spacing);
 }
 .standard-card--dark p {
   color: var(--color-text-on-green);
@@ -217,18 +202,16 @@
   min-height: 143px;
 }
 .quality-proof-list article > span {
-  font-size: 12.5px;
+  font-size: var(--type-p-size);
   padding-top: 6px;
   color: var(--color-dark-gray);
 }
 .quality-proof-list h3 {
   align-self: start;
-  font: 900 21.1px/1.2 var(--font-sans);
 }
 .quality-proof-list p {
   grid-column: 2;
   max-width: 572px;
-  font: 500 15.4px/1.65 var(--font-sans);
 }
 .quality-documents .quality-section-heading {
   min-height: 150px;
@@ -272,9 +255,6 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
-}
-.quality-role-copy p {
-  font: 500 17.3px/1.75 var(--font-sans);
 }
 .quality-role-copy .button {
   max-width: 425px;
@@ -350,15 +330,9 @@
   .quality-hero-card {
     min-height: 460px;
   }
-  .quality-hero-copy p {
-    font-size: 14px;
-  }
   .quality-section-heading {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
     gap: 32px;
-  }
-  .quality-display-title {
-    font-size: var(--type-h1-size);
   }
   .standards-grid {
     gap: 16px;
@@ -368,7 +342,6 @@
     padding: 24px;
   }
   .standard-card h3 {
-    font-size: 26px;
     margin-top: 32px;
   }
   .quality-proof-copy {
@@ -383,12 +356,6 @@
     grid-template-rows: auto auto;
     column-gap: 12px;
   }
-  .quality-proof-list h3 {
-    font-size: 20px;
-  }
-  .quality-proof-list p {
-    font-size: 14px;
-  }
   .quality-document-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px 24px;
@@ -400,9 +367,6 @@
   .quality-role {
     gap: 32px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .quality-role-copy p {
-    font-size: 14px;
   }
   .quality-cta {
     padding: 56px 40px;
@@ -505,14 +469,10 @@
     height: 280px;
     border-radius: 18px;
   }
-  .quality-display-title {
-    font-size: var(--type-mobile-h1-size);
-  }
   .standard-card {
     padding: 24px;
   }
   .standard-card h3 {
-    font-size: 25px;
     margin-top: 28px;
   }
   .quality-proof-image {

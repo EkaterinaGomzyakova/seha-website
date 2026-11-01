@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Link from '../ui/Link.astro';
 import Tag from '../ui/Tag.astro';
@@ -26,11 +27,10 @@ const emailHref = withBase(`mailto:${siteContact.email}`);
   skipText={copy.skipText}
   skipHref={withBase('#privacy-content')}
 >
-  <nav class="breadcrumbs" aria-label={copy.breadcrumbs}>
-    <Link href={homeHref}>{copy.home}</Link>
-    <span aria-hidden="true">/</span>
-    <span aria-current="page">{copy.heading}</span>
-  </nav>
+  <Breadcrumbs
+    locale={locale}
+    items={[{ label: copy.home, href: homeHref }, { label: copy.heading }]}
+  />
   <main id="privacy-content">
     <section class="privacy-hero" aria-labelledby="privacy-title">
       <div class="privacy-hero-copy">
@@ -72,7 +72,7 @@ const emailHref = withBase(`mailto:${siteContact.email}`);
             <p class="type-p">{section.lead}</p>
             <ul>
               {section.items.map((item) => (
-                <li>{item}</li>
+                <li class="type-p">{item}</li>
               ))}
             </ul>
           </article>
@@ -88,7 +88,7 @@ const emailHref = withBase(`mailto:${siteContact.email}`);
           <p class="type-p">{copy.sharing.lead}</p>
           <ul>
             {copy.sharing.items.map((item) => (
-              <li>{item}</li>
+              <li class="type-p">{item}</li>
             ))}
           </ul>
         </article>

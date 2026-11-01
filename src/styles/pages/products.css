@@ -80,7 +80,7 @@
 }
 .product-category-number {
   font: 900 var(--type-h3-size)/var(--type-h3-line-height) var(--font-sans);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--type-h3-letter-spacing);
 }
 .product-category-title {
   min-width: 0;
@@ -89,8 +89,8 @@
   display: block;
   margin-bottom: 12px;
   color: var(--color-dark-gray);
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.09em;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  letter-spacing: var(--type-button-letter-spacing);
   text-transform: uppercase;
 }
 .product-category h2 {

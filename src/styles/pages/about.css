@@ -69,8 +69,6 @@
 .about-hero p {
   max-width: 673px;
   color: var(--color-text-on-green);
-  font-size: 15px;
-  line-height: 1.55;
 }
 .about-intro {
   padding: 50px 68px;
@@ -106,14 +104,9 @@
   z-index: 1;
   inset: auto 28px 26px;
   color: var(--color-background-light);
-  font: 500 14.4px/1.55 var(--font-sans);
-}
-.about-display-title {
-  font: 900 69.6px/1.04 var(--font-sans);
-  letter-spacing: -0.055em;
+  font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
 }
 .about-intro-copy p {
-  font: 500 16.8px/1.78 var(--font-sans);
   max-width: 690px;
   margin-top: 28px;
 }
@@ -134,14 +127,12 @@
 }
 .about-numbers b {
   display: block;
-  font: 900 48px/0.9 var(--font-sans);
-  letter-spacing: -0.04em;
+  font: 900 var(--type-h2-size)/var(--type-h2-line-height) var(--font-sans);
+  letter-spacing: var(--type-h2-letter-spacing);
   margin: 8px 0 20.8px;
 }
 .about-numbers p {
   white-space: pre-line;
-  font: 700 13.1px/1.55 var(--font-sans);
-  letter-spacing: 1.181px;
   text-transform: uppercase;
   color: var(--color-green-brand);
 }
@@ -169,11 +160,10 @@
   color: var(--color-background-light);
 }
 .about-principle > span {
-  font-size: 13.1px;
+  font-size: var(--type-p-size);
   color: var(--color-dark-gray);
 }
 .about-principle h3 {
-  font: 900 34.4px/1.1 var(--font-sans);
   align-self: end;
   margin: 0;
 }
@@ -182,7 +172,6 @@
 }
 .about-principle p {
   align-self: end;
-  font: 500 16px/1.72 var(--font-sans);
 }
 .about-principle--dark > span,
 .about-principle--dark p {
@@ -216,7 +205,6 @@
   color: var(--color-yellow-brand);
 }
 .about-shift-copy p {
-  font: 500 16.8px/1.78 var(--font-sans);
   color: var(--color-text-on-green);
   max-width: 585px;
 }
@@ -253,15 +241,11 @@
   align-items: start;
 }
 .about-timeline-grid article > span {
-  font: 700 14.4px/1.3 var(--font-sans);
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
   color: var(--color-dark-gray);
 }
 .about-timeline-grid h3 {
-  font: 900 26.4px/1.15 var(--font-sans);
   margin: 86px 0 36px;
-}
-.about-timeline-grid p {
-  font: 500 15.7px/1.7 var(--font-sans);
 }
 .about-clients {
   display: grid;
@@ -291,7 +275,7 @@
   min-height: 47px;
   padding: 12px 17px;
   color: var(--color-dark-gray);
-  font-size: 15.2px;
+  font-size: var(--type-p-size);
   white-space: normal;
   overflow-wrap: anywhere;
 }
@@ -366,9 +350,6 @@
     padding: 64px 40px 40px;
     min-height: 460px;
   }
-  .about-hero p {
-    font-size: 14px;
-  }
   .about-intro {
     padding: 24px 0;
     gap: 40px;
@@ -376,23 +357,14 @@
   .about-photo {
     min-height: 560px;
   }
-  .about-display-title {
-    font-size: var(--type-h1-size);
-  }
-  .about-intro-copy p {
-    font-size: 14px;
-  }
   .about-numbers {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 40px;
     gap: 32px 24px;
   }
   .about-numbers b {
-    font-size: 36px;
+    font-size: var(--type-h2-size);
     margin-bottom: 24px;
-  }
-  .about-numbers p {
-    font-size: 12px;
   }
   .about-approach {
     padding-top: 24px;
@@ -404,21 +376,12 @@
   .about-principle {
     padding: 24px;
   }
-  .about-principle h3 {
-    font-size: 28px;
-  }
-  .about-principle p {
-    font-size: 14px;
-  }
   .about-shift-copy {
     padding: 64px 32px;
     min-height: 600px;
   }
   .about-shift-copy h2 {
     margin: 40px 0 32px;
-  }
-  .about-shift-copy p {
-    font-size: 14px;
   }
   .about-shift-image {
     min-height: 600px;
@@ -435,17 +398,13 @@
     min-height: 280px;
   }
   .about-timeline-grid h3 {
-    font-size: 23px;
     margin: 56px 0 24px;
-  }
-  .about-timeline-grid p {
-    font-size: 14px;
   }
   .about-clients {
     gap: 40px;
   }
   .about-client-tag {
-    font-size: 14px;
+    font-size: var(--type-p-size);
   }
   .about-cta {
     padding: 56px 40px;
@@ -529,10 +488,7 @@
   }
   .about-photo figcaption {
     inset: auto 20px 20px;
-    font-size: 12px;
-  }
-  .about-display-title {
-    font-size: var(--type-mobile-h1-size);
+    font-size: var(--type-p-size);
   }
   .about-numbers {
     grid-template-columns: minmax(0, 1fr);
@@ -540,7 +496,7 @@
     gap: 28px;
   }
   .about-numbers b {
-    font-size: 36px;
+    font-size: var(--type-h2-size);
     margin-bottom: 20px;
   }
   .about-approach {
@@ -551,7 +507,6 @@
     padding: 24px;
   }
   .about-principle h3 {
-    font-size: 25px;
     padding-top: 40px;
     margin-bottom: 20px;
   }
@@ -576,7 +531,6 @@
     padding-top: 20px;
   }
   .about-timeline-grid h3 {
-    font-size: 20px;
     margin: 32px 0 20px;
   }
   .about-clients h2,
@@ -584,7 +538,7 @@
     margin-top: 24px;
   }
   .about-client-tag {
-    font-size: 14px;
+    font-size: var(--type-p-size);
     padding-inline: 14px;
   }
   .about-cta {

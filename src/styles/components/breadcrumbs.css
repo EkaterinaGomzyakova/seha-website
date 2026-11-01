@@ -8,10 +8,10 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-sans);
-  font-size: 11px;
-  line-height: 1.2;
+  font-size: var(--type-button-size);
+  line-height: var(--type-button-line-height);
   font-weight: 700;
-  letter-spacing: 0.99px;
+  letter-spacing: var(--type-button-letter-spacing);
   text-transform: uppercase;
   color: var(--color-dark-gray);
 }
@@ -27,7 +27,6 @@
 }
 @media (max-width: 800px) {
   .breadcrumbs {
-    font-size: 10px;
     gap: 6px;
     overflow: auto;
     white-space: nowrap;

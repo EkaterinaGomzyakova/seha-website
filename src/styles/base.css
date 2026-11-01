@@ -32,6 +32,9 @@ html {
 
 body {
   font-weight: 500;
+  font-size: var(--type-p-size);
+  line-height: var(--type-p-line-height);
+  letter-spacing: var(--type-p-letter-spacing);
 }
 
 button,

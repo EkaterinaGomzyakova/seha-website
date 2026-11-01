@@ -95,6 +95,7 @@ export function initProductInquiry() {
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       dialog.showModal();
+      dialog.scrollTop = 0;
     },
     { capture: true }
   );

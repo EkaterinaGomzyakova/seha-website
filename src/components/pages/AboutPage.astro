@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import HeaderContainer from '../ui/HeaderContainer.astro';
@@ -57,11 +58,10 @@ const photoSizes =
   skipHref="#approach"
   image="/assets/images/shared/plantation-river.webp"
 >
-  <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
-    <a href={href('/')}>{copy.pageLink}</a>
-    <span aria-hidden="true">/</span>
-    <span aria-current="page">{copy.pageLabel}</span>
-  </nav>
+  <Breadcrumbs
+    locale={locale}
+    items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
+  />
   <main id="main-content" class="about-main">
     <section class="about-hero" aria-labelledby="about-title">
       <ResponsiveImage
@@ -89,20 +89,20 @@ const photoSizes =
         <figcaption>{copy.aboutIntroCaption}</figcaption>
       </figure>
       <div class="about-intro-copy">
-        <h2 id="about-intro-title" class="about-display-title">
+        <h2 id="about-intro-title" class="about-display-title type-h2">
           {copy.aboutIntroHeading}
           <br />
           <span>{copy.aboutIntroLabel2}</span>
         </h2>
-        <p>{copy.aboutIntroText}</p>
-        <p>{copy.aboutIntroText2}</p>
+        <p class="type-p">{copy.aboutIntroText}</p>
+        <p class="type-p">{copy.aboutIntroText2}</p>
       </div>
     </section>
     <section class="about-numbers" aria-label={copy.aboutNumbersAriaLabel}>
       {facts.map(([value, text]) => (
         <div>
           <b>{value}</b>
-          <p>{text}</p>
+          <p class="type-p">{text}</p>
         </div>
       ))}
     </section>
@@ -121,8 +121,8 @@ const photoSizes =
             ]}
           >
             <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <h3 class="type-h3">{title}</h3>
+            <p class="type-p">{text}</p>
           </article>
         ))}
       </div>
@@ -135,7 +135,7 @@ const photoSizes =
           <br />
           <em>{copy.aboutShiftEmphasis}</em>
         </h2>
-        <p>{copy.aboutShiftText}</p>
+        <p class="type-p">{copy.aboutShiftText}</p>
       </div>
       <figure class="about-shift-image">
         <ResponsiveImage
@@ -153,8 +153,8 @@ const photoSizes =
         {milestones.map(([year, title, text]) => (
           <article>
             <span>{year}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <h3 class="type-h3">{title}</h3>
+            <p class="type-p">{text}</p>
           </article>
         ))}
       </div>

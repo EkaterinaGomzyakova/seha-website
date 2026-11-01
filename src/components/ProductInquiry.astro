@@ -29,7 +29,7 @@ const inquiryCopy = productInquiryCopy[locale];
 >
   <div class="product-inquiry__panel">
     <div class="product-inquiry__heading">
-      <h2 id="product-inquiry-title" class="type-h3">
+      <h2 id="product-inquiry-title" class="type-h2">
         {inquiryCopy.title}
       </h2>
       <button
@@ -54,67 +54,91 @@ const inquiryCopy = productInquiryCopy[locale];
       <input type="hidden" name="quantity" />
       <input type="hidden" name="quantityUnit" />
       <input type="hidden" name="product" />
-      <div data-inquiry-product-preview></div>
-      <p class="type-p" data-inquiry-quantity-summary hidden></p>
-      <div data-inquiry-packaging></div>
-      <div data-inquiry-custom hidden>
-        <Input
-          label={ru ? 'Объём или вес упаковки, если знаете' : 'Pack size, if known'}
-          name="customPackaging"
-          maxlength="80"
-          disabled
-        />
-      </div>
-      <div class="product-inquiry__fields">
-        <Input
-          label={ru ? 'Компания' : 'Company'}
-          name="company"
-          autocomplete="organization"
-          required
-          maxlength="160"
-        />
-        <Input
-          label={ru ? 'Ваше имя' : 'Your name'}
-          name="contact"
-          autocomplete="name"
-          required
-          maxlength="120"
-        />
-        <Input
-          label="Email"
-          name="email"
-          type="email"
-          autocomplete="email"
-          required
-          maxlength="254"
-        />
-        <Input
-          label={ru ? 'Телефон' : 'Phone'}
-          name="phone"
-          type="tel"
-          autocomplete="tel"
-          maxlength="40"
-        />
-      </div>
+      <section
+        class="product-inquiry__selection"
+        aria-label={ru ? 'Выбранный товар' : 'Selected product'}
+      >
+        <div data-inquiry-product-preview></div>
+        <p class="type-p" data-inquiry-quantity-summary hidden></p>
+        <div data-inquiry-packaging></div>
+        <div data-inquiry-custom hidden>
+          <Input
+            label={ru ? 'Объём или вес упаковки, если знаете' : 'Pack size, if known'}
+            name="customPackaging"
+            placeholder={ru ? 'Укажите массу или объём' : 'Enter a weight or volume'}
+            maxlength="80"
+            disabled
+          />
+        </div>
+      </section>
+      <fieldset class="product-inquiry__contacts">
+        <legend class="type-h3">{ru ? 'Контакты' : 'Contact details'}</legend>
+        <div class="product-inquiry__fields">
+          <Input
+            label={ru ? 'Компания' : 'Company'}
+            name="company"
+            placeholder={ru ? 'Название компании' : 'Company name'}
+            autocomplete="organization"
+            required
+            maxlength="160"
+          />
+          <Input
+            label={ru ? 'Ваше имя' : 'Your name'}
+            name="contact"
+            placeholder={ru ? 'Как к вам обращаться' : 'Your name'}
+            autocomplete="name"
+            required
+            maxlength="120"
+          />
+          <Input
+            label="Email"
+            name="email"
+            placeholder="name@company.com"
+            type="email"
+            autocomplete="email"
+            required
+            maxlength="254"
+          />
+          <Input
+            label={ru ? 'Телефон (необязательно)' : 'Phone (optional)'}
+            name="phone"
+            placeholder={ru ? '+7 999 123-45-67' : '+44 7700 900123'}
+            type="tel"
+            autocomplete="tel"
+            maxlength="40"
+          />
+        </div>
+      </fieldset>
       <label class="form-field">
         {copy.message}
-        <textarea name="comment" rows="3" maxlength="1500"></textarea>
+        <textarea
+          name="comment"
+          rows="3"
+          maxlength="1500"
+          placeholder={
+            ru
+              ? 'Город доставки, срок и другие пожелания'
+              : 'Delivery location, timing and other requirements'
+          }
+        ></textarea>
       </label>
       <div class="product-inquiry__trap" aria-hidden="true">
         <label>
           Website <input name="website" tabindex="-1" autocomplete="off" />
         </label>
       </div>
-      <Checkbox name="consent" required>
-        <span class="consent__text">
-          {copy.consentStart} <a href={localizedPath('/privacy/', locale)}>{copy.consentLink}</a>{' '}
-          {copy.consentEnd}
-        </span>
-      </Checkbox>
-      <Button full type="submit" aria-describedby="product-inquiry-next-step">
-        {inquiryCopy.submit}
-      </Button>
-      <p class="type-p" role="status" data-inquiry-result hidden></p>
+      <div class="product-inquiry__actions">
+        <Checkbox name="consent" required>
+          <span class="consent__text">
+            {copy.consentStart} <a href={localizedPath('/privacy/', locale)}>{copy.consentLink}</a>{' '}
+            {copy.consentEnd}
+          </span>
+        </Checkbox>
+        <Button full type="submit" aria-describedby="product-inquiry-next-step">
+          {inquiryCopy.submit}
+        </Button>
+        <p class="type-p" role="status" data-inquiry-result hidden></p>
+      </div>
     </form>
     <p class="product-inquiry__email type-p">
       <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
@@ -125,7 +149,7 @@ const inquiryCopy = productInquiryCopy[locale];
   <template data-inquiry-product-template={product.id}>
     <div class="product-inquiry__product">
       <ResponsiveImage src={product.image} alt="" sizes="72px" loading="eager" />
-      <p class="type-p">{product.name[locale]}</p>
+      <p class="type-h3">{product.name[locale]}</p>
     </div>
   </template>
 ))}
@@ -165,6 +189,8 @@ const inquiryCopy = productInquiryCopy[locale];
   }
   .product-inquiry__panel {
     position: relative;
+    display: grid;
+    gap: 24px;
     padding: 32px;
   }
   .product-inquiry__heading {
@@ -175,15 +201,48 @@ const inquiryCopy = productInquiryCopy[locale];
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 24px;
     background: var(--color-background-light);
   }
-  h2 {
+  h2,
+  #product-inquiry-next-step,
+  [data-inquiry-quantity-summary] {
     margin: 0;
   }
   form {
     display: grid;
-    gap: 20px;
+    gap: 24px;
+  }
+  .product-inquiry__selection {
+    display: grid;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 16px;
+    background: var(--color-white);
+    min-width: 0;
+  }
+  [data-inquiry-packaging]:empty {
+    display: none;
+  }
+  [data-inquiry-packaging]:not(:empty) {
+    padding-top: 16px;
+    border-top: 1px solid var(--color-light-gray);
+  }
+  .product-inquiry__contacts {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .product-inquiry__contacts > legend {
+    margin: 0 0 16px;
+    padding: 0;
+  }
+  .product-inquiry__actions {
+    display: grid;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-light-gray);
   }
   .product-inquiry__fields {
     display: grid;
@@ -209,6 +268,7 @@ const inquiryCopy = productInquiryCopy[locale];
   .product-inquiry :global(input:not([type='radio']):not([type='checkbox']):not([type='hidden'])),
   textarea {
     width: 100%;
+    min-height: 48px;
     min-width: 0;
     padding: 12px;
     border: 1px solid var(--color-dark-gray);
@@ -221,6 +281,17 @@ const inquiryCopy = productInquiryCopy[locale];
   }
   textarea {
     resize: vertical;
+    min-height: 104px;
+  }
+  .product-inquiry :global(input::placeholder),
+  textarea::placeholder {
+    color: var(--color-dark-gray);
+    opacity: 1;
+  }
+  .product-inquiry :global(input:not([type='radio']):not([type='checkbox']):focus-visible),
+  textarea:focus-visible {
+    outline: 2px solid var(--color-green-brand);
+    outline-offset: 2px;
   }
   .product-inquiry__product {
     display: grid;
@@ -237,7 +308,6 @@ const inquiryCopy = productInquiryCopy[locale];
   }
   .product-inquiry__product p {
     margin: 0;
-    font-weight: 700;
     overflow-wrap: break-word;
   }
   .product-inquiry :global(.consent) {
@@ -275,7 +345,8 @@ const inquiryCopy = productInquiryCopy[locale];
     clip-path: inset(50%);
   }
   .product-inquiry__email {
-    margin: 20px 0 0;
+    margin: 0;
+    text-align: center;
   }
   [data-inquiry-result] {
     margin: 0;
@@ -286,6 +357,17 @@ const inquiryCopy = productInquiryCopy[locale];
     }
     .product-inquiry__fields {
       grid-template-columns: 1fr;
+    }
+    .product-inquiry__selection {
+      padding: 16px;
+    }
+    .product-inquiry__product {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 12px;
+    }
+    .product-inquiry__product :global(img) {
+      width: 64px;
+      height: 64px;
     }
   }
 </style>

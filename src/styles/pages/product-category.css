@@ -60,8 +60,8 @@
   border: 1px solid var(--color-gray);
   border-radius: 4px;
   color: var(--color-dark-gray);
-  font: 700 11px/1.2 var(--font-sans);
-  letter-spacing: 0.99px;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  letter-spacing: var(--type-button-letter-spacing);
   text-transform: uppercase;
 }
 .product-list-heading > span {
@@ -175,7 +175,7 @@
   }
   .page-product-category .breadcrumbs {
     margin-bottom: 20px;
-    font-size: 11px;
+    font-size: var(--type-p-size);
     line-height: 1.2;
     gap: 4px;
   }

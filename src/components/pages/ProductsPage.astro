@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
 import ArrowCircle from '../ui/ArrowCircle.astro';
@@ -30,11 +31,10 @@ const href = (path: string) =>
   skipText={copy.skipText}
   skipHref="#catalog"
 >
-  <nav class="breadcrumbs" aria-label={copy.pageAriaLabel}>
-    <a href={href('/')}>{copy.pageLink}</a>
-    <span aria-hidden="true">/</span>
-    <span aria-current="page">{copy.pageLabel}</span>
-  </nav>
+  <Breadcrumbs
+    locale={locale}
+    items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
+  />
   <main id="main-content" tabindex="-1">
     <section class="overview-hero" aria-labelledby="title">
       <ResponsiveImage
@@ -77,7 +77,7 @@ const href = (path: string) =>
               </span>
               <div class="product-category-title">
                 <span>{bindShortWords(definition.listLabel[locale], locale)}</span>
-                <h2 class="type-h2">{bindShortWords(category.title[locale], locale)}</h2>
+                <h2 class="type-h3">{bindShortWords(category.title[locale], locale)}</h2>
               </div>
               <p class="type-p">{bindShortWords(category.description[locale], locale)}</p>
               <ArrowCircle class="product-category-arrow" />

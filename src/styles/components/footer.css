@@ -1,7 +1,7 @@
 /* Unified footer — Figma 150:5668. No page-specific variants. */
 .quote-footer {
   --focus-outline: 3px solid var(--color-yellow-brand);
-  --footer-copy-size: 16px;
+  --footer-copy-size: var(--type-p-size);
   width: min(1880px, calc(100% - 32px));
   margin: 0 auto 16px;
   padding: 54px clamp(80px, 13.333vw, 256px);
@@ -61,7 +61,7 @@
 .contact-item p {
   margin: 0;
   color: var(--color-text-on-green);
-  font: 500 var(--footer-copy-size)/1.45 var(--font-sans);
+  font: 500 var(--footer-copy-size)/var(--type-p-line-height) var(--font-sans);
 }
 .quote-bottom {
   display: flex;
@@ -100,7 +100,7 @@
 }
 @media (max-width: 1280px) {
   .quote-footer {
-    --footer-copy-size: 14px;
+    --footer-copy-size: var(--type-p-size);
     padding: 48px 80px;
   }
   .quote-layout {

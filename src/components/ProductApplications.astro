@@ -13,15 +13,15 @@ const items = productApplications[productId] || [];
 {items.length > 0 && (
   <section class="product-applications" aria-labelledby="product-applications-title">
     <h2 class="type-h2" id="product-applications-title">
-      {locale === 'ru' ? 'Где используют' : 'Applications'}
+      {locale === 'ru' ? 'Где используется' : 'Where it is used'}
     </h2>
-    <ul style={`--application-columns: ${items.length === 4 ? 4 : Math.min(items.length, 3)}`}>
+    <ul style={`--application-columns: ${items.length === 4 ? 2 : Math.min(items.length, 3)}`}>
       {items.map((key) => {
         const item = applications[key];
         return (
           <li>
             <ApplicationIcon name={item.icon} />
-            <h3>{item.label[locale]}</h3>
+            <h3 class="type-h3">{item.label[locale]}</h3>
           </li>
         );
       })}
@@ -54,7 +54,6 @@ const items = productApplications[productId] || [];
   }
   h3 {
     margin: 0;
-    font: 700 18px/1.25 var(--font-sans);
     overflow-wrap: anywhere;
   }
   @media (max-width: 800px) {
@@ -75,9 +74,6 @@ const items = productApplications[productId] || [];
       grid-template-columns: 36px minmax(0, 1fr);
       align-items: center;
       padding: 18px;
-    }
-    h3 {
-      font-size: 16px;
     }
   }
 </style>
