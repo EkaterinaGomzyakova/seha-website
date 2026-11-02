@@ -1397,69 +1397,6 @@
         }
       ]
     },
-    "/assets/images/food/young-coconut.png": {
-      "fingerprint": "10fabb181ffaea027b4d42eae7b08335508ebe4dd08f1cdbd0cc75c165b85de7",
-      "width": 1254,
-      "height": 1254,
-      "variants": [
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-320.webp",
-          "format": "webp",
-          "width": 320,
-          "height": 320,
-          "bytes": 24650
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-320.avif",
-          "format": "avif",
-          "width": 320,
-          "height": 320,
-          "bytes": 13396
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-640.webp",
-          "format": "webp",
-          "width": 640,
-          "height": 640,
-          "bytes": 75698
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-640.avif",
-          "format": "avif",
-          "width": 640,
-          "height": 640,
-          "bytes": 44993
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-960.webp",
-          "format": "webp",
-          "width": 960,
-          "height": 960,
-          "bytes": 144438
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-960.avif",
-          "format": "avif",
-          "width": 960,
-          "height": 960,
-          "bytes": 89779
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-1254.webp",
-          "format": "webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 205878
-        },
-        {
-          "src": "/assets/images/generated/food/young-coconut.png-1254.avif",
-          "format": "avif",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 138183
-        }
-      ]
-    },
     "/assets/images/food/mct-oil.png": {
       "fingerprint": "361fa374a74aad2c6167237eddd0d801ede0ee40b286e71cda5af9022da41490",
       "width": 1254,
@@ -1646,6 +1583,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 82033
+        }
+      ]
+    },
+    "/assets/images/food/young-coconut.png": {
+      "fingerprint": "10fabb181ffaea027b4d42eae7b08335508ebe4dd08f1cdbd0cc75c165b85de7",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24650
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13396
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 75698
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 44993
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 144438
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 89779
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 205878
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 138183
         }
       ]
     },
@@ -3732,6 +3732,132 @@
           "width": 1254,
           "height": 1254,
           "bytes": 232812
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-husk-chips-in-hand.png": {
+      "fingerprint": "32d70157898cb007a8fc8359d3b2303f79b415b2912ee180dcd537a672f13648",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19694
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11036
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56062
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34934
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105922
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 67782
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 155864
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-in-hand.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 101804
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-husk-chips-texture.png": {
+      "fingerprint": "8bfebf71a359c58b0a1531100582b4bdd2293c105c5224fb93c93aae5d1b1be6",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 49388
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 24223
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 184536
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 93188
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 380780
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 186352
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 572420
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-texture.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 273987
         }
       ]
     },

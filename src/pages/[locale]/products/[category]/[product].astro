@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../../components/Breadcrumbs.astro';
 import type { Locale } from '../../../../data/translations';
 import SiteLayout from '../../../../layouts/SiteLayout.astro';
 import ProductGallery from '../../../../components/ProductGallery.astro';
+import { productGalleryImages } from '../../../../data/product-gallery';
 import ProductStock from '../../../../components/ProductStock.astro';
 import ProductQuantity from '../../../../components/ProductQuantity.astro';
 import ProductApplications from '../../../../components/ProductApplications.astro';
@@ -55,7 +56,7 @@ const category = productCategories.find((category) => category.slug === item.cat
   <main id="main-content" tabindex="-1" class="product-detail">
     <section class="product-detail__overview" aria-labelledby="product-name">
       <ProductGallery
-        images={[item.image, item.image, item.image, item.image]}
+        images={productGalleryImages[item.id] ?? [item.image, item.image, item.image, item.image]}
         alt={item.alt[locale]}
         locale={locale}
       />
