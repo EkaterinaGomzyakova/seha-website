@@ -23,6 +23,7 @@ export const applications = {
   propagation: crop('Рассада и черенки', 'Seedlings and cuttings', 'seedlings'),
   tomatoes: crop('Томаты', 'Tomatoes', 'tomato'),
   cucumbers: crop('Огурцы', 'Cucumbers', 'cucumber'),
+  aubergines: crop('Баклажаны', 'Aubergines', 'aubergine'),
   peppers: crop('Сладкий перец', 'Sweet peppers', 'pepper'),
   blueberries: crop('Голубика', 'Blueberries', 'blueberry'),
   raspberries: crop('Малина', 'Raspberries', 'raspberry'),
@@ -70,6 +71,22 @@ export const applications = {
 } as const;
 
 const chipsCropDescriptions: Partial<Record<keyof typeof applications, LocalizedText>> = {
+  tomatoes: text(
+    'В смеси с кокосовым торфом для тепличного выращивания.',
+    'Blended with coco pith for greenhouse cultivation.'
+  ),
+  cucumbers: text(
+    'В составе влагоёмких смесей с хорошим дренажем.',
+    'In moisture-retentive blends with good drainage.'
+  ),
+  raspberries: text(
+    'Компонент рыхлых смесей для контейнерного выращивания.',
+    'A component of open mixes for container growing.'
+  ),
+  blueberries: text(
+    'В составе кислых смесей для контейнеров.',
+    'In acidic blends for container cultivation.'
+  ),
   orchids: text(
     'Крупные чипсы сохраняют воздушные промежутки вокруг корней.',
     'Coarse chips maintain air spaces around the roots.'
@@ -158,6 +175,23 @@ export const productApplicationDescriptions: Record<
   'coconut-chips': chipsCropDescriptions,
   'coco-husk-chips-bricks': chipsCropDescriptions,
   'grow-cube-sleeve': {
+    tomatoes: text(
+      'Для рассады с последующей пересадкой целым кубом.',
+      'For seedlings transplanted as a complete cube.'
+    ),
+    cucumbers: text(
+      'Для проращивания и выращивания рассады до высадки.',
+      'For germination and raising seedlings before transplanting.'
+    ),
+    peppers: text(
+      'Для проращивания семян и выращивания рассады.',
+      'For seed germination and seedling propagation.'
+    ),
+    aubergines: text(
+      'Для рассады и прививки в питомниках.',
+      'For seedlings and grafting in nurseries.'
+    ),
+    strawberries: text('Для укоренения посадочного материала.', 'For rooting young plants.'),
     propagation: text(
       'Для проращивания семян и укоренения черенков с последующей пересадкой целым кубом.',
       'For seed germination and rooting cuttings, followed by transplanting the whole cube.'
@@ -207,9 +241,34 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'open-top-grow-bag': ['blueberries', 'raspberries'],
   'coco-peat': ['tomatoes', 'cucumbers', 'lettuce', 'petunias'],
   'coco-peat-briquettes': ['tomatoes', 'strawberries', 'lettuce', 'basil'],
-  'coconut-chips': ['orchids', 'anthuriums', 'bromeliads', 'strawberries'],
-  'coco-husk-chips-bricks': ['orchids', 'anthuriums', 'bromeliads', 'strawberries'],
-  'grow-cube-sleeve': ['propagation'],
+  'coconut-chips': [
+    'orchids',
+    'anthuriums',
+    'bromeliads',
+    'strawberries',
+    'tomatoes',
+    'cucumbers',
+    'raspberries',
+    'blueberries'
+  ],
+  'coco-husk-chips-bricks': [
+    'orchids',
+    'anthuriums',
+    'bromeliads',
+    'strawberries',
+    'tomatoes',
+    'cucumbers',
+    'raspberries',
+    'blueberries'
+  ],
+  'grow-cube-sleeve': [
+    'tomatoes',
+    'cucumbers',
+    'peppers',
+    'aubergines',
+    'strawberries',
+    'propagation'
+  ],
   'coco-coir-discs': ['seedlings'],
   'coco-peat-tablets': ['seedlings'],
   'coco-peat-compost': ['tomatoes', 'lettuce', 'basil', 'petunias'],

@@ -23,6 +23,7 @@ export interface ProductItem {
   quoteName?: LocalizedText;
   label: LocalizedText;
   description: LocalizedText;
+  details?: LocalizedText;
   alt: LocalizedText;
   /** Original asset; generated responsive derivatives preserve this source. */
   image: string;
@@ -136,12 +137,11 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     ],
     [
       'grow-cube-sleeve',
-      'grow-cube-sleeve.png',
+      'grow-cube-three-cubes.png',
       'Кубический субстрат',
-      'Grow Cube Sleeve',
-      'Куб из кокосового торфа для проращивания семян и укоренения черенков. Защитная оболочка сохраняет форму при поливе и пересадке; куб можно переносить целиком в гроубэг или субстратный мат.',
-      'A coco pith cube for seed germination and rooting cuttings. The protective sleeve maintains its shape during irrigation and transplanting; the whole cube can be transferred to a grow bag or growing slab.',
-      'Grow Cube Sleeve',
+      'Grow Cube',
+      ...productCopyUpdates['grow-cube-sleeve'].description,
+      'Grow Cube',
       'Hydroponics'
     ],
     [
@@ -320,7 +320,7 @@ export const products: ProductItem[] = (Object.keys(rows) as ProductCategorySlug
   (category) =>
     rows[category].map(([slug, image, ru, en, descriptionRu, descriptionEn, labelRu, labelEn]) => ({
       id: slug,
-      slug,
+      slug: slug === 'grow-cube-sleeve' ? 'grow-cube' : slug,
       category,
       name: text(ru, en),
       ...(slug.startsWith('veymur-')
@@ -329,6 +329,9 @@ export const products: ProductItem[] = (Object.keys(rows) as ProductCategorySlug
       alt: text(ru, en),
       label: text(labelRu ?? ru, labelEn ?? en),
       description: text(descriptionRu, descriptionEn),
+      ...(productCopyUpdates[slug]?.fullDescription
+        ? { details: text(...productCopyUpdates[slug].fullDescription!) }
+        : {}),
       image: image.startsWith('/')
         ? image
         : `/assets/images/${category}/${image.endsWith('.png') ? image : `${category}-${image}-photorealistic.png`}`

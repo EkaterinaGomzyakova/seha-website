@@ -1,5 +1,28 @@
 // Gallery order is independent of the catalogue cover image.
 export const productGalleryImages: Record<string, string[]> = {
+  'coco-peat-compost': [
+    '/assets/images/substrates/coco-peat-compost.png',
+    '/assets/images/substrates/coco-peat-compost-trowel.png',
+    '/assets/images/substrates/coco-peat-compost-green-trowel.png',
+    '/assets/images/substrates/coco-peat-compost.png'
+  ],
+  'seeding-tray-media': [
+    '/assets/images/substrates/seeding-tray-media.png',
+    '/assets/images/substrates/seeding-tray-media-seedlings.png',
+    '/assets/images/substrates/seeding-tray-media-close-up.png',
+    '/assets/images/substrates/seeding-tray-media-young-seedlings.png'
+  ],
+  'open-top-grow-bag': [
+    '/assets/images/substrates/open-top-grow-bag.png',
+    '/assets/images/substrates/open-top-grow-bag-raspberry.png',
+    '/assets/images/substrates/open-top-grow-bag.png',
+    '/assets/images/substrates/open-top-grow-bag.png'
+  ],
+  'grow-cube-sleeve': [
+    '/assets/images/substrates/grow-cube-three-cubes.png',
+    '/assets/images/substrates/grow-cube-close-up.png',
+    '/assets/images/substrates/grow-cube-seedlings.png'
+  ],
   'mature-coconut': [
     '/assets/images/food/mature-coconut.png',
     '/assets/images/food/mature-coconut-still-life.png',

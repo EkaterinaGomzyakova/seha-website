@@ -578,6 +578,69 @@
         }
       ]
     },
+    "/assets/images/common/crops/aubergine.png": {
+      "fingerprint": "fb77ee518a63810a3e3887b980b355c08913fa28a9b9189b0dbfc117b725f96f",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22166
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11616
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 70048
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34318
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 146740
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 69086
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 218814
+        },
+        {
+          "src": "/assets/images/generated/common/crops/aubergine.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 106178
+        }
+      ]
+    },
     "/assets/images/common/crops/basil.png": {
       "fingerprint": "5181f2f9c5a4a4a469b077f2bb59d05e897369ae1a4e42598e553ff7851fb01e",
       "width": 1254,
@@ -5310,6 +5373,132 @@
         }
       ]
     },
+    "/assets/images/substrates/coco-peat-compost-green-trowel.png": {
+      "fingerprint": "b74c5ab59147baba2bb652c94aa8b9c0534dcf59f6dd99dbcd359334f9decfb6",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 38098
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19003
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 138726
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 69778
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 276880
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 139687
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 417080
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-green-trowel.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 211402
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-peat-compost-trowel.png": {
+      "fingerprint": "f0c355476d8d165a1aa261e63f2c728ad8349a0321d649835184ad59f552b48e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 30112
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15660
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 102686
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 53909
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 197696
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 105534
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 289024
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-trowel.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 158788
+        }
+      ]
+    },
     "/assets/images/substrates/coco-peat-compost.png": {
       "fingerprint": "a32525abd6d3da371b4fcfa026400e6a0cc58b34864116773260c932618d6755",
       "width": 1254,
@@ -5814,6 +6003,132 @@
         }
       ]
     },
+    "/assets/images/substrates/grow-cube-close-up.png": {
+      "fingerprint": "08d426ee04875e3c9d9a28464d73ca62f737b6bfe026264b5ae357fa809b2711",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19558
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10947
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 80640
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 43873
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 168834
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 92659
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 259414
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-close-up.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 141521
+        }
+      ]
+    },
+    "/assets/images/substrates/grow-cube-seedlings.png": {
+      "fingerprint": "ef941c60e24d87f5dc96a617b2446a79909a3e2737b9be4298e60482f895f30e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23534
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12771
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 86944
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 48240
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 171180
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 97456
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 257994
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-seedlings.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 149352
+        }
+      ]
+    },
     "/assets/images/substrates/grow-cube-sleeve.png": {
       "fingerprint": "a48e5cc03cb9ee4a1c1c810544b79d2cc8063291a417407e6e126bbcae21b7c1",
       "width": 1254,
@@ -5877,6 +6192,132 @@
         }
       ]
     },
+    "/assets/images/substrates/grow-cube-three-cubes.png": {
+      "fingerprint": "70acb4b123b2e16c8a4847be8f77b07f6e355089c18200ad77e3ca5cbc0586ea",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 17242
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10133
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 68276
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 38901
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 138202
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 79515
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 201010
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-three-cubes.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 121683
+        }
+      ]
+    },
+    "/assets/images/substrates/open-top-grow-bag-raspberry.png": {
+      "fingerprint": "ea04c2ec3e9fd6bef21f5240bf158f148be6120fd9e3b94dbc6210aed299eacb",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 36306
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 18084
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 124114
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 62951
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 235638
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 120326
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 338398
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-grow-bag-raspberry.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 176428
+        }
+      ]
+    },
     "/assets/images/substrates/open-top-grow-bag.png": {
       "fingerprint": "ed814d47c233d278ab908cbad34279df2b8bf40a008fb164efed9e908c934605",
       "width": 1254,
@@ -5937,6 +6378,195 @@
           "width": 1254,
           "height": 1254,
           "bytes": 109855
+        }
+      ]
+    },
+    "/assets/images/substrates/seeding-tray-media-close-up.png": {
+      "fingerprint": "e2c9c48c8b5ff0842dcad4bec31a3d103020afd490e9243399530b018e3f5dd3",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24788
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13441
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 69816
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 41681
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 124086
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 78036
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 178348
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-close-up.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 115674
+        }
+      ]
+    },
+    "/assets/images/substrates/seeding-tray-media-seedlings.png": {
+      "fingerprint": "75d91fbd9a42c8edae253c857fa0eb20f3d9917f9b3aace60ed64e474acbac24",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26874
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14298
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 83832
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 47987
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 155618
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 91369
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 227318
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-seedlings.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 136252
+        }
+      ]
+    },
+    "/assets/images/substrates/seeding-tray-media-young-seedlings.png": {
+      "fingerprint": "d252acf902e869432c4e7f8c309fa84864f65e72c641c9a7783233a92f90821e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33258
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17032
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 100130
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 53677
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 178260
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 101344
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 253336
+        },
+        {
+          "src": "/assets/images/generated/substrates/seeding-tray-media-young-seedlings.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 151359
         }
       ]
     },

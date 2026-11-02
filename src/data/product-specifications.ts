@@ -310,9 +310,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Expanded dimensions',
       text('10 × 10 × 10 см', '10 × 10 × 10 cm')
     ),
-    // The earlier 850–900 ml value conflicts with the stated cube dimensions;
-    // leave volume pending rather than infer net substrate volume.
-    expandedVolume,
+    field('Объём после увлажнения', 'Expanded volume', text('Около 1 л', 'Approximately 1 L')),
     dryWeight,
     ph,
     lowEc,
@@ -322,50 +320,190 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Particle size',
       text('Мелкий просеянный кокосовый торф', 'Fine screened coco pith')
     ),
-    field('Материал оболочки', 'Sleeve material'),
-    field('Посадочное отверстие', 'Planting hole'),
-    field('Дренажные отверстия', 'Drainage holes'),
-    processing
+    field(
+      'Материал оболочки',
+      'Sleeve material',
+      text(
+        'LDPE-плёнка с УФ-защитой, биоразлагаемая сетка или нетканый материал — в зависимости от модели',
+        'UV-treated LDPE film, biodegradable net or non-woven material, depending on design'
+      )
+    ),
+    field(
+      'Посадочное отверстие',
+      'Planting hole',
+      text(
+        'Сформировано заранее; размер и положение — по заказу',
+        'Pre-formed; size and position to order'
+      )
+    ),
+    field(
+      'Дренажные отверстия',
+      'Drainage holes',
+      text('По заказу, с учётом системы выращивания', 'Optional, according to growing system')
+    ),
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Промывка или промывка с буферизацией — по спецификации',
+        'Washed or washed and buffered, according to specification'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Коробки, паллеты или экспортная упаковка по заказу',
+        'Cartons, palletised shipments or custom export packaging'
+      )
+    )
   ],
   'coco-coir-discs': [
     rawPith,
+    field('Цвет', 'Colour', text('От коричневого до тёмно-коричневого', 'Brown to dark brown')),
     field('Форма', 'Shape', text('Круглый диск', 'Circular disc')),
-    field('Диаметр', 'Diameter', text('30 / 36 / 40 / 50 мм', '30 / 36 / 40 / 50 mm')),
-    field('Толщина в сухом виде', 'Dry thickness'),
-    dryWeight,
-    field('Высота после увлажнения', 'Expanded height'),
+    field(
+      'Диаметр',
+      'Diameter',
+      text('30 / 36 / 40 / 50 мм или по заказу', '30 / 36 / 40 / 50 mm or custom')
+    ),
+    field(
+      'Толщина в сухом виде',
+      'Dry thickness',
+      text('Зависит от диаметра и степени прессования', 'Depends on disc diameter and compression')
+    ),
+    field(
+      'Сухая масса',
+      'Dry weight',
+      text('По заказу, в зависимости от размера', 'Customised according to size')
+    ),
+    field(
+      'Высота после увлажнения',
+      'Expanded height',
+      text(
+        'Зависит от размера, массы и условий увлажнения',
+        'Depends on disc size, weight and hydration'
+      )
+    ),
     expandedVolume,
     ph,
     ec,
     moisture,
-    field('Обработка', 'Processing', text('Просеивание и прессование', 'Screened and compressed')),
-    field('Добавленные удобрения', 'Added fertiliser')
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Просеивание и прессование; доступны промытые варианты',
+        'Screened and compressed; washed grades available'
+      )
+    ),
+    field(
+      'Добавленные удобрения',
+      'Added fertiliser',
+      text(
+        'Без добавленных удобрений, если не предусмотрено заказом',
+        'No added fertiliser unless specified'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Оптовые коробки, розничная или индивидуальная упаковка',
+        'Bulk cartons, retail or custom packaging'
+      )
+    )
   ],
   'coco-peat-tablets': [
     rawPith,
+    field(
+      'Цвет',
+      'Colour',
+      text('От светло-коричневого до тёмно-коричневого', 'Light brown to dark brown')
+    ),
     field('Форма', 'Shape', text('Круглая таблетка', 'Circular tablet')),
-    field('Диаметр', 'Diameter', text('30–100 мм', '30–100 mm')),
+    field('Диаметр', 'Diameter', text('30–100 мм или по заказу', '30–100 mm or custom')),
     field('Толщина в сухом виде', 'Dry thickness'),
-    dryWeight,
+    field(
+      'Сухая масса',
+      'Dry weight',
+      text('По заказу, в зависимости от размера', 'Customised according to size')
+    ),
     expandedVolume,
     ph,
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field('Степень прессования', 'Compression ratio'),
-    field('Обработка', 'Processing', text('Просеивание и прессование', 'Screened and compressed')),
-    field('Добавленные удобрения', 'Added fertiliser')
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Просеивание и прессование; доступны промытые варианты',
+        'Screened and compressed; washed grades available'
+      )
+    ),
+    field(
+      'Добавленные удобрения',
+      'Added fertiliser',
+      text(
+        'Без добавленных удобрений, если не предусмотрено заказом',
+        'No added fertiliser unless specified'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Оптовые коробки, розничная или индивидуальная упаковка',
+        'Bulk cartons, retail or custom packaging'
+      )
+    )
   ],
   'coco-peat-compost': [
     rawPith,
-    field('Состав и соотношение компонентов', 'Composition and component ratio'),
-    field('Фракция', 'Particle size'),
+    field(
+      'Состав',
+      'Composition',
+      text(
+        'Кокосовый торф или смесь кокосового торфа с компостом',
+        'Pure coco peat or a coco peat–compost blend'
+      )
+    ),
+    field(
+      'Фракция',
+      'Particle size',
+      text('Мелкая, просеянная; размер сита — по заказу', 'Fine and screened; mesh size to order')
+    ),
     ph,
     ec,
     moisture,
     waterRetention,
     field('Содержание органического вещества', 'Organic matter content'),
     field('Содержание NPK', 'NPK content'),
-    processing,
+    field(
+      'Внешний вид',
+      'Appearance',
+      text(
+        'Мелкий рыхлый волокнистый материал от коричневого до тёмно-коричневого',
+        'Fine, loose, fibrous material, brown to dark brown'
+      )
+    ),
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Просеивание, обработка и смешивание по спецификации',
+        'Screened, processed and blended according to specification'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Прессованные блоки, мешки или упаковка по заказу',
+        'Compressed blocks, bags, bulk or custom packaging'
+      )
+    ),
     impurities
   ],
   'seeding-tray-media': [
@@ -381,11 +519,56 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Cell count',
       text('50 / 72 / 98 / 104 / 128', '50 / 72 / 98 / 104 / 128')
     ),
-    field('Объём ячейки', 'Cell volume'),
-    field('Форма ячеек', 'Cell shape'),
-    field('Размеры лотка', 'Tray dimensions'),
-    field('Материал лотка', 'Tray material'),
-    processing
+    field(
+      'Объём ячейки',
+      'Cell volume',
+      text(
+        'По заказу, с учётом культуры и конструкции лотка',
+        'Customised for the crop and tray design'
+      )
+    ),
+    field(
+      'Форма ячеек',
+      'Cell shape',
+      text('Квадратная, круглая, коническая или сужающаяся', 'Square, round, conical or tapered')
+    ),
+    field(
+      'Размеры лотка',
+      'Tray dimensions',
+      text(
+        'По требованиям питомника или теплицы',
+        'Customised for nursery and greenhouse requirements'
+      )
+    ),
+    field(
+      'Материал лотка',
+      'Tray material',
+      text(
+        'Многоразовый пластик, биоразлагаемый материал или формованное кокосовое волокно — в зависимости от модели',
+        'Reusable plastic, biodegradable material or moulded coir, depending on model'
+      )
+    ),
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Просеянный кокосовый торф; доступны промытые варианты',
+        'Screened coco pith; washed grades available'
+      )
+    ),
+    field(
+      'Дренаж',
+      'Drainage',
+      text('В зависимости от конструкции лотка', 'According to tray construction')
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Оптовые коробки или паллеты, в зависимости от типа лотка',
+        'Bulk cartons or palletised packaging, depending on tray type'
+      )
+    )
   ],
   'coir-fiber-bales': [
     rawHusk,

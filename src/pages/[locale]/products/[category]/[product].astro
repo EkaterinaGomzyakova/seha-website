@@ -65,7 +65,9 @@ const category = productCategories.find((category) => category.slug === item.cat
           {item.name[locale]}
         </h1>
         <div class="product-detail__summary">
-          <p class="type-p">{item.description[locale]}</p>
+          {(item.details ?? item.description)[locale].split('\n\n').map((paragraph) => (
+            <p class="type-p">{paragraph}</p>
+          ))}
           <ProductStock productId={item.id} locale={locale} />
         </div>
         <ProductPackaging product={item} locale={locale} />

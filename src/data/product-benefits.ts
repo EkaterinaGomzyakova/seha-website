@@ -169,6 +169,24 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
   ],
   'grow-cube-sleeve': [
     benefit(
+      'Размеры и отверстия',
+      'Sizes and holes',
+      'Одинаковые размеры кубов для рассадных линий. Посадочные и дренажные отверстия — по заказу.',
+      'Consistent cube dimensions for propagation lines. Planting and drainage holes are available to order.'
+    ),
+    benefit(
+      'Под систему выращивания',
+      'Matched to the growing system',
+      'Размер, массу, смесь субстрата и оболочку можно подобрать под культуру и полив.',
+      'Size, weight, coir blend and sleeve can be specified for the crop and irrigation.'
+    ),
+    benefit(
+      'Промытые варианты',
+      'Washed grades',
+      'Доступны промытые варианты с низким EC и варианты с буферизацией.',
+      'Washed low-EC and buffered grades are available according to specification.'
+    ),
+    benefit(
       'Сохраняет форму',
       'Holds its shape',
       'Защитная оболочка удерживает куб при поливе и переносе.',
@@ -189,6 +207,18 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
   ],
   'coco-coir-discs': [
     benefit(
+      'Обработка на выбор',
+      'Processing options',
+      'Доступны промытые варианты и варианты с низким EC.',
+      'Washed and low-EC grades are available according to specification.'
+    ),
+    benefit(
+      'Упаковка по заказу',
+      'Packaging to order',
+      'Для розничных наборов и оптовых поставок.',
+      'For retail kits and bulk supply.'
+    ),
+    benefit(
       'Компактный формат',
       'Compact format',
       'Прессованные диски занимают мало места при хранении.',
@@ -208,6 +238,18 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     )
   ],
   'coco-peat-tablets': [
+    benefit(
+      'Обработка на выбор',
+      'Processing options',
+      'Доступны промытые варианты и варианты с низким EC.',
+      'Washed and low-EC grades are available according to specification.'
+    ),
+    benefit(
+      'Под вашей маркой',
+      'Private-label supply',
+      'Возможны упаковка по заказу и выпуск под маркой заказчика.',
+      'Custom packaging and private-label options are available.'
+    ),
     benefit(
       'Расширяются в воде',
       'Expand with water',
@@ -248,6 +290,12 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     )
   ],
   'seeding-tray-media': [
+    benefit(
+      'Оптовая поставка',
+      'Bulk supply',
+      'Размеры лотка и упаковку подбирают под работу питомника.',
+      'Tray dimensions and packaging can be matched to nursery operations.'
+    ),
     benefit(
       'Фракция под ячейку',
       'Grade matched to the cell',
