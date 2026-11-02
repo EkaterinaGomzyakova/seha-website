@@ -578,6 +578,132 @@
         }
       ]
     },
+    "/assets/images/common/crops/basil.png": {
+      "fingerprint": "5181f2f9c5a4a4a469b077f2bb59d05e897369ae1a4e42598e553ff7851fb01e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22544
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12621
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 68392
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34869
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 140714
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 70113
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 211832
+        },
+        {
+          "src": "/assets/images/generated/common/crops/basil.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 108399
+        }
+      ]
+    },
+    "/assets/images/common/crops/blueberry.png": {
+      "fingerprint": "85be573c531a7468e4a146282df16c5d5c020c63cd56d0f06cdfb08f894ce1c9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33400
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16851
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 109862
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 53213
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 222692
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 102190
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 332184
+        },
+        {
+          "src": "/assets/images/generated/common/crops/blueberry.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 149941
+        }
+      ]
+    },
     "/assets/images/common/crops/bromeliad.png": {
       "fingerprint": "058383777afdaea716ec487d4f09fc56d6f5c81b18f5da01a7a25b025f1ac4b6",
       "width": 1254,
@@ -638,6 +764,132 @@
           "width": 1254,
           "height": 1254,
           "bytes": 132117
+        }
+      ]
+    },
+    "/assets/images/common/crops/cucumber.png": {
+      "fingerprint": "f5959451302573f06978a311afaeefd369885c9a0fdcc5c8fb72d982a18d57af",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 30346
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16006
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 100566
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49525
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 205096
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 97743
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 305294
+        },
+        {
+          "src": "/assets/images/generated/common/crops/cucumber.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 142282
+        }
+      ]
+    },
+    "/assets/images/common/crops/lettuce.png": {
+      "fingerprint": "60563d68bbc7f80d9fbc27949dac73e837f6350a2e07a81cf8f19ad1a4d32bb9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33258
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16082
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 96538
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49552
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 200522
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 99216
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 289220
+        },
+        {
+          "src": "/assets/images/generated/common/crops/lettuce.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 154508
         }
       ]
     },
@@ -704,6 +956,258 @@
         }
       ]
     },
+    "/assets/images/common/crops/pepper.png": {
+      "fingerprint": "e57d97d252f9a8447b9ccdd4b463cdaa992f6e29eb4c961bb64f136d32dbc514",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23302
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12583
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 66950
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34804
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 138044
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 65969
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 205680
+        },
+        {
+          "src": "/assets/images/generated/common/crops/pepper.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 101252
+        }
+      ]
+    },
+    "/assets/images/common/crops/petunia.png": {
+      "fingerprint": "c6835957239d83333df91f01d1bbc56be9f4156c4123432d22c716bae54b8275",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33664
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17882
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 106752
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 50904
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 208070
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 100251
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 304924
+        },
+        {
+          "src": "/assets/images/generated/common/crops/petunia.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 149003
+        }
+      ]
+    },
+    "/assets/images/common/crops/raspberry.png": {
+      "fingerprint": "17d070ad8d174e192856ca36c99520257c87a755305e3b63bd703fffc8f720ed",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 36680
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19867
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 118952
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 58540
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 242006
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 113216
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 363334
+        },
+        {
+          "src": "/assets/images/generated/common/crops/raspberry.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 166692
+        }
+      ]
+    },
+    "/assets/images/common/crops/seedlings.png": {
+      "fingerprint": "1d450f6ff8dc6a8a0f2822050eb4b92da27827fdbb13e20b5dab382d6da2e702",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 40382
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 22122
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 133502
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 66731
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 278238
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 133166
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 419996
+        },
+        {
+          "src": "/assets/images/generated/common/crops/seedlings.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 193913
+        }
+      ]
+    },
     "/assets/images/common/crops/strawberry.png": {
       "fingerprint": "f312bcefd04008d27c3717b548815f0a38e15510d46e332bc39811e211de5188",
       "width": 1254,
@@ -764,6 +1268,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 157779
+        }
+      ]
+    },
+    "/assets/images/common/crops/tomato.png": {
+      "fingerprint": "3915ec9670ddd43f11a363b0a345dbfab07a30294061a9bb4aa585db0c7c57d8",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 31698
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17504
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 97838
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49905
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 198658
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 97469
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 298222
+        },
+        {
+          "src": "/assets/images/generated/common/crops/tomato.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 146730
         }
       ]
     },

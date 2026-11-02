@@ -10,16 +10,25 @@ const application = (ru: string, en: string, icon: ApplicationIconName): Applica
   label: { ru, en },
   icon
 });
+const crop = (ru: string, en: string, image: string): Application => ({
+  label: { ru, en },
+  icon: 'seedling',
+  image: `/assets/images/common/crops/${image}.png`
+});
 
-// Comparable cultivation tasks, finished-product families and treatment processes.
-// Do not mix individual examples with a parent sector in the same list.
+// Substrates show crops or a propagation stage; other ranges show industries.
 export const applications = {
-  vegetables: application('Овощеводство', 'Vegetable growing', 'seedling'),
   berries: application('Выращивание ягод', 'Soft fruit growing', 'strawberry'),
-  flowers: application('Цветоводство', 'Flower growing', 'flower'),
-  seedlings: application('Выращивание рассады', 'Seedling propagation', 'pot'),
-  cuttings: application('Укоренение черенков', 'Rooting cuttings', 'seedling'),
-  substrates: application('Приготовление субстратов', 'Growing-media production', 'pot'),
+  seedlings: crop('Рассада', 'Seedlings', 'seedlings'),
+  propagation: crop('Рассада и черенки', 'Seedlings and cuttings', 'seedlings'),
+  tomatoes: crop('Томаты', 'Tomatoes', 'tomato'),
+  cucumbers: crop('Огурцы', 'Cucumbers', 'cucumber'),
+  peppers: crop('Сладкий перец', 'Sweet peppers', 'pepper'),
+  blueberries: crop('Голубика', 'Blueberries', 'blueberry'),
+  raspberries: crop('Малина', 'Raspberries', 'raspberry'),
+  lettuce: crop('Листовой салат', 'Leaf lettuce', 'lettuce'),
+  basil: crop('Базилик', 'Basil', 'basil'),
+  petunias: crop('Петунии', 'Petunias', 'petunia'),
   orchards: application('Плодовые сады', 'Fruit orchards', 'tree'),
   landscaping: application('Озеленение', 'Landscaping', 'tree'),
   drinks: application('Напитки', 'Beverages', 'drink'),
@@ -69,26 +78,32 @@ export const applications = {
       en: 'A standalone medium or a component of growing mixes.'
     }
   },
-  strawberries: {
-    label: { ru: 'Клубника', en: 'Strawberries' },
-    icon: 'strawberry',
-    image: '/assets/images/common/crops/strawberry.png',
-    description: { ru: 'В смеси с кокосовым торфом.', en: 'Blended with coco pith.' }
-  }
+  strawberries: crop('Клубника', 'Strawberries', 'strawberry')
 } as const;
 
-// Membership is product-specific and based on client descriptions.
+const chipsCropDescriptions: Partial<Record<keyof typeof applications, LocalizedText>> = {
+  strawberries: { ru: 'В смеси с кокосовым торфом.', en: 'Blended with coco pith.' }
+};
+export const productApplicationDescriptions: Record<
+  string,
+  Partial<Record<keyof typeof applications, LocalizedText>>
+> = {
+  'coconut-chips': chipsCropDescriptions,
+  'coco-husk-chips-bricks': chipsCropDescriptions
+};
+
+// Client descriptions take priority; extra crop examples follow producer guidance and research.
 export const productApplications: Record<string, readonly (keyof typeof applications)[]> = {
-  'grow-bag': ['vegetables', 'berries'],
-  'open-top-grow-bag': ['berries'],
-  'coco-peat': ['vegetables', 'flowers', 'seedlings', 'substrates'],
-  'coco-peat-briquettes': ['vegetables', 'seedlings', 'substrates'],
+  'grow-bag': ['tomatoes', 'cucumbers', 'peppers', 'strawberries'],
+  'open-top-grow-bag': ['blueberries', 'raspberries'],
+  'coco-peat': ['tomatoes', 'cucumbers', 'lettuce', 'petunias'],
+  'coco-peat-briquettes': ['tomatoes', 'strawberries', 'lettuce', 'basil'],
   'coconut-chips': ['orchids', 'anthuriums', 'bromeliads', 'strawberries'],
   'coco-husk-chips-bricks': ['orchids', 'anthuriums', 'bromeliads', 'strawberries'],
-  'grow-cube-sleeve': ['seedlings', 'cuttings'],
+  'grow-cube-sleeve': ['propagation'],
   'coco-coir-discs': ['seedlings'],
   'coco-peat-tablets': ['seedlings'],
-  'coco-peat-compost': ['vegetables', 'flowers', 'seedlings', 'substrates'],
+  'coco-peat-compost': ['tomatoes', 'lettuce', 'basil', 'petunias'],
   'seeding-tray-media': ['seedlings'],
   'coir-fiber-bales': ['ropes', 'brushes', 'mats', 'erosionMesh'],
   'machine-twisted-fiber': ['ropes', 'brushes', 'mats', 'erosionMesh'],
