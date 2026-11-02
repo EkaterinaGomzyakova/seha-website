@@ -1649,6 +1649,195 @@
         }
       ]
     },
+    "/assets/images/food/mature-coconut-still-life.png": {
+      "fingerprint": "2a5975fa60521d399685069a55f0ffd6370737aea31bcd3f09d5d6404429f692",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 17944
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10937
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 56786
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 35585
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 103806
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 65501
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 153256
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut-still-life.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 95654
+        }
+      ]
+    },
+    "/assets/images/food/mature-coconut.png": {
+      "fingerprint": "85b38828e4878be6c8c8c028b1dc17aef0abbbbf8f486ea11aa38bfb40bead54",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21832
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12898
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 74028
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 44932
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 144416
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 86376
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 216684
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconut.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 128332
+        }
+      ]
+    },
+    "/assets/images/food/mature-coconuts-whole.png": {
+      "fingerprint": "84c0715102be4578b1213bdc05ec3d78540b15e57bcc6e47a19ca5c050d641db",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 38572
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19353
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 136076
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 68396
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 249168
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 128897
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 363164
+        },
+        {
+          "src": "/assets/images/generated/food/mature-coconuts-whole.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 189715
+        }
+      ]
+    },
     "/assets/images/food/mct-oil.png": {
       "fingerprint": "361fa374a74aad2c6167237eddd0d801ede0ee40b286e71cda5af9022da41490",
       "width": 1254,
@@ -1835,6 +2024,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 82033
+        }
+      ]
+    },
+    "/assets/images/food/young-coconut-on-palm.png": {
+      "fingerprint": "ba4100bd8f9f499466e7feaa3e48bf8862cab21ca37c3051c4b266c390cd514e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 39038
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19482
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 134598
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 66754
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 264246
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 130857
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 399592
+        },
+        {
+          "src": "/assets/images/generated/food/young-coconut-on-palm.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 197562
         }
       ]
     },
@@ -4803,6 +5055,132 @@
           "width": 1254,
           "height": 1254,
           "bytes": 167180
+        }
+      ]
+    },
+    "/assets/images/substrates/grow-bag-packaging.png": {
+      "fingerprint": "4082875f7beb072f9679ea3a9ed84691dba7a987ef018dfa8ce3dbc8f52cf881",
+      "width": 1536,
+      "height": 1536,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 9960
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7053
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 24636
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 18504
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 41926
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 31156
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 1440,
+          "bytes": 82574
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-packaging.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 1440,
+          "bytes": 60945
+        }
+      ]
+    },
+    "/assets/images/substrates/grow-bag-seedlings.png": {
+      "fingerprint": "aabbe74ebf86a583f851d534e4904c736fdb276774cfe044508af3605da819cf",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 15778
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9946
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 39432
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 28927
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 67720
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 52432
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 93956
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-seedlings.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 75686
         }
       ]
     },

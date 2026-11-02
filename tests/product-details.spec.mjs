@@ -10,7 +10,6 @@ for (const locale of ['ru', 'en']) {
       ['young-coconut', 'mature-coconut'].includes(product.id)
     );
     expect(coconuts).toHaveLength(2);
-    expect(coconuts[0].image).toBe(coconuts[1].image);
     for (const product of coconuts) {
       await page.goto(`${base}/${locale}/products/veymur/`);
       const notice = page.locator('.cookie-action');

@@ -24,7 +24,7 @@ const mctSpecifications: Specification[] = [
   field('Кислотное число', 'Acid value', text('≤ 0,2 мг/г', '≤ 0.2 mg/g')),
   field('Число омыления', 'Saponification value', text('325–345 мг KOH/г', '325–345 mg KOH/g')),
   field('Йодное число', 'Iodine value', text('≤ 1 г I₂/100 г', '≤ 1 g I₂/100 g')),
-  field('Влажность', 'Moisture', text('≤ 0,10%', '≤ 0.10%')),
+  field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 0,10%', '≤ 0.10%')),
   field('Перекисное число', 'Peroxide value', text('≤ 1 мэкв/кг', '≤ 1 meq/kg')),
   field('Хлораты', 'Chlorates', text('< 0,1 мг/кг', '< 0.1 mg/kg')),
   field(
@@ -90,7 +90,7 @@ const mctSpecifications: Specification[] = [
 const rawPith = field('Сырьё', 'Raw material', text('Кокосовый торф', 'Coconut coir pith'));
 const rawHusk = field('Сырьё', 'Raw material', text('Волокнистая оболочка кокоса', 'Coconut husk'));
 const rawFibre = field('Материал', 'Material', text('Кокосовое волокно', 'Coconut coir fibre'));
-const moisture = field('Влажность', 'Moisture content');
+const moisture = field('Влажность при поставке', 'Moisture content at dispatch');
 const ph = field('pH', 'pH', text('5,5–6,5', '5.5–6.5'));
 const ec = field('EC (Электропроводность)', 'EC (Electrical conductivity)');
 const lowEc = field(
@@ -174,7 +174,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('pH — вариант для голубики', 'pH — blueberry grade', text('4,5–5,5', '4.5–5.5')),
     field('pH — вариант для малины', 'pH — raspberry grade'),
     lowEc,
-    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('15–20%', '15–20%')),
     field('Обработка', 'Processing', text('Промывка и просеивание', 'Washed and screened')),
     field(
       'Материал мешка',
@@ -194,7 +194,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Фракция', 'Particle size'),
     ph,
     lowEc,
-    field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
     processing,
     field(
@@ -213,7 +213,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Фракция', 'Particle size'),
     ph,
     lowEc,
-    field('Влажность', 'Moisture content', text('12–15%', '12–15%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('12–15%', '12–15%')),
     field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
     processing,
     waterRetention,
@@ -244,7 +244,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
     field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,8', '5.5–6.8')),
     washedChipsEc,
-    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('15–20%', '15–20%')),
     field(
       'Влагоудерживающая способность',
       'Water-holding capacity',
@@ -282,7 +282,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ),
     field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,8', '5.5–6.8')),
     washedChipsEc,
-    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('15–20%', '15–20%')),
     field(
       'Обработка',
       'Processing',
@@ -316,7 +316,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     dryWeight,
     ph,
     lowEc,
-    field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field(
       'Фракция',
       'Particle size',
@@ -350,7 +350,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     expandedVolume,
     ph,
     lowEc,
-    field('Влажность', 'Moisture content', text('< 20%', '< 20%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field('Степень прессования', 'Compression ratio'),
     field('Обработка', 'Processing', text('Просеивание и прессование', 'Screened and compressed')),
     field('Добавленные удобрения', 'Added fertiliser')
@@ -534,7 +534,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Сладкий, с карамельными нотами', 'Sweet, with caramel-like notes')
     ),
     field('Помол', 'Granulation', text('Мелкий / средний / крупный', 'Fine / medium / coarse')),
-    field('Влажность', 'Moisture content', text('≤ 3,0%', '≤ 3.0%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 3,0%', '≤ 3.0%')),
     field('Содержание сахарозы', 'Sucrose content'),
     field('Общее содержание сахаров', 'Total sugars'),
     field('pH', 'pH'),
@@ -556,7 +556,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Характерные кокосовые', 'Characteristic coconut flavour and aroma')
     ),
     field('Фракция', 'Particle size', text('Мелкая / средняя / крупная', 'Fine / medium / coarse')),
-    field('Влажность', 'Moisture content', text('≤ 3,0%', '≤ 3.0%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 3,0%', '≤ 3.0%')),
     fat,
     protein,
     ash,
@@ -628,7 +628,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Плотность', 'Density'),
     field('Содержание фиксированного углерода', 'Fixed carbon', text('70–85%', '70–85%')),
     field('Зольность', 'Ash content', text('≤ 3–6%', '≤ 3–6%')),
-    field('Влажность', 'Moisture content', text('≤ 5–8%', '≤ 5–8%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 5–8%', '≤ 5–8%')),
     field('Летучие вещества', 'Volatile matter'),
     field(
       'Теплотворная способность',
@@ -649,7 +649,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Размер частиц', 'Particle size'),
     field('Йодное число', 'Iodine number', text('900–1 200 мг/г', '900–1,200 mg/g')),
     field('Удельная поверхность BET', 'BET surface area'),
-    field('Влажность', 'Moisture content', text('≤ 5%', '≤ 5%')),
+    field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 5%', '≤ 5%')),
     field('Зольность', 'Ash content', text('≤ 3–5%', '≤ 3–5%')),
     field('Насыпная плотность', 'Apparent density', text('450–550 кг/м³', '450–550 kg/m³')),
     field('Прочность гранул', 'Granule hardness', text('≥ 95–98%', '≥ 95–98%')),

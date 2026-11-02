@@ -277,7 +277,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     ],
     [
       'mature-coconut',
-      '/assets/images/food/young-coconut.png',
+      '/assets/images/food/mature-coconut.png',
       'Органические зрелые кокосы',
       'Organic Mature Coconut',
       ...productCopyUpdates['mature-coconut'].description,
