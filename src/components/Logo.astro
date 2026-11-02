@@ -2,6 +2,12 @@
 import type { Locale } from '../data/translations';
 import { getSiteTranslations } from '../data/translations';
 import { localizedPath, withBase } from '../lib/paths';
+import russianDesktop from '../../public/assets/images/common/menu-logo-russian-desktop.svg?raw';
+import russianSmallDesktop from '../../public/assets/images/common/menu-logo-russian-small-desktop.svg?raw';
+import russianMobile from '../../public/assets/images/common/menu-logo-russian-mobile.svg?raw';
+import internationalDesktop from '../../public/assets/images/common/menu-logo-international-desktop.svg?raw';
+import internationalSmallDesktop from '../../public/assets/images/common/menu-logo-international-small-desktop.svg?raw';
+import internationalMobile from '../../public/assets/images/common/menu-logo-international-mobile.svg?raw';
 interface Props {
   locale: Locale;
   tone?: 'brand' | 'accent';
@@ -9,8 +15,17 @@ interface Props {
 const { locale, tone = 'brand' } = Astro.props;
 const copy = getSiteTranslations(locale);
 const language = locale === 'en' ? 'international' : 'russian';
-const logo = (variant: string) =>
-  withBase(`/assets/images/common/menu-logo-${language}-${variant}.svg`);
+const variants =
+  locale === 'ru'
+    ? { desktop: russianDesktop, 'small-desktop': russianSmallDesktop, mobile: russianMobile }
+    : {
+        desktop: internationalDesktop,
+        'small-desktop': internationalSmallDesktop,
+        mobile: internationalMobile
+      };
+// Embed these small SVGs at build time so the header never depends on a separate image request.
+const logo = (variant: keyof typeof variants) =>
+  `data:image/svg+xml;charset=utf-8,${encodeURIComponent(variants[variant])}`;
 ---
 
 <a class="logo" href={localizedPath('/', locale)} aria-label={`${copy.logoAlt} — ${copy.home}`}>

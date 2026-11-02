@@ -104,6 +104,10 @@ test('header uses one grid and responsive layout across page templates', async (
         await page.evaluate(() => document.fonts.ready);
         const header = page.locator('header.site-header');
         await expect(header).toHaveCount(1);
+        const brandImage = header.locator('.site-header__brand .logo-image');
+        await expect(brandImage).toBeVisible();
+        await brandImage.evaluate((image) => image.decode());
+        expect(await brandImage.evaluate((image) => image.naturalWidth)).toBeGreaterThan(0);
         const box = await header.boundingBox();
         expect(box.x).toBe(margin);
         expect(box.width).toBe(width - 2 * margin);
