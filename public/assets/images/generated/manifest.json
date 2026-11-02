@@ -515,6 +515,258 @@
         }
       ]
     },
+    "/assets/images/common/crops/anthurium.png": {
+      "fingerprint": "b626a88c57825de55574b714f7b9242a74ca7c218a1257a8b13ce663c82180e3",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 30014
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14692
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 90304
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 42920
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 181978
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 82792
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 265280
+        },
+        {
+          "src": "/assets/images/generated/common/crops/anthurium.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 124311
+        }
+      ]
+    },
+    "/assets/images/common/crops/bromeliad.png": {
+      "fingerprint": "058383777afdaea716ec487d4f09fc56d6f5c81b18f5da01a7a25b025f1ac4b6",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34528
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19279
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 92942
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 47806
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 174606
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 87846
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 256550
+        },
+        {
+          "src": "/assets/images/generated/common/crops/bromeliad.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 132117
+        }
+      ]
+    },
+    "/assets/images/common/crops/orchid.png": {
+      "fingerprint": "e555324ec1899497d4a61d540eb9aab9417de7fce0590c59b447eaad6687da25",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24744
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14544
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 67744
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 37979
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 128790
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 67984
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 186532
+        },
+        {
+          "src": "/assets/images/generated/common/crops/orchid.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 97331
+        }
+      ]
+    },
+    "/assets/images/common/crops/strawberry.png": {
+      "fingerprint": "f312bcefd04008d27c3717b548815f0a38e15510d46e332bc39811e211de5188",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34932
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 18872
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 109174
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 55828
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 221544
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 106549
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 331092
+        },
+        {
+          "src": "/assets/images/generated/common/crops/strawberry.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 157779
+        }
+      ]
+    },
     "/assets/images/common/home-coconut.webp": {
       "fingerprint": "230733bf58dd8cc6dbd1a54cf46f535c655803986a951730f9960448aa65251b",
       "width": 1536,
@@ -3672,6 +3924,132 @@
         }
       ]
     },
+    "/assets/images/substrates/coco-husk-chips-brick-close-up.png": {
+      "fingerprint": "9663de3887c9a90bd13e92b6c8457a7ed09d0c5aaab0cf69e268f3c5f228d5d7",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33832
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17199
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 131112
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 67166
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 269674
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 137847
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 416340
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-brick-close-up.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 209699
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-husk-chips-bricks-pallets.png": {
+      "fingerprint": "2238e621edcf3aa6598d986df827c81ed7e74507d52098ec9fc469262b6a74f9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 27010
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13508
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 108698
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 53342
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 239326
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 120949
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 386586
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-bricks-pallets.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 194147
+        }
+      ]
+    },
     "/assets/images/substrates/coco-husk-chips-bricks.png": {
       "fingerprint": "a3cae54446e123e0f0f1ce41932f7cb99f897851f190c7375438f906eee7bac0",
       "width": 1254,
@@ -3795,6 +4173,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 101804
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-husk-chips-production-yard.png": {
+      "fingerprint": "b3c6cb8def76178ca7a25f8c6fb18db5f756764eec31702c809e5a92f0e04519",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19944
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11174
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 88112
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 46067
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 205948
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 107896
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 343620
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-husk-chips-production-yard.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 176196
         }
       ]
     },
@@ -3924,6 +4365,69 @@
         }
       ]
     },
+    "/assets/images/substrates/coco-peat-bricks-pallets.png": {
+      "fingerprint": "ea07ea208b06b9a15edacc5fa93f6a96febb7df88a9b541e39d46c51d7c1bf1b",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23980
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11662
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 91580
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 44939
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 198204
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 98145
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 307072
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-bricks-pallets.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 157410
+        }
+      ]
+    },
     "/assets/images/substrates/coco-peat-bricks.png": {
       "fingerprint": "a2fc9f84b38c61a4d302b18716e8cf82628fac52260f4127c3d1049f76729b80",
       "width": 1254,
@@ -4047,6 +4551,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 239111
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-peat-production-conveyor.png": {
+      "fingerprint": "0d7a5c47ca64f25ac175f1c3c2cee08b0e4161d545d3d392276a0848b18e11b3",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12922
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8236
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48056
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 29076
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 102306
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 61120
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 160232
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-production-conveyor.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 96797
         }
       ]
     },

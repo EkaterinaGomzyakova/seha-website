@@ -1,5 +1,12 @@
 import type { ApplicationIconName } from './application-icons';
-const application = (ru: string, en: string, icon: ApplicationIconName) => ({
+import type { LocalizedText } from './products';
+interface Application {
+  label: LocalizedText;
+  icon: ApplicationIconName;
+  image?: string;
+  description?: LocalizedText;
+}
+const application = (ru: string, en: string, icon: ApplicationIconName): Application => ({
   label: { ru, en },
   icon
 });
@@ -34,7 +41,40 @@ export const applications = {
   water: application('Очистка воды', 'Water treatment', 'water'),
   air: application('Очистка воздуха и газов', 'Air and gas treatment', 'air'),
   solvents: application('Регенерация растворителей', 'Solvent recovery', 'filter'),
-  barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'grill')
+  barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'grill'),
+  orchids: {
+    label: { ru: 'Орхидеи', en: 'Orchids' },
+    icon: 'flower',
+    image: '/assets/images/common/crops/orchid.png',
+    description: {
+      ru: 'Самостоятельный субстрат или компонент смеси.',
+      en: 'A standalone medium or a component of growing mixes.'
+    }
+  },
+  anthuriums: {
+    label: { ru: 'Антуриумы', en: 'Anthuriums' },
+    icon: 'flower',
+    image: '/assets/images/common/crops/anthurium.png',
+    description: {
+      ru: 'Самостоятельный субстрат или компонент смеси.',
+      en: 'A standalone medium or a component of growing mixes.'
+    }
+  },
+  bromeliads: {
+    label: { ru: 'Бромелиевые', en: 'Bromeliads' },
+    icon: 'flower',
+    image: '/assets/images/common/crops/bromeliad.png',
+    description: {
+      ru: 'Самостоятельный субстрат или компонент смеси.',
+      en: 'A standalone medium or a component of growing mixes.'
+    }
+  },
+  strawberries: {
+    label: { ru: 'Клубника', en: 'Strawberries' },
+    icon: 'strawberry',
+    image: '/assets/images/common/crops/strawberry.png',
+    description: { ru: 'В смеси с кокосовым торфом.', en: 'Blended with coco pith.' }
+  }
 } as const;
 
 // Membership is product-specific and based on client descriptions.
@@ -43,8 +83,8 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'open-top-grow-bag': ['berries'],
   'coco-peat': ['vegetables', 'flowers', 'seedlings', 'substrates'],
   'coco-peat-briquettes': ['vegetables', 'seedlings', 'substrates'],
-  'coconut-chips': ['vegetables', 'berries', 'flowers', 'substrates'],
-  'coco-husk-chips-bricks': ['vegetables', 'berries', 'flowers', 'substrates'],
+  'coconut-chips': ['orchids', 'anthuriums', 'bromeliads', 'strawberries'],
+  'coco-husk-chips-bricks': ['orchids', 'anthuriums', 'bromeliads', 'strawberries'],
   'grow-cube-sleeve': ['seedlings', 'cuttings'],
   'coco-coir-discs': ['seedlings'],
   'coco-peat-tablets': ['seedlings'],

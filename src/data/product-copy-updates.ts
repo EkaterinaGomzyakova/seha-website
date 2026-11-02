@@ -4,6 +4,12 @@ interface ProductCopyUpdate {
   description: [ru: string, en: string];
 }
 export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
+  'coco-husk-chips-bricks': {
+    description: [
+      'Прессованные брикеты из волокнистой оболочки кокоса занимают меньше места при хранении и перевозке. После увлажнения разрыхляются в крупные чипсы, которые удерживают влагу, пропускают воздух к корням и отводят лишнюю воду. Используются самостоятельно или в смеси с кокосовым торфом — в теплицах, гидропонике и питомниках. Подходят для клубники и других ягодных культур, томатов, огурцов, орхидей и декоративных растений.',
+      'Compressed coconut husk chip bricks take up less space during storage and transport. Hydration loosens them into coarse chips that retain moisture, support root-zone aeration and drain excess water. Used on their own or blended with coco pith in greenhouses, hydroponics and nurseries. Suitable for strawberries and other soft fruits, tomatoes, cucumbers, orchids and ornamental plants.'
+    ]
+  },
   'coconut-chips': {
     description: [
       'Кусочки волокнистой оболочки кокоса, отсортированные по размеру. Помогают удерживать влагу, пропускают воздух к корням и отводят лишнюю воду. Используются как самостоятельный субстрат или в смеси с кокосовым торфом и грунтом — в теплицах, гидропонике и питомниках. Подходят для клубники и других ягодных культур, томатов, огурцов, орхидей и декоративных растений.',

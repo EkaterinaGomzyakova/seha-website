@@ -1,0 +1,22 @@
+{
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "assets": [
+    {
+      "key": "orchid",
+      "prompt": "Use case: product-mockup. Create a single botanical cutout photograph for a horticultural product website: a small elegant spray of white Phalaenopsis orchid flowers with pale yellow centres and two broad green leaves. Square composition, entire botanical subject visible, centred, consistent catalogue macro photography, natural soft daylight, realistic plant details, restrained composition legible at 160 pixels. Genuine transparent background with alpha channel. No pot, no soil, no ground, no background, no checkerboard pattern, no text, no watermark, no frame, no cast shadow outside the plant."
+    },
+    {
+      "key": "anthurium",
+      "prompt": "Use case: product-mockup. Create a single botanical cutout photograph for a horticultural product website: one red Anthurium andraeanum spathe with its pale yellow spadix and two glossy green heart-shaped leaves. Square composition, entire botanical subject visible, centred, consistent catalogue macro photography, natural soft daylight, realistic plant details, restrained composition legible at 160 pixels. Genuine transparent background with alpha channel. No pot, no soil, no ground, no background, no checkerboard pattern, no text, no watermark, no frame, no cast shadow outside the plant."
+    },
+    {
+      "key": "bromeliad",
+      "prompt": "Use case: product-mockup. Create a single botanical cutout photograph for a horticultural product website: a compact Guzmania bromeliad rosette with a red-orange central inflorescence and clean green strap-shaped leaves. Square composition, entire botanical subject visible, centred, consistent catalogue macro photography, natural soft daylight, realistic plant details, restrained composition legible at 160 pixels. Genuine transparent background with alpha channel. No pot, no soil, no ground, no background, no checkerboard pattern, no text, no watermark, no frame, no cast shadow outside the plant."
+    },
+    {
+      "key": "strawberry",
+      "prompt": "Use case: product-mockup. Create a single botanical cutout photograph for a horticultural product website: a small strawberry plant sprig with two ripe red strawberries, one small white flower and three fresh serrated green leaves. Square composition, entire botanical subject visible, centred, consistent catalogue macro photography, natural soft daylight, realistic plant details, restrained composition legible at 160 pixels. Genuine transparent background with alpha channel. No pot, no soil, no ground, no background, no checkerboard pattern, no text, no watermark, no frame, no cast shadow outside the plant."
+    }
+  ]
+}

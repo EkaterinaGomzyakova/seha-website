@@ -29,7 +29,7 @@ for (const locale of ['ru', 'en']) {
     const form = dialog.locator('form');
     await expect(dialog).toBeVisible();
     await expect(dialog.locator('#product-inquiry-next-step')).toContainText(
-      locale === 'ru' ? '3 рабочих дней' : '3 working days'
+      locale === 'ru' ? '1 рабочего дня' : '1 working day'
     );
     await expect(form.locator('[value="industrial-25-l"]')).toBeChecked();
     await expect(form.locator('[data-supply-format][value="industrial"]')).toBeChecked();
@@ -101,7 +101,7 @@ for (const locale of ['ru', 'en']) {
       locale === 'ru' ? 'только для бизнеса' : 'businesses only'
     );
     await expect(page.locator('main')).not.toContainText(
-      locale === 'ru' ? '3 рабочих дней' : '3 working days'
+      locale === 'ru' ? '1 рабочего дня' : '1 working day'
     );
     await page.locator('main [data-supply-format][value="industrial"]').check();
     const industrial = page.locator('main [data-packaging-panel="industrial"]');
@@ -157,7 +157,7 @@ for (const locale of ['ru', 'en']) {
       });
       await form.locator('[type="submit"]').click();
       await expect(form.locator('[data-inquiry-result]')).toContainText(
-        locale === 'ru' ? '3 рабочих дней' : '3 working days'
+        locale === 'ru' ? '1 рабочего дня' : '1 working day'
       );
       await expect(form.locator(`[value="${selected}"]`)).toBeChecked();
     }

@@ -139,14 +139,32 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Раскрываются в воде',
       'Expand with water',
-      'После увлажнения брикет разрыхляется в крупные кокосовые чипсы.',
-      'Hydration loosens the brick into coarse coconut chips.'
+      'После увлажнения брикет разрыхляется в крупные чипсы. Объём зависит от массы брикета, размера чипсов и условий замачивания.',
+      'Hydration loosens the brick into coarse chips. The expanded volume depends on brick weight, chip size and hydration conditions.'
     ),
     benefit(
       'Аэрация и дренаж',
       'Aeration and drainage',
       'Крупная структура помогает воздуху и воде проходить через субстрат.',
       'The coarse structure helps air and water move through the growing medium.'
+    ),
+    benefit(
+      'Самостоятельно или в смеси',
+      'Standalone or blended',
+      'После увлажнения чипсы используют отдельно или смешивают с кокосовым торфом.',
+      'After hydration, chips can be used on their own or blended with coco pith.'
+    ),
+    benefit(
+      'Размер чипсов на выбор',
+      'Choice of chip size',
+      'Фракции 6–12 и 12–18 мм; другие размеры — по заказу.',
+      'Chip sizes of 6–12 and 12–18 mm; other sizes are available to order.'
+    ),
+    benefit(
+      'Промывка и сортировка',
+      'Washing and grading',
+      'Доступны промытые и просеянные варианты, в том числе с низким EC.',
+      'Washed and screened grades are available, including a low-EC option.'
     )
   ],
   'grow-cube-sleeve': [

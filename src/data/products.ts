@@ -130,8 +130,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'coco-husk-chips-bricks.png',
       'Кокосовые чипсы в брикетах',
       'Coco Husk Chips Bricks',
-      'Компактные брикеты из волокнистой оболочки кокоса для хранения и перевозки. После увлажнения разрыхляются в крупные чипсы для аэрации корневой зоны и дренажа. Используются самостоятельно или в смеси с кокосовым торфом.',
-      'Compact coconut husk chip bricks for storage and transport. Hydration loosens the bricks into coarse chips for root-zone aeration and drainage. Suitable for standalone use or blending with coco pith.',
+      ...productCopyUpdates['coco-husk-chips-bricks'].description,
       'Coco Husk Chips Bricks',
       'Improved Drainage'
     ],

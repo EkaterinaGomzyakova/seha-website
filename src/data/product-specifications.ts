@@ -98,6 +98,14 @@ const lowEc = field(
   'EC (Electrical conductivity)',
   text('< 0,5 мСм/см', '< 0.5 mS/cm')
 );
+const washedChipsEc = field(
+  'EC (Электропроводность)',
+  'EC (Electrical conductivity)',
+  text(
+    '< 0,5 мСм/см — для промытого варианта; водная вытяжка 1:1,5',
+    '< 0.5 mS/cm for the washed grade; water extract 1:1.5'
+  )
+);
 const dryWeight = field('Сухая масса', 'Dry weight');
 const dimensions = field('Размеры (Д × Ш × В)', 'Dimensions (L × W × H)');
 const expandedVolume = field('Объём после увлажнения', 'Expanded volume');
@@ -235,15 +243,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ),
     field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
     field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,8', '5.5–6.8')),
-    field(
-      'EC (Электропроводность)',
-      'EC (Electrical conductivity)',
-      text(
-        '< 0,5 мСм/см — для промытого варианта с низким EC; водная вытяжка 1:1,5',
-        '< 0.5 mS/cm for the washed, low-EC grade; water extract 1:1.5'
-      )
-    ),
-    field('Влажность', 'Moisture content', text('Обычно 15–20%', 'Typically 15–20%')),
+    washedChipsEc,
+    field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
     field(
       'Влагоудерживающая способность',
       'Water-holding capacity',
@@ -267,20 +268,39 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Чипсы из волокнистой оболочки кокоса', 'Coconut husk chips')
     ),
     field('Формат', 'Format', text('Прессованный брикет', 'Compressed brick')),
+    field('Цвет', 'Colour', text('От коричневого до тёмно-коричневого', 'Brown to dark brown')),
     field('Сухая масса', 'Dry weight', text('5 кг', '5 kg')),
     dimensions,
     expandedVolume,
-    field('Фракция чипсов', 'Chip size', text('6–12 мм / 12–18 мм', '6–12 mm / 12–18 mm')),
-    field('pH', 'pH', text('5,5–6,8', '5.5–6.8')),
-    ec,
+    field(
+      'Размер чипсов (фракция)',
+      'Chip sizes available',
+      text(
+        'Мелкая 6–12 мм / Средняя 12–18 мм / По заказу',
+        'Fine 6–12 mm / Medium 12–18 mm / Custom'
+      )
+    ),
+    field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,8', '5.5–6.8')),
+    washedChipsEc,
     field('Влажность', 'Moisture content', text('15–20%', '15–20%')),
     field(
       'Обработка',
       'Processing',
-      text('Промывка, просеивание, сортировка по фракциям', 'Washed, screened and graded')
+      text(
+        'Промывка, просеивание и сортировка по размеру — по заказу',
+        'Washed, screened and graded to order'
+      )
     ),
     waterRetention,
-    airPorosity
+    airPorosity,
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Отдельные брикеты, коробки или паллеты для экспорта',
+        'Individual bricks, cartons or palletised export packaging'
+      )
+    )
   ],
   'grow-cube-sleeve': [
     rawPith,
