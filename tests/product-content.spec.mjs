@@ -1,7 +1,11 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { products } from '../src/data/products.ts';
-import { applications, productApplications } from '../src/data/product-applications.ts';
+import {
+  applications,
+  productApplications,
+  productApplicationDescriptions
+} from '../src/data/product-applications.ts';
 import { productBenefits } from '../src/data/product-benefits.ts';
 import { specificationsFor } from '../src/data/product-specifications.ts';
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
@@ -19,7 +23,15 @@ for (const locale of ['ru', 'en']) {
       );
       expect(response.ok()).toBe(true);
       const html = await response.text();
-      for (const key of items) expect(html).toContain(applications[key].label[locale]);
+      for (const key of items) {
+        expect(html).toContain(applications[key].label[locale]);
+        if (product.category === 'substrates') {
+          const explanation = productApplicationDescriptions[product.id]?.[key];
+          expect(explanation?.ru.trim()).toBeTruthy();
+          expect(explanation?.en.trim()).toBeTruthy();
+          expect(html).toContain(explanation[locale]);
+        }
+      }
       const benefits = productBenefits[product.id];
       expect(benefits?.length).toBeGreaterThanOrEqual(2);
       for (const benefit of benefits) {

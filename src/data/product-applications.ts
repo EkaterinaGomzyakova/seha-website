@@ -1,5 +1,5 @@
 import type { ApplicationIconName } from './application-icons';
-import type { LocalizedText } from './products';
+import { text, type LocalizedText } from './products';
 interface Application {
   label: LocalizedText;
   icon: ApplicationIconName;
@@ -54,42 +54,151 @@ export const applications = {
   orchids: {
     label: { ru: 'Орхидеи', en: 'Orchids' },
     icon: 'flower',
-    image: '/assets/images/common/crops/orchid.png',
-    description: {
-      ru: 'Самостоятельный субстрат или компонент смеси.',
-      en: 'A standalone medium or a component of growing mixes.'
-    }
+    image: '/assets/images/common/crops/orchid.png'
   },
   anthuriums: {
     label: { ru: 'Антуриумы', en: 'Anthuriums' },
     icon: 'flower',
-    image: '/assets/images/common/crops/anthurium.png',
-    description: {
-      ru: 'Самостоятельный субстрат или компонент смеси.',
-      en: 'A standalone medium or a component of growing mixes.'
-    }
+    image: '/assets/images/common/crops/anthurium.png'
   },
   bromeliads: {
     label: { ru: 'Бромелиевые', en: 'Bromeliads' },
     icon: 'flower',
-    image: '/assets/images/common/crops/bromeliad.png',
-    description: {
-      ru: 'Самостоятельный субстрат или компонент смеси.',
-      en: 'A standalone medium or a component of growing mixes.'
-    }
+    image: '/assets/images/common/crops/bromeliad.png'
   },
   strawberries: crop('Клубника', 'Strawberries', 'strawberry')
 } as const;
 
 const chipsCropDescriptions: Partial<Record<keyof typeof applications, LocalizedText>> = {
-  strawberries: { ru: 'В смеси с кокосовым торфом.', en: 'Blended with coco pith.' }
+  orchids: text(
+    'Крупные чипсы сохраняют воздушные промежутки вокруг корней.',
+    'Coarse chips maintain air spaces around the roots.'
+  ),
+  anthuriums: text(
+    'Для рыхлых смесей, которые удерживают влагу и отводят лишнюю воду.',
+    'For open growing mixes that retain moisture and drain excess water.'
+  ),
+  bromeliads: text(
+    'Для эпифитных видов, которым нужен рыхлый субстрат.',
+    'For epiphytic species that need an open growing medium.'
+  ),
+  strawberries: text(
+    'Добавляют в кокосовый торф для улучшения аэрации и дренажа.',
+    'Blended with coco pith to improve aeration and drainage.'
+  )
 };
 export const productApplicationDescriptions: Record<
   string,
   Partial<Record<keyof typeof applications, LocalizedText>>
 > = {
+  'grow-bag': {
+    tomatoes: text(
+      'Для тепличного выращивания с капельным поливом.',
+      'For greenhouse cultivation with drip irrigation.'
+    ),
+    cucumbers: text(
+      'Субстрат удерживает влагу между поливами и отводит её избыток.',
+      'The growing medium retains moisture between irrigations and drains excess water.'
+    ),
+    peppers: text(
+      'Для высадки рассады и дальнейшего выращивания в теплице.',
+      'For transplanting seedlings and growing them on in the greenhouse.'
+    ),
+    strawberries: text(
+      'Для беспочвенного выращивания в теплицах и туннелях.',
+      'For soilless cultivation in greenhouses and polytunnels.'
+    )
+  },
+  'open-top-grow-bag': {
+    blueberries: text(
+      'Кислый субстрат для выращивания кустов в контейнерах.',
+      'An acidic growing medium for container-grown bushes.'
+    ),
+    raspberries: text(
+      'Для контейнерного выращивания в смеси с хорошим дренажем.',
+      'For container cultivation in a free-draining growing mix.'
+    )
+  },
+  'coco-peat': {
+    tomatoes: text(
+      'Основа субстратных смесей для тепличного выращивания.',
+      'A base for growing-media blends used in greenhouses.'
+    ),
+    cucumbers: text(
+      'Влагоёмкий субстрат для выращивания в теплицах.',
+      'A moisture-retentive medium for greenhouse cultivation.'
+    ),
+    lettuce: text(
+      'Для выращивания листовой зелени в контейнерах.',
+      'For growing leafy greens in containers.'
+    ),
+    petunias: text(
+      'Компонент лёгких горшечных смесей для цветов.',
+      'A component of light potting mixes for flowering plants.'
+    )
+  },
+  'coco-peat-briquettes': {
+    tomatoes: text(
+      'После увлажнения — основа субстрата для теплиц.',
+      'Once hydrated, a base for greenhouse growing media.'
+    ),
+    strawberries: text(
+      'После увлажнения используют в контейнерных смесях.',
+      'Used in container growing mixes after hydration.'
+    ),
+    lettuce: text(
+      'Разрыхлённый субстрат для горшков и контейнеров.',
+      'The expanded medium is used in pots and containers.'
+    ),
+    basil: text(
+      'Для горшечного выращивания после увлажнения брикета.',
+      'For pot cultivation after hydrating the brick.'
+    )
+  },
   'coconut-chips': chipsCropDescriptions,
-  'coco-husk-chips-bricks': chipsCropDescriptions
+  'coco-husk-chips-bricks': chipsCropDescriptions,
+  'grow-cube-sleeve': {
+    propagation: text(
+      'Для проращивания семян и укоренения черенков с последующей пересадкой целым кубом.',
+      'For seed germination and rooting cuttings, followed by transplanting the whole cube.'
+    )
+  },
+  'coco-coir-discs': {
+    seedlings: text(
+      'Для посева семян в горшки; диск раскрывается после увлажнения.',
+      'For sowing seeds in pots; the disc expands when hydrated.'
+    )
+  },
+  'coco-peat-tablets': {
+    seedlings: text(
+      'Для проращивания семян в рассадных лотках и горшках.',
+      'For seed germination in propagation trays and pots.'
+    )
+  },
+  'coco-peat-compost': {
+    tomatoes: text(
+      'Компонент смесей для овощей в горшках и контейнерах.',
+      'A component of mixes for vegetables grown in pots and containers.'
+    ),
+    lettuce: text(
+      'Помогает удерживать влагу в контейнерных смесях.',
+      'Helps retain moisture in container growing mixes.'
+    ),
+    basil: text(
+      'В составе смесей для горшечной зелени.',
+      'Used in potting mixes for culinary herbs.'
+    ),
+    petunias: text(
+      'Компонент смесей для кашпо и балконных ящиков.',
+      'A component of mixes for planters and window boxes.'
+    )
+  },
+  'seeding-tray-media': {
+    seedlings: text(
+      'Для заполнения кассет и выращивания рассады до пересадки.',
+      'For filling propagation trays and raising seedlings before transplanting.'
+    )
+  }
 };
 
 // Client descriptions take priority; extra crop examples follow producer guidance and research.
