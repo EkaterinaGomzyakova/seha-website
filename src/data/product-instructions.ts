@@ -84,8 +84,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Контролируйте корневую зону',
       'Monitor the root zone',
-      'Настройте полив и питание по культуре и анализу воды, регулярно проверяйте pH и EC. Подкисление выбирают с учётом щёлочности воды; кислоту и дозировку согласуют с агрономом. Свободный дренаж снижает риск переувлажнения, но не гарантирует защиты от корневых болезней.',
-      'Set irrigation and nutrition for the crop and water analysis, regularly checking pH and EC. Select acidification for water alkalinity, with acid and dosage agreed with the agronomist. Free drainage reduces waterlogging risk but does not guarantee protection from root disease.'
+      'Настройте полив и питание по культуре и анализу воды, регулярно проверяйте pH и EC. Взвесьте мешок после полива и стекания воды и отслеживайте потерю массы между поливами. Не ждите полного пересыхания; порог следующего полива подбирают по культуре, стадии роста и погоде. Подкисление согласуют с агрономом по щёлочности воды. Свободный дренаж снижает риск переувлажнения, но не гарантирует защиты от корневых болезней.',
+      'Set irrigation and nutrition for the crop and water analysis, regularly checking pH and EC. Weigh the bag after watering and drainage, then monitor weight loss between irrigations. Do not allow complete drying; set the next irrigation threshold for crop, growth stage and weather. Agree acidification with the agronomist based on water alkalinity. Free drainage reduces waterlogging risk but does not guarantee protection from root disease.'
     )
   ],
   'coco-peat': [

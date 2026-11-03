@@ -103,7 +103,6 @@ const washedChipsEc = field(
   'EC (Electrical conductivity)',
   text('< 0,5 мСм/см; водная вытяжка 1:1,5 по объёму', '< 0.5 mS/cm; water extract 1:1.5 by volume')
 );
-const dryWeight = field('Сухая масса', 'Dry weight');
 const dimensions = field('Размеры (Д × Ш × В)', 'Dimensions (L × W × H)');
 const expandedVolume = field('Объём после увлажнения', 'Expanded volume');
 const waterRetention = field('Влагоудерживающая способность', 'Water-holding capacity');
@@ -160,7 +159,14 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Custom; examples: strawberry — 100 × 20 × 9 cm; tomato — 100 × 15 × 12 cm'
       )
     ),
-    dryWeight,
+    field(
+      'Сухая масса',
+      'Dry weight',
+      text(
+        'Мат длиной 100 см: около 1,0–1,2 кг для 15 л; около 1,4–1,6 кг для 20–22 л',
+        '100 cm slab: approximately 1.0–1.2 kg for 15 L; approximately 1.4–1.6 kg for 20–22 L'
+      )
+    ),
     field(
       'Объём после увлажнения',
       'Expanded volume',
@@ -210,8 +216,28 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Number, size and layout matched to irrigation and drainage'
       )
     ),
-    waterRetention,
-    airPorosity,
+    field(
+      'Вода после свободного дренирования',
+      'Water retained after free drainage',
+      text(
+        'Около 11–13 л для мата 15 л со смесью 70–80% торфа / 20–30% чипсов по объёму',
+        'Approximately 11–13 L for a 15 L slab containing 70–80% pith / 20–30% chips by volume'
+      )
+    ),
+    field(
+      'Воздушная пористость',
+      'Air-filled porosity',
+      text(
+        'Зависит от согласованного состава, фракции и высоты мата',
+        'Depends on the agreed blend, particle grade and slab height'
+      )
+    ),
+    field(
+      'Минеральные примеси',
+      'Mineral impurities',
+      text('< 0,5% или < 1% — по исполнению', '< 0.5% or < 1%, depending on grade')
+    ),
+    field('Пылевая фракция < 0,5 мм', 'Dust fraction < 0.5 mm', text('< 5%', '< 5%')),
     field(
       'Срок службы мешка под солнцем',
       'Bag service life in direct sunlight',
@@ -266,7 +292,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Customised; 10 L example: base diameter approximately 20–22 cm, filling height approximately 28–30 cm'
       )
     ),
-    dryWeight,
+    field(
+      'Сухая масса',
+      'Dry weight',
+      text('Около 750–850 г для 10 л', 'Approximately 750–850 g for 10 L')
+    ),
     field(
       'Рабочий объём',
       'Working volume',
@@ -301,7 +331,22 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Количество, размер и расположение — по заказу', 'Number, size and layout to order')
     ),
     waterRetention,
-    airPorosity,
+    field(
+      'Воздушная пористость',
+      'Air-filled porosity',
+      text('20–35% после свободного дренирования', '20–35% after free drainage')
+    ),
+    field(
+      'Масса после полива и дренирования',
+      'Weight after watering and drainage',
+      text('Около 4,5–5 кг для мешка 10 л', 'Approximately 4.5–5 kg for a 10 L bag')
+    ),
+    field(
+      'Минеральные примеси',
+      'Mineral impurities',
+      text('< 0,5% или < 1% — по исполнению', '< 0.5% or < 1%, depending on grade')
+    ),
+    field('Пылевая фракция < 0,5 мм', 'Dust fraction < 0.5 mm', text('< 5%', '< 5%')),
     field(
       'Фракция',
       'Particle size',
@@ -338,7 +383,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       )
     ),
     ph,
-    lowEc,
+    field(
+      'EC (Электропроводность)',
+      'EC (Electrical conductivity)',
+      text('0,2–0,4 мСм/см', '0.2–0.4 mS/cm')
+    ),
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field(
       'Обработка',
@@ -353,8 +402,15 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Maximum water-holding capacity',
       text('7–9 кг воды на 1 кг сухого субстрата', '7–9 kg of water per kg of dry substrate')
     ),
-    airPorosity,
-    impurities
+    field(
+      'Воздушная пористость',
+      'Air-filled porosity',
+      text('Около 10–15% после свободного дренирования', 'Approximately 10–15% after free drainage')
+    ),
+    field('Минеральные примеси', 'Mineral impurities', text('< 1,5%', '< 1.5%')),
+    field('Пылевая фракция', 'Dust fraction', text('5–8%', '5–8%')),
+    field('Короткое волокно', 'Short fibre content', text('15–20%', '15–20%')),
+    field('Упаковка', 'Packaging', text('Мешки 50–70 л', '50–70 L bags'))
   ],
   'coco-peat-briquettes': [
     rawPith,
@@ -383,7 +439,20 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       )
     ),
     waterRetention,
-    impurities
+    field(
+      'Минеральные примеси',
+      'Mineral impurities',
+      text(
+        '< 2% или < 3% от сухой массы — по марке',
+        '< 2% or < 3% of dry weight, depending on grade'
+      )
+    ),
+    field(
+      'Короткое волокно',
+      'Short fibre content',
+      text('< 5% или < 10% — по марке', '< 5% or < 10%, depending on grade')
+    ),
+    field('Пылевая фракция < 0,5 мм', 'Dust fraction < 0.5 mm', text('< 5%', '< 5%'))
   ],
   'coconut-chips': [
     field(
@@ -424,7 +493,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Россыпью, в прессованных блоках или в упаковке по заказу',
         'Loose chips, compressed blocks or custom packaging'
       )
-    )
+    ),
+    impurities
   ],
   'coco-husk-chips-bricks': [
     rawHusk,
@@ -488,9 +558,20 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('10 × 10 × 10 см', '10 × 10 × 10 cm')
     ),
     field('Объём после увлажнения', 'Expanded volume', text('Около 1 л', 'Approximately 1 L')),
-    dryWeight,
+    field(
+      'Сухая масса',
+      'Dry weight',
+      text(
+        'Около 85–100 г для куба 10 × 10 × 10 см',
+        'Approximately 85–100 g for a 10 × 10 × 10 cm cube'
+      )
+    ),
     ph,
-    lowEc,
+    field(
+      'EC (Электропроводность)',
+      'EC (Electrical conductivity)',
+      text('< 0,3 мСм/см', '< 0.3 mS/cm')
+    ),
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field(
       'Фракция',
@@ -533,7 +614,9 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Коробки, паллеты или экспортная упаковка по заказу',
         'Cartons, palletised shipments or custom export packaging'
       )
-    )
+    ),
+    field('Минеральные примеси', 'Mineral impurities'),
+    field('Пылевая фракция < 0,5 мм', 'Dust fraction < 0.5 mm', text('< 2%', '< 2%'))
   ],
   'coco-coir-discs': [
     field(
@@ -569,8 +652,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ),
     expandedVolume,
     ph,
-    ec,
-    moisture,
+    lowEc,
+    field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field(
       'Обработка',
       'Processing',
@@ -599,7 +682,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Фракция',
       'Particle size',
       text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
-    )
+    ),
+    field('Минеральные примеси', 'Mineral impurities', text('< 1%', '< 1%'))
   ],
   'coco-peat-tablets': [
     rawPith,
@@ -618,7 +702,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ),
     expandedVolume,
     ph,
-    lowEc,
+    field(
+      'EC (Электропроводность)',
+      'EC (Electrical conductivity)',
+      text('< 0,3 мСм/см', '< 0.3 mS/cm')
+    ),
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     field('Степень прессования', 'Compression ratio'),
     field(
@@ -649,7 +737,9 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Фракция',
       'Particle size',
       text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
-    )
+    ),
+    field('Минеральные примеси', 'Mineral impurities'),
+    field('Пылевая фракция', 'Dust fraction', text('Около 10%', 'Approximately 10%'))
   ],
   'coco-peat-compost': [
     rawPith,
@@ -1348,11 +1438,17 @@ const substrateOrder = [
   'Prepared substrate EC for blueberries',
   'Moisture content at dispatch',
   'Maximum water-holding capacity',
+  'Water retained after free drainage',
+  'Weight after watering and drainage',
   'Air-filled porosity',
   'Organic matter content',
   'NPK content',
   'Added fertiliser',
   'Impurity content',
+  'Mineral impurities',
+  'Dust fraction < 0.5 mm',
+  'Dust fraction',
+  'Short fibre content',
   'Packaging'
 ];
 export function specificationsFor(product: ProductItem): Specification[] {

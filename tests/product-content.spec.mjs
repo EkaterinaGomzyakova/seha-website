@@ -62,7 +62,9 @@ for (const locale of ['ru', 'en']) {
           /каталог|метод измерения|предварительн|подтвердить|catalog|test method|confirm (by|against)|suggested|target range|batch document/i
         );
         expect(row.value[locale].trim()).not.toBe('');
-        expect(html).toContain(row.label[locale]);
+        expect(html).toContain(
+          row.label[locale].replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+        );
       }
     }
     await page.goto(`${base}/${locale}/products/veymur/veymur-mct-oil/`);

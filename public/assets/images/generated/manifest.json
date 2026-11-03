@@ -5940,6 +5940,132 @@
         }
       ]
     },
+    "/assets/images/shell/charcoal-briquettes-burning.png": {
+      "fingerprint": "057abed3eb825f16509e1ea43c6fb04100e849dab532f2b2e9fb8b5da56d0dd0",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32656
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16675
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 113006
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 59875
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 228538
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 120053
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 345614
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-burning.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 180390
+        }
+      ]
+    },
+    "/assets/images/shell/charcoal-briquettes-chimney.png": {
+      "fingerprint": "958bb7feddc9df3ccc4c668c200ce74a98d5967477142aa08ef121c817d494d0",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19112
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11199
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 58678
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34669
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 114872
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 67028
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 166824
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-briquettes-chimney.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 100974
+        }
+      ]
+    },
     "/assets/images/shell/charcoal-detail-technical.png": {
       "fingerprint": "d62d268e00852c92f126d6d96d56a8f5c0f2cb1eb35f62b3e611994f8c967eb8",
       "width": 1254,
@@ -8331,6 +8457,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 149352
+        }
+      ]
+    },
+    "/assets/images/substrates/grow-cube-side-view.png": {
+      "fingerprint": "6a6d46bc3d223102fe4493e422b0766e9651d9f350fe4828705507be7690fb98",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12718
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7690
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 50574
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 30017
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 104104
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 64121
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 157990
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-cube-side-view.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 98956
         }
       ]
     },

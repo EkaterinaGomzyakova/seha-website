@@ -52,7 +52,8 @@ export const productGalleryImages: Record<string, string[]> = {
   'grow-cube-sleeve': [
     '/assets/images/substrates/grow-cube-three-cubes.png',
     '/assets/images/substrates/grow-cube-close-up.png',
-    '/assets/images/substrates/grow-cube-seedlings.png'
+    '/assets/images/substrates/grow-cube-seedlings.png',
+    '/assets/images/substrates/grow-cube-side-view.png'
   ],
   'mature-coconut': [
     '/assets/images/food/mature-coconut.png',
@@ -143,7 +144,9 @@ export const productGalleryImages: Record<string, string[]> = {
     '/assets/images/shell/coco-shell-charcoal-briquettes.png',
     '/assets/images/shell/charcoal-neutral-technical.png',
     '/assets/images/shell/charcoal-detail-technical.png',
-    '/assets/images/shell/charcoal-production-technical.png'
+    '/assets/images/shell/charcoal-production-technical.png',
+    '/assets/images/shell/charcoal-briquettes-burning.png',
+    '/assets/images/shell/charcoal-briquettes-chimney.png'
   ],
   'coco-shell-activated-carbon': [
     '/assets/images/shell/coco-shell-activated-carbon.png',
