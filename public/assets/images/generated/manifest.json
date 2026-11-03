@@ -1712,6 +1712,69 @@
         }
       ]
     },
+    "/assets/images/fiber/coir-fiber-bales-production-yard.png": {
+      "fingerprint": "b965cd35450cfce89637e87c4cce39bbd24f28dbb1fb3ae47149bfd8a065e8fe",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 17614
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10251
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 65196
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 37330
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 140340
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 78680
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 224804
+        },
+        {
+          "src": "/assets/images/generated/fiber/coir-fiber-bales-production-yard.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 124586
+        }
+      ]
+    },
     "/assets/images/fiber/coir-fiber-bales.png": {
       "fingerprint": "b6e0d6216bff4b90d4bde73ec12ebaf1449011b0c4f8c8e90608f3b3ffdc671d",
       "width": 1254,
@@ -5247,6 +5310,69 @@
         }
       ]
     },
+    "/assets/images/substrates/coco-peat-brick-top.png": {
+      "fingerprint": "cc6c83dba5e877b37b7d1965c9d626bd16ba2037987312193ad705f7dce43bc4",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34358
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 18077
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 151694
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 77992
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 329342
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 161613
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 503450
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-brick-top.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 245033
+        }
+      ]
+    },
     "/assets/images/substrates/coco-peat-bricks-pallets.png": {
       "fingerprint": "ea07ea208b06b9a15edacc5fa93f6a96febb7df88a9b541e39d46c51d7c1bf1b",
       "width": 1254,
@@ -5373,6 +5499,69 @@
         }
       ]
     },
+    "/assets/images/substrates/coco-peat-compost-bulk.png": {
+      "fingerprint": "c5073fbe96426536c7036e7967410be795f3f3754e651ff8ad27ef75b574d21c",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28968
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15202
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 122284
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 64162
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 263496
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 139644
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 420620
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-bulk.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 219757
+        }
+      ]
+    },
     "/assets/images/substrates/coco-peat-compost-green-trowel.png": {
       "fingerprint": "b74c5ab59147baba2bb652c94aa8b9c0534dcf59f6dd99dbcd359334f9decfb6",
       "width": 1254,
@@ -5433,6 +5622,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 211402
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-peat-compost-sprouts.png": {
+      "fingerprint": "c226df5a1f2015ffd7c513db1472bde2f44067953c1f2ba40b1e61772d77d1e4",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 42160
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 20311
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 143792
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 72356
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 264930
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 138451
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 378702
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-compost-sprouts.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 203672
         }
       ]
     },
@@ -5559,6 +5811,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 239111
+        }
+      ]
+    },
+    "/assets/images/substrates/coco-peat-irrigation-beds.png": {
+      "fingerprint": "847f01ec9430d57c8609e00cf216d09f835a6cb4727de4c781e2c607109ce893",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24072
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12275
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 96730
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 50618
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 217172
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 114319
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 352248
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-irrigation-beds.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 183226
         }
       ]
     },
@@ -6633,6 +6948,195 @@
         }
       ]
     },
+    "/assets/images/veymur/coconut-milk-glass.png": {
+      "fingerprint": "18d144b690777182ae50f00e1fbacad0448115c83534315454d3d3bb593708e0",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21614
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12203
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 69022
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 40430
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 126812
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 74022
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 179552
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-milk-glass.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 106966
+        }
+      ]
+    },
+    "/assets/images/veymur/coconut-sugar-jar.png": {
+      "fingerprint": "42c31c81ece23992fcc97415a118fa28582394c66dcdbd8f9fecb3656022b3a8",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26796
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13518
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 96584
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 51188
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 185456
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 101168
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 272250
+        },
+        {
+          "src": "/assets/images/generated/veymur/coconut-sugar-jar.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 152812
+        }
+      ]
+    },
+    "/assets/images/veymur/desiccated-coconut-close-up.png": {
+      "fingerprint": "332843ffd92ca51149531af8589c70cd0ee4b2203b7b3056439cfe00c7f78375",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 31776
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16750
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 100906
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 55183
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 174650
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 102282
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 238412
+        },
+        {
+          "src": "/assets/images/generated/veymur/desiccated-coconut-close-up.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 147844
+        }
+      ]
+    },
     "/assets/images/veymur/veymur-coconut-milk.png": {
       "fingerprint": "15d967e12be43fb356fd458d85b463c9a3228d9c8e6e010a5cad597d5f293700",
       "width": 1254,
@@ -7008,6 +7512,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 32126
+        }
+      ]
+    },
+    "/assets/images/veymur/virgin-coconut-oil-jar.png": {
+      "fingerprint": "ae2b0542de0cac74a2581a85107bcb766a752bf02f4afb93650b0bb30dda80ed",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 16452
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10394
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48870
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 31764
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86302
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 57129
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 122470
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-coconut-oil-jar.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 82349
         }
       ]
     }

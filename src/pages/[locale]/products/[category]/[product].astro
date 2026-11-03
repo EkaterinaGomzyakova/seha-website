@@ -9,6 +9,7 @@ import ProductStock from '../../../../components/ProductStock.astro';
 import ProductQuantity from '../../../../components/ProductQuantity.astro';
 import ProductApplications from '../../../../components/ProductApplications.astro';
 import ProductBenefits from '../../../../components/ProductBenefits.astro';
+import ProductInstructions from '../../../../components/ProductInstructions.astro';
 import ProductPackaging from '../../../../components/ProductPackaging.astro';
 import { productPackaging } from '../../../../data/product-packaging';
 import { productInquiryCopy } from '../../../../data/product-inquiry';
@@ -99,6 +100,7 @@ const category = productCategories.find((category) => category.slug === item.cat
       </dl>
     </section>
     <ProductApplications productId={item.id} locale={locale} />
+    <ProductInstructions productId={item.id} locale={locale} />
   </main>
 </SiteLayout>
 <style>

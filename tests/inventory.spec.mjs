@@ -99,7 +99,7 @@ for (const locale of ['ru', 'en']) {
     await page.clock.fastForward(61_000);
     await expect(stock).toContainText('42');
     expect(requests).toBe(2);
-    await expect(page.locator('.product-detail__summary > p')).toBeVisible();
+    await expect(page.locator('.product-detail__summary > p').first()).toBeVisible();
   });
 
   test(`inventory ${locale} handles zero, translated units and unavailable Google Sheets`, async ({

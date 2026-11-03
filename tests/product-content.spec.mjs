@@ -8,6 +8,7 @@ import {
 } from '../src/data/product-applications.ts';
 import { productBenefits } from '../src/data/product-benefits.ts';
 import { specificationsFor } from '../src/data/product-specifications.ts';
+import { productInstructions } from '../src/data/product-instructions.ts';
 const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
 
 for (const locale of ['ru', 'en']) {
@@ -30,6 +31,16 @@ for (const locale of ['ru', 'en']) {
           expect(explanation?.ru.trim()).toBeTruthy();
           expect(explanation?.en.trim()).toBeTruthy();
           expect(html).toContain(explanation[locale]);
+        }
+      }
+      if (product.category === 'substrates') {
+        const steps = productInstructions[product.id];
+        expect(steps?.length).toBeGreaterThanOrEqual(4);
+        for (const step of steps) {
+          expect(step.title.ru.trim()).toBeTruthy();
+          expect(step.title.en.trim()).toBeTruthy();
+          expect(html).toContain(step.title[locale]);
+          expect(html).toContain(step.description[locale]);
         }
       }
       const benefits = productBenefits[product.id];

@@ -91,7 +91,7 @@ const rawPith = field('Сырьё', 'Raw material', text('Кокосовый т�
 const rawHusk = field('Сырьё', 'Raw material', text('Волокнистая оболочка кокоса', 'Coconut husk'));
 const rawFibre = field('Материал', 'Material', text('Кокосовое волокно', 'Coconut coir fibre'));
 const moisture = field('Влажность при поставке', 'Moisture content at dispatch');
-const ph = field('pH', 'pH', text('5,5–6,5', '5.5–6.5'));
+const ph = field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,5', '5.5–6.5'));
 const ec = field('EC (Электропроводность)', 'EC (Electrical conductivity)');
 const lowEc = field(
   'EC (Электропроводность)',
@@ -102,8 +102,8 @@ const washedChipsEc = field(
   'EC (Электропроводность)',
   'EC (Electrical conductivity)',
   text(
-    '< 0,5 мСм/см — для промытого варианта; водная вытяжка 1:1,5',
-    '< 0.5 mS/cm for the washed grade; water extract 1:1.5'
+    '< 0,5 мСм/см — для промытого варианта; водная вытяжка 1:1,5 по объёму',
+    '< 0.5 mS/cm for the washed grade; water extract 1:1.5 by volume'
   )
 );
 const dryWeight = field('Сухая масса', 'Dry weight');
@@ -147,17 +147,54 @@ const matWeight = field('Поверхностная плотность', 'Mass p
 
 const productSpecifications: Record<string, readonly Specification[]> = {
   'grow-bag': [
-    field('Состав субстрата', 'Substrate composition'),
-    dimensions,
+    field(
+      'Состав субстрата',
+      'Substrate composition',
+      text(
+        'Кокосовый торф, чипсы и волокно; соотношение под культуру',
+        'Coco pith, chips and fibre; crop-specific blend'
+      )
+    ),
+    field(
+      'Размеры после увлажнения',
+      'Hydrated dimensions',
+      text(
+        'По заказу; примеры: клубника — 100 × 20 × 9 см; томат — 100 × 15 × 12 см',
+        'Custom; examples: strawberry — 100 × 20 × 9 cm; tomato — 100 × 15 × 12 cm'
+      )
+    ),
     dryWeight,
-    expandedVolume,
+    field(
+      'Объём после увлажнения',
+      'Expanded volume',
+      text(
+        'По заказу, под культуру и систему выращивания',
+        'Customised for the crop and growing system'
+      )
+    ),
+    field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
     field('Фракция', 'Particle size'),
     ph,
     lowEc,
-    moisture,
+    field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
     processing,
     field('Материал оболочки', 'Sleeve material'),
-    field('Посадочные и дренажные отверстия', 'Planting and drainage holes'),
+    field(
+      'Посадочные отверстия',
+      'Planting holes',
+      text(
+        'Количество, размер и расположение — под культуру и плотность посадки',
+        'Number, size and layout matched to crop and planting density'
+      )
+    ),
+    field(
+      'Дренажные отверстия',
+      'Drainage holes',
+      text(
+        'Количество, размер и расположение — под полив и отвод воды',
+        'Number, size and layout matched to irrigation and drainage'
+      )
+    ),
     waterRetention,
     airPorosity
   ],
@@ -167,9 +204,23 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Substrate composition',
       text('60% кокосового торфа / 40% кокосовых чипсов', '60% coco pith / 40% coco chips')
     ),
-    dimensions,
+    field(
+      'Размеры мешка',
+      'Bag dimensions',
+      text(
+        'По заказу, под культуру, сорт и систему выращивания',
+        'Customised for crop, variety and growing system'
+      )
+    ),
     dryWeight,
-    expandedVolume,
+    field(
+      'Объём после увлажнения',
+      'Expanded volume',
+      text(
+        'По заказу, под объём корней и схему полива',
+        'Customised for root volume and irrigation layout'
+      )
+    ),
     // The crop-specific acidity is part of the product variant, not a generic pH claim.
     field('pH — вариант для голубики', 'pH — blueberry grade', text('4,5–5,5', '4.5–5.5')),
     field('pH — вариант для малины', 'pH — raspberry grade'),
@@ -186,6 +237,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Bag construction',
       text('Открытый верх, дренажные отверстия', 'Open top, drainage holes')
     ),
+    field(
+      'Дренажные отверстия',
+      'Drainage holes',
+      text('Количество, размер и расположение — по заказу', 'Number, size and layout to order')
+    ),
     waterRetention,
     airPorosity
   ],
@@ -195,7 +251,6 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ph,
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
-    field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
     processing,
     field(
       'Влагоудерживающая способность',
@@ -208,7 +263,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'coco-peat-briquettes': [
     rawPith,
     field('Формат', 'Format', text('Прессованный брикет / блок', 'Compressed brick / block')),
-    dimensions,
+    field(
+      'Размеры блока 5 кг',
+      '5 kg block dimensions',
+      text('30 × 30 × 12 см', '30 × 30 × 12 cm')
+    ),
     expandedVolume,
     field('Фракция', 'Particle size'),
     ph,
@@ -270,7 +329,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Формат', 'Format', text('Прессованный брикет', 'Compressed brick')),
     field('Цвет', 'Colour', text('От коричневого до тёмно-коричневого', 'Brown to dark brown')),
     field('Сухая масса', 'Dry weight', text('5 кг', '5 kg')),
-    dimensions,
+    field(
+      'Размеры блока 5 кг',
+      '5 kg block dimensions',
+      text('30 × 30 × 12 см', '30 × 30 × 12 cm')
+    ),
     expandedVolume,
     field(
       'Размер чипсов (фракция)',
@@ -573,14 +636,43 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'coir-fiber-bales': [
     rawHusk,
     rawFibre,
-    field('Длина волокна', 'Fibre length'),
+    field(
+      'Длина волокна',
+      'Fibre length',
+      text(
+        'Короткое, среднее или длинное — по выбранной марке',
+        'Short, medium or long, according to grade'
+      )
+    ),
     field(
       'Цвет',
       'Colour',
       text('От золотисто-коричневого до тёмно-коричневого', 'Golden brown to dark brown')
     ),
-    field('Размеры тюка', 'Bale dimensions'),
+    field('Размеры тюка', 'Bale dimensions', text('По заказу', 'Customised')),
     field('Масса нетто тюка', 'Net bale weight'),
+    field('Структура волокна', 'Fibre texture', text('Грубое, упругое', 'Coarse and resilient')),
+    field(
+      'Формат тюка',
+      'Bale type',
+      text(
+        'Прессованный или непрессованный — в зависимости от наличия',
+        'Compressed or non-compressed, subject to availability'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text('Тюк, закреплённый лентами или обёрткой', 'Bale secured with straps or wrapping')
+    ),
+    field(
+      'Условия хранения',
+      'Storage conditions',
+      text(
+        'В чистом, сухом, проветриваемом месте, с защитой от влаги',
+        'Clean, dry, ventilated storage, protected from moisture'
+      )
+    ),
     moisture,
     impurities,
     tensileStrength,
@@ -593,10 +685,16 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'machine-twisted-fiber': [
     rawFibre,
     field('Обработка', 'Processing', text('Механическое скручивание', 'Mechanical twisting')),
-    field('Диаметр пряди', 'Strand diameter'),
-    field('Длина пряди', 'Strand length'),
-    field('Степень скрутки', 'Twist level'),
+    field('Диаметр пряди', 'Strand diameter', text('По заказу', 'Customised')),
+    field(
+      'Длина пряди',
+      'Strand length',
+      text('По требованиям производства', 'According to production requirements')
+    ),
+    field('Степень скрутки', 'Twist level', text('По заказу', 'Customised')),
     moisture,
+    field('Структура', 'Texture', text('Грубая, волокнистая', 'Coarse and fibrous')),
+    field('Упаковка', 'Packaging', text('По заказу', 'According to buyer requirements')),
     tensileStrength,
     impurities,
     field('Цвет', 'Colour', text('Натуральный коричневый', 'Natural brown'))
@@ -623,7 +721,25 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ),
     field('Ширина рулона', 'Roll width', text('1 / 2 м', '1 / 2 m')),
     field('Длина рулона', 'Roll length', text('25 / 50 м', '25 / 50 m')),
-    field('Размер ячейки', 'Mesh opening'),
+    field(
+      'Размер ячейки',
+      'Mesh opening',
+      text('По заказу, с учётом плотности полотна', 'Customised according to fabric grade')
+    ),
+    field('Цвет', 'Colour', text('Натуральный коричневый', 'Natural brown')),
+    field(
+      'Биоразлагаемость',
+      'Biodegradability',
+      text(
+        'Биоразлагаемый материал; срок зависит от плотности и условий участка',
+        'Biodegradable; duration depends on grade and site conditions'
+      )
+    ),
+    field(
+      'Водопроницаемость',
+      'Water permeability',
+      text('Открытая сетка пропускает воду', 'Open mesh allows water passage')
+    ),
     field('Открытая площадь', 'Open area'),
     tensileStrength,
     field('Удлинение при разрыве', 'Elongation at break')
@@ -636,7 +752,25 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Свежая мякоть зрелых кокосов', 'Fresh, mature coconut kernels')
     ),
     ingredients,
-    field('Способ извлечения', 'Extraction process'),
+    field(
+      'Цвет в жидком состоянии',
+      'Colour when liquid',
+      text('От бесцветного до бледно-жёлтого', 'Colourless to pale yellow')
+    ),
+    field('Добавки', 'Additives', text('уточнить', 'to be confirmed')),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Пищевые бутылки, банки или транспортная тара — по наличию',
+        'Food-grade bottles, jars, cans or bulk containers, subject to availability'
+      )
+    ),
+    field(
+      'Способ извлечения',
+      'Extraction process',
+      text('Механическое извлечение', 'Mechanical extraction')
+    ),
     field(
       'Обработка',
       'Processing',
@@ -705,6 +839,17 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Сок соцветий кокосовой пальмы', 'Coconut palm flower sap')
     ),
     ingredients,
+    field(
+      'Текстура',
+      'Texture',
+      text('Сыпучие гранулы или порошок', 'Free-flowing granules or powder')
+    ),
+    field('Добавки', 'Additives', text('уточнить', 'to be confirmed')),
+    field(
+      'Упаковка',
+      'Packaging',
+      text('Пищевые пакеты, мешки или оптовая тара', 'Food-grade pouches, bags or bulk packaging')
+    ),
     field('Форма', 'Form', text('Гранулы / порошок', 'Granules / powder')),
     field(
       'Цвет',
@@ -722,7 +867,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Общее содержание сахаров', 'Total sugars'),
     field('pH', 'pH'),
     ash,
-    impurities,
+    field('Посторонние включения', 'Foreign matter', text('Отсутствуют', 'Absent')),
     ...microbiology,
     organic,
     shelfLife,
@@ -731,6 +876,15 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'veymur-desiccated-coconut': [
     field('Сырьё', 'Raw material', text('Мякоть зрелых кокосов', 'Mature coconut kernels')),
     ingredients,
+    field('Текстура', 'Texture', text('Сухая, сыпучая стружка', 'Dry, free-flowing particles')),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Пищевая розничная или оптовая упаковка по заказу',
+        'Food-grade retail or bulk packaging to order'
+      )
+    ),
     field('Добавки', 'Additives'),
     field('Цвет', 'Colour', text('От белого до кремово-белого', 'White to creamy white')),
     field(
@@ -745,7 +899,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ash,
     ffa,
     field('Остаточный диоксид серы (SO₂)', 'Residual sulphur dioxide (SO₂)'),
-    impurities,
+    field('Посторонние включения', 'Foreign matter', text('Отсутствуют', 'Absent')),
     ...microbiology,
     organic,
     shelfLife,
@@ -753,7 +907,20 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   ],
   'veymur-coconut-milk': [
     field('Сырьё', 'Raw material', text('Мякоть зрелых кокосов', 'Mature coconut kernels')),
+    field(
+      'Основа состава',
+      'Base ingredients',
+      text('Кокосовый экстракт и вода', 'Coconut extract and water')
+    ),
     ingredients,
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Асептическая картонная упаковка, банка или другая пищевая тара — по наличию',
+        'Aseptic carton, can or other food-grade packaging, subject to availability'
+      )
+    ),
     field('Добавки', 'Additives'),
     field('Цвет', 'Colour', text('От белого до кремово-белого', 'White to creamy white')),
     field('Консистенция', 'Texture', text('Однородная кремовая жидкость', 'Smooth, creamy liquid')),
@@ -779,10 +946,57 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Объём кокосовой воды', 'Coconut water volume'),
     field('Содержание растворимых сухих веществ (°Brix)', 'Soluble solids (°Brix)'),
     field('Масса мякоти', 'Kernel weight'),
-    field('Степень очистки', 'Husk preparation'),
+    field(
+      'Степень очистки',
+      'Husk preparation',
+      text(
+        'С волокнистой оболочкой или очищенные — по заказу и наличию',
+        'With husk or dehusked, according to order and availability'
+      )
+    ),
     field('Температура хранения и перевозки', 'Storage and transport temperature'),
     shelfLife,
-    organic
+    organic,
+    field(
+      'Внешний вид',
+      'Appearance',
+      text(
+        'Свежие, без видимой плесени и серьёзных повреждений',
+        'Fresh, sound, free from visible mould and serious damage'
+      )
+    ),
+    field(
+      'Посторонние включения',
+      'Impurity content',
+      text(
+        'Без видимой почвы и посторонних материалов',
+        'Free from visible soil and foreign material'
+      )
+    ),
+    field(
+      'Повреждения вредителями',
+      'Pest damage',
+      text(
+        'Без заражения и неприемлемых повреждений',
+        'Free from infestation and unacceptable damage'
+      )
+    ),
+    field(
+      'Калибровка',
+      'Size grading',
+      text(
+        'Мелкие, средние, крупные или по согласованной массе и диаметру',
+        'Small, medium, large or by agreed weight and diameter'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Экспортные коробки, сетчатые мешки или другая согласованная тара',
+        'Export cartons, mesh bags or other agreed packaging'
+      )
+    )
   ],
   'mature-coconut': [
     field('Тип продукта', 'Product type', text('Зрелый кокос', 'Mature coconut')),
@@ -798,10 +1012,57 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Shell condition',
       text('Целая, без трещин', 'Sound, free from cracks')
     ),
-    field('Степень очистки', 'Husk preparation'),
+    field(
+      'Степень очистки',
+      'Husk preparation',
+      text(
+        'С волокнистой оболочкой или очищенные — по заказу и наличию',
+        'With husk or dehusked, according to order and availability'
+      )
+    ),
     field('Температура хранения и перевозки', 'Storage and transport temperature'),
     shelfLife,
-    organic
+    organic,
+    field(
+      'Внешний вид',
+      'Appearance',
+      text(
+        'Свежие, без видимой плесени и серьёзных повреждений',
+        'Fresh, sound, free from visible mould and serious damage'
+      )
+    ),
+    field(
+      'Посторонние включения',
+      'Foreign matter',
+      text(
+        'Без видимой почвы и посторонних материалов',
+        'Free from visible soil and foreign material'
+      )
+    ),
+    field(
+      'Повреждения вредителями',
+      'Pest damage',
+      text(
+        'Без заражения и неприемлемых повреждений',
+        'Free from infestation and unacceptable damage'
+      )
+    ),
+    field(
+      'Калибровка',
+      'Size grading',
+      text(
+        'Мелкие, средние, крупные или по согласованной массе и диаметру',
+        'Small, medium, large or by agreed weight and diameter'
+      )
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Экспортные коробки, сетчатые мешки или другая согласованная тара',
+        'Export cartons, mesh bags or other agreed packaging'
+      )
+    )
   ],
   'coco-shell-charcoal-briquettes': [
     field('Сырьё', 'Raw material', text('Уголь из кокосовой скорлупы', 'Coconut shell charcoal')),
@@ -818,9 +1079,26 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Calorific value',
       text('6 500–7 500 ккал/кг', '6,500–7,500 kcal/kg')
     ),
-    field('Продолжительность горения', 'Burning duration'),
-    field('Связующее', 'Binder'),
-    field('Условия хранения', 'Storage conditions', text('В сухом месте', 'Keep dry'))
+    field(
+      'Продолжительность горения',
+      'Burning duration',
+      text('Зависит от размера, плотности и подачи воздуха', 'Depends on size, density and airflow')
+    ),
+    field(
+      'Связующее',
+      'Binder',
+      text('Крахмальное или другое согласованное связующее', 'Starch-based or other agreed binder')
+    ),
+    field('Условия хранения', 'Storage conditions', text('В сухом месте', 'Keep dry')),
+    field('Цвет', 'Colour', text('От чёрного до тёмно-серого', 'Black to dark grey')),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Внутренний пакет в коробке или экспортный мешок',
+        'Inner polybag with carton or export sack'
+      )
+    )
   ],
   'coco-shell-activated-carbon': [
     field('Сырьё', 'Raw material', text('Кокосовая скорлупа', 'Coconut shell')),
@@ -829,7 +1107,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Form',
       text('Гранулы (GAC) / порошок (PAC)', 'Granular (GAC) / powdered (PAC)')
     ),
-    field('Размер частиц', 'Particle size'),
+    field(
+      'Размер частиц',
+      'Particle size',
+      text('Разные ситовые фракции — по заказу', 'Different mesh sizes to order')
+    ),
     field('Йодное число', 'Iodine number', text('900–1 200 мг/г', '900–1,200 mg/g')),
     field('Удельная поверхность BET', 'BET surface area'),
     field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 5%', '≤ 5%')),
@@ -838,10 +1120,66 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field('Прочность гранул', 'Granule hardness', text('≥ 95–98%', '≥ 95–98%')),
     field('Активность CTC', 'CTC activity', text('40–60%', '40–60%')),
     field('pH', 'pH', text('9–11', '9–11')),
-    field('Активация', 'Activation process')
+    field(
+      'Активация',
+      'Activation process',
+      text(
+        'Паровая или другая согласованная обработка',
+        'Steam or other specified activation process'
+      )
+    )
   ]
 };
 
+const substrateOrder = [
+  'Format',
+  'Shape',
+  '5 kg block dimensions',
+  'Hydrated dimensions',
+  'Bag dimensions',
+  'Expanded dimensions',
+  'Dimensions (L × W × H)',
+  'Diameter',
+  'Dry thickness',
+  'Dry weight',
+  'Expanded volume',
+  'Expanded height',
+  'Expansion ratio',
+  'Substrate composition',
+  'Composition',
+  'Raw material',
+  'Appearance',
+  'Colour',
+  'Particle size',
+  'Chip sizes available',
+  'Processing',
+  'Buffering',
+  'Sleeve material',
+  'Bag material',
+  'Bag construction',
+  'Planting hole',
+  'Planting holes',
+  'Drainage holes',
+  'Cell count',
+  'Cell volume',
+  'Cell shape',
+  'Tray dimensions',
+  'Tray material',
+  'Drainage',
+  'pH',
+  'pH (Acidity)',
+  'pH — blueberry grade',
+  'pH — raspberry grade',
+  'EC (Electrical conductivity)',
+  'Moisture content at dispatch',
+  'Water-holding capacity',
+  'Air-filled porosity',
+  'Organic matter content',
+  'NPK content',
+  'Added fertiliser',
+  'Impurity content',
+  'Packaging'
+];
 export function specificationsFor(product: ProductItem): Specification[] {
   const rows = productSpecifications[product.id];
   if (!rows) throw new Error(`Missing specifications for product: ${product.id}`);
@@ -854,6 +1192,14 @@ export function specificationsFor(product: ProductItem): Specification[] {
         ? text('Произведено в штате Тамилнад, Индия', 'Manufactured in Tamil Nadu, India')
         : text('Индия', 'India')
     ),
-    ...rows
+    ...(product.category === 'substrates'
+      ? [...rows].sort((a, b) => {
+          const rank = (label: string) => {
+            const index = substrateOrder.indexOf(label);
+            return index < 0 ? substrateOrder.length : index;
+          };
+          return rank(a.label.en) - rank(b.label.en);
+        })
+      : rows)
   ];
 }

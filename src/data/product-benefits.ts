@@ -19,6 +19,24 @@ const benefit = (
 export const productBenefits: Record<string, readonly ProductBenefit[]> = {
   'grow-bag': [
     benefit(
+      'Влага и воздух',
+      'Moisture and aeration',
+      'Кокосовая смесь удерживает воду и сохраняет воздушные промежутки; дренажные отверстия отводят её избыток.',
+      'The coir blend retains water and maintains air spaces; drainage holes release excess water.'
+    ),
+    benefit(
+      'Полив и питание под контролем',
+      'Irrigation and feeding control',
+      'Подходит для капельного полива и внесения удобрений с водой. Режим подбирают под культуру и стадию роста.',
+      'Suited to drip irrigation and fertigation, with settings matched to crop and growth stage.'
+    ),
+    benefit(
+      'Отдельный корневой объём',
+      'Separate root volume',
+      'Позволяет выращивать растения без контакта корней с почвой участка. Чистота системы зависит от воды, рассады и ухода.',
+      'Allows roots to grow separately from site soil. System hygiene still depends on water, plants and management.'
+    ),
+    benefit(
       'Состав под культуру',
       'Crop-specific blend',
       'Соотношение компонентов согласуется под выращиваемую культуру.',
@@ -33,11 +51,35 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Нужные отверстия',
       'Hole configuration',
-      'Расположение отверстий согласуется для выбранной системы выращивания.',
-      'Hole positions are agreed for the growing system.'
+      'Количество, размеры и расположение посадочных и дренажных отверстий согласуются под культуру и систему полива.',
+      'The number, size and layout of planting and drainage holes are agreed for the crop and irrigation system.'
     )
   ],
   'open-top-grow-bag': [
+    benefit(
+      'Размер и объём по заказу',
+      'Custom size and volume',
+      'Размер мешка, объём субстрата после увлажнения и отверстия подбирают под культуру, сорт и рекомендации агронома.',
+      'Bag size, hydrated substrate volume and holes are matched to the crop, variety and agronomist recommendations.'
+    ),
+    benefit(
+      'Влага и воздух',
+      'Moisture and aeration',
+      'Кокосовая смесь удерживает воду и сохраняет воздушные промежутки; дренажные отверстия отводят её избыток.',
+      'The coir blend retains water and maintains air spaces; drainage holes release excess water.'
+    ),
+    benefit(
+      'Полив и питание под контролем',
+      'Irrigation and feeding control',
+      'Подходит для капельного полива и внесения удобрений с водой. Режим подбирают под культуру и стадию роста.',
+      'Suited to drip irrigation and fertigation, with settings matched to crop and growth stage.'
+    ),
+    benefit(
+      'Отдельный корневой объём',
+      'Separate root volume',
+      'Позволяет выращивать растения без контакта корней с почвой участка. Чистота системы зависит от воды, рассады и ухода.',
+      'Allows roots to grow separately from site soil. System hygiene still depends on water, plants and management.'
+    ),
     benefit(
       'Торф и чипсы',
       'Pith and chips',
