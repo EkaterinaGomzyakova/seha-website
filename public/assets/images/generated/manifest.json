@@ -1712,6 +1712,132 @@
         }
       ]
     },
+    "/assets/images/fiber/bales-closeup-technical.png": {
+      "fingerprint": "63163b0d802269091f57da8fbea54c2e5333a1c62f58f2bb00748914cb57876f",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 30078
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16274
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 117494
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 62951
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 248106
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 132506
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 390188
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-closeup-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 203203
+        }
+      ]
+    },
+    "/assets/images/fiber/bales-neutral-technical.png": {
+      "fingerprint": "de5bd7f091386bb590336373db1d47b1be68a0108b5ea6f99359b119dcb4bd34",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25900
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14123
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 111174
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 59225
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 251276
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 130208
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 407830
+        },
+        {
+          "src": "/assets/images/generated/fiber/bales-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 207173
+        }
+      ]
+    },
     "/assets/images/fiber/coir-fiber-bales-production-yard.png": {
       "fingerprint": "b965cd35450cfce89637e87c4cce39bbd24f28dbb1fb3ae47149bfd8a065e8fe",
       "width": 1254,
@@ -2027,6 +2153,195 @@
         }
       ]
     },
+    "/assets/images/fiber/geotextile-detail-technical.png": {
+      "fingerprint": "31617e1582ec252dccf1ac026b03375ae47c7288a34916d32e5e28adfad80041",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34602
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17630
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 139400
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 68799
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 303394
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 148727
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 475432
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-detail-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 237206
+        }
+      ]
+    },
+    "/assets/images/fiber/geotextile-roll-technical.png": {
+      "fingerprint": "3921485ae352c9121fcd45c65a28f043dcb9c572621dd8dd5019426a9dc173e0",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32626
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 16142
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 128030
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 64068
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 278124
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 140093
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 439616
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-roll-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 222894
+        }
+      ]
+    },
+    "/assets/images/fiber/geotextile-slope-technical.png": {
+      "fingerprint": "b22bd11ff79bdab573071fccd310154f0c8f9ef91e09a245b0e87a07fcae65e6",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 43812
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 21684
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 179864
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 85848
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 372818
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 179780
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 582792
+        },
+        {
+          "src": "/assets/images/generated/fiber/geotextile-slope-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 274337
+        }
+      ]
+    },
     "/assets/images/fiber/machine-twisted-fiber.png": {
       "fingerprint": "bc60188f6db27d075cef8ffd36abcf1468a01dcc1d0815e93d23e5c553e6f548",
       "width": 1254,
@@ -2087,6 +2402,384 @@
           "width": 1254,
           "height": 1254,
           "bytes": 179018
+        }
+      ]
+    },
+    "/assets/images/fiber/twisted-detail-technical.png": {
+      "fingerprint": "951b5b2906a8bea2c494ac2212fa276df1e664a64b47b76b2fe511d330fb5873",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23882
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12491
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 93840
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 48708
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 185210
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 99330
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 284054
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-detail-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 151220
+        }
+      ]
+    },
+    "/assets/images/fiber/twisted-neutral-technical.png": {
+      "fingerprint": "491ae93f0bcd866f042eabc4289e50ca6b26e61dfbf079dd074ee0900d2bbc9e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 30784
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15867
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 135126
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 68908
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 307000
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 155474
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 502824
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 247168
+        }
+      ]
+    },
+    "/assets/images/fiber/twisted-production-technical.png": {
+      "fingerprint": "d66a730fa371a9556e8d7f16a9257d993f541e2a4b23d27763c2a22b90924430",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25530
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13350
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 93914
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 50192
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 191514
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 105073
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 289762
+        },
+        {
+          "src": "/assets/images/generated/fiber/twisted-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 163689
+        }
+      ]
+    },
+    "/assets/images/fiber/weed-mat-detail-technical.png": {
+      "fingerprint": "9938ae19e64d3e9a58a90b4c76fd5e9522dbb575afb17737fffad9a8979c11fe",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 34682
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 18023
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 132614
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 66654
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 264462
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 135444
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 396930
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-detail-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 206633
+        }
+      ]
+    },
+    "/assets/images/fiber/weed-mat-roll-technical.png": {
+      "fingerprint": "b2446bb2fec8cab5b79169b313ff47e27d54eff551991153f9620236c3c24f85",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23454
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12782
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 106412
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 57029
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 240872
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 128862
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 398214
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-roll-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 208003
+        }
+      ]
+    },
+    "/assets/images/fiber/weed-mat-use-technical.png": {
+      "fingerprint": "38d81d3166d1528ce2cf14e0c13e734f527fe60c73b8c41ab991a51836af34d6",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 35086
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17658
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 137094
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 70206
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 275372
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 143784
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 416458
+        },
+        {
+          "src": "/assets/images/generated/fiber/weed-mat-use-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 219522
         }
       ]
     },
@@ -2531,6 +3224,132 @@
         }
       ]
     },
+    "/assets/images/food/mature-neutral-technical.png": {
+      "fingerprint": "a293561997ca10d4a1a643787becdf2e4258c9bf46e430bd17c30246906bc62c",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24248
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13652
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 94074
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 50716
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 190886
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 102938
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 293652
+        },
+        {
+          "src": "/assets/images/generated/food/mature-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 156924
+        }
+      ]
+    },
+    "/assets/images/food/mature-production-technical.png": {
+      "fingerprint": "0d29898da83e28ca5b7e2fc5fac4e6ff3bfa3a72dd9b9596c66e6d81b6a0df1b",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22742
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12638
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 88648
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 49644
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 186056
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 105241
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 285494
+        },
+        {
+          "src": "/assets/images/generated/food/mature-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 163229
+        }
+      ]
+    },
     "/assets/images/food/mct-oil.png": {
       "fingerprint": "361fa374a74aad2c6167237eddd0d801ede0ee40b286e71cda5af9022da41490",
       "width": 1254,
@@ -2594,6 +3413,69 @@
         }
       ]
     },
+    "/assets/images/food/rbd-bulk-technical.png": {
+      "fingerprint": "ce3cb771288050b1e09603496cbf3f15e864c45546e1e3ec573fd80a0edd68c5",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12828
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8954
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 35620
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 26220
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 63220
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 46970
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 91300
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-bulk-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 68489
+        }
+      ]
+    },
     "/assets/images/food/rbd-coconut-oil.png": {
       "fingerprint": "3eabe4a2b5da5b156b02edd815cdc8efe6da75fac99e173b8ee3edeed22fb3ff",
       "width": 1254,
@@ -2654,6 +3536,132 @@
           "width": 1254,
           "height": 1254,
           "bytes": 43003
+        }
+      ]
+    },
+    "/assets/images/food/rbd-neutral-technical.png": {
+      "fingerprint": "84c86215cf07ec2b8cad06886e317f81ccec527e0ca05e7f7cd55ba5d23ef08b",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 4544
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 4144
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 12904
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 11200
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 26954
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 21213
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 41968
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 33275
+        }
+      ]
+    },
+    "/assets/images/food/rbd-production-technical.png": {
+      "fingerprint": "0dd9042d22f2d3858e62e82e05509eb6196e7bbf069af2258bb8f1ef5637dc56",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12400
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7927
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 36032
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 24892
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 62494
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 44449
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 87480
+        },
+        {
+          "src": "/assets/images/generated/food/rbd-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 63905
         }
       ]
     },
@@ -2843,6 +3851,132 @@
           "width": 1254,
           "height": 1254,
           "bytes": 138183
+        }
+      ]
+    },
+    "/assets/images/food/young-neutral-technical.png": {
+      "fingerprint": "9c615f329243135880038ed967cbf6138101f780cc0df458e099896b608b4dd8",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 5986
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 5278
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 20914
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 17332
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 47162
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 37766
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 76504
+        },
+        {
+          "src": "/assets/images/generated/food/young-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 62598
+        }
+      ]
+    },
+    "/assets/images/food/young-production-technical.png": {
+      "fingerprint": "4dd7864bfabaf372a8ebbba14fb9676571ea563bb84b06a856b60c582e1a627c",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21612
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12361
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 62892
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 40527
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 116594
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 79819
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 168572
+        },
+        {
+          "src": "/assets/images/generated/food/young-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 122438
         }
       ]
     },
@@ -4617,6 +5751,384 @@
         }
       ]
     },
+    "/assets/images/shell/carbon-granules-technical.png": {
+      "fingerprint": "aac46efec8ca31095d49b6ec8d0171b3e95c13752a7fe9d03764ba78330774c5",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22792
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11714
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 78908
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 43185
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 154556
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 88031
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 233386
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-granules-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 135707
+        }
+      ]
+    },
+    "/assets/images/shell/carbon-powder-technical.png": {
+      "fingerprint": "d08b8b0bf12edf1d7cfc74cf33aa83367d2551f6387c24525202524500c86b48",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 13782
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8112
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 54056
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 33338
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 116024
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 71470
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 181260
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-powder-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 113283
+        }
+      ]
+    },
+    "/assets/images/shell/carbon-production-technical.png": {
+      "fingerprint": "a1e86315d3edd5bda8b2900348fb958695b0f174b2d7f55efe461c0dfa04099f",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21870
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11449
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 74020
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 39646
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 138828
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 79963
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 205798
+        },
+        {
+          "src": "/assets/images/generated/shell/carbon-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 121825
+        }
+      ]
+    },
+    "/assets/images/shell/charcoal-detail-technical.png": {
+      "fingerprint": "d62d268e00852c92f126d6d96d56a8f5c0f2cb1eb35f62b3e611994f8c967eb8",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20250
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11177
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 82174
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 45623
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 172550
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 95225
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 266072
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-detail-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 146648
+        }
+      ]
+    },
+    "/assets/images/shell/charcoal-neutral-technical.png": {
+      "fingerprint": "069950f72217daa5f0c125858cc841d53fdbe2aededd6ae7711bfaa7cabd92f2",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 13286
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8461
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 54004
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 33242
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 114798
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 70764
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 176650
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 110038
+        }
+      ]
+    },
+    "/assets/images/shell/charcoal-production-technical.png": {
+      "fingerprint": "fbdf2f99c7e52e6fc8d72ec4f3910e68f6075c9b3d7ed3213284f4725b9ce0a7",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21556
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10858
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 71380
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 36581
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 146200
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 79015
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 226858
+        },
+        {
+          "src": "/assets/images/generated/shell/charcoal-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 127639
+        }
+      ]
+    },
     "/assets/images/shell/coco-shell-activated-carbon.png": {
       "fingerprint": "96d753658c3e1887578edc008b1c223fb9c86fadbc1773b69f429dd7abeb9a79",
       "width": 1254,
@@ -4803,6 +6315,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 175385
+        }
+      ]
+    },
+    "/assets/images/substrates/chips-block-hydrated-technical.png": {
+      "fingerprint": "20730d5545ed1fbda240552d7ae81b716ffc4f52616cd154e903a38a9de36986",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 28616
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14661
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 112606
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 59474
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 245806
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 130040
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 394556
+        },
+        {
+          "src": "/assets/images/generated/substrates/chips-block-hydrated-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 206459
         }
       ]
     },
@@ -5814,6 +7389,69 @@
         }
       ]
     },
+    "/assets/images/substrates/coco-peat-drying-beds.png": {
+      "fingerprint": "9ff3dcbdeebc317653474870e50123f81323bc278758729ed6d89e016fec4e2e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18600
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9594
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 76378
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 41645
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 171376
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 94922
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 276840
+        },
+        {
+          "src": "/assets/images/generated/substrates/coco-peat-drying-beds.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 150783
+        }
+      ]
+    },
     "/assets/images/substrates/coco-peat-irrigation-beds.png": {
       "fingerprint": "847f01ec9430d57c8609e00cf216d09f835a6cb4727de4c781e2c607109ce893",
       "width": 1254,
@@ -6129,6 +7767,195 @@
         }
       ]
     },
+    "/assets/images/substrates/discs-neutral-technical.png": {
+      "fingerprint": "335f631f4b578f466ed509ffa022b5e3bbaade54ee4e8c1c1ed2fa0443957f9d",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25676
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14330
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 106534
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 57340
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 226156
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 119499
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 357546
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 185276
+        }
+      ]
+    },
+    "/assets/images/substrates/discs-pot-technical.png": {
+      "fingerprint": "1677bc1d710036d0c5063d58d45c6a082823fd752fc0b30e59855667cef85415",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23788
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13437
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 84506
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 47717
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 168054
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 95567
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 258894
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-pot-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 147492
+        }
+      ]
+    },
+    "/assets/images/substrates/discs-production-technical.png": {
+      "fingerprint": "07a6b428eab5c8e371e81b30ed23824f9043672b7e2d29ea9a522203abce67c9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24416
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12227
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 86522
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 46820
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 176892
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 97476
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 268810
+        },
+        {
+          "src": "/assets/images/generated/substrates/discs-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 151120
+        }
+      ]
+    },
     "/assets/images/substrates/grow-bag-packaging.png": {
       "fingerprint": "4082875f7beb072f9679ea3a9ed84691dba7a987ef018dfa8ce3dbc8f52cf881",
       "width": 1536,
@@ -6252,6 +8079,69 @@
           "width": 1254,
           "height": 1254,
           "bytes": 75686
+        }
+      ]
+    },
+    "/assets/images/substrates/grow-bag-setup-technical.png": {
+      "fingerprint": "1250b703db14947706596750f84859fe4603d68ab66b95947a07e53774a79c50",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 18578
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10590
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 55550
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 34977
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 101858
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 64484
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 148284
+        },
+        {
+          "src": "/assets/images/generated/substrates/grow-bag-setup-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 95270
         }
       ]
     },
@@ -6696,6 +8586,195 @@
         }
       ]
     },
+    "/assets/images/substrates/open-top-nursery-technical.png": {
+      "fingerprint": "1bc9b560dba6207fdf2631bf87fa6175a782aa27bb11dc16a976f4f900739901",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23920
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13380
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 69640
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 40898
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 120152
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 74215
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 171272
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-nursery-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 109524
+        }
+      ]
+    },
+    "/assets/images/substrates/open-top-side-technical.png": {
+      "fingerprint": "4ef0a974dcded6a62bae76a6e2d38f133140aaa7610a455922f904bcba86e89b",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12664
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8548
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 42798
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 27706
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 84730
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 52279
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 128256
+        },
+        {
+          "src": "/assets/images/generated/substrates/open-top-side-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 78615
+        }
+      ]
+    },
+    "/assets/images/substrates/peat-block-side-technical.png": {
+      "fingerprint": "712212eb904c5646bc941f7b26162058aa0127695c24ab1f6d54e6ba4e81708e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 24892
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13640
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 108822
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 58584
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 238904
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 123009
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 385586
+        },
+        {
+          "src": "/assets/images/generated/substrates/peat-block-side-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 192221
+        }
+      ]
+    },
     "/assets/images/substrates/seeding-tray-media-close-up.png": {
       "fingerprint": "e2c9c48c8b5ff0842dcad4bec31a3d103020afd490e9243399530b018e3f5dd3",
       "width": 1254,
@@ -6948,6 +9027,447 @@
         }
       ]
     },
+    "/assets/images/substrates/tablets-expanded-technical.png": {
+      "fingerprint": "2034c4e2f6029e20fd784a443d6f1ac65dc42836d52ef4ac0de0953d1b255d49",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 26620
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13915
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 101354
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 54443
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 204362
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 111830
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 303232
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-expanded-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 168945
+        }
+      ]
+    },
+    "/assets/images/substrates/tablets-neutral-technical.png": {
+      "fingerprint": "584c1cd1b3c018e47ed92bd0879ca431efe44f3fbb4eb21363c8eb8a6562bf4a",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14664
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7704
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 52568
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 32109
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 110652
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 67938
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 173134
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 104343
+        }
+      ]
+    },
+    "/assets/images/substrates/tablets-seedlings-technical.png": {
+      "fingerprint": "b0a1b066e1b56bb083980af847c4fa3dbf371c3ed79213efeed097fe1db28124",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25466
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13714
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 92592
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 51321
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 183172
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 103188
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 272008
+        },
+        {
+          "src": "/assets/images/generated/substrates/tablets-seedlings-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 157569
+        }
+      ]
+    },
+    "/assets/images/substrates/tray-hydrated-technical.png": {
+      "fingerprint": "4294d4af1f58e0608496a30e0db3d7c601fb973e3200a3c9fdc73ca47c507e9d",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25650
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13430
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 104038
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 54755
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 225452
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 116571
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 352312
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-hydrated-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 182864
+        }
+      ]
+    },
+    "/assets/images/substrates/tray-main-technical.png": {
+      "fingerprint": "a69b9ae08161ec394f9e936bc95bd3e9860a12dce81a37201a8dd4562b4099ec",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 16776
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9535
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 71566
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 40186
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 163088
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 90909
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 267522
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-main-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 146787
+        }
+      ]
+    },
+    "/assets/images/substrates/tray-seedlings-technical.png": {
+      "fingerprint": "0afb06cd2edbfbc88a9bd6a8194307c05a65b0d2ad7af6b062d0e8c6ed10c507",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33492
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17135
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 114420
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 59474
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 219712
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 117880
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 320652
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-seedlings-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 176949
+        }
+      ]
+    },
+    "/assets/images/substrates/tray-stack-technical.png": {
+      "fingerprint": "13bb38f9776eabe6d28dda158fe3a9ab572c39a3cd3b2e12e105b57afab0672e",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20590
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10598
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 90896
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 45722
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 203348
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 104121
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 314540
+        },
+        {
+          "src": "/assets/images/generated/substrates/tray-stack-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 165559
+        }
+      ]
+    },
     "/assets/images/veymur/coconut-milk-glass.png": {
       "fingerprint": "18d144b690777182ae50f00e1fbacad0448115c83534315454d3d3bb593708e0",
       "width": 1254,
@@ -7134,6 +9654,573 @@
           "width": 1254,
           "height": 1254,
           "bytes": 147844
+        }
+      ]
+    },
+    "/assets/images/veymur/mct-bulk-technical.png": {
+      "fingerprint": "06094145306781a112469f5b8f71b16feda3e7d97e2ea3c599cee95bd3aaf4a9",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14598
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8539
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 44818
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 26872
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86766
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 51411
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 131728
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-bulk-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 77228
+        }
+      ]
+    },
+    "/assets/images/veymur/mct-neutral-technical.png": {
+      "fingerprint": "99eb6e344586c1b15df9923bc38d30712c74ac60487391acf9694cb2c5de1329",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7184
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 5685
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 20018
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 16049
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 38458
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 29074
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 57120
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 43308
+        }
+      ]
+    },
+    "/assets/images/veymur/mct-production-technical.png": {
+      "fingerprint": "bdf284922639e9bf8326d181c44ab037131928b66e462e261f179bbc8525c32c",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12498
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7702
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 35116
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 23244
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 63576
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 41759
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 90908
+        },
+        {
+          "src": "/assets/images/generated/veymur/mct-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 62179
+        }
+      ]
+    },
+    "/assets/images/veymur/milk-neutral-technical.png": {
+      "fingerprint": "750a5569480b2312cab832125d30d4095bd6511ffc3be241ee4d8be2f0cf2341",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 8420
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 6095
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 25318
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 18830
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 47068
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 34797
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 70292
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 50568
+        }
+      ]
+    },
+    "/assets/images/veymur/milk-production-technical.png": {
+      "fingerprint": "da27c1c83df2c75a751f4845e79b86c10c04aa660ce312de7405cfbb115b52f0",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 16120
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9208
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 43232
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 27449
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 75916
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 49829
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 109976
+        },
+        {
+          "src": "/assets/images/generated/veymur/milk-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 73869
+        }
+      ]
+    },
+    "/assets/images/veymur/shavings-neutral-technical.png": {
+      "fingerprint": "b770823d6bf06fbb2f1b6c9735bec070c9624e24b266c65c32c23aa877a3d614",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 17334
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10438
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 57416
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 37394
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 109286
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 74209
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 157332
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 112838
+        }
+      ]
+    },
+    "/assets/images/veymur/shavings-production-technical.png": {
+      "fingerprint": "5ee5d3df6bac5999903477c67e3acccc76882ca5b0c614ce478e1240f7fba2aa",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 13154
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8666
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 38568
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 27777
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 72790
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 53685
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 106896
+        },
+        {
+          "src": "/assets/images/generated/veymur/shavings-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 82757
+        }
+      ]
+    },
+    "/assets/images/veymur/sugar-neutral-technical.png": {
+      "fingerprint": "9c63f8f8dce43800128007b1e48de77d89e5f590f56949757cc02013bcd1752d",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 30864
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15447
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 110332
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 55013
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 217226
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 110710
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 326412
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 168776
+        }
+      ]
+    },
+    "/assets/images/veymur/sugar-production-technical.png": {
+      "fingerprint": "93f2a0d20c620efffa56aa814a403d79872491469cfe4bb94caae42d5217c3ab",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20196
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11365
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60878
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 36436
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 115584
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 70455
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 167066
+        },
+        {
+          "src": "/assets/images/generated/veymur/sugar-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 108172
         }
       ]
     },
@@ -7575,6 +10662,132 @@
           "width": 1254,
           "height": 1254,
           "bytes": 82349
+        }
+      ]
+    },
+    "/assets/images/veymur/virgin-neutral-technical.png": {
+      "fingerprint": "657680acabab3a54b9ff3d6c98374da4d3f3d87783cb065c1720c70da8273912",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 8526
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 6206
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 33064
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 22954
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 71788
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 48458
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 108100
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-neutral-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 75562
+        }
+      ]
+    },
+    "/assets/images/veymur/virgin-production-technical.png": {
+      "fingerprint": "bbeb36fbbad4824c050ba4e7e8d16d287f89ccba28648797933d9fcdc89bf2eb",
+      "width": 1254,
+      "height": 1254,
+      "variants": [
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14902
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 8722
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 41224
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 640,
+          "bytes": 26868
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 75858
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 960,
+          "bytes": 50290
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-1254.webp",
+          "format": "webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 107944
+        },
+        {
+          "src": "/assets/images/generated/veymur/virgin-production-technical.png-1254.avif",
+          "format": "avif",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 74181
         }
       ]
     }

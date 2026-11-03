@@ -16,40 +16,52 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Подберите конфигурацию',
       'Choose the configuration',
-      'Согласуйте культуру, сорт, состав смеси, размеры после увлажнения и схему посадки. Размеры 100 × 20 × 9 см для клубники и 100 × 15 × 12 см для томата — примеры, а не обязательный стандарт.',
-      'Agree the crop, variety, blend, hydrated dimensions and planting layout. Strawberry bags of 100 × 20 × 9 cm and tomato bags of 100 × 15 × 12 cm are examples, not fixed standards.'
+      'Согласуйте состав по объёму, фракции и схему посадки. Размеры 100 × 20 × 9 см для клубники и 100 × 15 × 12 см для томата описывают мешок после увлажнения; это примеры, а не единый стандарт.',
+      'Agree the blend by volume, particle grades and planting layout. Strawberry dimensions of 100 × 20 × 9 cm and tomato dimensions of 100 × 15 × 12 cm describe the hydrated bag; they are examples, not fixed standards.'
     ),
     step(
-      'Разложите и увлажните',
-      'Position and hydrate',
-      'Установите мешки на ровную опору со свободным отводом воды. Увлажняйте постепенно через предусмотренные отверстия, пока субстрат не раскроется равномерно. Объём воды подбирайте по размеру и степени прессования.',
-      'Place bags on level supports with free drainage. Add water gradually through the intended openings until the medium expands evenly. Water volume depends on bag size and compression.'
+      'Подготовьте стартовый раствор',
+      'Prepare the starter solution',
+      'Базовый мат промыт, но не буферизирован кальцием. До посадки проведите кальциевую буферизацию по согласованному протоколу. Используйте воду 20–25 °C; состав раствора и дозу удобрения подбирайте по анализу воды. EC 1,2–1,5 мСм/см — ориентир стартового раствора, который нужно согласовать под культуру.',
+      'The base mat is washed but not calcium-buffered. Complete calcium buffering before planting using the agreed protocol. Use water at 20–25 °C and select the solution and fertiliser dose from the water analysis. Starter-solution EC of 1.2–1.5 mS/cm is a reference to be agreed for the crop.'
     ),
     step(
-      'Проверьте подготовку и дренаж',
-      'Check preparation and drainage',
-      'Проверьте, промыт и буферизирован ли субстрат: это разные виды обработки. Нужную подготовку проводите по паспорту партии. Проверьте посадочные и дренажные отверстия; не делайте произвольные разрезы до согласования схемы.',
-      'Check whether the medium is washed and buffered: these are different treatments. Follow the supplied batch instructions for any preparation needed. Check planting and drainage openings; agree the layout before making additional cuts.'
+      'Начните увлажнение',
+      'Start hydration',
+      'Разложите мешки на ровной опоре и подавайте раствор через верхние отверстия. Для описанной конфигурации ориентир первого залива — около 7–8 л за 5–10 минут. Не подавайте раствор быстрее, чем он впитывается.',
+      'Place bags on level supports and apply solution through the upper openings. For the referenced configuration, an initial application is approximately 7–8 L over 5–10 minutes. Do not apply faster than it can be absorbed.'
     ),
     step(
-      'Высадите растения',
-      'Transplant',
-      'Перенесите укоренённую рассаду в посадочные отверстия, сохранив корневой ком. Установите капельницы рядом с ним и убедитесь, что вода доходит до каждого растения.',
-      'Place rooted transplants in the planting openings without breaking up the root ball. Position drippers beside it and check that water reaches every plant.'
+      'Дайте плите раскрыться',
+      'Allow the slab to expand',
+      'Оставьте мат примерно на 1,5–2 часа. Проверьте, что субстрат расправился по углам и внутри нет сухого спрессованного ядра. В среднем 1 кг сухого прессованного торфа даёт 14–15 л рыхлого субстрата; смесь с чипсами может иметь другой выход.',
+      'Leave the mat for approximately 1.5–2 hours. Check that the medium reaches the corners and has no dry compressed centre. Dry compressed coco pith yields an average of 14–15 L per kg; chip blends may have a different yield.'
     ),
     step(
-      'Настройте полив и питание',
-      'Set irrigation and feeding',
-      'Подавайте воду и раствор удобрений под культуру и стадию роста. Проверяйте влажность, pH и EC в корневой зоне и отводимой воде. EC исходного субстрата не является целевым EC питательного раствора.',
-      'Match water and nutrient solution to the crop and growth stage. Monitor moisture, pH and EC in the root zone and drainage. The initial substrate EC is not the target EC of the feed solution.'
+      'Завершите насыщение',
+      'Complete saturation',
+      'Добавляйте раствор порциями до равномерного увлажнения. Общий ориентир — около 10–15 л на мешок; финальное насыщение занимает примерно 30–40 минут. Точные значения зависят от размеров и состава, поэтому не заливайте мешок до краёв без контроля.',
+      'Add solution in stages until moisture is uniform. A total reference is approximately 10–15 L per bag, with final saturation taking about 30–40 minutes. Exact amounts depend on size and blend; do not fill the sleeve to the brim without monitoring.'
+    ),
+    step(
+      'Обеспечьте дренаж',
+      'Establish drainage',
+      'Используйте готовые дренажные отверстия. Если мат поставлен без них, сделайте разрезы у нижнего края со стороны желоба только по согласованной схеме. Дайте лишнему раствору стечь около 30 минут. Раскрытие обычно занимает 2–4 часа; завершение буферизации проверяют отдельно по протоколу.',
+      'Use existing drainage holes. If none are supplied, cut near the lower edge facing the drainage channel only according to the agreed layout. Allow approximately 30 minutes for excess solution to drain. Hydration usually takes 2–4 hours; buffering completion is assessed separately under its protocol.'
+    ),
+    step(
+      'Высадите и настройте полив',
+      'Transplant and set irrigation',
+      'Перенесите укоренённую рассаду, сохранив корневой ком, и установите капельницы. Подберите питание под культуру и стадию роста, контролируйте pH, EC и влажность корневой зоны.',
+      'Transplant rooted seedlings without breaking up the root ball and position drippers. Match nutrition to crop and growth stage, monitoring root-zone pH, EC and moisture.'
     )
   ],
   'open-top-grow-bag': [
     step(
       'Выберите вариант под культуру',
       'Choose the crop-specific grade',
-      'Для голубики предусмотрен pH 4,5–5,5; для малины кислотность согласуется отдельно. Уточните рабочий объём мешка и состав поставки: смесь — 60% кокосового торфа и 40% чипсов.',
-      'The blueberry grade has pH 4.5–5.5; raspberry acidity is agreed separately. Confirm the working bag volume and supplied format. The blend contains 60% coco pith and 40% chips.'
+      'Для малины pH 5,5–6,2. Голубике готовят отдельную смесь до pH 4,5–5,2 и стартового EC ниже 0,3 мСм/см. Состав 60% кокосового торфа и 40% чипсов по объёму — базовая кокосовая смесь, а не автоматически подкисленный грунт.',
+      'For raspberries use pH 5.5–6.2. Prepare a separate blueberry mix to pH 4.5–5.2 and initial substrate EC below 0.3 mS/cm. The 60% coco pith and 40% chips by volume describes the base coir blend, not an automatically acidified medium.'
     ),
     step(
       'Установите мешок',
@@ -60,8 +72,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Равномерно увлажните',
       'Moisten evenly',
-      'Если субстрат спрессован, добавляйте воду порциями до полного разрыхления. Если поставлен рыхлым — увлажните весь объём перед посадкой. Дайте избытку воды стечь, не утрамбовывайте смесь.',
-      'If compressed, add water in stages until the medium fully loosens. If supplied loose, moisten the whole volume before planting. Allow excess water to drain and avoid compacting the mix.'
+      'Равномерно увлажните рыхлый субстрат перед посадкой, дайте избытку воды стечь и не утрамбовывайте смесь. Время и объём раствора для раскрытия прессованного горизонтального мата к этому мешку не применяются.',
+      'Moisten the loose medium evenly before planting, allow excess water to drain and do not compact it. Hydration times and solution volumes for compressed horizontal slabs do not apply to this bag.'
     ),
     step(
       'Посадите саженец',
@@ -72,16 +84,16 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Контролируйте корневую зону',
       'Monitor the root zone',
-      'Подбирайте полив и питание отдельно для голубики и малины. Следите за влажностью, свободным дренажом и pH. Промывка и низкий EC сами по себе не означают буферизацию или нужную голубике кислотность.',
-      'Manage irrigation and feeding separately for blueberries and raspberries. Check moisture, free drainage and pH. Washing and low EC alone do not establish buffering or blueberry-specific acidity.'
+      'Настройте полив и питание по культуре и анализу воды, регулярно проверяйте pH и EC. Подкисление выбирают с учётом щёлочности воды; кислоту и дозировку согласуют с агрономом. Свободный дренаж снижает риск переувлажнения, но не гарантирует защиты от корневых болезней.',
+      'Set irrigation and nutrition for the crop and water analysis, regularly checking pH and EC. Select acidification for water alkalinity, with acid and dosage agreed with the agronomist. Free drainage reduces waterlogging risk but does not guarantee protection from root disease.'
     )
   ],
   'coco-peat': [
     step(
       'Проверьте марку',
       'Check the grade',
-      'Уточните фракцию, промывку, буферизацию и наличие удобрений. Россыпной кокосовый торф не нужно размачивать как прессованный блок.',
-      'Check particle grade, washing, buffering and any added fertiliser. Loose coco pith does not need to be expanded like a compressed block.'
+      'Субстрат тщательно промыт. Выберите Fine — просев через сито 4–6 мм — или Medium/Coarse — до 8–10 мм, с большей долей коротких волокон и мелких чипсов. Фракцию можно подобрать под заказ; россыпной торф не нужно раскрывать как прессованный блок.',
+      'The substrate is thoroughly washed. Choose Fine, screened through a 4–6 mm sieve, or Medium/Coarse, screened up to 8–10 mm with more short fibres and small chips. Particle grade can be customised; loose pith does not need expansion like a compressed block.'
     ),
     step(
       'Увлажните торф',
@@ -218,10 +230,10 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
       'Add water gradually until the cube is fully hydrated and expanded. Let excess water drain; do not squeeze the cube to remove water.'
     ),
     step(
-      'Посейте или укорените',
-      'Sow or root cuttings',
-      'Поместите семя или подготовленный черенок в отверстие на глубину, подходящую культуре. Не увеличивайте отверстие настолько, чтобы посадочный материал потерял контакт с субстратом.',
-      'Place a seed or prepared cutting in the hole at the crop-appropriate depth. Avoid enlarging the hole so much that the seed or cutting loses contact with the medium.'
+      'Установите рассадную пробку',
+      'Insert the transplant plug',
+      'Поместите укоренённое растение в кокосовой или минераловатной пробке в центральное отверстие. Обеспечьте плотный контакт без повреждения корней; размер отверстия согласуют под пробку.',
+      'Insert a rooted plant in its coir or stonewool plug into the central opening. Ensure close contact without root damage; the hole is sized for the plug.'
     ),
     step(
       'Ухаживайте за рассадой',
@@ -240,14 +252,14 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Подберите диск под ёмкость',
       'Match the disc to the container',
-      'Выберите диаметр диска и ёмкость с дренажом, оставив место для расширения. Проверьте, есть ли у поставленной модели оболочка.',
-      'Choose a disc diameter and draining container with room for expansion. Check whether the supplied model has a sleeve.'
+      'Подберите диск под диаметр дна горшка или стаканчика с дренажом. Наружной оболочки у диска нет, поэтому отдельная ёмкость удерживает рыхлый субстрат после раскрытия.',
+      'Match the disc to the base of a draining pot or cup. There is no outer sleeve, so the container holds the loose medium after expansion.'
     ),
     step(
       'Раскройте водой',
       'Expand with water',
-      'Положите диск в ёмкость и добавляйте воду постепенно. Дождитесь равномерного расширения, аккуратно разрыхлите, если это предусмотрено форматом, и слейте лишнюю воду.',
-      'Place the disc in the container and add water gradually. Allow even expansion, gently loosen if appropriate for the format, and drain excess water.'
+      'Положите диск внутрь и добавляйте воду порциями до полного раскрытия. Разрыхлите влажный торф с короткими волокнами и дайте избытку воды стечь; не пытайтесь сохранить форму отдельной таблетки.',
+      'Place the disc inside and add water in stages until fully expanded. Loosen the damp pith and short fibres, then drain excess water; do not try to preserve a freestanding pellet shape.'
     ),
     step(
       'Посейте семена',
@@ -264,8 +276,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Пересадите рассаду',
       'Transplant seedlings',
-      'Пересадите растение, когда корни освоят субстрат. Сохраните корневой ком; обращение с оболочкой определяйте по её материалу и инструкции модели.',
-      'Transplant once roots have established in the medium. Preserve the root ball and handle any sleeve according to its material and model instructions.'
+      'Пересаживайте, когда корни освоят субстрат, сохраняя корневой ком. Диск не имеет оболочки, которую нужно снимать перед пересадкой.',
+      'Transplant once roots establish, preserving the root ball. There is no disc sleeve to remove before transplanting.'
     )
   ],
   'coco-peat-tablets': [
@@ -302,10 +314,10 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
   ],
   'coco-peat-compost': [
     step(
-      'Проверьте состав',
-      'Check the formulation',
-      'Уточните, поставляется чистый кокосовый торф или смесь с компостом, есть ли удобрения и какие pH и EC у партии. Название продукта само по себе не определяет питательность.',
-      'Confirm whether the product is pure coco pith or a compost blend, whether fertiliser is included, and the batch pH and EC. The product name alone does not establish nutrient content.'
+      'Подберите фракцию',
+      'Choose the particle grade',
+      'Это чистый переработанный кокосовый торф без других компостов. Выберите фракцию под культуру, уточните pH, EC и наличие стартовых удобрений.',
+      'This is pure processed coco pith with no other composts. Match particle grade to the crop and check pH, EC and any starter fertiliser.'
     ),
     step(
       'Подготовьте материал',
@@ -326,42 +338,42 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
       'Use pots or trays with drainage. Fill without firm compaction, then sow or transplant at the appropriate depth.'
     ),
     step(
-      'Согласуйте подкормки',
-      'Plan feeding',
-      'Учитывайте удобрения, уже входящие в смесь. Проверяйте влажность и состояние растений; не добавляйте одинаковую дозу питания к чистому торфу и к удобренному компостному субстрату.',
-      'Account for nutrients already present in the blend. Check moisture and plant condition; pure pith and fertilised compost mixes should not automatically receive the same feed dose.'
+      'Настройте питание',
+      'Set nutrition',
+      'Не считайте название «компост» признаком готового питания. Подберите полноценные удобрения по культуре, воде и фактической начальной заправке субстрата.',
+      'Do not assume that the name compost means the medium contains a complete feed. Select nutrition for the crop, water quality and any actual initial nutrient charge.'
     )
   ],
   'seeding-tray-media': [
     step(
-      'Подготовьте лоток',
-      'Prepare the tray',
-      'Выберите размер ячеек под культуру и срок выращивания рассады. Вымойте многоразовый лоток, подготовьте его по принятой схеме гигиены и проверьте дренаж.',
-      'Choose cell size for the crop and propagation period. Clean reusable trays, follow the nursery hygiene procedure and check drainage.'
+      'Проверьте совместимость',
+      'Check compatibility',
+      'Подберите вкладыш под точную модель пластиковой или пенопластовой кассеты. Лоток не входит в поставку; его размеры и перегородки должны соответствовать матрице.',
+      'Match the insert to the exact plastic or foam tray model. The tray is not supplied; dimensions and dividers must match the matrix.'
     ),
     step(
-      'Увлажните и заполните',
-      'Moisten and fill',
-      'Перемешайте мелкий субстрат до равномерной влажности. Заполните ячейки одинаково, без сильной трамбовки и крупных пустот; уберите излишки с поверхности.',
-      'Mix the fine medium to an even moisture level. Fill cells consistently without firm compaction or large voids, and level off excess material.'
+      'Уложите сухую плиту',
+      'Position the dry plate',
+      'Положите цельный сухой блок в чистый лоток, совместив формованные ячейки с перегородками. Не разламывайте матрицу и не заполняйте ячейки россыпным торфом.',
+      'Place the one-piece dry block in a clean tray, aligning cell forms with the dividers. Do not break up the matrix or fill cells with loose pith.'
     ),
     step(
-      'Посейте семена',
-      'Sow seeds',
-      'Разместите семена по одному или по схеме культуры. Глубину посева, укрытие и маркировку подбирайте под сорт и требования к прорастанию.',
-      'Place one seed per cell or follow the crop sowing plan. Match sowing depth, covering and labelling to the variety and germination requirements.'
+      'Равномерно увлажните',
+      'Hydrate evenly',
+      'Подавайте воду или согласованный стартовый раствор капельно либо подтоплением. Дождитесь раскрытия всей плиты, проверьте отсутствие сухих участков и дайте избытку стечь.',
+      'Apply water or the agreed starter solution by drip or subirrigation. Let the whole plate expand, check for dry areas and allow excess water to drain.'
     ),
     step(
-      'Ведите рассаду',
-      'Raise the seedlings',
-      'Поддерживайте равномерную влажность всех ячеек, следите за крайними рядами. После всходов обеспечьте свет, проветривание и питание под стадию развития.',
-      'Maintain even moisture across cells, paying attention to edge rows. After emergence provide light, ventilation and stage-appropriate nutrition.'
+      'Посейте и выращивайте рассаду',
+      'Sow and raise seedlings',
+      'Выполните ручной или машинный посев на глубину, подходящую культуре. Поддерживайте равномерную влажность ячеек, освещение и питание без постоянного застоя воды.',
+      'Sow manually or by machine at the crop-appropriate depth. Maintain even cell moisture, light and feeding without continuous standing water.'
     ),
     step(
-      'Извлеките корневой ком',
-      'Remove the rooted plug',
-      'Пересаживайте, когда корни удерживают субстрат в ячейке. Перед извлечением равномерно увлажните лоток и вынимайте ком снизу, не вытягивая растение за стебель.',
-      'Transplant when roots hold the medium together in the cell. Moisten the tray evenly beforehand and push plugs up from beneath rather than pulling plants by the stem.'
+      'Разделите корневые комы',
+      'Separate rooted plugs',
+      'Когда рассада готова, аккуратно разделите субстрат по границам ячеек руками или чистыми ножницами, не повреждая корни. Поддерживайте корневой ком снизу при извлечении.',
+      'When seedlings are ready, carefully separate medium along cell boundaries by hand or with clean scissors without damaging roots. Support each root plug from beneath during removal.'
     )
   ]
 };

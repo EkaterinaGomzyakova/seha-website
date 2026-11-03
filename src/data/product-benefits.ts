@@ -53,15 +53,21 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Hole configuration',
       'Количество, размеры и расположение посадочных и дренажных отверстий согласуются под культуру и систему полива.',
       'The number, size and layout of planting and drainage holes are agreed for the crop and irrigation system.'
+    ),
+    benefit(
+      'Прочная оболочка',
+      'Durable sleeve',
+      'Трёхслойная соэкструдированная LDPE-плёнка. Ориентировочный срок службы под прямым солнцем — 12–24 месяца (1–2 сезона).',
+      'Three-layer co-extruded LDPE film. Indicative service life in direct sunlight is 12–24 months (1–2 growing seasons).'
+    ),
+    benefit(
+      'Служит дольше без прямого солнца',
+      'Longer life away from direct sun',
+      'При искусственном освещении мешок может служить дольше; срок зависит от механического износа при поливе, промывках и пересадке.',
+      'Under artificial lighting, the bag may last longer; service life depends on mechanical wear from irrigation, washing and transplanting.'
     )
   ],
   'open-top-grow-bag': [
-    benefit(
-      'Размер и объём по заказу',
-      'Custom size and volume',
-      'Размер мешка, объём субстрата после увлажнения и отверстия подбирают под культуру, сорт и рекомендации агронома.',
-      'Bag size, hydrated substrate volume and holes are matched to the crop, variety and agronomist recommendations.'
-    ),
     benefit(
       'Влага и воздух',
       'Moisture and aeration',
@@ -83,8 +89,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Торф и чипсы',
       'Pith and chips',
-      'Смесь 60% кокосового торфа и 40% чипсов сочетает влагоудержание и аэрацию.',
-      'A blend of 60% coco pith and 40% chips combines moisture retention and aeration.'
+      'Смесь 60% кокосового торфа и 40% чипсов по объёму сочетает влагоудержание и аэрацию.',
+      'A blend of 60% coco pith and 40% chips by volume combines moisture retention and aeration.'
     ),
     benefit(
       'Промытый субстрат',
@@ -97,6 +103,18 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Drainage holes',
       'УФ-стабилизированная оболочка с открытым верхом и дренажными отверстиями.',
       'A UV-stabilised open-top bag with drainage holes.'
+    ),
+    benefit(
+      'Объём 10 литров',
+      '10 litre volume',
+      'Описанный вариант — 10 л, высота заполнения около 28–30 см; другие размеры и объёмы — по заказу.',
+      'The described option is 10 L with approximately 28–30 cm fill height; other sizes and volumes are available to order.'
+    ),
+    benefit(
+      'Удобно для Long Cane',
+      'Convenient for long-cane systems',
+      'Для малины с подготовленными длинными побегами. Отдельный мешок можно переместить или заменить без разборки соседних посадок.',
+      'For prepared long-cane raspberry plants. Individual bags can be moved or replaced without disturbing neighbouring plants.'
     )
   ],
   'coco-peat': [
@@ -161,8 +179,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Самостоятельный субстрат',
       'Standalone growing medium',
-      '100% чипсов — для орхидей, бромелиевых и других эпифитов, а также отдельных гидропонных систем.',
-      '100% chips for orchids, bromeliads and other epiphytes, as well as selected hydroponic systems.'
+      '100% чипсов по объёму — для орхидей, бромелиевых и других эпифитов, а также отдельных гидропонных систем.',
+      '100% chips by volume for orchids, bromeliads and other epiphytes, as well as selected hydroponic systems.'
     ),
     benefit(
       'Добавка в смесь',
@@ -205,8 +223,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Промывка и сортировка',
       'Washing and grading',
-      'Доступны промытые и просеянные варианты, в том числе с низким EC.',
-      'Washed and screened grades are available, including a low-EC option.'
+      'Чипсы тщательно промыты и просеяны; доступен вариант с низким EC.',
+      'Chips are thoroughly washed and screened; a low-EC grade is available.'
     )
   ],
   'grow-cube-sleeve': [
@@ -223,10 +241,10 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Size, weight, coir blend and sleeve can be specified for the crop and irrigation.'
     ),
     benefit(
-      'Промытые варианты',
-      'Washed grades',
-      'Доступны промытые варианты с низким EC и варианты с буферизацией.',
-      'Washed low-EC and buffered grades are available according to specification.'
+      'Промытый субстрат',
+      'Washed substrate',
+      'Субстрат тщательно промыт. Буферизацию выбирают по спецификации.',
+      'The substrate is thoroughly washed. Buffering is selected according to specification.'
     ),
     benefit(
       'Сохраняет форму',
@@ -241,50 +259,38 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'The whole cube can be moved into a grow bag or slab without breaking up the root zone.'
     ),
     benefit(
-      'Для семян и черенков',
-      'For seeds and cuttings',
-      'Сформированный куб служит отдельным местом для проращивания и укоренения.',
-      'Each pre-formed cube provides an individual space for germination and rooting.'
+      'Для доращивания рассады',
+      'For growing on transplants',
+      'Центральное отверстие принимает растение в кокосовой или минераловатной пробке.',
+      'The central opening receives a plant in a coir or stonewool plug.'
     )
   ],
   'coco-coir-discs': [
     benefit(
-      'Обработка на выбор',
-      'Processing options',
-      'Доступны промытые варианты и варианты с низким EC.',
-      'Washed and low-EC grades are available according to specification.'
+      'Без оболочки',
+      'No retaining sleeve',
+      'После увлажнения образуется обычный рыхлый торф, который заполняет выбранную ёмкость.',
+      'Hydration releases loose pith that fills the selected container.'
     ),
     benefit(
-      'Упаковка по заказу',
-      'Packaging to order',
-      'Для розничных наборов и оптовых поставок.',
-      'For retail kits and bulk supply.'
+      'Диск под горшок',
+      'Disc matched to the pot',
+      'Диаметр выбирают под дно горшка, кашпо или рассадного стаканчика.',
+      'Choose the diameter for the base of a pot, planter or propagation cup.'
     ),
     benefit(
-      'Компактный формат',
-      'Compact format',
-      'Прессованные диски занимают мало места при хранении.',
-      'Compressed discs take up little storage space.'
-    ),
-    benefit(
-      'Расширяются в воде',
-      'Expand with water',
-      'При увлажнении образуют влагоёмкий субстрат для проращивания.',
-      'Hydration creates a moisture-retentive medium for germination.'
-    ),
-    benefit(
-      'Диаметр под задачу',
-      'Diameter to suit the use',
-      'Диски можно подобрать по диаметру и массе.',
-      'Discs can be specified by diameter and weight.'
+      'Для небольших объёмов',
+      'For small quantities',
+      'Можно раскрыть отдельно и использовать для заполнения ёмкостей или смешивания с грунтом.',
+      'Can be expanded separately to fill containers or blend with potting soil.'
     )
   ],
   'coco-peat-tablets': [
     benefit(
       'Обработка на выбор',
       'Processing options',
-      'Доступны промытые варианты и варианты с низким EC.',
-      'Washed and low-EC grades are available according to specification.'
+      'Субстрат тщательно промыт; параметры EC согласуются по спецификации.',
+      'The substrate is thoroughly washed; EC is specified for the supplied grade.'
     ),
     benefit(
       'Под вашей маркой',
@@ -325,36 +331,30 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
       'Screened material improves the structure and aeration of growing mixes.'
     ),
     benefit(
-      'Состав по задаче',
-      'Choice of formulation',
-      'Поставляется кокосовый торф или смесь с компостом — по спецификации.',
-      'Supplied as coco pith or a compost blend, according to specification.'
+      'Чистый кокосовый торф',
+      'Pure coco pith',
+      'Без добавления других компостов; фракцию подбирают под культуру.',
+      'No other composts added; particle grade is matched to the crop.'
     )
   ],
   'seeding-tray-media': [
     benefit(
-      'Оптовая поставка',
-      'Bulk supply',
-      'Размеры лотка и упаковку подбирают под работу питомника.',
-      'Tray dimensions and packaging can be matched to nursery operations.'
+      'Без засыпки ячеек',
+      'No hand-filling',
+      'Цельную плиту укладывают в лоток и увлажняют, без ручной засыпки и трамбовки каждой ячейки.',
+      'Place the complete plate in the tray and hydrate, without hand-filling or compacting individual cells.'
     ),
     benefit(
-      'Фракция под ячейку',
-      'Grade matched to the cell',
-      'Фракция торфа подбирается с учётом культуры и объёма ячеек.',
-      'The coir grade is selected for the crop and cell volume.'
+      'Под рассадную кассету',
+      'Matched to the tray',
+      'Формованные ячейки и габариты согласуют под конкретную совместимую модель кассеты.',
+      'Cell forms and dimensions are matched to a specified compatible tray model.'
     ),
     benefit(
-      'Влага и воздух',
-      'Moisture and aeration',
-      'Кокосовый торф сочетает влагоудержание с аэрацией корневой зоны.',
-      'Coco pith combines moisture retention with root-zone aeration.'
-    ),
-    benefit(
-      'Конфигурация под рассаду',
-      'Propagation configuration',
-      'Количество и объём ячеек согласуются под систему выращивания.',
-      'Cell count and volume are agreed for the growing system.'
+      'Для ручного и машинного посева',
+      'Manual or machine sowing',
+      'После увлажнения субстрат готов для посева; при пересадке корневые комы разделяют по ячейкам.',
+      'Once hydrated, the medium is ready for sowing; rooted plugs are separated at transplanting.'
     )
   ],
   'coir-fiber-bales': [

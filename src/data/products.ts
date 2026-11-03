@@ -173,7 +173,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     ],
     [
       'seeding-tray-media',
-      'seeding-tray-media.png',
+      'tray-main-technical.png',
       'Субстрат для лотков рассады',
       'Seeding Tray Media',
       ...productCopyUpdates['seeding-tray-media'].description,

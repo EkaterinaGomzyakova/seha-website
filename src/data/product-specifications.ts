@@ -101,10 +101,7 @@ const lowEc = field(
 const washedChipsEc = field(
   'EC (Электропроводность)',
   'EC (Electrical conductivity)',
-  text(
-    '< 0,5 мСм/см — для промытого варианта; водная вытяжка 1:1,5 по объёму',
-    '< 0.5 mS/cm for the washed grade; water extract 1:1.5 by volume'
-  )
+  text('< 0,5 мСм/см; водная вытяжка 1:1,5 по объёму', '< 0.5 mS/cm; water extract 1:1.5 by volume')
 );
 const dryWeight = field('Сухая масса', 'Dry weight');
 const dimensions = field('Размеры (Д × Ш × В)', 'Dimensions (L × W × H)');
@@ -151,15 +148,15 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Состав субстрата',
       'Substrate composition',
       text(
-        'Кокосовый торф, чипсы и волокно; соотношение под культуру',
-        'Coco pith, chips and fibre; crop-specific blend'
+        'Торф и чипсы в любом согласованном соотношении по объёму; под культуру и запрос заказчика',
+        'Pith and chips in a fully customised ratio by volume, matched to the crop and buyer requirements'
       )
     ),
     field(
       'Размеры после увлажнения',
       'Hydrated dimensions',
       text(
-        'По заказу; примеры: клубника — 100 × 20 × 9 см; томат — 100 × 15 × 12 см',
+        'По заказу; после увлажнения, например: клубника — 100 × 20 × 9 см; томат — 100 × 15 × 12 см',
         'Custom; examples: strawberry — 100 × 20 × 9 cm; tomato — 100 × 15 × 12 cm'
       )
     ),
@@ -173,12 +170,30 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       )
     ),
     field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
-    field('Фракция', 'Particle size'),
+    field(
+      'Фракция',
+      'Particle size',
+      text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
+    ),
     ph,
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
-    processing,
-    field('Материал оболочки', 'Sleeve material'),
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Тщательно промыт; без кальциевой буферизации',
+        'Thoroughly washed; not calcium-buffered'
+      )
+    ),
+    field(
+      'Материал мешка',
+      'Bag material',
+      text(
+        'Трёхслойная соэкструдированная полиэтиленовая плёнка высокого давления (LDPE)',
+        'Three-layer co-extruded low-density polyethylene (LDPE) film'
+      )
+    ),
     field(
       'Посадочные отверстия',
       'Planting holes',
@@ -196,41 +211,84 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       )
     ),
     waterRetention,
-    airPorosity
+    airPorosity,
+    field(
+      'Срок службы мешка под солнцем',
+      'Bag service life in direct sunlight',
+      text('Около 12–24 месяцев (1–2 сезона)', 'Approximately 12–24 months (1–2 growing seasons)')
+    ),
+    field(
+      'Выход прессованного торфа после увлажнения',
+      'Hydrated yield of compressed coco pith',
+      text(
+        'В среднем 14–15 л на 1 кг сухого прессованного торфа',
+        'Average 14–15 L per kg of dry compressed coco pith'
+      )
+    ),
+    field(
+      'Время раскрытия',
+      'Hydration time',
+      text(
+        'Около 2–4 ч, в зависимости от конфигурации',
+        'Approximately 2–4 hours, depending on configuration'
+      )
+    ),
+    field(
+      'Вода или стартовый раствор для раскрытия',
+      'Water or starter solution for hydration',
+      text(
+        'Около 10–15 л на мешок, в зависимости от конфигурации',
+        'Approximately 10–15 L per bag, depending on configuration'
+      )
+    ),
+    field(
+      'Температура воды для раскрытия',
+      'Hydration water temperature',
+      text('20–25 °C', '20–25 °C')
+    ),
+    field('Буферизация', 'Buffering', text('Без кальциевой буферизации', 'Not calcium-buffered')),
+    field('Толщина плёнки', 'Film thickness', text('120–150 мкм', '120–150 μm'))
   ],
   'open-top-grow-bag': [
     field(
       'Состав субстрата',
       'Substrate composition',
-      text('60% кокосового торфа / 40% кокосовых чипсов', '60% coco pith / 40% coco chips')
+      text(
+        '60% кокосового торфа / 40% кокосовых чипсов по объёму',
+        '60% coco pith / 40% coco chips by volume'
+      )
     ),
     field(
-      'Размеры мешка',
-      'Bag dimensions',
+      'Размеры наполненного мешка',
+      'Filled bag dimensions',
       text(
-        'По заказу, под культуру, сорт и систему выращивания',
-        'Customised for crop, variety and growing system'
+        'По заказу; для 10 л: диаметр дна около 20–22 см, высота заполнения около 28–30 см',
+        'Customised; 10 L example: base diameter approximately 20–22 cm, filling height approximately 28–30 cm'
       )
     ),
     dryWeight,
     field(
-      'Объём после увлажнения',
-      'Expanded volume',
-      text(
-        'По заказу, под объём корней и схему полива',
-        'Customised for root volume and irrigation layout'
-      )
+      'Рабочий объём',
+      'Working volume',
+      text('10 л; другие объёмы — по заказу', '10 L; other volumes to order')
     ),
     // The crop-specific acidity is part of the product variant, not a generic pH claim.
-    field('pH — вариант для голубики', 'pH — blueberry grade', text('4,5–5,5', '4.5–5.5')),
-    field('pH — вариант для малины', 'pH — raspberry grade'),
+    field(
+      'pH для голубики после подготовки',
+      'pH for blueberries after preparation',
+      text('4,5–5,2', '4.5–5.2')
+    ),
+    field('pH — вариант для малины', 'pH — raspberry grade', text('5,5–6,2', '5.5–6.2')),
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('15–20%', '15–20%')),
     field('Обработка', 'Processing', text('Промывка и просеивание', 'Washed and screened')),
     field(
       'Материал мешка',
       'Bag material',
-      text('УФ-стабилизированный материал', 'UV-stabilised material')
+      text(
+        'Трёхслойная соэкструдированная полиэтиленовая плёнка высокого давления (LDPE)',
+        'Three-layer co-extruded low-density polyethylene (LDPE) film'
+      )
     ),
     field(
       'Конструкция мешка',
@@ -243,18 +301,56 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Количество, размер и расположение — по заказу', 'Number, size and layout to order')
     ),
     waterRetention,
-    airPorosity
+    airPorosity,
+    field(
+      'Фракция',
+      'Particle size',
+      text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
+    ),
+    field(
+      'Размеры плоского мешка (В × Ш)',
+      'Flat bag dimensions (H × W)',
+      text('По заказу; для 10 л — 35 × 25 см', 'Customised; 10 L example — 35 × 25 cm')
+    ),
+    field('Толщина плёнки', 'Film thickness', text('120–150 мкм', '120–150 μm')),
+    field(
+      'EC подготовленного субстрата для голубики',
+      'Prepared substrate EC for blueberries',
+      text('< 0,3 мСм/см', '< 0.3 mS/cm')
+    ),
+    field(
+      'Примеры объёмов для голубики',
+      'Example blueberry bag volumes',
+      text(
+        '15–20 / 25–30 / 35–45 л — под культуру и заказ',
+        '15–20 / 25–30 / 35–45 L, matched to crop and order'
+      )
+    )
   ],
   'coco-peat': [
     rawPith,
-    field('Фракция', 'Particle size'),
+    field(
+      'Фракция',
+      'Particle size',
+      text(
+        'Fine: сито 4–6 мм; Medium/Coarse: сито до 8–10 мм; по заказу',
+        'Fine: 4–6 mm sieve; Medium/Coarse: sieve up to 8–10 mm; custom grades'
+      )
+    ),
     ph,
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
-    processing,
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Тщательная промывка; дальнейшая обработка по спецификации',
+        'Thoroughly washed; further processing according to specification'
+      )
+    ),
     field(
       'Влагоудерживающая способность',
-      'Water-holding capacity',
+      'Maximum water-holding capacity',
       text('7–9 кг воды на 1 кг сухого субстрата', '7–9 kg of water per kg of dry substrate')
     ),
     airPorosity,
@@ -269,12 +365,23 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('30 × 30 × 12 см', '30 × 30 × 12 cm')
     ),
     expandedVolume,
-    field('Фракция', 'Particle size'),
+    field(
+      'Фракция',
+      'Particle size',
+      text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
+    ),
     ph,
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('12–15%', '12–15%')),
     field('Коэффициент расширения', 'Expansion ratio', text('≥ 5:1', '≥ 5:1')),
-    processing,
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Тщательная промывка; дальнейшая обработка по спецификации',
+        'Thoroughly washed; further processing according to specification'
+      )
+    ),
     waterRetention,
     impurities
   ],
@@ -350,8 +457,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Обработка',
       'Processing',
       text(
-        'Промывка, просеивание и сортировка по размеру — по заказу',
-        'Washed, screened and graded to order'
+        'Тщательная промывка; просеивание и сортировка по размеру под заказ',
+        'Thoroughly washed; screened and graded to order'
       )
     ),
     waterRetention,
@@ -366,7 +473,14 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     )
   ],
   'grow-cube-sleeve': [
-    rawPith,
+    field(
+      'Состав субстрата',
+      'Substrate composition',
+      text(
+        'Смесь кокосовых чипсов, волокон и торфа; пропорции по объёму — по заказу',
+        'Coconut chips, fibre and pith blend; proportions by volume to order'
+      )
+    ),
     field('Формат', 'Format', text('Куб в защитной оболочке', 'Cube in a protective sleeve')),
     field(
       'Размеры после увлажнения',
@@ -381,15 +495,15 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field(
       'Фракция',
       'Particle size',
-      text('Мелкий просеянный кокосовый торф', 'Fine screened coco pith')
+      text(
+        'Крупная смесь чипсов, волокон и торфа, под культуру',
+        'Coarse chips, fibre and pith blend matched to crop'
+      )
     ),
     field(
       'Материал оболочки',
       'Sleeve material',
-      text(
-        'LDPE-плёнка с УФ-защитой, биоразлагаемая сетка или нетканый материал — в зависимости от модели',
-        'UV-treated LDPE film, biodegradable net or non-woven material, depending on design'
-      )
+      text('Нетканый УФ-стабилизированный материал', 'UV-stabilised non-woven material')
     ),
     field(
       'Посадочное отверстие',
@@ -422,7 +536,12 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     )
   ],
   'coco-coir-discs': [
-    rawPith,
+    field(
+      'Состав субстрата',
+      'Substrate composition',
+      text('Кокосовый торф и короткие кокосовые волокна', 'Coco pith and short coir fibres')
+    ),
+    field('Наружная оболочка', 'Outer sleeve', text('Отсутствует', 'None')),
     field('Цвет', 'Colour', text('От коричневого до тёмно-коричневого', 'Brown to dark brown')),
     field('Форма', 'Shape', text('Круглый диск', 'Circular disc')),
     field(
@@ -456,8 +575,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Обработка',
       'Processing',
       text(
-        'Просеивание и прессование; доступны промытые варианты',
-        'Screened and compressed; washed grades available'
+        'Тщательная промывка, просеивание и прессование',
+        'Thoroughly washed, screened and compressed'
       )
     ),
     field(
@@ -475,6 +594,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Оптовые коробки, розничная или индивидуальная упаковка',
         'Bulk cartons, retail or custom packaging'
       )
+    ),
+    field(
+      'Фракция',
+      'Particle size',
+      text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
     )
   ],
   'coco-peat-tablets': [
@@ -501,8 +625,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Обработка',
       'Processing',
       text(
-        'Просеивание и прессование; доступны промытые варианты',
-        'Screened and compressed; washed grades available'
+        'Тщательная промывка, просеивание и прессование',
+        'Thoroughly washed, screened and compressed'
       )
     ),
     field(
@@ -520,6 +644,11 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Оптовые коробки, розничная или индивидуальная упаковка',
         'Bulk cartons, retail or custom packaging'
       )
+    ),
+    field(
+      'Фракция',
+      'Particle size',
+      text('По требованиям заказчика и под культуру', 'Customised for the buyer and crop')
     )
   ],
   'coco-peat-compost': [
@@ -528,8 +657,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Состав',
       'Composition',
       text(
-        'Кокосовый торф или смесь кокосового торфа с компостом',
-        'Pure coco peat or a coco peat–compost blend'
+        'Чистый переработанный кокосовый торф, без других компостов',
+        'Pure processed coco pith, with no other composts'
       )
     ),
     field(
@@ -555,8 +684,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Обработка',
       'Processing',
       text(
-        'Просеивание, обработка и смешивание по спецификации',
-        'Screened, processed and blended according to specification'
+        'Тщательная промывка, переработка и просеивание',
+        'Thoroughly washed, processed and screened'
       )
     ),
     field(
@@ -571,66 +700,78 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   ],
   'seeding-tray-media': [
     rawPith,
-    field('Фракция', 'Particle size'),
+    field(
+      'Формат',
+      'Format',
+      text(
+        'Цельная сухая прессованная плита-матрица с формованными ячейками',
+        'One-piece dry compressed matrix plate with moulded cell forms'
+      )
+    ),
+    field(
+      'Комплектация',
+      'Supply contents',
+      text(
+        'Кокосовый вкладыш; пластиковая или пенопластовая кассета не входит',
+        'Coir insert; plastic or foam tray not included'
+      )
+    ),
+    field('Совместимая модель кассеты', 'Compatible tray model'),
+    field(
+      'Количество ячеек',
+      'Cell count',
+      text(
+        'Под модель кассеты; примеры конфигураций — 64 / 84',
+        'Matched to tray model; example configurations — 64 / 84'
+      )
+    ),
+    field(
+      'Форма ячеек',
+      'Cell shape',
+      text(
+        'Квадратные или круглые формованные ячейки, под модель кассеты',
+        'Square or round moulded cell forms, matched to tray model'
+      )
+    ),
+    field(
+      'Объём ячейки',
+      'Cell volume',
+      text(
+        'По требованиям культуры и модели кассеты',
+        'According to crop requirements and tray model'
+      )
+    ),
+    field('Размеры вкладыша', 'Insert dimensions'),
+    field(
+      'Фракция',
+      'Particle size',
+      text('Мелкая, под культуру и требования заказчика', 'Fine, customised for the crop and buyer')
+    ),
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Тщательная промывка, просеивание, прессование и формование',
+        'Thoroughly washed, screened, compressed and moulded'
+      )
+    ),
     ph,
     ec,
     moisture,
     waterRetention,
     airPorosity,
     field(
-      'Количество ячеек',
-      'Cell count',
-      text('50 / 72 / 98 / 104 / 128', '50 / 72 / 98 / 104 / 128')
-    ),
-    field(
-      'Объём ячейки',
-      'Cell volume',
+      'Увлажнение перед посевом',
+      'Hydration before sowing',
       text(
-        'По заказу, с учётом культуры и конструкции лотка',
-        'Customised for the crop and tray design'
+        'Капельный полив или подтопление, с последующим дренированием',
+        'Drip irrigation or subirrigation, followed by drainage'
       )
-    ),
-    field(
-      'Форма ячеек',
-      'Cell shape',
-      text('Квадратная, круглая, коническая или сужающаяся', 'Square, round, conical or tapered')
-    ),
-    field(
-      'Размеры лотка',
-      'Tray dimensions',
-      text(
-        'По требованиям питомника или теплицы',
-        'Customised for nursery and greenhouse requirements'
-      )
-    ),
-    field(
-      'Материал лотка',
-      'Tray material',
-      text(
-        'Многоразовый пластик, биоразлагаемый материал или формованное кокосовое волокно — в зависимости от модели',
-        'Reusable plastic, biodegradable material or moulded coir, depending on model'
-      )
-    ),
-    field(
-      'Обработка',
-      'Processing',
-      text(
-        'Просеянный кокосовый торф; доступны промытые варианты',
-        'Screened coco pith; washed grades available'
-      )
-    ),
-    field(
-      'Дренаж',
-      'Drainage',
-      text('В зависимости от конструкции лотка', 'According to tray construction')
     ),
     field(
       'Упаковка',
       'Packaging',
-      text(
-        'Оптовые коробки или паллеты, в зависимости от типа лотка',
-        'Bulk cartons or palletised packaging, depending on tray type'
-      )
+      text('Стопки сухих прессованных блоков', 'Stacks of dry compressed blocks')
     )
   ],
   'coir-fiber-bales': [
@@ -766,11 +907,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Food-grade bottles, jars, cans or bulk containers, subject to availability'
       )
     ),
-    field(
-      'Способ извлечения',
-      'Extraction process',
-      text('Механическое извлечение', 'Mechanical extraction')
-    ),
+    field('Способ извлечения', 'Extraction process', text('Холодный отжим', 'Cold pressing')),
     field(
       'Обработка',
       'Processing',
@@ -830,7 +967,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     fattyAcids,
     organic,
     shelfLife,
-    foodStorage
+    foodStorage,
+    field('Тип рафинации', 'Refining type', text('Физическая рафинация', 'Physical refining'))
   ],
   'veymur-coconut-sugar': [
     field(
@@ -871,7 +1009,15 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ...microbiology,
     organic,
     shelfLife,
-    foodStorage
+    foodStorage,
+    field(
+      'Производство',
+      'Production process',
+      text(
+        'Выпаривание сока соцветий и кристаллизация',
+        'Flower sap evaporation and crystallisation'
+      )
+    )
   ],
   'veymur-desiccated-coconut': [
     field('Сырьё', 'Raw material', text('Мякоть зрелых кокосов', 'Mature coconut kernels')),
@@ -893,8 +1039,12 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       text('Характерные кокосовые', 'Characteristic coconut flavour and aroma')
     ),
     field('Фракция', 'Particle size', text('Мелкая / средняя / крупная', 'Fine / medium / coarse')),
-    field('Влажность при поставке', 'Moisture content at dispatch', text('≤ 3,0%', '≤ 3.0%')),
-    fat,
+    field('Влажность при поставке', 'Moisture content at dispatch', text('< 2,5%', '< 2.5%')),
+    field(
+      'Массовая доля жира',
+      'Fat content',
+      text('68–72% — типичный диапазон', '68–72% — typical range')
+    ),
     protein,
     ash,
     ffa,
@@ -903,7 +1053,16 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ...microbiology,
     organic,
     shelfLife,
-    foodStorage
+    foodStorage,
+    field(
+      'Обработка',
+      'Processing',
+      text(
+        'Удаление коричневой оболочки ядра, измельчение и сушка',
+        'Kernel paring, shredding and drying'
+      )
+    ),
+    field('Температура сушки', 'Drying temperature', text('60–75 °C', '60–75 °C'))
   ],
   'veymur-coconut-milk': [
     field('Сырьё', 'Raw material', text('Мякоть зрелых кокосов', 'Mature coconut kernels')),
@@ -1134,17 +1293,29 @@ const productSpecifications: Record<string, readonly Specification[]> = {
 const substrateOrder = [
   'Format',
   'Shape',
+  'Supply contents',
+  'Compatible tray model',
+  'Insert dimensions',
   '5 kg block dimensions',
   'Hydrated dimensions',
   'Bag dimensions',
+  'Flat bag dimensions (H × W)',
+  'Filled bag dimensions',
   'Expanded dimensions',
   'Dimensions (L × W × H)',
   'Diameter',
   'Dry thickness',
   'Dry weight',
   'Expanded volume',
+  'Working volume',
+  'Example blueberry bag volumes',
   'Expanded height',
   'Expansion ratio',
+  'Hydrated yield of compressed coco pith',
+  'Hydration time',
+  'Hydration before sowing',
+  'Water or starter solution for hydration',
+  'Hydration water temperature',
   'Substrate composition',
   'Composition',
   'Raw material',
@@ -1156,7 +1327,10 @@ const substrateOrder = [
   'Buffering',
   'Sleeve material',
   'Bag material',
+  'Outer sleeve',
+  'Film thickness',
   'Bag construction',
+  'Bag service life in direct sunlight',
   'Planting hole',
   'Planting holes',
   'Drainage holes',
@@ -1168,11 +1342,12 @@ const substrateOrder = [
   'Drainage',
   'pH',
   'pH (Acidity)',
-  'pH — blueberry grade',
+  'pH for blueberries after preparation',
   'pH — raspberry grade',
   'EC (Electrical conductivity)',
+  'Prepared substrate EC for blueberries',
   'Moisture content at dispatch',
-  'Water-holding capacity',
+  'Maximum water-holding capacity',
   'Air-filled porosity',
   'Organic matter content',
   'NPK content',
@@ -1181,7 +1356,37 @@ const substrateOrder = [
   'Packaging'
 ];
 export function specificationsFor(product: ProductItem): Specification[] {
-  const rows = productSpecifications[product.id];
+  const sourceRows = productSpecifications[product.id]?.map((row) => {
+    if (product.category !== 'substrates') return row;
+    if (row.label.en === 'Water-holding capacity')
+      return { ...row, label: text('Полная влагоёмкость', 'Maximum water-holding capacity') };
+    if (row.label.en.includes('EC') && !row.value.en.includes('1:1.5'))
+      return {
+        ...row,
+        value: text(
+          row.value.ru === 'уточнить'
+            ? 'уточнить; вытяжка 1:1,5 по объёму'
+            : row.value.ru + '; вытяжка 1:1,5 по объёму',
+          row.value.en === 'to be confirmed'
+            ? 'to be confirmed; 1:1.5 extract by volume'
+            : row.value.en + '; 1:1.5 extract by volume'
+        )
+      };
+    return row;
+  });
+  const rows = sourceRows?.map((row) =>
+    product.category === 'substrates' &&
+    ['Particle size', 'Chip sizes available'].includes(row.label.en) &&
+    !/заказчика|buyer/.test(row.value.ru + row.value.en)
+      ? {
+          ...row,
+          value: text(
+            `${row.value.ru}; фракция по требованиям заказчика и под культуру`,
+            `${row.value.en}; particle size customised for the buyer and crop`
+          )
+        }
+      : row
+  );
   if (!rows) throw new Error(`Missing specifications for product: ${product.id}`);
   return [
     field('Производитель', 'Manufacturer', text('Группа компаний СЕХА', 'SEHA Group of Companies')),

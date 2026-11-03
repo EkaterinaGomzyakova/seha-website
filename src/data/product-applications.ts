@@ -193,8 +193,8 @@ export const productApplicationDescriptions: Record<
     ),
     strawberries: text('Для укоренения посадочного материала.', 'For rooting young plants.'),
     propagation: text(
-      'Для проращивания семян и укоренения черенков с последующей пересадкой целым кубом.',
-      'For seed germination and rooting cuttings, followed by transplanting the whole cube.'
+      'Для доращивания укоренённых растений в пробках с последующей пересадкой целым кубом.',
+      'For growing on rooted plug plants before transplanting the complete cube.'
     )
   },
   'coco-coir-discs': {
@@ -229,8 +229,8 @@ export const productApplicationDescriptions: Record<
   },
   'seeding-tray-media': {
     seedlings: text(
-      'Для заполнения кассет и выращивания рассады до пересадки.',
-      'For filling propagation trays and raising seedlings before transplanting.'
+      'Цельный вкладыш увлажняют в совместимой кассете, затем высевают семена.',
+      'Hydrate the one-piece insert in a compatible tray, then sow seeds.'
     )
   }
 };
