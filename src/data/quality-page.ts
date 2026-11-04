@@ -34,10 +34,10 @@ const ru = {
     'Для хранения, субстратов и экспортной упаковки важны контролируемые показатели влажности.',
   qualityProofCardTitle2: 'pH и EC',
   qualityProofText2:
-    'Для кокосового торфа и субстратов проверяются параметры, влияющие на применение в растениеводстве.',
-  qualityProofCardTitle3: 'Фракция',
+    'Для кокосовых субстратов контролируем pH и EC. Для гроубэгов предусмотрены промывка и буферизация; состав раствора согласуем с заказчиком.',
+  qualityProofCardTitle3: 'Структура и влагоёмкость',
   qualityProofText3:
-    'Просеивание и сортировка помогают удерживать однородность материала в партии.',
+    'Проверяем фракцию, соотношение волокна и чипсов, насыпную плотность и расширение после увлажнения. Контролируем влагоёмкость, воздушную пористость и дренаж.',
   qualityProofCardTitle4: 'Чистота и маркировка',
   qualityProofText4:
     'Для пищевой линейки важны отдельные процессы, фильтрация, упаковка и корректная идентификация партии.',
@@ -106,9 +106,10 @@ const en = {
     'Controlled moisture levels are important for storage, substrates and export packaging.',
   qualityProofCardTitle2: 'pH and EC',
   qualityProofText2:
-    'For coir pith and substrates, parameters affecting horticultural use are checked.',
-  qualityProofCardTitle3: 'Particle size',
-  qualityProofText3: 'Sieving and sorting help maintain material uniformity within a batch.',
+    'For coir substrates, we monitor pH and EC. Coco peat grow bags are washed and buffered, with the solution composition agreed with the customer.',
+  qualityProofCardTitle3: 'Structure and water retention',
+  qualityProofText3:
+    'Checks cover particle size, fibre-to-chip ratio, bulk density and expansion after hydration, along with water-holding capacity, air-filled porosity and drainage.',
   qualityProofCardTitle4: 'Cleanliness and labelling',
   qualityProofText4:
     'Dedicated processes, filtration, packaging and correct batch identification are important for the food range.',

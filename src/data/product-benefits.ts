@@ -21,8 +21,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Влага и воздух',
       'Moisture and aeration',
-      'Кокосовая смесь удерживает воду и сохраняет воздушные промежутки; дренажные отверстия отводят её избыток.',
-      'The coir blend retains water and maintains air spaces; drainage holes release excess water.'
+      'Кокосовая смесь удерживает и распределяет воду по капиллярам, сохраняя воздушные промежутки у корней. Дренажные отверстия отводят избыток раствора.',
+      'The coir blend retains and distributes water through capillary action while maintaining air spaces around roots. Drainage holes release excess solution.'
     ),
     benefit(
       'Полив и питание под контролем',

@@ -22,8 +22,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Подготовьте стартовый раствор',
       'Prepare the starter solution',
-      'Базовый мат промыт, но не буферизирован кальцием. До посадки проведите кальциевую буферизацию по согласованному протоколу. Используйте воду 20–25 °C; состав раствора и дозу удобрения подбирайте по анализу воды. EC 1,2–1,5 мСм/см — ориентир стартового раствора, который нужно согласовать под культуру.',
-      'The base mat is washed but not calcium-buffered. Complete calcium buffering before planting using the agreed protocol. Use water at 20–25 °C and select the solution and fertiliser dose from the water analysis. Starter-solution EC of 1.2–1.5 mS/cm is a reference to be agreed for the crop.'
+      'Мат поставляется промытым и буферизированным. Способ буферизации, раствор и его состав согласуются с заказчиком. Повторную буферизацию без необходимости не проводите. Для увлажнения используйте воду 20–25 °C; состав стартового питательного раствора подбирайте по анализу воды и под культуру. EC 1,2–1,5 мСм/см — ориентир стартового раствора, а не обязательное значение для всех культур.',
+      'The mat is supplied washed and buffered. The buffering method, solution and its composition are agreed with the customer. Do not repeat buffering unless needed. For hydration use water at 20–25 °C and select the starter nutrient solution for the water analysis and crop. Starter-solution EC of 1.2–1.5 mS/cm is a reference, not a requirement for every crop.'
     ),
     step(
       'Начните увлажнение',
@@ -46,8 +46,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Обеспечьте дренаж',
       'Establish drainage',
-      'Используйте готовые дренажные отверстия. Если мат поставлен без них, сделайте разрезы у нижнего края со стороны желоба только по согласованной схеме. Дайте лишнему раствору стечь около 30 минут. Раскрытие обычно занимает 2–4 часа; завершение буферизации проверяют отдельно по протоколу.',
-      'Use existing drainage holes. If none are supplied, cut near the lower edge facing the drainage channel only according to the agreed layout. Allow approximately 30 minutes for excess solution to drain. Hydration usually takes 2–4 hours; buffering completion is assessed separately under its protocol.'
+      'Используйте готовые дренажные отверстия. Если мат поставлен без них, сделайте разрезы у нижнего края со стороны желоба только по согласованной схеме. Дайте лишнему раствору стечь около 30 минут. Раскрытие обычно занимает 2–4 часа; перед посадкой проверьте равномерность увлажнения и параметры корневой зоны.',
+      'Use existing drainage holes. If none are supplied, cut near the lower edge facing the drainage channel only according to the agreed layout. Allow approximately 30 minutes for excess solution to drain. Hydration usually takes 2–4 hours; check even moisture and root-zone parameters before planting.'
     ),
     step(
       'Высадите и настройте полив',
@@ -162,8 +162,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Увлажните и проверьте обработку',
       'Moisten and check treatment',
-      'Равномерно смочите чипсы и дайте воде стечь. Эта марка промыта пресной водой, но не буферизирована; необходимость дополнительной подготовки согласуйте под культуру.',
-      'Wet the chips evenly and let them drain. This grade is fresh-water washed but not buffered; agree any further preparation for the crop.'
+      'Равномерно смочите чипсы и дайте воде стечь. Базовая марка промыта пресной водой и не буферизирована. Буферизация доступна по запросу; способ, раствор и его состав согласуются с заказчиком. Перед посадкой проверьте обработку выбранной поставки.',
+      'Wet the chips evenly and let them drain. The base grade is fresh-water washed and unbuffered. Buffering is available on request, with the method, solution and its composition agreed with the customer. Check the treatment of the supplied grade before planting.'
     ),
     step(
       'Выберите способ применения',

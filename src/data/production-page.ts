@@ -19,7 +19,7 @@ const ru = {
   productionFoodLabel: 'SEHA / ПИЩЕВАЯ ЛИНИЯ',
   productionBranchesCardTitle: 'Субстраты, волокно и скорлупа',
   productionBranchesText2:
-    'Площадка SEHA для субстратов, волокна и продуктов из скорлупы: подготовка кокосового сырья, сортировка, сушка и контроль фракции. Здесь продукцию прессуют, упаковывают и готовят к экспортной отгрузке.',
+    'На площадке SEHA в Поллачи, штат Тамилнад, готовят кокосовое сырьё, производят субстраты, волокно и продукты из скорлупы. Для гроубэгов подбирают состав, фракцию, плотность и размеры. Сырьё проходит обработку, контроль качества, прессование и упаковку перед отгрузкой.',
   productionBranchesItem: 'кокосовый торф и чипсы',
   productionBranchesItem2: 'материалы из волокна',
   productionBranchesItem3: 'продукты из скорлупы',
@@ -92,7 +92,7 @@ const ru = {
     'Для хранения, субстратов и экспортной упаковки важны контролируемые показатели влажности.',
   assuranceSectionCardTitle2: 'pH, EC и фракция',
   assuranceSectionText3:
-    'Для кокосового торфа и субстратов критичны однородность, фракция, pH и электрическая проводимость.',
+    'Контролируем pH, EC, фракцию и соотношение волокна и чипсов. Проверяем насыпную плотность, расширение после увлажнения, влагоёмкость, воздушную пористость и дренаж.',
   assuranceSectionCardTitle3: 'Пищевая безопасность',
   assuranceSectionText4:
     'Для пищевой линейки важны отдельные производственные процессы, фильтрация, маркировка и контроль партии.',
@@ -134,7 +134,7 @@ const en = {
   productionFoodLabel: 'SEHA / FOOD PRODUCTION',
   productionBranchesCardTitle: 'Substrates, fibre and shell',
   productionBranchesText2:
-    'The SEHA facility for substrates, fibre and coconut shell products prepares, sorts and dries raw materials, controls particle size, and presses and packs finished products for export shipment.',
+    'The SEHA facility in Pollachi, Tamil Nadu, prepares coconut raw materials and manufactures substrates, fibre and shell products. Grow bag composition, particle size, density and dimensions are tailored to requirements. Raw materials are processed and quality-checked, then products are pressed and packed for dispatch.',
   productionBranchesItem: 'coir pith and chips',
   productionBranchesItem2: 'fibre materials',
   productionBranchesItem3: 'shell products',
@@ -207,7 +207,7 @@ const en = {
     'Controlled moisture levels are important for storage, substrates and export packaging.',
   assuranceSectionCardTitle2: 'pH, EC and particle size',
   assuranceSectionText3:
-    'Uniformity, particle size, pH and electrical conductivity are critical for coir pith and substrates.',
+    'We monitor pH, EC, particle size and the fibre-to-chip ratio. Checks also cover bulk density, expansion after hydration, water-holding capacity, air-filled porosity and drainage.',
   assuranceSectionCardTitle3: 'Food safety',
   assuranceSectionText4:
     'Dedicated manufacturing processes, filtration, labelling and batch control are important for the food range.',

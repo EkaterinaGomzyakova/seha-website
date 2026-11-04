@@ -109,6 +109,22 @@ const waterRetention = field('Влагоудерживающая способн�
 const airPorosity = field('Воздушная пористость', 'Air-filled porosity');
 const impurities = field('Содержание примесей', 'Impurity content');
 const processing = field('Обработка', 'Processing');
+const buffering = field(
+  'Буферизация',
+  'Buffering',
+  text(
+    'Доступна по запросу. Способ буферизации, раствор и его состав согласуются с заказчиком.',
+    'Available on request. The buffering method, solution and its composition are agreed with the customer.'
+  )
+);
+const growBagBuffering = field(
+  'Буферизация',
+  'Buffering',
+  text(
+    'Буферизирован. Способ буферизации, раствор и его состав согласуются с заказчиком.',
+    'Buffered. The buffering method, solution and its composition are agreed with the customer.'
+  )
+);
 const shelfLife = field('Срок годности', 'Shelf life');
 const ingredients = field('Состав', 'Ingredients');
 const organic = field('Органический статус', 'Organic status', text('Органический', 'Organic'));
@@ -187,10 +203,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field(
       'Обработка',
       'Processing',
-      text(
-        'Тщательно промыт; без кальциевой буферизации',
-        'Thoroughly washed; not calcium-buffered'
-      )
+      text('Тщательно промыт и буферизирован', 'Thoroughly washed and buffered')
     ),
     field(
       'Материал мешка',
@@ -272,7 +285,6 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Hydration water temperature',
       text('20–25 °C', '20–25 °C')
     ),
-    field('Буферизация', 'Buffering', text('Без кальциевой буферизации', 'Not calcium-buffered')),
     field('Толщина плёнки', 'Film thickness', text('120–150 мкм', '120–150 μm'))
   ],
   'open-top-grow-bag': [
@@ -476,7 +488,6 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Fresh-water washed, screened and graded'
       )
     ),
-    field('Буферизация', 'Buffering', text('Без буферизации', 'Not buffered')),
     field('pH (Кислотность)', 'pH (Acidity)', text('5,5–6,8', '5.5–6.8')),
     washedChipsEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('15–20%', '15–20%')),
@@ -1494,7 +1505,7 @@ export function specificationsFor(product: ProductItem): Specification[] {
         : text('Индия', 'India')
     ),
     ...(product.category === 'substrates'
-      ? [...rows].sort((a, b) => {
+      ? [...rows, product.id === 'grow-bag' ? growBagBuffering : buffering].sort((a, b) => {
           const rank = (label: string) => {
             const index = substrateOrder.indexOf(label);
             return index < 0 ? substrateOrder.length : index;
