@@ -6,8 +6,8 @@ export const packagingFormats = {
   consumer: {
     label: { ru: 'Готовая упаковка', en: 'Consumer packs' },
     description: {
-      ru: 'Упаковка Veymur для продажи в магазинах.',
-      en: 'Veymur packs for resale.'
+      ru: 'Упаковка Veymur. Формат и оформление можно изменить по заказу.',
+      en: 'Veymur packs. Pack format and design can be customised.'
     }
   },
   industrial: {

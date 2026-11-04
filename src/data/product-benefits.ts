@@ -217,8 +217,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Размер чипсов на выбор',
       'Choice of chip size',
-      'Фракции 6–12 и 12–18 мм; другие размеры — по заказу.',
-      'Chip sizes of 6–12 and 12–18 mm; other sizes are available to order.'
+      'Фракции 2–8, 6–15 и 15–30 мм и крупнее; размер подбирают под культуру.',
+      'Chip sizes of 2–8, 6–15 and 15–30 mm and larger, selected for the crop.'
     ),
     benefit(
       'Промывка и сортировка',

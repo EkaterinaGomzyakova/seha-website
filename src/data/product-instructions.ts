@@ -60,8 +60,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Равномерно увлажните',
       'Moisten evenly',
-      'Равномерно увлажните субстрат перед посадкой, дайте лишней воде стечь и не уплотняйте смесь.',
-      'Moisten the medium evenly before planting, allow excess water to drain and do not compact it.'
+      'Постепенно подавайте воду или согласованный питательный раствор. Дождитесь равномерного раскрытия прессованного субстрата, дайте лишней воде стечь и не уплотняйте смесь.',
+      'Gradually apply water or the agreed nutrient solution. Allow the compressed substrate to expand evenly and excess water to drain; do not compact the medium.'
     ),
     step(
       'Посадите саженец',
@@ -144,8 +144,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Подберите фракцию',
       'Choose the chip grade',
-      'Выберите чипсы 6–12 или 12–18 мм с учётом растения, размера ёмкости и полива. Для мелких корней обычно нужна более однородная мелкая смесь.',
-      'Choose 6–12 or 12–18 mm chips for the plant, container and irrigation system. Fine roots generally need a finer, more uniform blend.'
+      'Выберите чипсы нужной фракции с учётом растения, размера ёмкости и полива. Для мелких корней обычно нужна более однородная мелкая смесь.',
+      'Choose the appropriate chip size for the plant, container and irrigation system. Fine roots generally need a finer, more uniform blend.'
     ),
     step(
       'Увлажните и проверьте обработку',
@@ -240,14 +240,14 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Подберите диск под ёмкость',
       'Match the disc to the container',
-      'Подберите диск под диаметр дна горшка или стаканчика с дренажом. Наружной оболочки у диска нет, поэтому отдельная ёмкость удерживает рыхлый субстрат после раскрытия.',
-      'Match the disc to the base of a draining pot or cup. There is no outer sleeve, so the container holds the loose medium after expansion.'
+      'Подберите диск под диаметр дна горшка или стаканчика с дренажом. У дисков для горшков нет оболочки: ёмкость удерживает рыхлый субстрат после раскрытия. У посевных дисков в сеточке форму удерживает биоразлагаемая оболочка.',
+      'Match the disc to the base of a draining pot or cup. Pot discs have no sleeve, so the container holds the loose medium after expansion. Seed-germination discs in biodegradable mesh retain their shape in the sleeve.'
     ),
     step(
       'Раскройте водой',
       'Expand with water',
-      'Положите диск внутрь и добавляйте воду порциями до полного раскрытия. Разрыхлите влажный торф с короткими волокнами и дайте избытку воды стечь; не пытайтесь сохранить форму отдельной таблетки.',
-      'Place the disc inside and add water in stages until fully expanded. Loosen the damp pith and short fibres, then drain excess water; do not try to preserve a freestanding pellet shape.'
+      'Положите диск внутрь и добавляйте воду порциями до полного раскрытия. Разрыхлите влажный торф с короткими волокнами и дайте избытку воды стечь; диски без оболочки не сохраняют форму таблетки.',
+      'Place the disc inside and add water in stages until fully expanded. Loosen the damp pith and short fibres, then drain excess water; discs without a sleeve do not retain a freestanding pellet shape.'
     ),
     step(
       'Посейте семена',
@@ -264,16 +264,16 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Пересадите рассаду',
       'Transplant seedlings',
-      'Пересаживайте, когда корни освоят субстрат, сохраняя корневой ком. Диск не имеет оболочки, которую нужно снимать перед пересадкой.',
-      'Transplant once roots establish, preserving the root ball. There is no disc sleeve to remove before transplanting.'
+      'Пересаживайте, когда корни освоят субстрат, сохраняя корневой ком. У дисков для горшков оболочки нет; биоразлагаемую сеточку посевных дисков не снимают.',
+      'Transplant once roots establish, preserving the root ball. Pot discs have no sleeve; leave biodegradable mesh on seed-germination discs.'
     )
   ],
   'coco-peat-tablets': [
     step(
       'Подберите таблетку',
       'Choose the tablet size',
-      'Выберите диаметр под растение и ячейку лотка. Оставьте место для расширения; наличие и тип оболочки уточните для выбранной модели.',
-      'Choose the diameter for the plant and tray cell. Leave expansion space and check the sleeve type, if any, for the supplied model.'
+      'Выберите диаметр под растение и ячейку лотка. Оставьте место для расширения. Биоразлагаемая нетканая сеточка удерживает форму таблетки.',
+      'Choose the diameter for the plant and tray cell. Leave expansion space. Biodegradable non-woven mesh holds the tablet together.'
     ),
     step(
       'Увлажните таблетку',
@@ -296,8 +296,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Пересадите без разрушения кома',
       'Transplant without disturbing roots',
-      'Когда рассада готова, перенесите таблетку вместе с корневым комом в увлажнённую смесь. Если есть оболочка, следуйте инструкции по её материалу.',
-      'When ready, move the tablet and root ball into moist growing mix. If a sleeve is present, follow the instructions for its material.'
+      'Когда рассада готова, перенесите таблетку вместе с корневым комом в увлажнённую смесь. Биоразлагаемую сеточку снимать не нужно.',
+      'When ready, move the tablet and root ball into moist growing mix. Leave the biodegradable mesh in place.'
     )
   ],
   'coco-peat-compost': [
@@ -328,8 +328,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Настройте питание',
       'Set nutrition',
-      'Не считайте название «компост» признаком готового питания. Подберите полноценные удобрения по культуре, воде и фактической начальной заправке субстрата.',
-      'Do not assume that the name compost means the medium contains a complete feed. Select nutrition for the crop, water quality and any actual initial nutrient charge.'
+      'Не считайте название «компост» признаком готового питания. Удобрения в продукт не добавляются. Подберите питание под культуру и поливную воду.',
+      'Do not assume that the name compost means the medium contains a complete feed. No fertiliser is added. Select nutrition for the crop and irrigation water.'
     )
   ],
   'seeding-tray-media': [
