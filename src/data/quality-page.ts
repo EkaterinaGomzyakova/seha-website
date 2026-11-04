@@ -34,7 +34,7 @@ const ru = {
     'Для хранения, субстратов и экспортной упаковки важны контролируемые показатели влажности.',
   qualityProofCardTitle2: 'pH и EC',
   qualityProofText2:
-    'Для кокосовых субстратов контролируем pH и EC. Для гроубэгов предусмотрены промывка и буферизация; состав раствора согласуем с заказчиком.',
+    'Для кокосовых субстратов контролируем pH и EC. Субстраты промыты, буферизация доступна по запросу.',
   qualityProofCardTitle3: 'Структура и влагоёмкость',
   qualityProofText3:
     'Проверяем фракцию, соотношение волокна и чипсов, насыпную плотность и расширение после увлажнения. Контролируем влагоёмкость, воздушную пористость и дренаж.',
@@ -106,7 +106,7 @@ const en = {
     'Controlled moisture levels are important for storage, substrates and export packaging.',
   qualityProofCardTitle2: 'pH and EC',
   qualityProofText2:
-    'For coir substrates, we monitor pH and EC. Coco peat grow bags are washed and buffered, with the solution composition agreed with the customer.',
+    'For coir substrates, we monitor pH and EC. Substrates are washed; buffering is available on request.',
   qualityProofCardTitle3: 'Structure and water retention',
   qualityProofText3:
     'Checks cover particle size, fibre-to-chip ratio, bulk density and expansion after hydration, along with water-holding capacity, air-filled porosity and drainage.',

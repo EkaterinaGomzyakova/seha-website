@@ -109,22 +109,7 @@ const waterRetention = field('Влагоудерживающая способн�
 const airPorosity = field('Воздушная пористость', 'Air-filled porosity');
 const impurities = field('Содержание примесей', 'Impurity content');
 const processing = field('Обработка', 'Processing');
-const buffering = field(
-  'Буферизация',
-  'Buffering',
-  text(
-    'Доступна по запросу. Способ буферизации, раствор и его состав согласуются с заказчиком.',
-    'Available on request. The buffering method, solution and its composition are agreed with the customer.'
-  )
-);
-const growBagBuffering = field(
-  'Буферизация',
-  'Buffering',
-  text(
-    'Буферизирован. Способ буферизации, раствор и его состав согласуются с заказчиком.',
-    'Buffered. The buffering method, solution and its composition are agreed with the customer.'
-  )
-);
+const buffering = field('Буферизация', 'Buffering', text('По запросу', 'On request'));
 const shelfLife = field('Срок годности', 'Shelf life');
 const ingredients = field('Состав', 'Ingredients');
 const organic = field('Органический статус', 'Organic status', text('Органический', 'Organic'));
@@ -152,10 +137,14 @@ const foodStorage = field(
     'Cool and dry, away from sunlight and strong odours'
   )
 );
-const rollWidth = field('Ширина рулона', 'Roll width');
-const rollLength = field('Длина рулона', 'Roll length');
+const rollWidth = field('Ширина рулона', 'Roll width', text('По заказу', 'Customised'));
+const rollLength = field('Длина рулона', 'Roll length', text('По заказу', 'Customised'));
 const tensileStrength = field('Разрывная нагрузка', 'Tensile strength');
-const matWeight = field('Поверхностная плотность', 'Mass per unit area');
+const matWeight = field(
+  'Поверхностная плотность',
+  'Mass per unit area',
+  text('По заказу', 'Customised')
+);
 
 const productSpecifications: Record<string, readonly Specification[]> = {
   'grow-bag': [
@@ -200,11 +189,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     ph,
     lowEc,
     field('Влажность при поставке', 'Moisture content at dispatch', text('< 20%', '< 20%')),
-    field(
-      'Обработка',
-      'Processing',
-      text('Тщательно промыт и буферизирован', 'Thoroughly washed and buffered')
-    ),
+    field('Обработка', 'Processing', text('Промыт и просеян', 'Washed and screened')),
     field(
       'Материал мешка',
       'Bag material',
@@ -945,7 +930,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     rawFibre,
     field('Структура', 'Construction', text('Тканая / иглопробивная', 'Woven / needle-punched')),
     matWeight,
-    field('Толщина', 'Thickness'),
+    field('Толщина', 'Thickness', text('По заказу', 'Customised')),
     rollWidth,
     rollLength,
     tensileStrength,
@@ -1462,7 +1447,7 @@ const substrateOrder = [
   'Short fibre content',
   'Packaging'
 ];
-export function specificationsFor(product: ProductItem): Specification[] {
+export function allSpecificationsFor(product: ProductItem): Specification[] {
   const sourceRows = productSpecifications[product.id]?.map((row) => {
     if (product.category !== 'substrates') return row;
     if (row.label.en === 'Water-holding capacity')
@@ -1505,7 +1490,7 @@ export function specificationsFor(product: ProductItem): Specification[] {
         : text('Индия', 'India')
     ),
     ...(product.category === 'substrates'
-      ? [...rows, product.id === 'grow-bag' ? growBagBuffering : buffering].sort((a, b) => {
+      ? [...rows, buffering].sort((a, b) => {
           const rank = (label: string) => {
             const index = substrateOrder.indexOf(label);
             return index < 0 ? substrateOrder.length : index;
@@ -1514,4 +1499,41 @@ export function specificationsFor(product: ProductItem): Specification[] {
         })
       : rows)
   ];
+}
+
+// Retain detailed and unconfirmed data for review without cluttering the catalogue.
+const detailedSubstrateFields = new Set([
+  'Example blueberry bag volumes',
+  'Hydrated yield of compressed coco pith',
+  'Water or starter solution for hydration',
+  'Hydration water temperature',
+  'Water retained after free drainage',
+  'Weight after watering and drainage',
+  'Prepared substrate EC for blueberries',
+  'pH — raspberry grade',
+  'Dust fraction < 0.5 mm',
+  'Dust fraction',
+  'Short fibre content',
+  'Organic matter content',
+  'NPK content'
+]);
+export function specificationsFor(product: ProductItem): Specification[] {
+  return allSpecificationsFor(product)
+    .filter((row) => !/уточнить|to be confirmed/i.test(row.value.ru + row.value.en))
+    .filter(
+      (row) => product.category !== 'substrates' || !detailedSubstrateFields.has(row.label.en)
+    )
+    .map((row) => {
+      if (product.category !== 'substrates') return row;
+      if (row.label.en === 'pH for blueberries after preparation')
+        return {
+          label: text('pH (Кислотность)', 'pH (Acidity)'),
+          value: text('Под культуру, по заказу', 'Customised for the crop')
+        };
+      if (['Particle size', 'Chip sizes available'].includes(row.label.en))
+        return { ...row, value: text('Под культуру, по заказу', 'Customised for the crop') };
+      if (row.label.en === 'Mineral impurities' && row.value.ru.includes('или'))
+        return { ...row, value: text('По спецификации заказа', 'To the order specification') };
+      return row;
+    });
 }

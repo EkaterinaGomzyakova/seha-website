@@ -39,8 +39,8 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Состав под культуру',
       'Crop-specific blend',
-      'Соотношение подбирают по объёму. Примеры торф / чипсы: 70–80% / 20–30% — для большего запаса влаги; 50% / 50% — для баланса влаги и воздуха; 20–30% / 70–80% или 100% чипсов — для более быстрого дренажа.',
-      'Ratios are specified by volume. Examples of pith / chips: 70–80% / 20–30% for greater moisture retention; 50% / 50% for balanced moisture and aeration; 20–30% / 70–80% or 100% chips for faster drainage.'
+      'Соотношение торфа и чипсов по объёму подбираем под культуру, полив и нужное удержание влаги.',
+      'The pith-to-chip ratio by volume is tailored to the crop, irrigation and moisture-retention requirements.'
     ),
     benefit(
       'Размеры под систему',

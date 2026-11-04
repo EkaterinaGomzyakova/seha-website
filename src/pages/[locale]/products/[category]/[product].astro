@@ -90,6 +90,13 @@ const category = productCategories.find((category) => category.slug === item.cat
       <h2 id="specifications-title" class="type-h2">
         {ru ? 'Характеристики' : 'Specifications'}
       </h2>
+      {item.category === 'substrates' && (
+        <p class="type-p">
+          {ru
+            ? 'Базовые характеристики. Размеры, состав и параметры субстрата подбираем под ваш заказ.'
+            : 'Basic specifications. Dimensions, composition and substrate properties are tailored to your order.'}
+        </p>
+      )}
       <dl>
         {specificationsFor(item).map((row) => (
           <div>

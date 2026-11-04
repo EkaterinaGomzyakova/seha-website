@@ -14,54 +14,42 @@ const step = (ru: string, en: string, bodyRu: string, bodyEn: string): Instructi
 export const productInstructions: Record<string, readonly InstructionStep[]> = {
   'grow-bag': [
     step(
-      'Подберите конфигурацию',
+      'Выберите конфигурацию',
       'Choose the configuration',
-      'Согласуйте состав по объёму, фракции и схему посадки. Размеры 100 × 20 × 9 см для клубники и 100 × 15 × 12 см для томата описывают мешок после увлажнения; это примеры, а не единый стандарт.',
-      'Agree the blend by volume, particle grades and planting layout. Strawberry dimensions of 100 × 20 × 9 cm and tomato dimensions of 100 × 15 × 12 cm describe the hydrated bag; they are examples, not fixed standards.'
+      'Согласуйте состав, размеры и отверстия под культуру и систему полива. Буферизация доступна по запросу.',
+      'Agree the blend, dimensions and holes for the crop and irrigation system. Buffering is available on request.'
     ),
     step(
-      'Подготовьте стартовый раствор',
-      'Prepare the starter solution',
-      'Мат поставляется промытым и буферизированным. Способ буферизации, раствор и его состав согласуются с заказчиком. Повторную буферизацию без необходимости не проводите. Для увлажнения используйте воду 20–25 °C; состав стартового питательного раствора подбирайте по анализу воды и под культуру. EC 1,2–1,5 мСм/см — ориентир стартового раствора, а не обязательное значение для всех культур.',
-      'The mat is supplied washed and buffered. The buffering method, solution and its composition are agreed with the customer. Do not repeat buffering unless needed. For hydration use water at 20–25 °C and select the starter nutrient solution for the water analysis and crop. Starter-solution EC of 1.2–1.5 mS/cm is a reference, not a requirement for every crop.'
+      'Разложите маты',
+      'Position the slabs',
+      'Установите маты на ровную поверхность с отводом воды. Разместите капельницы по выбранной схеме.',
+      'Place slabs on a level surface with drainage. Position drippers to the agreed layout.'
     ),
     step(
-      'Начните увлажнение',
-      'Start hydration',
-      'Разложите мешки на ровной опоре и подавайте раствор через верхние отверстия. Для описанной конфигурации ориентир первого залива — около 7–8 л за 5–10 минут. Не подавайте раствор быстрее, чем он впитывается.',
-      'Place bags on level supports and apply solution through the upper openings. For the referenced configuration, an initial application is approximately 7–8 L over 5–10 minutes. Do not apply faster than it can be absorbed.'
+      'Увлажните субстрат',
+      'Hydrate the substrate',
+      'Подавайте воду или согласованный питательный раствор постепенно. Дождитесь равномерного раскрытия, без сухих участков.',
+      'Apply water or the agreed nutrient solution gradually. Allow the medium to expand evenly, without dry areas.'
     ),
     step(
-      'Дайте плите раскрыться',
-      'Allow the slab to expand',
-      'Оставьте мат примерно на 1,5–2 часа. Проверьте, что субстрат расправился по углам и внутри нет сухого спрессованного ядра. В среднем 1 кг сухого прессованного торфа даёт 14–15 л рыхлого субстрата; смесь с чипсами может иметь другой выход.',
-      'Leave the mat for approximately 1.5–2 hours. Check that the medium reaches the corners and has no dry compressed centre. Dry compressed coco pith yields an average of 14–15 L per kg; chip blends may have a different yield.'
+      'Проверьте дренаж',
+      'Check drainage',
+      'Убедитесь, что дренажные отверстия открыты, и дайте лишней воде стечь.',
+      'Check that drainage holes are clear and allow excess water to drain.'
     ),
     step(
-      'Завершите насыщение',
-      'Complete saturation',
-      'Добавляйте раствор порциями до равномерного увлажнения. Общий ориентир — около 10–15 л на мешок; финальное насыщение занимает примерно 30–40 минут. Точные значения зависят от размеров и состава, поэтому не заливайте мешок до краёв без контроля.',
-      'Add solution in stages until moisture is uniform. A total reference is approximately 10–15 L per bag, with final saturation taking about 30–40 minutes. Exact amounts depend on size and blend; do not fill the sleeve to the brim without monitoring.'
-    ),
-    step(
-      'Обеспечьте дренаж',
-      'Establish drainage',
-      'Используйте готовые дренажные отверстия. Если мат поставлен без них, сделайте разрезы у нижнего края со стороны желоба только по согласованной схеме. Дайте лишнему раствору стечь около 30 минут. Раскрытие обычно занимает 2–4 часа; перед посадкой проверьте равномерность увлажнения и параметры корневой зоны.',
-      'Use existing drainage holes. If none are supplied, cut near the lower edge facing the drainage channel only according to the agreed layout. Allow approximately 30 minutes for excess solution to drain. Hydration usually takes 2–4 hours; check even moisture and root-zone parameters before planting.'
-    ),
-    step(
-      'Высадите и настройте полив',
-      'Transplant and set irrigation',
-      'Перенесите укоренённую рассаду, сохранив корневой ком, и установите капельницы. Подберите питание под культуру и стадию роста, контролируйте pH, EC и влажность корневой зоны.',
-      'Transplant rooted seedlings without breaking up the root ball and position drippers. Match nutrition to crop and growth stage, monitoring root-zone pH, EC and moisture.'
+      'Высадите рассаду',
+      'Transplant seedlings',
+      'Сохраните корневой ком при посадке. Настройте полив и питание под культуру, контролируйте влажность, pH и EC.',
+      'Keep the root ball intact when transplanting. Set irrigation and nutrition for the crop, monitoring moisture, pH and EC.'
     )
   ],
   'open-top-grow-bag': [
     step(
       'Выберите вариант под культуру',
       'Choose the crop-specific grade',
-      'Для малины pH 5,5–6,2. Голубике готовят отдельную смесь до pH 4,5–5,2 и стартового EC ниже 0,3 мСм/см. Состав 60% кокосового торфа и 40% чипсов по объёму — базовая кокосовая смесь, а не автоматически подкисленный грунт.',
-      'For raspberries use pH 5.5–6.2. Prepare a separate blueberry mix to pH 4.5–5.2 and initial substrate EC below 0.3 mS/cm. The 60% coco pith and 40% chips by volume describes the base coir blend, not an automatically acidified medium.'
+      'Подберите состав, объём и pH под культуру. Для голубики требуется кислая среда. Буферизация доступна по запросу.',
+      'Choose the blend, volume and pH for the crop. Blueberries require an acidic growing medium. Buffering is available on request.'
     ),
     step(
       'Установите мешок',
@@ -72,8 +60,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Равномерно увлажните',
       'Moisten evenly',
-      'Равномерно увлажните рыхлый субстрат перед посадкой, дайте избытку воды стечь и не утрамбовывайте смесь. Время и объём раствора для раскрытия прессованного горизонтального мата к этому мешку не применяются.',
-      'Moisten the loose medium evenly before planting, allow excess water to drain and do not compact it. Hydration times and solution volumes for compressed horizontal slabs do not apply to this bag.'
+      'Равномерно увлажните субстрат перед посадкой, дайте лишней воде стечь и не уплотняйте смесь.',
+      'Moisten the medium evenly before planting, allow excess water to drain and do not compact it.'
     ),
     step(
       'Посадите саженец',
@@ -84,8 +72,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Контролируйте корневую зону',
       'Monitor the root zone',
-      'Настройте полив и питание по культуре и анализу воды, регулярно проверяйте pH и EC. Взвесьте мешок после полива и стекания воды и отслеживайте потерю массы между поливами. Не ждите полного пересыхания; порог следующего полива подбирают по культуре, стадии роста и погоде. Подкисление согласуют с агрономом по щёлочности воды. Свободный дренаж снижает риск переувлажнения, но не гарантирует защиты от корневых болезней.',
-      'Set irrigation and nutrition for the crop and water analysis, regularly checking pH and EC. Weigh the bag after watering and drainage, then monitor weight loss between irrigations. Do not allow complete drying; set the next irrigation threshold for crop, growth stage and weather. Agree acidification with the agronomist based on water alkalinity. Free drainage reduces waterlogging risk but does not guarantee protection from root disease.'
+      'Подберите режим полива и питание под культуру. Проверяйте влажность, pH и EC, не допускайте застоя воды и полного пересыхания.',
+      'Set irrigation and nutrition for the crop. Check moisture, pH and EC, avoiding standing water and complete drying.'
     )
   ],
   'coco-peat': [
@@ -162,8 +150,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Увлажните и проверьте обработку',
       'Moisten and check treatment',
-      'Равномерно смочите чипсы и дайте воде стечь. Базовая марка промыта пресной водой и не буферизирована. Буферизация доступна по запросу; способ, раствор и его состав согласуются с заказчиком. Перед посадкой проверьте обработку выбранной поставки.',
-      'Wet the chips evenly and let them drain. The base grade is fresh-water washed and unbuffered. Buffering is available on request, with the method, solution and its composition agreed with the customer. Check the treatment of the supplied grade before planting.'
+      'Равномерно смочите чипсы и дайте воде стечь. Чипсы промыты пресной водой. Буферизация доступна по запросу.',
+      'Wet the chips evenly and let them drain. The chips are fresh-water washed. Buffering is available on request.'
     ),
     step(
       'Выберите способ применения',
