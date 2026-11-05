@@ -17,10 +17,13 @@
 .product-hero-icon {
   width: 148px;
   height: 148px;
-  border-radius: 24px;
   overflow: hidden;
+  clip-path: url('#category-photo-clip');
   margin-bottom: 12px;
   background: var(--color-light-gray);
+}
+.product-hero-icon__clip {
+  position: absolute;
 }
 .product-hero-icon img {
   display: block;
@@ -112,6 +115,9 @@
 }
 .product-item__details > p {
   margin: 0;
+  max-inline-size: 18em;
+  min-block-size: 4lh;
+  text-wrap: balance;
   color: var(--color-dark-gray);
 }
 .page-product-category .product-item .button {
@@ -151,12 +157,14 @@
     max-width: 810px;
   }
 }
+@media (max-width: 990px) {
+  .product-grid-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 @media (max-width: 800px) {
   .product-hero > p {
     margin-top: 20px;
-  }
-  .product-grid-page {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .product-category--fiber .product-hero h1,
   .product-category--fiber .product-hero > p,
@@ -165,7 +173,12 @@
     max-width: 640px;
   }
 }
-/* The mobile design uses one card per row up to and including 440px. */
+@media (max-width: 600px) {
+  .product-grid-page {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
 @media (max-width: 440px) {
   .page-product-category {
     --grid-margin: 24px;
@@ -184,15 +197,10 @@
     background: var(--color-light-gray);
   }
   .product-hero-icon {
-    border-radius: 32px;
     margin-bottom: 24px;
   }
   .product-hero > p {
     color: var(--color-black);
-  }
-  .product-grid-page {
-    grid-template-columns: 1fr;
-    gap: 32px;
   }
   .product-list-section {
     padding: 40px 0;
