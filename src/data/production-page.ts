@@ -19,7 +19,7 @@ const ru = {
   productionFoodLabel: 'SEHA / ПИЩЕВАЯ ЛИНИЯ',
   productionBranchesCardTitle: 'Субстраты, волокно и скорлупа',
   productionBranchesText2:
-    'На площадке SEHA в Поллачи, штат Тамилнад, готовят кокосовое сырьё, производят субстраты, волокно и продукты из скорлупы. Для гроубэгов подбирают состав, фракцию, плотность и размеры. Сырьё проходит обработку, контроль качества, прессование и упаковку перед отгрузкой.',
+    'На площадке SEHA в Поллачи, штат Тамилнад, производят субстраты, волокно и продукты из скорлупы. Здесь работают более 200 сотрудников, территория занимает около 10 га. Состав, фракцию, плотность и размеры подбирают под заказ. Сырьё проходит обработку, контроль качества, прессование и упаковку.',
   productionBranchesItem: 'кокосовый торф и чипсы',
   productionBranchesItem2: 'материалы из волокна',
   productionBranchesItem3: 'продукты из скорлупы',
@@ -100,7 +100,7 @@ const ru = {
   russiaSectionHeading: 'Производственная экспертиза Индии,',
   russiaSectionEmphasis: 'коммерческое сопровождение в России',
   russiaSectionText:
-    'Сеха — точка контакта для российского B2B-клиента. Мы помогаем выбрать продукт, согласовать объем, упаковку, характеристики партии и условия поставки.',
+    'SEHA производит продукцию в Индии и импортирует её в Россию. Команда в Москве ведёт продажи и сопровождает заказ: помогает выбрать продукт, согласует характеристики, объём, упаковку, документы и условия поставки.',
   russiaSectionLabel2: 'Подбор продукта под задачу',
   russiaSectionLabel3: 'Согласование объема и упаковки',
   russiaSectionLabel4: 'Коммерческое предложение',
@@ -134,7 +134,7 @@ const en = {
   productionFoodLabel: 'SEHA / FOOD PRODUCTION',
   productionBranchesCardTitle: 'Substrates, fibre and shell',
   productionBranchesText2:
-    'The SEHA facility in Pollachi, Tamil Nadu, prepares coconut raw materials and manufactures substrates, fibre and shell products. Grow bag composition, particle size, density and dimensions are tailored to requirements. Raw materials are processed and quality-checked, then products are pressed and packed for dispatch.',
+    'SEHA’s Pollachi facility in Tamil Nadu manufactures substrates, fibre and shell products. It employs over 200 people on approximately 10 ha. Composition, particle size, density and dimensions are tailored to the order. Raw materials undergo processing, quality control, compression and packing.',
   productionBranchesItem: 'coir pith and chips',
   productionBranchesItem2: 'fibre materials',
   productionBranchesItem3: 'shell products',
@@ -215,7 +215,7 @@ const en = {
   russiaSectionHeading: 'Manufacturing expertise from India,',
   russiaSectionEmphasis: 'commercial support in Russia',
   russiaSectionText:
-    'Seha is the point of contact for Russian B2B customers. We help select the product and agree on volume, packaging, batch specifications and supply terms.',
+    'SEHA manufactures in India and imports into Russia. The Moscow team handles sales and order support, helping select the product and agree specifications, volume, packaging, documentation and delivery terms.',
   russiaSectionLabel2: 'Product selection for your task',
   russiaSectionLabel3: 'Agreement on volume and packaging',
   russiaSectionLabel4: 'Quotation',

@@ -173,24 +173,28 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   },
   'coir-weed-mat': {
     description: [
-      'Покровный мат из натурального кокосового волокна для сельского хозяйства, питомников, садов и ландшафтных проектов. Закрывает поверхность почвы и пропускает воду и воздух; степень подавления сорняков и сокращения испарения зависит от плотности и конструкции мата.',
-      'A ground-cover mat made from natural coconut coir fibre for agriculture, nurseries, gardens and landscaping. It covers the soil surface while allowing water and air to pass through; weed suppression and reduced evaporation depend on the mat construction and density.'
+      'Мульчирующие маты из кокосового волокна — тканые и иглопробивные, в рулонах и круглые. Покрывают почву, сдерживают рост сорняков и уменьшают испарение влаги, пропуская воду и воздух.',
+      'Woven and needle-punched coir weed mats, supplied in rolls or round formats. They cover the soil, help suppress weeds and reduce moisture loss while allowing water and air to pass through.'
+    ],
+    fullDescription: [
+      'Мульчирующие маты SEHA производят из натурального кокосового волокна. Покрытие помогает сдерживать рост сорняков, уменьшать испарение влаги и защищать поверхность почвы от дождя и солнца. Структура мата пропускает воду и воздух.\n\nДоступны тканые и иглопробивные маты в рулонах и круглой формы. Рулонное покрытие используют для грядок, междурядий и озеленения, круглые маты — вокруг деревьев и кустарников. Материал подходит для ягодных и овощных посадок, садов и питомников.\n\nРазмеры, толщину, плотность и конструкцию подбирают под культуру и проект. Указанные характеристики — примеры доступных исполнений. Кокосовое волокно биоразлагается в подходящих условиях.',
+      'SEHA Coir Weed Mats are made from natural coconut coir fibre. They help suppress weeds, reduce evaporation and protect the soil surface from rain and sunlight while allowing water and air to pass through.\n\nWoven and needle-punched mats are available in rolls and round formats. Rolls cover beds, planting rows and landscaped areas; round mats fit around trees and shrubs. They suit berry and vegetable growing, orchards and nurseries.\n\nDimensions, thickness, weight and construction are tailored to the crop and project. Listed specifications are examples of available configurations. Coir fibre biodegrades under suitable environmental conditions.'
     ]
   },
   'coir-fiber-bales': {
-    fullDescription: [
-      'Кокосовое волокно SEHA получают из волокнистой оболочки кокоса путём выделения, очистки и сортировки. Грубый упругий материал используют для канатов, шпагата, щёток, матов, противоэрозионных изделий и отдельных растениеводческих задач.\n\nДоступны разные длины и марки волокна, в зависимости от наличия. Размеры тюка, массу и экспортную упаковку согласуют под производство заказчика. Прессованный формат удобен для оптовой перевозки. Волокно производится в Индии из возобновляемого растительного сырья.',
-      'SEHA Coconut Coir Fibre Bales are produced in India from coconut husks through fibre extraction, cleaning and grading. The coarse, resilient material is used for ropes, twine, brushes, coir mats, erosion-control products and selected horticultural applications.\n\nDifferent fibre grades and lengths are available subject to supply. Bale dimensions, weight and export packing are agreed for the buyer’s production requirements. Compressed bales provide a practical bulk transport format using renewable plant-based material.'
-    ],
     description: [
-      'Волокно из волокнистой оболочки кокоса в тюках для производства канатов, шпагата, щёток, матов и противоэрозионных изделий. Длина волокна, размеры и масса тюка согласовываются при заказе.',
-      'Coconut husk fibre in bales for ropes, twine, brushes, mats and erosion-control products. Fibre length, bale dimensions and weight are agreed when ordering.'
+      'Кокосовое волокно длиной 10–25 см в тюках по 120 кг для канатов, шпагата, щёток, матов и противоэрозионных изделий. Размеры тюка и упаковка — по заказу.',
+      'Coconut coir fibre, 10–25 cm long, in 120 kg bales for ropes, twine, brushes, mats and erosion-control products. Bale dimensions and packaging are specified to order.'
+    ],
+    fullDescription: [
+      'Кокосовое волокно SEHA получают из волокнистой оболочки кокоса путём выделения, очистки и сортировки. Грубый упругий материал используют для канатов, шпагата, щёток, матов и противоэрозионных изделий.\n\nДлина волокна — 10–25 см, масса нетто тюка — 120 кг. Размеры тюка и упаковку согласуют под хранение, перевозку и производство заказчика. Волокно производится в Индии из возобновляемого растительного сырья.',
+      'SEHA Coconut Coir Fibre Bales are produced in India from coconut husks through fibre extraction, cleaning and grading. The coarse, resilient material is used for ropes, twine, brushes, coir mats and erosion-control products.\n\nFibre length is 10–25 cm and net bale weight is 120 kg. Bale dimensions and packaging are agreed for the customer’s storage, transport and manufacturing requirements. The fibre comes from renewable plant-based raw material.'
     ]
   },
   'coir-geo-textile': {
     fullDescription: [
-      'Кокосовый геотекстиль SEHA — тканое сетчатое полотно из натурального кокосового волокна. Он помогает уменьшать смыв почвы, защищать открытые поверхности от дождя и стока воды и поддерживать закрепление растительности на склонах и берегах.\n\nОткрытая сетка пропускает воду. Материал биоразлагается; продолжительность службы зависит от плотности полотна и условий участка. Применяется в инфраструктурных, ландшафтных и берегозащитных проектах. Доступны плотности 400, 700 и 900 г/м²; размеры рулона и ячейки согласуют под проект.',
-      'SEHA Coir Geotextiles are woven, open-mesh soil-protection materials made from natural coconut coir fibres. They help reduce soil loss, protect exposed surfaces from rain and runoff, and support vegetation establishment on slopes and riverbanks.\n\nThe open mesh allows water passage. The textile is biodegradable, with service life depending on grade and site conditions. Suitable for infrastructure, landscaping, riverbank protection and land restoration. Available fabric weights are 400, 700 and 900 g/m²; roll dimensions and mesh openings are agreed for the project.'
+      'Кокосовый геотекстиль SEHA — тканое сетчатое полотно из натурального кокосового волокна. Он помогает уменьшать смыв почвы, защищать открытые поверхности от дождя и стока воды и поддерживать закрепление растительности на склонах и берегах.\n\nОткрытая сетка пропускает воду. Материал биоразлагается; продолжительность службы зависит от плотности полотна и условий участка. Применяется в инфраструктурных, ландшафтных и берегозащитных проектах. Примеры плотности — 400, 700 и 900 г/м². Плотность, размеры рулона и ячейки подбирают под проект.',
+      'SEHA Coir Geotextiles are woven, open-mesh soil-protection materials made from natural coconut coir fibres. They help reduce soil loss, protect exposed surfaces from rain and runoff, and support vegetation establishment on slopes and riverbanks.\n\nThe open mesh allows water passage. The textile is biodegradable, with service life depending on grade and site conditions. Suitable for infrastructure, landscaping, riverbank protection and land restoration. Example fabric weights are 400, 700 and 900 g/m². Weight, roll dimensions and mesh openings are specified for the project.'
     ],
     description: [
       'Кокосовый геотекстиль — тканое сетчатое полотно из натурального кокосового волокна. Применяется для контроля эрозии, стабилизации склонов, защиты берегов и поддержки роста растительности. Открытая структура пропускает воду; срок биоразложения зависит от плотности полотна и условий на участке.',
@@ -198,13 +202,13 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
     ]
   },
   'coco-shell-charcoal-briquettes': {
-    fullDescription: [
-      'Угольные брикеты SEHA производят из угля кокосовой скорлупы. Сырьё обрабатывают и прессуют в брикеты одинаковой формы, удобные для хранения, перевозки и использования в грилях и барбекю.\n\nФорму — куб, шестигранник, подушечку или другую — размеры, плотность, связующее и упаковку согласуют под применение. Продолжительность и характер горения зависят от марки, размера, плотности и подачи воздуха. Возможна упаковка во внутренний пакет с коробкой или экспортный мешок.',
-      'SEHA charcoal briquettes are manufactured from coconut shell charcoal, processed and compressed into uniform shapes for convenient storage, transport and use in grills and barbecues.\n\nCube, hexagonal, pillow or custom shapes, dimensions, density, binder and packaging can be specified for the application. Burning performance and duration depend on grade, size, density and airflow. Inner polybags with cartons or export sacks can be supplied.'
-    ],
     description: [
-      'Брикеты из угля кокосовой скорлупы для гриля и барбекю. Прессованный формат удобен для хранения и использования. Форму, размеры и упаковку согласуем при заказе.',
-      'Coconut shell charcoal briquettes for grilling and barbecues. The compressed format is convenient to store and handle. Shape, dimensions and packaging are agreed when ordering.'
+      'Брикеты из угля кокосовой скорлупы для кальяна, гриля и барбекю. Кубики, шестигранники, подушечки и другие формы — под заказ.',
+      'Coconut shell charcoal briquettes for hookah, grilling and barbecue. Cubes, hexagonal briquettes, pillows and custom shapes are available to order.'
+    ],
+    fullDescription: [
+      'Угольные брикеты SEHA производят из угля кокосовой скорлупы. Сырьё обрабатывают и прессуют в брикеты одинаковой формы, удобные для хранения, перевозки и использования.\n\nПрименяются для кальяна, гриля и барбекю. Форму, размер, плотность и связующее подбирают под назначение. Примеры исполнения: кубики для кальяна со стороной 20–28 мм, крупные брикеты для гриля длиной до 15 см и диаметром около 4,5 см. Доступны также шестигранники, подушечки и формы по заказу.\n\nХарактер и продолжительность горения зависят от марки, размеров, плотности и подачи воздуха. Брикеты поставляют во внутренних пакетах с коробками или в экспортных мешках.',
+      'SEHA charcoal briquettes are manufactured from coconut shell charcoal, processed and compressed into uniform shapes for convenient storage, transport and handling.\n\nThey are used for hookah, grilling and barbecue. Shape, size, density and binder are selected for the intended application. Examples include hookah cubes with 20–28 mm sides and larger barbecue briquettes up to 15 cm long and approximately 4.5 cm in diameter. Hexagonal, pillow and custom shapes are also available.\n\nBurning performance and duration depend on grade, size, density and airflow. Briquettes can be supplied in inner polybags with cartons or export sacks.'
     ]
   },
   'coco-shell-activated-carbon': {

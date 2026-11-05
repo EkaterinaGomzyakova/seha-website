@@ -8,13 +8,13 @@ const ru = {
   farmAlt: 'Кокосовая плантация и производство SEHA в Индии, вид с дрона',
   title: 'Сеха — кокосовые продукты для вашего бизнеса',
   description:
-    'Органические кокосовые продукты Сеха. Пищевые ингредиенты, субстраты для выращивания, кокосовое волокно и скорлупа. Прямые поставки от производителя.',
+    'Кокосовые продукты SEHA: органические пищевые ингредиенты, субстраты, волокно и продукты из скорлупы. Производство в Индии и поставки в Россию.',
   skipText: 'К продукции',
   homeHeroTitle: 'Кокосовые',
   homeHeroLine: 'продукты',
   homeHeroEmphasis: 'для вашего',
   homeHeroLine2: 'бизнеса',
-  homeHeroText: 'Органические кокосовые продукты для пищевых производств,',
+  homeHeroText: 'Кокосовые продукты для пищевых производств,',
   homeHeroLine3: 'растениеводства и промышленности.',
   homeHeroLink: 'Выбрать продукцию',
   directionsHeading: 'Категории',
@@ -58,7 +58,7 @@ const ru = {
     'Поможем подобрать товарные позиции, фасовку и документы для ввода кокосовых продуктов в розничный ассортимент.',
   homeIndustriesCardTitle3: 'Производители продуктов питания',
   homeIndustriesText4:
-    'Кокосовая мука, сахар, масла и другие ингредиенты для рецептур, технологических проб и серийных закупок.',
+    'Кокосовая стружка, сахар, масла и другие ингредиенты для рецептур, технологических проб и серийных закупок.',
   homeIndustriesCardTitle4: 'Гидропонные фермы',
   homeIndustriesText5:
     'Кокосовые субстраты, чипсы, диски и брикеты под культуру, систему полива, фракцию и требования к партии.',
@@ -126,7 +126,7 @@ export type HomePageCopy = { readonly [Key in keyof typeof ru]: string };
 const en = {
   title: 'Seha — Coconut Products for Your Business',
   description:
-    'Organic coconut products from Seha. Food ingredients, growing substrates, coconut fibre and shell. Direct supply from the manufacturer.',
+    'SEHA coconut products: organic food ingredients, growing substrates, coir fibre and shell products. Manufactured in India and supplied to Russia.',
   skipText: 'Skip to products',
   homeHeroTitle: 'Coconut',
   homeHeroLine: 'products',
@@ -137,7 +137,7 @@ const en = {
   farmText:
     'Our farms in India are the foundation of SEHA’s production chain. Coconut cultivation, raw material preparation and processing connect our group’s agricultural experience with the manufacture of food products and growing substrates.',
   farmAlt: 'An aerial photograph of the SEHA coconut plantation and manufacturing site in India',
-  homeHeroText: 'Organic coconut products for food manufacturing,',
+  homeHeroText: 'Coconut products for food manufacturing,',
   homeHeroLine3: 'horticulture and industry.',
   homeHeroLink: 'Choose products',
   directionsHeading: 'Product',
@@ -181,7 +181,7 @@ const en = {
     'We help select products, pack sizes and documents to introduce coconut products into a retail range.',
   homeIndustriesCardTitle3: 'Food manufacturers',
   homeIndustriesText4:
-    'Coconut flour, sugar, oils and other ingredients for recipes, production trials and ongoing purchasing.',
+    'Desiccated coconut, sugar, oils and other ingredients for recipes, production trials and ongoing purchasing.',
   homeIndustriesCardTitle4: 'Hydroponic farms',
   homeIndustriesText5:
     'Coconut substrates, chips, discs and briquettes matched to the crop, irrigation system, particle size and batch requirements.',

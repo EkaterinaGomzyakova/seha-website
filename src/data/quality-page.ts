@@ -16,10 +16,10 @@ const ru = {
   qualityMapHeading: 'Сертифицированное',
   qualityMapLabel3: 'производство',
   qualityMapText:
-    'Органическое происхождение, безопасность пищевого производства, этичность поставки, контроль партии.',
+    'Органическая пищевая линейка, безопасность пищевого производства, этичность поставки и контроль партии.',
   qualityMapCardTitle: 'Органические стандарты',
   qualityMapText2:
-    'USDA Organic, EU Organic и NPOP Organic подтверждают соответствие органическим требованиям в релевантных системах сертификации. Применимость уточняется по конкретному продукту и партии.',
+    'Органическая сертификация подтверждена для пищевых продуктов SEHA. Она не распространяется на субстраты, волокно и продукты из скорлупы. Документы по выбранному пищевому продукту можно запросить перед закупкой.',
   qualityMapCardTitle2: 'Пищевая безопасность',
   qualityMapText3:
     'Для пищевой линейки SEHA заявлены BRCGS, HACCP и FSSC 22000. Применимость уточняется по продукту, партии и документам площадки. Эти стандарты важны для пищевых производств, ритейла и private label.',
@@ -50,7 +50,7 @@ const ru = {
     'Согласованные характеристики, формат поставки, упаковку и допустимые параметры фиксируем в спецификации продукта.',
   documentsSectionCardTitle2: 'Сертификаты площадки',
   documentsSectionText3:
-    'Органические стандарты, BRCGS, HACCP, FSSC 22000 и Fairtrade — при применимости к выбранной позиции.',
+    'Органические сертификаты — для пищевой линейки. BRCGS, HACCP, FSSC 22000 и Fairtrade — по документам выбранного продукта и площадки.',
   documentsSectionCardTitle3: 'Документы к поставке',
   documentsSectionText4:
     'Экспортные документы, сертификат происхождения, фитосанитарные документы или отчеты качества — по требованиям партии.',
@@ -88,10 +88,11 @@ const en = {
   qualityHeroAlt: 'Food production workshop with steel tanks',
   qualityMapHeading: 'Certified',
   qualityMapLabel3: 'manufacturing',
-  qualityMapText: 'Organic origin, food manufacturing safety, ethical supply and batch control.',
+  qualityMapText:
+    'Certified organic food products, food manufacturing safety, ethical supply and batch control.',
   qualityMapCardTitle: 'Organic standards',
   qualityMapText2:
-    'USDA Organic, EU Organic and NPOP Organic confirm compliance with organic requirements in the relevant certification systems. Applicability is clarified for the specific product and batch.',
+    'Organic certification is confirmed for SEHA food products. It does not cover substrates, fibre or shell products. Documents for the selected food product can be requested before purchasing.',
   qualityMapCardTitle2: 'Food safety',
   qualityMapText3:
     'BRCGS, HACCP and FSSC 22000 are stated for the SEHA food range. Applicability is checked against the product, batch and facility documents. These standards matter for food manufacturing, retail and private label.',
@@ -122,7 +123,7 @@ const en = {
     'Agreed characteristics, supply format, packaging and permitted parameter ranges are recorded in the product specification.',
   documentsSectionCardTitle2: 'Facility certificates',
   documentsSectionText3:
-    'Organic standards, BRCGS, HACCP, FSSC 22000 and Fairtrade, where applicable to the selected product.',
+    'Organic certificates cover the food range. BRCGS, HACCP, FSSC 22000 and Fairtrade apply according to the selected product and facility documents.',
   documentsSectionCardTitle3: 'Supply documents',
   documentsSectionText4:
     'Export documents, certificate of origin, phytosanitary documents or quality reports, according to batch requirements.',

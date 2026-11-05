@@ -161,11 +161,21 @@ for (const locale of ['ru', 'en']) {
       path: `test-results/quantity-${locale}-${test.info().project.name}.png`
     });
     await page.goto(`${base}/${locale}/products/fiber/coir-weed-mat/`);
+    await page.locator('main [data-product-packaging][value="mat-round"]').check();
+    await expect(page.locator('main [data-supply-format]')).toHaveCount(0);
     const area = page.locator('[data-order-quantity]');
     await area.fill('2.5');
     await page.locator('main [data-quote-product]').click();
     await expect(dialog.locator('[name="quantity"]')).toHaveValue('2.5');
     await expect(dialog.locator('[name="quantityUnit"]')).toHaveValue('m2');
+    await expect(dialog.locator('[data-product-packaging][value="mat-round"]')).toBeChecked();
+    await expect(dialog.locator('[name="packaging"]')).toHaveValue(
+      locale === 'ru' ? 'Формат — Круглый мат' : 'Format — Round mat'
+    );
+    await dialog.locator('[data-product-packaging][value="mat-roll"]').check();
+    await expect(dialog.locator('[name="packaging"]')).toHaveValue(
+      locale === 'ru' ? 'Формат — Рулон' : 'Format — Roll'
+    );
     await expect(preview).toContainText(
       products.find((item) => item.id === 'coir-weed-mat').name[locale]
     );

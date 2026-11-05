@@ -73,8 +73,8 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
     breadcrumb: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     title: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     intro: text(
-      'Кокосовые пищевые продукты: масла, сахар, стружка, молоко, молодые и зрелые кокосы. Оптовые поставки для магазинов, дистрибьюторов, пищевых производств и HoReCa.',
-      'Coconut food products: oils, sugar, desiccated coconut, milk, young and mature coconuts. Wholesale supply for shops, distributors, food manufacturers and HoReCa.'
+      'Veymur — бренд пищевых продуктов SEHA. Здесь собрана пищевая линейка в розничной упаковке и промышленной фасовке. Бочки и крупные контейнеры поставляются без оформления Veymur.',
+      'Veymur is SEHA’s food brand. This range includes food products in consumer packs and industrial bulk formats. Drums and large containers are supplied without Veymur branding.'
     ),
     listLabel: text('Пищевые продукты Veymur', 'Veymur Food Products'),
     listTitle: text('Продукция<br>Veymur', 'Veymur<br>Product Range'),

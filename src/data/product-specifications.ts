@@ -22,14 +22,7 @@ const waterRetention = field('Влагоудерживающая способн�
 const airPorosity = field('Воздушная пористость', 'Air-filled porosity');
 const impurities = field('Содержание примесей', 'Impurity content');
 const buffering = field('Буферизация', 'Buffering', text('По запросу', 'On request'));
-const rollWidth = field('Ширина рулона', 'Roll width', text('По заказу', 'Customised'));
-const rollLength = field('Длина рулона', 'Roll length', text('По заказу', 'Customised'));
 const tensileStrength = field('Разрывная нагрузка', 'Tensile strength');
-const matWeight = field(
-  'Поверхностная плотность',
-  'Mass per unit area',
-  text('По заказу', 'Customised')
-);
 
 const productSpecifications: Record<string, readonly Specification[]> = {
   'grow-bag': [
@@ -840,21 +833,14 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'coir-fiber-bales': [
     rawHusk,
     rawFibre,
-    field(
-      'Длина волокна',
-      'Fibre length',
-      text(
-        'Короткое, среднее или длинное — по выбранной марке',
-        'Short, medium or long, according to grade'
-      )
-    ),
+    field('Длина волокна', 'Fibre length', text('10–25 см', '10–25 cm')),
     field(
       'Цвет',
       'Colour',
       text('От золотисто-коричневого до тёмно-коричневого', 'Golden brown to dark brown')
     ),
     field('Размеры тюка', 'Bale dimensions', text('По заказу', 'Customised')),
-    field('Масса нетто тюка', 'Net bale weight'),
+    field('Масса нетто тюка', 'Net bale weight', text('120 кг', '120 kg')),
     field('Структура волокна', 'Fibre texture', text('Грубое, упругое', 'Coarse and resilient')),
     field(
       'Формат тюка',
@@ -906,14 +892,47 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   'coir-weed-mat': [
     rawFibre,
     field('Структура', 'Construction', text('Тканая / иглопробивная', 'Woven / needle-punched')),
-    matWeight,
-    field('Толщина', 'Thickness', text('По заказу', 'Customised')),
-    rollWidth,
-    rollLength,
+    field('Формат', 'Format', text('Рулон / круглый мат', 'Roll / round mat')),
+    field('Цвет', 'Colour', text('Натуральный коричневый', 'Natural brown')),
+    field('Диаметр круглого мата', 'Round mat diameter', text('30–90 см', '30–90 cm')),
+    field('Толщина круглого мата', 'Round mat thickness', text('2–6 мм', '2–6 mm')),
+    field('Ширина рулона', 'Roll width', text('≤ 2 м', '≤ 2 m')),
+    field('Длина рулона', 'Roll length', text('≤ 20 м', '≤ 20 m')),
+    field(
+      'Поверхностная плотность рулона',
+      'Roll mass per unit area',
+      text('Пример — 800 г/м²', 'Example: 800 g/m²')
+    ),
+    field(
+      'Материал рулонного мата',
+      'Roll mat material',
+      text('Кокосовое волокно, латекс', 'Coir fibre, latex')
+    ),
     tensileStrength,
-    field('Водопроницаемость', 'Water permeability'),
-    field('Воздухопроницаемость', 'Air permeability'),
-    field('УФ-стабилизация', 'UV stabilisation')
+    field(
+      'Водопроницаемость',
+      'Water permeability',
+      text('Пропускает воду', 'Allows water passage')
+    ),
+    field(
+      'Воздухопроницаемость',
+      'Air permeability',
+      text('Зависит от структуры и плотности', 'Depends on construction and density')
+    ),
+    field('Биоразлагаемость', 'Biodegradability', text('Биоразлагаемый материал', 'Biodegradable')),
+    field(
+      'Размеры и плотность',
+      'Dimensions and density',
+      text('По заказу; указаны примеры исполнений', 'To order; listed sizes are examples')
+    ),
+    field(
+      'Упаковка',
+      'Packaging',
+      text(
+        'Рулоны или круглые маты, упакованные для перевозки',
+        'Rolls or round mats packed for transport'
+      )
+    )
   ],
   'coir-geo-textile': [
     rawFibre,
@@ -1546,7 +1565,24 @@ const productSpecifications: Record<string, readonly Specification[]> = {
   ],
   'coco-shell-charcoal-briquettes': [
     field('Сырьё', 'Raw material', text('Уголь из кокосовой скорлупы', 'Coconut shell charcoal')),
-    field('Форма', 'Shape', text('Шестигранник / куб / подушечка', 'Hexagonal / cube / pillow')),
+    field(
+      'Форма',
+      'Shape',
+      text('Шестигранник / куб / подушечка / по заказу', 'Hexagonal / cube / pillow / custom shape')
+    ),
+    field(
+      'Размер кубиков для кальяна',
+      'Hookah cube size',
+      text('Пример — 20–28 мм по каждой стороне', 'Example: 20–28 mm on each side')
+    ),
+    field(
+      'Размер брикетов для гриля',
+      'Barbecue briquette size',
+      text(
+        'Пример — длина до 15 см, диаметр около 4,5 см',
+        'Example: up to 15 cm long, approximately 4.5 cm diameter'
+      )
+    ),
     field('Размеры (Д × Ш × В)', 'Dimensions (L × W × H)', text('уточнить', 'to be confirmed')),
     field('Масса брикета', 'Briquette weight', text('уточнить', 'to be confirmed')),
     field('Плотность', 'Density', text('уточнить', 'to be confirmed')),
@@ -1758,16 +1794,13 @@ export function allSpecificationsFor(product: ProductItem): Specification[] {
         ? text('Произведено в штате Тамилнад, Индия', 'Manufactured in Tamil Nadu, India')
         : text('Индия', 'India')
     ),
+    field(
+      'Производство',
+      'Manufacturing',
+      text('По спецификации заказчика', 'To the customer’s specification')
+    ),
     ...(product.category === 'substrates'
-      ? [
-          ...rows,
-          buffering,
-          field(
-            'Производство',
-            'Manufacturing',
-            text('По спецификации заказчика', 'To the customer’s specification')
-          )
-        ].sort((a, b) => {
+      ? [...rows, buffering].sort((a, b) => {
           const rank = (label: string) => {
             const index = substrateOrder.indexOf(label);
             return index < 0 ? substrateOrder.length : index;

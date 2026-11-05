@@ -10,7 +10,9 @@ interface Props {
 const { product, locale, formId } = Astro.props;
 const packaging = productPackaging[product.id];
 const weightOnly = packaging?.kind === 'weight';
-const formats = weightOnly ? (['industrial'] as const) : (['consumer', 'industrial'] as const);
+const variantOnly = packaging?.kind === 'variant';
+const simpleSelector = weightOnly || variantOnly;
+const formats = simpleSelector ? (['industrial'] as const) : (['consumer', 'industrial'] as const);
 const initialFormat = packaging?.options.find(
   (option) => option.id === packaging.defaultId
 )?.format;
@@ -29,7 +31,7 @@ const selectionLabel =
 
 {packaging && (
   <div class="product-packaging" data-packaging-selector>
-    {!weightOnly && (
+    {!simpleSelector && (
       <fieldset class="product-packaging__formats">
         <legend class="type-p">{ru ? 'Упаковка' : 'Packaging'}</legend>
         <div class="product-packaging__format-options">
@@ -55,7 +57,7 @@ const selectionLabel =
       const customOnly = options.length === 1 && options[0].id === 'industrial-custom';
       return (
         <div data-packaging-panel={format} hidden={format !== initialFormat}>
-          {!weightOnly && (
+          {!simpleSelector && (
             <p
               class="product-packaging__description type-p"
               id={`${context}-${product.id}-${format}-description`}
@@ -77,7 +79,7 @@ const selectionLabel =
                     disabled={format !== initialFormat}
                     data-product-packaging
                     data-supply-format-value={format}
-                    data-packaging-label={`${weightOnly ? (ru ? 'Масса' : 'Weight') : packagingFormats[format].label[locale]} — ${option.label[locale]}`}
+                    data-packaging-label={`${variantOnly ? selectionLabel : weightOnly ? (ru ? 'Масса' : 'Weight') : packagingFormats[format].label[locale]} — ${option.label[locale]}`}
                     data-packaging-product-id={product.id}
                     data-packaging-product-name={product.name[locale]}
                   />

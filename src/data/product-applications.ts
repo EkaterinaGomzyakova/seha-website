@@ -51,6 +51,9 @@ export const applications = {
   water: application('Очистка воды', 'Water treatment', 'water'),
   air: application('Очистка воздуха и газов', 'Air and gas treatment', 'air'),
   solvents: application('Регенерация растворителей', 'Solvent recovery', 'filter'),
+  hookah: application('Кальяны', 'Hookah', 'flame'),
+  nurseries: application('Питомники', 'Nurseries', 'seedling'),
+  vegetables: application('Выращивание овощей', 'Vegetable growing', 'tomato'),
   barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'grill'),
   orchids: {
     label: { ru: 'Орхидеи', en: 'Orchids' },
@@ -275,7 +278,7 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'seeding-tray-media': ['seedlings'],
   'coir-fiber-bales': ['ropes', 'brushes', 'mats', 'erosionMesh'],
   'machine-twisted-fiber': ['ropes', 'brushes', 'mats', 'erosionMesh'],
-  'coir-weed-mat': ['berries', 'orchards', 'landscaping'],
+  'coir-weed-mat': ['berries', 'vegetables', 'orchards', 'nurseries', 'landscaping'],
   'coir-geo-textile': ['slopes', 'riverbanks', 'landscaping'],
   'veymur-mct-oil': ['drinks', 'snacks'],
   'veymur-virgin-coconut-oil': ['bakery', 'preparedFood', 'cosmetics'],
@@ -285,6 +288,6 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'young-coconut': ['drinks', 'fresh'],
   'mature-coconut': ['drinks', 'edibleOils', 'driedIngredients'],
   'rbd-coconut-oil': ['bakery', 'preparedFood'],
-  'coco-shell-charcoal-briquettes': ['barbecue'],
+  'coco-shell-charcoal-briquettes': ['hookah', 'barbecue'],
   'coco-shell-activated-carbon': ['water', 'air', 'solvents']
 };

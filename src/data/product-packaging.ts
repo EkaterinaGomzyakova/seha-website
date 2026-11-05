@@ -13,8 +13,8 @@ export const packagingFormats = {
   industrial: {
     label: { ru: 'Промышленная фасовка', en: 'Bulk packaging' },
     description: {
-      ru: 'В транспортной таре без оформления Veymur.',
-      en: 'Transport packaging without Veymur branding.'
+      ru: 'В бочках и крупных контейнерах без оформления Veymur.',
+      en: 'In drums and large containers without Veymur branding.'
     }
   }
 } as const;
@@ -25,9 +25,9 @@ export interface PackagingOption {
   label: LocalizedText;
 }
 interface ProductPackaging {
-  kind?: 'weight';
+  kind?: 'weight' | 'variant';
   selectionLabel?: LocalizedText;
-  quantityUnit?: 'pcs' | 'packs';
+  quantityUnit?: 'pcs' | 'packs' | 'm2';
   defaultId: string;
   options: PackagingOption[];
 }
@@ -51,6 +51,16 @@ const custom: PackagingOption = {
 
 // Client brochure: do not infer bulk capacities for products without specified sizes.
 export const productPackaging: Partial<Record<string, ProductPackaging>> = {
+  'coir-weed-mat': {
+    kind: 'variant',
+    quantityUnit: 'm2',
+    selectionLabel: { ru: 'Формат', en: 'Format' },
+    defaultId: 'mat-roll',
+    options: [
+      { id: 'mat-roll', format: 'industrial', label: { ru: 'Рулон', en: 'Roll' } },
+      { id: 'mat-round', format: 'industrial', label: { ru: 'Круглый мат', en: 'Round mat' } }
+    ]
+  },
   'coco-peat-briquettes': {
     kind: 'weight',
     selectionLabel: { ru: 'Масса брикета / блока', en: 'Brick / block weight' },

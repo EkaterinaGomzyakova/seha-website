@@ -105,7 +105,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       'Натуральный субстрат из очищенного кокосового волокна. Подходит для улучшения влагоёмкости, аэрации и структуры почвосмесей.',
       'Natural substrate made from cleaned coconut fibre. Suitable for improving moisture retention, aeration, and soil mix structure.',
       'Coco peat',
-      'Organic'
+      'Natural'
     ],
     [
       'coco-peat-briquettes',

@@ -361,20 +361,20 @@ export const productBenefits: Record<string, readonly ProductBenefit[]> = {
     benefit(
       'Натуральное волокно',
       'Natural coir fibre',
-      'Сырьё получают из кокосовой шелухи.',
+      'Сырьё получают из волокнистой оболочки кокоса.',
       'The fibre is obtained from coconut husks.'
     ),
     benefit(
       'Марка под производство',
       'Grade for the process',
-      'Длина и сорт волокна согласуются под выпускаемые изделия.',
-      'Fibre length and grade are agreed for the products being manufactured.'
+      'Волокно длиной 10–25 см для канатов, матов и других изделий.',
+      'Fibre 10–25 cm long for ropes, mats and other products.'
     ),
     benefit(
       'Тюки нужного размера',
       'Bale dimensions to order',
-      'Масса и размеры тюка подбираются для хранения и перевозки.',
-      'Bale weight and dimensions are agreed for storage and transport.'
+      'Тюки по 120 кг; размеры и упаковку согласуем под поставку.',
+      '120 kg bales, with dimensions and packing agreed for the shipment.'
     )
   ],
   'machine-twisted-fiber': [

@@ -18,7 +18,7 @@ export const companyBenefitsCopy = {
       {
         title: '40+ лет отраслевого опыта',
         description:
-          'За индийской производственной базой SEHA — более 40 лет работы в кокосовой отрасли: от выращивания и подготовки сырья до переработки.'
+          'Индийская компания SEHA выросла из семейного бизнеса одного из основателей с более чем 40-летним опытом в кокосовой отрасли.'
       },
       {
         title: 'Две производственные площадки',
@@ -43,7 +43,7 @@ export const companyBenefitsCopy = {
       {
         title: 'Сопровождение в России',
         description:
-          'Согласование заказа, документы, расчёты и сопровождение — через российскую компанию SEHA. Взаимодействие с производством в Индии берём на себя.'
+          'SEHA производит в Индии и импортирует продукцию в Россию. Команда в Москве ведёт продажи и сопровождает заказ от подбора до поставки.'
       }
     ],
     aboutLink: 'Больше о компании',
@@ -57,7 +57,7 @@ export const companyBenefitsCopy = {
       {
         title: '40+ years of industry experience',
         description:
-          'SEHA’s Indian manufacturing base draws on over 40 years in the coconut industry, from cultivation and raw material preparation to processing.'
+          'SEHA in India grew from one founder’s family business, with over 40 years of experience in the coconut industry.'
       },
       {
         title: 'Two dedicated manufacturing sites',
@@ -82,7 +82,7 @@ export const companyBenefitsCopy = {
       {
         title: 'Local support in Russia',
         description:
-          'Order coordination, documentation, payments and support are handled by SEHA’s Russian company, which liaises with manufacturing in India.'
+          'SEHA manufactures in India and imports into Russia. The Moscow team handles sales and supports orders from product selection to delivery.'
       }
     ],
     aboutLink: 'More about SEHA',
