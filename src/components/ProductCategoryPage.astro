@@ -1,5 +1,4 @@
 ---
-import PageHero from './PageHero.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Button from './ui/Button.astro';
@@ -69,10 +68,34 @@ const sizes =
     ]}
   />
   <main id="main-content" tabindex="-1">
-    <PageHero titleId="product-title" image={page.heroImage} alt="">
-      <Fragment slot="heading">{bindShortWords(t(page.title), locale)}</Fragment>
-      <Fragment slot="description">{t(page.intro)}</Fragment>
-    </PageHero>
+    <section class="product-hero" aria-labelledby="product-title">
+      <div class="product-hero-icon">
+        <picture>
+          <source
+            type="image/avif"
+            srcset={srcset(page.heroImage, 'avif')}
+            sizes="(max-width: 1280px) 124px, 148px"
+          />
+          <source
+            type="image/webp"
+            srcset={srcset(page.heroImage, 'webp')}
+            sizes="(max-width: 1280px) 124px, 148px"
+          />
+          <img
+            src={fallback(page.heroImage)}
+            alt={t(page.title)}
+            width={entry(page.heroImage)?.width ?? 720}
+            height={entry(page.heroImage)?.height ?? 720}
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+      <span class="section-label">{t(page.section)}</span>
+      <h1 id="product-title" class="type-h1">
+        {bindShortWords(t(page.title), locale)}
+      </h1>
+      <p class="type-p">{t(page.intro)}</p>
+    </section>
     <section class="product-list-section" id="products-list" aria-labelledby="products-title">
       <div class="product-list-heading">
         <span>{t(page.listLabel)}</span>

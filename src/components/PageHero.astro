@@ -38,7 +38,6 @@ const { titleId, image, alt = '' } = Astro.props;
   .page-hero {
     position: relative;
     overflow: hidden;
-    margin-top: 24px;
     border-radius: 40px;
     background: var(--color-green-brand);
   }
@@ -90,6 +89,9 @@ const { titleId, image, alt = '' } = Astro.props;
     }
   }
   @media (max-width: 800px) {
+    .page-hero {
+      margin-top: 24px;
+    }
     .page-hero__content {
       min-height: 480px;
     }

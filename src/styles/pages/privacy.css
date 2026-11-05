@@ -3,8 +3,10 @@
   background: var(--color-background-light);
   color: var(--color-black);
 }
-.privacy-page .breadcrumbs {
-  margin-bottom: 16px;
+@media (max-width: 800px) {
+  .privacy-page .breadcrumbs {
+    margin-bottom: 16px;
+  }
 }
 .privacy-tags {
   display: flex;
