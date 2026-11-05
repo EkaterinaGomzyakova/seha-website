@@ -1,4 +1,5 @@
 ---
+import PageHero from '../PageHero.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
@@ -71,33 +72,18 @@ const photoSizes =
     items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
   />
   <main id="main-content" class="quality-main">
-    <section class="quality-hero" aria-labelledby="quality-title">
-      <div class="quality-hero-copy">
-        <h1 id="quality-title" class="type-h1">
-          {copy.qualityHeroTitle}
-          <br />
-          <em>{copy.qualityHeroEmphasis}</em>
-        </h1>
-        <p class="type-p">{copy.qualityHeroText}</p>
-      </div>
-      <figure class="quality-hero-card">
-        <ResponsiveImage
-          src="/assets/images/quality/quality-hero.png"
-          alt={copy.qualityHeroAlt}
-          sizes={photoSizes}
-          loading="eager"
-          fetchpriority="high"
-          class="quality-hero-photo"
-        />
-        <ResponsiveImage
-          src="/assets/images/quality/quality-hero-gradient.png"
-          alt=""
-          sizes={photoSizes}
-          loading="eager"
-          class="quality-hero-gradient"
-        />
-      </figure>
-    </section>
+    <PageHero
+      titleId="quality-title"
+      image="/assets/images/quality/quality-hero.png"
+      alt={copy.qualityHeroAlt}
+    >
+      <Fragment slot="heading">
+        {copy.qualityHeroTitle}
+        <br />
+        {copy.qualityHeroEmphasis}
+      </Fragment>
+      <Fragment slot="description">{copy.qualityHeroText}</Fragment>
+    </PageHero>
     <section
       class="quality-standards quality-inset"
       id="standards"

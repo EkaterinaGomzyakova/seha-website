@@ -54,6 +54,33 @@ test.describe('published routes', () => {
   }
 });
 
+test('industry carousel advances by one whole card', async ({ page, isMobile }) => {
+  await page.setViewportSize(
+    isMobile ? { width: 390, height: 844 } : { width: 1920, height: 1080 }
+  );
+  await page.goto(url('/ru/'));
+  const track = page.locator('#industry-track');
+  const cards = track.locator('.industry-card:visible');
+  const indices = cards.locator('.industry-index');
+  const count = isMobile ? 1 : 3;
+  await expect(cards).toHaveCount(count);
+  await expect(indices.first()).toHaveText('001');
+  await page.locator('[data-industry-next]').click();
+  await expect(indices.first()).toHaveText('002');
+  await expect(cards).toHaveCount(count);
+  expect(
+    await track.evaluate((element) => {
+      const { left, right } = element.getBoundingClientRect();
+      return [...element.querySelectorAll('.industry-card:not([hidden])')].every((card) => {
+        const bounds = card.getBoundingClientRect();
+        return bounds.left >= left && bounds.right <= right + 1;
+      });
+    })
+  ).toBe(true);
+  await track.press('ArrowLeft');
+  await expect(indices.first()).toHaveText('001');
+});
+
 test('production metadata endpoints are published', async ({ request }) => {
   const sitemap = await request.get(url('/sitemap.xml'));
   expect(sitemap.ok()).toBeTruthy();

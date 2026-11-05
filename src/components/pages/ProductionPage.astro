@@ -1,4 +1,5 @@
 ---
+import PageHero from '../PageHero.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
@@ -100,25 +101,18 @@ const assurance = [
     items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
   />
   <main class="production-main">
-    <section class="production-hero" aria-labelledby="production-title">
-      <ResponsiveImage
-        src="/assets/images/home/seha-farm.webp"
-        class="production-hero__photo"
-        alt={copy.productionHeroAlt}
-        sizes={sizes}
-        loading="eager"
-        fetchpriority="high"
-      />
-      <div class="production-hero-wash" aria-hidden="true"></div>
-      <div class="production-hero-copy">
-        <h1 id="production-title" class="type-h1">
-          {copy.productionHeroTitle}
-          <br />
-          <em>{copy.productionHeroEmphasis}</em>
-        </h1>
-        <p class="type-p">{text(copy.productionHeroText)}</p>
-      </div>
-    </section>
+    <PageHero
+      titleId="production-title"
+      image="/assets/images/home/seha-farm.webp"
+      alt={copy.productionHeroAlt}
+    >
+      <Fragment slot="heading">
+        {copy.productionHeroTitle}
+        <br />
+        {copy.productionHeroEmphasis}
+      </Fragment>
+      <Fragment slot="description">{text(copy.productionHeroText)}</Fragment>
+    </PageHero>
     <section class="production-branches" aria-labelledby="branches-title">
       <h2 id="branches-title" class="type-h2">
         {copy.productionBranchesHeading}

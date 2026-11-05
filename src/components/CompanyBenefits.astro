@@ -4,6 +4,7 @@ import type { Locale } from '../data/translations';
 import { localizedPath } from '../lib/paths';
 import { bindShortWords } from '../lib/typography';
 import Link from './ui/Link.astro';
+import ArrowIcon from './ui/ArrowIcon.astro';
 
 interface Props {
   locale: Locale;
@@ -35,11 +36,11 @@ const text = (value: string) => bindShortWords(value, locale);
   <div class="company-benefits__links">
     <Link variant="text" class="text-link" href={localizedPath('/about/', locale)}>
       {copy.aboutLink}
-      <span aria-hidden="true">↗</span>
+      <ArrowIcon direction="up-right" size={18} />
     </Link>
     <Link variant="text" class="text-link" href={localizedPath('/quality/', locale)}>
       {copy.qualityLink}
-      <span aria-hidden="true">↗</span>
+      <ArrowIcon direction="up-right" size={18} />
     </Link>
   </div>
 </section>

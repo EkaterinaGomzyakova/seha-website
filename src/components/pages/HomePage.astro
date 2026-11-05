@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
+import ArrowIcon from '../ui/ArrowIcon.astro';
 import Link from '../ui/Link.astro';
 import Tag from '../ui/Tag.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
@@ -84,11 +85,6 @@ const industries = [
     icon: 'cosmetics',
     title: copy.homeIndustriesCardTitle7,
     description: copy.homeIndustriesText8
-  },
-  {
-    icon: 'pharmaceuticals',
-    title: copy.homeIndustriesCardTitle8,
-    description: copy.homeIndustriesText9
   },
   {
     icon: 'natural-materials',
@@ -181,7 +177,7 @@ const supply = [
               />
               <span class="card-index">{category.label}</span>
               <span class="card-go" aria-hidden="true">
-                ↗
+                <ArrowIcon direction="up-right" />
               </span>
             </div>
             <div class="product-direction-copy">
@@ -193,7 +189,7 @@ const supply = [
       </div>
       <Link variant="text" class="text-link" href={href('/products/')}>
         {copy.directionsLink}
-        <span aria-hidden="true">↗</span>
+        <ArrowIcon direction="up-right" size={18} />
       </Link>
     </section>
     <section class="home-industries" aria-labelledby="industries-title">
@@ -211,19 +207,21 @@ const supply = [
             class="industry-arrow"
             type="button"
             data-industry-prev
+            disabled
             aria-label={copy.homeIndustriesAriaLabel2}
             aria-controls="industry-track"
           >
-            ←
+            <ArrowIcon direction="left" size={30} />
           </button>
           <button
             class="industry-arrow"
             type="button"
             data-industry-next
+            disabled
             aria-label={copy.homeIndustriesAriaLabel3}
             aria-controls="industry-track"
           >
-            →
+            <ArrowIcon direction="right" size={30} />
           </button>
         </div>
       </div>
@@ -310,13 +308,26 @@ const supply = [
     <section class="material-banner" aria-labelledby="material-title">
       <BackgroundVideo />
       <div class="material-banner__copy">
-        <span>{copy.materialBannerLabel}</span>
+        <span class="material-banner__label">{copy.materialBannerLabel}</span>
         <h2 id="material-title" class="type-h2">
-          {copy.materialBannerText}
-          <br />
-          <em>{copy.materialBannerEmphasis}</em>
+          {text(copy.materialBannerTitle)}
         </h2>
+        <p class="type-p">{text(copy.materialBannerText)}</p>
+        <Button href={href('/production/')} variant="secondary" compact>
+          {copy.materialBannerLink}
+          <ArrowIcon direction="right" size={20} />
+        </Button>
       </div>
+      <dl class="material-banner__stats">
+        <div>
+          <dt>{copy.materialBannerExperience}</dt>
+          <dd>40+</dd>
+        </div>
+        <div>
+          <dt>{copy.materialBannerCountries}</dt>
+          <dd>25+</dd>
+        </div>
+      </dl>
     </section>
     <section class="home-section supply-section" id="supply" aria-labelledby="supply-title">
       <div class="section-heading">

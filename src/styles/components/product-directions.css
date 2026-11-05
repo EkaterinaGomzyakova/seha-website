@@ -4,7 +4,8 @@
 }
 .material-photo {
   height: 330px;
-  border-radius: 14px;
+  border-radius: 28px;
+  background-color: #eaf2b8;
   position: relative;
   overflow: hidden;
   transition: background-size 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -15,7 +16,8 @@
   left: 22px;
   padding: 8px 12px;
   border-radius: 20px;
-  background: var(--color-background-light);
+  background: var(--color-green-brand);
+  color: var(--color-yellow-brand);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.6px;
@@ -30,7 +32,6 @@
   display: grid;
   place-items: center;
   background: var(--color-background-light);
-  font-size: 24px;
   transition:
     background 0.2s,
     transform 0.2s;

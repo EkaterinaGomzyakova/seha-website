@@ -53,7 +53,7 @@ const ru = {
   processSectionCaption3: 'Технологический цех пищевой линейки',
   processSectionCardTitle4: 'MCT и жидкое кокосовое масло',
   processSectionText5:
-    'Фракционирование и молекулярная дистилляция помогают получать продукты с заданными характеристиками для пищевого и нутрицевтического применения.',
+    'Фракционирование и молекулярная дистилляция помогают получать масла с заданными характеристиками для пищевых продуктов.',
   processSectionAlt4: 'Линии фильтрации и емкости для пищевого производства',
   processSectionCaption4: 'Фракционирование, фильтрация и контроль параметров',
   processSectionCardTitle5: 'Фасовка и маркировка',
@@ -169,7 +169,7 @@ const en = {
   processSectionCaption3: 'Processing workshop for the food range',
   processSectionCardTitle4: 'MCT and liquid coconut oil',
   processSectionText5:
-    'Fractionation and molecular distillation help produce products with specified characteristics for food and nutraceutical applications.',
+    'Fractionation and molecular distillation help produce oils with specified properties for food products.',
   processSectionAlt4: 'Filtration lines and tanks for food manufacturing',
   processSectionCaption4: 'Fractionation, filtration and parameter control',
   processSectionCardTitle5: 'Packing and labelling',

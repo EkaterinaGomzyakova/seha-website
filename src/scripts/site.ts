@@ -10,24 +10,50 @@ const industryTrack = document.querySelector<HTMLElement>('.industry-track');
 const previous = document.querySelector<HTMLButtonElement>('[data-industry-prev]');
 const next = document.querySelector<HTMLButtonElement>('[data-industry-next]');
 if (industryTrack && previous && next) {
-  const update = () => {
-    previous.disabled = industryTrack.scrollLeft <= 2;
-    next.disabled =
-      industryTrack.scrollLeft >= industryTrack.scrollWidth - industryTrack.clientWidth - 2;
-  };
-  const scroll = (direction: number) => {
-    const card = industryTrack.querySelector<HTMLElement>('.industry-card');
-    const gap = parseFloat(getComputedStyle(industryTrack).columnGap) || 16;
-    industryTrack.scrollBy({
-      left: direction * ((card?.getBoundingClientRect().width ?? industryTrack.clientWidth) + gap),
-      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+  const cards = [...industryTrack.querySelectorAll<HTMLElement>('.industry-card')];
+  let first = 0;
+  let visible = 1;
+  let swipe: { x: number; y: number } | undefined;
+
+  const show = (index: number) => {
+    const last = Math.max(0, cards.length - visible);
+    first = Math.max(0, Math.min(index, last));
+    cards.forEach((card, position) => {
+      card.hidden = position < first || position >= first + visible;
     });
+    previous.disabled = first === 0;
+    next.disabled = first === last;
   };
-  previous.addEventListener('click', () => scroll(-1));
-  next.addEventListener('click', () => scroll(1));
-  industryTrack.addEventListener('scroll', update, { passive: true });
-  new ResizeObserver(update).observe(industryTrack);
-  update();
+  const resize = () => {
+    const gap = parseFloat(getComputedStyle(industryTrack).columnGap);
+    visible = Math.max(1, Math.min(3, Math.floor((industryTrack.clientWidth + gap) / (250 + gap))));
+    industryTrack.style.setProperty('--industry-columns', String(visible));
+    industryTrack.dataset.carouselReady = '';
+    show(first);
+  };
+  previous.addEventListener('click', () => show(first - 1));
+  next.addEventListener('click', () => show(first + 1));
+  industryTrack.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    show(first + (event.key === 'ArrowLeft' ? -1 : 1));
+  });
+  industryTrack.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch' && event.isPrimary)
+      swipe = { x: event.clientX, y: event.clientY };
+  });
+  industryTrack.addEventListener('pointercancel', () => {
+    swipe = undefined;
+  });
+  industryTrack.addEventListener('pointerup', (event) => {
+    if (!swipe || event.pointerType !== 'touch' || !event.isPrimary) return;
+    const dx = event.clientX - swipe.x;
+    const dy = event.clientY - swipe.y;
+    swipe = undefined;
+    if (Math.abs(dx) >= 45 && Math.abs(dx) > Math.abs(dy)) show(first + (dx < 0 ? 1 : -1));
+  });
+  new ResizeObserver(resize).observe(industryTrack);
+  resize();
 }
 if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver(

@@ -1,4 +1,5 @@
 ---
+import PageHero from '../PageHero.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
@@ -36,29 +37,22 @@ const href = (path: string) =>
     items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
   />
   <main id="main-content" tabindex="-1">
-    <section class="overview-hero" aria-labelledby="title">
-      <ResponsiveImage
-        src={heroImage}
-        alt={copy.heroAlt}
-        class="overview-hero__image"
-        sizes="(max-width: 440px) 900px, (max-width: 800px) 1200px, (max-width: 1280px) 1440px, 1500px"
-        fetchpriority="high"
-      />
-      <div class="overview-hero__shade" aria-hidden="true"></div>
-      <div class="overview-hero__content">
-        <h1 id="title" class="type-h1">
-          {copy.heroTitle}
-          <br />
-          {copy.heroLabel}
-        </h1>
-        <p class="type-p">
-          {bindShortWords(copy.heroText, locale)}
-          <br />
-          {bindShortWords(copy.heroLine, locale)}
-        </p>
-      </div>
-    </section>
-    <section class="products-catalog" id="catalog" aria-label={copy.catalogTitle}>
+    <PageHero titleId="title" image={heroImage} alt={copy.heroAlt}>
+      <Fragment slot="heading">
+        {copy.heroTitle}
+        <br />
+        {copy.heroLabel}
+      </Fragment>
+      <Fragment slot="description">
+        {bindShortWords(copy.heroText, locale)}
+        <br />
+        {bindShortWords(copy.heroLine, locale)}
+      </Fragment>
+    </PageHero>
+    <section class="products-catalog" id="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title" class="products-catalog-heading">
+        {copy.catalogTitle}
+      </h2>
       <div class="products-list" id="products-list">
         {productCategories.map((category, index) => {
           const definition = productPages[category.slug];
@@ -77,7 +71,7 @@ const href = (path: string) =>
               </span>
               <div class="product-category-title">
                 <span>{bindShortWords(definition.listLabel[locale], locale)}</span>
-                <h2 class="type-h3">{bindShortWords(category.title[locale], locale)}</h2>
+                <h3 class="type-h3">{bindShortWords(category.title[locale], locale)}</h3>
               </div>
               <p class="type-p">{bindShortWords(category.description[locale], locale)}</p>
               <ArrowCircle class="product-category-arrow" />

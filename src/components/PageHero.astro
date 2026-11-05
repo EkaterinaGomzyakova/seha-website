@@ -1,0 +1,129 @@
+---
+import ResponsiveImage from './ResponsiveImage.astro';
+
+interface Props {
+  titleId: string;
+  image?: string;
+  alt?: string;
+}
+
+const { titleId, image, alt = '' } = Astro.props;
+---
+
+<section class:list={['page-hero', { 'page-hero--plain': !image }]} aria-labelledby={titleId}>
+  {image && (
+    <div class="page-hero__media">
+      <ResponsiveImage
+        src={image}
+        alt={alt}
+        sizes="(max-width: 440px) 900px, (max-width: 800px) 1200px, (max-width: 1280px) 1440px, 1500px"
+        fetchpriority="high"
+      />
+    </div>
+  )}
+  <div class="page-hero__content">
+    <h1 id={titleId} class="type-h1">
+      <slot name="heading" />
+    </h1>
+    <div>
+      <p class="type-p">
+        <slot name="description" />
+      </p>
+      <slot name="details" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    overflow: hidden;
+    margin-top: 24px;
+    border-radius: 40px;
+    background: var(--color-green-brand);
+  }
+  .page-hero__media,
+  .page-hero__media::after {
+    position: absolute;
+    inset: 0;
+  }
+  .page-hero__media :global(img) {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 91%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .page-hero__media::after {
+    content: '';
+    background: linear-gradient(
+      90deg,
+      var(--color-green-brand) 26%,
+      var(--color-green-overlay) 49%,
+      transparent 83%
+    );
+  }
+  .page-hero__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    padding: 54px;
+    gap: 48px;
+  }
+  .page-hero .page-hero__content h1 {
+    max-width: 960px;
+    margin: 0;
+    color: var(--color-yellow-brand);
+    overflow-wrap: anywhere;
+  }
+  .page-hero .page-hero__content p {
+    max-width: 564px;
+    margin: 0;
+    color: var(--color-background-light);
+  }
+  @media (max-width: 1280px) {
+    .page-hero__content {
+      min-height: 440px;
+      padding: 40px 32px;
+    }
+  }
+  @media (max-width: 800px) {
+    .page-hero__content {
+      min-height: 480px;
+    }
+    .page-hero__media :global(img) {
+      width: 100%;
+      object-position: right center;
+    }
+    .page-hero__media::after {
+      background: linear-gradient(90deg, var(--color-green-brand), var(--color-green-overlay) 80%);
+    }
+  }
+  @media (max-width: 440px) {
+    .page-hero {
+      margin-top: 20px;
+    }
+    .page-hero__content {
+      min-height: 500px;
+      padding: 40px 24px;
+      gap: 120px;
+    }
+    .page-hero--plain .page-hero__content {
+      gap: 40px;
+    }
+    .page-hero__media :global(img) {
+      object-position: 80% center;
+    }
+    .page-hero__media::after {
+      background: linear-gradient(
+        180deg,
+        var(--color-green-brand) 8%,
+        var(--color-green-overlay) 34%,
+        transparent 53%,
+        var(--color-green-brand) 77%
+      );
+    }
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import PageHero from '../PageHero.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Link from '../ui/Link.astro';
@@ -32,18 +33,14 @@ const emailHref = withBase(`mailto:${siteContact.email}`);
     items={[{ label: copy.home, href: homeHref }, { label: copy.heading }]}
   />
   <main id="privacy-content">
-    <section class="privacy-hero" aria-labelledby="privacy-title">
-      <div class="privacy-hero-copy">
-        <h1 id="privacy-title" class="type-h1">
-          {copy.heading}
-        </h1>
-        <p class="type-p">{copy.intro}</p>
-      </div>
-      <div class="privacy-tags">
+    <PageHero titleId="privacy-title">
+      <Fragment slot="heading">{copy.heading}</Fragment>
+      <Fragment slot="description">{copy.intro}</Fragment>
+      <div slot="details" class="privacy-tags">
         <Tag>{copy.active}</Tag>
         <Tag>{copy.since}</Tag>
       </div>
-    </section>
+    </PageHero>
     <section class="privacy-content">
       <div class="privacy-grid">
         <article class="privacy-section privacy-wide">

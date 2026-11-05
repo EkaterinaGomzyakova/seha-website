@@ -71,9 +71,6 @@ const ru = {
   homeIndustriesCardTitle7: 'Косметические бренды',
   homeIndustriesText8:
     'Кокосовое масло и производные для ухода за кожей и волосами, натуральной косметики и мыловарения.',
-  homeIndustriesCardTitle8: 'Фармацевтические компании',
-  homeIndustriesText9:
-    'Кокосовые масла и липидные компоненты для технологических задач, разработки рецептур и контрактного выпуска.',
   homeIndustriesCardTitle9: 'Производители натуральных материалов',
   homeIndustriesText10:
     'Кокосовое волокно и скорлупа для промышленных, сельскохозяйственных и ландшафтных продуктов.',
@@ -102,9 +99,13 @@ const ru = {
   originSectionText3: 'Формат и обработка зависят от назначения готового продукта.',
   originSectionCardTitle3: 'Подготовка к поставке',
   originSectionText4: 'Согласование характеристик, упаковки и объема партии.',
-  materialBannerLabel: 'КОКОС КАК СЫРЬЕ ДЛЯ РАЗНЫХ ОТРАСЛЕЙ',
-  materialBannerText: 'Пищевые ингредиенты.',
-  materialBannerEmphasis: 'Материалы. Субстраты.',
+  materialBannerLabel: 'ПОЛЛАЧИ, ИНДИЯ',
+  materialBannerTitle: 'От кокосовых плантаций до готовой продукции',
+  materialBannerText:
+    'На площадке СЕХА в Поллачи кокосовое сырьё перерабатывают в субстраты и материалы для промышленности.',
+  materialBannerLink: 'Как устроено производство',
+  materialBannerExperience: 'лет в кокосовой отрасли',
+  materialBannerCountries: 'стран поставок',
   supplySectionHeading: 'От вашей задачи',
   supplySectionLabel2: 'к поставке.',
   supplySectionText: 'Стоимость зависит от продукта, объема,',
@@ -194,9 +195,6 @@ const en = {
   homeIndustriesCardTitle7: 'Cosmetics brands',
   homeIndustriesText8:
     'Coconut oil and derivatives for skin and hair care, natural cosmetics and soapmaking.',
-  homeIndustriesCardTitle8: 'Pharmaceutical companies',
-  homeIndustriesText9:
-    'Coconut oils and lipid components for production processes, formulation development and contract manufacturing.',
   homeIndustriesCardTitle9: 'Natural material manufacturers',
   homeIndustriesText10:
     'Coconut fibre and shell for industrial, agricultural and landscaping products.',
@@ -226,9 +224,13 @@ const en = {
     'Product format and processing depend on the intended use of the finished product.',
   originSectionCardTitle3: 'Preparation for supply',
   originSectionText4: 'Agreement on specifications, packaging and batch volume.',
-  materialBannerLabel: 'COCONUT AS A RAW MATERIAL FOR DIFFERENT INDUSTRIES',
-  materialBannerText: 'Food ingredients.',
-  materialBannerEmphasis: 'Materials. Substrates.',
+  materialBannerLabel: 'POLLACHI, INDIA',
+  materialBannerTitle: 'From coconut plantations to finished products',
+  materialBannerText:
+    'At its Pollachi site, SEHA processes coconuts into growing media and industrial materials.',
+  materialBannerLink: 'Explore manufacturing',
+  materialBannerExperience: 'years in the coconut industry',
+  materialBannerCountries: 'countries supplied',
   supplySectionHeading: 'From your task',
   supplySectionLabel2: 'to supply',
   supplySectionText: 'The cost depends on the product, volume,',

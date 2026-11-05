@@ -37,52 +37,6 @@
 .quality-main > .quality-inset {
   width: min(1432px, var(--grid-content-width));
 }
-.quality-hero {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
-  gap: 24px;
-}
-.quality-hero-copy {
-  min-height: 514px;
-  border-radius: 22px;
-  background: var(--color-green-brand);
-  padding: 96px clamp(10px, calc(10vw - 118px), 74px) 84px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 64px;
-}
-.quality-hero h1 {
-  color: var(--color-background-light);
-}
-.quality-hero h1 em {
-  color: var(--color-yellow-brand);
-}
-.quality-hero-copy p {
-  color: var(--color-text-on-green);
-}
-.quality-hero-card {
-  position: relative;
-  min-height: 514px;
-  border-radius: 22px;
-  overflow: hidden;
-  background: var(--quality-panel);
-}
-.quality-hero-photo {
-  position: absolute;
-  width: 129.92%;
-  max-width: none;
-  height: 100%;
-  left: -14.96%;
-  top: 0;
-  object-fit: cover;
-}
-.quality-hero-gradient {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
 .quality-standards {
   padding-block: 0 40px;
 }
@@ -323,13 +277,6 @@
     gap: 56px;
     padding-bottom: 56px;
   }
-  .quality-hero-copy {
-    padding: 56px 32px 40px;
-  }
-  .quality-hero-copy,
-  .quality-hero-card {
-    min-height: 460px;
-  }
   .quality-section-heading {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
     gap: 32px;
@@ -380,17 +327,6 @@
   }
   .quality-main {
     gap: 48px;
-  }
-  .quality-hero {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .quality-hero-copy {
-    min-height: 400px;
-    padding: 48px 32px 40px;
-  }
-  .quality-hero-card {
-    min-height: 0;
-    height: 400px;
   }
   .quality-section-heading {
     grid-template-columns: minmax(0, 1fr);
@@ -456,18 +392,6 @@
   .quality-main {
     gap: 40px;
     padding-bottom: 40px;
-  }
-  .quality-hero {
-    gap: 16px;
-  }
-  .quality-hero-copy {
-    min-height: 368px;
-    padding: 40px 24px 32px;
-    border-radius: 18px;
-  }
-  .quality-hero-card {
-    height: 280px;
-    border-radius: 18px;
   }
   .standard-card {
     padding: 24px;

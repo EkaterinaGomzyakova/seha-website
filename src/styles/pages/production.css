@@ -35,54 +35,6 @@
 .russia-copy h2 em {
   color: var(--color-dark-gray);
 }
-.production-hero {
-  position: relative;
-  isolation: isolate;
-  min-height: 514px;
-  overflow: hidden;
-  border-radius: 22px;
-  background: var(--color-green-brand);
-  padding: 100px 74px 50px;
-}
-.production-hero__photo {
-  position: absolute;
-  z-index: -3;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  inset: 0;
-  object-fit: cover;
-}
-.production-hero-wash {
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 34, 24, 0.81),
-      rgba(0, 45, 31, 0.522) 42%,
-      rgba(0, 45, 31, 0.108) 72%
-    ),
-    linear-gradient(0deg, rgba(0, 32, 23, 0.576), transparent 45%);
-}
-.production-hero-copy {
-  min-height: 364px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 64px;
-}
-.production-hero h1 {
-  color: var(--color-background-light);
-}
-.production-hero h1 em {
-  color: var(--color-yellow-brand);
-}
-.production-hero p {
-  max-width: 673px;
-  color: var(--color-text-on-green);
-}
 .production-main > .production-branches {
   width: min(1432px, var(--grid-content-width));
 }
@@ -500,17 +452,6 @@
   .production-main > :is(.process-section, .assurance-section, .russia-section) {
     padding-inline: 0;
   }
-  .production-hero {
-    min-height: 460px;
-    padding: 64px 48px 40px;
-  }
-  .production-hero-copy {
-    min-height: 356px;
-    gap: 48px;
-  }
-  .production-hero p {
-    max-width: 560px;
-  }
   .branch-card {
     padding: 28px;
     min-height: 400px;
@@ -576,21 +517,6 @@
   .production-main {
     gap: 48px;
     padding-bottom: 48px;
-  }
-  .production-hero {
-    min-height: 440px;
-    padding: 48px 32px 32px;
-  }
-  .production-hero-copy {
-    min-height: 360px;
-  }
-  .production-hero__photo {
-    object-position: 60% center;
-  }
-  .production-hero-wash {
-    background:
-      linear-gradient(90deg, rgba(0, 34, 24, 0.9), rgba(0, 45, 31, 0.6)),
-      linear-gradient(0deg, rgba(0, 32, 23, 0.6), transparent);
   }
   .production-branches > h2 {
     margin-bottom: 32px;
@@ -700,17 +626,6 @@
   .production-main {
     gap: 40px;
     padding-bottom: 40px;
-  }
-  .production-hero {
-    padding: 40px 24px 32px;
-    border-radius: 18px;
-  }
-  .production-hero-copy {
-    min-height: 368px;
-    gap: 48px;
-  }
-  .production-hero h1 {
-    overflow-wrap: anywhere;
   }
   .branch-card {
     padding: 24px;

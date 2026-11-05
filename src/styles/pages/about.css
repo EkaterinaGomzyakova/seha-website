@@ -37,39 +37,6 @@
 .about-main > .about-inset {
   width: min(1432px, var(--grid-content-width));
 }
-.about-hero {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  min-height: 514px;
-  border-radius: 22px;
-  background: var(--color-green-brand);
-  color: var(--color-background-light);
-  padding: 100px 74px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 80px;
-}
-.about-hero__photo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-.about-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: rgba(0, 38, 26, 0.7);
-}
-.about-hero p {
-  max-width: 673px;
-  color: var(--color-text-on-green);
-}
 .about-intro {
   padding: 50px 68px;
   display: grid;
@@ -346,10 +313,6 @@
     gap: 56px;
     padding-bottom: 56px;
   }
-  .about-hero {
-    padding: 64px 40px 40px;
-    min-height: 460px;
-  }
   .about-intro {
     padding: 24px 0;
     gap: 40px;
@@ -415,10 +378,6 @@
   .about-main {
     gap: 48px;
   }
-  .about-hero {
-    min-height: 400px;
-    padding: 48px 32px 40px;
-  }
   .about-intro {
     grid-template-columns: minmax(0, 1fr);
     padding: 0;
@@ -476,11 +435,6 @@
   .about-main {
     gap: 40px;
     padding-bottom: 40px;
-  }
-  .about-hero {
-    min-height: 368px;
-    padding: 40px 24px 32px;
-    border-radius: 18px;
   }
   .about-photo {
     height: 360px;
