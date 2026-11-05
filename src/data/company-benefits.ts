@@ -28,7 +28,7 @@ export const companyBenefitsCopy = {
       {
         title: 'Продукт под вашу спецификацию',
         description:
-          'Для субстратов согласуем состав, фракцию, pH и EC. Размеры, форматы и упаковку подбираем с учётом продукта и требований заказчика.'
+          'Подбираем рецептуру, фракцию и размеры блоков под заказ. Доступны маркировка по требованиям заказчика (OEM) и упаковка под его торговой маркой.'
       },
       {
         title: 'Органическая пищевая линейка',
@@ -67,7 +67,7 @@ export const companyBenefitsCopy = {
       {
         title: 'Products to your specifications',
         description:
-          'For substrates, we agree on composition, particle size, pH and EC. Dimensions, formats and packaging are tailored to the product and customer requirements.'
+          'We tailor blends, particle sizes and block dimensions to the order. OEM labelling and private-label packaging are available.'
       },
       {
         title: 'Certified organic food range',

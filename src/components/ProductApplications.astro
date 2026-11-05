@@ -5,7 +5,6 @@ import {
   productApplications,
   productApplicationDescriptions
 } from '../data/product-applications';
-import ApplicationIcon from './ApplicationIcon.astro';
 import CropApplicationCard from './CropApplicationCard.astro';
 interface Props {
   productId: string;
@@ -20,30 +19,14 @@ const items = productApplications[productId] || [];
     <h2 class="type-h2" id="product-applications-title">
       {locale === 'ru' ? 'Где используется' : 'Where it is used'}
     </h2>
-    <ul
-      style={`--application-columns: ${items.some((key) => applications[key].image) ? 2 : items.length === 4 ? 2 : Math.min(items.length, 3)}`}
-    >
-      {items.map((key) => {
-        const item = applications[key];
-        const description =
-          productApplicationDescriptions[productId]?.[key] ??
-          ('description' in item ? item.description : undefined);
-        return item.image ? (
-          <CropApplicationCard
-            title={item.label[locale]}
-            description={description?.[locale] ?? ''}
-            image={item.image}
-          />
-        ) : (
-          <li class="product-application--industry">
-            <ApplicationIcon name={item.icon} />
-            <div class="product-application__copy">
-              <h3 class="type-h3">{item.label[locale]}</h3>
-              {description && <p class="type-p">{description[locale]}</p>}
-            </div>
-          </li>
-        );
-      })}
+    <ul>
+      {items.map((key) => (
+        <CropApplicationCard
+          title={applications[key].label[locale]}
+          description={productApplicationDescriptions[productId]?.[key]?.[locale]}
+          image={applications[key].image}
+        />
+      ))}
     </ul>
   </section>
 )}
@@ -53,53 +36,20 @@ const items = productApplications[productId] || [];
   }
   ul {
     display: grid;
-    grid-template-columns: repeat(var(--application-columns), minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  .product-application--industry {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    min-width: 0;
-    padding: 24px;
-    border: 1px solid var(--color-light-gray);
-    border-radius: 20px;
-    background: var(--color-white);
-    color: var(--color-green-brand);
-  }
-  h3 {
-    margin: 0;
-    overflow-wrap: anywhere;
-  }
-  .product-application__copy {
-    min-width: 0;
-  }
-  .product-application__copy p {
-    margin: 10px 0 0;
-    color: var(--color-dark-gray);
-  }
   @media (max-width: 800px) {
     ul {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
-    }
-    .product-application--industry {
-      padding: 20px;
     }
   }
   @media (max-width: 440px) {
     ul {
       grid-template-columns: minmax(0, 1fr);
-    }
-    .product-application--industry {
-      display: grid;
-      grid-template-columns: 36px minmax(0, 1fr);
-      align-items: center;
-      padding: 18px;
     }
   }
 </style>

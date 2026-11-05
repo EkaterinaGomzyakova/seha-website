@@ -26,6 +26,7 @@ for (const locale of ['ru', 'en']) {
       const html = await response.text();
       for (const key of items) {
         expect(html).toContain(applications[key].label[locale]);
+        expect(html).toContain(applications[key].image.split('/').at(-1));
         if (product.category === 'substrates') {
           const explanation = productApplicationDescriptions[product.id]?.[key];
           expect(explanation?.ru.trim()).toBeTruthy();
@@ -33,15 +34,13 @@ for (const locale of ['ru', 'en']) {
           expect(html).toContain(explanation[locale]);
         }
       }
-      if (product.category === 'substrates') {
-        const steps = productInstructions[product.id];
-        expect(steps?.length).toBeGreaterThanOrEqual(4);
-        for (const step of steps) {
-          expect(step.title.ru.trim()).toBeTruthy();
-          expect(step.title.en.trim()).toBeTruthy();
-          expect(html).toContain(step.title[locale]);
-          expect(html).toContain(step.description[locale]);
-        }
+      const steps = productInstructions[product.id];
+      expect(steps?.length).toBeGreaterThanOrEqual(4);
+      for (const step of steps) {
+        expect(step.title.ru.trim()).toBeTruthy();
+        expect(step.title.en.trim()).toBeTruthy();
+        expect(html).toContain(step.title[locale]);
+        expect(html).toContain(step.description[locale]);
       }
       const benefits = productBenefits[product.id];
       expect(benefits?.length).toBeGreaterThanOrEqual(2);

@@ -200,6 +200,552 @@
         }
       ]
     },
+    "/assets/images/common/applications/air.webp": {
+      "fingerprint": "f56ac3514ae6ad9c4f80f8731bb0f17a8c13081b307e912cda2a14040d9475dd",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/air.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 23930
+        },
+        {
+          "src": "/assets/images/generated/common/applications/air.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10845
+        }
+      ]
+    },
+    "/assets/images/common/applications/bakery.webp": {
+      "fingerprint": "15fb43687772007232dc141a01fc9b5e615a89c8cc5b7e0fbee4e0fa5602ee02",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/bakery.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21664
+        },
+        {
+          "src": "/assets/images/generated/common/applications/bakery.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9953
+        }
+      ]
+    },
+    "/assets/images/common/applications/barbecue.webp": {
+      "fingerprint": "24a03e8ba8e2985014995a01c16c9e02aace796080decebdb606738c498f0d14",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/barbecue.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25170
+        },
+        {
+          "src": "/assets/images/generated/common/applications/barbecue.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 12165
+        }
+      ]
+    },
+    "/assets/images/common/applications/berries.webp": {
+      "fingerprint": "2d32a2171168a6345d8522be840339fc775973d710873f4ed6131e65d90bfd19",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/berries.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 39940
+        },
+        {
+          "src": "/assets/images/generated/common/applications/berries.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 19610
+        }
+      ]
+    },
+    "/assets/images/common/applications/brushes.webp": {
+      "fingerprint": "089e122559c7ac7be5a9ba4b2ce997352c03850b533d866ed2e0d437dabd8a0c",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/brushes.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 29330
+        },
+        {
+          "src": "/assets/images/generated/common/applications/brushes.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13622
+        }
+      ]
+    },
+    "/assets/images/common/applications/confectionery.webp": {
+      "fingerprint": "4cba0043bea09e577acb930eb82f576504531d3122609e2da827568e3b41853b",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/confectionery.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 21762
+        },
+        {
+          "src": "/assets/images/generated/common/applications/confectionery.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10851
+        }
+      ]
+    },
+    "/assets/images/common/applications/cosmetics.webp": {
+      "fingerprint": "6aab30f5711edaa587d0f2f6b62a9a8ee349a031bbf8e8044dea67e550857bc5",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/cosmetics.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 12470
+        },
+        {
+          "src": "/assets/images/generated/common/applications/cosmetics.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7057
+        }
+      ]
+    },
+    "/assets/images/common/applications/desserts.webp": {
+      "fingerprint": "3a50bb1af1b94f403f021a576260ea2c4edd580e9e0426ccc0baa0e0263a89ca",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/desserts.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20184
+        },
+        {
+          "src": "/assets/images/generated/common/applications/desserts.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9720
+        }
+      ]
+    },
+    "/assets/images/common/applications/driedIngredients.webp": {
+      "fingerprint": "4ad26729108b245657fa5855faea4da2b97b0b3d7a77976e8e2ac994580492af",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/driedIngredients.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22530
+        },
+        {
+          "src": "/assets/images/generated/common/applications/driedIngredients.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11243
+        }
+      ]
+    },
+    "/assets/images/common/applications/drinks.webp": {
+      "fingerprint": "06cf172cb534944d30b3a9793e816d6b28eb69f1ba12e08364c6dfd685b2ea00",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/drinks.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 15486
+        },
+        {
+          "src": "/assets/images/generated/common/applications/drinks.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 7184
+        }
+      ]
+    },
+    "/assets/images/common/applications/edibleOils.webp": {
+      "fingerprint": "305ac28459ac7a6b20ddec4e56baf4ee60baa5d97845cbc389190fbac7ef56b6",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/edibleOils.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 19480
+        },
+        {
+          "src": "/assets/images/generated/common/applications/edibleOils.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10712
+        }
+      ]
+    },
+    "/assets/images/common/applications/erosionMesh.webp": {
+      "fingerprint": "8fe8fa1e6865c73e34fa7f8e76e3b2c2a3f65d8dec9bdc490e8c0182c127a2d2",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/erosionMesh.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 47664
+        },
+        {
+          "src": "/assets/images/generated/common/applications/erosionMesh.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 23270
+        }
+      ]
+    },
+    "/assets/images/common/applications/fresh.webp": {
+      "fingerprint": "6b43c9c0d342387c10c4d0b81c266f6e0f537986b62b6f840c3ebf975060c5d8",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/fresh.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 20410
+        },
+        {
+          "src": "/assets/images/generated/common/applications/fresh.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9995
+        }
+      ]
+    },
+    "/assets/images/common/applications/hookah.webp": {
+      "fingerprint": "6e1adb8dc5fa6f7b67e695f994da0310b17be309ead16e635809db08921e31dc",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/hookah.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 22734
+        },
+        {
+          "src": "/assets/images/generated/common/applications/hookah.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11757
+        }
+      ]
+    },
+    "/assets/images/common/applications/landscaping.webp": {
+      "fingerprint": "cc707680be15ca2d486aa04b3dd6f281ccb7a67ac3529a2f9e358b50da29211f",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/landscaping.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 50428
+        },
+        {
+          "src": "/assets/images/generated/common/applications/landscaping.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 23430
+        }
+      ]
+    },
+    "/assets/images/common/applications/mats.webp": {
+      "fingerprint": "f78c47fdab267bdf0405520619aa2e737d327bb1b864db574035702ec963a3fb",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/mats.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25428
+        },
+        {
+          "src": "/assets/images/generated/common/applications/mats.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 11909
+        }
+      ]
+    },
+    "/assets/images/common/applications/nurseries.webp": {
+      "fingerprint": "b1b8657331d7cdc37bb2836978f4f44c4663421df38ab0eb595567716e778958",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/nurseries.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 41400
+        },
+        {
+          "src": "/assets/images/generated/common/applications/nurseries.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 20835
+        }
+      ]
+    },
+    "/assets/images/common/applications/orchards.webp": {
+      "fingerprint": "5cd8120a7b2781bc99e80140eeb81a2c4b13ab5a3681437443b1e490d67ec6df",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/orchards.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 35152
+        },
+        {
+          "src": "/assets/images/generated/common/applications/orchards.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 17537
+        }
+      ]
+    },
+    "/assets/images/common/applications/preparedFood.webp": {
+      "fingerprint": "e0baaf26da8574962c7439af6ee401d1f30df6e9e6b1542f52a7490067974ca0",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/preparedFood.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 25216
+        },
+        {
+          "src": "/assets/images/generated/common/applications/preparedFood.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 10994
+        }
+      ]
+    },
+    "/assets/images/common/applications/riverbanks.webp": {
+      "fingerprint": "9e6f30214dc811b7f1e7febb85b39dab9019904a935d56b44c9ccfcf296b1157",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/riverbanks.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 41992
+        },
+        {
+          "src": "/assets/images/generated/common/applications/riverbanks.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 18094
+        }
+      ]
+    },
+    "/assets/images/common/applications/ropes.webp": {
+      "fingerprint": "78c4e0c3dd6d0a2425683d3a7b720c7ff6309f94ee9f7a154c541ce57d8b893d",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/ropes.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33236
+        },
+        {
+          "src": "/assets/images/generated/common/applications/ropes.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15521
+        }
+      ]
+    },
+    "/assets/images/common/applications/slopes.webp": {
+      "fingerprint": "a5520824562cf852dd48aae808d963ca482122c0b726bb150f7fa6bd49bd604f",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/slopes.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32130
+        },
+        {
+          "src": "/assets/images/generated/common/applications/slopes.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 15041
+        }
+      ]
+    },
+    "/assets/images/common/applications/snacks.webp": {
+      "fingerprint": "865c702734a61649d3603da5db98e62880a96ed48799019cf12ed3d550f4cce9",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/snacks.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 29728
+        },
+        {
+          "src": "/assets/images/generated/common/applications/snacks.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 13426
+        }
+      ]
+    },
+    "/assets/images/common/applications/solvents.webp": {
+      "fingerprint": "45465a06f0bd98f318e8ce90ca46fbbef21d16e1d467f34cb3af3551035840b4",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/solvents.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 32006
+        },
+        {
+          "src": "/assets/images/generated/common/applications/solvents.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14247
+        }
+      ]
+    },
+    "/assets/images/common/applications/vegetables.webp": {
+      "fingerprint": "2d5d8f11f71591aff5d1037c140a1026ae8f240aa588132bbc37f4c102f137d4",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/vegetables.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 33038
+        },
+        {
+          "src": "/assets/images/generated/common/applications/vegetables.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 14733
+        }
+      ]
+    },
+    "/assets/images/common/applications/water.webp": {
+      "fingerprint": "710602074923033dbfb3ce527c8c815156c205ecab66f4f706e2b8aadf4881d7",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/water.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 14066
+        },
+        {
+          "src": "/assets/images/generated/common/applications/water.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 6509
+        }
+      ]
+    },
     "/assets/images/common/category-fiber.png": {
       "fingerprint": "babb86d9d62c52ae18c89d367c9e4ff06a1b1cbdea4df74c7452b25dc4fa7766",
       "width": 1254,

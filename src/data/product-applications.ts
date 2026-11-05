@@ -1,24 +1,21 @@
-import type { ApplicationIconName } from './application-icons';
 import { text, type LocalizedText } from './products';
 interface Application {
   label: LocalizedText;
-  icon: ApplicationIconName;
-  image?: string;
-  description?: LocalizedText;
+  image: string;
 }
-const application = (ru: string, en: string, icon: ApplicationIconName): Application => ({
-  label: { ru, en },
-  icon
+const application = (ru: string, en: string, image: string): Application => ({
+  label: text(ru, en),
+  image: `/assets/images/common/applications/${image}.webp`
 });
 const crop = (ru: string, en: string, image: string): Application => ({
   label: { ru, en },
-  icon: 'seedling',
+
   image: `/assets/images/common/crops/${image}.png`
 });
 
 // Substrates show crops or a propagation stage; other ranges show industries.
 export const applications = {
-  berries: application('Выращивание ягод', 'Soft fruit growing', 'strawberry'),
+  berries: application('Выращивание ягод', 'Soft fruit growing', 'berries'),
   seedlings: crop('Рассада', 'Seedlings', 'seedlings'),
   propagation: crop('Рассада и черенки', 'Seedlings and cuttings', 'seedlings'),
   tomatoes: crop('Томаты', 'Tomatoes', 'tomato'),
@@ -30,44 +27,44 @@ export const applications = {
   lettuce: crop('Листовой салат', 'Leaf lettuce', 'lettuce'),
   basil: crop('Базилик', 'Basil', 'basil'),
   petunias: crop('Петунии', 'Petunias', 'petunia'),
-  orchards: application('Плодовые сады', 'Fruit orchards', 'tree'),
-  landscaping: application('Озеленение', 'Landscaping', 'tree'),
-  drinks: application('Напитки', 'Beverages', 'drink'),
-  bakery: application('Выпечка', 'Bakery products', 'bread'),
-  confectionery: application('Кондитерские изделия', 'Confectionery', 'cake'),
-  desserts: application('Десерты', 'Desserts', 'cake'),
-  snacks: application('Снеки и завтраки', 'Snacks and breakfast foods', 'bowl'),
-  preparedFood: application('Соусы и готовые блюда', 'Sauces and prepared foods', 'cooking'),
-  cosmetics: application('Косметические средства', 'Personal-care products', 'bottle'),
-  fresh: application('Свежие продукты', 'Fresh produce', 'coconut'),
-  edibleOils: application('Пищевые масла', 'Edible oils', 'oil'),
-  driedIngredients: application('Сушёные ингредиенты', 'Dried ingredients', 'coconut'),
-  ropes: application('Канаты и шпагат', 'Ropes and twine', 'rope'),
-  brushes: application('Щёточные изделия', 'Brush products', 'brush'),
-  mats: application('Маты и покрытия', 'Mats and coverings', 'mat'),
-  erosionMesh: application('Противоэрозионные сетки', 'Erosion-control netting', 'mat'),
-  slopes: application('Защита склонов', 'Slope protection', 'slope'),
-  riverbanks: application('Укрепление берегов', 'Riverbank protection', 'water'),
+  orchards: application('Плодовые сады', 'Fruit orchards', 'orchards'),
+  landscaping: application('Озеленение', 'Landscaping', 'landscaping'),
+  drinks: application('Напитки', 'Beverages', 'drinks'),
+  bakery: application('Выпечка', 'Bakery products', 'bakery'),
+  confectionery: application('Кондитерские изделия', 'Confectionery', 'confectionery'),
+  desserts: application('Десерты', 'Desserts', 'desserts'),
+  snacks: application('Снеки и завтраки', 'Snacks and breakfast foods', 'snacks'),
+  preparedFood: application('Соусы и готовые блюда', 'Sauces and prepared foods', 'preparedFood'),
+  cosmetics: application('Косметические средства', 'Personal-care products', 'cosmetics'),
+  fresh: application('Свежие продукты', 'Fresh produce', 'fresh'),
+  edibleOils: application('Пищевые масла', 'Edible oils', 'edibleOils'),
+  driedIngredients: application('Сушёные ингредиенты', 'Dried ingredients', 'driedIngredients'),
+  ropes: application('Канаты и шпагат', 'Ropes and twine', 'ropes'),
+  brushes: application('Щёточные изделия', 'Brush products', 'brushes'),
+  mats: application('Маты и покрытия', 'Mats and coverings', 'mats'),
+  erosionMesh: application('Противоэрозионные сетки', 'Erosion-control netting', 'erosionMesh'),
+  slopes: application('Защита склонов', 'Slope protection', 'slopes'),
+  riverbanks: application('Укрепление берегов', 'Riverbank protection', 'riverbanks'),
   water: application('Очистка воды', 'Water treatment', 'water'),
   air: application('Очистка воздуха и газов', 'Air and gas treatment', 'air'),
-  solvents: application('Регенерация растворителей', 'Solvent recovery', 'filter'),
-  hookah: application('Кальяны', 'Hookah', 'flame'),
-  nurseries: application('Питомники', 'Nurseries', 'seedling'),
-  vegetables: application('Выращивание овощей', 'Vegetable growing', 'tomato'),
-  barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'grill'),
+  solvents: application('Регенерация растворителей', 'Solvent recovery', 'solvents'),
+  hookah: application('Кальяны', 'Hookah', 'hookah'),
+  nurseries: application('Питомники', 'Nurseries', 'nurseries'),
+  vegetables: application('Выращивание овощей', 'Vegetable growing', 'vegetables'),
+  barbecue: application('Гриль и барбекю', 'Grilling and barbecue', 'barbecue'),
   orchids: {
     label: { ru: 'Орхидеи', en: 'Orchids' },
-    icon: 'flower',
+
     image: '/assets/images/common/crops/orchid.png'
   },
   anthuriums: {
     label: { ru: 'Антуриумы', en: 'Anthuriums' },
-    icon: 'flower',
+
     image: '/assets/images/common/crops/anthurium.png'
   },
   bromeliads: {
     label: { ru: 'Бромелиевые', en: 'Bromeliads' },
-    icon: 'flower',
+
     image: '/assets/images/common/crops/bromeliad.png'
   },
   strawberries: crop('Клубника', 'Strawberries', 'strawberry')

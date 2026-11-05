@@ -4,8 +4,9 @@ import { productInstructions } from '../data/product-instructions';
 interface Props {
   productId: string;
   locale: Locale;
+  isSubstrate: boolean;
 }
-const { productId, locale } = Astro.props;
+const { productId, locale, isSubstrate } = Astro.props;
 const steps = productInstructions[productId];
 ---
 
@@ -14,11 +15,13 @@ const steps = productInstructions[productId];
     <h2 class="type-h2" id="product-instructions-title">
       {locale === 'ru' ? 'Как использовать' : 'How to use'}
     </h2>
-    <p class="type-p product-instructions__intro">
-      {locale === 'ru'
-        ? 'Все пропорции смесей указаны по объёму. Режим полива и питания подбирайте по культуре, воде и характеристикам поставленной партии.'
-        : 'All blend proportions are by volume. Match irrigation and feeding to the crop, water quality and the supplied batch.'}
-    </p>
+    {isSubstrate && (
+      <p class="type-p product-instructions__intro">
+        {locale === 'ru'
+          ? 'Все пропорции смесей указаны по объёму. Режим полива и питания подбирайте по культуре, воде и характеристикам поставленной партии.'
+          : 'All blend proportions are by volume. Match irrigation and feeding to the crop, water quality and the supplied batch.'}
+      </p>
+    )}
     <ol>
       {steps.map((step) => (
         <li>
@@ -43,6 +46,9 @@ const steps = productInstructions[productId];
     padding: 0;
     list-style: none;
     counter-reset: instructions;
+  }
+  h2 + ol {
+    margin-top: 24px;
   }
   li {
     counter-increment: instructions;

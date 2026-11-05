@@ -16,6 +16,7 @@ const ru = {
   productionBranchesHeading: 'Две площадки SEHA',
   productionBranchesLabel3: 'для разных категорий',
   productionSubstratesLabel: 'SEHA / СУБСТРАТЫ',
+  productionAddressLabel: 'Адрес производственной площадки',
   productionFoodLabel: 'SEHA / ПИЩЕВАЯ ЛИНИЯ',
   productionBranchesCardTitle: 'Субстраты, волокно и скорлупа',
   productionBranchesText2:
@@ -37,12 +38,12 @@ const ru = {
     'Здесь собраны ключевые этапы: происхождение сырья, технологическая обработка, контроль параметров, упаковка и подготовка документов.',
   processSectionCardTitle: 'Сырье и производственная база',
   processSectionText2:
-    'Масштаб площадки и расположение рядом с регионами выращивания кокоса помогают поддерживать стабильность сырья для регулярных партий.',
+    'Кокосы закупают у хозяйств Поллачи и соседних районов. При приёмке сырьё проверяют по зрелости, свежести и качеству.',
   processSectionAlt: 'Производственная площадка среди кокосовых пальм',
   processSectionCaption: 'Производственная площадка рядом с сырьевой базой',
   processSectionCardTitle2: 'Подготовка и хранение сырья',
   processSectionText3:
-    'Сырье очищают, сортируют и подготавливают к дальнейшей переработке. Для закупщика это снижает риск нестабильной партии.',
+    'Сырьё очищают и сортируют. При производстве субстратов кокосовое волокно промывают, сушат и просеивают до нужной фракции. В лаборатории площадки проверяют влажность, pH и EC и записывают результаты по партиям.',
   processSectionAlt2: 'Склад и оборудование для подготовки кокосового сырья',
   processSectionCaption2: 'Склад, сортировка и подготовка сырья',
   processSectionCardTitle3: 'Пищевая переработка SEHA',
@@ -57,7 +58,7 @@ const ru = {
   processSectionCaption4: 'Фракционирование, фильтрация и контроль параметров',
   processSectionCardTitle5: 'Фасовка и маркировка',
   processSectionText6:
-    'Готовая продукция упаковывается в розничные или оптовые форматы. Формат партии согласуется под канал продаж, склад и логистику клиента.',
+    'Согласуем фасовку, упаковку под маркой заказчика и маркировку по его требованиям. Готовые партии маркируют для прослеживаемости от приёмки сырья до отгрузки.',
   processSectionAlt5: 'Упаковка пищевых кокосовых продуктов',
   processSectionCaption5: 'Фасовка, маркировка и подготовка партии',
   processSectionCardTitle6: 'Документы и отгрузка',
@@ -131,6 +132,7 @@ const en = {
   productionBranchesHeading: 'Two SEHA facilities',
   productionBranchesLabel3: 'for different categories',
   productionSubstratesLabel: 'SEHA / SUBSTRATES',
+  productionAddressLabel: 'Manufacturing site address',
   productionFoodLabel: 'SEHA / FOOD PRODUCTION',
   productionBranchesCardTitle: 'Substrates, fibre and shell',
   productionBranchesText2:
@@ -152,12 +154,12 @@ const en = {
     'These are the key stages: raw material origin, processing, parameter control, packaging and document preparation.',
   processSectionCardTitle: 'Raw materials and manufacturing base',
   processSectionText2:
-    'The scale of the facility and its proximity to coconut-growing regions help maintain a stable raw material supply for regular batches.',
+    'Coconuts come from farms in Pollachi and nearby areas. Incoming batches are checked for maturity, freshness and quality.',
   processSectionAlt: 'Manufacturing facility among coconut palms',
   processSectionCaption: 'Manufacturing facility close to the raw material source',
   processSectionCardTitle2: 'Raw material preparation and storage',
   processSectionText3:
-    'Raw materials are cleaned, sorted and prepared for further processing. For buyers, this reduces the risk of an inconsistent batch.',
+    'Raw materials are cleaned and sorted. For substrates, the coir is washed, dried and sieved to the specified particle size. The on-site laboratory checks moisture, pH and EC and records the results by batch.',
   processSectionAlt2: 'Warehouse and equipment for coconut raw material preparation',
   processSectionCaption2: 'Storage, sorting and raw material preparation',
   processSectionCardTitle3: 'SEHA food processing',
@@ -172,7 +174,7 @@ const en = {
   processSectionCaption4: 'Fractionation, filtration and parameter control',
   processSectionCardTitle5: 'Packing and labelling',
   processSectionText6:
-    'Finished products are packed in retail or wholesale formats. The batch format is agreed to suit the customer’s sales channel, warehouse and logistics.',
+    'We agree on pack sizes, private-label packaging and labelling to the customer’s requirements. Batch identification enables traceability from raw material intake to dispatch.',
   processSectionAlt5: 'Packing coconut food products',
   processSectionCaption5: 'Packing, labelling and batch preparation',
   processSectionCardTitle6: 'Documents and shipment',

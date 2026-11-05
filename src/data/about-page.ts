@@ -47,17 +47,17 @@ const ru = {
     'Мы смотрим на кокосовую продукцию как на часть цепочки клиента: рецептуры, выращивания, производства, складской обработки и дальнейшей продажи.',
   aboutShiftAlt: 'Производственные здания SEHA среди кокосовых плантаций в Индии',
   aboutTimelineLabel: 'Наш опыт',
-  aboutTimelineLabel3: 'Семейное дело',
+  aboutTimelineLabel3: '1980-е',
   aboutTimelineCardTitle: 'Начало в кокосовой отрасли',
   aboutTimelineText:
-    'Начало семейного бизнеса в Индии и накопление опыта в выращивании, подготовке и переработке кокоса.',
-  aboutTimelineLabel4: 'Развитие',
+    'Семья начинает работать с кокосами в Поллачи. Сотрудничество с местными фермерами закладывает основу будущего производства.',
+  aboutTimelineLabel4: '2000-е',
   aboutTimelineCardTitle2: 'Развитие торговли и контроля',
   aboutTimelineText2:
-    'Развитие производства и экспортных поставок с контролем качества и характеристик партии.',
+    'Торговля кокосовым сырьём на юге Индии помогает выстроить отбор сырья и контроль качества партий.',
   aboutTimelineCardTitle3: 'Современная производственная база',
   aboutTimelineText3:
-    'Переход к производству и экспортной модели с инфраструктурой для обработки, упаковки и контроля.',
+    'Семейное дело переходит к специализированному производству с оборудованием для переработки, контроля качества и подготовки экспортных партий.',
   aboutTimelineLabel5: 'Сейчас',
   aboutTimelineCardTitle4: 'Сеха в России',
   aboutTimelineText4:
@@ -130,17 +130,17 @@ const en = {
     'We view coconut products as part of the customer’s chain: formulation, growing, manufacturing, warehouse handling and onward sale.',
   aboutShiftAlt: 'SEHA manufacturing buildings among coconut plantations in India',
   aboutTimelineLabel: 'Our experience',
-  aboutTimelineLabel3: 'Family business',
+  aboutTimelineLabel3: '1980s',
   aboutTimelineCardTitle: 'Entering the coconut industry',
   aboutTimelineText:
-    'The family business began in India, building experience in coconut cultivation, raw material preparation and processing.',
-  aboutTimelineLabel4: 'Development',
+    'The family enters the coconut trade in Pollachi, building relationships with local farmers and learning how to select and process coconuts.',
+  aboutTimelineLabel4: '2000s',
   aboutTimelineCardTitle2: 'Developing trade and quality control',
   aboutTimelineText2:
-    'Manufacturing and export supply developed alongside quality control and agreed batch specifications.',
+    'Trading across southern India helps the family refine raw material selection and batch quality control.',
   aboutTimelineCardTitle3: 'A modern manufacturing base',
   aboutTimelineText3:
-    'Transition to manufacturing and an export model with infrastructure for processing, packaging and quality control.',
+    'The family business moves into dedicated manufacturing, with facilities for processing, quality control and export packing.',
   aboutTimelineLabel5: 'Today',
   aboutTimelineCardTitle4: 'Seha in Russia',
   aboutTimelineText4:

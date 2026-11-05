@@ -363,5 +363,369 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
       'Когда рассада готова, аккуратно разделите субстрат по границам ячеек руками или чистыми ножницами, не повреждая корни. Поддерживайте корневой ком снизу при извлечении.',
       'When seedlings are ready, carefully separate medium along cell boundaries by hand or with clean scissors without damaging roots. Support each root plug from beneath during removal.'
     )
+  ],
+  'coir-fiber-bales': [
+    step(
+      'Подберите волокно',
+      'Select the fibre',
+      'Согласуйте длину и качество волокна под изделие: щётку, мат или пряжу.',
+      'Agree the fibre length and grade for the intended brush, mat or yarn.'
+    ),
+    step(
+      'Распакуйте тюк',
+      'Open the bale',
+      'Установите тюк на устойчивой площадке. Снимайте обвязку по правилам распаковки на вашем производстве.',
+      'Set the bale on a stable surface and remove the strapping according to your site’s unpacking procedure.'
+    ),
+    step(
+      'Разрыхлите и отсортируйте',
+      'Open and grade the fibre',
+      'Разделите спрессованное волокно и удалите посторонние включения перед подачей на линию.',
+      'Loosen the compressed fibre and remove foreign material before feeding it into the line.'
+    ),
+    step(
+      'Проверьте пробную партию',
+      'Run a trial batch',
+      'Проверьте равномерность подачи и свойства готового изделия на небольшой партии.',
+      'Check feed consistency and finished product properties on a small batch.'
+    )
+  ],
+  'machine-twisted-fiber': [
+    step(
+      'Подберите прядь',
+      'Select the strand',
+      'Согласуйте диаметр и степень скрутки с учётом изделия и оборудования.',
+      'Match strand diameter and twist to the product and equipment.'
+    ),
+    step(
+      'Подготовьте подачу',
+      'Set up the feed',
+      'Закрепите бухту на размотчике и проверьте, что прядь подаётся без рывков и петель.',
+      'Secure the coil on the unwinder and check that it feeds smoothly without loops.'
+    ),
+    step(
+      'Настройте оборудование',
+      'Set the machine',
+      'Подберите натяжение по пробному образцу каната, сетки или мата.',
+      'Set tension using a trial sample of the rope, net or mat.'
+    ),
+    step(
+      'Проверьте изделие',
+      'Check the finished product',
+      'Сверьте размеры и прочность образца со спецификацией перед серийным выпуском.',
+      'Check sample dimensions and strength against the specification before production.'
+    )
+  ],
+  'coir-weed-mat': [
+    step(
+      'Подготовьте участок',
+      'Prepare the site',
+      'Удалите сорняки и крупные камни, выровняйте почву и увлажните её при необходимости.',
+      'Remove weeds and large stones, level the soil and moisten it if needed.'
+    ),
+    step(
+      'Разложите маты',
+      'Lay the mats',
+      'Раскатайте рулон вдоль грядки или уложите круглый мат вокруг растения, оставив зазор у стебля или ствола.',
+      'Unroll the mat along the bed or place a round mat around the plant, leaving clearance at the stem or trunk.'
+    ),
+    step(
+      'Закрепите покрытие',
+      'Secure the cover',
+      'Закрепите края и стыки подходящими креплениями, чтобы ветер не приподнимал мат.',
+      'Secure edges and joins with suitable fixings so the wind cannot lift the mat.'
+    ),
+    step(
+      'Проверьте полив',
+      'Check irrigation',
+      'Убедитесь, что вода доходит до почвы. Поправляйте края после сильного ветра и по мере роста растений.',
+      'Check that water reaches the soil. Adjust the edges after strong winds and as plants grow.'
+    )
+  ],
+  'coir-geo-textile': [
+    step(
+      'Подберите полотно',
+      'Select the mesh',
+      'Согласуйте плотность, размер ячейки и схему крепления с учётом уклона и стока на участке.',
+      'Agree the fabric weight, mesh opening and anchoring plan for the slope and runoff conditions.'
+    ),
+    step(
+      'Подготовьте поверхность',
+      'Prepare the surface',
+      'Уберите крупные выступы и выровняйте грунт так, чтобы сетка прилегала к поверхности.',
+      'Remove large protrusions and grade the soil so the mesh lies against it.'
+    ),
+    step(
+      'Уложите и закрепите',
+      'Lay and anchor',
+      'Раскатывайте полотно сверху вниз по склону. Нахлёст, анкеры и закрепление верхнего края выполняйте по проекту.',
+      'Unroll the mesh downslope. Follow the site design for overlaps, anchors and securing the upper edge.'
+    ),
+    step(
+      'Осмотрите после осадков',
+      'Inspect after rain',
+      'Проверьте крепления и стыки после дождя, особенно пока растительность не укоренилась.',
+      'Inspect anchors and joins after rain, especially before vegetation is established.'
+    )
+  ],
+  'veymur-mct-oil': [
+    step(
+      'Выберите рецептуру',
+      'Choose a recipe',
+      'Используйте масло в напитках, заправках или готовых смесях согласно рецептуре.',
+      'Use the oil in drinks, dressings or prepared blends according to the recipe.'
+    ),
+    step(
+      'Отмерьте масло',
+      'Measure the oil',
+      'Взвесьте количество, предусмотренное для пробной партии.',
+      'Weigh the amount specified for the trial batch.'
+    ),
+    step(
+      'Равномерно смешайте',
+      'Blend evenly',
+      'Добавьте масло при смешивании. Для водных напитков проверьте, как оно распределяется и отделяется при хранении.',
+      'Add the oil during mixing. For water-based drinks, check dispersion and separation during storage.'
+    ),
+    step(
+      'Проверьте результат',
+      'Check the result',
+      'Оцените вкус и текстуру пробной партии. Храните остаток по указаниям на упаковке.',
+      'Check the taste and texture of the trial batch. Store the remainder as directed on the packaging.'
+    )
+  ],
+  'veymur-virgin-coconut-oil': [
+    step(
+      'Выберите блюдо',
+      'Choose the application',
+      'Используйте в выпечке, начинках или блюдах, где уместен характерный кокосовый аромат.',
+      'Use in bakery products, fillings or dishes where the coconut aroma suits the recipe.'
+    ),
+    step(
+      'Подготовьте масло',
+      'Prepare the oil',
+      'Взвесьте масло. Если рецептура требует жидкую фазу, мягко прогрейте до расплавления.',
+      'Weigh the oil. If the recipe needs a liquid phase, warm it gently until melted.'
+    ),
+    step(
+      'Введите в смесь',
+      'Incorporate into the mix',
+      'Добавьте на этапе внесения жиров, соблюдая температуру и порядок смешивания по рецептуре.',
+      'Add at the fat incorporation stage, following the recipe’s temperature and mixing sequence.'
+    ),
+    step(
+      'Оцените после охлаждения',
+      'Check after cooling',
+      'Проверьте аромат и текстуру готового продукта: кокосовое масло твердеет при охлаждении.',
+      'Check aroma and texture after cooling, when the coconut oil can solidify.'
+    )
+  ],
+  'rbd-coconut-oil': [
+    step(
+      'Подберите рецептуру',
+      'Choose a recipe',
+      'Используйте для выпечки, начинок или блюд, где нужен жир с нейтральным вкусом.',
+      'Use in bakery products, fillings or dishes that need a neutral-flavoured fat.'
+    ),
+    step(
+      'Отмерьте нужное количество',
+      'Measure the quantity',
+      'Взвесьте масло по рецептуре. При необходимости расплавьте его мягким нагревом.',
+      'Weigh the oil according to the recipe. Melt it gently if needed.'
+    ),
+    step(
+      'Добавьте на этапе внесения жира',
+      'Add at the fat stage',
+      'Соблюдайте заданный режим смешивания или приготовления. При замене другого жира начните с пробной партии.',
+      'Follow the specified mixing or cooking process. When replacing another fat, start with a trial batch.'
+    ),
+    step(
+      'Проверьте текстуру',
+      'Check texture',
+      'Оцените консистенцию после приготовления и охлаждения.',
+      'Assess consistency after cooking and cooling.'
+    )
+  ],
+  'veymur-coconut-sugar': [
+    step(
+      'Выберите применение',
+      'Choose an application',
+      'Добавляйте сахар в напитки, тесто, начинки и десерты, где подходит карамельный оттенок.',
+      'Use the sugar in drinks, doughs, fillings or desserts that suit its caramel notes.'
+    ),
+    step(
+      'Взвесьте сахар',
+      'Weigh the sugar',
+      'Для замены привычного сахара сначала проверьте небольшую порцию рецептуры.',
+      'When replacing another sugar, test a small batch first.'
+    ),
+    step(
+      'Распределите в смеси',
+      'Distribute evenly',
+      'Для напитков растворите сахар при перемешивании. Для теста добавьте его на этапе, указанном в рецептуре.',
+      'Stir to dissolve in drinks. For dough, add it at the stage specified in the recipe.'
+    ),
+    step(
+      'Проверьте вкус и цвет',
+      'Check taste and colour',
+      'Оцените сладость, оттенок и текстуру готового продукта перед изменением дозировки.',
+      'Check sweetness, colour and texture before adjusting the amount.'
+    )
+  ],
+  'veymur-desiccated-coconut': [
+    step(
+      'Выберите фракцию',
+      'Select the cut',
+      'Для однородной начинки подберите мелкую стружку, для выраженной текстуры или посыпки — более крупную.',
+      'Choose a fine cut for a smooth filling or a coarser cut for texture and toppings.'
+    ),
+    step(
+      'Взвесьте стружку',
+      'Weigh the coconut',
+      'Отмерьте количество для небольшой пробной партии.',
+      'Measure the amount for a small trial batch.'
+    ),
+    step(
+      'Добавьте по рецептуре',
+      'Add as specified',
+      'Равномерно вмешайте в тесто или начинку либо распределите по поверхности как посыпку.',
+      'Mix evenly into dough or filling, or spread over the surface as a topping.'
+    ),
+    step(
+      'Проверьте влажность',
+      'Check moisture',
+      'Оцените консистенцию после выдержки или выпечки. При необходимости скорректируйте жидкую часть рецептуры.',
+      'Check consistency after resting or baking. Adjust the recipe’s liquid phase if needed.'
+    )
+  ],
+  'veymur-coconut-milk': [
+    step(
+      'Перемешайте перед использованием',
+      'Mix before use',
+      'Встряхните закрытую потребительскую упаковку или перемешайте продукт после открытия, чтобы восстановить однородность.',
+      'Shake the closed consumer pack or stir after opening to restore an even consistency.'
+    ),
+    step(
+      'Отмерьте по рецептуре',
+      'Measure for the recipe',
+      'Подберите количество с учётом жирности и желаемой густоты соуса, напитка или десерта.',
+      'Measure for the desired thickness of the sauce, drink or dessert, taking fat content into account.'
+    ),
+    step(
+      'Добавьте в блюдо',
+      'Add to the dish',
+      'Для горячих блюд вводите при перемешивании. Для холодных напитков смешайте с остальными ингредиентами.',
+      'Stir into hot dishes. For cold drinks, blend with the other ingredients.'
+    ),
+    step(
+      'Охладите остаток',
+      'Refrigerate the remainder',
+      'После вскрытия соблюдайте условия хранения и срок на упаковке.',
+      'Follow the storage directions and use period on the pack after opening.'
+    )
+  ],
+  'young-coconut': [
+    step(
+      'Осмотрите плод',
+      'Inspect the coconut',
+      'Выберите целый плод без трещин, подтёков и признаков порчи.',
+      'Choose an intact coconut without cracks, leaks or signs of spoilage.'
+    ),
+    step(
+      'Подготовьте к вскрытию',
+      'Prepare to open',
+      'Очистите поверхность, поставьте плод устойчиво и используйте инструмент для вскрытия кокосов по его инструкции.',
+      'Clean the surface, set the coconut on a stable base and follow the instructions for your coconut opener.'
+    ),
+    step(
+      'Извлеките воду и мякоть',
+      'Remove water and flesh',
+      'Слейте кокосовую воду в чистую ёмкость и выньте мягкую мякоть чистой ложкой.',
+      'Pour the coconut water into a clean container and scoop out the soft flesh with a clean spoon.'
+    ),
+    step(
+      'Используйте после вскрытия',
+      'Use after opening',
+      'Подавайте сразу или охлаждайте по правилам вашей кухни или производства.',
+      'Serve promptly or refrigerate according to your kitchen or production procedures.'
+    )
+  ],
+  'mature-coconut': [
+    step(
+      'Осмотрите и очистите',
+      'Inspect and clean',
+      'Проверьте скорлупу на трещины и плесень. Очистите плод перед вскрытием.',
+      'Check the shell for cracks and mould. Clean the coconut before opening.'
+    ),
+    step(
+      'Откройте плод',
+      'Open the coconut',
+      'Закрепите плод на устойчивой поверхности и используйте подходящий инструмент по инструкции.',
+      'Secure the coconut on a stable surface and follow the instructions for a suitable opening tool.'
+    ),
+    step(
+      'Отделите мякоть',
+      'Separate the kernel',
+      'Извлеките твёрдую мякоть и проверьте, что в ней нет осколков скорлупы.',
+      'Remove the firm kernel and check for shell fragments.'
+    ),
+    step(
+      'Подготовьте к переработке',
+      'Prepare for processing',
+      'Измельчите мякоть по требованиям рецептуры или линии для стружки, молока либо масла.',
+      'Cut or grate the kernel to suit the recipe or the line for desiccated coconut, milk or oil.'
+    )
+  ],
+  'coco-shell-charcoal-briquettes': [
+    step(
+      'Подготовьте гриль на улице',
+      'Set up the grill outdoors',
+      'Установите угольный гриль на устойчивой негорючей поверхности на открытом воздухе. Очистите его от холодной золы и откройте заслонки по инструкции гриля.',
+      'Place the charcoal grill outdoors on a stable, non-combustible surface. Clear cold ash and open the vents as directed by the grill manual.'
+    ),
+    step(
+      'Разожгите брикеты',
+      'Light the briquettes',
+      'Возьмите брикеты для гриля и разожгите их в стартере на угольной решётке. Дождитесь, пока брикеты разгорятся и покроются светлым слоем золы.',
+      'Use grill-grade briquettes and light them in a chimney starter on the charcoal grate. Wait until they are alight and lightly coated with ash.'
+    ),
+    step(
+      'Распределите жар',
+      'Arrange the heat',
+      'В термостойких рукавицах пересыпьте брикеты на угольную решётку. Для непрямого жара сдвиньте их на одну сторону. Установите решётку для готовки и дайте ей прогреться.',
+      'Wear heat-resistant gloves and pour the briquettes onto the charcoal grate. Bank them to one side for indirect heat. Fit the cooking grate and let it preheat.'
+    ),
+    step(
+      'Дайте углям остыть',
+      'Let the coals cool',
+      'После готовки погасите угли по инструкции гриля. Убирайте золу только после полного остывания.',
+      'After cooking, extinguish the coals as directed by the grill manual. Remove the ash only when fully cold.'
+    )
+  ],
+  'coco-shell-activated-carbon': [
+    step(
+      'Подберите марку под среду',
+      'Select the grade for the medium',
+      'Согласуйте марку по составу воды или газа, загрязнителям и требованиям к очистке. Для питьевой воды проверьте допуск конкретной марки.',
+      'Select the grade for the water or gas composition, contaminants and treatment target. Verify approval of the specific grade for drinking-water use.'
+    ),
+    step(
+      'Подготовьте систему',
+      'Prepare the system',
+      'Для гранул используйте рассчитанный фильтр с удержанием загрузки. Порошок дозируйте только в системах, рассчитанных на его отделение.',
+      'Use a filter designed to retain granular media. Dose powder only in systems designed to remove it afterwards.'
+    ),
+    step(
+      'Выполните пуск по регламенту',
+      'Commission as specified',
+      'Гранулированную загрузку для воды промойте и подготовьте по паспорту марки и инструкции фильтра. Для газа соблюдайте регламент установки.',
+      'Rinse and condition granular water-treatment media according to the grade data sheet and filter instructions. For gas treatment, follow the equipment procedure.'
+    ),
+    step(
+      'Контролируйте работу',
+      'Monitor performance',
+      'Следите за показателями очистки и перепадом давления. Заменяйте загрузку по результатам контроля и регламенту эксплуатации.',
+      'Monitor treatment performance and pressure drop. Replace the media based on monitoring results and the operating procedure.'
+    )
   ]
 };

@@ -107,7 +107,11 @@ const category = productCategories.find((category) => category.slug === item.cat
       </dl>
     </section>
     <ProductApplications productId={item.id} locale={locale} />
-    <ProductInstructions productId={item.id} locale={locale} />
+    <ProductInstructions
+      productId={item.id}
+      locale={locale}
+      isSubstrate={item.category === 'substrates'}
+    />
   </main>
 </SiteLayout>
 <style>
