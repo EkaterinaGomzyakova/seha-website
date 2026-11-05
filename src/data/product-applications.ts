@@ -232,6 +232,214 @@ export const productApplicationDescriptions: Record<
       'Цельный вкладыш увлажняют в совместимой кассете, затем высевают семена.',
       'Hydrate the one-piece insert in a compatible tray, then sow seeds.'
     )
+  },
+  'coir-fiber-bales': {
+    ropes: text(
+      'Волокно прядут в нити для изготовления канатов и шпагата.',
+      'The fibre is spun into yarn for ropes and twine.'
+    ),
+    brushes: text(
+      'Жёсткие волокна используют как ворс для хозяйственных щёток.',
+      'Stiff fibres form the bristles of cleaning brushes.'
+    ),
+    mats: text(
+      'Из волокна формируют полотно для матов и покрытий.',
+      'The fibre is formed into sheets for mats and coverings.'
+    ),
+    erosionMesh: text(
+      'Из волокна делают пряжу для сеток, защищающих почву от смыва.',
+      'The fibre is spun into yarn for nets that help protect soil from runoff.'
+    )
+  },
+  'machine-twisted-fiber': {
+    ropes: text(
+      'Скрученные пряди соединяют в канаты или используют для шпагата.',
+      'Twisted strands are combined into ropes or used to make twine.'
+    ),
+    brushes: text(
+      'Волокно из прядей используют для набивки щёточного ворса.',
+      'Fibre from the strands is used to fill brush heads.'
+    ),
+    mats: text(
+      'Из прядей ткут маты и напольные покрытия.',
+      'The strands are woven into mats and floor coverings.'
+    ),
+    erosionMesh: text(
+      'Из прядей плетут сетки с открытыми ячейками для защиты грунта.',
+      'The strands are woven into open-mesh nets for soil protection.'
+    )
+  },
+  'coir-weed-mat': {
+    berries: text(
+      'Маты закрывают почву между ягодными кустами и сдерживают рост сорняков.',
+      'Mats cover soil between berry plants and help suppress weeds.'
+    ),
+    vegetables: text(
+      'Рулоны укладывают вдоль грядок, оставляя отверстия для растений.',
+      'Rolls are laid along beds with openings for plants.'
+    ),
+    orchards: text(
+      'Круглый мат укладывают вокруг дерева, оставляя зазор у ствола.',
+      'A round mat is placed around the tree with clearance at the trunk.'
+    ),
+    nurseries: text(
+      'Круглые маты закрывают поверхность грунта в горшках.',
+      'Round mats cover the growing medium in nursery pots.'
+    ),
+    landscaping: text(
+      'Покрытие укладывают между декоративными растениями, чтобы снизить испарение влаги.',
+      'The covering goes between ornamental plants to reduce moisture loss.'
+    )
+  },
+  'coir-geo-textile': {
+    slopes: text(
+      'Сетку крепят к грунту, чтобы уменьшить смыв, пока приживается растительность.',
+      'The mesh is anchored to reduce soil loss while vegetation establishes.'
+    ),
+    riverbanks: text(
+      'Полотно защищает поверхность берега от размыва в составе проекта укрепления.',
+      'The mesh helps protect the bank surface from erosion as part of a bank protection design.'
+    ),
+    landscaping: text(
+      'Сетка удерживает верхний слой грунта на участках, где высаживают растения.',
+      'The mesh helps hold topsoil in place on newly planted areas.'
+    )
+  },
+  'veymur-mct-oil': {
+    drinks: text(
+      'Масло смешивают с другими ингредиентами в смузи и коктейлях.',
+      'The oil is blended into smoothies and shakes.'
+    ),
+    snacks: text(
+      'Масло добавляют в смеси для батончиков и других снеков.',
+      'The oil is added to mixes for snack bars and other snacks.'
+    )
+  },
+  'veymur-virgin-coconut-oil': {
+    bakery: text(
+      'Масло добавляют в тесто и начинки для кокосового аромата.',
+      'The oil adds coconut aroma to dough and fillings.'
+    ),
+    preparedFood: text(
+      'Используют в соусах и блюдах, где уместен кокосовый вкус.',
+      'Used in sauces and dishes where coconut flavour suits the recipe.'
+    ),
+    cosmetics: text(
+      'Масло вводят в жировую фазу кремов, бальзамов и средств для волос.',
+      'The oil is added to the oil phase of creams, balms and hair products.'
+    )
+  },
+  'veymur-coconut-sugar': {
+    drinks: text(
+      'Сахар растворяют в напитках для сладости и карамельного оттенка.',
+      'The sugar is dissolved in drinks for sweetness and caramel notes.'
+    ),
+    bakery: text(
+      'Добавляют в тесто для печенья и кексов.',
+      'Added to cookie dough and cake batter.'
+    ),
+    confectionery: text(
+      'Используют для сладости в начинках и конфетных массах.',
+      'Used to sweeten fillings and confectionery mixtures.'
+    ),
+    desserts: text(
+      'Добавляют в кремы, пудинги и десертные соусы.',
+      'Added to creams, puddings and dessert sauces.'
+    )
+  },
+  'veymur-desiccated-coconut': {
+    bakery: text(
+      'Стружку вмешивают в тесто или используют как посыпку.',
+      'The coconut is mixed into dough or sprinkled on top.'
+    ),
+    confectionery: text(
+      'Стружка даёт кокосовый вкус и текстуру начинкам и конфетам.',
+      'The coconut adds flavour and texture to fillings and sweets.'
+    ),
+    desserts: text(
+      'Ею посыпают пудинги и кремовые десерты.',
+      'Used as a topping for puddings and creamy desserts.'
+    ),
+    snacks: text(
+      'Добавляют в гранолу и батончики для выраженной текстуры.',
+      'Added to granola and snack bars for texture.'
+    )
+  },
+  'veymur-coconut-milk': {
+    drinks: text(
+      'Молоко используют как основу для смузи и коктейлей.',
+      'The milk forms a base for smoothies and shakes.'
+    ),
+    bakery: text(
+      'Добавляют в жидкую часть теста и кремовые начинки.',
+      'Added to the liquid ingredients in batters and to creamy fillings.'
+    ),
+    desserts: text(
+      'Используют как основу для пудингов и мороженого.',
+      'Used as a base for puddings and ice cream.'
+    ),
+    preparedFood: text(
+      'Молоко придаёт соусам, супам и карри сливочную текстуру.',
+      'The milk gives sauces, soups and curries a creamy texture.'
+    )
+  },
+  'young-coconut': {
+    drinks: text(
+      'Кокосовую воду подают отдельно или добавляют в коктейли.',
+      'The coconut water is served on its own or mixed into drinks.'
+    ),
+    fresh: text(
+      'Молодые плоды подают свежими, а мягкую мякоть едят ложкой.',
+      'Young coconuts are served fresh and the soft flesh is eaten with a spoon.'
+    )
+  },
+  'mature-coconut': {
+    drinks: text(
+      'Из измельчённой мякоти получают кокосовое молоко для напитков.',
+      'The grated kernel is used to make coconut milk for drinks.'
+    ),
+    edibleOils: text(
+      'Из зрелой мякоти получают кокосовое масло.',
+      'Coconut oil is extracted from the mature kernel.'
+    ),
+    driedIngredients: text(
+      'Мякоть измельчают и сушат для получения кокосовой стружки.',
+      'The kernel is grated and dried to make desiccated coconut.'
+    )
+  },
+  'rbd-coconut-oil': {
+    bakery: text(
+      'Масло используют как жир в тесте и начинках, где нужен нейтральный вкус.',
+      'Used as the fat in dough and fillings where a neutral flavour is needed.'
+    ),
+    preparedFood: text(
+      'Добавляют в соусы и готовые блюда без выраженного кокосового вкуса.',
+      'Added to sauces and prepared dishes that call for a neutral-flavoured oil.'
+    )
+  },
+  'coco-shell-charcoal-briquettes': {
+    hookah: text(
+      'Для кальяна выбирают брикеты, предназначенные для этого применения.',
+      'Choose briquettes specifically intended for hookah use.'
+    ),
+    barbecue: text(
+      'Брикеты для гриля разжигают и распределяют под решёткой для прямого или непрямого жара.',
+      'Grill briquettes are lit and arranged beneath the grate for direct or indirect heat.'
+    )
+  },
+  'coco-shell-activated-carbon': {
+    water: text(
+      'Уголь используют в системах фильтрации для удаления отдельных примесей из воды.',
+      'The carbon is used in filtration systems to remove selected impurities from water.'
+    ),
+    air: text(
+      'Угольные фильтры улавливают запахи и отдельные пары из воздушного потока.',
+      'Carbon filters capture odours and selected vapours from the airstream.'
+    ),
+    solvents: text(
+      'Уголь улавливает пары растворителей в установках, рассчитанных на их извлечение.',
+      'The carbon captures solvent vapours in systems designed for their recovery.'
+    )
   }
 };
 

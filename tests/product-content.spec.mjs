@@ -27,12 +27,10 @@ for (const locale of ['ru', 'en']) {
       for (const key of items) {
         expect(html).toContain(applications[key].label[locale]);
         expect(html).toContain(applications[key].image.split('/').at(-1));
-        if (product.category === 'substrates') {
-          const explanation = productApplicationDescriptions[product.id]?.[key];
-          expect(explanation?.ru.trim()).toBeTruthy();
-          expect(explanation?.en.trim()).toBeTruthy();
-          expect(html).toContain(explanation[locale]);
-        }
+        const explanation = productApplicationDescriptions[product.id]?.[key];
+        expect(explanation?.ru.trim()).toBeTruthy();
+        expect(explanation?.en.trim()).toBeTruthy();
+        expect(html).toContain(explanation[locale]);
       }
       const steps = productInstructions[product.id];
       expect(steps?.length).toBeGreaterThanOrEqual(4);
