@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import { orderingFor } from '../data/product-ordering';
+import TablerIcon from './ui/TablerIcon.astro';
 interface Props {
   productId: string;
   locale: Locale;
@@ -22,7 +23,7 @@ const id = `order-quantity-${productId}`;
       aria-label={ru ? 'Уменьшить количество' : 'Decrease quantity'}
       disabled={!fractional}
     >
-      −
+      <TablerIcon name="minus" />
     </button>
     <input
       id={id}
@@ -43,7 +44,7 @@ const id = `order-quantity-${productId}`;
       data-quantity-plus
       aria-label={ru ? 'Увеличить количество' : 'Increase quantity'}
     >
-      +
+      <TablerIcon name="plus" />
     </button>
   </div>
 </div>
@@ -93,12 +94,13 @@ const id = `order-quantity-${productId}`;
     box-shadow: 0 0 0 2px var(--color-green-brand);
   }
   button {
+    display: grid;
+    place-items: center;
     flex: 0 0 52px;
     min-height: 48px;
     border: 0;
     background: transparent;
     color: var(--color-green-brand);
-    font: 500 24px/1 var(--font-sans);
     cursor: pointer;
   }
   button:disabled {

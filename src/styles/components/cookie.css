@@ -66,11 +66,6 @@ seha-cookie-banner[hidden] {
   font: inherit;
   cursor: pointer;
 }
-.cookie-close img {
-  display: block;
-  width: 24px;
-  height: 24px;
-}
 .cookie-content {
   display: flex;
   flex-direction: column;

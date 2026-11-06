@@ -1,8 +1,9 @@
 ---
 import type { Locale } from '../data/translations';
 import { getInterfaceCopy } from '../data/interface-copy';
-import { localizedPath, withBase } from '../lib/paths';
+import { localizedPath } from '../lib/paths';
 import Button from './ui/Button.astro';
+import TablerIcon from './ui/TablerIcon.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
 interface Props {
   locale: Locale;
@@ -22,7 +23,7 @@ const copy = getInterfaceCopy(locale);
       />
     </span>
     <button class="cookie-close" type="button" aria-label={copy.close}>
-      <img src={withBase('/assets/images/common/cookie-xmark.svg')} alt="" />
+      <TablerIcon name="x" />
     </button>
   </div>
   <div class="cookie-content">

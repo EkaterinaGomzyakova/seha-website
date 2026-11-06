@@ -92,8 +92,6 @@ export class MobileMenu extends HTMLElement {
       'aria-label',
       (open ? this.trigger.dataset.closeLabel : this.trigger.dataset.openLabel) || ''
     );
-    const icon = this.trigger.querySelector<HTMLImageElement>('[data-menu-icon]');
-    if (icon) icon.src = (open ? icon.dataset.openSrc : icon.dataset.closedSrc) || icon.src;
     document.documentElement.classList.toggle('menu-open', open);
     document.body.classList.toggle('menu-open', open);
     if (open && !wasOpen) {

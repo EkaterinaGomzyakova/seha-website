@@ -114,15 +114,16 @@
   margin: 0;
 }
 .consent__checkbox {
-  display: block;
+  display: grid;
+  place-items: center;
   flex: 0 0 24px;
   width: 24px;
   height: 24px;
-  background: url('/assets/images/common/checkbox-default.svg') center/24px 24px no-repeat;
+  color: var(--color-yellow-brand);
 }
-.consent__input:checked + .consent__checkbox {
-  background-image: url('/assets/images/common/checkbox-checked.svg');
-  background-size: 20px 20px;
+.consent__input:not(:checked) + .consent__checkbox .consent__checked-icon,
+.consent__input:checked + .consent__checkbox .consent__unchecked-icon {
+  display: none;
 }
 .consent__input:focus-visible + .consent__checkbox {
   outline: var(--focus-outline);

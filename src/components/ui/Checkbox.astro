@@ -1,14 +1,24 @@
 ---
+import TablerIcon from './TablerIcon.astro';
+
 interface Props extends astroHTML.JSX.InputHTMLAttributes {
   label?: string;
+  insetCheck?: boolean;
 }
 
-const { label, class: className, ...inputProps } = Astro.props;
+const { label, insetCheck = false, class: className, ...inputProps } = Astro.props;
 ---
 
 <label class="consent">
   <input class:list={['consent__input', className]} type="checkbox" {...inputProps} />
-  <span class="consent__checkbox" aria-hidden="true"></span>
+  <span class="consent__checkbox" aria-hidden="true">
+    {!insetCheck && <TablerIcon name="square" class="consent__unchecked-icon" />}
+    <TablerIcon
+      name={insetCheck ? 'check' : 'square-check-filled'}
+      size={insetCheck ? 18 : 20}
+      class="consent__checked-icon"
+    />
+  </span>
   {label && <span class="consent__text">{label}</span>}
   <slot />
 </label>

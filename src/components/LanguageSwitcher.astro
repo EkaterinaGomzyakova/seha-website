@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import { withBase } from '../lib/paths';
+import TablerIcon from './ui/TablerIcon.astro';
 interface Props {
   locale: Locale;
   target: string;
@@ -27,12 +28,7 @@ const other = locale === 'en' ? 'ru' : 'en';
       />
       <span data-language-code>{locale === 'ru' ? 'РУ' : 'EN'}</span>
     </span>
-    <img
-      class="language-arrow"
-      data-language-arrow
-      src={withBase('/assets/images/common/menu-language-arrow.svg')}
-      alt=""
-    />
+    <TablerIcon name="chevron-down" class="language-arrow" />
   </button>
   <div id="language-options" class="language-menu" hidden>
     <a class="type-button" href={target} hreflang={other} lang={other} data-set-language={other}>

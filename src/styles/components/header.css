@@ -150,13 +150,13 @@
   padding: 0;
   border: 0;
   background: transparent;
+  color: var(--color-green-brand);
   cursor: pointer;
 }
 
-.menu-icon {
-  display: block;
-  width: 32px;
-  height: 32px;
+.menu-toggle[aria-expanded='false'] .menu-icon--close,
+.menu-toggle[aria-expanded='true'] .menu-icon--open {
+  display: none;
 }
 
 html.menu-open,
@@ -257,13 +257,8 @@ html.menu-open seha-cookie-banner {
     padding: 0;
     border: 0;
     background: transparent;
+    color: var(--color-green-brand);
     cursor: pointer;
-  }
-
-  .mobile-nav-close img {
-    display: block;
-    width: 32px;
-    height: 32px;
   }
 
   .mobile-nav-links {

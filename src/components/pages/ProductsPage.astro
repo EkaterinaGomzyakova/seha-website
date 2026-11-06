@@ -49,10 +49,7 @@ const href = (path: string) =>
         {bindShortWords(copy.heroLine, locale)}
       </Fragment>
     </PageHero>
-    <section class="products-catalog" id="catalog" aria-labelledby="catalog-title">
-      <h2 id="catalog-title" class="products-catalog-heading">
-        {copy.catalogTitle}
-      </h2>
+    <section class="products-catalog" id="catalog" aria-label={copy.catalogTitle}>
       <div class="products-list" id="products-list">
         {productCategories.map((category, index) => {
           const definition = productPages[category.slug];
@@ -71,7 +68,7 @@ const href = (path: string) =>
               </span>
               <div class="product-category-title">
                 <span>{bindShortWords(definition.listLabel[locale], locale)}</span>
-                <h3 class="type-h3">{bindShortWords(category.title[locale], locale)}</h3>
+                <h2 class="type-h3">{bindShortWords(category.title[locale], locale)}</h2>
               </div>
               <p class="type-p">{bindShortWords(category.description[locale], locale)}</p>
               <ArrowCircle class="product-category-arrow" />

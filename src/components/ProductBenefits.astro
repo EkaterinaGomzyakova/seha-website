@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../data/translations';
 import { productBenefits } from '../data/product-benefits';
+import TablerIcon from './ui/TablerIcon.astro';
 
 interface Props {
   productId: string;
@@ -18,22 +19,7 @@ const items = productBenefits[productId] ?? [];
     <ul style={`--benefit-columns: ${Math.min(items.length, 3)}`}>
       {items.map((item) => (
         <li>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="m5 12 4 4L19 6"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <TablerIcon name="check" />
           <div>
             <h3 class="type-h3">{item.title[locale]}</h3>
             <p class="type-p">{item.description[locale]}</p>

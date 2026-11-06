@@ -2,10 +2,11 @@
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import Logo from './Logo.astro';
 import Button from './ui/Button.astro';
+import TablerIcon from './ui/TablerIcon.astro';
 import { getSiteTranslations, type Locale } from '../data/translations';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
-import { localizedPath, unlocalizedPath, withBase } from '../lib/paths';
+import { localizedPath, unlocalizedPath } from '../lib/paths';
 interface Props {
   locale: Locale;
 }
@@ -53,15 +54,8 @@ const languageTarget = localizedPath(
       data-open-label={copy.menu}
       data-close-label={ui.closeMenu}
     >
-      <img
-        class="menu-icon"
-        data-menu-icon
-        src={withBase('/assets/images/common/menu-icon-figma.svg')}
-        data-open-src={withBase('/assets/images/common/mobile-menu-xmark.svg')}
-        data-closed-src={withBase('/assets/images/common/menu-icon-figma.svg')}
-        alt=""
-        aria-hidden="true"
-      />
+      <TablerIcon name="menu-2" size={32} class="menu-icon--open" />
+      <TablerIcon name="x" size={32} class="menu-icon--close" />
     </button>
   </div>
   <seha-mobile-menu trigger="menu-toggle">
@@ -74,7 +68,7 @@ const languageTarget = localizedPath(
       hidden
     >
       <button class="mobile-nav-close" type="button" aria-label={ui.closeMenu}>
-        <img src={withBase('/assets/images/common/mobile-menu-xmark.svg')} alt="" />
+        <TablerIcon name="x" size={32} />
       </button>
       <nav class="mobile-nav-links" aria-label={ui.mainNavigation}>
         {links.map((link) => (

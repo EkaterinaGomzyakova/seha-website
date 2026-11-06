@@ -1,0 +1,18 @@
+---
+import { withBase } from '../../lib/paths';
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 24, class: className } = Astro.props;
+const source = withBase(`/assets/icons/tabler/${name}.svg`);
+---
+
+<span
+  class:list={['tabler-icon', className]}
+  style={{ '--tabler-size': `${size}px`, '--tabler-source': `url("${source}")` }}
+  aria-hidden="true"
+></span>

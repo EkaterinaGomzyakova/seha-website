@@ -10,6 +10,7 @@ import ProductPackaging from './ProductPackaging.astro';
 import Input from './ui/Input.astro';
 import Checkbox from './ui/Checkbox.astro';
 import Button from './ui/Button.astro';
+import TablerIcon from './ui/TablerIcon.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
 interface Props {
   locale: Locale;
@@ -38,7 +39,7 @@ const inquiryCopy = productInquiryCopy[locale];
         data-close-inquiry
         aria-label={copy.close}
       >
-        ×
+        <TablerIcon name="x" size={32} />
       </button>
     </div>
     <p class="type-p" id="product-inquiry-next-step">
@@ -128,7 +129,7 @@ const inquiryCopy = productInquiryCopy[locale];
         </label>
       </div>
       <div class="product-inquiry__actions">
-        <Checkbox name="consent" required>
+        <Checkbox name="consent" required insetCheck>
           <span class="consent__text">
             {copy.consentStart} <a href={localizedPath('/privacy/', locale)}>{copy.consentLink}</a>{' '}
             {copy.consentEnd}
@@ -250,14 +251,16 @@ const inquiryCopy = productInquiryCopy[locale];
     gap: 16px;
   }
   .product-inquiry__close {
+    display: grid;
+    place-items: center;
     flex-shrink: 0;
     width: 44px;
     height: 44px;
+    padding: 0;
     border: 0;
     border-radius: 12px;
     background: transparent;
     color: inherit;
-    font-size: 32px;
     cursor: pointer;
   }
   .product-inquiry :global(.form-field) {
@@ -326,16 +329,7 @@ const inquiryCopy = productInquiryCopy[locale];
   }
   .product-inquiry :global(.consent__input:checked + .consent__checkbox) {
     background: var(--color-green-brand);
-  }
-  .product-inquiry :global(.consent__input:checked + .consent__checkbox::after) {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 12px;
-    margin: 3px 8px;
-    border: solid var(--color-white);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    color: var(--color-white);
   }
   .product-inquiry__trap {
     position: absolute;

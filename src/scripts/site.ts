@@ -7,29 +7,43 @@ initLanguageSwitcher();
 initContactForm();
 
 const industryTrack = document.querySelector<HTMLElement>('.industry-track');
+const industryRail = industryTrack?.querySelector<HTMLElement>('.industry-rail');
 const previous = document.querySelector<HTMLButtonElement>('[data-industry-prev]');
 const next = document.querySelector<HTMLButtonElement>('[data-industry-next]');
-if (industryTrack && previous && next) {
+if (industryTrack && industryRail && previous && next) {
   const cards = [...industryTrack.querySelectorAll<HTMLElement>('.industry-card')];
   let first = 0;
   let visible = 1;
-  let swipe: { x: number; y: number } | undefined;
+  let stride = 0;
+  let width = -1;
+  let drag: { pointer: number; x: number; y: number; offset: number } | undefined;
 
-  const show = (index: number) => {
-    const last = Math.max(0, cards.length - visible);
-    first = Math.max(0, Math.min(index, last));
+  const last = () => Math.max(0, cards.length - visible);
+  const move = (offset: number) => {
+    industryTrack.style.setProperty('--industry-offset', `${offset}px`);
+  };
+  const show = (index: number, animate = true) => {
+    industryTrack.toggleAttribute('data-industry-slide', animate);
+    first = Math.max(0, Math.min(index, last()));
+    move(-first * stride);
     cards.forEach((card, position) => {
-      card.hidden = position < first || position >= first + visible;
+      card.inert = position < first || position >= first + visible;
     });
     previous.disabled = first === 0;
-    next.disabled = first === last;
+    next.disabled = first === last();
   };
   const resize = () => {
-    const gap = parseFloat(getComputedStyle(industryTrack).columnGap);
-    visible = Math.max(1, Math.min(3, Math.floor((industryTrack.clientWidth + gap) / (250 + gap))));
+    const trackWidth = industryTrack.getBoundingClientRect().width;
+    if (trackWidth === width) return;
+    width = trackWidth;
+    const gap = parseFloat(getComputedStyle(industryRail).columnGap);
+    visible = Math.max(1, Math.min(3, Math.floor((width + gap) / (250 + gap))));
+    stride = (width + gap) / visible;
     industryTrack.style.setProperty('--industry-columns', String(visible));
     industryTrack.dataset.carouselReady = '';
-    show(first);
+    drag = undefined;
+    industryTrack.removeAttribute('data-industry-dragging');
+    show(first, false);
   };
   previous.addEventListener('click', () => show(first - 1));
   next.addEventListener('click', () => show(first + 1));
@@ -39,19 +53,36 @@ if (industryTrack && previous && next) {
     show(first + (event.key === 'ArrowLeft' ? -1 : 1));
   });
   industryTrack.addEventListener('pointerdown', (event) => {
-    if (event.pointerType === 'touch' && event.isPrimary)
-      swipe = { x: event.clientX, y: event.clientY };
+    if (!event.isPrimary || event.button !== 0 || last() === 0) return;
+    if (event.pointerType === 'mouse') event.preventDefault();
+    const offset = new DOMMatrixReadOnly(getComputedStyle(industryRail).transform).m41;
+    drag = { pointer: event.pointerId, x: event.clientX, y: event.clientY, offset };
+    industryTrack.setPointerCapture(event.pointerId);
   });
-  industryTrack.addEventListener('pointercancel', () => {
-    swipe = undefined;
+  industryTrack.addEventListener('pointermove', (event) => {
+    if (!drag || event.pointerId !== drag.pointer) return;
+    const dx = event.clientX - drag.x;
+    const dy = event.clientY - drag.y;
+    if (!industryTrack.hasAttribute('data-industry-dragging')) {
+      if (Math.abs(dx) < 8 || Math.abs(dx) <= Math.abs(dy)) return;
+      industryTrack.setAttribute('data-industry-dragging', '');
+      industryTrack.removeAttribute('data-industry-slide');
+    }
+    move(Math.max(-last() * stride, Math.min(0, drag.offset + dx)));
   });
-  industryTrack.addEventListener('pointerup', (event) => {
-    if (!swipe || event.pointerType !== 'touch' || !event.isPrimary) return;
-    const dx = event.clientX - swipe.x;
-    const dy = event.clientY - swipe.y;
-    swipe = undefined;
-    if (Math.abs(dx) >= 45 && Math.abs(dx) > Math.abs(dy)) show(first + (dx < 0 ? 1 : -1));
-  });
+  const endDrag = (event: PointerEvent) => {
+    if (!drag || event.pointerId !== drag.pointer) return;
+    const dx = event.clientX - drag.x;
+    drag = undefined;
+    const moved = industryTrack.hasAttribute('data-industry-dragging');
+    industryTrack.removeAttribute('data-industry-dragging');
+    if (!moved) return;
+    const advance = event.type === 'pointerup' && Math.abs(dx) >= Math.min(65, stride * 0.2);
+    show(first + (advance ? -Math.sign(dx) : 0));
+  };
+  industryTrack.addEventListener('pointerup', endDrag);
+  industryTrack.addEventListener('pointercancel', endDrag);
+  industryTrack.addEventListener('lostpointercapture', endDrag);
   new ResizeObserver(resize).observe(industryTrack);
   resize();
 }

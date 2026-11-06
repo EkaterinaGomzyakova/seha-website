@@ -54,31 +54,59 @@ test.describe('published routes', () => {
   }
 });
 
-test('industry carousel advances by one whole card', async ({ page, isMobile }) => {
+test('industry carousel advances one card with buttons, keys and dragging', async ({
+  page,
+  isMobile
+}) => {
   await page.setViewportSize(
     isMobile ? { width: 390, height: 844 } : { width: 1920, height: 1080 }
   );
   await page.goto(url('/ru/'));
+  await page.locator('.cookie-close').click();
   const track = page.locator('#industry-track');
-  const cards = track.locator('.industry-card:visible');
+  const cards = track.locator('.industry-card:not([inert])');
   const indices = cards.locator('.industry-index');
   const count = isMobile ? 1 : 3;
   await expect(cards).toHaveCount(count);
-  await expect(indices.first()).toHaveText('001');
+  await expect(indices.first()).toHaveText('1');
   await page.locator('[data-industry-next]').click();
-  await expect(indices.first()).toHaveText('002');
+  await expect(indices.first()).toHaveText('2');
   await expect(cards).toHaveCount(count);
   expect(
     await track.evaluate((element) => {
       const { left, right } = element.getBoundingClientRect();
-      return [...element.querySelectorAll('.industry-card:not([hidden])')].every((card) => {
+      return [...element.querySelectorAll('.industry-card:not([inert])')].every((card) => {
         const bounds = card.getBoundingClientRect();
-        return bounds.left >= left && bounds.right <= right + 1;
+        return bounds.left >= left - 1 && bounds.right <= right + 1;
       });
     })
   ).toBe(true);
   await track.press('ArrowLeft');
-  await expect(indices.first()).toHaveText('001');
+  await expect(indices.first()).toHaveText('1');
+
+  await track.scrollIntoViewIfNeeded();
+  const { x, y, width, height } = await track.boundingBox();
+  const startX = Math.round(x + width / 2);
+  const startY = Math.round(y + height / 2);
+  const endX = startX - 110;
+  if (isMobile) {
+    const session = await page.context().newCDPSession(page);
+    await session.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: [{ x: startX, y: startY }]
+    });
+    await session.send('Input.dispatchTouchEvent', {
+      type: 'touchMove',
+      touchPoints: [{ x: endX, y: startY }]
+    });
+    await session.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  } else {
+    await page.mouse.move(startX, startY);
+    await page.mouse.down();
+    await page.mouse.move(endX, startY, { steps: 6 });
+    await page.mouse.up();
+  }
+  await expect(indices.first()).toHaveText('2');
 });
 
 test('production metadata endpoints are published', async ({ request }) => {

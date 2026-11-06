@@ -1,3 +1,13 @@
+.tabler-icon {
+  display: block;
+  flex-shrink: 0;
+  width: var(--tabler-size);
+  height: var(--tabler-size);
+  background: currentColor;
+  mask: var(--tabler-source) center / contain no-repeat;
+  forced-color-adjust: none;
+}
+
 /* Shared directional affordance; the parent link owns focus and interaction. */
 .arrow-circle {
   display: inline-flex;
@@ -9,9 +19,4 @@
   border: 2px solid var(--color-gray);
   border-radius: 99px;
   transition: background-color 0.2s ease;
-}
-.arrow-circle img {
-  display: block;
-  width: 24px;
-  height: 24px;
 }

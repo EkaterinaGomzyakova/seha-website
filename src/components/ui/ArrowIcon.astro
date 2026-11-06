@@ -1,35 +1,12 @@
 ---
+import TablerIcon from './TablerIcon.astro';
+
 interface Props {
   direction: 'left' | 'right' | 'up-right';
   size?: number;
 }
 
 const { direction, size = 24 } = Astro.props;
-const rotation = { left: 180, right: 0, 'up-right': -45 }[direction];
 ---
 
-<svg
-  class="arrow-icon"
-  width={size}
-  height={size}
-  viewBox="0 0 24 24"
-  fill="none"
-  aria-hidden="true"
-  focusable="false"
->
-  <path
-    d="M3 12H21M12.5 20.5L21 12L12.5 3.5"
-    transform={`rotate(${rotation} 12 12)`}
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-<style>
-  .arrow-icon {
-    display: block;
-    flex-shrink: 0;
-  }
-</style>
+<TablerIcon name={`arrow-${direction}`} {size} class="arrow-icon" />

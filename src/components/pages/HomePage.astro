@@ -2,6 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import ArrowIcon from '../ui/ArrowIcon.astro';
+import TablerIcon from '../ui/TablerIcon.astro';
 import Link from '../ui/Link.astro';
 import Tag from '../ui/Tag.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
@@ -56,43 +57,47 @@ const categories = [
 ];
 const industries = [
   {
-    icon: 'distributor',
+    icon: 'truck-delivery',
     title: copy.homeIndustriesCardTitle,
     description: copy.homeIndustriesText2
   },
-  { icon: 'retailer', title: copy.homeIndustriesCardTitle2, description: copy.homeIndustriesText3 },
   {
-    icon: 'food-manufacturer',
+    icon: 'building-store',
+    title: copy.homeIndustriesCardTitle2,
+    description: copy.homeIndustriesText3
+  },
+  {
+    icon: 'tools-kitchen-2',
     title: copy.homeIndustriesCardTitle3,
     description: copy.homeIndustriesText4
   },
   {
-    icon: 'hydroponics',
+    icon: 'droplets',
     title: copy.homeIndustriesCardTitle4,
     description: copy.homeIndustriesText5
   },
   {
-    icon: 'horticulture',
+    icon: 'seedling',
     title: copy.homeIndustriesCardTitle5,
     description: copy.homeIndustriesText6
   },
   {
-    icon: 'food-brand',
+    icon: 'tags',
     title: copy.homeIndustriesCardTitle6,
     description: copy.homeIndustriesText7
   },
   {
-    icon: 'cosmetics',
+    icon: 'spray',
     title: copy.homeIndustriesCardTitle7,
     description: copy.homeIndustriesText8
   },
   {
-    icon: 'natural-materials',
+    icon: 'layers-intersect',
     title: copy.homeIndustriesCardTitle9,
     description: copy.homeIndustriesText10
   },
   {
-    icon: 'contract-manufacturer',
+    icon: 'building-factory-2',
     title: copy.homeIndustriesCardTitle10,
     description: copy.homeIndustriesText11
   }
@@ -232,22 +237,18 @@ const supply = [
         tabindex="0"
         aria-label={copy.homeIndustriesAriaLabel4}
       >
-        {industries.map((industry, index) => (
-          <article class="industry-card">
-            <span class="industry-index">{String(index + 1).padStart(3, '0')}</span>
-            <div class="industry-icon" aria-hidden="true">
-              <img
-                src={withBase(image('industry-' + industry.icon + '.svg'))}
-                alt=""
-                width="58"
-                height="58"
-                loading="lazy"
-              />
-            </div>
-            <h3 class="type-h3">{industry.title}</h3>
-            <p class="type-p">{text(industry.description)}</p>
-          </article>
-        ))}
+        <div class="industry-rail">
+          {industries.map((industry, index) => (
+            <article class="industry-card">
+              <span class="industry-index">{index + 1}</span>
+              <div class="industry-icon">
+                <TablerIcon name={industry.icon} size={36} />
+              </div>
+              <h3 class="type-h3">{industry.title}</h3>
+              <p class="type-p">{text(industry.description)}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
     <section class="ingredient-match" aria-labelledby="ingredient-title">
