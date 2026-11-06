@@ -108,9 +108,6 @@
   left: 0;
   top: 0;
 }
-.home .product-direction-card:hover .card-go {
-  transform: none;
-}
 .home .card-index {
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -300,6 +297,26 @@
 }
 .ingredient-action:hover {
   background: var(--color-green-light);
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .industry-track[data-carousel-ready] {
+    /* Give the cards room to lift without widening the carousel viewport. */
+    padding-top: 5px;
+    margin-top: -5px;
+  }
+  .industry-arrow,
+  .industry-card {
+    transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .industry-arrow:not(:disabled):hover {
+    transform: translateY(-2px);
+  }
+  .industry-track:not([data-industry-dragging]) .industry-card:not([inert]):hover {
+    transform: translateY(-5px);
+  }
+  .home-main .button.ingredient-action:hover {
+    transform: translateY(-4px);
+  }
 }
 .origin-section {
   display: grid;

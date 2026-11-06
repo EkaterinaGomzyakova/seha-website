@@ -68,7 +68,7 @@ const photoSizes =
       <Fragment slot="description">{copy.aboutHeroText}</Fragment>
     </PageHero>
     <section class="about-intro" aria-labelledby="about-intro-title">
-      <figure class="about-photo">
+      <figure class="about-photo reveal">
         <ResponsiveImage
           src="/assets/images/shared/plantation-palms.webp"
           alt={copy.aboutIntroAlt}
@@ -78,7 +78,7 @@ const photoSizes =
         />
         <figcaption>{copy.aboutIntroCaption}</figcaption>
       </figure>
-      <div class="about-intro-copy">
+      <div class="about-intro-copy reveal">
         <h2 id="about-intro-title" class="about-display-title type-h2">
           {copy.aboutIntroHeading}
           <br />
@@ -88,7 +88,7 @@ const photoSizes =
         <p class="type-p">{copy.aboutIntroText2}</p>
       </div>
     </section>
-    <section class="about-numbers" aria-label={copy.aboutNumbersAriaLabel}>
+    <section class="about-numbers reveal" aria-label={copy.aboutNumbersAriaLabel}>
       {facts.map(([value, text]) => (
         <div>
           <b>{value}</b>
@@ -96,7 +96,11 @@ const photoSizes =
         </div>
       ))}
     </section>
-    <section class="about-approach about-inset" id="approach" aria-labelledby="approach-title">
+    <section
+      class="about-approach about-inset reveal"
+      id="approach"
+      aria-labelledby="approach-title"
+    >
       <h2 id="approach-title" class="type-h2">
         {copy.aboutApproachHeading}
         <br />
@@ -117,7 +121,7 @@ const photoSizes =
         ))}
       </div>
     </section>
-    <section class="about-shift" aria-labelledby="shift-title">
+    <section class="about-shift reveal" aria-labelledby="shift-title">
       <div class="about-shift-copy">
         <HeaderContainer>{copy.aboutShiftLabel}</HeaderContainer>
         <h2 id="shift-title" class="type-h2">
@@ -137,7 +141,7 @@ const photoSizes =
         />
       </figure>
     </section>
-    <section class="about-timeline about-inset" aria-label={copy.aboutTimelineLabel}>
+    <section class="about-timeline about-inset reveal" aria-label={copy.aboutTimelineLabel}>
       <HeaderContainer tone="green">{copy.aboutTimelineLabel}</HeaderContainer>
       <div class="about-timeline-grid">
         {milestones.map(([year, title, text]) => (
@@ -149,7 +153,7 @@ const photoSizes =
         ))}
       </div>
     </section>
-    <section class="about-clients about-inset" aria-labelledby="clients-title">
+    <section class="about-clients about-inset reveal" aria-labelledby="clients-title">
       <div>
         <HeaderContainer tone="green">{copy.aboutClientsLabel}</HeaderContainer>
         <h2 id="clients-title" class="type-h2">
@@ -175,7 +179,7 @@ const photoSizes =
           <span>{copy.certPreviewLabel2}</span>
         </h2>
       </div>
-      <div class="about-cta-copy">
+      <div class="about-cta-copy reveal">
         <p class="type-p">{copy.certPreviewText}</p>
         <Button variant="primary" href="#contacts">
           {copy.certPreviewLink}

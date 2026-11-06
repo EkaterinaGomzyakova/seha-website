@@ -160,7 +160,7 @@ const supply = [
     </section>
     <CompanyBenefits locale={locale} />
     <section class="home-section directions" id="directions" aria-labelledby="directions-title">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <h2 id="directions-title" class="type-h2">
           {copy.directionsHeading}
           <br />
@@ -192,13 +192,13 @@ const supply = [
           </a>
         ))}
       </div>
-      <Link variant="text" class="text-link" href={href('/products/')}>
+      <Link variant="text" class="text-link reveal" href={href('/products/')}>
         {copy.directionsLink}
         <ArrowIcon direction="up-right" size={18} />
       </Link>
     </section>
     <section class="home-industries" aria-labelledby="industries-title">
-      <div class="industries-heading">
+      <div class="industries-heading reveal">
         <div>
           <h2 id="industries-title" class="type-h2">
             {copy.homeIndustriesHeading}
@@ -232,7 +232,7 @@ const supply = [
       </div>
       <div
         id="industry-track"
-        class="industry-track"
+        class="industry-track reveal"
         role="region"
         tabindex="0"
         aria-label={copy.homeIndustriesAriaLabel4}
@@ -251,7 +251,7 @@ const supply = [
         </div>
       </div>
     </section>
-    <section class="ingredient-match" aria-labelledby="ingredient-title">
+    <section class="ingredient-match reveal" aria-labelledby="ingredient-title">
       <div class="ingredient-copy">
         <h2 id="ingredient-title" class="type-h2">
           {copy.ingredientMatchHeading}
@@ -288,7 +288,7 @@ const supply = [
           {copy.originSectionLine}
         </span>
       </div>
-      <div class="origin-copy">
+      <div class="origin-copy reveal">
         <h2 id="origin-title" class="type-h2">
           {copy.originSectionHeading}
           <br />
@@ -308,7 +308,7 @@ const supply = [
     </section>
     <section class="material-banner" aria-labelledby="material-title">
       <BackgroundVideo />
-      <div class="material-banner__copy">
+      <div class="material-banner__copy reveal">
         <span class="material-banner__label">{copy.materialBannerLabel}</span>
         <h2 id="material-title" class="type-h2">
           {text(copy.materialBannerTitle)}
@@ -319,7 +319,7 @@ const supply = [
           <ArrowIcon direction="right" size={20} />
         </Button>
       </div>
-      <dl class="material-banner__stats">
+      <dl class="material-banner__stats reveal">
         <div>
           <dt>{copy.materialBannerExperience}</dt>
           <dd>40+</dd>
@@ -331,7 +331,7 @@ const supply = [
       </dl>
     </section>
     <section class="home-section supply-section" id="supply" aria-labelledby="supply-title">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <h2 id="supply-title" class="type-h2">
           {copy.supplySectionHeading}
           <br />
@@ -345,7 +345,7 @@ const supply = [
       </div>
       <ol class="supply-grid">
         {supply.map((step, index) => (
-          <li>
+          <li class="reveal">
             <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             <h3 class="type-h3">{step.title}</h3>
             <p class="type-p">{text(step.description)}</p>

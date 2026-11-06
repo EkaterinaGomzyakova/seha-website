@@ -113,7 +113,7 @@ const assurance = [
       </Fragment>
       <Fragment slot="description">{text(copy.productionHeroText)}</Fragment>
     </PageHero>
-    <section class="production-branches" aria-labelledby="branches-title">
+    <section class="production-branches reveal" aria-labelledby="branches-title">
       <h2 id="branches-title" class="type-h2">
         {copy.productionBranchesHeading}
         <br />
@@ -170,7 +170,7 @@ const assurance = [
       </div>
       <div class="process-list">
         {steps.map((step, index) => (
-          <article class="process-item">
+          <article class="process-item reveal">
             <span>{String(index + 1).padStart(2, '0')}</span>
             <div>
               <h3 class="type-h3">{step.title}</h3>
@@ -214,7 +214,7 @@ const assurance = [
           loading="lazy"
         />
       </div>
-      <div class="facility-copy">
+      <div class="facility-copy reveal">
         <HeaderContainer>{copy.facilityShowcaseLabel}</HeaderContainer>
         <h2 id="facility-title" class="type-h2">
           {copy.facilityShowcaseHeading}
@@ -247,12 +247,12 @@ const assurance = [
         sizes={sizes}
         loading="lazy"
       />
-      <div class="packing-band__copy">
+      <div class="packing-band__copy reveal">
         <span>{copy.packingBandLabel}</span>
         <p class="type-p">{text(copy.packingBandText)}</p>
       </div>
     </section>
-    <section class="assurance-section" aria-labelledby="assurance-title">
+    <section class="assurance-section reveal" aria-labelledby="assurance-title">
       <div class="production-section-heading">
         <h2 id="assurance-title" class="type-h2">
           {copy.assuranceSectionHeading}
@@ -271,7 +271,7 @@ const assurance = [
         ))}
       </div>
     </section>
-    <section class="russia-section" aria-labelledby="russia-title">
+    <section class="russia-section reveal" aria-labelledby="russia-title">
       <div class="russia-copy">
         <HeaderContainer tone="green">{copy.russiaSectionLabel}</HeaderContainer>
         <h2 id="russia-title" class="type-h2">
@@ -303,7 +303,7 @@ const assurance = [
           <span>{copy.certPreviewLabel2}</span>
         </h2>
       </div>
-      <div class="cert-copy">
+      <div class="cert-copy reveal">
         <p class="type-p">{text(copy.certPreviewText)}</p>
         <Button class="production-quality-action" href={href('/quality/')}>
           {copy.certPreviewLink}

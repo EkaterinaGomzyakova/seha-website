@@ -35,7 +35,7 @@
     opacity 0.8s ease,
     transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-.motion-ready .reveal:not(.visible) {
+.motion-ready .reveal:not(.visible, :focus-within) {
   opacity: 0;
   transform: translateY(25px);
 }
@@ -63,7 +63,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .motion-ready .reveal:not(.visible) {
+  .motion-ready .reveal:not(.visible, :focus-within) {
     opacity: 1;
     transform: none;
   }
