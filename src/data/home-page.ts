@@ -1,10 +1,9 @@
 import type { Locale } from './translations';
 
 const ru = {
-  manufacturingOrigin: 'Вся продукция производится группой компаний SEHA в Индии.',
-  farmTitle: 'От кокосовой плантации до готовой продукции',
+  farmTitle: 'Кокосовые плантации Поллачи',
   farmText:
-    'Наши фермерские хозяйства в Индии — основа производственной цепочки SEHA. Выращивание кокосов, подготовка сырья и переработка связывают сельскохозяйственный опыт нашей группы с производством пищевых продуктов и субстратов.',
+    'В Поллачи и окрестностях выращивают кокосы для продукции СЕХА. Здесь же, на юге Индии, начинается подготовка сырья к переработке.',
   farmAlt: 'Кокосовая плантация и производство SEHA в Индии, вид с дрона',
   title: 'Сеха — кокосовые продукты для вашего бизнеса',
   description:
@@ -100,11 +99,11 @@ const ru = {
   originSectionCardTitle3: 'Подготовка к поставке',
   originSectionText4: 'Согласование характеристик, упаковки и объема партии.',
   materialBannerLabel: 'ПОЛЛАЧИ, ИНДИЯ',
-  materialBannerTitle: 'От кокосовых плантаций до готовой продукции',
+  materialBannerTitle: 'Производство СЕХА в Индии',
   materialBannerText:
-    'На площадке СЕХА в Поллачи кокосовое сырьё перерабатывают в субстраты и материалы для промышленности.',
+    'Пищевые продукты выпускаем на отдельной площадке. Субстраты, волокно и продукты из скорлупы производим в Поллачи.',
   materialBannerLink: 'Как устроено производство',
-  materialBannerExperience: 'лет в кокосовой отрасли',
+  materialBannerExperience: 'лет опыта семейного бизнеса в Индии',
   materialBannerCountries: 'стран поставок',
   supplySectionHeading: 'От вашей задачи',
   supplySectionLabel2: 'к поставке.',
@@ -133,10 +132,9 @@ const en = {
   homeHeroLine: 'products',
   homeHeroEmphasis: 'for your',
   homeHeroLine2: 'business',
-  manufacturingOrigin: 'All products are manufactured by SEHA Group of Companies, India.',
-  farmTitle: 'From coconut farm to finished product',
+  farmTitle: 'Coconut farms in Pollachi',
   farmText:
-    'Our farms in India are the foundation of SEHA’s production chain. Coconut cultivation, raw material preparation and processing connect our group’s agricultural experience with the manufacture of food products and growing substrates.',
+    'Coconuts for SEHA products are grown in and around Pollachi. Raw material preparation begins here in southern India.',
   farmAlt: 'An aerial photograph of the SEHA coconut plantation and manufacturing site in India',
   homeHeroText: 'Coconut products for food manufacturing,',
   homeHeroLine3: 'horticulture and industry.',
@@ -225,11 +223,11 @@ const en = {
   originSectionCardTitle3: 'Preparation for supply',
   originSectionText4: 'Agreement on specifications, packaging and batch volume.',
   materialBannerLabel: 'POLLACHI, INDIA',
-  materialBannerTitle: 'From coconut plantations to finished products',
+  materialBannerTitle: 'SEHA manufacturing in India',
   materialBannerText:
-    'At its Pollachi site, SEHA processes coconuts into growing media and industrial materials.',
+    'We make food products at a dedicated facility. Our Pollachi site produces growing substrates, coir fibre and coconut shell products.',
   materialBannerLink: 'Explore manufacturing',
-  materialBannerExperience: 'years in the coconut industry',
+  materialBannerExperience: 'years of family business experience in India',
   materialBannerCountries: 'countries supplied',
   supplySectionHeading: 'From your task',
   supplySectionLabel2: 'to supply',
