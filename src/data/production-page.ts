@@ -33,43 +33,37 @@ const ru = {
   processSectionLabel: 'Путь продукта',
   processSectionHeading: 'От сырья',
   processSectionLine: 'до партии,',
-  processSectionEmphasis: 'готовой к отправке.',
+  processSectionEmphasis: 'готовой к отправке',
   processSectionText:
     'Здесь собраны ключевые этапы: происхождение сырья, технологическая обработка, контроль параметров, упаковка и подготовка документов.',
   processSectionCardTitle: 'Сырье и производственная база',
   processSectionText2:
-    'Кокосы закупают у хозяйств Поллачи и соседних районов. При приёмке сырьё проверяют по зрелости, свежести и качеству.',
+    'СЕХА выращивает кокосы на собственных плантациях в Поллачи. Здесь проходит весь цикл — от выращивания и сбора урожая до подготовки сырья и переработки.',
   processSectionAlt: 'Производственная площадка среди кокосовых пальм',
-  processSectionCaption: 'Производственная площадка рядом с сырьевой базой',
   processSectionCardTitle2: 'Подготовка и хранение сырья',
   processSectionText3:
     'Сырьё очищают и сортируют. При производстве субстратов кокосовое волокно промывают, сушат и просеивают до нужной фракции. В лаборатории площадки проверяют влажность, pH и EC и записывают результаты по партиям.',
   processSectionAlt2: 'Склад и оборудование для подготовки кокосового сырья',
-  processSectionCaption2: 'Склад, сортировка и подготовка сырья',
   processSectionCardTitle3: 'Пищевая переработка SEHA',
   processSectionText4:
     'Для пищевой линейки используются отдельные процессы: холодное прессование, фильтрация, удаление влаги и фракционирование масел.',
   processSectionAlt3: 'Пищевой производственный цех со стальными емкостями',
-  processSectionCaption3: 'Технологический цех пищевой линейки',
   processSectionCardTitle4: 'MCT и жидкое кокосовое масло',
   processSectionText5:
     'Фракционирование и молекулярная дистилляция помогают получать масла с заданными характеристиками для пищевых продуктов.',
   processSectionAlt4: 'Линии фильтрации и емкости для пищевого производства',
-  processSectionCaption4: 'Фракционирование, фильтрация и контроль параметров',
   processSectionCardTitle5: 'Фасовка и маркировка',
   processSectionText6:
     'Согласуем фасовку, упаковку под маркой заказчика и маркировку по его требованиям. Готовые партии маркируют для прослеживаемости от приёмки сырья до отгрузки.',
   processSectionAlt5: 'Упаковка пищевых кокосовых продуктов',
-  processSectionCaption5: 'Фасовка, маркировка и подготовка партии',
   processSectionCardTitle6: 'Документы и отгрузка',
   processSectionText7:
     'До отгрузки согласуем спецификацию, упаковку и документы. Маршрут поставки, включая морскую перевозку и импорт в Россию, а также доставку до склада заказчика определяем по согласованным условиям.',
   processSectionAlt6: 'Подготовленная партия кокосовых продуктов к поставке',
-  processSectionCaption6: 'Комплект документов и условия отгрузки',
   facilityShowcaseAlt: 'Пищевой производственный цех со стальными емкостями и линиями фильтрации',
   facilityShowcaseLabel: 'ПИЩЕВОЕ ПРОИЗВОДСТВО SEHA',
   facilityShowcaseHeading: 'Отдельная площадка',
-  facilityShowcaseLabel2: 'для пищевой переработки.',
+  facilityShowcaseLabel2: 'для пищевой переработки',
   facilityShowcaseText:
     'Пищевая линейка SEHA производится на отдельной площадке нашей группы компаний в Поллачи, штат Тамилнад, Индия. Производство включает холодное прессование, удаление влаги, фильтрацию, молекулярную дистилляцию, хранение, фасовку и маркировку готовой продукции.',
   facilityShowcaseTerm: 'Холодное прессование',
@@ -85,7 +79,7 @@ const ru = {
   packingBandText:
     'Формат партии согласуется под продукт, объем, канал продаж, складскую обработку и дальнейшую логистику клиента.',
   assuranceSectionHeading: 'Контроль,',
-  assuranceSectionLabel3: 'который влияет на закупку.',
+  assuranceSectionLabel3: 'который влияет на закупку',
   assuranceSectionText:
     'На производственном этапе контролируются характеристики, от которых зависят хранение, переработка, применение продукта и приемка партии клиентом.',
   assuranceSectionCardTitle: 'Влажность и стабильность',
@@ -108,7 +102,7 @@ const ru = {
   russiaSectionLabel5: 'Коммуникация с производством',
   certPreviewLabel: 'Сертификаты',
   certPreviewHeading: 'Документы —',
-  certPreviewLabel2: 'под конкретную партию.',
+  certPreviewLabel2: 'под конкретную партию',
   certPreviewText:
     'Для пищевой линейки и отдельных категорий доступны сертификаты и документы, применимые к конкретному продукту и партии. Мы заранее уточняем, какие подтверждения нужны вашему производству, складу или отделу закупок.',
   certPreviewLink: 'К разделу качества'
@@ -149,43 +143,37 @@ const en = {
   processSectionLabel: 'The product journey',
   processSectionHeading: 'From raw material',
   processSectionLine: 'to a batch',
-  processSectionEmphasis: 'ready for shipment.',
+  processSectionEmphasis: 'ready for shipment',
   processSectionText:
     'These are the key stages: raw material origin, processing, parameter control, packaging and document preparation.',
   processSectionCardTitle: 'Raw materials and manufacturing base',
   processSectionText2:
-    'Coconuts come from farms in Pollachi and nearby areas. Incoming batches are checked for maturity, freshness and quality.',
+    'SEHA grows coconuts on its own plantations in Pollachi. The full cycle takes place here, from growing and harvesting to raw material preparation and processing.',
   processSectionAlt: 'Manufacturing facility among coconut palms',
-  processSectionCaption: 'Manufacturing facility close to the raw material source',
   processSectionCardTitle2: 'Raw material preparation and storage',
   processSectionText3:
     'Raw materials are cleaned and sorted. For substrates, the coir is washed, dried and sieved to the specified particle size. The on-site laboratory checks moisture, pH and EC and records the results by batch.',
   processSectionAlt2: 'Warehouse and equipment for coconut raw material preparation',
-  processSectionCaption2: 'Storage, sorting and raw material preparation',
   processSectionCardTitle3: 'SEHA food processing',
   processSectionText4:
     'Separate processes are used for the food range: cold pressing, filtration, moisture removal and oil fractionation.',
   processSectionAlt3: 'Food production workshop with steel tanks',
-  processSectionCaption3: 'Processing workshop for the food range',
   processSectionCardTitle4: 'MCT and liquid coconut oil',
   processSectionText5:
     'Fractionation and molecular distillation help produce oils with specified properties for food products.',
   processSectionAlt4: 'Filtration lines and tanks for food manufacturing',
-  processSectionCaption4: 'Fractionation, filtration and parameter control',
   processSectionCardTitle5: 'Packing and labelling',
   processSectionText6:
     'We agree on pack sizes, private-label packaging and labelling to the customer’s requirements. Batch identification enables traceability from raw material intake to dispatch.',
   processSectionAlt5: 'Packing coconut food products',
-  processSectionCaption5: 'Packing, labelling and batch preparation',
   processSectionCardTitle6: 'Documents and shipment',
   processSectionText7:
     'Specifications, packaging and documents are agreed before shipment. The shipping route, including sea freight and import into Russia, and delivery to the customer’s warehouse are arranged under the agreed supply terms.',
   processSectionAlt6: 'A prepared batch of coconut products ready for supply',
-  processSectionCaption6: 'Document package and shipment terms',
   facilityShowcaseAlt: 'Food production workshop with steel tanks and filtration lines',
   facilityShowcaseLabel: 'SEHA FOOD PRODUCTION',
   facilityShowcaseHeading: 'A dedicated facility',
-  facilityShowcaseLabel2: 'for food processing.',
+  facilityShowcaseLabel2: 'for food processing',
   facilityShowcaseText:
     'The SEHA food range is manufactured at our group’s dedicated facility in Pollachi, Tamil Nadu, India. Manufacturing includes cold pressing, moisture removal, filtration, molecular distillation, storage, packing and labelling of finished products.',
   facilityShowcaseTerm: 'Cold pressing',
@@ -224,7 +212,7 @@ const en = {
   russiaSectionLabel5: 'Communication with manufacturing',
   certPreviewLabel: 'Certificates',
   certPreviewHeading: 'Documents',
-  certPreviewLabel2: 'for the specific batch.',
+  certPreviewLabel2: 'for the specific batch',
   certPreviewText:
     'Certificates and documents applicable to the specific product and batch are available for the food range and individual categories. We clarify in advance which confirmations your production facility, warehouse or purchasing department needs.',
   certPreviewLink: 'Go to quality'

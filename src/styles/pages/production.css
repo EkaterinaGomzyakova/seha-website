@@ -31,7 +31,7 @@
 }
 .production-main h2 > span,
 .russia-copy h2 em {
-  color: var(--color-dark-gray);
+  color: inherit;
 }
 .production-main > .production-branches {
   width: min(1432px, var(--grid-content-width));
@@ -48,7 +48,7 @@
   min-width: 0;
   min-height: 420px;
   padding: 34px;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   background: #e7eadb;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@
 .process-sticky h2 em {
   display: block;
   max-width: 400px;
-  color: var(--color-dark-gray);
+  color: inherit;
 }
 .process-list {
   min-width: 0;
@@ -158,82 +158,13 @@
   overflow: hidden;
   min-width: 0;
   min-height: 260px;
-  border-radius: 8px;
+  border-radius: var(--radius-media);
   background: #dfe5d4;
-}
-.process-media img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  max-width: none;
-  inset: 0;
-}
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .process-media img {
-    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .process-item:hover .process-media img {
-    transform: scale(1.035);
-  }
-}
-.process-media .process-media__photo {
-  width: 136.22%;
-  height: 111.28%;
-  left: -18.11%;
-  top: -5.64%;
-}
-.process-media--2 .process-media__photo {
-  width: 136.97%;
-  height: 111.89%;
-  left: -18.49%;
-  top: -5.95%;
-}
-.process-media--3 .process-media__photo {
-  width: 143.44%;
-  height: 117.18%;
-  left: -21.72%;
-  top: -8.59%;
-}
-.process-media--4 .process-media__photo {
-  width: 151.18%;
-  height: 123.5%;
-  left: -25.59%;
-  top: -11.75%;
-}
-.process-media--5 .process-media__photo {
-  width: 140.4%;
-  height: 114.69%;
-  left: -20.2%;
-  top: -7.35%;
-}
-.process-media--6 .process-media__photo {
-  width: 142.1%;
-  height: 116.08%;
-  left: -21.05%;
-  top: -8.04%;
-}
-.process-media::after {
-  content: '';
-  position: absolute;
-  inset: 55% 0 0;
-  background: linear-gradient(transparent, rgba(0, 38, 26, 0.9));
-}
-.process-media figcaption {
-  position: absolute;
-  z-index: 1;
-  left: 16px;
-  right: 16px;
-  bottom: 14px;
-  color: var(--color-background-light);
-  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
-  letter-spacing: var(--type-button-letter-spacing);
-  text-transform: uppercase;
 }
 .facility-showcase {
   display: grid;
   grid-template-columns: minmax(0, 865.19fr) minmax(0, 782.81fr);
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   overflow: hidden;
   background: var(--color-green-brand);
   color: var(--color-background-light);
@@ -274,7 +205,7 @@
   color: var(--color-yellow-brand);
 }
 .facility-copy h2 > span {
-  color: var(--color-background-light);
+  color: inherit;
 }
 .facility-copy > p {
   color: var(--color-text-on-green);
@@ -302,7 +233,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   display: flex;
   align-items: flex-end;
 }
@@ -364,7 +295,7 @@
 }
 .assurance-grid article {
   padding: 24px;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   background: #eef1e4;
   min-height: 237.39px;
 }
@@ -411,7 +342,7 @@
   align-items: flex-end;
   padding: 18px;
   border: 1px solid #c6d1b9;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
 }
 .cert-preview {
@@ -419,7 +350,7 @@
   grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
   gap: 70px;
   align-items: center;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   background: var(--color-yellow-brand);
   color: var(--color-green-brand);
 }
@@ -434,7 +365,7 @@
   margin-top: 34px;
 }
 .cert-preview h2 > span {
-  color: var(--color-dark-gray);
+  color: inherit;
 }
 .cert-copy p {
   color: var(--color-green-brand);
@@ -653,12 +584,6 @@
   .process-media {
     height: 240px;
     min-height: 0;
-  }
-  .process-media figcaption {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    font-size: var(--type-button-size);
   }
   .facility-image {
     height: 300px;

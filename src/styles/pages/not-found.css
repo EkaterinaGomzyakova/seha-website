@@ -2,7 +2,7 @@
 .error-page {
   min-height: calc(100svh - 110px);
   margin: 0 16px 16px;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   overflow: hidden;
   background: var(--color-yellow-brand);
   color: var(--color-green-brand);
@@ -144,7 +144,7 @@
 }
 @media (max-width: 520px) {
   .error-page {
-    border-radius: 18px;
+    border-radius: var(--radius-banner);
     padding: 32px 22px;
   }
   .error-copy {

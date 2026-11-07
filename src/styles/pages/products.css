@@ -31,7 +31,7 @@
 .product-overview .product-category-image {
   width: 94px;
   height: 94px;
-  border-radius: 24px;
+  border-radius: var(--radius-thumbnail);
 }
 .product-category-number {
   font: 900 var(--type-h3-size)/var(--type-h3-line-height) var(--font-sans);
@@ -111,7 +111,7 @@
   .product-overview .product-category-image {
     width: 64px;
     height: 64px;
-    border-radius: 18px;
+    border-radius: var(--radius-thumbnail);
   }
   .product-category-number {
     grid-column: 2;

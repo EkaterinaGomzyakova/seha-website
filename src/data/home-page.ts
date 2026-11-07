@@ -3,7 +3,7 @@ import type { Locale } from './translations';
 const ru = {
   farmTitle: 'Кокосовые плантации Поллачи',
   farmText:
-    'В Поллачи и окрестностях выращивают кокосы для продукции СЕХА. Здесь же, на юге Индии, начинается подготовка сырья к переработке.',
+    'СЕХА выращивает кокосы на собственных плантациях в Поллачи. Здесь, на юге Индии, проходит весь цикл — от выращивания и сбора урожая до переработки.',
   farmAlt: 'Кокосовая плантация и производство SEHA в Индии, вид с дрона',
   title: 'Сеха — кокосовые продукты для вашего бизнеса',
   description:
@@ -21,12 +21,12 @@ const ru = {
   directionsText:
     'Подберем категорию, фракцию, упаковку и объем партии под вашу производственную или коммерческую задачу.',
   directionsAriaLabel: 'Кокосовая стружка',
-  directionsLabel4: '01 / ДЛЯ ПИТАНИЯ',
+  directionsLabel4: '02 / ДЛЯ ПИТАНИЯ',
   directionsCardTitle: 'Пищевые продукты Veymur',
   directionsText2: 'Кокосовые ингредиенты для производств,',
   directionsLine: 'HoReCa и дистрибуции.',
   directionsAriaLabel2: 'Кокосовый субстрат',
-  directionsLabel5: '02 / ДЛЯ ВЫРАЩИВАНИЯ',
+  directionsLabel5: '01 / ДЛЯ ВЫРАЩИВАНИЯ',
   directionsCardTitle2: 'Кокосовые субстраты',
   directionsText3: 'Торф, брикеты, диски и чипсы',
   directionsLine2: 'для профессионального растениеводства.',
@@ -106,7 +106,7 @@ const ru = {
   materialBannerExperience: 'лет опыта семейного бизнеса в Индии',
   materialBannerCountries: 'стран поставок',
   supplySectionHeading: 'От вашей задачи',
-  supplySectionLabel2: 'к поставке.',
+  supplySectionLabel2: 'к поставке',
   supplySectionText: 'Стоимость зависит от продукта, объема,',
   supplySectionLine: 'упаковки и города доставки.',
   supplySectionLine2: 'Подготовим предложение под ваш запрос.',
@@ -134,7 +134,7 @@ const en = {
   homeHeroLine2: 'business',
   farmTitle: 'Coconut farms in Pollachi',
   farmText:
-    'Coconuts for SEHA products are grown in and around Pollachi. Raw material preparation begins here in southern India.',
+    'SEHA grows coconuts on its own plantations in Pollachi. The full cycle takes place here in southern India, from growing and harvesting to processing.',
   farmAlt: 'An aerial photograph of the SEHA coconut plantation and manufacturing site in India',
   homeHeroText: 'Coconut products for food manufacturing,',
   homeHeroLine3: 'horticulture and industry.',
@@ -144,12 +144,12 @@ const en = {
   directionsText:
     'We will select the category, particle size, packaging and batch volume to suit your manufacturing or commercial needs.',
   directionsAriaLabel: 'Desiccated coconut',
-  directionsLabel4: '01 / FOR FOOD',
+  directionsLabel4: '02 / FOR FOOD',
   directionsCardTitle: 'Veymur food products',
   directionsText2: 'Coconut ingredients for manufacturers,',
   directionsLine: 'HoReCa and distribution.',
   directionsAriaLabel2: 'Coconut substrate',
-  directionsLabel5: '02 / FOR GROWING',
+  directionsLabel5: '01 / FOR GROWING',
   directionsCardTitle2: 'Coconut substrates',
   directionsText3: 'Coir pith, briquettes, discs and chips',
   directionsLine2: 'for professional horticulture.',

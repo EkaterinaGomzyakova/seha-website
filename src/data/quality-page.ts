@@ -28,7 +28,7 @@ const ru = {
   qualityProofAlt: 'Производственный цех и склад упакованной продукции SEHA',
   qualityProofLabel: 'Контроль партии',
   qualityProofHeading: 'Что проверяется',
-  qualityProofLabel2: 'до отгрузки.',
+  qualityProofLabel2: 'до отгрузки',
   qualityProofCardTitle: 'Влажность',
   qualityProofText:
     'Для хранения, субстратов и экспортной упаковки важны контролируемые показатели влажности.',
@@ -59,16 +59,10 @@ const ru = {
     'Номер партии и прослеживаемость от производства до отгрузки помогают согласовать контроль на стороне клиента.',
   siteRoleLabel: 'Роль Сеха',
   siteRoleHeading: 'Документы\nпроизводства,',
-  siteRoleEmphasis: 'коммуникация в России.',
+  siteRoleEmphasis: 'коммуникация в России',
   siteRoleText:
     'Сеха помогает российскому клиенту заранее определить, какие параметры и документы нужны для закупки: тип продукта, объем, упаковка, город доставки, требования к сертификации и формату партии.',
-  siteRoleLink: 'Запросить комплект под поставку',
-  certPreviewLabel: 'Следующий шаг',
-  certPreviewHeading: 'Уточните требования,',
-  certPreviewLabel2: 'мы подготовим предложение',
-  certPreviewText:
-    'Укажите продукт, объём и требования к документам. Для ряда продуктов можно запросить образцы перед оптовым заказом — доступность и условия отправки согласуем отдельно. Подготовим спецификацию и коммерческое предложение.',
-  certPreviewLink: 'Получить предложение'
+  siteRoleLink: 'Запросить комплект под поставку'
 } as const;
 
 export type QualityPageCopy = { readonly [Key in keyof typeof ru]: string };
@@ -101,7 +95,7 @@ const en = {
   qualityProofAlt: 'SEHA production workshop and packaged goods warehouse',
   qualityProofLabel: 'Batch control',
   qualityProofHeading: 'What is checked',
-  qualityProofLabel2: 'before shipment.',
+  qualityProofLabel2: 'before shipment',
   qualityProofCardTitle: 'Moisture',
   qualityProofText:
     'Controlled moisture levels are important for storage, substrates and export packaging.',
@@ -132,16 +126,10 @@ const en = {
     'The batch number and traceability from manufacturing to shipment help agree on quality control at the customer’s end.',
   siteRoleLabel: 'Seha’s role',
   siteRoleHeading: 'Manufacturing\ndocuments,',
-  siteRoleEmphasis: 'communication in Russia.',
+  siteRoleEmphasis: 'communication in Russia',
   siteRoleText:
     'Seha helps Russian customers determine in advance which parameters and documents they need for purchasing: product type, volume, packaging, delivery city, certification requirements and batch format.',
-  siteRoleLink: 'Request documents for your supply',
-  certPreviewLabel: 'Next step',
-  certPreviewHeading: 'Tell us your requirements,',
-  certPreviewLabel2: 'we will prepare a quotation',
-  certPreviewText:
-    'Specify the product, volume and document requirements. Samples can be requested for selected products before a bulk order; availability and shipping terms are agreed separately. We will prepare a specification and quotation.',
-  certPreviewLink: 'Request a quote'
+  siteRoleLink: 'Request documents for your supply'
 } satisfies QualityPageCopy;
 
 export const qualityPageCopy = { ru, en } satisfies Record<Locale, QualityPageCopy>;

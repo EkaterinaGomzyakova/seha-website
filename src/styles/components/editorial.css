@@ -30,7 +30,7 @@
   font-weight: 600;
 }
 .section-note {
-  font-size: 14px;
+  font-size: var(--type-p-size);
   color: var(--color-dark-gray);
 }
 .section-heading {

@@ -30,7 +30,7 @@
   color: var(--color-dark-gray);
 }
 .quality-main h2 > span {
-  color: var(--color-dark-gray);
+  color: inherit;
 }
 .quality-main > .quality-inset {
   width: min(1432px, var(--grid-content-width));
@@ -63,7 +63,7 @@
 }
 .standard-card {
   min-height: 450px;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   background: var(--quality-panel);
   padding: 28px;
   display: flex;
@@ -106,7 +106,7 @@
 .quality-proof {
   display: grid;
   grid-template-columns: minmax(0, 744fr) minmax(0, 904fr);
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   overflow: hidden;
   background: var(--quality-panel);
 }
@@ -216,54 +216,12 @@
   color: var(--color-green-brand);
   background: transparent;
 }
-.quality-cta {
-  display: grid;
-  grid-template-columns: minmax(0, 801fr) minmax(0, 573fr);
-  gap: 74px;
-  padding: 81.54px 100px 72.46px;
-  min-height: 335px;
-  border-radius: 22px;
-  background: var(--color-yellow-brand);
-  align-items: start;
-}
-.quality-cta h2 {
-  margin-top: 44px;
-}
-.quality-cta-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 29.54px;
-}
-.quality-cta-copy p {
-  min-height: 95.46px;
-  padding-left: 13.17px;
-  padding-top: 9.6px;
-  color: var(--color-green-brand);
-}
-.quality-cta-copy .button {
-  max-width: 425px;
-  background: var(--color-green-brand);
-}
 @media (max-width: 1280px) {
   .quality-proof {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .quality-proof-list {
     margin-top: auto;
-  }
-  .quality-cta {
-    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  }
-  .quality-cta h2 {
-    margin-top: 34px;
-  }
-  .quality-cta-copy {
-    gap: 28px;
-  }
-  .quality-cta-copy p {
-    min-height: 0;
-    padding-left: 0;
-    padding-top: 0;
   }
   .quality-role {
     padding-block: 20px;
@@ -312,10 +270,6 @@
   .quality-role {
     gap: 32px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .quality-cta {
-    padding: 56px 40px;
-    gap: 32px;
   }
 }
 @media (max-width: 800px) {
@@ -381,10 +335,6 @@
   .quality-role h2 {
     max-width: 600px;
   }
-  .quality-cta {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 40px 32px;
-  }
 }
 @media (max-width: 440px) {
   .quality-main {
@@ -422,13 +372,5 @@
   }
   .quality-role {
     padding-block: 0;
-  }
-  .quality-role h2,
-  .quality-cta h2 {
-    margin-top: 24px;
-  }
-  .quality-cta {
-    padding: 32px 24px;
-    gap: 24px;
   }
 }

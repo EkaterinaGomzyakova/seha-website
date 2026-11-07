@@ -19,6 +19,13 @@
   --color-white-overlay: color-mix(in srgb, var(--color-white) 50%, transparent);
   --color-error: #ffd3b6;
   --color-text-on-green: #c7d4c8;
+  --radius-banner: 40px;
+  --radius-media: 32px;
+  --radius-card: 16px;
+  --radius-panel: 24px;
+  --radius-thumbnail: 12px;
+  --radius-field: 8px;
+  --radius-label: 4px;
   --font-sans: Inter, Arial, sans-serif;
   --focus-outline: 3px solid var(--color-green-brand);
   --grid-columns: 12;

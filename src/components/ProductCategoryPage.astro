@@ -31,6 +31,16 @@ const { locale, category } = Astro.props;
 const page = getProductCategoryPage(category, locale);
 const t = (value: { ru: string; en: string }) => value[locale];
 const title = `${t(page.title)} — Seha`;
+const foodLabels: Record<string, string> = {
+  'veymur-mct-oil': 'Neutral Taste',
+  'veymur-virgin-coconut-oil': 'Cold Pressed',
+  'veymur-coconut-sugar': 'Caramel Flavour',
+  'veymur-desiccated-coconut': 'Baking',
+  'veymur-coconut-milk': 'Creamy Texture',
+  'young-coconut': 'Fresh Drinks',
+  'mature-coconut': 'Food Processing',
+  'rbd-coconut-oil': 'Neutral Taste'
+};
 const images = imageManifest.images as Record<string, ImageEntry>;
 const entry = (source: string) => images[source];
 const srcset = (source: string, format: string) =>
@@ -126,7 +136,16 @@ const sizes =
                 />
               </picture>
             </figure>
-            <span>{bindShortWords(t(item.label), locale)}</span>
+            <span>
+              {bindShortWords(
+                category === 'veymur'
+                  ? locale === 'ru'
+                    ? item.name.en
+                    : foodLabels[item.id]
+                  : t(item.label),
+                locale
+              )}
+            </span>
             <h3 class="type-h3">
               <a
                 class="product-item__link"

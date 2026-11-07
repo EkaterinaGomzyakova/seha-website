@@ -30,7 +30,7 @@
   color: var(--color-dark-gray);
 }
 .about-main h2 > span {
-  color: var(--color-dark-gray);
+  color: inherit;
 }
 .about-main > .about-inset {
   width: min(1432px, var(--grid-content-width));
@@ -45,7 +45,7 @@
 .about-photo {
   position: relative;
   min-height: 640px;
-  border-radius: 22px;
+  border-radius: var(--radius-media);
   overflow: hidden;
   background: var(--about-panel);
 }
@@ -79,7 +79,7 @@
   margin-top: 20px;
 }
 .about-numbers {
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   background: var(--color-yellow-brand);
   padding: 48px 100px;
   display: grid;
@@ -112,7 +112,7 @@
 }
 .about-principle {
   min-height: 360px;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   background: var(--about-panel);
   padding: 28px;
   display: grid;
@@ -145,7 +145,7 @@
 .about-shift {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   overflow: hidden;
   background: var(--color-green-brand);
   color: var(--color-background-light);
@@ -167,7 +167,7 @@
   max-width: 603px;
 }
 .about-shift-copy h2 em {
-  color: var(--color-yellow-brand);
+  color: inherit;
 }
 .about-shift-copy p {
   color: var(--color-text-on-green);
@@ -212,49 +212,13 @@
 .about-timeline-grid h3 {
   margin: 86px 0 36px;
 }
-.about-clients {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 70px;
-  align-items: start;
-  min-height: 271px;
-}
-.about-clients h2 {
-  margin-top: 52.7px;
-  max-width: 610px;
-}
-.about-client-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 46.9px;
-}
-.about-client-list > li {
-  min-width: 0;
-  max-width: 100%;
-}
-.about-client-tag {
-  border: 1px solid #c6d1b9;
-  min-height: 47px;
-  padding: 12px 17px;
-  color: var(--color-dark-gray);
-  font-size: var(--type-p-size);
-  white-space: normal;
-  overflow-wrap: anywhere;
-}
-.about-client-tag:hover {
-  border-color: #c6d1b9;
-  color: var(--color-dark-gray);
-}
 .about-cta {
   display: grid;
   grid-template-columns: minmax(0, 801fr) minmax(0, 573fr);
   gap: 74px;
   padding: 81.54px 100px 72.46px;
   min-height: 335px;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   background: var(--color-yellow-brand);
   align-items: start;
 }
@@ -296,16 +260,6 @@
     min-height: 0;
     padding-left: 0;
     padding-top: 0;
-  }
-  .about-clients {
-    min-height: 0;
-    align-items: center;
-  }
-  .about-clients h2 {
-    margin-top: 34px;
-  }
-  .about-client-list {
-    margin-top: 0;
   }
   .about-main {
     gap: 56px;
@@ -361,12 +315,6 @@
   .about-timeline-grid h3 {
     margin: 56px 0 24px;
   }
-  .about-clients {
-    gap: 40px;
-  }
-  .about-client-tag {
-    font-size: var(--type-p-size);
-  }
   .about-cta {
     padding: 56px 40px;
     gap: 32px;
@@ -410,10 +358,6 @@
     min-height: 0;
     height: 440px;
   }
-  .about-clients {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
-  }
   .about-cta {
     grid-template-columns: minmax(0, 1fr);
     padding: 40px 32px;
@@ -436,7 +380,7 @@
   }
   .about-photo {
     height: 360px;
-    border-radius: 18px;
+    border-radius: var(--radius-media);
   }
   .about-photo figcaption {
     inset: auto 20px 20px;
@@ -484,14 +428,6 @@
   }
   .about-timeline-grid h3 {
     margin: 32px 0 20px;
-  }
-  .about-clients h2,
-  .about-cta h2 {
-    margin-top: 24px;
-  }
-  .about-client-tag {
-    font-size: var(--type-p-size);
-    padding-inline: 14px;
   }
   .about-cta {
     padding: 32px 24px;

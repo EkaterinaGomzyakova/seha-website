@@ -2,7 +2,7 @@
 .product-item figure {
   margin: 0 0 20px;
   aspect-ratio: 1/1;
-  border-radius: 40px;
+  border-radius: var(--radius-media);
   overflow: hidden;
   background: var(--color-background-light, #faf9f0);
 }
@@ -21,17 +21,17 @@
 }
 @media (max-width: 1100px) {
   .product-item figure {
-    border-radius: 32px;
+    border-radius: var(--radius-media);
   }
 }
 @media (max-width: 800px) {
   .product-item figure {
-    border-radius: 32px;
+    border-radius: var(--radius-media);
   }
 }
 @media (max-width: 560px) {
   .product-item figure {
-    border-radius: 32px;
+    border-radius: var(--radius-media);
     margin-bottom: 20px;
   }
 }

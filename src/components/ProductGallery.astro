@@ -77,6 +77,7 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     const alt = main.querySelector<HTMLImageElement>('img')?.alt ?? '';
     const sizes = main.querySelector('source')?.getAttribute('sizes');
     const counter = gallery.querySelector<HTMLElement>('[data-gallery-count]');
+    const strip = gallery.querySelector<HTMLElement>('.product-gallery__thumbnails')!;
     let current = 0;
     const show = (index: number) => {
       const next = (index + thumbnails.length) % thumbnails.length;
@@ -101,11 +102,54 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
         button.setAttribute('aria-pressed', button === thumbnail ? 'true' : 'false')
       );
       current = next;
+      strip.scrollTo({
+        left: thumbnail.offsetLeft - (strip.clientWidth - thumbnail.clientWidth) / 2,
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+      });
       if (counter) counter.textContent = `${current + 1} / ${thumbnails.length}`;
     };
     thumbnails.forEach((thumbnail, index) => {
       thumbnail.addEventListener('click', () => show(index));
     });
+    let drag: { pointer: number; x: number; scroll: number } | undefined;
+    let moved = false;
+    strip.addEventListener('pointerdown', (event) => {
+      if (
+        event.pointerType !== 'mouse' ||
+        event.button !== 0 ||
+        strip.scrollWidth <= strip.clientWidth
+      )
+        return;
+      drag = { pointer: event.pointerId, x: event.clientX, scroll: strip.scrollLeft };
+      moved = false;
+    });
+    strip.addEventListener('pointermove', (event) => {
+      if (!drag || event.pointerId !== drag.pointer) return;
+      const distance = event.clientX - drag.x;
+      if (!moved && Math.abs(distance) < 6) return;
+      moved = true;
+      strip.setPointerCapture(event.pointerId);
+      strip.toggleAttribute('data-dragging', true);
+      strip.scrollLeft = drag.scroll - distance;
+    });
+    const finishDrag = () => {
+      drag = undefined;
+      strip.removeAttribute('data-dragging');
+    };
+    window.addEventListener('pointerup', finishDrag);
+    strip.addEventListener('pointercancel', finishDrag);
+    strip.addEventListener('lostpointercapture', finishDrag);
+    strip.addEventListener(
+      'click',
+      (event) => {
+        if (!moved) return;
+        event.preventDefault();
+        event.stopPropagation();
+        moved = false;
+      },
+      true
+    );
+    strip.addEventListener('dragstart', (event) => event.preventDefault());
     for (const [selector, direction] of [
       ['[data-gallery-previous]', -1],
       ['[data-gallery-next]', 1]
@@ -135,7 +179,7 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     position: relative;
     min-width: 0;
     overflow: hidden;
-    border-radius: 32px;
+    border-radius: var(--radius-media);
   }
   .product-gallery__arrow {
     position: absolute;
@@ -227,9 +271,25 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
   }
 
   .product-gallery__thumbnails {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
+    --thumbnail-gap: 12px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 3 * var(--thumbnail-gap)) / 4);
+    gap: var(--thumbnail-gap);
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+  }
+  .product-gallery__thumbnails::-webkit-scrollbar {
+    display: none;
+  }
+  .product-gallery__thumbnails[data-dragging] {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    user-select: none;
   }
 
   .product-gallery__thumbnail {
@@ -238,9 +298,10 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
     overflow: hidden;
     padding: 0;
     border: 2px solid transparent;
-    border-radius: 14px;
+    border-radius: var(--radius-thumbnail);
     background: transparent;
     cursor: pointer;
+    scroll-snap-align: start;
   }
 
   .product-gallery__thumbnail[aria-pressed='true'] {
@@ -249,7 +310,7 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
 
   .product-gallery__thumbnail:focus-visible {
     outline: 3px solid var(--color-yellow-brand);
-    outline-offset: 3px;
+    outline-offset: -4px;
   }
 
   .product-gallery__thumbnail :global(picture),
@@ -265,7 +326,7 @@ const galleryLabel = locale === 'ru' ? 'Фотографии товара' : 'Pr
 
   @media (max-width: 440px) {
     .product-gallery__thumbnails {
-      gap: 8px;
+      --thumbnail-gap: 8px;
     }
   }
 </style>

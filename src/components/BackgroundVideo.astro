@@ -1,18 +1,34 @@
 ---
 import { withBase } from '../lib/paths';
+interface Props {
+  src?: string;
+  poster?: string;
+  inline?: boolean;
+  label?: string;
+}
+const {
+  src = '/assets/videos/home/seha-farm.mp4',
+  poster = '/assets/videos/home/seha-farm-poster.webp',
+  inline = false,
+  label
+} = Astro.props;
 ---
 
-<div class="background-video" data-background-video>
+<div
+  class:list={['background-video', { 'background-video--inline': inline }]}
+  data-background-video
+>
   <video
     muted
     loop
     playsinline
     preload="none"
-    aria-hidden="true"
+    aria-hidden={label ? undefined : 'true'}
+    aria-label={label}
     width="1280"
     height="720"
-    poster={withBase('/assets/videos/home/seha-farm-poster.webp')}
-    data-src={withBase('/assets/videos/home/seha-farm.mp4')}
+    poster={withBase(poster)}
+    data-src={withBase(src)}
   ></video>
 </div>
 
@@ -53,5 +69,8 @@ import { withBase } from '../lib/paths';
     height: 100%;
     object-fit: cover;
     z-index: -2;
+  }
+  .background-video--inline video {
+    z-index: auto;
   }
 </style>

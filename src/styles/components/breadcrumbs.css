@@ -5,6 +5,7 @@
   min-height: 13.2px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   font-family: var(--font-sans);
@@ -14,6 +15,17 @@
   letter-spacing: var(--type-button-letter-spacing);
   text-transform: uppercase;
   color: var(--color-dark-gray);
+}
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+.breadcrumbs__item > :is(a, span[aria-current]) {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .breadcrumbs a {
   color: inherit;
@@ -28,7 +40,8 @@
 @media (max-width: 800px) {
   .breadcrumbs {
     gap: 6px;
-    overflow: auto;
-    white-space: nowrap;
+  }
+  .breadcrumbs__item {
+    gap: 6px;
   }
 }

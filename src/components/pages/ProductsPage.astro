@@ -54,7 +54,7 @@ const href = (path: string) =>
         {productCategories.map((category, index) => {
           const definition = productPages[category.slug];
           return (
-            <a class="product-category" href={href(`/products/${category.slug}/`)}>
+            <a class="product-category reveal" href={href(`/products/${category.slug}/`)}>
               <div class="category-image-frame product-category-image">
                 <ResponsiveImage
                   src={definition.heroImage}

@@ -143,8 +143,6 @@ export const productGalleryImages: Record<string, string[]> = {
   'coco-shell-charcoal-briquettes': [
     '/assets/images/shell/coco-shell-charcoal-briquettes.png',
     '/assets/images/shell/charcoal-neutral-technical.png',
-    '/assets/images/shell/charcoal-detail-technical.png',
-    '/assets/images/shell/charcoal-production-technical.png',
     '/assets/images/shell/charcoal-briquettes-burning.png',
     '/assets/images/shell/charcoal-briquettes-chimney.png'
   ],

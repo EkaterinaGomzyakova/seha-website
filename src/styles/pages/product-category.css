@@ -6,7 +6,7 @@
 .product-hero {
   width: var(--grid-content-width);
   margin: 0 auto;
-  border-radius: 40px;
+  border-radius: var(--radius-banner);
   background: #f0f0e7;
   padding: 54px 32px 64px;
   text-align: center;
@@ -61,7 +61,7 @@
   align-self: flex-start;
   display: inline-flex;
   border: 1px solid var(--color-gray);
-  border-radius: 4px;
+  border-radius: var(--radius-label);
   color: var(--color-dark-gray);
   font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
   letter-spacing: var(--type-button-letter-spacing);
@@ -90,7 +90,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
 }
 .product-item__link:focus-visible::after {
   outline: 3px solid var(--color-green-brand);
@@ -146,7 +146,7 @@
     gap: 24px;
   }
   .product-item figure {
-    border-radius: 32px;
+    border-radius: var(--radius-media);
   }
   .page-product-category .product-item .button {
     min-height: 48px;

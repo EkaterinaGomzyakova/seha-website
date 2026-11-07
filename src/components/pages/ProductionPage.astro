@@ -1,5 +1,6 @@
 ---
 import PageHero from '../PageHero.astro';
+import BackgroundVideo from '../BackgroundVideo.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
@@ -21,56 +22,42 @@ const text = (value: string) => bindShortWords(value, locale);
 const image = (name: string) => '/assets/images/production/' + name + '.png';
 const sizes =
   '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc(100vw - 192px), calc(100vw - 272px)';
-const stepSizes =
-  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 128px), (max-width: 1280px) calc((100vw - 280px) / 2), 514px';
 const steps = [
   {
     title: copy.processSectionCardTitle,
     description: copy.processSectionText2,
     alt: copy.processSectionAlt,
-    caption: copy.processSectionCaption,
-    base: 'manufacturing-hero',
-    photo: 'process-raw-materials'
+    video: 'raw-materials'
   },
   {
     title: copy.processSectionCardTitle2,
     description: copy.processSectionText3,
     alt: copy.processSectionAlt2,
-    caption: copy.processSectionCaption2,
-    base: 'process-storage-base',
-    photo: 'process-storage'
+    video: 'storage'
   },
   {
     title: copy.processSectionCardTitle3,
     description: copy.processSectionText4,
     alt: copy.processSectionAlt3,
-    caption: copy.processSectionCaption3,
-    base: 'process-food-base',
-    photo: 'process-food'
+    video: 'food'
   },
   {
     title: copy.processSectionCardTitle4,
     description: copy.processSectionText5,
     alt: copy.processSectionAlt4,
-    caption: copy.processSectionCaption4,
-    base: 'process-food-base',
-    photo: 'process-fractionation'
+    video: 'fractionation'
   },
   {
     title: copy.processSectionCardTitle5,
     description: copy.processSectionText6,
     alt: copy.processSectionAlt5,
-    caption: copy.processSectionCaption5,
-    base: 'process-packing-base',
-    photo: 'process-packing'
+    video: 'packing'
   },
   {
     title: copy.processSectionCardTitle6,
     description: copy.processSectionText7,
     alt: copy.processSectionAlt6,
-    caption: copy.processSectionCaption6,
-    base: 'process-packing-base',
-    photo: 'process-shipment'
+    video: 'shipment'
   }
 ];
 const units = [
@@ -175,22 +162,13 @@ const assurance = [
             <div>
               <h3 class="type-h3">{step.title}</h3>
               <p class="type-p">{text(step.description)}</p>
-              <figure class:list={['process-media', 'process-media--' + (index + 1)]}>
-                <ResponsiveImage
-                  src={image(step.base)}
-                  class="process-media__base"
-                  alt=""
-                  sizes={stepSizes}
-                  loading="lazy"
+              <figure class="process-media">
+                <BackgroundVideo
+                  src={`/assets/videos/production/${step.video}.mp4`}
+                  poster={`/assets/videos/production/${step.video}-poster.webp`}
+                  label={step.alt}
+                  inline
                 />
-                <ResponsiveImage
-                  src={image(step.photo)}
-                  class="process-media__photo"
-                  alt={step.alt}
-                  sizes={stepSizes}
-                  loading="lazy"
-                />
-                <figcaption>{step.caption}</figcaption>
               </figure>
             </div>
           </article>

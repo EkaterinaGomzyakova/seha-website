@@ -4,7 +4,7 @@
 }
 .material-photo {
   height: 330px;
-  border-radius: 28px;
+  border-radius: var(--radius-media);
   position: relative;
   overflow: hidden;
 }

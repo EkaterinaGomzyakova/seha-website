@@ -7,7 +7,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 24px;
+  border-radius: var(--radius-media);
 }
 
 .home-main {
@@ -24,10 +24,10 @@
 }
 .home-main em {
   font-style: normal;
-  color: var(--color-yellow-brand);
+  color: inherit;
 }
 .home-main h2 span {
-  color: var(--color-dark-gray);
+  color: inherit;
 }
 .home-main > .home-section {
   width: min(1600px, var(--grid-content-width));
@@ -53,7 +53,7 @@
   min-height: 800px;
   overflow: hidden;
   padding: 99px 3.3vw 90px;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   background: var(--color-green-brand);
   color: var(--color-background-light);
 }
@@ -238,7 +238,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 425px);
   gap: 40px;
   align-items: end;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   background: var(--color-yellow-brand);
   color: var(--color-green-brand);
 }
@@ -321,7 +321,7 @@
 .origin-section {
   display: grid;
   grid-template-columns: minmax(0, 744fr) minmax(0, 904fr);
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   overflow: hidden;
   background: #e7eadb;
 }
@@ -386,7 +386,7 @@
   isolation: isolate;
   min-height: 450px;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: var(--radius-banner);
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
@@ -649,7 +649,7 @@
   .home-hero {
     padding: 40px 24px;
     min-height: 520px;
-    border-radius: 18px;
+    border-radius: var(--radius-banner);
   }
   .home-hero h1 {
     max-width: 285px;
@@ -692,7 +692,7 @@
   }
   .material-banner {
     padding: 32px 24px;
-    border-radius: 24px;
+    border-radius: var(--radius-banner);
   }
   .home .supply-grid {
     grid-template-columns: minmax(0, 1fr);

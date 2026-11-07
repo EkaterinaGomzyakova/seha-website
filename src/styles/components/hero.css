@@ -7,7 +7,7 @@
   width: calc(100% - 32px);
   max-width: 1680px;
   margin: 0 auto;
-  border-radius: 22px;
+  border-radius: var(--radius-banner);
   color: var(--color-background-light);
 }
 .hero-image {

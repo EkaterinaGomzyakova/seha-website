@@ -76,7 +76,7 @@ export const productPages: Record<ProductCategoryPageSlug, ProductCategoryPageDe
       'Veymur — бренд пищевых продуктов SEHA. Здесь собрана пищевая линейка в розничной упаковке и промышленной фасовке. Бочки и крупные контейнеры поставляются без оформления Veymur.',
       'Veymur is SEHA’s food brand. This range includes food products in consumer packs and industrial bulk formats. Drums and large containers are supplied without Veymur branding.'
     ),
-    listLabel: text('Пищевые продукты Veymur', 'Veymur Food Products'),
+    listLabel: text('Кокосовые продукты для питания', 'Coconut food products'),
     listTitle: text('Продукция<br>Veymur', 'Veymur<br>Product Range'),
     cta: quoteCta,
     items: productsForCategory('veymur')

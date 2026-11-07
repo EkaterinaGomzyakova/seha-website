@@ -4,7 +4,6 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import HeaderContainer from '../ui/HeaderContainer.astro';
-import Tag from '../ui/Tag.astro';
 import ResponsiveImage from '../ResponsiveImage.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { aboutPageCopy } from '../../data/about-page';
@@ -34,15 +33,6 @@ const milestones = [
   [copy.aboutTimelineLabel4, copy.aboutTimelineCardTitle2, copy.aboutTimelineText2],
   ['2019', copy.aboutTimelineCardTitle3, copy.aboutTimelineText3],
   [copy.aboutTimelineLabel5, copy.aboutTimelineCardTitle4, copy.aboutTimelineText4]
-];
-const clients = [
-  copy.aboutClientsLabel3,
-  copy.aboutClientsLabel4,
-  copy.aboutClientsLabel5,
-  copy.aboutClientsLabel6,
-  copy.aboutClientsLabel7,
-  copy.aboutClientsLabel8,
-  copy.aboutClientsLabel9
 ];
 const photoSizes =
   '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 216px) / 2), calc((100vw - 296px) / 2)';
@@ -152,23 +142,6 @@ const photoSizes =
           </article>
         ))}
       </div>
-    </section>
-    <section class="about-clients about-inset reveal" aria-labelledby="clients-title">
-      <div>
-        <HeaderContainer tone="green">{copy.aboutClientsLabel}</HeaderContainer>
-        <h2 id="clients-title" class="type-h2">
-          {copy.aboutClientsHeading}
-          <br />
-          <span>{copy.aboutClientsLabel2}</span>
-        </h2>
-      </div>
-      <ul class="about-client-list">
-        {clients.map((client) => (
-          <li>
-            <Tag class="about-client-tag">{client}</Tag>
-          </li>
-        ))}
-      </ul>
     </section>
     <section class="about-cta" aria-labelledby="about-cta-title">
       <div>
