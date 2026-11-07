@@ -44,7 +44,7 @@
   --type-medium-small-h3-line-height: 1.2;
   --type-medium-small-p-size: 14px;
   --type-medium-small-p-line-height: 1.45;
-  --type-mobile-h1-size: 32px;
+  --type-mobile-h1-size: 28px;
   --type-mobile-h2-size: 28px;
   --type-h1-size: var(--type-big-h1-size);
   --type-h1-line-height: 1;
@@ -95,6 +95,12 @@
     --type-h3-line-height: var(--type-medium-small-h3-line-height);
     --type-p-size: var(--type-medium-small-p-size);
     --type-p-line-height: var(--type-medium-small-p-line-height);
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --type-h1-size: 36px;
   }
 }
 

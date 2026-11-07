@@ -5,7 +5,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import HeaderContainer from '../ui/HeaderContainer.astro';
 import CertificationLogos from '../CertificationLogos.astro';
-import ResponsiveImage from '../ResponsiveImage.astro';
+import BackgroundVideo from '../BackgroundVideo.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { qualityPageCopy } from '../../data/quality-page';
 import type { Locale } from '../../data/translations';
@@ -53,8 +53,6 @@ const documents = [
   [copy.documentsSectionCardTitle3, copy.documentsSectionText4],
   [copy.documentsSectionCardTitle4, copy.documentsSectionText5]
 ];
-const photoSizes =
-  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 216px) / 2), calc((100vw - 296px) / 2)';
 ---
 
 <SiteLayout
@@ -65,7 +63,7 @@ const photoSizes =
   bodyClass="quality"
   skipText={copy.skipText}
   skipHref="#main-content"
-  image="/assets/images/quality/quality-hero.png"
+  image="/assets/images/quality/plantation-aerial.webp"
 >
   <Breadcrumbs
     locale={locale}
@@ -73,8 +71,9 @@ const photoSizes =
   />
   <main id="main-content" class="quality-main">
     <PageHero
+      overlay="soft"
       titleId="quality-title"
-      image="/assets/images/quality/quality-hero.png"
+      image="/assets/images/quality/plantation-aerial.webp"
       alt={copy.qualityHeroAlt}
     >
       <Fragment slot="heading">
@@ -115,19 +114,11 @@ const photoSizes =
     </section>
     <section class="quality-proof reveal" aria-labelledby="proof-title">
       <div class="quality-proof-image">
-        <ResponsiveImage
-          src="/assets/images/quality/batch-control-base.png"
-          alt=""
-          sizes={photoSizes}
-          loading="lazy"
-          class="quality-proof-base"
-        />
-        <ResponsiveImage
-          src="/assets/images/quality/batch-control.png"
-          alt={copy.qualityProofAlt}
-          sizes={photoSizes}
-          loading="lazy"
-          class="quality-proof-photo"
+        <BackgroundVideo
+          src="/assets/videos/production/shipment.mp4"
+          poster="/assets/videos/production/shipment-poster.webp"
+          label={copy.qualityProofAlt}
+          inline
         />
       </div>
       <div class="quality-proof-copy">

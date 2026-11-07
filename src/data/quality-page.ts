@@ -12,7 +12,7 @@ const ru = {
   qualityHeroEmphasis: 'качество',
   qualityHeroText:
     'Понятные стандарты, контролируемые параметры партии и документы, которые можно запросить перед закупкой.',
-  qualityHeroAlt: 'Пищевой производственный цех со стальными емкостями',
+  qualityHeroAlt: 'Кокосовые плантации SEHA в Поллачи, вид сверху',
   qualityMapHeading: 'Сертифицированное',
   qualityMapLabel3: 'производство',
   qualityMapText:
@@ -79,7 +79,7 @@ const en = {
   qualityHeroEmphasis: 'quality',
   qualityHeroText:
     'Clear standards, controlled batch parameters and documents you can request before purchasing.',
-  qualityHeroAlt: 'Food production workshop with steel tanks',
+  qualityHeroAlt: 'Aerial view of SEHA coconut plantations in Pollachi',
   qualityMapHeading: 'Certified',
   qualityMapLabel3: 'manufacturing',
   qualityMapText:

@@ -89,6 +89,7 @@ const assurance = [
   />
   <main class="production-main">
     <PageHero
+      overlay="soft"
       titleId="production-title"
       image="/assets/images/home/seha-farm.webp"
       alt={copy.productionHeroAlt}
@@ -171,19 +172,11 @@ const assurance = [
     </section>
     <section class="facility-showcase" aria-labelledby="facility-title">
       <div class="facility-image">
-        <ResponsiveImage
-          src={image('process-food-base')}
-          class="facility-image__base"
-          alt=""
-          sizes={sizes}
-          loading="lazy"
-        />
-        <ResponsiveImage
-          src={image('food-facility')}
-          class="facility-image__photo"
-          alt={copy.facilityShowcaseAlt}
-          sizes="(max-width: 800px) 180vw, 110vw"
-          loading="lazy"
+        <BackgroundVideo
+          src="/assets/videos/production/storage.mp4"
+          poster="/assets/videos/production/storage-poster.webp"
+          label={copy.facilityShowcaseAlt}
+          inline
         />
       </div>
       <div class="facility-copy reveal">

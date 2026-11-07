@@ -174,23 +174,6 @@
   overflow: hidden;
   min-height: 830.88px;
 }
-.facility-image img {
-  position: absolute;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-}
-.facility-image__base {
-  top: 0;
-  left: -22.03%;
-  width: 144.05%;
-}
-.facility-image .facility-image__photo {
-  top: -4.307%;
-  left: -87.26%;
-  width: 187.25%;
-  height: 109.68%;
-}
 .facility-copy {
   padding: 73px clamp(32px, 5vw, 96px) 60px;
   min-width: 0;
@@ -503,11 +486,6 @@
   .facility-image {
     min-height: 0;
     height: 440px;
-  }
-  .facility-image .facility-image__photo {
-    inset: -5% 0 auto;
-    width: 100%;
-    height: 110%;
   }
   .facility-copy {
     padding: 40px 32px;

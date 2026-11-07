@@ -115,23 +115,6 @@
   position: relative;
   overflow: hidden;
 }
-.quality-proof-image img {
-  position: absolute;
-  max-width: none;
-  object-fit: cover;
-}
-.quality-proof-base {
-  width: 199.27%;
-  height: 100%;
-  left: -49.63%;
-  top: 0;
-}
-.quality-proof-photo {
-  width: 241.87%;
-  height: 109.54%;
-  left: -78.66%;
-  top: -4.18%;
-}
 .quality-proof-copy {
   padding: 64px 0 40px 80px;
   display: flex;
@@ -311,10 +294,6 @@
   .quality-proof-image {
     min-height: 0;
     height: 500px;
-  }
-  .quality-proof-photo {
-    width: 218.39%;
-    left: -71.02%;
   }
   .quality-proof-copy {
     padding: 40px 32px;

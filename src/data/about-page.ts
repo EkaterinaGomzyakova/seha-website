@@ -42,10 +42,10 @@ const ru = {
   aboutApproachText5:
     'Для растениеводства подбираем состав субстрата, pH, EC, фракцию и соотношение волокна и чипсов. Размеры гроубэгов, отверстия и упаковку согласовываем под культуру и систему выращивания.',
   aboutShiftLabel: 'Наш подход',
-  aboutShiftHeading: 'От сырья',
-  aboutShiftEmphasis: 'к коммерческому решению',
+  aboutShiftHeading: 'Используем',
+  aboutShiftEmphasis: 'разные части кокоса',
   aboutShiftText:
-    'Мы смотрим на кокосовую продукцию как на часть цепочки клиента: рецептуры, выращивания, производства, складской обработки и дальнейшей продажи.',
+    'Кокос — возобновляемое растительное сырьё. Из мякоти мы выпускаем пищевые продукты, из волокнистой оболочки — субстраты, маты и геотекстиль, из скорлупы — уголь и активированный уголь. Переработка разных частей плода помогает полнее использовать урожай и сокращать количество отходов.',
   aboutShiftAlt: 'Производственные здания SEHA среди кокосовых плантаций в Индии',
   aboutTimelineLabel: 'Наш опыт',
   aboutTimelineLabel3: '1980-е',
@@ -115,10 +115,10 @@ const en = {
   aboutApproachText5:
     'For horticulture, we tailor substrate composition, pH, EC, particle size and the fibre-to-chip ratio. Grow bag dimensions, openings and packaging are agreed for the crop and growing system.',
   aboutShiftLabel: 'Our approach',
-  aboutShiftHeading: 'From raw material',
-  aboutShiftEmphasis: 'to a commercial solution',
+  aboutShiftHeading: 'Making use of',
+  aboutShiftEmphasis: 'different parts of the coconut',
   aboutShiftText:
-    'We view coconut products as part of the customer’s chain: formulation, growing, manufacturing, warehouse handling and onward sale.',
+    'Coconut is a renewable plant-based raw material. We use the kernel for food products, the fibrous husk for growing substrates, mats and geotextiles, and the shell for charcoal and activated carbon. Processing different parts of the fruit helps us make fuller use of the harvest and reduce waste.',
   aboutShiftAlt: 'SEHA manufacturing buildings among coconut plantations in India',
   aboutTimelineLabel: 'Our experience',
   aboutTimelineLabel3: '1980s',

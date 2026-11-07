@@ -5,12 +5,16 @@ interface Props {
   titleId: string;
   image?: string;
   alt?: string;
+  overlay?: 'brand' | 'soft';
 }
 
-const { titleId, image, alt = '' } = Astro.props;
+const { titleId, image, alt = '', overlay = 'brand' } = Astro.props;
 ---
 
-<section class:list={['page-hero', { 'page-hero--plain': !image }]} aria-labelledby={titleId}>
+<section
+  class:list={['page-hero', { 'page-hero--plain': !image, 'page-hero--soft': overlay === 'soft' }]}
+  aria-labelledby={titleId}
+>
   {image && (
     <div class="page-hero__media">
       <ResponsiveImage
@@ -126,6 +130,19 @@ const { titleId, image, alt = '' } = Astro.props;
         transparent 53%,
         var(--color-green-brand) 77%
       );
+    }
+  }
+  .page-hero--soft .page-hero__media :global(img) {
+    width: 100%;
+  }
+  .page-hero--soft .page-hero__media::after {
+    background:
+      linear-gradient(90deg, #10271cf2 0%, #10271cb3 40%, #10271c33 100%),
+      linear-gradient(0deg, #10271c99 0%, transparent 65%);
+  }
+  @media (max-width: 800px) {
+    .page-hero--soft .page-hero__media::after {
+      background: linear-gradient(110deg, #10271ce6, #10271c99 75%);
     }
   }
 </style>

@@ -1,10 +1,10 @@
 ---
 import PageHero from '../PageHero.astro';
+import BackgroundVideo from '../BackgroundVideo.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
 import HeaderContainer from '../ui/HeaderContainer.astro';
-import ResponsiveImage from '../ResponsiveImage.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { aboutPageCopy } from '../../data/about-page';
 import type { Locale } from '../../data/translations';
@@ -34,8 +34,6 @@ const milestones = [
   ['2019', copy.aboutTimelineCardTitle3, copy.aboutTimelineText3],
   [copy.aboutTimelineLabel5, copy.aboutTimelineCardTitle4, copy.aboutTimelineText4]
 ];
-const photoSizes =
-  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 216px) / 2), calc((100vw - 296px) / 2)';
 ---
 
 <SiteLayout
@@ -53,20 +51,23 @@ const photoSizes =
     items={[{ label: copy.pageLink, href: href('/') }, { label: copy.pageLabel }]}
   />
   <main id="main-content" class="about-main">
-    <PageHero titleId="about-title" image="/assets/images/shared/plantation-river.webp" alt="">
+    <PageHero
+      overlay="soft"
+      titleId="about-title"
+      image="/assets/images/shared/plantation-river.webp"
+      alt=""
+    >
       <Fragment slot="heading">{copy.aboutHeroTitle}</Fragment>
       <Fragment slot="description">{copy.aboutHeroText}</Fragment>
     </PageHero>
     <section class="about-intro" aria-labelledby="about-intro-title">
       <figure class="about-photo reveal">
-        <ResponsiveImage
-          src="/assets/images/shared/plantation-palms.webp"
-          alt={copy.aboutIntroAlt}
-          sizes={photoSizes}
-          loading="lazy"
-          class="about-photo__image"
+        <BackgroundVideo
+          src="/assets/videos/about/plantation.mp4"
+          poster="/assets/videos/about/plantation-poster.webp"
+          label={copy.aboutIntroAlt}
+          inline
         />
-        <figcaption>{copy.aboutIntroCaption}</figcaption>
       </figure>
       <div class="about-intro-copy reveal">
         <h2 id="about-intro-title" class="about-display-title type-h2">
@@ -128,12 +129,11 @@ const photoSizes =
         <p class="type-p">{copy.aboutShiftText}</p>
       </div>
       <figure class="about-shift-image">
-        <ResponsiveImage
-          src="/assets/images/home/seha-farm.webp"
-          alt={copy.aboutShiftAlt}
-          sizes={photoSizes}
-          loading="lazy"
-          class="about-shift-image__photo"
+        <BackgroundVideo
+          src="/assets/videos/about/approach.mp4"
+          poster="/assets/videos/about/approach-poster.webp"
+          label={copy.aboutShiftAlt}
+          inline
         />
       </figure>
     </section>

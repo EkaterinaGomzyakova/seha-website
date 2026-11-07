@@ -6045,6 +6045,69 @@
         }
       ]
     },
+    "/assets/images/quality/plantation-aerial.webp": {
+      "fingerprint": "f4c98555bff9e9963de611cdddc171f2734ed6db7a0ac936a636532bf71662c7",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 180,
+          "bytes": 21024
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 180,
+          "bytes": 10023
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 72646
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 360,
+          "bytes": 35079
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 159848
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 540,
+          "bytes": 77198
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 297936
+        },
+        {
+          "src": "/assets/images/generated/quality/plantation-aerial.webp-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 810,
+          "bytes": 156559
+        }
+      ]
+    },
     "/assets/images/quality/quality-hero-gradient.png": {
       "fingerprint": "2905f802129c615227525e3fd092774bc6a9b0a9a75c942a5a3ae6f263733115",
       "width": 1024,

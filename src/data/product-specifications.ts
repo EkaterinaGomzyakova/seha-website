@@ -1541,14 +1541,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
         'Free from visible soil and foreign material'
       )
     ),
-    field(
-      'Повреждения вредителями',
-      'Pest damage',
-      text(
-        'Без заражения и неприемлемых повреждений',
-        'Free from infestation and unacceptable damage'
-      )
-    ),
+
     field(
       'Калибр',
       'Size grading',
