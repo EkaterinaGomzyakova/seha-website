@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   ASTRO_TELEMETRY_DISABLED: '1'
@@ -124,3 +124,85 @@ jobs:
       - name: Deploy to Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy-reg-ru:
+    needs: quality
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment:
+      name: reg-ru
+      url: https://seha-group.ru
+    concurrency:
+      group: reg-ru-deployment
+      cancel-in-progress: false
+    steps:
+      - name: Check REG.RU connection settings
+        id: connection
+        env:
+          FTP_SERVER: ${{ secrets.REG_RU_FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.REG_RU_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.REG_RU_FTP_PASSWORD }}
+          FTP_DIRECTORY: ${{ vars.REG_RU_FTP_DIRECTORY }}
+        shell: bash
+        run: |
+          if [[ -z "$FTP_SERVER" || -z "$FTP_USERNAME" || -z "$FTP_PASSWORD" || -z "$FTP_DIRECTORY" ]]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::REG.RU deployment is not connected. Add REG_RU_FTP_SERVER, REG_RU_FTP_USERNAME and REG_RU_FTP_PASSWORD secrets and the REG_RU_FTP_DIRECTORY variable."
+            exit 0
+          fi
+          if [[ "$FTP_DIRECTORY" == "/" || "$FTP_DIRECTORY" == *".."* || "$FTP_DIRECTORY" != */ ]]; then
+            echo "::error::Use the website directory with a trailing slash, or ./ for an FTP account restricted to the website."
+            exit 1
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v7
+        if: steps.connection.outputs.ready == 'true'
+      - uses: actions/setup-node@v7
+        if: steps.connection.outputs.ready == 'true'
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        if: steps.connection.outputs.ready == 'true'
+        run: npm ci
+      - name: Build for seha-group.ru
+        if: steps.connection.outputs.ready == 'true'
+        env:
+          SITE_URL: https://seha-group.ru
+          BASE_PATH: /
+        run: npm run build
+      - name: Publish changed files to REG.RU
+        if: steps.connection.outputs.ready == 'true'
+        # v4.4.0; pin the reviewed implementation used to access hosting credentials.
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287
+        with:
+          server: ${{ secrets.REG_RU_FTP_SERVER }}
+          username: ${{ secrets.REG_RU_FTP_USERNAME }}
+          password: ${{ secrets.REG_RU_FTP_PASSWORD }}
+          protocol: ftps
+          security: strict
+          local-dir: ./dist/
+          server-dir: ${{ vars.REG_RU_FTP_DIRECTORY }}
+          state-name: .seha-deploy-state.json
+          dangerous-clean-slate: false
+          timeout: 120000
+          log-level: minimal
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.htaccess
+            **/.env*
+            **/.well-known/**
+            api/**
+            server/**
+            **/*.php
+            **/*.zip
+      - name: Check published pages
+        if: steps.connection.outputs.ready == 'true'
+        shell: bash
+        run: |
+          for path in /ru/ /en/ /ru/products/; do
+            curl --fail --silent --show-error --retry 3 --retry-delay 5 "https://seha-group.ru$path" --output /dev/null
+          done
