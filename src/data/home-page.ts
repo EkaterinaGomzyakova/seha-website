@@ -103,7 +103,7 @@ const ru = {
   materialBannerText:
     'Пищевые продукты выпускаем на отдельной площадке. Субстраты, волокно и продукты из скорлупы производим в Поллачи.',
   materialBannerLink: 'Как устроено производство',
-  materialBannerExperience: 'лет опыта семейного бизнеса в Индии',
+  materialBannerExperience: 'лет опыта в кокосовой отрасли',
   materialBannerCountries: 'стран поставок',
   supplySectionHeading: 'От вашей задачи',
   supplySectionLabel2: 'к поставке',
@@ -227,7 +227,7 @@ const en = {
   materialBannerText:
     'We make food products at a dedicated facility. Our Pollachi site produces growing substrates, coir fibre and coconut shell products.',
   materialBannerLink: 'Explore manufacturing',
-  materialBannerExperience: 'years of family business experience in India',
+  materialBannerExperience: 'years of experience in the coconut industry',
   materialBannerCountries: 'countries supplied',
   supplySectionHeading: 'From your task',
   supplySectionLabel2: 'to supply',

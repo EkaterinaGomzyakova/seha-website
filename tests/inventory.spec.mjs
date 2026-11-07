@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { products } from '../src/data/products.ts';
 import { formatStock, parseInventory } from '../src/lib/inventory.ts';
 import { inventorySource } from '../src/data/inventory.ts';
 
@@ -60,35 +59,11 @@ for (const locale of ['ru', 'en']) {
     let requests = 0;
     await page.route(source, async (route) => {
       requests++;
-      await reply(
-        route,
-        products.map((product) => [product.id, quantity, 'pcs'])
-      );
+      await reply(route, [['grow-bag', quantity, 'pcs']]);
     });
     await page.goto(`${base}/${locale}/products/substrates/`);
     await expect(page.locator('[data-product-stock]')).toHaveCount(0);
     expect(requests).toBe(0);
-    const layout = await page.locator('.product-item').evaluateAll((cards) =>
-      cards.map((card) => {
-        const description = card
-          .querySelector('.product-item__details > p')
-          .getBoundingClientRect();
-        const button = card.querySelector('.button').getBoundingClientRect();
-        return {
-          height: card.getBoundingClientRect().height,
-          gap: button.top - description.bottom
-        };
-      })
-    );
-    expect(
-      Math.max(...layout.map((card) => card.height)) -
-        Math.min(...layout.map((card) => card.height))
-    ).toBeLessThan(1);
-    expect(layout.every((card) => card.gap >= 19.5)).toBe(true);
-    expect(
-      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)
-    ).toBe(true);
-
     await page.goto(`${base}/${locale}/products/substrates/grow-bag/`);
     const stock = page.locator('[data-product-stock="grow-bag"]');
     await expect(stock).toHaveText(

@@ -18,7 +18,7 @@ export const companyBenefitsCopy = {
       {
         title: '40+ лет отраслевого опыта',
         description:
-          'Индийская компания SEHA выросла из семейного бизнеса одного из основателей с более чем 40-летним опытом в кокосовой отрасли.'
+          'Более 40 лет работы с кокосовым сырьём, его переработкой и применением в растениеводстве.'
       },
       {
         title: 'Две производственные площадки',
@@ -57,7 +57,7 @@ export const companyBenefitsCopy = {
       {
         title: '40+ years of industry experience',
         description:
-          'SEHA in India grew from one founder’s family business, with over 40 years of experience in the coconut industry.'
+          'Over 40 years of experience with coconut raw materials, processing and horticultural applications.'
       },
       {
         title: 'Two dedicated manufacturing sites',

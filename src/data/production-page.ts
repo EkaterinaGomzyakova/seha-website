@@ -12,15 +12,15 @@ const ru = {
   productionHeroTitle: 'Процесс',
   productionHeroEmphasis: 'производства',
   productionHeroText:
-    'SEHA объединяет две производственные площадки в Индии: отдельное производство пищевой продукции и площадку для кокосовых субстратов, волокна и скорлупы. На каждой контролируются сырьё, переработка, упаковка и подготовка партии к поставке.',
+    'Две площадки в Индии: пищевые продукты и материалы для растениеводства и промышленности.',
   productionBranchesHeading: 'Две площадки SEHA',
   productionBranchesLabel3: 'для разных категорий',
   productionSubstratesLabel: 'SEHA / СУБСТРАТЫ',
-  productionAddressLabel: 'Адрес производственной площадки',
+
   productionFoodLabel: 'SEHA / ПИЩЕВАЯ ЛИНИЯ',
   productionBranchesCardTitle: 'Субстраты, волокно и скорлупа',
   productionBranchesText2:
-    'На площадке SEHA в Поллачи, штат Тамилнад, производят субстраты, волокно и продукты из скорлупы. Здесь работают более 200 сотрудников, территория занимает около 10 га. Состав, фракцию, плотность и размеры подбирают под заказ. Сырьё проходит обработку, контроль качества, прессование и упаковку.',
+    'Производим субстраты, волокно и продукты из скорлупы. Состав, фракцию и размеры субстратов подбираем под культуру и систему полива.',
   productionBranchesItem: 'кокосовый торф и чипсы',
   productionBranchesItem2: 'материалы из волокна',
   productionBranchesItem3: 'продукты из скорлупы',
@@ -35,7 +35,7 @@ const ru = {
   processSectionLine: 'до партии,',
   processSectionEmphasis: 'готовой к отправке',
   processSectionText:
-    'Здесь собраны ключевые этапы: происхождение сырья, технологическая обработка, контроль параметров, упаковка и подготовка документов.',
+    'Более 40 лет работы в кокосовой отрасли — от выращивания и сбора урожая до переработки. На каждом этапе контролируем сырьё и характеристики готовой продукции.',
   processSectionCardTitle: 'Сырье и производственная база',
   processSectionText2:
     'СЕХА выращивает кокосы на собственных плантациях в Поллачи. Здесь проходит весь цикл — от выращивания и сбора урожая до подготовки сырья и переработки.',
@@ -122,15 +122,15 @@ const en = {
   productionHeroTitle: 'Manufacturing',
   productionHeroEmphasis: 'process',
   productionHeroText:
-    'SEHA operates two manufacturing facilities in India: a dedicated food production facility and a site for coconut substrates, fibre and shell products. Each follows controls for raw materials, processing, packaging and shipment preparation.',
+    'Two facilities in India for coconut food products, growing substrates and industrial materials.',
   productionBranchesHeading: 'Two SEHA facilities',
   productionBranchesLabel3: 'for different categories',
   productionSubstratesLabel: 'SEHA / SUBSTRATES',
-  productionAddressLabel: 'Manufacturing site address',
+
   productionFoodLabel: 'SEHA / FOOD PRODUCTION',
   productionBranchesCardTitle: 'Substrates, fibre and shell',
   productionBranchesText2:
-    'SEHA’s Pollachi facility in Tamil Nadu manufactures substrates, fibre and shell products. It employs over 200 people on approximately 10 ha. Composition, particle size, density and dimensions are tailored to the order. Raw materials undergo processing, quality control, compression and packing.',
+    'We produce growing substrates, fibre and shell products. Substrate blends, particle sizes and dimensions are tailored to the crop and irrigation system.',
   productionBranchesItem: 'coir pith and chips',
   productionBranchesItem2: 'fibre materials',
   productionBranchesItem3: 'shell products',
@@ -145,7 +145,7 @@ const en = {
   processSectionLine: 'to a batch',
   processSectionEmphasis: 'ready for shipment',
   processSectionText:
-    'These are the key stages: raw material origin, processing, parameter control, packaging and document preparation.',
+    'Over 40 years in the coconut industry, from growing and harvesting to processing. We monitor raw materials and finished product characteristics at each stage.',
   processSectionCardTitle: 'Raw materials and manufacturing base',
   processSectionText2:
     'SEHA grows coconuts on its own plantations in Pollachi. The full cycle takes place here, from growing and harvesting to raw material preparation and processing.',

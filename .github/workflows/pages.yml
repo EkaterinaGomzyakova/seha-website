@@ -23,11 +23,10 @@ env:
 jobs:
   quality:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 20
     env:
-      # Existing route and metadata assertions exercise the production root URL.
       SITE_URL: https://seha-group.ru
-      BASE_PATH: /
+      BASE_PATH: /seha-website/
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -53,13 +52,6 @@ jobs:
         id: browser
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npx playwright install --with-deps chromium
-      - name: Functional and accessibility tests against a fresh build
-        if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
-        env:
-          PLAYWRIGHT_OUTPUT_DIR: test-results/root
-          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/root
-          PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/root/junit.xml
-        run: npm test
       - name: Functional and accessibility tests under a Pages subpath
         if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
         env:

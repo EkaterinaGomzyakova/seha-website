@@ -98,7 +98,7 @@
 }
 .about-numbers p {
   white-space: pre-line;
-  text-transform: uppercase;
+  font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
   color: var(--color-green-brand);
 }
 .about-approach {
@@ -433,4 +433,14 @@
     padding: 32px 24px;
     gap: 24px;
   }
+}
+
+.about-production-address {
+  max-width: 690px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-dark-gray);
+  color: var(--color-dark-gray);
+  font-style: normal;
+  overflow-wrap: anywhere;
 }

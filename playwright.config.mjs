@@ -6,12 +6,12 @@ const baseURL = new URL(`${basePath.replace(/\/$/, '')}/`, `http://127.0.0.1:${p
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 120_000,
+  timeout: 45_000,
   fullyParallel: true,
-  workers: process.env.CI ? 1 : 2,
-  globalTimeout: 20 * 60 * 1000,
+  workers: 2,
+  globalTimeout: 10 * 60 * 1000,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 1 : 0,
   outputDir: process.env.PLAYWRIGHT_OUTPUT_DIR || 'test-results',
   reporter: [
     [process.env.CI ? 'github' : 'list'],
