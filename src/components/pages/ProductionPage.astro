@@ -4,7 +4,6 @@ import BackgroundVideo from '../BackgroundVideo.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
-import ResponsiveImage from '../ResponsiveImage.astro';
 import HeaderContainer from '../ui/HeaderContainer.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import { bindShortWords } from '../../lib/typography';
@@ -19,9 +18,6 @@ const copy = productionPageCopy[locale];
 const href = (path: string) =>
   path.startsWith('#') || rootAlias ? withBase(path) : localizedPath(path, locale);
 const text = (value: string) => bindShortWords(value, locale);
-const image = (name: string) => '/assets/images/production/' + name + '.png';
-const sizes =
-  '(max-width: 440px) calc(100vw - 48px), (max-width: 800px) calc(100vw - 64px), (max-width: 1280px) calc(100vw - 192px), calc(100vw - 272px)';
 const steps = [
   {
     title: copy.processSectionCardTitle,
@@ -198,24 +194,12 @@ const assurance = [
       </div>
     </section>
     <section class="packing-band" aria-label={copy.packingBandLabel}>
-      <ResponsiveImage
-        src={image('process-packing-base')}
-        class="packing-band__base"
-        alt=""
-        sizes={sizes}
-        loading="lazy"
+      <BackgroundVideo
+        src="/assets/videos/production/substrate-processing.mp4"
+        poster="/assets/videos/production/substrate-processing-poster.webp"
+        label={copy.packingBandAlt}
+        inline
       />
-      <ResponsiveImage
-        src={image('packaging-facility')}
-        class="packing-band__photo"
-        alt={copy.packingBandAlt}
-        sizes={sizes}
-        loading="lazy"
-      />
-      <div class="packing-band__copy reveal">
-        <span>{copy.packingBandLabel}</span>
-        <p class="type-p">{text(copy.packingBandText)}</p>
-      </div>
     </section>
     <section class="assurance-section reveal" aria-labelledby="assurance-title">
       <div class="production-section-heading">

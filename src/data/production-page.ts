@@ -74,10 +74,8 @@ const ru = {
   facilityShowcaseLabel5: 'Измельчение, сушка, просеивание и обработка сырья.',
   facilityShowcaseTerm4: 'Фасовка',
   facilityShowcaseLabel6: 'Розничные и оптовые форматы, подготовка партии к поставке.',
-  packingBandAlt: 'Упаковка кокосовых продуктов в пищевом производственном помещении',
-  packingBandLabel: '04 / УПАКОВКА И ПОСТАВКА',
-  packingBandText:
-    'Формат партии согласуется под продукт, объем, канал продаж, складскую обработку и дальнейшую логистику клиента.',
+  packingBandAlt: 'Переработка кокосового сырья для производства субстратов',
+  packingBandLabel: 'Переработка субстратов',
   assuranceSectionHeading: 'Контроль,',
   assuranceSectionLabel3: 'который влияет на закупку',
   assuranceSectionText:
@@ -184,10 +182,8 @@ const en = {
   facilityShowcaseLabel5: 'Grinding, drying, sieving and raw material processing.',
   facilityShowcaseTerm4: 'Packing',
   facilityShowcaseLabel6: 'Retail and wholesale formats, preparing batches for supply.',
-  packingBandAlt: 'Packing coconut products in a food production facility',
-  packingBandLabel: '04 / PACKAGING AND SUPPLY',
-  packingBandText:
-    'The batch format is agreed to suit the product, volume, sales channel, warehouse handling and the customer’s onward logistics.',
+  packingBandAlt: 'Processing coconut raw materials for growing substrates',
+  packingBandLabel: 'Substrate processing',
   assuranceSectionHeading: 'Control',
   assuranceSectionLabel3: 'that matters for purchasing',
   assuranceSectionText:
