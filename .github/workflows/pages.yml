@@ -171,7 +171,9 @@ jobs:
         env:
           SITE_URL: https://seha-group.ru
           BASE_PATH: /
-        run: npm run build
+        run: |
+          npm run build
+          node --input-type=module -e 'import fs from "node:fs"; fs.writeFileSync("dist/deployment.json", JSON.stringify({commit: process.env.GITHUB_SHA, publishedAt: new Date().toISOString()}));'
       - name: Publish changed files to REG.RU
         if: steps.connection.outputs.ready == 'true'
         # v4.4.0; pin the reviewed implementation used to access hosting credentials.
@@ -206,3 +208,5 @@ jobs:
           for path in /ru/ /en/ /ru/products/; do
             curl --fail --silent --show-error --retry 3 --retry-delay 5 "https://seha-group.ru$path" --output /dev/null
           done
+          curl --fail --silent --show-error --retry 3 --retry-delay 5 "https://seha-group.ru/deployment.json?run=${{ github.run_id }}-${{ github.run_attempt }}" --output "$RUNNER_TEMP/seha-deployment.json"
+          node --input-type=module -e 'import fs from "node:fs"; const deployed = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + "/seha-deployment.json", "utf8")); if (deployed.commit !== process.env.GITHUB_SHA) throw new Error("Published site does not match this commit"); console.log("Published commit verified:", deployed.commit);'
