@@ -115,9 +115,9 @@
 }
 .product-item__details > p {
   margin: 0;
-  max-inline-size: 18em;
+  max-inline-size: none;
   min-block-size: 4lh;
-  text-wrap: balance;
+  text-wrap: wrap;
   color: var(--color-dark-gray);
 }
 .page-product-category .product-item .button {

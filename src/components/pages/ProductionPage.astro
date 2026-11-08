@@ -1,6 +1,7 @@
 ---
 import PageHero from '../PageHero.astro';
 import BackgroundVideo from '../BackgroundVideo.astro';
+import ClickVideo from '../ClickVideo.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Button from '../ui/Button.astro';
@@ -194,11 +195,11 @@ const assurance = [
       </div>
     </section>
     <section class="packing-band" aria-label={copy.packingBandLabel}>
-      <BackgroundVideo
-        src="/assets/videos/production/substrate-processing.mp4"
+      <ClickVideo
+        src="/assets/videos/production/substrate-processing-full.mp4"
         poster="/assets/videos/production/substrate-processing-poster.webp"
         label={copy.packingBandAlt}
-        inline
+        locale={locale}
       />
     </section>
     <section class="assurance-section reveal" aria-labelledby="assurance-title">

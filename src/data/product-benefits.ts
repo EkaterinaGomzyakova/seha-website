@@ -19,102 +19,42 @@ const benefit = (
 export const productBenefits: Record<string, readonly ProductBenefit[]> = {
   'grow-bag': [
     benefit(
-      'Влага и воздух',
-      'Moisture and aeration',
-      'Кокосовая смесь удерживает и распределяет воду по капиллярам, сохраняя воздушные промежутки у корней. Дренажные отверстия отводят избыток раствора.',
-      'The coir blend retains and distributes water through capillary action while maintaining air spaces around roots. Drainage holes release excess solution.'
-    ),
-    benefit(
-      'Полив и питание под контролем',
-      'Irrigation and feeding control',
-      'Подходит для капельного полива и внесения удобрений с водой. Режим подбирают под культуру и стадию роста.',
-      'Suited to drip irrigation and fertigation, with settings matched to crop and growth stage.'
-    ),
-    benefit(
-      'Отдельный корневой объём',
-      'Separate root volume',
-      'Позволяет выращивать растения без контакта корней с почвой участка. Чистота системы зависит от воды, рассады и ухода.',
-      'Allows roots to grow separately from site soil. System hygiene still depends on water, plants and management.'
-    ),
-    benefit(
       'Состав под культуру',
       'Crop-specific blend',
-      'Соотношение торфа и чипсов по объёму подбираем под культуру, полив и нужное удержание влаги.',
-      'The pith-to-chip ratio by volume is tailored to the crop, irrigation and moisture-retention requirements.'
+      'Соотношение торфа и чипсов по объёму подбираем под культуру и режим полива.',
+      'The pith-to-chip ratio by volume is tailored to the crop and irrigation regime.'
     ),
     benefit(
-      'Размеры под систему',
-      'Sizes to suit the system',
-      'Размеры гроубэга подбираются под требования заказчика.',
-      'Grow bag dimensions are tailored to the buyer’s requirements.'
+      'Готов к установке',
+      'Ready to install',
+      'Субстрат уже спрессован в мешке. Разместите мат в теплице, увлажните и подготовьте к посадке.',
+      'The substrate is compressed inside its bag. Position the slab in the greenhouse, hydrate and prepare for planting.'
     ),
     benefit(
-      'Нужные отверстия',
-      'Hole configuration',
-      'Количество, размеры и расположение посадочных и дренажных отверстий согласуются под культуру и систему полива.',
-      'The number, size and layout of planting and drainage holes are agreed for the crop and irrigation system.'
-    ),
-    benefit(
-      'Прочная оболочка',
-      'Durable sleeve',
-      'Трёхслойная соэкструдированная LDPE-плёнка. Ориентировочный срок службы под прямым солнцем — 12–24 месяца (1–2 сезона).',
-      'Three-layer co-extruded LDPE film. Indicative service life in direct sunlight is 12–24 months (1–2 growing seasons).'
-    ),
-    benefit(
-      'Служит дольше без прямого солнца',
-      'Longer life away from direct sun',
-      'При искусственном освещении мешок может служить дольше; срок зависит от механического износа при поливе, промывках и пересадке.',
-      'Under artificial lighting, the bag may last longer; service life depends on mechanical wear from irrigation, washing and transplanting.'
+      'Под вашу систему выращивания',
+      'Made for your growing system',
+      'Размеры мата, посадочные и дренажные отверстия подбираем под схему посадки и полив.',
+      'Slab dimensions and planting and drainage holes are tailored to your planting layout and irrigation system.'
     )
   ],
   'open-top-grow-bag': [
     benefit(
-      'Влага и воздух',
-      'Moisture and aeration',
-      'Кокосовая смесь удерживает воду и сохраняет воздушные промежутки; дренажные отверстия отводят её избыток.',
-      'The coir blend retains water and maintains air spaces; drainage holes release excess water.'
+      'Не нужно наполнять вручную',
+      'No manual filling',
+      'Прессованный субстрат уже находится в мешке. Перед посадкой расправьте верх и увлажните смесь.',
+      'The compressed substrate is already inside the bag. Unfold the top and hydrate the blend before planting.'
     ),
     benefit(
-      'Полив и питание под контролем',
-      'Irrigation and feeding control',
-      'Подходит для капельного полива и внесения удобрений с водой. Режим подбирают под культуру и стадию роста.',
-      'Suited to drip irrigation and fertigation, with settings matched to crop and growth stage.'
+      'Открытый верх и дренаж',
+      'Open top and drainage',
+      'К корням поступает воздух, а дренажные отверстия отводят лишнюю воду.',
+      'The open top allows air to reach the root zone, while drainage holes release excess water.'
     ),
     benefit(
-      'Отдельный корневой объём',
-      'Separate root volume',
-      'Позволяет выращивать растения без контакта корней с почвой участка. Чистота системы зависит от воды, рассады и ухода.',
-      'Allows roots to grow separately from site soil. System hygiene still depends on water, plants and management.'
-    ),
-    benefit(
-      'Торф и чипсы',
-      'Pith and chips',
-      'Смесь 60% кокосового торфа и 40% чипсов по объёму сочетает влагоудержание и аэрацию.',
-      'A blend of 60% coco pith and 40% chips by volume combines moisture retention and aeration.'
-    ),
-    benefit(
-      'Промытый субстрат',
-      'Washed substrate',
-      'Кокосовое сырьё промыто и просеяно; используется марка с низким EC.',
-      'The coconut substrate is washed and screened, using a low-EC grade.'
-    ),
-    benefit(
-      'Мешок с дренажом',
-      'Drainage holes',
-      'УФ-стабилизированная оболочка с открытым верхом и дренажными отверстиями.',
-      'A UV-stabilised open-top bag with drainage holes.'
-    ),
-    benefit(
-      'Объём 10 литров',
-      '10 litre volume',
-      'Описанный вариант — 10 л, высота заполнения около 28–30 см; другие размеры и объёмы — по заказу.',
-      'The described option is 10 L with approximately 28–30 cm fill height; other sizes and volumes are available to order.'
-    ),
-    benefit(
-      'Удобно для Long Cane',
-      'Convenient for long-cane systems',
-      'Для малины с подготовленными длинными побегами. Отдельный мешок можно переместить или заменить без разборки соседних посадок.',
-      'For prepared long-cane raspberry plants. Individual bags can be moved or replaced without disturbing neighbouring plants.'
+      'Каждый куст отдельно',
+      'Individual plants',
+      'Мешок можно переместить или заменить, не затрагивая соседние растения. Удобно для малины по технологии Long Cane.',
+      'Each bag can be moved or replaced without disturbing neighbouring plants. Suited to long-cane raspberry production.'
     )
   ],
   'coco-peat': [

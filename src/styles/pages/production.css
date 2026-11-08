@@ -212,7 +212,6 @@
   color: var(--color-text-on-green);
 }
 .packing-band {
-  min-height: 560px;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -368,9 +367,6 @@
   .facility-units {
     margin-top: 40px;
   }
-  .packing-band {
-    min-height: 460px;
-  }
   .production-section-heading {
     gap: 32px;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
@@ -455,9 +451,6 @@
     margin-top: 32px;
     max-width: 520px;
   }
-  .packing-band {
-    min-height: 440px;
-  }
 
   .production-main > .assurance-section {
     padding-block: 24px;
@@ -523,9 +516,6 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
     margin-top: 32px;
-  }
-  .packing-band {
-    min-height: 400px;
   }
 
   .assurance-grid article {

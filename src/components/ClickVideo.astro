@@ -1,0 +1,110 @@
+---
+import TablerIcon from './ui/TablerIcon.astro';
+import { withBase } from '../lib/paths';
+interface Props {
+  src: string;
+  poster: string;
+  label: string;
+  locale: 'ru' | 'en';
+}
+const { src, poster, label, locale } = Astro.props;
+const playLabel = locale === 'ru' ? 'Смотреть видео' : 'Play video';
+---
+
+<div class="click-video" data-click-video>
+  <video
+    playsinline
+    width="1280"
+    height="704"
+    preload="none"
+    aria-label={label}
+    poster={withBase(poster)}
+    data-src={withBase(src)}
+  ></video>
+  <button type="button" class="click-video__play" aria-label={playLabel}>
+    <TablerIcon name="player-play" size={28} />
+  </button>
+  <p class="click-video__error type-p" role="status" hidden>
+    {locale === 'ru'
+      ? 'Не удалось загрузить видео. Попробуйте ещё раз.'
+      : 'The video could not load. Please try again.'}
+  </p>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-click-video]').forEach((root) => {
+    const video = root.querySelector('video')!;
+    const button = root.querySelector('button')!;
+    const error = root.querySelector<HTMLElement>('[role="status"]')!;
+    button.addEventListener('click', async () => {
+      error.hidden = true;
+      if (!video.getAttribute('src')) video.src = video.dataset.src!;
+      video.controls = true;
+      try {
+        await video.play();
+      } catch {
+        button.hidden = false;
+        error.hidden = false;
+      }
+    });
+    video.addEventListener('play', () => {
+      button.hidden = true;
+      error.hidden = true;
+    });
+    video.addEventListener('ended', () => {
+      button.hidden = false;
+      video.controls = false;
+    });
+  });
+</script>
+
+<style>
+  .click-video {
+    position: relative;
+    width: 100%;
+    background: var(--color-black);
+  }
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .click-video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-yellow-brand);
+    color: var(--color-green-brand);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .click-video__play:hover {
+    background: var(--color-background-light);
+  }
+  .click-video__play:focus-visible {
+    outline: 3px solid var(--color-white);
+    outline-offset: 5px;
+  }
+  .click-video__play[hidden],
+  .click-video__error[hidden] {
+    display: none;
+  }
+  .click-video__error {
+    position: absolute;
+    bottom: 48px;
+    left: 16px;
+    right: 16px;
+    padding: 12px;
+    background: var(--color-background-light);
+    color: var(--color-green-brand);
+    text-align: center;
+  }
+</style>

@@ -1045,8 +1045,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Упаковка',
       'Packaging',
       text(
-        'Бутылка из тёмного пластика с винтовой крышкой; упаковка по заказу',
-        'Dark plastic bottle with screw cap; packaging to order'
+        'Бутылка из тёмного пластика; упаковка по заказу',
+        'Dark plastic bottle; packaging to order'
       )
     ),
     field(
@@ -1665,11 +1665,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Appearance',
       text('Чёрные пористые гранулы или порошок', 'Black porous granules or powder')
     ),
-    field(
-      'Упаковка',
-      'Packaging',
-      text('Мешки 25 кг или биг-бэги 500 кг', '25 kg bags or 500 kg jumbo bags')
-    )
+    field('Упаковка', 'Packaging', text('Мешки 25 кг', '25 kg bags'))
   ]
 };
 
