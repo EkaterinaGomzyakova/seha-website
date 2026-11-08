@@ -16,9 +16,8 @@
   border-radius: 20px;
   background: var(--color-green-brand);
   color: var(--color-yellow-brand);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.6px;
+  font: 700 var(--type-button-size)/var(--type-button-line-height) var(--font-sans);
+  letter-spacing: var(--type-button-letter-spacing);
 }
 .card-go {
   position: absolute;
@@ -100,8 +99,6 @@
     height: 245px;
   }
   .card-index {
-    font-size: 11px;
-    letter-spacing: 0;
     left: 12px;
     top: 12px;
   }
@@ -129,7 +126,6 @@
     display: none;
   }
   .card-index {
-    font-size: 12px;
     top: 18px;
     left: 18px;
   }
