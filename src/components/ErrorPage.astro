@@ -1,9 +1,8 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Button from './ui/Button.astro';
-import Link from './ui/Link.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 import type { Locale } from '../data/translations';
-import { getSiteTranslations } from '../data/translations';
 import { errorCopy } from '../data/error-copy';
 import { localizedPath } from '../lib/paths';
 interface Props {
@@ -11,7 +10,6 @@ interface Props {
 }
 const { locale } = Astro.props;
 const copy = errorCopy[locale];
-const nav = getSiteTranslations(locale);
 ---
 
 <SiteLayout
@@ -25,23 +23,27 @@ const nav = getSiteTranslations(locale);
   showFooter={false}
 >
   <main class="error-page" id="error-content">
+    <div class="error-image" aria-hidden="true">
+      <ResponsiveImage
+        src="/assets/images/not-found/coconut.png"
+        alt=""
+        sizes="(max-width: 440px) 360px, (max-width: 800px) 554px, (max-width: 1280px) 608px, 920px"
+        loading="eager"
+      />
+    </div>
     <section class="error-copy" aria-labelledby="error-title">
-      <div class="error-mark" aria-hidden="true">
-        <span>4</span>
-        <i>0</i>
-        <span>4</span>
+      <div class="error-heading">
+        <p class="error-mark" aria-hidden="true">
+          404
+        </p>
+        <div class="error-text">
+          <h1 id="error-title" class:list={['type-h1', { 'error-title--en': locale === 'en' }]}>
+            <span>{copy.headingStart}</span> <span class="error-title-last">{copy.headingEnd}</span>
+          </h1>
+          <p class="type-p">{copy.description}</p>
+        </div>
       </div>
-      <h1 id="error-title" class="type-h1">
-        {copy.heading}
-      </h1>
-      <p class="type-p">{copy.description}</p>
-      <nav class="error-nav" aria-label={copy.navigation}>
-        <Link href={localizedPath('/products/', locale)}>{nav.products}</Link>
-        <Link href={localizedPath('/production/', locale)}>{nav.production}</Link>
-        <Link href={localizedPath('/quality/', locale)}>{nav.quality}</Link>
-        <Link href={localizedPath('/about/', locale)}>{nav.about}</Link>
-      </nav>
-      <Button variant="tertiary" href={localizedPath('/', locale)}>
+      <Button variant="primary" class="error-home" href={localizedPath('/', locale)}>
         {copy.home}
       </Button>
     </section>

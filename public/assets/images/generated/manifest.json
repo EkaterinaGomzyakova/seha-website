@@ -4974,6 +4974,69 @@
         }
       ]
     },
+    "/assets/images/not-found/coconut.png": {
+      "fingerprint": "8280faab12506b6951eed3b0092f6b540adae7f678a07d23980d972c6b737da0",
+      "width": 4096,
+      "height": 2731,
+      "variants": [
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 213,
+          "bytes": 5662
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 213,
+          "bytes": 3814
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-640.webp",
+          "format": "webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 16866
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-640.avif",
+          "format": "avif",
+          "width": 640,
+          "height": 427,
+          "bytes": 9420
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-960.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 32890
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-960.avif",
+          "format": "avif",
+          "width": 960,
+          "height": 640,
+          "bytes": 17892
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 62348
+        },
+        {
+          "src": "/assets/images/generated/not-found/coconut.png-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "height": 960,
+          "bytes": 33225
+        }
+      ]
+    },
     "/assets/images/production/food-facility.png": {
       "fingerprint": "0454878f97c0de8e99fd4d048de686494dfc7ab03c7905055a21b98d1f3314ae",
       "width": 1920,
