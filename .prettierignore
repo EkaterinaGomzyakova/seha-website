@@ -6,3 +6,4 @@ playwright-report
 .npm-cache
 package-lock.json
 public/assets/images/generated/manifest.json
+server/php/vendor/

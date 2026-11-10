@@ -45,11 +45,13 @@ jobs:
       - name: Check formatting
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: npm run format:check
-      - name: Check product inquiry handler without sending email
-        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: npm run test:server
       - name: Check hosting configuration preservation
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check PHP inquiry handler without sending email
+        run: |
+          find server/php -name '*.php' -print0 | xargs -0 -n1 php -l
+          php server/php/inquiry.test.php
+          python3 scripts/test-inquiry-http.py
       - name: Install Chromium
         id: browser
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -173,9 +175,19 @@ jobs:
         env:
           SITE_URL: https://seha-group.ru
           BASE_PATH: /
+          PUBLIC_FORM_ENDPOINT: /api/inquiry.php
+          PUBLIC_PRODUCT_INQUIRY_ENDPOINT: /api/inquiry.php
         run: |
           npm run build
           node --input-type=module -e 'import fs from "node:fs"; fs.writeFileSync("dist/deployment.json", JSON.stringify({commit: process.env.GITHUB_SHA, publishedAt: new Date().toISOString()}));'
+      - name: Deploy mail handler and preserve SMTP settings
+        if: steps.connection.outputs.ready == 'true'
+        env:
+          FTP_SERVER: ${{ secrets.REG_RU_FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.REG_RU_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.REG_RU_FTP_PASSWORD }}
+          FTP_DIRECTORY: ${{ vars.REG_RU_FTP_DIRECTORY }}
+        run: python3 scripts/deploy-inquiry.py
       - name: Publish changed files to REG.RU
         if: steps.connection.outputs.ready == 'true'
         # v4.4.0; pin the reviewed implementation used to access hosting credentials.
@@ -215,6 +227,10 @@ jobs:
         if: steps.connection.outputs.ready == 'true'
         shell: bash
         run: |
+          status=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' 'https://seha-group.ru/api/private/config.php')
+          test "$status" = '403'
+          status=$(curl --silent --show-error --header 'Origin: https://seha-group.ru' --output /dev/null --write-out '%{http_code}' 'https://seha-group.ru/api/inquiry.php')
+          test "$status" = '405'
           for path in /ru/ /en/ /ru/products/; do
             curl --fail --silent --show-error --retry 3 --retry-delay 5 "https://seha-group.ru$path" --output /dev/null
           done

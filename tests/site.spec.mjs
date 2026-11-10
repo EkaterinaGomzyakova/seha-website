@@ -197,6 +197,31 @@ test('inquiry without a handler stays a draft and does not navigate away', async
   expect(new URL(page.url()).pathname).toBe(url('/en/'));
 });
 
+test('footer sends general JSON inquiry and requires explicit delivery confirmation', async ({
+  page
+}) => {
+  await page.goto(url('/en/'));
+  await fillInquiry(page);
+  await page
+    .locator('#quote-form')
+    .evaluate((form) => (form.dataset.formEndpoint = '/general-test'));
+  let accepted = false;
+  await page.route('**/general-test', async (route) => {
+    const payload = route.request().postDataJSON();
+    expect(payload.type).toBe('general');
+    expect(payload.consent).toBe(true);
+    expect(payload.email).toBe('jane@example.com');
+    await route.fulfill({ json: { success: accepted } });
+  });
+  await page.locator('#quote-form [type="submit"]').click();
+  await expect(page.locator('#quote-result')).toHaveAttribute('data-state', 'error');
+  await expect(page.locator('#quote-form [name="company"]')).toHaveValue('Example LLC');
+  accepted = true;
+  await page.locator('#quote-form [type="submit"]').click();
+  await expect(page.locator('#quote-result')).toHaveAttribute('data-state', 'success');
+  await expect(page.locator('#quote-form [name="company"]')).toHaveValue('');
+});
+
 test('main pages load and show the shared navigation', async ({ page, request }) => {
   for (const path of [
     '/ru/',

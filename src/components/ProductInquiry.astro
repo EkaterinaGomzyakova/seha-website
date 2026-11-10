@@ -50,6 +50,7 @@ const inquiryCopy = productInquiryCopy[locale];
       data-endpoint={import.meta.env.PUBLIC_PRODUCT_INQUIRY_ENDPOINT || undefined}
     >
       <input type="hidden" name="locale" value={locale} />
+      <input type="hidden" name="type" value="product" />
       <input type="hidden" name="productId" />
       <input type="hidden" name="packaging" />
       <input type="hidden" name="quantity" />

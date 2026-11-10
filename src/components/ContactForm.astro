@@ -29,11 +29,15 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
   id="quote-form"
   data-form-endpoint={endpoint}
   data-locale={locale}
-  action={endpoint || `mailto:${siteContact.email}`}
+  action={`mailto:${siteContact.email}`}
   method="post"
-  enctype={endpoint ? 'multipart/form-data' : 'text/plain'}
+  enctype="text/plain"
 >
   <input type="hidden" name="locale" value={locale} />
+  <input type="hidden" name="type" value="general" />
+  <div hidden aria-hidden="true">
+    <input name="website" tabindex="-1" autocomplete="off" />
+  </div>
   <input type="hidden" name="product" value="" />
   <input type="hidden" name="productId" value="" />
   <div class="form-grid">

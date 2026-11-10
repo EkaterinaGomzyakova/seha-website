@@ -86,20 +86,20 @@ export function initContactForm() {
     form.setAttribute('aria-busy', 'true');
     result.hidden = true;
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 15000);
+    const timeout = window.setTimeout(() => controller.abort(), 30000);
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: fields,
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ...Object.fromEntries(fields),
+          consent: (field('consent') as HTMLInputElement).checked
+        }),
         signal: controller.signal
       });
       if (!response.ok) throw new Error(`Form endpoint returned ${response.status}`);
-      if (response.headers.get('content-type')?.includes('application/json')) {
-        const data = await response.json();
-        if (data.success === false || data.error)
-          throw new Error('Form endpoint rejected the inquiry');
-      }
+      const data = await response.json();
+      if (data.success !== true) throw new Error('Form endpoint rejected the inquiry');
       show('success', copy.successTitle, copy.successText);
       form.reset();
     } catch {
