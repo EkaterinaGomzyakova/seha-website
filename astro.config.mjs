@@ -1,10 +1,12 @@
 import { defineConfig } from 'astro/config';
 import { fileURLToPath } from 'node:url';
 import { loadEnv } from 'vite';
+import russianTypography from './scripts/russian-typography.mjs';
 
 const env = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), ['SITE_URL', 'BASE_PATH']);
 
 export default defineConfig({
+  integrations: [russianTypography()],
   site: process.env.SITE_URL || env.SITE_URL || 'https://seha-group.ru',
   base: process.env.BASE_PATH || env.BASE_PATH || '/',
   output: 'static',

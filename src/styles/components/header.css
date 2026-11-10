@@ -259,6 +259,7 @@ html.menu-open seha-cookie-banner {
     background: transparent;
     color: var(--color-green-brand);
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .mobile-nav-links {

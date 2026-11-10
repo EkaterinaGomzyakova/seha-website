@@ -47,6 +47,8 @@ jobs:
         run: npm run format:check
       - name: Check hosting configuration preservation
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check Russian text formatting
+        run: node --test scripts/russian-typography.test.mjs
       - name: Check PHP inquiry handler without sending email
         run: |
           find server/php -name '*.php' -print0 | xargs -0 -n1 php -l

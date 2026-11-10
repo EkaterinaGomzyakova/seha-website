@@ -1,5 +1,6 @@
 import './mobile-menu';
 import './cookie-banner';
+import './russian-typography';
 import { initLanguageSwitcher } from './language-switcher';
 import { initContactForm } from './contact-form';
 

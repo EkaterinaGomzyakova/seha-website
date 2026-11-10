@@ -187,9 +187,6 @@
     --type-h2-size: var(--type-mobile-h2-size);
   }
   .page-product-category .breadcrumbs {
-    margin-bottom: 20px;
-    font-size: var(--type-p-size);
-    line-height: 1.2;
     gap: 4px;
   }
   .product-hero {

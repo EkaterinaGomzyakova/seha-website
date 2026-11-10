@@ -94,7 +94,8 @@ test('mobile menu opens and closes', async ({ page }) => {
     'Quality & Certifications',
     'About us'
   ]);
-  await expect(page.locator('.mobile-nav-close')).toBeFocused();
+  await expect(menu).toBeFocused();
+  await expect(page.locator('.mobile-nav-close')).not.toBeFocused();
   for (let step = 0; step < 10; step++) {
     await page.keyboard.press('Tab');
     expect(await page.evaluate(() => !!document.activeElement.closest('#mobile-nav'))).toBeTruthy();
@@ -102,6 +103,12 @@ test('mobile menu opens and closes', async ({ page }) => {
   await page.locator('.mobile-nav-close').click();
   await expect(menu).toBeHidden();
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  await expect(toggle).toBeFocused();
+  await toggle.press('Enter');
+  await expect(menu).toBeVisible();
+  await expect(page.locator('.mobile-nav-close')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(menu).toBeHidden();
   await expect(toggle).toBeFocused();
 });
 

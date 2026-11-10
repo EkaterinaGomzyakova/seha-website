@@ -14,9 +14,11 @@ export class MobileMenu extends HTMLElement {
       (document.getElementById(this.getAttribute('trigger') || '') as HTMLButtonElement | null) ??
       undefined;
     if (!this.panel || !this.trigger) return;
-    this.trigger.addEventListener('click', () => this.setOpen(Boolean(this.panel!.hidden)), {
-      signal
-    });
+    this.trigger.addEventListener(
+      'click',
+      (event) => this.setOpen(Boolean(this.panel!.hidden), true, event.detail === 0),
+      { signal }
+    );
     this.querySelector('.mobile-nav-close')?.addEventListener('click', () => this.setOpen(false), {
       signal
     });
@@ -83,7 +85,7 @@ export class MobileMenu extends HTMLElement {
     ).filter((item) => item.getClientRects().length > 0);
   }
 
-  private setOpen(open: boolean, restoreFocus = true) {
+  private setOpen(open: boolean, restoreFocus = true, keyboard = true) {
     if (!this.panel || !this.trigger) return;
     const wasOpen = !this.panel.hidden;
     this.panel.hidden = !open;
@@ -111,7 +113,7 @@ export class MobileMenu extends HTMLElement {
         if (parent === document.body) break;
         branch = parent;
       }
-      this.focusable()[0]?.focus();
+      (keyboard ? this.focusable()[0] : this.panel)?.focus({ preventScroll: true });
     } else if (!open) {
       for (const [element, inert] of this.background) element.inert = inert;
       this.background.clear();

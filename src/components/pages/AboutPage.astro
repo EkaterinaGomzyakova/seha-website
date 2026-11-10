@@ -18,7 +18,7 @@ const copy = aboutPageCopy[locale];
 const href = (path: string) => (rootAlias ? withBase(path) : localizedPath(path, locale));
 const facts = [
   ['40+', copy.aboutNumbersLabel],
-  ['Pollachi', copy.aboutNumbersLabel2],
+  [locale === 'ru' ? 'Поллачи' : 'Pollachi', copy.aboutNumbersLabel2],
   [copy.aboutNumbersValue3, copy.aboutNumbersLabel3],
   [copy.aboutNumbersValue4, copy.aboutNumbersLabel4]
 ];
@@ -80,8 +80,8 @@ const milestones = [
         <address class="about-production-address type-p">
           <strong>{copy.aboutProductionAddressLabel}</strong>
           <br />
-          1/15B, Andiplayam, Nagamam (via), Kinathukadavu (tk), Pollachi, Coimbatore, Tamil Nadu –
-          642120, India
+          1/15B, Andiplayam, Nagamam (via), Kinathukadavu (tk),{' '}
+          {locale === 'ru' ? 'Поллачи' : 'Pollachi'}, Coimbatore, Tamil Nadu – 642120, India
         </address>
       </div>
     </section>

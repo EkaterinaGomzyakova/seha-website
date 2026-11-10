@@ -1,4 +1,5 @@
 import type { Locale } from '../data/translations';
+import { bindRussianShortWords } from './russian-typography.mjs';
 
 const connectingWords: Record<Locale, string> = {
   ru: 'из-за|из-под|в|во|на|из|за|с|со|к|ко|о|об|обо|от|до|по|под|над|у|при|для|без|про|через|перед|между|и|а|но|не|ни|или',
@@ -7,6 +8,7 @@ const connectingWords: Record<Locale, string> = {
 
 /** Keep prepositions, articles and conjunctions with the following word at build time. */
 export function bindShortWords(value: string, locale: Locale): string {
+  if (locale === 'ru') return bindRussianShortWords(value);
   return value.replace(
     new RegExp(`(?<![\\p{L}\\p{N}-])(${connectingWords[locale]})[ \\t\\u00a0]+(?=\\S)`, 'giu'),
     '$1\u00a0'
