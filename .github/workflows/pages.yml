@@ -57,7 +57,9 @@ jobs:
       - name: Install Chromium
         id: browser
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: npx playwright install --with-deps chromium
+        # ubuntu-24.04 already provides Chromium's runtime libraries. Avoid unrelated
+        # font downloads from apt mirrors blocking browser checks and publication.
+        run: npx playwright install chromium
       - name: Functional and accessibility tests under a Pages subpath
         if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
         env:
