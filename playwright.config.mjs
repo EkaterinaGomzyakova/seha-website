@@ -1,8 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const basePath = process.env.TEST_BASE_PATH ?? process.env.BASE_PATH ?? '/';
 const port = Number(process.env.PLAYWRIGHT_PORT || 4321);
-const baseURL = new URL(`${basePath.replace(/\/$/, '')}/`, `http://127.0.0.1:${port}`).href;
+const baseURL = `http://127.0.0.1:${port}/`;
 
 export default defineConfig({
   testDir: './tests',
@@ -30,7 +29,6 @@ export default defineConfig({
   webServer: {
     command: `npm run build && npm run preview -- --host 127.0.0.1 --port ${port}`,
     url: baseURL,
-    env: { BASE_PATH: basePath, TEST_BASE_PATH: basePath },
     reuseExistingServer: false,
     timeout: 300_000
   },

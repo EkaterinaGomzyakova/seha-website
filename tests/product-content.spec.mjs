@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
+const base = '';
 
 test('gallery and quantity controls preserve the product selection in the inquiry', async ({
   page,

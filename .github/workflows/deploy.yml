@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages-${{ github.workflow }}-${{ github.ref }}
+  group: site-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 env:
@@ -26,7 +26,6 @@ jobs:
     timeout-minutes: 20
     env:
       SITE_URL: https://seha-group.ru
-      BASE_PATH: /seha-website/
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -60,13 +59,12 @@ jobs:
         # ubuntu-24.04 already provides Chromium's runtime libraries. Avoid unrelated
         # font downloads from apt mirrors blocking browser checks and publication.
         run: npx playwright install chromium
-      - name: Functional and accessibility tests under a Pages subpath
+      - name: Functional and accessibility tests for the production site
         if: ${{ !cancelled() && steps.browser.outcome == 'success' }}
         env:
-          TEST_BASE_PATH: /seha-website/
-          PLAYWRIGHT_OUTPUT_DIR: test-results/subpath
-          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/subpath
-          PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/subpath/junit.xml
+          PLAYWRIGHT_OUTPUT_DIR: test-results
+          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report
+          PLAYWRIGHT_JUNIT_OUTPUT_FILE: test-results/junit.xml
         run: npm test
       - name: Upload test diagnostics
         if: ${{ !cancelled() }}
@@ -82,56 +80,10 @@ jobs:
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
         with:
-          name: subpath-build-output
+          name: tested-site-build
           path: dist/
           retention-days: 7
           if-no-files-found: warn
-
-  build-pages:
-    needs: quality
-    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    permissions:
-      contents: read
-      pages: read
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with the actual Pages origin and subpath
-        env:
-          SITE_URL: ${{ steps.pages.outputs.origin }}
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}
-        run: npm run build
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-  deploy:
-    needs: build-pages
-    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
-    runs-on: ubuntu-24.04
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    concurrency:
-      group: pages-deployment
-      cancel-in-progress: false
-    steps:
-      - name: Deploy to Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
 
   deploy-reg-ru:
     needs: quality
@@ -178,7 +130,6 @@ jobs:
         if: steps.connection.outputs.ready == 'true'
         env:
           SITE_URL: https://seha-group.ru
-          BASE_PATH: /
           PUBLIC_FORM_ENDPOINT: /api/inquiry.php
           PUBLIC_PRODUCT_INQUIRY_ENDPOINT: /api/inquiry.php
         run: |

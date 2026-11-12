@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
+const base = '';
 
 test('catalogue photos and descriptions open the corresponding product', async ({ page }) => {
   await page.goto(`${base}/ru/products/veymur/`);

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
+const base = '';
 const url = (path) => `${base}${path}`;
 
 test('industry carousel advances one card with buttons, keys and dragging', async ({

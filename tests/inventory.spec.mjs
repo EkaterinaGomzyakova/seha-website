@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { formatStock, parseInventory } from '../src/lib/inventory.ts';
 import { inventorySource } from '../src/data/inventory.ts';
 
-const base = (process.env.TEST_BASE_PATH || '').replace(/\/$/, '');
+const base = '';
 const source = `https://docs.google.com/spreadsheets/d/${inventorySource.spreadsheetId}/gviz/tq**`;
 const response = (rows) => ({
   status: 'ok',
