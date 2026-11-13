@@ -41,8 +41,8 @@ if (production && !document.querySelector('[data-seha-metrica]')) {
     webvisor: true,
     clickmap: true,
     accurateTrackBounce: true,
-    // Generated fallback mailto links contain inquiry details, so do not track links automatically.
-    trackLinks: false,
+    // The fallback email link opts out separately because its URL contains inquiry details.
+    trackLinks: true,
     url: cleanUrl(location.href),
     referrer: cleanUrl(document.referrer)
   });

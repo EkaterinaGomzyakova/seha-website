@@ -115,7 +115,7 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
     <strong data-result-title></strong>
     <p class="type-p" data-result-message></p>
     <div data-result-actions hidden>
-      <Link data-email-quote href={`mailto:${siteContact.email}`}>
+      <Link class="ym-disable-tracklink" data-email-quote href={`mailto:${siteContact.email}`}>
         {siteContact.email}
       </Link>
       <Button variant="tertiary" type="button" id="copy-quote">

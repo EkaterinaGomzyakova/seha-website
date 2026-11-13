@@ -30,7 +30,8 @@ test('production analytics masks forms and counts only successful inquiries with
   expect(init[1]).toBe('init');
   expect(init[2].webvisor).toBe(true);
   expect(init[2].url).not.toContain('email=');
-  expect(init[2].trackLinks).toBe(false);
+  expect(init[2].trackLinks).toBe(true);
+  await expect(page.locator('[data-email-quote]')).toHaveClass(/ym-disable-tracklink/);
   await expect(page.locator('#quote-form')).toHaveClass(/ym-hide-content/);
   await expect(page.locator('#product-inquiry-form')).toHaveClass(/ym-hide-content/);
   await page.locator('.cookie-close').click();
