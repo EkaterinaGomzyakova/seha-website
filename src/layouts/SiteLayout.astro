@@ -8,6 +8,7 @@ import type { ProductItem } from '../data/products';
 import CookieBanner from '../components/CookieBanner.astro';
 import ProductInquiry from '../components/ProductInquiry.astro';
 import { withBase } from '../lib/paths';
+import { metadataFor } from '../data/seo';
 
 interface Props {
   locale: Locale;
@@ -34,6 +35,7 @@ const {
   image,
   inquiryProducts = []
 } = Astro.props;
+const seo = metadataFor(path, locale, { title, description });
 ---
 
 <!doctype html>
@@ -42,10 +44,16 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#004d25" />
-    <meta name="description" content={description} />
+    <meta name="description" content={seo.description} />
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
-    <title>{title}</title>
-    <SeoLinks locale={locale} path={path} title={title} description={description} image={image} />
+    <title>{seo.title}</title>
+    <SeoLinks
+      locale={locale}
+      path={path}
+      title={seo.title}
+      description={seo.description}
+      image={image}
+    />
     <GlobalStyles />
   </head>
   <body class={bodyClass}>

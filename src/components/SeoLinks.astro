@@ -8,6 +8,8 @@ import {
   type ProductCategorySlug
 } from '../data/products';
 import { publicRoutes } from '../data/routes';
+import { productGalleryImages } from '../data/product-gallery';
+import { pageSeo, productSeo } from '../data/seo';
 
 interface Props {
   locale: 'ru' | 'en';
@@ -29,11 +31,25 @@ const isCatalog = normalizedPath === '/products';
 const detailProduct = products.find(
   (product) => normalizedPath === `/products/${product.category}/${product.slug}`
 );
+const productCategory = detailProduct
+  ? productCategories.find((entry) => entry.slug === detailProduct.category)
+  : undefined;
 const absolute = (url: string) => new URL(url, site).toString();
 const canonical = absolute(is404 ? withBase('/404/') : localizedPath(normalizedPath, locale));
 const rootUrl = absolute(withBase('/'));
 const localeCode = locale === 'en' ? 'en-US' : 'ru-RU';
 const localized = (value: { ru: string; en: string }) => value[locale];
+const pageLabels: Record<string, { ru: string; en: string }> = {
+  '/about': { ru: 'О компании', en: 'About us' },
+  '/production': { ru: 'Производство', en: 'Production' },
+  '/quality': { ru: 'Качество и сертификаты', en: 'Quality and certificates' },
+  '/privacy': { ru: 'Политика конфиденциальности', en: 'Privacy policy' }
+};
+const productImages = detailProduct
+  ? [...new Set([detailProduct.image, ...(productGalleryImages[detailProduct.id] ?? [])])].map(
+      (source) => absolute(withBase(source))
+    )
+  : [];
 const absoluteImage = absolute(
   withBase(
     image ??
@@ -60,7 +76,7 @@ const alternateLocales = robotsNoindex
     );
 const breadcrumbs = [
   { name: locale === 'en' ? 'Home' : 'Главная', url: absolute(localizedPath('/', locale)) },
-  ...(isCatalog || category
+  ...(isCatalog || category || detailProduct
     ? [
         {
           name: locale === 'en' ? 'Products' : 'Продукты',
@@ -68,8 +84,26 @@ const breadcrumbs = [
         }
       ]
     : []),
-  ...(category ? [{ name: localized(category.title), url: canonical }] : [])
+  ...(category ? [{ name: localized(category.title), url: canonical }] : []),
+  ...(productCategory
+    ? [
+        {
+          name: localized(productCategory.title),
+          url: absolute(localizedPath(`/products/${productCategory.slug}/`, locale))
+        }
+      ]
+    : []),
+  ...(detailProduct ? [{ name: localized(detailProduct.name), url: canonical }] : []),
+  ...(!isCatalog && !category && !detailProduct && normalizedPath !== '/' && !robotsNoindex
+    ? [
+        {
+          name: pageLabels[normalizedPath] ? localized(pageLabels[normalizedPath]) : title,
+          url: canonical
+        }
+      ]
+    : [])
 ];
+const hasBreadcrumbs = !robotsNoindex && normalizedPath !== '/';
 const listItems = category
   ? productsForCategory(category.slug as ProductCategorySlug).map((product, index) => ({
       '@type': 'ListItem',
@@ -79,7 +113,7 @@ const listItems = category
         '@id': absolute(localizedPath(`/products/${product.category}/${product.slug}/`, locale)),
         url: absolute(localizedPath(`/products/${product.category}/${product.slug}/`, locale)),
         name: localized(product.name),
-        description: localized(product.description),
+        description: localized(productSeo[product.id]?.description ?? product.description),
         image: absolute(withBase(product.image))
       }
     }))
@@ -90,7 +124,9 @@ const listItems = category
         '@type': 'CollectionPage',
         url: absolute(localizedPath('/products/' + entry.slug, locale)),
         name: localized(entry.title),
-        description: localized(entry.description),
+        description: localized(
+          pageSeo[`/products/${entry.slug}`]?.description ?? entry.description
+        ),
         image: absolute(withBase(entry.image))
       }
     }));
@@ -101,12 +137,21 @@ const structuredData = {
       ? [
           {
             '@type': 'Product',
+            '@id': canonical + '#product',
             name: localized(detailProduct.name),
-            description: localized(detailProduct.description),
-            image: absoluteImage,
+            description,
+            image: productImages,
             url: canonical,
+            productID: detailProduct.id,
+            category: productCategory ? localized(productCategory.title) : undefined,
+            brand: {
+              '@type': 'Brand',
+              name: detailProduct.id.startsWith('veymur-') ? 'Veymur' : 'SEHA'
+            },
+            mainEntityOfPage: { '@id': canonical + '#webpage' },
             manufacturer: {
               '@type': 'Organization',
+              '@id': rootUrl + '#manufacturer',
               name: locale === 'ru' ? 'Группа компаний СЕХА' : 'SEHA Group of Companies',
               address: { '@type': 'PostalAddress', addressCountry: 'IN' }
             }
@@ -116,10 +161,18 @@ const structuredData = {
     {
       '@type': 'Organization',
       '@id': rootUrl + '#organization',
-      name: siteContact.name,
+      name: locale === 'ru' ? 'Группа компаний СЕХА' : 'SEHA Group of Companies',
+      alternateName: ['SEHA', 'СЕХА'],
       url: rootUrl,
       email: siteContact.email,
       telephone: siteContact.phone,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        email: siteContact.email,
+        telephone: siteContact.phone,
+        availableLanguage: ['Russian', 'English']
+      },
       address: {
         '@type': 'PostalAddress',
         streetAddress: siteContact.street,
@@ -137,7 +190,12 @@ const structuredData = {
       publisher: { '@id': rootUrl + '#organization' }
     },
     {
-      '@type': category || isCatalog ? 'CollectionPage' : 'WebPage',
+      '@type':
+        category || isCatalog
+          ? 'CollectionPage'
+          : normalizedPath === '/about'
+            ? 'AboutPage'
+            : 'WebPage',
       '@id': canonical + '#webpage',
       url: canonical,
       name: title,
@@ -145,10 +203,12 @@ const structuredData = {
       inLanguage: localeCode,
       image: absoluteImage,
       isPartOf: { '@id': rootUrl + '#website' },
+      publisher: { '@id': rootUrl + '#organization' },
+      ...(hasBreadcrumbs ? { breadcrumb: { '@id': canonical + '#breadcrumbs' } } : {}),
+      ...(detailProduct ? { mainEntity: { '@id': canonical + '#product' } } : {}),
       ...(category || isCatalog
         ? {
-            mainEntity: { '@id': canonical + '#items' },
-            breadcrumb: { '@id': canonical + '#breadcrumbs' }
+            mainEntity: { '@id': canonical + '#items' }
           }
         : {})
     },
@@ -161,7 +221,11 @@ const structuredData = {
             numberOfItems: listItems.length,
             itemListOrder: 'https://schema.org/ItemListOrderAscending',
             itemListElement: listItems
-          },
+          }
+        ]
+      : []),
+    ...(hasBreadcrumbs
+      ? [
           {
             '@type': 'BreadcrumbList',
             '@id': canonical + '#breadcrumbs',
