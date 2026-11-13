@@ -146,7 +146,11 @@ const structuredData = {
             category: productCategory ? localized(productCategory.title) : undefined,
             brand: {
               '@type': 'Brand',
-              name: detailProduct.id.startsWith('veymur-') ? 'Veymur' : 'SEHA'
+              name: detailProduct.id.startsWith('veymur-')
+                ? 'Veymur'
+                : locale === 'ru'
+                  ? 'СЕХА'
+                  : 'SEHA'
             },
             mainEntityOfPage: { '@id': canonical + '#webpage' },
             manufacturer: {
@@ -184,7 +188,7 @@ const structuredData = {
     {
       '@type': 'WebSite',
       '@id': rootUrl + '#website',
-      name: 'SEHA',
+      name: locale === 'ru' ? 'СЕХА' : 'SEHA',
       url: rootUrl,
       inLanguage: ['ru-RU', 'en-US'],
       publisher: { '@id': rootUrl + '#organization' }
@@ -244,7 +248,7 @@ const structuredData = {
 
 {robotsNoindex && <meta name="robots" content="noindex, follow" />}
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="SEHA" />
+<meta property="og:site_name" content={locale === 'ru' ? 'СЕХА' : 'SEHA'} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />

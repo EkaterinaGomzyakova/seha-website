@@ -27,6 +27,7 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
 
 <form
   id="quote-form"
+  class="ym-hide-content"
   data-form-endpoint={endpoint}
   data-locale={locale}
   action={`mailto:${siteContact.email}`}

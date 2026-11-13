@@ -1,3 +1,4 @@
+import './analytics';
 import './mobile-menu';
 import './cookie-banner';
 import './russian-typography';

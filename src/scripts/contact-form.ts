@@ -1,3 +1,4 @@
+import { trackInquiry } from './analytics';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
 
@@ -100,6 +101,7 @@ export function initContactForm() {
       if (!response.ok) throw new Error(`Form endpoint returned ${response.status}`);
       const data = await response.json();
       if (data.success !== true) throw new Error('Form endpoint rejected the inquiry');
+      trackInquiry('footer_inquiry_sent');
       show('success', copy.successTitle, copy.successText);
       form.reset();
     } catch {

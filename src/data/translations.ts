@@ -10,7 +10,7 @@ export const siteTranslations = {
     offer: 'Рассчитать поставку',
     language: 'Переключить язык',
     menu: 'Открыть меню',
-    logoAlt: 'Сеха'
+    logoAlt: 'СЕХА'
   },
   en: {
     home: 'Home',

@@ -1,4 +1,5 @@
 import { initProductPackaging } from './product-packaging';
+import { trackInquiry } from './analytics';
 import { productInquiryCopy } from '../data/product-inquiry';
 
 export function initProductInquiry() {
@@ -143,6 +144,7 @@ export function initProductInquiry() {
       });
       const data = await response.json();
       if (!response.ok || data.success !== true) throw new Error('Inquiry rejected');
+      trackInquiry('product_inquiry_sent');
       result.textContent = copy.success;
       const product = field('product').value;
       const productId = field('productId').value;

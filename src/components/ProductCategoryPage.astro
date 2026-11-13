@@ -30,7 +30,7 @@ interface ImageEntry {
 const { locale, category } = Astro.props;
 const page = getProductCategoryPage(category, locale);
 const t = (value: { ru: string; en: string }) => value[locale];
-const title = `${t(page.title)} — Seha`;
+const title = `${t(page.title)} — ${locale === 'ru' ? 'СЕХА' : 'SEHA'}`;
 const foodLabels: Record<string, string> = {
   'veymur-mct-oil': 'Neutral Taste',
   'veymur-virgin-coconut-oil': 'Cold Pressed',

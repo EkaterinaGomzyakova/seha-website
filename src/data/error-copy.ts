@@ -1,6 +1,6 @@
 export const errorCopy = {
   ru: {
-    title: '404 — Сеха',
+    title: '404 — СЕХА',
     heading: 'Страница не найдена',
     headingStart: 'Страница',
     headingEnd: 'не найдена',

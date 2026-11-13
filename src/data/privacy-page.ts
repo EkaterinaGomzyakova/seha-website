@@ -44,9 +44,9 @@ export interface PrivacyPageCopy {
 }
 
 const ru = {
-  title: 'Политика конфиденциальности — Сеха',
+  title: 'Политика конфиденциальности — СЕХА',
   description:
-    'Политика конфиденциальности Сеха: обработка обращений и хранение настройки закрытия уведомления в браузере.',
+    'Политика конфиденциальности СЕХА: обработка обращений, использование cookies и Яндекс.Метрики.',
   skipText: 'К содержанию',
   breadcrumbs: 'Хлебные крошки',
   home: 'Главная',
@@ -96,12 +96,13 @@ const ru = {
       '• требований законодательства Российской Федерации.'
     ]
   },
-  storageTitle: 'Локальное хранение настройки уведомления',
-  storageLead: 'На сайте не загружаются сервисы аналитики, в том числе Яндекс.Метрика.',
+  storageTitle: 'Cookies и аналитика',
+  storageLead:
+    'На основном сайте используется Яндекс.Метрика (счётчик 114242284), включая Вебвизор и карту кликов. Сервис Яндекса получает технические сведения о посещениях: IP-адрес, данные браузера и устройства, cookies и действия на страницах. Эти сведения помогают анализировать использование сайта.',
   storageText:
-    'После закрытия уведомления сайт сохраняет в localStorage браузера только отметку о его закрытии (seha-cookie-consent). Это позволяет не показывать уведомление повторно. Эта настройка хранится на устройстве Пользователя и не отправляется сайтом на сервер.',
+    'После закрытия уведомления сайт сохраняет в localStorage браузера отметку seha-cookie-consent, чтобы не показывать уведомление повторно. Формы заявок скрыты от записи Вебвизора. Сайт передаёт в Метрику событие успешной отправки формы без имени, телефона, email и текста обращения. Адреса страниц передаются без параметров запроса.',
   storageOptout:
-    'Пользователь может удалить эту настройку, очистив данные сайта в браузере. После очистки уведомление появится снова.',
+    'Cookies и локальные настройки можно удалить в браузере. Для отключения сбора данных Метрикой можно использовать блокировку аналитики в браузере или расширение Яндекса: https://yandex.ru/support/metrica/ru/general/opt-out. Закрытие уведомления само по себе не отключает аналитику.',
   sharing: {
     title: 'Передача данных третьим лицам',
     lead: 'Персональные данные не продаются и не передаются третьим лицам, за исключением случаев:',
@@ -182,12 +183,13 @@ const en = {
       '• requirements of the legislation of the Russian Federation.'
     ]
   },
-  storageTitle: 'Local storage of the notice preference',
-  storageLead: 'The Website does not load analytics services, including Yandex.Metrica.',
+  storageTitle: 'Cookies and analytics',
+  storageLead:
+    'The public Website uses Yandex.Metrica (counter 114242284), including session replay and click maps. Yandex receives technical visit information, including IP addresses, browser and device details, cookies and page interactions, to help analyse Website usage.',
   storageText:
-    'After the notice is dismissed, the Website stores only a dismissal flag (seha-cookie-consent) in the browser’s localStorage. This prevents the notice from being shown again. This preference is stored on the User’s device and is not sent to a server by the Website.',
+    'Dismissing the notice stores a seha-cookie-consent flag in localStorage to avoid showing it repeatedly. Inquiry forms are hidden from session replay. Successful submission events contain no names, phone numbers, email addresses or message content. Page addresses are sent without query parameters.',
   storageOptout:
-    'The User can delete this preference by clearing the Website’s data in the browser. The notice will appear again after the data is cleared.',
+    'Cookies and local preferences can be cleared in the browser. Analytics can be blocked through browser tools or the Yandex opt-out extension: https://yandex.ru/support/metrica/en/general/opt-out. Dismissing the notice does not disable analytics.',
   sharing: {
     title: 'Sharing data with third parties',
     lead: 'Personal data is not sold or shared with third parties, except in cases:',

@@ -47,6 +47,7 @@ const inquiryCopy = productInquiryCopy[locale];
     </p>
     <form
       id="product-inquiry-form"
+      class="ym-hide-content"
       data-endpoint={import.meta.env.PUBLIC_PRODUCT_INQUIRY_ENDPOINT || undefined}
     >
       <input type="hidden" name="locale" value={locale} />

@@ -38,7 +38,7 @@ const category = productCategories.find((category) => category.slug === item.cat
 <SiteLayout
   locale={locale}
   path={path}
-  title={`${item.name[locale]} — SEHA`}
+  title={`${item.name[locale]} — ${locale === 'ru' ? 'СЕХА' : 'SEHA'}`}
   description={item.description[locale]}
   image={item.image}
   bodyClass="page-product-detail"
