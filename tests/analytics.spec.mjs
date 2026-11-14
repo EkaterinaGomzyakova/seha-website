@@ -62,7 +62,7 @@ test('production analytics masks forms and counts only successful inquiries with
     });
     await form.locator('[type="submit"]').click();
     await expect(form.locator('[type="submit"]')).toBeEnabled();
-    const expected = selector.includes('product') ? 2 : 1;
+    const expected = selector.includes('product') ? 3 : 1;
     expect(await page.evaluate(() => window.analyticsCalls.length)).toBe(expected);
     await form.evaluate((element) => {
       element.dataset.formEndpoint = '/analytics-test';
@@ -74,7 +74,22 @@ test('production analytics masks forms and counts only successful inquiries with
   const goals = await page.evaluate(() => window.analyticsCalls.slice(1));
   expect(goals).toEqual([
     [114242284, 'reachGoal', 'footer_inquiry_sent'],
+    [114242284, 'reachGoal', 'product_inquiry_opened'],
     [114242284, 'reachGoal', 'product_inquiry_sent']
+  ]);
+  // Repeated clicks while open do not count; a genuine reopening counts once again.
+  await page
+    .locator('[data-quote-product]')
+    .first()
+    .evaluate((element) => {
+      if (element instanceof HTMLElement) element.click();
+    });
+  expect(await page.evaluate(() => window.analyticsCalls.length)).toBe(4);
+  await page.locator('[data-close-inquiry]').click();
+  await page.locator('[data-quote-product]').first().click();
+  await expect(page.locator('#product-inquiry')).toBeVisible();
+  expect(await page.evaluate(() => window.analyticsCalls.slice(4))).toEqual([
+    [114242284, 'reachGoal', 'product_inquiry_opened']
   ]);
 });
 

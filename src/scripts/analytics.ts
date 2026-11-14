@@ -1,6 +1,6 @@
 // Only the public website sends analytics; previews and automated tests stay separate.
 export const metricaId = 114242284;
-type Goal = 'footer_inquiry_sent' | 'product_inquiry_sent';
+type Goal = 'footer_inquiry_sent' | 'product_inquiry_sent' | 'product_inquiry_opened';
 type Metrica = ((id: number, method: string, options?: unknown) => void) & {
   a?: unknown[][];
   l?: number;

@@ -39,6 +39,7 @@ export function initProductInquiry() {
       // Product inquiries use their own form; leave footer handlers and fields untouched.
       event.preventDefault();
       event.stopPropagation();
+      if (dialog.open) return;
       trigger = link;
       if (!pending) {
         const productId = link.dataset.productId;
@@ -96,6 +97,7 @@ export function initProductInquiry() {
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       dialog.showModal();
+      trackInquiry('product_inquiry_opened');
       dialog.scrollTop = 0;
     },
     { capture: true }
