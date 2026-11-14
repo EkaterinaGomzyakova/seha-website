@@ -100,7 +100,7 @@ const ru = {
   storageLead:
     'На основном сайте используется Яндекс.Метрика (счётчик 114242284), включая Вебвизор и карту кликов. Сервис Яндекса получает технические сведения о посещениях: IP-адрес, данные браузера и устройства, cookies и действия на страницах. Эти сведения помогают анализировать использование сайта.',
   storageText:
-    'После закрытия уведомления сайт сохраняет в localStorage браузера отметку seha-cookie-consent, чтобы не показывать уведомление повторно. Формы заявок скрыты от записи Вебвизора. Сайт передаёт в Метрику событие успешной отправки формы без имени, телефона, email и текста обращения. Адреса страниц передаются без параметров запроса.',
+    'После закрытия уведомления сайт сохраняет в localStorage браузера отметку seha-cookie-consent, чтобы не показывать уведомление повторно. Формы заявок скрыты от записи Вебвизора. Сайт передаёт в Метрику событие успешной отправки формы без имени, телефона, email и текста обращения. Из адресов страниц удаляются произвольные параметры запроса и фрагменты после #. Сохраняются только стандартные UTM-метки и идентификатор рекламного перехода yclid для определения источника посещения.',
   storageOptout:
     'Cookies и локальные настройки можно удалить в браузере. Для отключения сбора данных Метрикой можно использовать блокировку аналитики в браузере или расширение Яндекса: https://yandex.ru/support/metrica/ru/general/opt-out. Закрытие уведомления само по себе не отключает аналитику.',
   sharing: {
@@ -187,7 +187,7 @@ const en = {
   storageLead:
     'The public Website uses Yandex.Metrica (counter 114242284), including session replay and click maps. Yandex receives technical visit information, including IP addresses, browser and device details, cookies and page interactions, to help analyse Website usage.',
   storageText:
-    'Dismissing the notice stores a seha-cookie-consent flag in localStorage to avoid showing it repeatedly. Inquiry forms are hidden from session replay. Successful submission events contain no names, phone numbers, email addresses or message content. Page addresses are sent without query parameters.',
+    'Dismissing the notice stores a seha-cookie-consent flag in localStorage to avoid showing it repeatedly. Inquiry forms are hidden from session replay. Successful submission events contain no names, phone numbers, email addresses or message content. Arbitrary query parameters and URL fragments are removed from page addresses. Only standard UTM campaign tags and the yclid advertising click identifier are retained to identify traffic sources.',
   storageOptout:
     'Cookies and local preferences can be cleared in the browser. Analytics can be blocked through browser tools or the Yandex opt-out extension: https://yandex.ru/support/metrica/en/general/opt-out. Dismissing the notice does not disable analytics.',
   sharing: {

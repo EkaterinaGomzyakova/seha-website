@@ -22,7 +22,9 @@ test('production analytics masks forms and counts only successful inquiries with
     tags++;
     await route.fulfill({ contentType: 'application/javascript', body: '' });
   });
-  await page.goto('https://seha-group.ru/en/products/veymur/?email=private@example.com');
+  await page.goto(
+    'https://seha-group.ru/en/products/veymur/?email=private@example.com&phone=123&message=private&utm_source=calameo&utm_medium=referral&utm_campaign=food_catalog&utm_content=milk&utm_term=coconut&utm_id=summer&yclid=123456#private'
+  );
   await expect.poll(() => page.evaluate(() => window.analyticsCalls.length)).toBe(1);
   expect(tags).toBe(1);
   const init = await page.evaluate(() => window.analyticsCalls[0]);
@@ -30,6 +32,17 @@ test('production analytics masks forms and counts only successful inquiries with
   expect(init[1]).toBe('init');
   expect(init[2].webvisor).toBe(true);
   expect(init[2].url).not.toContain('email=');
+  const trackedUrl = new URL(init[2].url);
+  expect(Object.fromEntries(trackedUrl.searchParams)).toEqual({
+    utm_source: 'calameo',
+    utm_medium: 'referral',
+    utm_campaign: 'food_catalog',
+    utm_content: 'milk',
+    utm_term: 'coconut',
+    utm_id: 'summer',
+    yclid: '123456'
+  });
+  expect(trackedUrl.hash).toBe('');
   expect(init[2].trackLinks).toBe(true);
   await expect(page.locator('[data-email-quote]')).toHaveClass(/ym-disable-tracklink/);
   await expect(page.locator('#quote-form')).toHaveClass(/ym-hide-content/);

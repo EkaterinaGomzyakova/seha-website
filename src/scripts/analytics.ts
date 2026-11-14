@@ -12,10 +12,27 @@ declare global {
 }
 
 const production = location.hostname === 'seha-group.ru';
-const cleanUrl = (value: string) => {
+const campaignParameters = [
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_content',
+  'utm_term',
+  'utm_id',
+  'yclid'
+];
+const cleanUrl = (value: string, preserveCampaign = false) => {
   try {
     const url = new URL(value);
-    return url.origin + url.pathname;
+    const query = new URLSearchParams();
+    if (preserveCampaign) {
+      for (const parameter of campaignParameters) {
+        const value = url.searchParams.get(parameter);
+        if (value) query.set(parameter, value);
+      }
+    }
+    const search = query.toString();
+    return url.origin + url.pathname + (search ? `?${search}` : '');
   } catch {
     return '';
   }
@@ -43,7 +60,7 @@ if (production && !document.querySelector('[data-seha-metrica]')) {
     accurateTrackBounce: true,
     // The fallback email link opts out separately because its URL contains inquiry details.
     trackLinks: true,
-    url: cleanUrl(location.href),
+    url: cleanUrl(location.href, true),
     referrer: cleanUrl(document.referrer)
   });
 }
