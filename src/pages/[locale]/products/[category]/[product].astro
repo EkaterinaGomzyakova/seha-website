@@ -136,7 +136,7 @@ const faqItems = questions
           {faqItems.map(({ question, answer }) => (
             <details name="product-questions" class="product-detail__question">
               <summary>
-                <h3>{question[locale]}</h3>
+                <h3 class="type-h3">{question[locale]}</h3>
                 <span class="product-detail__question-icons" aria-hidden="true">
                   <TablerIcon name="plus" size={24} class="question-plus" />
                   <TablerIcon name="minus" size={24} class="question-minus" />
@@ -208,10 +208,6 @@ const faqItems = questions
   }
   .product-detail__question h3 {
     margin: 0;
-    font-size: clamp(18px, 1.6vw, 22px);
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
   }
   .product-detail__question-icons {
     display: grid;
