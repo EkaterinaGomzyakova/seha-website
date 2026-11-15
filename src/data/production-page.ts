@@ -38,7 +38,7 @@ const ru = {
     'Более 40 лет работы в кокосовой отрасли — от выращивания и сбора урожая до переработки. На каждом этапе контролируем сырьё и характеристики готовой продукции.',
   processSectionCardTitle: 'Сырье и производственная база',
   processSectionText2:
-    'СЕХА выращивает кокосы на собственных плантациях в Поллачи. Здесь проходит весь цикл — от выращивания и сбора урожая до подготовки сырья и переработки.',
+    'СЕХА выращивает кокосы на собственных плантациях в Поллачи, в регионе с муссонным климатом и благоприятными природными условиями. Здесь созревают сочные, маслянистые плоды и проходит весь цикл — от сбора урожая до подготовки сырья и переработки.',
   processSectionAlt: 'Производственная площадка среди кокосовых пальм',
   processSectionCardTitle2: 'Подготовка и хранение сырья',
   processSectionText3:
@@ -46,7 +46,7 @@ const ru = {
   processSectionAlt2: 'Склад и оборудование для подготовки кокосового сырья',
   processSectionCardTitle3: 'Пищевая переработка СЕХА',
   processSectionText4:
-    'Для пищевой линейки используются отдельные процессы: холодное прессование, фильтрация, удаление влаги и фракционирование масел.',
+    'Пищевая линия использует холодное прессование, фильтрацию и фракционирование масел. Европейское оборудование для дегидратации и гомогенизации помогает контролировать влажность и однородность продуктов. В линейке применяем и традиционные способы ферментации для формирования вкуса.',
   processSectionAlt3: 'Пищевой производственный цех со стальными емкостями',
   processSectionCardTitle4: 'MCT и жидкое кокосовое масло',
   processSectionText5:
@@ -54,11 +54,11 @@ const ru = {
   processSectionAlt4: 'Линии фильтрации и емкости для пищевого производства',
   processSectionCardTitle5: 'Фасовка и маркировка',
   processSectionText6:
-    'Согласуем фасовку, упаковку под маркой заказчика и маркировку по его требованиям. Готовые партии маркируют для прослеживаемости от приёмки сырья до отгрузки.',
+    'Для жидких пищевых продуктов предлагаем индивидуальную фасовку от 100 мл до контейнеров 1000 л в зависимости от продукта. Доступны упаковка под маркой заказчика и маркировка по его требованиям. Номер партии на каждой банке и пакете связывает готовую продукцию с сырьём и этапами переработки.',
   processSectionAlt5: 'Упаковка пищевых кокосовых продуктов',
   processSectionCardTitle6: 'Документы и отгрузка',
   processSectionText7:
-    'До отгрузки согласуем спецификацию, упаковку и документы. Маршрут поставки, включая морскую перевозку и импорт в Россию, а также доставку до склада заказчика определяем по согласованным условиям.',
+    'Наша логистическая служба организует доставку по всей России и экспорт в страны СНГ, Европы и Азии. До отгрузки готовим документы, определяем маршрут и сроки с учётом партии и направления. Для постоянных партнёров согласуем график поставок.',
   processSectionAlt6: 'Подготовленная партия кокосовых продуктов к поставке',
   facilityShowcaseAlt: 'Пищевой производственный цех со стальными емкостями и линиями фильтрации',
   facilityShowcaseLabel: 'ПИЩЕВОЕ ПРОИЗВОДСТВО СЕХА',
@@ -146,7 +146,7 @@ const en = {
     'Over 40 years in the coconut industry, from growing and harvesting to processing. We monitor raw materials and finished product characteristics at each stage.',
   processSectionCardTitle: 'Raw materials and manufacturing base',
   processSectionText2:
-    'SEHA grows coconuts on its own plantations in Pollachi. The full cycle takes place here, from growing and harvesting to raw material preparation and processing.',
+    'SEHA grows coconuts on its own plantations in Pollachi, a region with a monsoon climate and favourable natural conditions. The fruit develops juicy, oil-rich kernels, and the full cycle takes place here, from harvesting to raw material preparation and processing.',
   processSectionAlt: 'Manufacturing facility among coconut palms',
   processSectionCardTitle2: 'Raw material preparation and storage',
   processSectionText3:
@@ -154,7 +154,7 @@ const en = {
   processSectionAlt2: 'Warehouse and equipment for coconut raw material preparation',
   processSectionCardTitle3: 'SEHA food processing',
   processSectionText4:
-    'Separate processes are used for the food range: cold pressing, filtration, moisture removal and oil fractionation.',
+    'The food line uses cold pressing, filtration and oil fractionation. European dehydration and homogenisation equipment helps control moisture and product consistency. Traditional fermentation methods are also used within the range to develop flavour.',
   processSectionAlt3: 'Food production workshop with steel tanks',
   processSectionCardTitle4: 'MCT and liquid coconut oil',
   processSectionText5:
@@ -162,11 +162,11 @@ const en = {
   processSectionAlt4: 'Filtration lines and tanks for food manufacturing',
   processSectionCardTitle5: 'Packing and labelling',
   processSectionText6:
-    'We agree on pack sizes, private-label packaging and labelling to the customer’s requirements. Batch identification enables traceability from raw material intake to dispatch.',
+    'Custom pack sizes for liquid food products range from 100 ml to 1,000-litre containers, depending on the product. Private-label packaging and customer-specific labelling are available. Batch numbers on jars and packs link finished products to raw materials and processing stages.',
   processSectionAlt5: 'Packing coconut food products',
   processSectionCardTitle6: 'Documents and shipment',
   processSectionText7:
-    'Specifications, packaging and documents are agreed before shipment. The shipping route, including sea freight and import into Russia, and delivery to the customer’s warehouse are arranged under the agreed supply terms.',
+    'Our logistics team arranges delivery throughout Russia and exports to the CIS, Europe and Asia. Before dispatch, we prepare documents and determine routes and lead times for the batch and destination. Recurring supply schedules can be arranged for long-term partners.',
   processSectionAlt6: 'A prepared batch of coconut products ready for supply',
   facilityShowcaseAlt: 'Food production workshop with steel tanks and filtration lines',
   facilityShowcaseLabel: 'SEHA FOOD PRODUCTION',

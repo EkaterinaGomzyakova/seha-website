@@ -1356,7 +1356,7 @@ const productSpecifications: Record<string, readonly Specification[]> = {
     field(
       'Массовая доля жира',
       'Fat content',
-      text('17–19%; другая жирность по запросу', '17–19%; other fat contents on request')
+      text('17–19% стандартная; варианты 5–20%', '17–19% standard; options 5–20%')
     ),
     field('Сухие вещества', 'Total solids', text('уточнить', 'to be confirmed')),
     field('Массовая доля белка', 'Protein content', text('уточнить', 'to be confirmed')),

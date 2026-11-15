@@ -16,7 +16,7 @@ const ru = {
   aboutIntroHeading: 'Производим и',
   aboutIntroLabel2: 'поставляем кокосовые продукты',
   aboutIntroText:
-    'Группа компаний СЕХА производит кокосовую продукцию в Поллачи, Индия, и поставляет её в Россию. Выпускаем пищевые продукты Veymur, субстраты для выращивания, изделия из кокосового волокна и продукты из скорлупы.',
+    'Более 40 лет группа компаний СЕХА выращивает кокосы и производит кокосовую продукцию в Поллачи, Индия. Поставляем в Россию масла МСТ, RBD и Virgin, кокосовую стружку и молоко под маркой Veymur, а также субстраты, изделия из волокна и продукты из скорлупы.',
   aboutIntroText2:
     'Работаем от выращивания кокосов до переработки и фасовки готовой продукции. Команда в Москве помогает выбрать продукт, согласовать характеристики, упаковку и документы и организует поставку. Приоритет — оптовые закупки; розничные заказы также доступны. Фасовку, цену и доставку уточняем по выбранному товару.',
   aboutProductionAddressLabel: 'Производство в Индии',
@@ -31,16 +31,16 @@ const ru = {
   aboutApproachLabel3: 'работы',
   aboutApproachCardTitle: 'Происхождение имеет значение',
   aboutApproachText2:
-    'Наши корни — в сельском хозяйстве. Фермерский опыт и контроль от сбора урожая до готовой продукции помогают подбирать сырьё и решения под задачи заказчиков.',
+    'За четыре десятилетия накопили опыт селекции, отбора и сушки кокосов. Контролируем путь от плантации до переработки: зрелость сырья и бережная подготовка помогают поддерживать стабильные вкус и аромат от партии к партии.',
   aboutApproachCardTitle2: 'Спецификация раньше цены',
   aboutApproachText3:
-    'Цена зависит от категории, фракции, упаковки, объема, курса, логистики и документов. Коммерческое предложение собирается под реальный запрос.',
+    'Стоимость рассчитываем с учётом продукта, упаковки, объёма и доставки. Для оптовых закупок предлагаем скидки, а для регулярных поставок — долгосрочные контракты с согласованными ценами и графиком отгрузок.',
   aboutApproachCardTitle3: 'Вся ценность кокоса',
   aboutApproachText4:
     'Мякоть, волокно и скорлупа становятся разными продуктами: пищевыми ингредиентами, материалами для выращивания и сырьем для промышленного применения.',
   aboutApproachCardTitle4: 'Индивидуальное решение',
   aboutApproachText5:
-    'Для растениеводства подбираем состав субстрата, pH, EC, фракцию и соотношение волокна и чипсов. Размеры гроубэгов, отверстия и упаковку согласовываем под культуру и систему выращивания.',
+    'Подбираем состав и формат субстратов под культуру и систему выращивания. Для пищевого производства консультируем по замене животных жиров и ингредиентов с трансжирами кокосовыми маслами, помогаем разработать рецептуру под вашу технологию.',
   aboutShiftLabel: 'Наш подход',
   aboutShiftHeading: 'Используем',
   aboutShiftEmphasis: 'разные части кокоса',
@@ -67,7 +67,7 @@ const ru = {
   certPreviewHeading: 'Начнём с вашей задачи,',
   certPreviewLabel2: 'подберём продукт',
   certPreviewText:
-    'Расскажите, какой продукт нужен, какой объем рассматриваете и куда нужна доставка. Мы уточним параметры и подготовим коммерческое предложение.',
+    'Расскажите о продукте, объёме и месте доставки — подготовим коммерческое предложение и образцы. Для пищевой линейки проводим бесплатные дегустации и технологические консультации, чтобы вы могли оценить ингредиент в своей рецептуре.',
   certPreviewLink: 'Получить предложение'
 } as const;
 
@@ -89,7 +89,7 @@ const en = {
   aboutIntroHeading: 'We produce and',
   aboutIntroLabel2: 'supply coconut products',
   aboutIntroText:
-    'SEHA Group of Companies manufactures coconut products in Pollachi, India, and supplies them to Russia. Our range includes Veymur food products, growing substrates, coir fibre products and coconut shell products.',
+    'For over 40 years, SEHA Group has grown coconuts and manufactured coconut products in Pollachi, India. We supply Russia with Veymur MCT, RBD and Virgin oils, desiccated coconut and coconut milk, as well as growing substrates, coir fibre and coconut shell products.',
   aboutIntroText2:
     'Our work covers coconut cultivation, processing and packing of finished products. Our Moscow team helps customers choose products, agree on specifications, packaging and documents, and arrange delivery. Wholesale is our priority; retail orders are also available. Pack sizes, pricing and delivery are confirmed for the selected product.',
   aboutProductionAddressLabel: 'Manufacturing in India',
@@ -104,16 +104,16 @@ const en = {
   aboutApproachLabel3: 'we work',
   aboutApproachCardTitle: 'Origin matters',
   aboutApproachText2:
-    'Our roots are in agriculture. Farming experience and control from harvesting to finished products help us select raw materials and solutions for our customers’ needs.',
+    'Four decades of experience in coconut selection, cultivation and drying underpin our work. We control the journey from plantation to processing: raw material maturity and careful preparation help maintain consistent flavour and aroma across batches.',
   aboutApproachCardTitle2: 'Specifications before price',
   aboutApproachText3:
-    'Price depends on the category, particle size, packaging, volume, exchange rate, logistics and documents. A quotation is prepared for an actual request.',
+    'Pricing reflects the product, packaging, volume and delivery. We offer wholesale discounts and long-term contracts with agreed prices and shipment schedules for recurring orders.',
   aboutApproachCardTitle3: 'The full value of coconut',
   aboutApproachText4:
     'Flesh, fibre and shell become different products: food ingredients, growing materials and raw materials for industrial applications.',
   aboutApproachCardTitle4: 'A tailored solution',
   aboutApproachText5:
-    'For horticulture, we tailor substrate composition, pH, EC, particle size and the fibre-to-chip ratio. Grow bag dimensions, openings and packaging are agreed for the crop and growing system.',
+    'We tailor substrate blends and formats to the crop and growing system. For food manufacturers, we advise on replacing animal fats and ingredients containing trans fats with coconut oils and help develop recipes for their processes.',
   aboutShiftLabel: 'Our approach',
   aboutShiftHeading: 'Making use of',
   aboutShiftEmphasis: 'different parts of the coconut',
@@ -140,7 +140,7 @@ const en = {
   certPreviewHeading: 'Tell us what you need,',
   certPreviewLabel2: 'we will find the right product',
   certPreviewText:
-    'Tell us which product you need, the volume you are considering and where it should be delivered. We will clarify the parameters and prepare a quotation.',
+    'Tell us the product, volume and delivery destination to receive a quotation and samples. We offer free tastings and technical consultations for the food range so you can evaluate an ingredient in your own formulation.',
   certPreviewLink: 'Request a quote'
 } satisfies AboutPageCopy;
 

@@ -136,11 +136,11 @@ const faqItems = questions
           {faqItems.map(({ question, answer }) => (
             <details name="product-questions" class="product-detail__question">
               <summary>
-                <h3 class="type-h3">{question[locale]}</h3>
                 <span class="product-detail__question-icons" aria-hidden="true">
                   <TablerIcon name="plus" size={24} class="question-plus" />
                   <TablerIcon name="minus" size={24} class="question-minus" />
                 </span>
+                <h3 class="type-h3">{question[locale]}</h3>
               </summary>
               <div class="product-detail__answer">
                 <p class="type-p">{answer[locale]}</p>
@@ -184,16 +184,16 @@ const faqItems = questions
     gap: 24px;
   }
   .product-detail__question-list {
-    border-top: 1px solid color-mix(in srgb, var(--color-green-brand) 20%, transparent);
+    --question-icon-width: 24px;
+    --question-gap: 24px;
   }
   .product-detail__question {
     border-bottom: 1px solid color-mix(in srgb, var(--color-green-brand) 20%, transparent);
   }
   .product-detail__question summary {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    align-items: baseline;
+    gap: var(--question-gap);
     min-height: 80px;
     padding: 24px 0;
     cursor: pointer;
@@ -212,7 +212,9 @@ const faqItems = questions
   .product-detail__question-icons {
     display: grid;
     place-items: center;
-    flex: 0 0 24px;
+    flex: 0 0 var(--question-icon-width);
+    align-self: flex-start;
+    margin-top: 4px;
     transition: opacity 0.2s ease;
   }
   .product-detail__question summary:hover .product-detail__question-icons {
@@ -226,20 +228,22 @@ const faqItems = questions
     display: inline-block;
   }
   .product-detail__answer {
-    max-width: 72ch;
-    padding: 0 48px 24px 0;
+    max-width: calc(72ch + var(--question-icon-width) + var(--question-gap));
+    padding: 0 0 32px calc(var(--question-icon-width) + var(--question-gap));
   }
   .product-detail__answer p {
     margin: 0;
   }
   @media (max-width: 440px) {
+    .product-detail__question-list {
+      --question-gap: 16px;
+    }
     .product-detail__question summary {
       min-height: 72px;
-      gap: 16px;
       padding-block: 20px;
     }
     .product-detail__answer {
-      padding-right: 0;
+      padding-bottom: 24px;
     }
   }
   .product-detail__overview :global(.product-gallery__main > picture > img) {
