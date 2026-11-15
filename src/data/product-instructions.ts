@@ -16,8 +16,8 @@ export const productInstructions: Record<string, readonly InstructionStep[]> = {
     step(
       'Выберите конфигурацию',
       'Choose the configuration',
-      'Согласуйте состав, размеры и отверстия под культуру и систему полива. Буферизация доступна по запросу.',
-      'Agree the blend, dimensions and holes for the crop and irrigation system. Buffering is available on request.'
+      'Выберите размеры мата и расположение отверстий под вашу схему посадки и полива.',
+      'Choose slab dimensions and hole positions to suit your planting and irrigation layout.'
     ),
     step(
       'Разложите маты',

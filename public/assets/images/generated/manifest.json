@@ -305,6 +305,27 @@
         }
       ]
     },
+    "/assets/images/common/applications/coffee.webp": {
+      "fingerprint": "4d073a7310422240b6963210fcbe9b423dbc8306b53792fb934a7b66bbe5dba8",
+      "width": 320,
+      "height": 320,
+      "variants": [
+        {
+          "src": "/assets/images/generated/common/applications/coffee.webp-320.webp",
+          "format": "webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 15594
+        },
+        {
+          "src": "/assets/images/generated/common/applications/coffee.webp-320.avif",
+          "format": "avif",
+          "width": 320,
+          "height": 320,
+          "bytes": 9038
+        }
+      ]
+    },
     "/assets/images/common/applications/confectionery.webp": {
       "fingerprint": "4cba0043bea09e577acb930eb82f576504531d3122609e2da827568e3b41853b",
       "width": 320,

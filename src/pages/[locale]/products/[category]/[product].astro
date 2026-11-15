@@ -14,6 +14,7 @@ import ProductPackaging from '../../../../components/ProductPackaging.astro';
 import { productPackaging } from '../../../../data/product-packaging';
 import { productInquiryCopy } from '../../../../data/product-inquiry';
 import Button from '../../../../components/ui/Button.astro';
+import TablerIcon from '../../../../components/ui/TablerIcon.astro';
 import { localizedPath } from '../../../../lib/paths';
 import { specificationsFor } from '../../../../data/product-specifications';
 import { productQuestions } from '../../../../data/product-questions';
@@ -35,6 +36,18 @@ const inquiryCopy = productInquiryCopy[locale];
 const path = `/products/${item.category}/${item.slug}/`;
 const category = productCategories.find((category) => category.slug === item.category)!;
 const questions = productQuestions[item.id];
+const faqItems = questions
+  ? [
+      ...questions.questions,
+      {
+        question: { ru: 'Можно ли купить в розницу?', en: 'Can I place a retail order?' },
+        answer: {
+          ru: 'Да. СЕХА работает с оптовыми и розничными заказами. Выберите товар и отправьте запрос: доступную фасовку, количество, цену и условия доставки уточнит менеджер.',
+          en: 'Yes. SEHA accepts wholesale and retail orders. Select a product and send an inquiry: our team will confirm available packaging, quantities, pricing and delivery terms.'
+        }
+      }
+    ]
+  : [];
 ---
 
 <SiteLayout
@@ -119,21 +132,21 @@ const questions = productQuestions[item.id];
         <h2 id="product-questions-title" class="type-h2">
           {ru ? 'Вопросы о товаре и поставке' : 'Product and supply questions'}
         </h2>
-        {questions.questions.map(({ question, answer }) => (
-          <div>
-            <h3 class="type-h3">{question[locale]}</h3>
-            <p class="type-p">{answer[locale]}</p>
-          </div>
-        ))}
-        <div>
-          <h3 class="type-h3">
-            {ru ? 'Можно ли купить в розницу?' : 'Can I place a retail order?'}
-          </h3>
-          <p class="type-p">
-            {ru
-              ? 'Да. СЕХА работает с оптовыми и розничными заказами. Выберите товар и отправьте запрос: доступную фасовку, количество, цену и условия доставки уточнит менеджер.'
-              : 'Yes. SEHA accepts wholesale and retail orders. Select a product and send an inquiry: our team will confirm available packaging, quantities, pricing and delivery terms.'}
-          </p>
+        <div class="product-detail__question-list">
+          {faqItems.map(({ question, answer }) => (
+            <details name="product-questions" class="product-detail__question">
+              <summary>
+                <h3>{question[locale]}</h3>
+                <span class="product-detail__question-icons" aria-hidden="true">
+                  <TablerIcon name="plus" size={24} class="question-plus" />
+                  <TablerIcon name="minus" size={24} class="question-minus" />
+                </span>
+              </summary>
+              <div class="product-detail__answer">
+                <p class="type-p">{answer[locale]}</p>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
     )}
@@ -170,14 +183,68 @@ const questions = productQuestions[item.id];
     display: grid;
     gap: 24px;
   }
-  .product-detail__questions > div {
-    max-width: 72ch;
-    display: grid;
-    gap: 12px;
+  .product-detail__question-list {
+    border-top: 1px solid color-mix(in srgb, var(--color-green-brand) 20%, transparent);
   }
-  .product-detail__questions h3,
-  .product-detail__questions p {
+  .product-detail__question {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-green-brand) 20%, transparent);
+  }
+  .product-detail__question summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 80px;
+    padding: 24px 0;
+    cursor: pointer;
+    list-style: none;
+  }
+  .product-detail__question summary::-webkit-details-marker {
+    display: none;
+  }
+  .product-detail__question summary:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 4px;
+  }
+  .product-detail__question h3 {
     margin: 0;
+    font-size: clamp(18px, 1.6vw, 22px);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+  .product-detail__question-icons {
+    display: grid;
+    place-items: center;
+    flex: 0 0 24px;
+    transition: opacity 0.2s ease;
+  }
+  .product-detail__question summary:hover .product-detail__question-icons {
+    opacity: 0.65;
+  }
+  .product-detail__question :global(.question-minus),
+  .product-detail__question[open] :global(.question-plus) {
+    display: none;
+  }
+  .product-detail__question[open] :global(.question-minus) {
+    display: inline-block;
+  }
+  .product-detail__answer {
+    max-width: 72ch;
+    padding: 0 48px 24px 0;
+  }
+  .product-detail__answer p {
+    margin: 0;
+  }
+  @media (max-width: 440px) {
+    .product-detail__question summary {
+      min-height: 72px;
+      gap: 16px;
+      padding-block: 20px;
+    }
+    .product-detail__answer {
+      padding-right: 0;
+    }
   }
   .product-detail__overview :global(.product-gallery__main > picture > img) {
     width: 100%;

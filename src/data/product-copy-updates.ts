@@ -11,7 +11,7 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
       'SEHA grow bags contain coconut substrate for greenhouse, protected and soilless cultivation of strawberries, tomatoes, cucumbers and other crops.'
     ],
     fullDescription: [
-      'Гроубэг СЕХА — кокосовый мат с субстратом для теплиц и беспочвенного выращивания клубники, томатов, огурцов и других культур. Coco peat удерживает влагу, а волокно и чипсы поддерживают аэрацию и дренаж.\n\nСостав по объёму, фракцию, размеры и отверстия подбираем под культуру и систему выращивания. Субстрат промыт, буферизация доступна по запросу. Подходит для капельного полива и подачи удобрений с поливной водой.',
+      'Гроубэг СЕХА — кокосовый мат с субстратом для теплиц и беспочвенного выращивания клубники, томатов, огурцов и других культур. Кокосовый торф удерживает влагу, а волокно и чипсы поддерживают аэрацию и дренаж.\n\nСостав по объёму, фракцию, размеры и отверстия подбираем под культуру и систему выращивания. Субстрат промыт, буферизация доступна по запросу. Подходит для капельного полива и подачи удобрений с поливной водой.',
       'SEHA grow bags contain coconut substrate for greenhouse and soilless cultivation of strawberries, tomatoes, cucumbers and other crops. Pith retains moisture, while fibre and chips support aeration and drainage.\n\nThe blend by volume, particle grade, dimensions and holes are tailored to the crop and growing system. The substrate is washed; buffering is available on request. Suitable for drip irrigation and fertigation.'
     ]
   },
@@ -157,11 +157,11 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   },
   'veymur-mct-oil': {
     fullDescription: [
-      'Органическое кокосовое МСТ-масло (MCT) СЕХА получают из кокосового масла с концентрированием среднецепочечных триглицеридов. Подтверждённый профиль жирных кислот: C8 — 55–65%, C10 — 35–45%, C12 — не более 1%. Это прозрачная бесцветная жидкость без вкуса и запаха.\n\nПроизводится в Индии для пищевых рецептур, отдельных напитков и специализированных продуктов питания. Поставляется производителям, дистрибьюторам и маркам заказчиков в пищевой готовой упаковке и транспортной таре. Органическая сертификация подтверждена документами.',
+      'Органическое кокосовое МСТ-масло СЕХА получают из кокосового масла с концентрированием среднецепочечных триглицеридов. Подтверждённый профиль жирных кислот: C8 — 55–65%, C10 — 35–45%, C12 — не более 1%. Это прозрачная бесцветная жидкость без вкуса и запаха. Международное название — MCT oil.\n\nПроизводится в Индии для пищевых рецептур, отдельных напитков и специализированных продуктов питания. Поставляется производителям, дистрибьюторам и маркам заказчиков в пищевой готовой упаковке и транспортной таре. Органическая сертификация подтверждена документами.',
       'SEHA Organic MCT Coconut Oil is derived from coconut oil and processed to concentrate medium-chain triglycerides. Its confirmed fatty acid profile is C8 55–65%, C10 35–45% and C12 no more than 1%. It is a clear, colourless, odourless and tasteless liquid.\n\nManufactured in India for food formulations, selected beverages and specialised nutritional products. Food-grade retail and bulk formats serve manufacturers, distributors and private-label brands. Organic certification is supported by documents.'
     ],
     description: [
-      'Кокосовое МСТ-масло (MCT) с концентрированными среднецепочечными триглицеридами C8 и C10. Прозрачная бесцветная жидкость без вкуса и запаха для пищевых рецептур, отдельных напитков и специализированных продуктов питания.',
+      'Кокосовое МСТ-масло с концентрированными среднецепочечными триглицеридами C8 и C10. Прозрачная бесцветная жидкость без вкуса и запаха для пищевых рецептур, отдельных напитков и специализированных продуктов питания.',
       'Coconut-derived oil with concentrated C8 and C10 medium-chain triglycerides. A clear, colourless, odourless and tasteless liquid for food formulations, selected beverages and specialised nutritional products.'
     ]
   },

@@ -224,7 +224,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-mct-oil',
       'veymur-mct-oil.png',
-      'Органическое МСТ-масло (MCT)',
+      'Органическое МСТ-масло',
       'Organic MCT Oil',
       ...productCopyUpdates['veymur-mct-oil'].description,
       '500 мл',
@@ -238,6 +238,15 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       ...productCopyUpdates['veymur-virgin-coconut-oil'].description,
       '500 мл',
       '500 ml'
+    ],
+    [
+      'rbd-coconut-oil',
+      '/assets/images/food/rbd-coconut-oil.png',
+      'Органическое рафинированное кокосовое масло (RBD)',
+      'Organic RBD Coconut Oil',
+      ...productCopyUpdates['rbd-coconut-oil'].description,
+      'RBD Coconut Oil',
+      'Neutral Taste'
     ],
     [
       'veymur-coconut-sugar',
@@ -283,15 +292,6 @@ const rows: Record<ProductCategorySlug, Row[]> = {
       ...productCopyUpdates['mature-coconut'].description,
       'Mature Coconut',
       'Mature Coconut'
-    ],
-    [
-      'rbd-coconut-oil',
-      '/assets/images/food/rbd-coconut-oil.png',
-      'Органическое рафинированное кокосовое масло (RBD)',
-      'Organic RBD Coconut Oil',
-      ...productCopyUpdates['rbd-coconut-oil'].description,
-      'RBD Coconut Oil',
-      'Neutral Taste'
     ]
   ],
   shell: [

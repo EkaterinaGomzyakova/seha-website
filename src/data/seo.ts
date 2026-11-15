@@ -168,9 +168,9 @@ export const productSeo: Record<string, Metadata> = {
     'Woven coir geotextiles for slopes, riverbanks and erosion control. Example grades: 400, 700 and 900 GSM; mesh openings and roll dimensions made to order.'
   ),
   'veymur-mct-oil': metadata(
-    'Кокосовое МСТ-масло (MCT) C8/C10 оптом — органическое | СЕХА',
+    'Кокосовое МСТ-масло C8/C10 оптом — органическое | СЕХА',
     'Organic Coconut MCT Oil C8 & C10 — Wholesale | Veymur',
-    'Органическое кокосовое МСТ-масло (MCT): C8 55–65%, C10 35–45%. Фасовка 500 мл и транспортная тара. Опт и розница: запросите цену у СЕХА.',
+    'Органическое кокосовое МСТ-масло: C8 55–65%, C10 35–45%. Фасовка 500 мл и транспортная тара. Опт и розница: запросите цену у СЕХА.',
     'Organic coconut MCT oil with neutral taste and odour: C8 55–65%, C10 35–45%. For food and beverage formulations, in retail and bulk packaging.'
   ),
   'veymur-virgin-coconut-oil': metadata(

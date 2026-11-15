@@ -30,6 +30,7 @@ export const applications = {
   orchards: application('Плодовые сады', 'Fruit orchards', 'orchards'),
   landscaping: application('Озеленение', 'Landscaping', 'landscaping'),
   drinks: application('Напитки', 'Beverages', 'drinks'),
+  coffee: application('Бронекофе', 'Bulletproof coffee', 'coffee'),
   bakery: application('Выпечка', 'Bakery products', 'bakery'),
   confectionery: application('Кондитерские изделия', 'Confectionery', 'confectionery'),
   desserts: application('Десерты', 'Desserts', 'desserts'),
@@ -313,6 +314,18 @@ export const productApplicationDescriptions: Record<
     snacks: text(
       'Масло добавляют в смеси для батончиков и других снеков.',
       'The oil is added to mixes for snack bars and other snacks.'
+    ),
+    coffee: text(
+      'Масло смешивают с кофе и другими ингредиентами по рецептуре бронекофе.',
+      'The oil is blended with coffee and other ingredients in bulletproof coffee recipes.'
+    ),
+    preparedFood: text(
+      'Добавляют в салатные заправки, каши и соусы: масло имеет нейтральный вкус и аромат.',
+      'Added to salad dressings, porridge and sauces for its neutral taste and aroma.'
+    ),
+    cosmetics: text(
+      'Масло вводят в жировую фазу кремов, бальзамов и средств для волос.',
+      'The oil is added to the oil phase of creams, balms and hair products.'
     )
   },
   'veymur-virgin-coconut-oil': {
@@ -450,24 +463,24 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'coco-peat': ['tomatoes', 'cucumbers', 'lettuce', 'petunias'],
   'coco-peat-briquettes': ['tomatoes', 'strawberries', 'lettuce', 'basil'],
   'coconut-chips': [
-    'orchids',
-    'anthuriums',
-    'bromeliads',
     'strawberries',
+    'raspberries',
+    'blueberries',
     'tomatoes',
     'cucumbers',
-    'raspberries',
-    'blueberries'
+    'orchids',
+    'anthuriums',
+    'bromeliads'
   ],
   'coco-husk-chips-bricks': [
-    'orchids',
-    'anthuriums',
-    'bromeliads',
     'strawberries',
+    'raspberries',
+    'blueberries',
     'tomatoes',
     'cucumbers',
-    'raspberries',
-    'blueberries'
+    'orchids',
+    'anthuriums',
+    'bromeliads'
   ],
   'grow-cube-sleeve': [
     'tomatoes',
@@ -485,7 +498,7 @@ export const productApplications: Record<string, readonly (keyof typeof applicat
   'machine-twisted-fiber': ['ropes', 'brushes', 'mats', 'erosionMesh'],
   'coir-weed-mat': ['berries', 'vegetables', 'orchards', 'nurseries', 'landscaping'],
   'coir-geo-textile': ['slopes', 'riverbanks', 'landscaping'],
-  'veymur-mct-oil': ['drinks', 'snacks'],
+  'veymur-mct-oil': ['drinks', 'snacks', 'coffee', 'preparedFood', 'cosmetics'],
   'veymur-virgin-coconut-oil': ['bakery', 'preparedFood', 'cosmetics'],
   'veymur-coconut-sugar': ['drinks', 'bakery', 'confectionery', 'desserts'],
   'veymur-desiccated-coconut': ['bakery', 'confectionery', 'desserts', 'snacks'],
