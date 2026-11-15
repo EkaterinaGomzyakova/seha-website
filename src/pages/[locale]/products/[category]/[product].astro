@@ -75,7 +75,6 @@ const questions = productQuestions[item.id];
         </div>
         <ProductPackaging product={item} locale={locale} />
         <ProductQuantity productId={item.id} locale={locale} />
-        {questions && <p class="type-p">{questions.inquiryHint[locale]}</p>}
         <Button
           href="#contacts"
           full

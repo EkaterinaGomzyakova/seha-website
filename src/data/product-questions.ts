@@ -2,17 +2,12 @@ import type { LocalizedText } from './products';
 
 interface ProductQuestions {
   heading: LocalizedText;
-  inquiryHint: LocalizedText;
   questions: { question: LocalizedText; answer: LocalizedText }[];
 }
 
 export const productQuestions: Record<string, ProductQuestions> = {
   'grow-bag': {
     heading: { ru: 'Кокосовый мат — гроубэг', en: 'Coco Coir Grow Bag' },
-    inquiryHint: {
-      ru: 'Для расчёта поставки укажите культуру, нужные размеры, состав субстрата и количество гроубэгов. Принимаем оптовые и розничные заказы. Доступное количество, цену и сроки уточним в предложении.',
-      en: 'For a supply quote, specify the crop, dimensions, substrate blend and number of grow bags. Wholesale and retail orders are welcome. Available quantities, price and lead time are confirmed in the offer.'
-    },
     questions: [
       {
         question: {
@@ -48,10 +43,6 @@ export const productQuestions: Record<string, ProductQuestions> = {
   },
   'open-top-grow-bag': {
     heading: { ru: 'Открытый гроубэг с субстратом', en: 'Open-Top Grow Bag with Coir' },
-    inquiryHint: {
-      ru: 'Для расчёта поставки укажите культуру, рабочий объём мешка, состав субстрата и количество. Принимаем оптовые и розничные заказы; доступное количество, цену и сроки уточним по выбранному формату.',
-      en: 'For a supply quote, specify the crop, working bag volume, substrate blend and quantity. Wholesale and retail orders are welcome; available quantities, price and lead time are confirmed for the selected format.'
-    },
     questions: [
       {
         question: {
@@ -87,10 +78,6 @@ export const productQuestions: Record<string, ProductQuestions> = {
   },
   'veymur-mct-oil': {
     heading: { ru: 'Кокосовое МСТ-масло (MCT)', en: 'Organic Coconut MCT Oil' },
-    inquiryHint: {
-      ru: 'Для расчёта цены выберите фасовку и количество. В комментарии укажите назначение продукта и требования к упаковке. Работаем с оптовыми и розничными заказами; доступное количество, документы и доставку уточним в предложении.',
-      en: 'Select packaging and quantity for a price quote. Include the intended application and packaging requirements in your comment. Wholesale and retail orders are welcome; available quantities, documents and delivery will be clarified in the offer.'
-    },
     questions: [
       {
         question: { ru: 'Что такое МСТ-масло и как связано с MCT?', en: 'What is MCT oil?' },
