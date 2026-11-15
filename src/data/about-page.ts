@@ -18,7 +18,7 @@ const ru = {
   aboutIntroText:
     'Группа компаний СЕХА производит кокосовую продукцию в Поллачи, Индия, и поставляет её в Россию. Выпускаем пищевые продукты Veymur, субстраты для выращивания, изделия из кокосового волокна и продукты из скорлупы.',
   aboutIntroText2:
-    'Работаем от выращивания кокосов до переработки и фасовки готовой продукции. Команда в Москве помогает выбрать продукт, согласовать характеристики, упаковку и документы и организует поставку.',
+    'Работаем от выращивания кокосов до переработки и фасовки готовой продукции. Команда в Москве помогает выбрать продукт, согласовать характеристики, упаковку и документы и организует поставку. Приоритет — оптовые закупки; розничные заказы также доступны. Фасовку, цену и доставку уточняем по выбранному товару.',
   aboutProductionAddressLabel: 'Производство в Индии',
   aboutNumbersAriaLabel: 'Ключевые факты',
   aboutNumbersLabel: 'лет опыта в кокосовой отрасли',
@@ -74,7 +74,7 @@ const ru = {
 export type AboutPageCopy = { readonly [Key in keyof typeof ru]: string };
 
 const en = {
-  title: 'About Seha — Coconut Products and B2B Supply',
+  title: 'About SEHA — Coconut Products and B2B Supply',
   description:
     'SEHA manufactures coconut products in India, imports them into Russia and supports customers through its Moscow team.',
   skipText: 'Skip to our approach',
@@ -91,7 +91,7 @@ const en = {
   aboutIntroText:
     'SEHA Group of Companies manufactures coconut products in Pollachi, India, and supplies them to Russia. Our range includes Veymur food products, growing substrates, coir fibre products and coconut shell products.',
   aboutIntroText2:
-    'Our work covers coconut cultivation, processing and packing of finished products. Our Moscow team helps customers choose products, agree on specifications, packaging and documents, and arrange delivery.',
+    'Our work covers coconut cultivation, processing and packing of finished products. Our Moscow team helps customers choose products, agree on specifications, packaging and documents, and arrange delivery. Wholesale is our priority; retail orders are also available. Pack sizes, pricing and delivery are confirmed for the selected product.',
   aboutProductionAddressLabel: 'Manufacturing in India',
   aboutNumbersAriaLabel: 'Key facts',
   aboutNumbersLabel: 'years of experience in the coconut industry',
@@ -133,7 +133,7 @@ const en = {
   aboutTimelineText3:
     'A dedicated facility opens for coconut processing, quality control and preparation of products for export.',
   aboutTimelineLabel5: 'Today',
-  aboutTimelineCardTitle4: 'Seha in Russia',
+  aboutTimelineCardTitle4: 'SEHA in Russia',
   aboutTimelineText4:
     'SEHA manufactures in India and imports its products into Russia. The Moscow team helps customers choose products and manages orders through to delivery. Exports reach more than 25 countries.',
   certPreviewLabel: 'Next step',

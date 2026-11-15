@@ -68,9 +68,9 @@ const ru = {
 export type QualityPageCopy = { readonly [Key in keyof typeof ru]: string };
 
 const en = {
-  title: 'Quality and Certifications — Seha',
+  title: 'Quality and Certifications — SEHA',
   description:
-    'Quality and certifications for Seha coconut products: organic standards, food safety, batch control, documents for B2B supply and support in Russia.',
+    'Quality and certifications for SEHA coconut products: organic standards, food safety, batch control, documents for B2B supply and support in Russia.',
   skipText: 'Skip to certifications',
   pageAriaLabel: 'Breadcrumbs',
   pageLink: 'Home',
@@ -124,11 +124,11 @@ const en = {
   documentsSectionCardTitle4: 'Batch identification',
   documentsSectionText5:
     'The batch number and traceability from manufacturing to shipment help agree on quality control at the customer’s end.',
-  siteRoleLabel: 'Seha’s role',
+  siteRoleLabel: 'SEHA’s role',
   siteRoleHeading: 'Manufacturing\ndocuments,',
   siteRoleEmphasis: 'communication in Russia',
   siteRoleText:
-    'Seha helps Russian customers determine in advance which parameters and documents they need for purchasing: product type, volume, packaging, delivery city, certification requirements and batch format.',
+    'SEHA helps Russian customers determine in advance which parameters and documents they need for purchasing: product type, volume, packaging, delivery city, certification requirements and batch format.',
   siteRoleLink: 'Request documents for your supply'
 } satisfies QualityPageCopy;
 

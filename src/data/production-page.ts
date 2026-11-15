@@ -109,7 +109,7 @@ const ru = {
 export type ProductionPageCopy = { readonly [Key in keyof typeof ru]: string };
 
 const en = {
-  title: 'Coconut Product Manufacturing — Seha',
+  title: 'Coconut Product Manufacturing — SEHA',
   description:
     'SEHA manufacturing in India: two dedicated facilities for coconut food products and for substrates, fibre and shell products. Quality control, packaging and B2B supply to Russia.',
   skipText: 'Skip to the process',
@@ -197,7 +197,7 @@ const en = {
   assuranceSectionCardTitle3: 'Food safety',
   assuranceSectionText4:
     'Dedicated manufacturing processes, filtration, labelling and batch control are important for the food range.',
-  russiaSectionLabel: 'Seha in Russia',
+  russiaSectionLabel: 'SEHA in Russia',
   russiaSectionHeading: 'Manufacturing expertise from India,',
   russiaSectionEmphasis: 'commercial support in Russia',
   russiaSectionText:

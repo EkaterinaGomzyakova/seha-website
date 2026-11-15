@@ -12,16 +12,17 @@ const ru = {
   heroAlt: 'Целый кокос, половинка кокоса с белой мякотью и кокосовая стружка на зелёном фоне',
   heroTitle: 'Один кокос',
   heroLabel: 'Больше возможностей',
-  heroText: 'Кокосовые продукты высокого качества для разных рынков и задач.',
+  heroText:
+    'Кокосовые продукты для бизнеса и частных покупателей. Оптовые и розничные заказы — по запросу.',
   heroLine: 'Производим. Перерабатываем. Поставляем по всему миру.'
 } as const;
 
 export type ProductsPageCopy = { readonly [Key in keyof typeof ru]: string };
 
 const en = {
-  title: 'Coconut Products — Seha',
+  title: 'Coconut Products — SEHA',
   description:
-    'Explore Seha coconut products: growing substrates, Veymur food products, coir fibre, and coconut shell. Supply for different markets and applications.',
+    'Explore SEHA coconut products: growing substrates, Veymur food products, coir fibre, and coconut shell. Supply for different markets and applications.',
   skipText: 'Skip to the catalogue',
   pageAriaLabel: 'Breadcrumbs',
   pageLink: 'Home',
@@ -31,7 +32,8 @@ const en = {
     'A whole coconut, a coconut half with white flesh, and coconut flakes against a green background',
   heroTitle: 'One coconut',
   heroLabel: 'More possibilities',
-  heroText: 'High-quality coconut products for different markets and applications.',
+  heroText:
+    'Coconut products for businesses and individual customers. Wholesale and retail orders are available by inquiry.',
   heroLine: 'We manufacture. We process. We supply worldwide.'
 } satisfies ProductsPageCopy;
 

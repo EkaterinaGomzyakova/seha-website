@@ -1,7 +1,7 @@
 // Only the public website sends analytics; previews and automated tests stay separate.
 export const metricaId = 114242284;
 type Goal = 'footer_inquiry_sent' | 'product_inquiry_sent' | 'product_inquiry_opened';
-type Metrica = ((id: number, method: string, options?: unknown) => void) & {
+type Metrica = ((id: number, method: string, options?: unknown, parameters?: unknown) => void) & {
   a?: unknown[][];
   l?: number;
 };
@@ -65,10 +65,14 @@ if (production && !document.querySelector('[data-seha-metrica]')) {
   });
 }
 
-export function trackInquiry(goal: Goal) {
+export function trackInquiry(goal: Goal, productId?: string) {
   if (!production) return;
   try {
-    window.ym?.(metricaId, 'reachGoal', goal);
+    if (productId && /^[a-z][a-z0-9-]{1,79}$/.test(productId)) {
+      window.ym?.(metricaId, 'reachGoal', goal, { product_id: productId });
+    } else {
+      window.ym?.(metricaId, 'reachGoal', goal);
+    }
   } catch {
     // A blocked counter must never interrupt a successful inquiry.
   }

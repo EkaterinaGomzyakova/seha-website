@@ -17,14 +17,14 @@ export const pageSeo: Record<string, Metadata> = {
   '/': metadata(
     'Кокосовые продукты и субстраты оптом — производство в Индии | СЕХА',
     'Coconut Products & Coir Substrates — Manufacturer in India | SEHA',
-    'СЕХА производит кокосовые субстраты, пищевые продукты Veymur, волокно и уголь в Индии. Оптовые поставки в Россию, параметры и упаковка под заказ.',
-    'SEHA manufactures coconut growing media, Veymur food products, coir fibre and shell products in India. Wholesale supply, custom specifications and packaging.'
+    'СЕХА производит кокосовые субстраты, пищевые продукты Veymur, волокно и уголь в Индии. Оптовые и розничные заказы в России, параметры и упаковка под заказ.',
+    'SEHA manufactures coconut growing media, Veymur food products, coir fibre and shell products in India. Wholesale and retail orders, custom specifications and packaging.'
   ),
   '/products': metadata(
     'Кокосовая продукция оптом — каталог производителя | СЕХА',
     'Wholesale Coconut Products — Manufacturer Catalogue | SEHA',
-    'Каталог СЕХА: кокосовый торф, чипсы, гроубэги, масла, молоко, сахар, стружка, волокно и уголь. Производство в Индии и поставки по требованиям заказчика.',
-    'Explore SEHA coco peat, husk chips, grow bags, coconut oils, milk, sugar, desiccated coconut, coir and carbon. Indian manufacturing and custom wholesale supply.'
+    'Каталог СЕХА: кокосовый торф, чипсы, гроубэги, масла, молоко, сахар, стружка, волокно и уголь. Производство в Индии. Оптовые и розничные заказы по запросу.',
+    'Explore SEHA coco peat, husk chips, grow bags, coconut oils, milk, sugar, desiccated coconut, coir and carbon. Indian manufacturing, custom wholesale supply and retail orders.'
   ),
   '/products/substrates': metadata(
     'Кокосовые субстраты оптом — торф, чипсы и гроубэги | СЕХА',
@@ -78,15 +78,15 @@ export const pageSeo: Record<string, Metadata> = {
 
 export const productSeo: Record<string, Metadata> = {
   'grow-bag': metadata(
-    'Кокосовые гроубэги для теплиц — производство и поставки | СЕХА',
+    'Кокосовые маты и гроубэги для теплиц и клубники | СЕХА',
     'Coco Coir Grow Bags for Greenhouses — Custom Supply | SEHA',
-    'Кокосовые гроубэги для томатов, огурцов и клубники. Промытая смесь торфа и чипсов; состав, размеры, посадочные и дренажные отверстия под заказ.',
+    'Кокосовый субстрат в матах для клубники, томатов и огурцов. Промытые гроубэги: состав, размеры и отверстия под заказ. Оптовые и розничные заказы по запросу.',
     'Coco coir grow bags for tomatoes, cucumbers and strawberries. Washed pith and chip blends with custom dimensions, planting holes and drainage layouts.'
   ),
   'open-top-grow-bag': metadata(
-    'Открытые кокосовые гроубэги для голубики и малины | СЕХА',
+    'Открытый гроубэг с кокосовым субстратом для голубики | СЕХА',
     'Open-Top Coir Grow Bags for Blueberries & Raspberries | SEHA',
-    'Открытые гроубэги с прессованным кокосовым субстратом для голубики и малины. Пример — 10 л, 60% торфа и 40% чипсов по объёму. Другие составы под заказ.',
+    'Вертикальный мешок с кокосовым субстратом для голубики и малины. Открытый гроубэг с дренажом; объём и состав под заказ, буферизация по запросу.',
     'Open-top grow bags with compressed coir for blueberries and raspberries. Example: 10 L with 60% pith and 40% chips by volume. Custom sizes and blends.'
   ),
   'coco-peat': metadata(
@@ -168,9 +168,9 @@ export const productSeo: Record<string, Metadata> = {
     'Woven coir geotextiles for slopes, riverbanks and erosion control. Example grades: 400, 700 and 900 GSM; mesh openings and roll dimensions made to order.'
   ),
   'veymur-mct-oil': metadata(
-    'Органическое кокосовое MCT-масло C8 и C10 оптом | Veymur',
+    'Кокосовое МСТ-масло (MCT) C8/C10 оптом — органическое | СЕХА',
     'Organic Coconut MCT Oil C8 & C10 — Wholesale | Veymur',
-    'Органическое MCT-масло из кокоса без вкуса и запаха: C8 55–65%, C10 35–45%. Для пищевых продуктов и напитков. Розничная и оптовая фасовка под заказ.',
+    'Органическое кокосовое МСТ-масло (MCT): C8 55–65%, C10 35–45%. Фасовка 500 мл и транспортная тара. Опт и розница: запросите цену у СЕХА.',
     'Organic coconut MCT oil with neutral taste and odour: C8 55–65%, C10 35–45%. For food and beverage formulations, in retail and bulk packaging.'
   ),
   'veymur-virgin-coconut-oil': metadata(

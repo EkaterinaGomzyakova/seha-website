@@ -131,9 +131,9 @@ const ru = {
 } satisfies PrivacyPageCopy;
 
 const en = {
-  title: 'Privacy Policy — Seha',
+  title: 'Privacy Policy — SEHA',
   description:
-    'Seha privacy policy: processing inquiries and storing the notice dismissal preference in the browser.',
+    'SEHA privacy policy: processing inquiries and storing the notice dismissal preference in the browser.',
   skipText: 'Skip to content',
   breadcrumbs: 'Breadcrumbs',
   home: 'Home',

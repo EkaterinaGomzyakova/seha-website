@@ -8,6 +8,8 @@ function check(bool $condition, string $message): void {
 $general = ['type' => 'general', 'locale' => 'ru', 'company' => 'Компания', 'contact' => 'Анна',
     'email' => 'buyer@example.com', 'phone' => '+7 999 123-45-67', 'consent' => true, 'comment' => 'Нужен каталог'];
 check(valid_inquiry($general), 'General inquiry must not require a product');
+check(valid_inquiry([...$general, 'company' => '']), 'Retail inquiry does not require a company');
+check(!valid_inquiry([...$general, 'contact' => '']), 'Contact name remains mandatory');
 check(valid_inquiry([...$general, 'email' => '']), 'General inquiry can use the required phone');
 check(!valid_inquiry([...$general, 'consent' => false]), 'Consent is mandatory');
 check(!valid_inquiry([...$general, 'email' => "a@example.com\r\nBcc: spam@example.com"]), 'Reject header injection');
@@ -15,6 +17,7 @@ check(!valid_inquiry([...$general, 'website' => 'spam']), 'Reject honeypot');
 $product = [...$general, 'type' => 'product', 'product' => 'Кокосовые чипсы', 'productId' => 'coconut-chips',
     'quantity' => '12.5', 'quantityUnit' => 'kg', 'packaging' => '5 кг', 'supplyFormat' => 'industrial'];
 check(valid_inquiry($product), 'Product inquiry accepts the selection');
+check(valid_inquiry([...$product, 'company' => '']), 'Retail product inquiry accepts an empty company');
 check(valid_inquiry([...$product, 'quantity' => '', 'quantityUnit' => '']), 'Category inquiry may omit quantity');
 check(!valid_inquiry([...$product, 'quantity' => '-1']), 'Reject negative quantity');
 check(!valid_inquiry([...$product, 'quantityUnit' => 'pcs']), 'Reject fractional pieces');

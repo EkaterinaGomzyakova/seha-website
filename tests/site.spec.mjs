@@ -186,7 +186,7 @@ test('failed inquiry preserves entered values and offers email', async ({ page }
   await expect(page.locator('[data-result-title]')).toHaveText('Your inquiry could not be sent');
   await expect(page.locator('[name="company"]')).toHaveValue('Example LLC');
   const mailto = await page.locator('[data-email-quote]').getAttribute('href');
-  expect(decodeURIComponent(mailto)).toContain('Company name: Example LLC');
+  expect(decodeURIComponent(mailto)).toContain('Company (optional): Example LLC');
   expect(decodeURIComponent(mailto)).not.toMatch(/[А-Яа-яЁё]/);
 });
 

@@ -7,11 +7,11 @@ interface ProductCopyUpdate {
 export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   'grow-bag': {
     description: [
-      'Гроубэг СЕХА — мешок с кокосовым субстратом для теплиц, защищённого грунта и беспочвенного выращивания клубники, томатов, огурцов и других культур.',
+      'Гроубэг СЕХА — кокосовый мат с субстратом для теплиц, защищённого грунта и беспочвенного выращивания клубники, томатов, огурцов и других культур.',
       'SEHA grow bags contain coconut substrate for greenhouse, protected and soilless cultivation of strawberries, tomatoes, cucumbers and other crops.'
     ],
     fullDescription: [
-      'Гроубэг СЕХА — мешок с кокосовым субстратом для теплиц и беспочвенного выращивания клубники, томатов, огурцов и других культур. Торф удерживает влагу, а волокно и чипсы поддерживают аэрацию и дренаж.\n\nСостав по объёму, фракцию, размеры и отверстия подбираем под культуру и систему выращивания. Субстрат промыт, буферизация доступна по запросу. Подходит для капельного полива и подачи удобрений с поливной водой.',
+      'Гроубэг СЕХА — кокосовый мат с субстратом для теплиц и беспочвенного выращивания клубники, томатов, огурцов и других культур. Coco peat удерживает влагу, а волокно и чипсы поддерживают аэрацию и дренаж.\n\nСостав по объёму, фракцию, размеры и отверстия подбираем под культуру и систему выращивания. Субстрат промыт, буферизация доступна по запросу. Подходит для капельного полива и подачи удобрений с поливной водой.',
       'SEHA grow bags contain coconut substrate for greenhouse and soilless cultivation of strawberries, tomatoes, cucumbers and other crops. Pith retains moisture, while fibre and chips support aeration and drainage.\n\nThe blend by volume, particle grade, dimensions and holes are tailored to the crop and growing system. The substrate is washed; buffering is available on request. Suitable for drip irrigation and fertigation.'
     ]
   },
@@ -47,7 +47,7 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   },
   'open-top-grow-bag': {
     fullDescription: [
-      'Открытый гроубэг СЕХА — вертикальный мешок с сухим прессованным кокосовым субстратом для голубики, малины и других культур. Промытый торф удерживает влагу, чипсы поддерживают аэрацию, а дренажные отверстия отводят лишнюю воду.\n\nПример состава — 60% торфа и 40% чипсов по объёму, рабочий объём — 10 л. Размеры, объём, фракцию и pH подбираем под заказ. Буферизация доступна по запросу. Мешок изготовлен из двухслойной LDPE-плёнки, подходит для капельного полива. Отдельное растение можно переместить или заменить без нарушения соседних посадок.',
+      'Открытый гроубэг СЕХА поставляется как вертикальный мешок с сухим прессованным кокосовым субстратом для голубики, малины и других культур. Промытый coco peat удерживает влагу, чипсы поддерживают аэрацию, а дренажные отверстия отводят лишнюю воду.\n\nПример состава — 60% coco peat и 40% чипсов по объёму, рабочий объём — 10 л. Размеры, объём, фракцию и pH подбираем под заказ. Буферизация доступна по запросу. Мешок изготовлен из двухслойной LDPE-плёнки, подходит для капельного полива. Отдельное растение можно переместить или заменить без нарушения соседних посадок.',
       'SEHA Open-Top Grow Bags are upright bags containing dry compressed coconut substrate for blueberries, raspberries and other crops. Washed pith retains moisture, chips support aeration, and drainage holes release excess water.\n\nAn example blend is 60% pith and 40% chips by volume, with a 10 L working volume. Dimensions, volume, particle grade and pH are tailored to the order. Buffering is available on request. The two-layer LDPE bag suits drip irrigation, and individual plants can be moved or replaced without disturbing neighbouring plants.'
     ],
     description: [
@@ -157,11 +157,11 @@ export const productCopyUpdates: Record<string, ProductCopyUpdate> = {
   },
   'veymur-mct-oil': {
     fullDescription: [
-      'Органическое MCT-масло СЕХА получают из кокосового масла с концентрированием среднецепочечных триглицеридов. Подтверждённый профиль жирных кислот: C8 — 55–65%, C10 — 35–45%, C12 — не более 1%. Это прозрачная бесцветная жидкость без вкуса и запаха.\n\nПроизводится в Индии для пищевых рецептур, отдельных напитков и специализированных продуктов питания. Поставляется производителям, дистрибьюторам и маркам заказчиков в пищевой готовой упаковке и транспортной таре. Органическая сертификация подтверждена документами.',
+      'Органическое кокосовое МСТ-масло (MCT) СЕХА получают из кокосового масла с концентрированием среднецепочечных триглицеридов. Подтверждённый профиль жирных кислот: C8 — 55–65%, C10 — 35–45%, C12 — не более 1%. Это прозрачная бесцветная жидкость без вкуса и запаха.\n\nПроизводится в Индии для пищевых рецептур, отдельных напитков и специализированных продуктов питания. Поставляется производителям, дистрибьюторам и маркам заказчиков в пищевой готовой упаковке и транспортной таре. Органическая сертификация подтверждена документами.',
       'SEHA Organic MCT Coconut Oil is derived from coconut oil and processed to concentrate medium-chain triglycerides. Its confirmed fatty acid profile is C8 55–65%, C10 35–45% and C12 no more than 1%. It is a clear, colourless, odourless and tasteless liquid.\n\nManufactured in India for food formulations, selected beverages and specialised nutritional products. Food-grade retail and bulk formats serve manufacturers, distributors and private-label brands. Organic certification is supported by documents.'
     ],
     description: [
-      'Масло из кокоса с концентрированными среднецепочечными триглицеридами C8 и C10. Прозрачная бесцветная жидкость без вкуса и запаха для пищевых рецептур, отдельных напитков и специализированных продуктов питания.',
+      'Кокосовое МСТ-масло (MCT) с концентрированными среднецепочечными триглицеридами C8 и C10. Прозрачная бесцветная жидкость без вкуса и запаха для пищевых рецептур, отдельных напитков и специализированных продуктов питания.',
       'Coconut-derived oil with concentrated C8 and C10 medium-chain triglycerides. A clear, colourless, odourless and tasteless liquid for food formulations, selected beverages and specialised nutritional products.'
     ]
   },

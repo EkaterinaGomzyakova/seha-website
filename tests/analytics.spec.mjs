@@ -51,7 +51,7 @@ test('production analytics masks forms and counts only successful inquiries with
   for (const selector of ['#quote-form', '#product-inquiry-form']) {
     if (selector.includes('product')) await page.locator('[data-quote-product]').first().click();
     const form = page.locator(selector);
-    await form.locator('[name="company"]').fill('Private Company');
+    await expect(form.locator('[name="company"]')).not.toHaveAttribute('required');
     await form.locator('[name="contact"]').fill('Private Person');
     await form.locator('[name="email"]').fill('private@example.com');
     await form.locator('[name="phone"]').fill('+1 202 555 0100');
@@ -74,8 +74,8 @@ test('production analytics masks forms and counts only successful inquiries with
   const goals = await page.evaluate(() => window.analyticsCalls.slice(1));
   expect(goals).toEqual([
     [114242284, 'reachGoal', 'footer_inquiry_sent'],
-    [114242284, 'reachGoal', 'product_inquiry_opened'],
-    [114242284, 'reachGoal', 'product_inquiry_sent']
+    [114242284, 'reachGoal', 'product_inquiry_opened', { product_id: 'veymur-mct-oil' }],
+    [114242284, 'reachGoal', 'product_inquiry_sent', { product_id: 'veymur-mct-oil' }]
   ]);
   // Repeated clicks while open do not count; a genuine reopening counts once again.
   await page
@@ -89,7 +89,7 @@ test('production analytics masks forms and counts only successful inquiries with
   await page.locator('[data-quote-product]').first().click();
   await expect(page.locator('#product-inquiry')).toBeVisible();
   expect(await page.evaluate(() => window.analyticsCalls.slice(4))).toEqual([
-    [114242284, 'reachGoal', 'product_inquiry_opened']
+    [114242284, 'reachGoal', 'product_inquiry_opened', { product_id: 'veymur-mct-oil' }]
   ]);
 });
 
@@ -103,4 +103,35 @@ test('local previews do not load the production counter', async ({ page }) => {
   await expect(page.locator('seha-cookie-banner')).toBeVisible();
   expect(requests).toBe(0);
   await expect(page.locator('[data-seha-metrica]')).toHaveCount(0);
+});
+
+test('catalog inquiries keep the selected product when switching between grow bags', async ({
+  page,
+  request
+}) => {
+  await page.addInitScript(() => {
+    window.analyticsCalls = [];
+    window.ym = (...args) => window.analyticsCalls.push(args);
+  });
+  await page.route('https://mc.yandex.ru/**', (route) =>
+    route.fulfill({ contentType: 'application/javascript', body: '' })
+  );
+  await page.route('https://seha-group.ru/**', async (route) => {
+    const response = await request.get(new URL(route.request().url()).pathname);
+    await route.fulfill({ response });
+  });
+  await page.goto('https://seha-group.ru/ru/products/substrates/');
+  await page.locator('.cookie-close').click();
+  for (const productId of ['grow-bag', 'open-top-grow-bag']) {
+    await page.locator(`[data-quote-product][data-product-id="${productId}"]`).first().click();
+    await expect(page.locator('#product-inquiry')).toBeVisible();
+    await expect(page.locator('#product-inquiry-form [name="productId"]')).toHaveValue(productId);
+    expect(await page.evaluate(() => window.analyticsCalls.at(-1))).toEqual([
+      114242284,
+      'reachGoal',
+      'product_inquiry_opened',
+      { product_id: productId }
+    ]);
+    await page.locator('[data-close-inquiry]').click();
+  }
 });

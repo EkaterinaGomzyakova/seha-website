@@ -17,8 +17,8 @@ export const interfaceCopy = {
     emailLabel: 'ПОЧТА',
     brand: 'НАТУРАЛЬНЫЕ ПРОДУКТЫ ИЗ\u00a0КОКОСА',
     privacy: 'Политика конфиденциальности',
-    company: 'Название компании',
-    contact: 'Имя контактного лица',
+    company: 'Компания (необязательно)',
+    contact: 'Ваше имя',
     email: 'Контактный email',
     phone: 'Номер телефона',
     message: 'Сообщение',
@@ -26,7 +26,7 @@ export const interfaceCopy = {
     contactPlaceholder: 'Иван',
     messagePlaceholder:
       'Расскажите, какой продукт вам нужен, о ваших требованиях, количестве и сроках',
-    business: 'Тип компании',
+    business: 'Кто оформляет заказ',
     businesses: [
       'Дистрибьютор',
       'Ритейлер',
@@ -34,6 +34,7 @@ export const interfaceCopy = {
       'Гидропонная ферма',
       'Садоводческая компания',
       'Бренд продуктов питания',
+      'Частный покупатель',
       'Другое'
     ],
     consentStart: 'Я ознакомлен(а) с',
@@ -82,16 +83,16 @@ export const interfaceCopy = {
     emailLabel: 'EMAIL',
     brand: 'NATURAL COCONUT<br /> PRODUCTS',
     privacy: 'Privacy Policy',
-    company: 'Company name',
+    company: 'Company (optional)',
     contact: 'Contact person name',
-    email: 'Business email',
+    email: 'Contact email',
     phone: 'Phone number',
     message: 'Message',
     companyPlaceholder: 'Agrocomplex LLC',
     contactPlaceholder: 'John',
     messagePlaceholder:
       'Tell us which product you are interested in, along with your requirements, quantities, and desired delivery timeline.',
-    business: 'Business type',
+    business: 'Customer type',
     businesses: [
       'Distributor',
       'Retailer',
@@ -99,6 +100,7 @@ export const interfaceCopy = {
       'Hydroponic Farm',
       'Horticulture Company',
       'Food Brand',
+      'Individual customer',
       'Other'
     ],
     consentStart: 'I have read the',

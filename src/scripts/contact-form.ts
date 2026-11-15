@@ -52,7 +52,7 @@ export function initContactForm() {
     event.preventDefault();
     if (pending) return;
     validatePhone();
-    for (const name of ['company', 'contact'])
+    for (const name of ['contact'])
       field(name).setCustomValidity(field(name).value.trim() ? '' : copy.requiredError);
     if (!form.reportValidity()) return;
     const fields = new FormData(form);

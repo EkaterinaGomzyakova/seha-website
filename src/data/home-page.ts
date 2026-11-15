@@ -19,7 +19,7 @@ const ru = {
   directionsHeading: 'Категории',
   directionsLabel3: 'продукции',
   directionsText:
-    'Подберем категорию, фракцию, упаковку и объем партии под вашу производственную или коммерческую задачу.',
+    'Основное направление СЕХА — оптовые поставки для бизнеса. Также принимаем розничные заказы: выберите продукт и отправьте запрос, чтобы уточнить доступную фасовку, цену и доставку.',
   directionsAriaLabel: 'Кокосовая стружка',
   directionsLabel4: '02 / ДЛЯ ПИТАНИЯ',
   directionsCardTitle: 'Пищевые продукты Veymur',
@@ -124,7 +124,7 @@ const ru = {
 export type HomePageCopy = { readonly [Key in keyof typeof ru]: string };
 
 const en = {
-  title: 'Seha — Coconut Products for Your Business',
+  title: 'SEHA — Coconut Products for Your Business',
   description:
     'SEHA coconut products: organic food ingredients, growing substrates, coir fibre and shell products. Manufactured in India and supplied to Russia.',
   skipText: 'Skip to products',
@@ -142,7 +142,7 @@ const en = {
   directionsHeading: 'Product',
   directionsLabel3: 'categories',
   directionsText:
-    'We will select the category, particle size, packaging and batch volume to suit your manufacturing or commercial needs.',
+    'Wholesale supply is SEHA’s main focus. Retail orders are also welcome: select a product and send an inquiry to confirm available pack sizes, pricing and delivery.',
   directionsAriaLabel: 'Desiccated coconut',
   directionsLabel4: '02 / FOR FOOD',
   directionsCardTitle: 'Veymur food products',

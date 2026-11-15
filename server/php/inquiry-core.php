@@ -16,7 +16,7 @@ function valid_inquiry(array $data): bool
             return false;
         }
     }
-    foreach (['company', 'contact'] as $key) {
+    foreach (['contact'] as $key) {
         if (trim($data[$key] ?? '') === '') return false;
     }
     $email = trim($data['email'] ?? '');
@@ -47,7 +47,7 @@ function inquiry_message(array $data): array
     $lines = [
         $product ? 'Заявка из карточки товара' : 'Общая заявка с сайта',
         'Язык сайта: ' . $data['locale'],
-        'Компания: ' . trim($data['company']),
+        'Компания: ' . (trim($data['company'] ?? '') ?: 'Не указана'),
         'Имя: ' . trim($data['contact']),
         'Email: ' . trim($data['email'] ?? ''),
         'Телефон: ' . trim($data['phone'] ?? ''),

@@ -20,6 +20,7 @@ const businessValues = [
   'hydroponic-farm',
   'horticulture',
   'food-brand',
+  'individual',
   'other'
 ];
 const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
@@ -47,7 +48,6 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
       name="company"
       autocomplete="organization"
       placeholder={copy.companyPlaceholder}
-      required
       maxlength="160"
     />
     <Input

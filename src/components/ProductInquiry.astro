@@ -78,11 +78,10 @@ const inquiryCopy = productInquiryCopy[locale];
         <legend class="type-h3">{ru ? 'Контакты' : 'Contact details'}</legend>
         <div class="product-inquiry__fields">
           <Input
-            label={ru ? 'Компания' : 'Company'}
+            label={ru ? 'Компания (необязательно)' : 'Company (optional)'}
             name="company"
             placeholder={ru ? 'Название компании' : 'Company name'}
             autocomplete="organization"
-            required
             maxlength="160"
           />
           <Input

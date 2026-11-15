@@ -16,6 +16,7 @@ import { productInquiryCopy } from '../../../../data/product-inquiry';
 import Button from '../../../../components/ui/Button.astro';
 import { localizedPath } from '../../../../lib/paths';
 import { specificationsFor } from '../../../../data/product-specifications';
+import { productQuestions } from '../../../../data/product-questions';
 export function getStaticPaths() {
   return (['ru', 'en'] as const).flatMap((locale) =>
     products.map((item) => ({
@@ -33,6 +34,7 @@ const ru = locale === 'ru';
 const inquiryCopy = productInquiryCopy[locale];
 const path = `/products/${item.category}/${item.slug}/`;
 const category = productCategories.find((category) => category.slug === item.category)!;
+const questions = productQuestions[item.id];
 ---
 
 <SiteLayout
@@ -63,7 +65,7 @@ const category = productCategories.find((category) => category.slug === item.cat
       />
       <div>
         <h1 id="product-name" class="type-h1">
-          {item.name[locale]}
+          {questions?.heading[locale] ?? item.name[locale]}
         </h1>
         <div class="product-detail__summary">
           {(item.details ?? item.description)[locale].split('\n\n').map((paragraph) => (
@@ -73,6 +75,7 @@ const category = productCategories.find((category) => category.slug === item.cat
         </div>
         <ProductPackaging product={item} locale={locale} />
         <ProductQuantity productId={item.id} locale={locale} />
+        {questions && <p class="type-p">{questions.inquiryHint[locale]}</p>}
         <Button
           href="#contacts"
           full
@@ -112,6 +115,29 @@ const category = productCategories.find((category) => category.slug === item.cat
       locale={locale}
       isSubstrate={item.category === 'substrates'}
     />
+    {questions && (
+      <section aria-labelledby="product-questions-title" class="product-detail__questions">
+        <h2 id="product-questions-title" class="type-h2">
+          {ru ? 'Вопросы о товаре и поставке' : 'Product and supply questions'}
+        </h2>
+        {questions.questions.map(({ question, answer }) => (
+          <div>
+            <h3 class="type-h3">{question[locale]}</h3>
+            <p class="type-p">{answer[locale]}</p>
+          </div>
+        ))}
+        <div>
+          <h3 class="type-h3">
+            {ru ? 'Можно ли купить в розницу?' : 'Can I place a retail order?'}
+          </h3>
+          <p class="type-p">
+            {ru
+              ? 'Да. СЕХА работает с оптовыми и розничными заказами. Выберите товар и отправьте запрос: доступную фасовку, количество, цену и условия доставки уточнит менеджер.'
+              : 'Yes. SEHA accepts wholesale and retail orders. Select a product and send an inquiry: our team will confirm available packaging, quantities, pricing and delivery terms.'}
+          </p>
+        </div>
+      </section>
+    )}
   </main>
 </SiteLayout>
 <style>
@@ -140,6 +166,19 @@ const category = productCategories.find((category) => category.slug === item.cat
   .product-detail__summary {
     display: grid;
     gap: 12px;
+  }
+  .product-detail__questions {
+    display: grid;
+    gap: 24px;
+  }
+  .product-detail__questions > div {
+    max-width: 72ch;
+    display: grid;
+    gap: 12px;
+  }
+  .product-detail__questions h3,
+  .product-detail__questions p {
+    margin: 0;
   }
   .product-detail__overview :global(.product-gallery__main > picture > img) {
     width: 100%;

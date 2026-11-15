@@ -97,7 +97,7 @@ export function initProductInquiry() {
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       dialog.showModal();
-      trackInquiry('product_inquiry_opened');
+      trackInquiry('product_inquiry_opened', field('productId').value);
       dialog.scrollTop = 0;
     },
     { capture: true }
@@ -146,7 +146,7 @@ export function initProductInquiry() {
       });
       const data = await response.json();
       if (!response.ok || data.success !== true) throw new Error('Inquiry rejected');
-      trackInquiry('product_inquiry_sent');
+      trackInquiry('product_inquiry_sent', field('productId').value);
       result.textContent = copy.success;
       const product = field('product').value;
       const productId = field('productId').value;

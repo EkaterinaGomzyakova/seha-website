@@ -1,4 +1,4 @@
-name: Check and deploy Seha
+name: Check and deploy SEHA
 
 on:
   pull_request:

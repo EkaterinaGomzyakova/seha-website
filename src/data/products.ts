@@ -224,7 +224,7 @@ const rows: Record<ProductCategorySlug, Row[]> = {
     [
       'veymur-mct-oil',
       'veymur-mct-oil.png',
-      'Органическое масло MCT',
+      'Органическое МСТ-масло (MCT)',
       'Organic MCT Oil',
       ...productCopyUpdates['veymur-mct-oil'].description,
       '500 мл',
