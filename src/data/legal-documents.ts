@@ -1,13 +1,18 @@
 import type { Locale } from './translations';
 import { privacyVersion } from './privacy-settings';
 
-type Section = { title: string; paragraphs: string[]; links?: { label: string; href: string }[] };
-export type LegalKind = 'policy' | 'inquiry' | 'analytics';
+type Section = {
+  id?: string;
+  title: string;
+  paragraphs: string[];
+  links?: { label: string; href: string }[];
+};
+type DocumentPart = 'policy' | 'inquiry' | 'analytics';
+export type LegalKind = 'policy' | 'inquiry';
 type Document = { title: string; intro: string; sections: Section[] };
 export const legalPaths = {
   policy: '/privacy/',
-  inquiry: '/consent/',
-  analytics: '/analytics-consent/'
+  inquiry: '/consent/'
 } as const;
 export const legalVersion = privacyVersion;
 const operatorRu =
@@ -37,7 +42,7 @@ const yandexLinks = [
   }
 ];
 
-const ru: Record<LegalKind, Document> = {
+const ru: Record<DocumentPart, Document> = {
   policy: {
     title: 'Политика обработки персональных данных',
     intro: 'Как СЕХА обрабатывает обращения с сайта, защищает данные и использует веб-аналитику.',
@@ -183,7 +188,7 @@ const ru: Record<LegalKind, Document> = {
   }
 };
 
-const en: Record<LegalKind, Document> = {
+const en: Record<DocumentPart, Document> = {
   policy: {
     title: 'Personal Data Processing Policy',
     intro: 'How SEHA handles website inquiries, protects data and uses web analytics.',
@@ -328,4 +333,45 @@ const en: Record<LegalKind, Document> = {
     ]
   }
 };
-export const legalDocuments: Record<Locale, Record<LegalKind, Document>> = { ru, en };
+function combineConsents(locale: Locale, parts: Record<DocumentPart, Document>): Document {
+  const operator = locale === 'ru' ? operatorRu : operatorEn;
+  const actions = locale === 'ru' ? actionsRu : actionsEn;
+  const paragraphs = (part: DocumentPart) =>
+    parts[part].sections
+      .flatMap((section) => section.paragraphs)
+      .filter((paragraph) => paragraph !== operator && paragraph !== actions);
+  return {
+    title: parts.inquiry.title,
+    intro:
+      locale === 'ru'
+        ? 'Два самостоятельных согласия: на обработку заявки и на веб-аналитику. Вы выбираете каждое независимо.'
+        : 'Two independent consents: processing your inquiry and website analytics. Each is a separate choice.',
+    sections: [
+      {
+        title: locale === 'ru' ? 'Оператор и порядок обработки' : 'Controller and processing',
+        paragraphs: [
+          operator,
+          actions,
+          locale === 'ru'
+            ? 'Галочка в форме относится только к обработке заявки. Кнопка «Разрешить аналитику» относится только к данным посещений. Отказ от аналитики не препятствует отправке заявки; ознакомление с политикой не заменяет ни одно из согласий.'
+            : 'The form checkbox applies only to inquiry processing. “Allow analytics” applies only to visit data. You may submit an inquiry without analytics. Reading the policy does not replace either consent.'
+        ]
+      },
+      {
+        id: 'inquiry',
+        title: locale === 'ru' ? 'Согласие на обработку заявки' : 'Inquiry processing consent',
+        paragraphs: paragraphs('inquiry')
+      },
+      {
+        id: 'analytics',
+        title: locale === 'ru' ? 'Согласие на аналитику' : 'Analytics consent',
+        paragraphs: paragraphs('analytics'),
+        links: yandexLinks
+      }
+    ]
+  };
+}
+export const legalDocuments: Record<Locale, Record<LegalKind, Document>> = {
+  ru: { policy: ru.policy, inquiry: combineConsents('ru', ru) },
+  en: { policy: en.policy, inquiry: combineConsents('en', en) }
+};

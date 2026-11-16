@@ -7,7 +7,6 @@ export const publicRoutes = [
   '/quality/',
   '/privacy/',
   '/consent/',
-  '/analytics-consent/',
   '/products/',
   '/products/fiber/',
   '/products/shell/',

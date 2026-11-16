@@ -10,6 +10,11 @@ export default defineConfig({
   site: process.env.SITE_URL || env.SITE_URL || 'https://seha-group.ru',
   base: '/',
   output: 'static',
+  redirects: {
+    '/analytics-consent/': '/ru/consent/#analytics',
+    '/ru/analytics-consent/': '/ru/consent/#analytics',
+    '/en/analytics-consent/': '/en/consent/#analytics'
+  },
   outDir: process.env.ASTRO_OUT_DIR || './dist',
   publicDir: './public',
   vite: {

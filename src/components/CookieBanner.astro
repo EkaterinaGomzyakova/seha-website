@@ -29,8 +29,14 @@ const copy = getInterfaceCopy(locale);
   <div class="cookie-content">
     <p id="cookie-message" data-cookie-message>
       {copy.cookieText}{' '}
-      <a href={localizedPath('/analytics-consent/', locale)}>{copy.analyticsConsent}</a>.{' '}
-      <a href={localizedPath('/privacy/', locale)}>{copy.privacy}</a>.
+      <a href={`${localizedPath('/consent/', locale)}#analytics`} target="_blank" rel="noopener">
+        {copy.analyticsConsent}
+      </a>
+      .{' '}
+      <a href={localizedPath('/privacy/', locale)} target="_blank" rel="noopener">
+        {copy.privacy}
+      </a>
+      .
     </p>
     <Button variant="secondary" full class="cookie-action" data-cookie-action>
       {copy.cookieAction}

@@ -1,0 +1,29 @@
+---
+import type { Locale } from '../data/translations';
+import { getInterfaceCopy } from '../data/interface-copy';
+import { localizedPath } from '../lib/paths';
+import Checkbox from './ui/Checkbox.astro';
+interface Props {
+  locale: Locale;
+  insetCheck?: boolean;
+}
+const { locale, insetCheck = false } = Astro.props;
+const copy = getInterfaceCopy(locale);
+---
+
+<Checkbox name="consent" required insetCheck={insetCheck}>
+  <span class="consent__text">
+    {copy.consentStart}{' '}
+    <a href={`${localizedPath('/consent/', locale)}#inquiry`} target="_blank" rel="noopener">
+      {copy.consentLink}
+    </a>{' '}
+    {copy.consentEnd}
+    <span class="consent__policy">
+      {copy.privacyNotice}{' '}
+      <a href={localizedPath('/privacy/', locale)} target="_blank" rel="noopener">
+        {copy.privacy}
+      </a>
+      .
+    </span>
+  </span>
+</Checkbox>

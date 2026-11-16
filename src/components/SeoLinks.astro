@@ -50,8 +50,7 @@ const pageLabels: Record<string, { ru: string; en: string }> = {
   '/consent': {
     ru: 'Согласие на обработку персональных данных',
     en: 'Consent to Personal Data Processing'
-  },
-  '/analytics-consent': { ru: 'Согласие на аналитику', en: 'Analytics Consent' }
+  }
 };
 const productImages = detailProduct
   ? [...new Set([detailProduct.image, ...(productGalleryImages[detailProduct.id] ?? [])])].map(

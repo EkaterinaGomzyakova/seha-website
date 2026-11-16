@@ -77,7 +77,7 @@ test('analytics requires a recorded choice, survives navigation and stops on wit
   await page.locator('.quote-legal-links [data-analytics-settings]').click();
   await page.locator('[data-cookie-action]').click();
   await expect.poll(() => tags).toBe(1);
-  expect(choices.at(-1)).toMatchObject({ status: 'accepted', version: '2026-11-16' });
+  expect(choices.at(-1)).toMatchObject({ status: 'accepted', version: '2026-11-17' });
   expect(Object.keys(choices.at(-1)).sort()).toEqual(['receipt', 'status', 'version']);
   await page.goto('https://seha-group.ru/ru/consent/');
   await expect(page.locator('seha-cookie-banner')).toBeHidden();
@@ -109,7 +109,7 @@ test('legal documents and separate form consent are accessible in both languages
   page
 }) => {
   for (const locale of ['ru', 'en']) {
-    for (const path of ['privacy', 'consent', 'analytics-consent']) {
+    for (const path of ['privacy', 'consent']) {
       await page.goto(`/${locale}/${path}/`);
       const close = page.locator('.cookie-close');
       if (await close.isVisible()) await close.click();
@@ -126,13 +126,31 @@ test('legal documents and separate form consent are accessible in both languages
     }
     const consent = page.locator('#quote-form [name="consent"]');
     await expect(consent).not.toBeChecked();
-    await expect(consent.locator('xpath=..').locator('a')).toHaveAttribute(
+    await expect(page.locator('#quote-form [name="consent"]')).toHaveCount(1);
+    await expect(consent.locator('xpath=..').locator('a[href*="#inquiry"]')).toHaveAttribute(
       'href',
-      `/${locale}/consent/`
+      `/${locale}/consent/#inquiry`
     );
     await expect(page.locator('.quote-legal-links a')).toHaveAttribute(
       'href',
       `/${locale}/privacy/`
     );
+    await expect(page.locator('#inquiry')).toBeVisible();
+    await expect(page.locator('#analytics')).toBeVisible();
+    await expect(page.locator('#quote-form .consent a')).toHaveCount(2);
+    await expect(page.locator('#quote-form .consent a').first()).toHaveAttribute(
+      'target',
+      '_blank'
+    );
+    await page.locator('#quote-form [name="contact"]').fill('Saved contact');
+    const opened = page.waitForEvent('popup');
+    await page.locator('#quote-form .consent a').first().click();
+    const document = await opened;
+    await expect(document).toHaveURL(new RegExp(`/${locale}/consent/#inquiry$`));
+    await document.close();
+    await expect(page.locator('#quote-form [name="contact"]')).toHaveValue('Saved contact');
+    await expect(consent).not.toBeChecked();
+    await page.goto(`/${locale}/analytics-consent/`);
+    await expect(page).toHaveURL(new RegExp(`/${locale}/consent/#analytics$`));
   }
 });

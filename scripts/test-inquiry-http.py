@@ -69,8 +69,8 @@ class PHPMailer {
             return response.code, json.loads(response.read())
 
         data = dict(type="general", locale="ru", company="Example", contact="Buyer",
-                    email="buyer@example.com", phone="+79991234567", consent=True, consentVersion="2026-11-16")
-        choice = dict(status="accepted", version="2026-11-16", receipt="12345678-1234-4123-8123-123456789012")
+                    email="buyer@example.com", phone="+79991234567", consent=True, consentVersion="2026-11-17")
+        choice = dict(status="accepted", version="2026-11-17", receipt="12345678-1234-4123-8123-123456789012")
         assert request(choice, "https://evil.example", "consent.php")[0] == 403
         assert request({**choice, "version": "2020-01-01"}, endpoint="consent.php")[0] == 400
         assert request(choice, endpoint="consent.php") == (200, {"success": True})

@@ -167,6 +167,10 @@
 .consent__text {
   min-width: 0;
 }
+.consent__policy {
+  display: block;
+  margin-top: 6px;
+}
 .quote-footer .consent a {
   color: var(--color-yellow-brand);
   text-decoration: underline;

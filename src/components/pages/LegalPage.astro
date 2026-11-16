@@ -44,12 +44,25 @@ const ui = getInterfaceCopy(locale);
       <Fragment slot="heading">{copy.title}</Fragment>
       <Fragment slot="description">{copy.intro}</Fragment>
       <div slot="details" class="privacy-tags">
-        <Tag>{locale === 'ru' ? 'Редакция от 16.11.2026' : `Version ${legalVersion}`}</Tag>
+        <Tag>
+          {locale === 'ru'
+            ? `Редакция от ${legalVersion.split('-').reverse().join('.')}`
+            : `Version ${legalVersion}`}
+        </Tag>
       </div>
     </PageHero>
     <div class="privacy-content legal-document">
+      {kind === 'inquiry' && (
+        <nav
+          class="legal-links legal-contents"
+          aria-label={locale === 'ru' ? 'Разделы согласия' : 'Consent sections'}
+        >
+          <Link href="#inquiry">{locale === 'ru' ? 'Обработка заявки' : 'Inquiry processing'}</Link>
+          <Link href="#analytics">{ui.analyticsConsent}</Link>
+        </nav>
+      )}
       {copy.sections.map((section) => (
-        <section class="privacy-section">
+        <section id={section.id} class="privacy-section">
           <h2 class="type-h3">{section.title}</h2>
           {section.paragraphs.map((paragraph) => (
             <p class="type-p">{paragraph}</p>
@@ -71,7 +84,7 @@ const ui = getInterfaceCopy(locale);
         class="privacy-section legal-links"
         aria-label={locale === 'ru' ? 'Документы о персональных данных' : 'Personal data documents'}
       >
-        {(['policy', 'inquiry', 'analytics'] as LegalKind[])
+        {(['policy', 'inquiry'] as LegalKind[])
           .filter((item) => item !== kind)
           .map((item) => (
             <Link href={localizedPath(legalPaths[item], locale)}>

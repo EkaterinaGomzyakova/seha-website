@@ -6,14 +6,15 @@ function check(bool $condition, string $message): void {
     if (!$condition) throw new RuntimeException($message);
 }
 $general = ['type' => 'general', 'locale' => 'ru', 'company' => 'Компания', 'contact' => 'Анна',
-    'email' => 'buyer@example.com', 'phone' => '+7 999 123-45-67', 'consent' => true, 'consentVersion' => '2026-11-16', 'comment' => 'Нужен каталог'];
+    'email' => 'buyer@example.com', 'phone' => '+7 999 123-45-67', 'consent' => true, 'consentVersion' => '2026-11-17', 'comment' => 'Нужен каталог'];
 check(valid_inquiry($general), 'General inquiry must not require a product');
 check(valid_inquiry([...$general, 'company' => '']), 'Retail inquiry does not require a company');
 check(!valid_inquiry([...$general, 'contact' => '']), 'Contact name remains mandatory');
 check(valid_inquiry([...$general, 'email' => '']), 'General inquiry can use the required phone');
 check(!valid_inquiry([...$general, 'consent' => false]), 'Consent is mandatory');
 check(!valid_inquiry([...$general, 'consentVersion' => '2020-01-01']), 'Current consent version is mandatory');
-check(str_contains(inquiry_message($general)['body'], 'Редакция согласия: 2026-11-16'), 'Consent evidence included');
+check(str_contains(inquiry_message($general)['body'], 'Редакция согласия: 2026-11-17'), 'Consent evidence included');
+check(str_contains(inquiry_message($general)['body'], '/consent/#inquiry'), 'Inquiry proof identifies its independent section');
 check(!valid_inquiry([...$general, 'email' => "a@example.com\r\nBcc: spam@example.com"]), 'Reject header injection');
 check(!valid_inquiry([...$general, 'website' => 'spam']), 'Reject honeypot');
 $product = [...$general, 'type' => 'product', 'product' => 'Кокосовые чипсы', 'productId' => 'coconut-chips',

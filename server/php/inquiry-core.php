@@ -5,7 +5,7 @@ function valid_inquiry(array $data): bool
 {
     if (!in_array($data['type'] ?? null, ['general', 'product'], true)
         || !in_array($data['locale'] ?? null, ['ru', 'en'], true)
-        || ($data['consent'] ?? null) !== true || ($data['consentVersion'] ?? null) !== '2026-11-16'
+        || ($data['consent'] ?? null) !== true || ($data['consentVersion'] ?? null) !== '2026-11-17'
         || !empty($data['website'])) {
         return false;
     }
@@ -69,7 +69,7 @@ function inquiry_message(array $data): array
     $lines[] = '';
     $lines[] = 'Согласие на обработку персональных данных получено.';
     $lines[] = 'Редакция согласия: ' . $data['consentVersion'];
-    $lines[] = 'Документ: https://seha-group.ru/' . $data['locale'] . '/consent/';
+    $lines[] = 'Документ: https://seha-group.ru/' . $data['locale'] . '/consent/#inquiry';
     $lines[] = 'Получено сервером (UTC): ' . gmdate('c');
     $lines[] = 'Номер подтверждения: ' . bin2hex(random_bytes(16));
     return [

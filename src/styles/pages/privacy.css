@@ -108,6 +108,12 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+.legal-contents {
+  margin-bottom: 28px;
+}
+.legal-document section[id] {
+  scroll-margin-top: 96px;
+}
 .legal-document ul.legal-links {
   margin-top: 20px;
 }

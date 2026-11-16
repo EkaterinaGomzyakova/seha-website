@@ -109,19 +109,8 @@
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-.form-privacy-note {
-  margin: 0;
-}
 .quote-footer .consent {
-  margin-bottom: 12px;
-}
-.quote-footer .form-privacy-note {
   margin-bottom: 24px;
-}
-.quote-footer .form-privacy-note a {
-  color: var(--color-yellow-brand);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }
 .quote-footer a:hover {
   text-decoration: underline;

@@ -1,13 +1,12 @@
 ---
 import Button from './ui/Button.astro';
-import Checkbox from './ui/Checkbox.astro';
+import FormConsent from './FormConsent.astro';
 import Input from './ui/Input.astro';
 import Tag from './ui/Tag.astro';
 import Link from './ui/Link.astro';
 import type { Locale } from '../data/translations';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
-import { localizedPath } from '../lib/paths';
 import { privacyVersion } from '../data/privacy-settings';
 interface Props {
   locale: Locale;
@@ -104,15 +103,7 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
       ))}
     </div>
   </fieldset>
-  <Checkbox name="consent" required>
-    <span class="consent__text">
-      {copy.consentStart} <Link href={localizedPath('/consent/', locale)}>{copy.consentLink}</Link>{' '}
-      {copy.consentEnd}
-    </span>
-  </Checkbox>
-  <p class="form-privacy-note type-p">
-    {copy.privacyNotice} <Link href={localizedPath('/privacy/', locale)}>{copy.privacy}</Link>.
-  </p>
+  <FormConsent locale={locale} />
   <Button variant="secondary" full type="submit">
     {copy.submit}
   </Button>

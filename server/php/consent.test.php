@@ -2,7 +2,7 @@
 declare(strict_types=1);
 require __DIR__ . '/consent-core.php';
 function verify_consent(bool $condition, string $message): void { if (!$condition) throw new RuntimeException($message); }
-$choice = ['version' => '2026-11-16', 'status' => 'accepted', 'receipt' => '12345678-1234-4123-8123-123456789012'];
+$choice = ['version' => '2026-11-17', 'status' => 'accepted', 'receipt' => '12345678-1234-4123-8123-123456789012'];
 verify_consent(valid_consent_choice($choice), 'Valid choice');
 verify_consent(!valid_consent_choice([...$choice, 'status' => 'dismissed']), 'Dismissal is not permission');
 verify_consent(!valid_consent_choice([...$choice, 'version' => '2020-01-01']), 'Stale version');
