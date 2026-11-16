@@ -52,6 +52,7 @@ jobs:
         run: |
           find server/php -name '*.php' -print0 | xargs -0 -n1 php -l
           php server/php/inquiry.test.php
+          php server/php/consent.test.php
           python3 scripts/test-inquiry-http.py
       - name: Install Chromium
         id: browser

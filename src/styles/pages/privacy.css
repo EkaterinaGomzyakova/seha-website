@@ -92,6 +92,38 @@
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
+.legal-document {
+  max-width: 1120px;
+  padding-inline: 32px;
+}
+.legal-document .privacy-section {
+  border-top: 1px solid var(--color-green-brand);
+  padding-block: 28px;
+}
+.legal-document .privacy-section > p {
+  max-width: 75ch;
+}
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.legal-document ul.legal-links {
+  margin-top: 20px;
+}
+.legal-links button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-green-brand);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+.legal-links button:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 4px;
+}
 .privacy-section {
   max-width: none;
   padding-left: 0;

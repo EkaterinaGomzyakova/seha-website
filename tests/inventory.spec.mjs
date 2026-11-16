@@ -1,9 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { formatStock, parseInventory } from '../src/lib/inventory.ts';
-import { inventorySource } from '../src/data/inventory.ts';
 
 const base = '';
-const source = `https://docs.google.com/spreadsheets/d/${inventorySource.spreadsheetId}/gviz/tq**`;
+const source = '**/api/inventory.php';
 const response = (rows) => ({
   status: 'ok',
   table: {
@@ -13,18 +12,9 @@ const response = (rows) => ({
 });
 
 async function reply(route, rows) {
-  const query = new URL(route.request().url()).searchParams;
-  const options = Object.fromEntries(
-    query
-      .get('tqx')
-      .split(';')
-      .map((part) => part.split(':'))
-  );
-  expect(options.responseHandler).toBe('__sehaInventoryResponse');
-  expect(query.get('tq')).toBe('select A,D,E');
+  expect(route.request().headers().referer).toBeUndefined();
   await route.fulfill({
-    contentType: 'application/javascript; charset=utf-8',
-    body: `${options.responseHandler}(${JSON.stringify({ ...response(rows), reqId: options.reqId })});`
+    json: response(rows)
   });
 }
 

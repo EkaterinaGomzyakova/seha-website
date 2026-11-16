@@ -12,6 +12,7 @@ test('production analytics masks forms and counts only successful inquiries with
   await page.route('https://seha-group.ru/**', async (route) => {
     const url = new URL(route.request().url());
     if (url.pathname === '/analytics-test') return route.fulfill({ json: { success: true } });
+    if (url.pathname === '/api/consent.php') return route.fulfill({ json: { success: true } });
     if (url.pathname === '/analytics-fail')
       return route.fulfill({ status: 503, json: { success: false } });
     const response = await request.get(url.pathname);
@@ -25,6 +26,9 @@ test('production analytics masks forms and counts only successful inquiries with
   await page.goto(
     'https://seha-group.ru/en/products/veymur/?email=private@example.com&phone=123&message=private&utm_source=calameo&utm_medium=referral&utm_campaign=food_catalog&utm_content=milk&utm_term=coconut&utm_id=summer&yclid=123456#private'
   );
+  expect(await page.evaluate(() => window.analyticsCalls.length)).toBe(0);
+  expect(tags).toBe(0);
+  await page.locator('[data-cookie-action]').click();
   await expect.poll(() => page.evaluate(() => window.analyticsCalls.length)).toBe(1);
   expect(tags).toBe(1);
   const init = await page.evaluate(() => window.analyticsCalls[0]);
@@ -47,7 +51,6 @@ test('production analytics masks forms and counts only successful inquiries with
   await expect(page.locator('[data-email-quote]')).toHaveClass(/ym-disable-tracklink/);
   await expect(page.locator('#quote-form')).toHaveClass(/ym-hide-content/);
   await expect(page.locator('#product-inquiry-form')).toHaveClass(/ym-hide-content/);
-  await page.locator('.cookie-close').click();
   for (const selector of ['#quote-form', '#product-inquiry-form']) {
     if (selector.includes('product')) await page.locator('[data-quote-product]').first().click();
     const form = page.locator(selector);
@@ -117,11 +120,13 @@ test('catalog inquiries keep the selected product when switching between grow ba
     route.fulfill({ contentType: 'application/javascript', body: '' })
   );
   await page.route('https://seha-group.ru/**', async (route) => {
+    if (new URL(route.request().url()).pathname === '/api/consent.php')
+      return route.fulfill({ json: { success: true } });
     const response = await request.get(new URL(route.request().url()).pathname);
     await route.fulfill({ response });
   });
   await page.goto('https://seha-group.ru/ru/products/substrates/');
-  await page.locator('.cookie-close').click();
+  await page.locator('[data-cookie-action]').click();
   for (const productId of ['grow-bag', 'open-top-grow-bag']) {
     await page.locator(`[data-quote-product][data-product-id="${productId}"]`).first().click();
     await expect(page.locator('#product-inquiry')).toBeVisible();

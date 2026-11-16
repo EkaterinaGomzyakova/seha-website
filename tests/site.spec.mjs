@@ -60,22 +60,27 @@ test('industry carousel advances one card with buttons, keys and dragging', asyn
 
 test('browser notice preference is stored only after an explicit action', async ({ page }) => {
   await page.goto(url('/en/'), { waitUntil: 'domcontentloaded' });
-  await page.evaluate(() => localStorage.removeItem('seha-cookie-consent'));
+  await page.evaluate(() => localStorage.removeItem('seha-analytics-choice'));
   await page.reload({ waitUntil: 'domcontentloaded' });
   const banner = page.locator('seha-cookie-banner');
   await expect(banner).toBeVisible();
-  await expect(page.locator('.cookie-action')).toBeVisible();
-  await page.locator('.cookie-action').click();
+  await expect(page.locator('[data-cookie-action]')).toBeVisible();
+  await page.locator('[data-cookie-action]').click();
   await expect(banner).toBeHidden();
   await expect
-    .poll(() => page.evaluate(() => localStorage.getItem('seha-cookie-consent')))
-    .toBe('dismissed');
+    .poll(() =>
+      page.evaluate(() => JSON.parse(localStorage.getItem('seha-analytics-choice')).status)
+    )
+    .toBe('accepted');
   await page.reload({ waitUntil: 'domcontentloaded' });
   await expect(banner).toBeHidden();
-  await page.evaluate(() => localStorage.removeItem('seha-cookie-consent'));
+  await page.evaluate(() => localStorage.removeItem('seha-analytics-choice'));
   await page.reload({ waitUntil: 'domcontentloaded' });
   await page.locator('.cookie-close').click();
   await expect(banner).toBeHidden();
+  expect(
+    await page.evaluate(() => JSON.parse(localStorage.getItem('seha-analytics-choice')).status)
+  ).toBe('rejected');
   await page.reload({ waitUntil: 'domcontentloaded' });
   await expect(banner).toBeHidden();
 });

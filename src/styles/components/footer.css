@@ -33,7 +33,8 @@
 .quote-kicker,
 .contact-item > span,
 .quote-brand__tagline,
-.quote-bottom > a {
+.quote-bottom > a,
+.quote-legal-links :is(a, button) {
   color: var(--color-text-on-green);
   font: 700 11px/1.2 var(--font-sans);
   letter-spacing: 0.09em;
@@ -87,6 +88,38 @@
 }
 .quote-bottom > a {
   flex-shrink: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.quote-legal-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 420px;
+}
+.quote-legal-links button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.quote-legal-links :is(a, button) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.form-privacy-note {
+  margin: 0;
+}
+.quote-footer .consent {
+  margin-bottom: 12px;
+}
+.quote-footer .form-privacy-note {
+  margin-bottom: 24px;
+}
+.quote-footer .form-privacy-note a {
+  color: var(--color-yellow-brand);
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }

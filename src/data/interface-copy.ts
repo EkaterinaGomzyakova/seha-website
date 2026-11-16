@@ -16,7 +16,7 @@ export const interfaceCopy = {
     phoneLabel: 'ТЕЛЕФОН',
     emailLabel: 'ПОЧТА',
     brand: 'НАТУРАЛЬНЫЕ ПРОДУКТЫ ИЗ\u00a0КОКОСА',
-    privacy: 'Политика конфиденциальности',
+    privacy: 'Политика обработки персональных данных',
     company: 'Компания (необязательно)',
     contact: 'Ваше имя',
     email: 'Контактный email',
@@ -37,9 +37,12 @@ export const interfaceCopy = {
       'Частный покупатель',
       'Другое'
     ],
-    consentStart: 'Я ознакомлен(а) с',
-    consentLink: 'Политикой конфиденциальности',
-    consentEnd: 'и даю согласие на обработку персональных данных',
+    consentStart: 'Даю',
+    consentLink: 'согласие на обработку персональных данных',
+    consentEnd: 'для рассмотрения заявки и обратной связи.',
+    privacyNotice: 'Обработка данных описана в документе',
+    analyticsSettings: 'Настройки аналитики',
+    analyticsConsent: 'Согласие на аналитику',
     submit: 'Получить расчёт',
     sending: 'Отправляем…',
     successTitle: 'Заявка отправлена',
@@ -63,9 +66,11 @@ export const interfaceCopy = {
     mailConsent:
       'Согласен на обработку указанных данных для подготовки предложения и обратной связи.',
     cookieTitle: 'Уведомление о cookies',
-    cookieText: 'Мы используем куки для улучшения работы сайта. Подробнее — в',
-    cookieLink: 'Политике конфиденциальности',
-    cookieAction: 'ПОНЯТНО',
+    cookieText:
+      'С вашего согласия используем Яндекс Метрику, cookies и Вебвизор для анализа посещений. Вы можете отказаться — сайт и формы продолжат работать.',
+    cookieAction: 'Разрешить аналитику',
+    cookieReject: 'Без аналитики',
+    cookieError: 'Не удалось сохранить согласие. Повторите попытку или продолжите без аналитики.',
     noScript: 'Для отправки формы включите JavaScript или напишите нам по электронной почте.'
   },
   en: {
@@ -82,7 +87,7 @@ export const interfaceCopy = {
     phoneLabel: 'PHONE',
     emailLabel: 'EMAIL',
     brand: 'NATURAL COCONUT<br /> PRODUCTS',
-    privacy: 'Privacy Policy',
+    privacy: 'Personal Data Processing Policy',
     company: 'Company (optional)',
     contact: 'Contact person name',
     email: 'Contact email',
@@ -103,9 +108,12 @@ export const interfaceCopy = {
       'Individual customer',
       'Other'
     ],
-    consentStart: 'I have read the',
-    consentLink: 'Privacy Policy',
-    consentEnd: 'and consent to the processing of my personal data',
+    consentStart: 'I give my',
+    consentLink: 'consent to personal data processing',
+    consentEnd: 'to handle my inquiry and contact me.',
+    privacyNotice: 'Data processing is described in the',
+    analyticsSettings: 'Analytics settings',
+    analyticsConsent: 'Analytics consent',
     submit: 'Request a quote',
     sending: 'Sending…',
     successTitle: 'Inquiry sent',
@@ -129,9 +137,11 @@ export const interfaceCopy = {
     mailConsent:
       'I consent to the processing of these details to prepare a quotation and contact me.',
     cookieTitle: 'Cookie notice',
-    cookieText: 'We use cookies to improve your experience on our website. Learn more in our',
-    cookieLink: 'Privacy Policy',
-    cookieAction: 'ACCEPT',
+    cookieText:
+      'With your consent, we use Yandex Metrica, cookies and session replay to analyse visits. You can decline and still use the website and inquiry forms.',
+    cookieAction: 'Allow analytics',
+    cookieReject: 'Without analytics',
+    cookieError: 'Your consent could not be saved. Try again or continue without analytics.',
     noScript: 'Enable JavaScript to submit the form, or contact us by email.'
   }
 } as const;

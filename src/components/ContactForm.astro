@@ -8,6 +8,7 @@ import type { Locale } from '../data/translations';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
+import { privacyVersion } from '../data/privacy-settings';
 interface Props {
   locale: Locale;
 }
@@ -37,6 +38,7 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
 >
   <input type="hidden" name="locale" value={locale} />
   <input type="hidden" name="type" value="general" />
+  <input type="hidden" name="consentVersion" value={privacyVersion} />
   <div hidden aria-hidden="true">
     <input name="website" tabindex="-1" autocomplete="off" />
   </div>
@@ -104,10 +106,13 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || undefined;
   </fieldset>
   <Checkbox name="consent" required>
     <span class="consent__text">
-      {copy.consentStart} <Link href={localizedPath('/privacy/', locale)}>{copy.consentLink}</Link>{' '}
+      {copy.consentStart} <Link href={localizedPath('/consent/', locale)}>{copy.consentLink}</Link>{' '}
       {copy.consentEnd}
     </span>
   </Checkbox>
+  <p class="form-privacy-note type-p">
+    {copy.privacyNotice} <Link href={localizedPath('/privacy/', locale)}>{copy.privacy}</Link>.
+  </p>
   <Button variant="secondary" full type="submit">
     {copy.submit}
   </Button>

@@ -6,6 +6,8 @@ export const publicRoutes = [
   '/production/',
   '/quality/',
   '/privacy/',
+  '/consent/',
+  '/analytics-consent/',
   '/products/',
   '/products/fiber/',
   '/products/shell/',

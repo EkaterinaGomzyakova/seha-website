@@ -69,8 +69,8 @@ export const pageSeo: Record<string, Metadata> = {
     'SEHA quality control for moisture, pH, EC and coir substrate structure. Food product certifications and shipment documentation tailored to the order.'
   ),
   '/privacy': metadata(
-    'Политика конфиденциальности и обработки персональных данных | СЕХА',
-    'Privacy & Personal Data Policy | SEHA',
+    'Политика обработки персональных данных | СЕХА',
+    'Personal Data Processing Policy | SEHA',
     'Как СЕХА обрабатывает контактные данные и заявки с сайта: цели обработки, защита информации и порядок обращения по вопросам персональных данных.',
     'How SEHA handles contact information and website enquiries: processing purposes, information protection and personal data requests.'
   )

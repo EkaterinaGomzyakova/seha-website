@@ -6,6 +6,7 @@ import { productInquiryCopy } from '../data/product-inquiry';
 import { getInterfaceCopy } from '../data/interface-copy';
 import { siteContact } from '../data/site';
 import { localizedPath } from '../lib/paths';
+import { privacyVersion } from '../data/privacy-settings';
 import ProductPackaging from './ProductPackaging.astro';
 import Input from './ui/Input.astro';
 import Checkbox from './ui/Checkbox.astro';
@@ -52,6 +53,7 @@ const inquiryCopy = productInquiryCopy[locale];
     >
       <input type="hidden" name="locale" value={locale} />
       <input type="hidden" name="type" value="product" />
+      <input type="hidden" name="consentVersion" value={privacyVersion} />
       <input type="hidden" name="productId" />
       <input type="hidden" name="packaging" />
       <input type="hidden" name="quantity" />
@@ -132,10 +134,13 @@ const inquiryCopy = productInquiryCopy[locale];
       <div class="product-inquiry__actions">
         <Checkbox name="consent" required insetCheck>
           <span class="consent__text">
-            {copy.consentStart} <a href={localizedPath('/privacy/', locale)}>{copy.consentLink}</a>{' '}
+            {copy.consentStart} <a href={localizedPath('/consent/', locale)}>{copy.consentLink}</a>{' '}
             {copy.consentEnd}
           </span>
         </Checkbox>
+        <p class="form-privacy-note type-p">
+          {copy.privacyNotice} <a href={localizedPath('/privacy/', locale)}>{copy.privacy}</a>.
+        </p>
         <Button full type="submit" aria-describedby="product-inquiry-next-step">
           {inquiryCopy.submit}
         </Button>

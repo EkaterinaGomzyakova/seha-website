@@ -19,6 +19,9 @@ with tempfile.TemporaryDirectory(prefix="seha-mail-http-") as folder:
     vendor.mkdir(parents=True)
     shutil.copy(ROOT / "server/php/inquiry.php", root / "inquiry.php")
     shutil.copy(ROOT / "server/php/inquiry-core.php", private / "inquiry-core.php")
+    shutil.copy(ROOT / "server/php/consent.php", root / "consent.php")
+    shutil.copy(ROOT / "server/php/consent-core.php", private / "consent-core.php")
+    shutil.copy(ROOT / "server/php/inventory.php", root / "inventory.php")
     for name in ["Exception.php", "SMTP.php"]:
         (vendor / name).write_text("<?php\n")
     (vendor / "PHPMailer.php").write_text("""<?php
@@ -55,8 +58,8 @@ class PHPMailer {
                 if process.poll() is not None:
                     raise RuntimeError("PHP test server did not start")
                 time.sleep(0.1)
-        def request(data, origin="https://seha-group.ru"):
-            req = Request(f"http://127.0.0.1:{port}/inquiry.php",
+        def request(data, origin="https://seha-group.ru", endpoint="inquiry.php"):
+            req = Request(f"http://127.0.0.1:{port}/{endpoint}",
                           data=json.dumps(data).encode(),
                           headers={"Origin": origin, "Content-Type": "application/json"})
             try:
@@ -66,7 +69,20 @@ class PHPMailer {
             return response.code, json.loads(response.read())
 
         data = dict(type="general", locale="ru", company="Example", contact="Buyer",
-                    email="buyer@example.com", phone="+79991234567", consent=True)
+                    email="buyer@example.com", phone="+79991234567", consent=True, consentVersion="2026-11-16")
+        choice = dict(status="accepted", version="2026-11-16", receipt="12345678-1234-4123-8123-123456789012")
+        assert request(choice, "https://evil.example", "consent.php")[0] == 403
+        assert request({**choice, "version": "2020-01-01"}, endpoint="consent.php")[0] == 400
+        assert request(choice, endpoint="consent.php") == (200, {"success": True})
+        assert request({**choice, "status": "rejected"}, endpoint="consent.php") == (200, {"success": True})
+        journal = list((private / "consents").glob("*.jsonl"))
+        records = [json.loads(line) for line in journal[0].read_text().splitlines()]
+        assert len(records) == 2 and set(records[0]) == {"status", "version", "receipt", "receivedAt"}
+        cached_stock = {"status": "ok", "table": {"cols": [], "rows": []}}
+        (private / "inventory-cache.json").write_text(json.dumps(cached_stock))
+        with urlopen(f"http://127.0.0.1:{port}/inventory.php", timeout=5) as inventory:
+            assert inventory.code == 200 and json.loads(inventory.read()) == cached_stock
+        assert request({}, endpoint="inventory.php")[0] == 405
         assert request(data)[0] == 503, "Unconfigured SMTP must not acknowledge delivery"
         assert request(data, "https://evil.example")[0] == 403
         (private / "config.php").write_text("""<?php return ['enabled'=>true,

@@ -46,6 +46,11 @@ const copy = getInterfaceCopy(locale);
       <Logo locale={locale} tone="accent" />
       <span class="quote-brand__tagline" set:html={copy.brand} />
     </div>
-    <Link href={localizedPath('/privacy/', locale)}>{copy.privacy.toUpperCase()}</Link>
+    <div class="quote-legal-links">
+      <Link href={localizedPath('/privacy/', locale)}>{copy.privacy}</Link>
+      <button type="button" data-analytics-settings>
+        {copy.analyticsSettings}
+      </button>
+    </div>
   </div>
 </footer>

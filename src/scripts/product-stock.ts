@@ -1,68 +1,17 @@
 import { inventorySource } from '../data/inventory';
 import { formatStock, parseInventory } from '../lib/inventory';
 
-declare global {
-  interface Window {
-    __sehaInventoryResponse?: (response: unknown) => void;
-  }
-}
-
 let initialized = false;
-let activeRequest: { id: string; receive: (response: unknown) => void } | undefined;
 
-// Google Sheets supports JSONP for public data; its CSV endpoint does not allow browser CORS.
-// A single persistent callback safely ignores late replies after a timeout.
-function requestInventory(): Promise<unknown> {
-  return new Promise((resolve, reject) => {
-    const requestId = String(Date.now());
-    const script = document.createElement('script');
-    let settled = false;
-    const finish = (response: unknown, error?: Error) => {
-      if (settled) return;
-      settled = true;
-      window.clearTimeout(timeout);
-      script.remove();
-      if (activeRequest?.id === requestId) activeRequest = undefined;
-      if (error) reject(error);
-      else resolve(response);
-    };
-    const timeout = window.setTimeout(
-      () => finish(undefined, new Error('Inventory request timed out')),
-      inventorySource.timeoutMs
-    );
-    activeRequest = { id: requestId, receive: (response) => finish(response) };
-    window.__sehaInventoryResponse = (response) => {
-      if (
-        typeof response === 'object' &&
-        response !== null &&
-        'reqId' in response &&
-        response.reqId === activeRequest?.id
-      ) {
-        activeRequest?.receive(response);
-      }
-    };
-    const url = new URL(
-      `https://docs.google.com/spreadsheets/d/${inventorySource.spreadsheetId}/gviz/tq`
-    );
-    url.searchParams.set('gid', inventorySource.sheetId);
-    url.searchParams.set('range', inventorySource.range);
-    url.searchParams.set('headers', '1');
-    url.searchParams.set('tq', `select ${inventorySource.columns.join(',')}`);
-    url.searchParams.set(
-      'tqx',
-      `out:json;reqId:${requestId};responseHandler:__sehaInventoryResponse`
-    );
-    script.src = url.href;
-    script.async = true;
-    script.referrerPolicy = 'no-referrer';
-    script.onerror = () => finish(undefined, new Error('Inventory request failed'));
-    script.onload = () => {
-      if (activeRequest?.id === requestId) {
-        finish(undefined, new Error('Inventory response is missing'));
-      }
-    };
-    document.head.append(script);
+// Public stock is fetched by our server; visitors never connect directly to Google.
+async function requestInventory(): Promise<unknown> {
+  const response = await fetch('/api/inventory.php', {
+    credentials: 'omit',
+    referrerPolicy: 'no-referrer',
+    signal: AbortSignal.timeout(inventorySource.timeoutMs)
   });
+  if (!response.ok) throw new Error('Inventory unavailable');
+  return response.json();
 }
 
 export function initProductStock(): void {

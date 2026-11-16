@@ -1,7 +1,9 @@
 """Deploy the PHP mail handler, preserving live SMTP credentials."""
 
 import io
+import json
 import os
+import re
 import runpy
 import ssl
 from ftplib import FTP_TLS, error_perm
@@ -32,12 +34,22 @@ def main():
             (ROOT / "public/api/.htaccess", "api/.htaccess"),
             (ROOT / "public/api/private/.htaccess", "api/private/.htaccess"),
             (ROOT / "server/php/inquiry-core.php", "api/private/inquiry-core.php"),
+            (ROOT / "server/php/consent-core.php", "api/private/consent-core.php"),
             (ROOT / "server/php/config.example.php", "api/private/config.example.php"),
         ]
         files += [(p, "api/private/vendor/phpmailer/" + p.name)
                   for p in (ROOT / "server/php/vendor/phpmailer").iterdir() if p.is_file()]
         # Install executable entry point last, after its protected dependencies.
         files.append((ROOT / "server/php/inquiry.php", "api/inquiry.php"))
+        files.append((ROOT / "server/php/consent.php", "api/consent.php"))
+        inventory_text = (ROOT / "src/data/inventory.ts").read_text(encoding="utf-8")
+        source = {key: re.search(rf"{key}: '([^']+)'", inventory_text).group(1)
+                  for key in ("spreadsheetId", "sheetId", "range")}
+        source["columns"] = re.findall(r"'([A-Z]+)'", re.search(r"columns: \[([^]]+)\]", inventory_text).group(1))
+        generated_source = ROOT / "dist/inventory-source.json"
+        generated_source.write_text(json.dumps(source), encoding="utf-8")
+        files.append((generated_source, "api/private/inventory-source.json"))
+        files.append((ROOT / "server/php/inventory.php", "api/inventory.php"))
         for source, target in files:
             content = source.read_bytes()
             if read_optional(ftp, target) == content:
@@ -51,6 +63,7 @@ def main():
             if read_optional(ftp, target) != content:
                 raise RuntimeError("Could not verify mail handler upload")
             print("Updated:", target)
+        generated_source.unlink(missing_ok=True)
         if read_optional(ftp, "api/private/config.php") is None:
             content = (ROOT / "server/php/config.example.php").read_bytes()
             ftp.storbinary("STOR api/private/config.php", io.BytesIO(content))
