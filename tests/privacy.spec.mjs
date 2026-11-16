@@ -3,6 +3,29 @@ import AxeBuilder from '@axe-core/playwright';
 // Each scenario covers multiple navigations or six complete accessibility scans.
 test.beforeEach(() => test.setTimeout(120_000));
 
+test('reopening settings survives a delayed refusal receipt', async ({ page, request }) => {
+  let release;
+  await page.route('https://seha-group.ru/**', async (route) => {
+    const path = new URL(route.request().url()).pathname;
+    if (path === '/api/consent.php') {
+      await new Promise((resolve) => {
+        release = resolve;
+      });
+      return route.fulfill({ json: { success: true } });
+    }
+    return route.fulfill({ response: await request.get(path) });
+  });
+  await page.route('https://mc.yandex.ru/**', (route) => route.abort());
+  await page.goto('https://seha-group.ru/ru/privacy/');
+  await page.locator('[data-cookie-reject]').click();
+  await expect.poll(() => typeof release).toBe('function');
+  await page.locator('.quote-legal-links [data-analytics-settings]').click();
+  await expect(page.locator('seha-cookie-banner')).toBeVisible();
+  release();
+  await expect(page.locator('[data-cookie-action]')).toBeEnabled();
+  await expect(page.locator('seha-cookie-banner')).toBeVisible();
+});
+
 test('analytics requires a recorded choice, survives navigation and stops on withdrawal', async ({
   page,
   request,

@@ -39,10 +39,9 @@ export class CookieBanner extends HTMLElement {
           if (error) error.hidden = true;
           try {
             await chooseAnalytics(accepted ? 'accepted' : 'rejected');
-            this.hidden = true;
+            if (accepted) this.hidden = true;
           } catch {
-            if (!accepted) this.hidden = true;
-            else if (error) error.hidden = false;
+            if (accepted && error) error.hidden = false;
           } finally {
             controls.forEach((control) => {
               control.disabled = false;
