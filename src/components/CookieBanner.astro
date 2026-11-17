@@ -4,6 +4,7 @@ import { getInterfaceCopy } from '../data/interface-copy';
 import { localizedPath } from '../lib/paths';
 import Button from './ui/Button.astro';
 import TablerIcon from './ui/TablerIcon.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 interface Props {
   locale: Locale;
 }
@@ -17,10 +18,20 @@ const copy = getInterfaceCopy(locale);
   </button>
   <div class="cookie-content">
     <p id="cookie-message" data-cookie-message>
-      {copy.cookieText}{' '}
-      <a href={`${localizedPath('/consent/', locale)}#analytics`} target="_blank" rel="noopener">
-        {copy.cookieDetails}
-      </a>
+      <span class="cookie-badge" aria-hidden="true">
+        <ResponsiveImage
+          src="/assets/images/common/cookie-coconut.png"
+          alt=""
+          sizes="56px"
+          loading="eager"
+        />
+      </span>
+      <span class="cookie-message-text">
+        {copy.cookieText}{' '}
+        <a href={`${localizedPath('/consent/', locale)}#analytics`} target="_blank" rel="noopener">
+          {copy.cookieDetails}
+        </a>
+      </span>
     </p>
     <div class="cookie-actions">
       <Button variant="secondary" full class="cookie-action" data-cookie-action>

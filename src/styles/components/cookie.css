@@ -56,7 +56,24 @@ seha-cookie-banner[hidden] {
   font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
 }
 .cookie-banner [data-cookie-message] {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
   padding-right: 24px;
+}
+.cookie-badge {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.cookie-badge img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  max-width: none;
 }
 .cookie-actions {
   display: grid;
