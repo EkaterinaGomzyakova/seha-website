@@ -10,6 +10,7 @@ import {
 import { publicRoutes } from '../data/routes';
 import { productGalleryImages } from '../data/product-gallery';
 import { pageSeo, productSeo } from '../data/seo';
+import { specificationsFor } from '../data/product-specifications';
 
 interface Props {
   locale: 'ru' | 'en';
@@ -150,6 +151,12 @@ const structuredData = {
             image: productImages,
             url: canonical,
             productID: detailProduct.id,
+            additionalProperty: specificationsFor(detailProduct).map((row) => ({
+              '@type': 'PropertyValue',
+              propertyID: row.label.en,
+              name: localized(row.label),
+              value: localized(row.value)
+            })),
             category: productCategory ? localized(productCategory.title) : undefined,
             brand: {
               '@type': 'Brand',

@@ -98,6 +98,20 @@ test('all sitemap pages contain unique metadata and linked schema in prerendered
     if (/\/products\/[^/]+\/[^/]+\/$/.test(path)) {
       const product = graph.find((entry) => entry['@type'] === 'Product');
       expect(product.productID, path).toBeTruthy();
+      const specifications = elements(html, 'section').find(
+        (node) => attribute(node, 'aria-labelledby') === 'specifications-title'
+      );
+      const labels = elements(specifications, 'dt');
+      const values = elements(specifications, 'dd');
+      const normalize = (value) => value.replace(/\s+/g, ' ').trim();
+      expect(product.additionalProperty, path).toHaveLength(labels.length);
+      expect(product.additionalProperty.length, path).toBeGreaterThan(0);
+      product.additionalProperty.forEach((property, index) => {
+        expect(property['@type'], path).toBe('PropertyValue');
+        expect(normalize(property.name), path).toBe(normalize(text(labels[index])));
+        expect(normalize(property.value), path).toBe(normalize(text(values[index])));
+        expect(property.value, path).not.toMatch(/уточнить|to be confirmed/i);
+      });
       expect(product.image.length, path).toBeGreaterThan(0);
       expect(product.brand.name, path).toBeTruthy();
       expect(product.manufacturer['@id'], path).toBe(manufacturer['@id']);
