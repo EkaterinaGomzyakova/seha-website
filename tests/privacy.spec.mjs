@@ -19,7 +19,7 @@ test('reopening settings survives a delayed refusal receipt', async ({ page, req
   await page.goto('https://seha-group.ru/ru/privacy/');
   await page.locator('[data-cookie-reject]').click();
   await expect.poll(() => typeof release).toBe('function');
-  await page.locator('.quote-legal-links [data-analytics-settings]').click();
+  await page.locator('main [data-analytics-settings]').click();
   await expect(page.locator('seha-cookie-banner')).toBeVisible();
   release();
   await expect(page.locator('[data-cookie-action]')).toBeEnabled();
@@ -74,7 +74,8 @@ test('analytics requires a recorded choice, survives navigation and stops on wit
   await expect(page.locator('#quote-result')).toHaveAttribute('data-state', 'success');
   expect(tags).toBe(0);
   fail = false;
-  await page.locator('.quote-legal-links [data-analytics-settings]').click();
+  await page.goto('https://seha-group.ru/ru/privacy/');
+  await page.locator('main [data-analytics-settings]').click();
   await page.locator('[data-cookie-action]').click();
   await expect.poll(() => tags).toBe(1);
   expect(choices.at(-1)).toMatchObject({ status: 'accepted', version: '2026-11-17' });
@@ -85,7 +86,7 @@ test('analytics requires a recorded choice, survives navigation and stops on wit
   await context.addCookies([
     { name: '_ym_uid', value: 'test', domain: 'seha-group.ru', path: '/' }
   ]);
-  await page.locator('.quote-legal-links [data-analytics-settings]').click();
+  await page.locator('main [data-analytics-settings]').click();
   await Promise.all([page.waitForEvent('load'), page.locator('[data-cookie-reject]').click()]);
   await expect(page.locator('seha-cookie-banner')).toBeHidden();
   expect(tags).toBe(2);
