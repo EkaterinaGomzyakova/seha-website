@@ -8,3 +8,15 @@ export const siteContact = {
   postalCode: '115432',
   country: 'RU'
 } as const;
+
+export const siteOrganization = {
+  legalName: 'ООО «СЕХА»',
+  taxID: '9725204216',
+  ogrn: '1267700116903',
+  kpp: '772501001',
+  sameAs: ['https://vk.ru/seha.group'],
+  logo: {
+    ru: '/assets/images/common/organization-logo-ru.png',
+    en: '/assets/images/common/organization-logo-en.png'
+  }
+} as const;

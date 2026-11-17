@@ -35,7 +35,7 @@ const ru = {
   processSectionLine: 'до партии,',
   processSectionEmphasis: 'готовой к отправке',
   processSectionText:
-    'Более 40 лет работы в кокосовой отрасли — от выращивания и сбора урожая до переработки. На каждом этапе контролируем сырьё и характеристики готовой продукции.',
+    'Более 40 лет кокосового бизнеса в Индии — от выращивания и сбора урожая до переработки. На каждом этапе контролируем сырьё и характеристики готовой продукции.',
   processSectionCardTitle: 'Сырье и производственная база',
   processSectionText2:
     'СЕХА выращивает кокосы на собственных плантациях в Поллачи, в регионе с муссонным климатом и благоприятными природными условиями. Здесь созревают сочные, маслянистые плоды и проходит весь цикл — от сбора урожая до подготовки сырья и переработки.',
@@ -143,7 +143,7 @@ const en = {
   processSectionLine: 'to a batch',
   processSectionEmphasis: 'ready for shipment',
   processSectionText:
-    'Over 40 years in the coconut industry, from growing and harvesting to processing. We monitor raw materials and finished product characteristics at each stage.',
+    'Over 40 years in the coconut business in India, from growing and harvesting to processing. We monitor raw materials and finished product characteristics at each stage.',
   processSectionCardTitle: 'Raw materials and manufacturing base',
   processSectionText2:
     'SEHA grows coconuts on its own plantations in Pollachi, a region with a monsoon climate and favourable natural conditions. The fruit develops juicy, oil-rich kernels, and the full cycle takes place here, from harvesting to raw material preparation and processing.',

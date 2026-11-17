@@ -16,12 +16,12 @@ const ru = {
   aboutIntroHeading: 'Производим и',
   aboutIntroLabel2: 'поставляем кокосовые продукты',
   aboutIntroText:
-    'Более 40 лет группа компаний СЕХА выращивает кокосы и производит кокосовую продукцию в Поллачи, Индия. СЕХА принадлежит бренд пищевых продуктов из кокоса Veymur™: масла МСТ, RBD и Virgin, кокосовая стружка и молоко. Также производим субстраты, изделия из волокна и продукты из скорлупы.',
+    'За более чем 40 лет кокосового бизнеса в Индии группа компаний СЕХА накопила опыт выращивания кокосов и производства кокосовой продукции в Поллачи. СЕХА принадлежит бренд пищевых продуктов из кокоса Veymur™: масла МСТ, RBD и Virgin, кокосовая стружка и молоко. Также производим субстраты, изделия из волокна и продукты из скорлупы.',
   aboutIntroText2:
     'СЕХА производит продукцию в Индии, импортирует её в Россию и принимает заказы. Команда СЕХА в Москве помогает выбрать продукт, согласовать характеристики, упаковку и документы и организует поставку. Работаем с оптовыми поставками для бизнеса.',
   aboutProductionAddressLabel: 'Производство в Индии',
   aboutNumbersAriaLabel: 'Ключевые факты',
-  aboutNumbersLabel: 'лет опыта в кокосовой отрасли',
+  aboutNumbersLabel: 'лет опыта в кокосовом бизнесе в Индии',
   aboutNumbersLabel2: 'регион происхождения сырья и\nпроизводства',
   aboutNumbersValue3: '200+',
   aboutNumbersLabel3: 'сотрудников на площадке\nсубстратов в Индии',
@@ -31,7 +31,7 @@ const ru = {
   aboutApproachLabel3: 'работы',
   aboutApproachCardTitle: 'Происхождение имеет значение',
   aboutApproachText2:
-    'За четыре десятилетия накопили опыт селекции, отбора и сушки кокосов. Контролируем путь от плантации до переработки: зрелость сырья и бережная подготовка помогают поддерживать стабильные вкус и аромат от партии к партии.',
+    'За четыре десятилетия работы в Индии накопили опыт селекции, отбора и сушки кокосов. Контролируем путь от плантации до переработки: зрелость сырья и бережная подготовка помогают поддерживать стабильные вкус и аромат от партии к партии.',
   aboutApproachCardTitle2: 'Спецификация раньше цены',
   aboutApproachText3:
     'Стоимость рассчитываем с учётом продукта, упаковки, объёма и доставки. Для оптовых закупок предлагаем скидки, а для регулярных поставок — долгосрочные контракты с согласованными ценами и графиком отгрузок.',
@@ -51,7 +51,7 @@ const ru = {
   aboutTimelineLabel3: '1980-е',
   aboutTimelineCardTitle: 'Начало работы в Поллачи',
   aboutTimelineText:
-    'В Поллачи начинается работа с кокосовым сырьём. Накапливается практический опыт его отбора и подготовки к переработке.',
+    'В Поллачи, Индия, начинается работа с кокосовым сырьём. Накапливается практический опыт его отбора и подготовки к переработке.',
   aboutTimelineLabel4: '2000-е',
   aboutTimelineCardTitle2: 'Развитие работы с сырьём',
   aboutTimelineText2:
@@ -89,12 +89,12 @@ const en = {
   aboutIntroHeading: 'We produce and',
   aboutIntroLabel2: 'supply coconut products',
   aboutIntroText:
-    'For over 40 years, SEHA Group has grown coconuts and manufactured coconut products in Pollachi, India. SEHA owns Veymur™, its coconut food products brand: MCT, RBD and Virgin oils, desiccated coconut and coconut milk. We also manufacture growing substrates, coir fibre and coconut shell products.',
+    'SEHA Group brings over 40 years of experience in the coconut business in India, growing coconuts and manufacturing coconut products in Pollachi. SEHA owns Veymur™, its coconut food products brand: MCT, RBD and Virgin oils, desiccated coconut and coconut milk. We also manufacture growing substrates, coir fibre and coconut shell products.',
   aboutIntroText2:
     'SEHA manufactures products in India, imports them into Russia and accepts orders. The SEHA team in Moscow helps customers choose products, agree on specifications, packaging and documents, and arrange delivery. We supply coconut products to businesses wholesale.',
   aboutProductionAddressLabel: 'Manufacturing in India',
   aboutNumbersAriaLabel: 'Key facts',
-  aboutNumbersLabel: 'years of experience in the coconut industry',
+  aboutNumbersLabel: 'years in the coconut business in India',
   aboutNumbersLabel2: 'region of origin of raw materials and manufacturing',
   aboutNumbersValue3: '200+',
   aboutNumbersLabel3: 'employees at the Indian substrate facility',
@@ -104,7 +104,7 @@ const en = {
   aboutApproachLabel3: 'we work',
   aboutApproachCardTitle: 'Origin matters',
   aboutApproachText2:
-    'Four decades of experience in coconut selection, cultivation and drying underpin our work. We control the journey from plantation to processing: raw material maturity and careful preparation help maintain consistent flavour and aroma across batches.',
+    'Four decades in the coconut business in India underpin our experience in coconut selection, cultivation and drying. We control the journey from plantation to processing: raw material maturity and careful preparation help maintain consistent flavour and aroma across batches.',
   aboutApproachCardTitle2: 'Specifications before price',
   aboutApproachText3:
     'Pricing reflects the product, packaging, volume and delivery. We offer wholesale discounts and long-term contracts with agreed prices and shipment schedules for recurring orders.',
@@ -124,7 +124,7 @@ const en = {
   aboutTimelineLabel3: '1980s',
   aboutTimelineCardTitle: 'Starting in Pollachi',
   aboutTimelineText:
-    'Work with coconut raw materials begins in Pollachi, building practical experience in selection and preparation for processing.',
+    'Work with coconut raw materials begins in Pollachi, India, building practical experience in selection and preparation for processing.',
   aboutTimelineLabel4: '2000s',
   aboutTimelineCardTitle2: 'Developing raw material expertise',
   aboutTimelineText2:

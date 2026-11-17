@@ -72,6 +72,22 @@ test('all sitemap pages contain unique metadata and linked schema in prerendered
     );
     expect(schema, path).toBeTruthy();
     const graph = JSON.parse(text(schema))['@graph'];
+    const organization = graph.find((entry) => entry['@id'].endsWith('#organization'));
+    expect(organization.legalName, path).toBe('ООО «СЕХА»');
+    expect(organization.taxID, path).toBe('9725204216');
+    expect(organization.address.addressCountry, path).toBe('RU');
+    expect(organization.identifier, path).toContainEqual({
+      '@type': 'PropertyValue',
+      propertyID: 'OGRN',
+      value: '1267700116903'
+    });
+    expect(organization.sameAs, path).toContain('https://vk.ru/seha.group');
+    expect(organization.logo.width, path).toBe(512);
+    expect(organization.logo.height, path).toBe(512);
+    const manufacturer = graph.find((entry) => entry['@id'].endsWith('#manufacturer'));
+    expect(manufacturer.address.addressCountry, path).toBe('IN');
+    expect(manufacturer.taxID, path).toBeUndefined();
+    expect(manufacturer.identifier, path).toBeUndefined();
     const webpage = graph.find((entry) => entry['@id'] === `${url}#webpage`);
     expect(webpage.name, path).toBe(title);
     expect(webpage.description, path).toBe(description);
@@ -84,6 +100,7 @@ test('all sitemap pages contain unique metadata and linked schema in prerendered
       expect(product.productID, path).toBeTruthy();
       expect(product.image.length, path).toBeGreaterThan(0);
       expect(product.brand.name, path).toBeTruthy();
+      expect(product.manufacturer['@id'], path).toBe(manufacturer['@id']);
       expect(product.offers, path).toBeUndefined();
       expect(product.aggregateRating, path).toBeUndefined();
       expect(webpage.mainEntity['@id'], path).toBe(product['@id']);

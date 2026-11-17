@@ -1,6 +1,6 @@
 ---
 import { localizedPath, withBase } from '../lib/paths';
-import { siteContact } from '../data/site';
+import { siteContact, siteOrganization } from '../data/site';
 import {
   products,
   productCategories,
@@ -160,21 +160,33 @@ const structuredData = {
                   : 'SEHA'
             },
             mainEntityOfPage: { '@id': canonical + '#webpage' },
-            manufacturer: {
-              '@type': 'Organization',
-              '@id': rootUrl + '#manufacturer',
-              name: locale === 'ru' ? 'Группа компаний СЕХА' : 'SEHA Group of Companies',
-              address: { '@type': 'PostalAddress', addressCountry: 'IN' }
-            }
+            manufacturer: { '@id': rootUrl + '#manufacturer' }
           }
         ]
       : []),
     {
       '@type': 'Organization',
       '@id': rootUrl + '#organization',
-      name: locale === 'ru' ? 'Группа компаний СЕХА' : 'SEHA Group of Companies',
+      name: locale === 'ru' ? 'СЕХА' : 'SEHA',
+      legalName: siteOrganization.legalName,
       alternateName: ['SEHA', 'СЕХА'],
+      description:
+        locale === 'ru'
+          ? 'ООО «СЕХА» — российская компания группы СЕХА: импорт кокосовой продукции из Индии, приём заказов и сопровождение оптовых поставок командой в Москве.'
+          : 'SEHA LLC is the Russian company within SEHA, importing coconut products from India, accepting orders and managing wholesale supply through its Moscow team.',
       url: rootUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: absolute(withBase(siteOrganization.logo[locale])),
+        width: 512,
+        height: 512
+      },
+      taxID: siteOrganization.taxID,
+      identifier: [
+        { '@type': 'PropertyValue', propertyID: 'OGRN', value: siteOrganization.ogrn },
+        { '@type': 'PropertyValue', propertyID: 'KPP', value: siteOrganization.kpp }
+      ],
+      sameAs: siteOrganization.sameAs,
       email: siteContact.email,
       telephone: siteContact.phone,
       contactPoint: {
@@ -190,6 +202,29 @@ const structuredData = {
         addressLocality: siteContact.city,
         postalCode: siteContact.postalCode,
         addressCountry: siteContact.country
+      }
+    },
+    {
+      '@type': 'Organization',
+      '@id': rootUrl + '#manufacturer',
+      name: locale === 'ru' ? 'СЕХА — производство в Индии' : 'SEHA Manufacturing in India',
+      alternateName: ['SEHA', 'СЕХА'],
+      description:
+        locale === 'ru'
+          ? 'Производство кокосовой продукции СЕХА в Поллачи, Индия. Более 40 лет опыта кокосового бизнеса в Индии: выращивание кокосов, переработка сырья и выпуск готовой продукции.'
+          : 'SEHA coconut product manufacturing in Pollachi, India, with over 40 years of experience in the coconut business in India, from cultivation and processing to finished products.',
+      url: absolute(localizedPath('/production/', locale)),
+      logo: {
+        '@type': 'ImageObject',
+        url: absolute(withBase(siteOrganization.logo[locale])),
+        width: 512,
+        height: 512
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Pollachi',
+        addressRegion: 'Tamil Nadu',
+        addressCountry: 'IN'
       }
     },
     {

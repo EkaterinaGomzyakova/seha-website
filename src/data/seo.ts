@@ -59,8 +59,8 @@ export const pageSeo: Record<string, Metadata> = {
   '/about': metadata(
     'О компании СЕХА — производитель кокосовой продукции и импортёр',
     'About SEHA — Coconut Products Manufacturer & Supplier',
-    'Группа компаний СЕХА: производство кокосовых продуктов в Индии и импорт в Россию. Более 40 лет опыта в отрасли, команда в Москве и сопровождение поставок.',
-    'SEHA produces coconut products in India and imports them into Russia. Over 40 years of industry experience, a Moscow team and support throughout each order.'
+    'Группа компаний СЕХА: производство кокосовых продуктов в Индии и импорт в Россию. Более 40 лет опыта кокосового бизнеса в Индии, команда в Москве и сопровождение поставок.',
+    'SEHA produces coconut products in India and imports them into Russia. Over 40 years in the coconut business in India, a Moscow team and support throughout each order.'
   ),
   '/quality': metadata(
     'Качество и сертификаты кокосовой продукции | СЕХА',

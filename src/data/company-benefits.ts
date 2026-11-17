@@ -16,9 +16,9 @@ export const companyBenefitsCopy = {
       'Производство в Индии, параметры продукции под вашу задачу и сопровождение B2B-поставок в России.',
     items: [
       {
-        title: '40+ лет отраслевого опыта',
+        title: '40+ лет кокосового бизнеса в Индии',
         description:
-          'Более 40 лет работы с кокосовым сырьём, его переработкой и применением в растениеводстве.'
+          'Опыт кокосового бизнеса СЕХА в Индии — более 40 лет: от работы с сырьём до его переработки и применения в растениеводстве.'
       },
       {
         title: 'Две производственные площадки',
@@ -55,9 +55,9 @@ export const companyBenefitsCopy = {
       'Manufacturing in India, specifications tailored to your application and B2B supply support in Russia.',
     items: [
       {
-        title: '40+ years of industry experience',
+        title: '40+ years in India’s coconut industry',
         description:
-          'Over 40 years of experience with coconut raw materials, processing and horticultural applications.'
+          'SEHA’s coconut business in India brings over 40 years of experience with raw materials, processing and horticultural applications.'
       },
       {
         title: 'Two dedicated manufacturing sites',
