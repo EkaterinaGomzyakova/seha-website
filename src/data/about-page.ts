@@ -16,9 +16,9 @@ const ru = {
   aboutIntroHeading: 'Производим и',
   aboutIntroLabel2: 'поставляем кокосовые продукты',
   aboutIntroText:
-    'Более 40 лет группа компаний СЕХА выращивает кокосы и производит кокосовую продукцию в Поллачи, Индия. Поставляем в Россию масла МСТ, RBD и Virgin, кокосовую стружку и молоко под маркой Veymur, а также субстраты, изделия из волокна и продукты из скорлупы.',
+    'Более 40 лет группа компаний СЕХА выращивает кокосы и производит кокосовую продукцию в Поллачи, Индия. СЕХА принадлежит бренд пищевых продуктов из кокоса Veymur™: масла МСТ, RBD и Virgin, кокосовая стружка и молоко. Также производим субстраты, изделия из волокна и продукты из скорлупы.',
   aboutIntroText2:
-    'Работаем от выращивания кокосов до переработки и фасовки готовой продукции. Команда в Москве помогает выбрать продукт, согласовать характеристики, упаковку и документы и организует поставку. Работаем с оптовыми поставками для бизнеса. Фасовку, цену и доставку уточняем по выбранному товару.',
+    'СЕХА производит продукцию в Индии, импортирует её в Россию и принимает заказы. Команда СЕХА в Москве помогает выбрать продукт, согласовать характеристики, упаковку и документы и организует поставку. Работаем с оптовыми поставками для бизнеса.',
   aboutProductionAddressLabel: 'Производство в Индии',
   aboutNumbersAriaLabel: 'Ключевые факты',
   aboutNumbersLabel: 'лет опыта в кокосовой отрасли',
@@ -89,9 +89,9 @@ const en = {
   aboutIntroHeading: 'We produce and',
   aboutIntroLabel2: 'supply coconut products',
   aboutIntroText:
-    'For over 40 years, SEHA Group has grown coconuts and manufactured coconut products in Pollachi, India. We supply Russia with Veymur MCT, RBD and Virgin oils, desiccated coconut and coconut milk, as well as growing substrates, coir fibre and coconut shell products.',
+    'For over 40 years, SEHA Group has grown coconuts and manufactured coconut products in Pollachi, India. SEHA owns Veymur™, its coconut food products brand: MCT, RBD and Virgin oils, desiccated coconut and coconut milk. We also manufacture growing substrates, coir fibre and coconut shell products.',
   aboutIntroText2:
-    'Our work covers coconut cultivation, processing and packing of finished products. Our Moscow team helps customers choose products, agree on specifications, packaging and documents, and arrange delivery. We supply coconut products to businesses wholesale. Pack sizes, pricing and delivery are confirmed for the selected product.',
+    'SEHA manufactures products in India, imports them into Russia and accepts orders. The SEHA team in Moscow helps customers choose products, agree on specifications, packaging and documents, and arrange delivery. We supply coconut products to businesses wholesale.',
   aboutProductionAddressLabel: 'Manufacturing in India',
   aboutNumbersAriaLabel: 'Key facts',
   aboutNumbersLabel: 'years of experience in the coconut industry',
