@@ -7,7 +7,7 @@
   width: calc(100% - 32px);
   margin-inline: auto;
   border-radius: var(--radius-banner);
-  background: var(--color-yellow-brand);
+  background: var(--color-green-brand);
 }
 .legal-hero__content {
   display: flex;
@@ -21,13 +21,14 @@
 }
 .legal-hero__content :is(h1, p) {
   margin: 0;
-  color: var(--color-black);
 }
 .legal-hero__content h1 {
+  color: var(--color-yellow-brand);
   max-width: 1040px;
   overflow-wrap: normal;
 }
 .legal-hero__content p {
+  color: var(--color-background-light);
   max-width: 75ch;
 }
 .privacy-tags {
@@ -39,8 +40,8 @@
 .privacy-tags span {
   padding: 6px 9px;
   border-radius: var(--radius-label);
-  background: var(--color-green-brand);
-  color: var(--color-yellow-brand);
+  background: var(--color-yellow-brand);
+  color: var(--color-green-brand);
 }
 .privacy-content {
   width: min(1432px, var(--grid-content-width));
