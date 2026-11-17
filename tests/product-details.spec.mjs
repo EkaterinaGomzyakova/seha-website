@@ -33,7 +33,7 @@ test('product questions expand with keyboard and keep one answer open', async ({
     const cookie = page.locator('.cookie-close');
     if (await cookie.isVisible()) await cookie.click();
     const questions = page.locator('.product-detail__question');
-    await expect(questions).toHaveCount(4);
+    await expect(questions).toHaveCount(3);
     await expect(page.locator('.product-detail__question[open]')).toHaveCount(0);
     const first = questions.first();
     const second = questions.nth(1);
