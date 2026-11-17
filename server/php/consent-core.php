@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-const SEHA_PRIVACY_VERSION = '2026-11-17';
+const SEHA_PRIVACY_VERSION = '2026-11-17.2';
 function valid_consent_choice(array $data): bool
 {
     return ($data['version'] ?? null) === SEHA_PRIVACY_VERSION

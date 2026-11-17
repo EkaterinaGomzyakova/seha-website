@@ -5,7 +5,7 @@ function valid_inquiry(array $data): bool
 {
     if (!in_array($data['type'] ?? null, ['general', 'product'], true)
         || !in_array($data['locale'] ?? null, ['ru', 'en'], true)
-        || ($data['consent'] ?? null) !== true || ($data['consentVersion'] ?? null) !== '2026-11-17'
+        || ($data['consent'] ?? null) !== true || ($data['consentVersion'] ?? null) !== '2026-11-17.2'
         || !empty($data['website'])) {
         return false;
     }

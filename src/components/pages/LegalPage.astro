@@ -1,9 +1,7 @@
 ---
-import PageHero from '../PageHero.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Link from '../ui/Link.astro';
-import Tag from '../ui/Tag.astro';
 import { withBase, localizedPath } from '../../lib/paths';
 import {
   legalDocuments,
@@ -40,17 +38,23 @@ const ui = getInterfaceCopy(locale);
     ]}
   />
   <main id="legal-content">
-    <PageHero titleId="legal-title">
-      <Fragment slot="heading">{copy.title}</Fragment>
-      <Fragment slot="description">{copy.intro}</Fragment>
-      <div slot="details" class="privacy-tags">
-        <Tag>
-          {locale === 'ru'
-            ? `Редакция от ${legalVersion.split('-').reverse().join('.')}`
-            : `Version ${legalVersion}`}
-        </Tag>
+    <section class="legal-hero" aria-labelledby="legal-title">
+      <div class="legal-hero__content">
+        <h1 id="legal-title" class="type-h1">
+          {copy.title}
+        </h1>
+        <div>
+          <p class="type-p">{copy.intro}</p>
+          <div class="privacy-tags">
+            <span class="type-button">
+              {locale === 'ru'
+                ? `Редакция от ${legalVersion.split('-').reverse().join('.')}`
+                : `Version ${legalVersion}`}
+            </span>
+          </div>
+        </div>
       </div>
-    </PageHero>
+    </section>
     <div class="privacy-content legal-document">
       {kind === 'inquiry' && (
         <nav
@@ -62,11 +66,18 @@ const ui = getInterfaceCopy(locale);
         </nav>
       )}
       {copy.sections.map((section) => (
-        <section id={section.id} class="privacy-section">
+        <section id={section.id} class:list={['privacy-section', { 'privacy-wide': section.wide }]}>
           <h2 class="type-h3">{section.title}</h2>
           {section.paragraphs.map((paragraph) => (
             <p class="type-p">{paragraph}</p>
           ))}
+          {section.items && (
+            <ul class="legal-list">
+              {section.items.map((item) => (
+                <li class="type-p">{item}</li>
+              ))}
+            </ul>
+          )}
           {section.links && (
             <ul class="legal-links">
               {section.links.map((link) => (
@@ -81,7 +92,7 @@ const ui = getInterfaceCopy(locale);
         </section>
       ))}
       <nav
-        class="privacy-section legal-links"
+        class="privacy-section privacy-wide legal-links"
         aria-label={locale === 'ru' ? 'Документы о персональных данных' : 'Personal data documents'}
       >
         {(['policy', 'inquiry'] as LegalKind[])
@@ -91,7 +102,7 @@ const ui = getInterfaceCopy(locale);
               {legalDocuments[locale][item].title}
             </Link>
           ))}
-        <button type="button" class="type-button" data-analytics-settings>
+        <button id="analytics-settings" type="button" class="type-button" data-analytics-settings>
           {ui.analyticsSettings}
         </button>
       </nav>

@@ -78,7 +78,7 @@ test('analytics requires a recorded choice, survives navigation and stops on wit
   await page.locator('main [data-analytics-settings]').click();
   await page.locator('[data-cookie-action]').click();
   await expect.poll(() => tags).toBe(1);
-  expect(choices.at(-1)).toMatchObject({ status: 'accepted', version: '2026-11-17' });
+  expect(choices.at(-1)).toMatchObject({ status: 'accepted', version: '2026-11-17.2' });
   expect(Object.keys(choices.at(-1)).sort()).toEqual(['receipt', 'status', 'version']);
   await page.goto('https://seha-group.ru/ru/consent/');
   await expect(page.locator('seha-cookie-banner')).toBeHidden();
