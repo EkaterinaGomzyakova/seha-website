@@ -201,7 +201,7 @@ const en = {
   russiaSectionHeading: 'Manufacturing expertise from India,',
   russiaSectionEmphasis: 'commercial support in Russia',
   russiaSectionText:
-    'SEHA manufactures in India and imports into Russia. The SEHA team in Moscow accepts orders and manages delivery, helping select the product and agree specifications, volume, packaging and documentation.'
+    'SEHA manufactures in India and imports into Russia. The SEHA team in Moscow accepts orders and manages delivery, helping select the product and agree specifications, volume, packaging and documentation.',
   russiaSectionLabel2: 'Product selection for your task',
   russiaSectionLabel3: 'Agreement on volume and packaging',
   russiaSectionLabel4: 'Quotation',
