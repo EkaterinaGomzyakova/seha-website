@@ -66,8 +66,8 @@ export const interfaceCopy = {
     mailConsent:
       'Согласен на обработку указанных данных для подготовки предложения и обратной связи.',
     cookieTitle: 'Уведомление о cookies',
-    cookieText:
-      'С вашего согласия используем Яндекс Метрику, cookies и Вебвизор для анализа посещений. Вы можете отказаться — сайт и формы продолжат работать.',
+    cookieText: 'С вашего согласия используем cookies и Яндекс Метрику для аналитики.',
+    cookieDetails: 'Подробнее',
     cookieAction: 'Разрешить аналитику',
     cookieReject: 'Без аналитики',
     cookieError: 'Не удалось сохранить согласие. Повторите попытку или продолжите без аналитики.',
@@ -137,8 +137,8 @@ export const interfaceCopy = {
     mailConsent:
       'I consent to the processing of these details to prepare a quotation and contact me.',
     cookieTitle: 'Cookie notice',
-    cookieText:
-      'With your consent, we use Yandex Metrica, cookies and session replay to analyse visits. You can decline and still use the website and inquiry forms.',
+    cookieText: 'With your consent, we use cookies and Yandex Metrica for site analytics.',
+    cookieDetails: 'Details',
     cookieAction: 'Allow analytics',
     cookieReject: 'Without analytics',
     cookieError: 'Your consent could not be saved. Try again or continue without analytics.',

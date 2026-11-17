@@ -6,59 +6,36 @@ seha-cookie-banner[hidden] {
 .cookie-banner {
   position: fixed;
   left: auto;
-  right: 32px;
-  bottom: 40px;
+  right: 24px;
+  bottom: 24px;
   z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  width: min(485px, calc(100% - 48px));
+  width: min(420px, calc(100% - 32px));
   height: auto;
-  max-height: calc(100dvh - 80px);
-  padding: 32px;
+  max-height: calc(100dvh - 32px);
+  padding: 20px;
   overflow: auto;
-  border-radius: 40px;
+  border-radius: var(--radius-panel);
   background: var(--color-green-brand);
   color: var(--color-background-light);
 }
 @media (min-width: 1281px) {
   .cookie-banner {
     right: max(32px, calc((100vw - 1648px) / 2));
-    bottom: 40px;
+    bottom: 24px;
   }
 }
-.cookie-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 54px;
-}
-.cookie-badge {
-  position: relative;
-  display: block;
-  width: 54px;
-  height: 54px;
-  flex: 0 0 54px;
-  overflow: hidden;
-}
-.cookie-badge img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 80px;
-  height: 80px;
-  max-width: none;
-}
 .cookie-close {
-  position: static;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -70,7 +47,7 @@ seha-cookie-banner[hidden] {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 12px;
   width: 100%;
 }
 .cookie-banner p {
@@ -78,10 +55,22 @@ seha-cookie-banner[hidden] {
   max-width: none;
   font: 500 var(--type-p-size)/var(--type-p-line-height) var(--font-sans);
 }
+.cookie-banner [data-cookie-message] {
+  padding-right: 24px;
+}
+.cookie-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
 .cookie-banner .cookie-action {
   min-width: 0;
-  height: 40px;
-  padding: 12px 24px;
+  min-height: 44px;
+  height: auto;
+  padding: 10px 8px;
+  width: 100%;
+  white-space: normal;
 }
 .cookie-close:focus-visible,
 .cookie-action:focus-visible {
@@ -93,8 +82,9 @@ seha-cookie-banner[hidden] {
 }
 @media (max-width: 560px) {
   .cookie-banner {
-    left: 24px;
-    right: 24px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
     width: auto;
     height: auto;
     min-height: 0;
@@ -118,13 +108,7 @@ seha-cookie-banner[hidden] {
   color: var(--color-background-light);
   cursor: pointer;
 }
-.cookie-content > .cookie-action {
-  width: 100%;
-  height: auto;
-  min-height: 44px;
-  white-space: normal;
-}
-.cookie-content > button:disabled {
+.cookie-banner button:disabled {
   opacity: 0.6;
   cursor: wait;
 }
