@@ -34,7 +34,6 @@ export const interfaceCopy = {
       'Гидропонная ферма',
       'Садоводческая компания',
       'Бренд продуктов питания',
-      'Частный покупатель',
       'Другое'
     ],
     consentStart: 'Даю',
@@ -105,7 +104,6 @@ export const interfaceCopy = {
       'Hydroponic Farm',
       'Horticulture Company',
       'Food Brand',
-      'Individual customer',
       'Other'
     ],
     consentStart: 'I give my',

@@ -103,7 +103,7 @@ export const productQuestions: Record<string, ProductQuestions> = {
         },
         answer: {
           ru: 'Есть бутылки 500 мл и транспортная тара 25, 200 и 1000 л. В карточке можно выбрать готовую упаковку или промышленную фасовку.',
-          en: 'Options include 500 ml bottles and bulk formats of 25, 200 and 1000 L. Choose retail packaging or an industrial format in the product card.'
+          en: 'Options include 500 ml bottles and bulk formats of 25, 200 and 1000 L. Choose bottled or bulk packaging in the product card.'
         }
       }
     ]

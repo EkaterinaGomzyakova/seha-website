@@ -13,7 +13,7 @@ const ru = {
   heroTitle: 'Один кокос',
   heroLabel: 'Больше возможностей',
   heroText:
-    'Кокосовые продукты для бизнеса и частных покупателей. Оптовые и розничные заказы — по запросу.',
+    'Кокосовые продукты для бизнеса. Оптовые поставки для производства, торговли и растениеводства.',
   heroLine: 'Производим. Перерабатываем. Поставляем по всему миру.'
 } as const;
 
@@ -33,7 +33,7 @@ const en = {
   heroTitle: 'One coconut',
   heroLabel: 'More possibilities',
   heroText:
-    'Coconut products for businesses and individual customers. Wholesale and retail orders are available by inquiry.',
+    'Coconut products for business. Wholesale supply for manufacturing, trade and horticulture.',
   heroLine: 'We manufacture. We process. We supply worldwide.'
 } satisfies ProductsPageCopy;
 

@@ -17,14 +17,14 @@ export const pageSeo: Record<string, Metadata> = {
   '/': metadata(
     'Кокосовые продукты и субстраты оптом — производство в Индии | СЕХА',
     'Coconut Products & Coir Substrates — Manufacturer in India | SEHA',
-    'СЕХА производит кокосовые субстраты, пищевые продукты Veymur, волокно и уголь в Индии. Оптовые и розничные заказы в России, параметры и упаковка под заказ.',
-    'SEHA manufactures coconut growing media, Veymur food products, coir fibre and shell products in India. Wholesale and retail orders, custom specifications and packaging.'
+    'СЕХА производит кокосовые субстраты, пищевые продукты Veymur, волокно и уголь в Индии. Оптовые поставки в Россию, параметры и упаковка под заказ.',
+    'SEHA manufactures coconut growing media, Veymur food products, coir fibre and shell products in India. Wholesale supply, custom specifications and packaging.'
   ),
   '/products': metadata(
     'Кокосовая продукция оптом — каталог производителя | СЕХА',
     'Wholesale Coconut Products — Manufacturer Catalogue | SEHA',
-    'Каталог СЕХА: кокосовый торф, чипсы, гроубэги, масла, молоко, сахар, стружка, волокно и уголь. Производство в Индии. Оптовые и розничные заказы по запросу.',
-    'Explore SEHA coco peat, husk chips, grow bags, coconut oils, milk, sugar, desiccated coconut, coir and carbon. Indian manufacturing, custom wholesale supply and retail orders.'
+    'Каталог СЕХА: кокосовый торф, чипсы, гроубэги, масла, молоко, сахар, стружка, волокно и уголь. Производство в Индии. Оптовые поставки.',
+    'Explore SEHA coco peat, husk chips, grow bags, coconut oils, milk, sugar, desiccated coconut, coir and carbon. Indian manufacturing, custom wholesale supply.'
   ),
   '/products/substrates': metadata(
     'Кокосовые субстраты оптом — торф, чипсы и гроубэги | СЕХА',
@@ -35,8 +35,8 @@ export const pageSeo: Record<string, Metadata> = {
   '/products/veymur': metadata(
     'Кокосовые пищевые продукты оптом — масла, молоко, сахар | Veymur',
     'Coconut Food Ingredients — Oils, Milk, Sugar & Coconut | Veymur',
-    'Пищевые продукты Veymur от СЕХА: кокосовые масла MCT, virgin и RBD, молоко, сахар, стружка и свежие кокосы. Розничная и оптовая упаковка под заказ.',
-    'Veymur coconut food products by SEHA: MCT, virgin and RBD oils, coconut milk, sugar, desiccated coconut and fresh coconuts. Retail and bulk packaging.'
+    'Пищевые продукты Veymur от СЕХА: кокосовые масла MCT, virgin и RBD, молоко, сахар, стружка и свежие кокосы. Фасовка и упаковка под заказ.',
+    'Veymur coconut food products by SEHA: MCT, virgin and RBD oils, coconut milk, sugar, desiccated coconut and fresh coconuts. Custom packaging and bulk formats.'
   ),
   '/products/fiber': metadata(
     'Кокосовое волокно оптом — тюки, маты и геотекстиль | СЕХА',
@@ -80,7 +80,7 @@ export const productSeo: Record<string, Metadata> = {
   'grow-bag': metadata(
     'Кокосовые маты и гроубэги для теплиц и клубники | СЕХА',
     'Coco Coir Grow Bags for Greenhouses — Custom Supply | SEHA',
-    'Кокосовый субстрат в матах для клубники, томатов и огурцов. Промытые гроубэги: состав, размеры и отверстия под заказ. Оптовые и розничные заказы по запросу.',
+    'Кокосовый субстрат в матах для клубники, томатов и огурцов. Промытые гроубэги: состав, размеры и отверстия под заказ. Оптовые поставки.',
     'Coco coir grow bags for tomatoes, cucumbers and strawberries. Washed pith and chip blends with custom dimensions, planting holes and drainage layouts.'
   ),
   'open-top-grow-bag': metadata(
@@ -170,12 +170,12 @@ export const productSeo: Record<string, Metadata> = {
   'veymur-mct-oil': metadata(
     'Кокосовое МСТ-масло C8/C10 оптом — органическое | СЕХА',
     'Organic Coconut MCT Oil C8 & C10 — Wholesale | Veymur',
-    'Органическое кокосовое МСТ-масло: C8 55–65%, C10 35–45%. Фасовка 500 мл и транспортная тара. Опт и розница: запросите цену у СЕХА.',
-    'Organic coconut MCT oil with neutral taste and odour: C8 55–65%, C10 35–45%. For food and beverage formulations, in retail and bulk packaging.'
+    'Органическое кокосовое МСТ-масло: C8 55–65%, C10 35–45%. Фасовка 500 мл и транспортная тара. Оптовые поставки: запросите цену у СЕХА.',
+    'Organic coconut MCT oil with neutral taste and odour: C8 55–65%, C10 35–45%. For food and beverage formulations, in bottles and bulk containers.'
   ),
   'veymur-virgin-coconut-oil': metadata(
     'Органическое нерафинированное кокосовое масло оптом | Veymur',
-    'Organic Virgin Coconut Oil — Wholesale & Retail Packs | Veymur',
+    'Organic Virgin Coconut Oil — Wholesale Supply | Veymur',
     'Нерафинированное кокосовое масло холодного отжима Veymur, без добавок. Сохраняет кокосовый вкус и аромат. Для кулинарии и пищевых производств.',
     'Veymur organic virgin coconut oil, cold pressed with no additives. Retains its natural coconut flavour and aroma for cooking, baking and food manufacturing.'
   ),
@@ -183,13 +183,13 @@ export const productSeo: Record<string, Metadata> = {
     'Органический кокосовый сахар оптом из Индии | Veymur',
     'Organic Coconut Sugar from India — Wholesale | Veymur',
     'Органический кокосовый сахар из сока соцветий кокосовой пальмы с карамельным вкусом. Для выпечки, напитков и десертов. Фасовка и упаковка под заказ.',
-    'Organic coconut sugar from coconut palm flower sap with a caramel-like flavour. For bakery, beverages and desserts; custom retail and bulk packaging.'
+    'Organic coconut sugar from coconut palm flower sap with a caramel-like flavour. For bakery, beverages and desserts; custom packaging and bulk formats.'
   ),
   'veymur-desiccated-coconut': metadata(
     'Органическая кокосовая стружка оптом из Индии | Veymur',
     'Organic Desiccated Coconut — Wholesale from India | Veymur',
-    'Органическая кокосовая стружка из мякоти зрелых кокосов для выпечки, кондитерских изделий и десертов. Разные фракции, розничная и оптовая упаковка.',
-    'Organic desiccated coconut from mature kernels for bakery, confectionery and desserts. Available in different particle grades and retail or bulk packaging.'
+    'Органическая кокосовая стружка из мякоти зрелых кокосов для выпечки, кондитерских изделий и десертов. Разные фракции и варианты упаковки.',
+    'Organic desiccated coconut from mature kernels for bakery, confectionery and desserts. Available in different particle grades and packaging formats.'
   ),
   'veymur-coconut-milk': metadata(
     'Органическое кокосовое молоко 17–19% оптом | Veymur',

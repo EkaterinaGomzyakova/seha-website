@@ -36,18 +36,7 @@ const inquiryCopy = productInquiryCopy[locale];
 const path = `/products/${item.category}/${item.slug}/`;
 const category = productCategories.find((category) => category.slug === item.category)!;
 const questions = productQuestions[item.id];
-const faqItems = questions
-  ? [
-      ...questions.questions,
-      {
-        question: { ru: 'Можно ли купить в розницу?', en: 'Can I place a retail order?' },
-        answer: {
-          ru: 'Да. СЕХА работает с оптовыми и розничными заказами. Выберите товар и отправьте запрос: доступную фасовку, количество, цену и условия доставки уточнит менеджер.',
-          en: 'Yes. SEHA accepts wholesale and retail orders. Select a product and send an inquiry: our team will confirm available packaging, quantities, pricing and delivery terms.'
-        }
-      }
-    ]
-  : [];
+const faqItems = questions?.questions ?? [];
 ---
 
 <SiteLayout

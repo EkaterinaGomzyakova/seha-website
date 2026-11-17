@@ -604,8 +604,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Упаковка',
       'Packaging',
       text(
-        'Оптовые коробки, розничная или индивидуальная упаковка',
-        'Bulk cartons, retail or custom packaging'
+        'Оптовые коробки или упаковка по требованиям заказчика',
+        'Bulk cartons or custom packaging'
       )
     ),
     field(
@@ -672,8 +672,8 @@ const productSpecifications: Record<string, readonly Specification[]> = {
       'Упаковка',
       'Packaging',
       text(
-        'Оптовые коробки, розничная или индивидуальная упаковка',
-        'Bulk cartons, retail or custom packaging'
+        'Оптовые коробки или упаковка по требованиям заказчика',
+        'Bulk cartons or custom packaging'
       )
     ),
     field('Степень прессования', 'Compression ratio', text('уточнить', 'to be confirmed')),

@@ -19,7 +19,7 @@ const ru = {
   directionsHeading: 'Категории',
   directionsLabel3: 'продукции',
   directionsText:
-    'Основное направление СЕХА — оптовые поставки для бизнеса. Также принимаем розничные заказы: выберите продукт и отправьте запрос, чтобы уточнить доступную фасовку, цену и доставку.',
+    'СЕХА поставляет кокосовые продукты оптом для бизнеса. Выберите продукт и отправьте запрос, чтобы уточнить фасовку, цену и условия поставки.',
   directionsAriaLabel: 'Кокосовая стружка',
   directionsLabel4: '02 / ДЛЯ ПИТАНИЯ',
   directionsCardTitle: 'Пищевые продукты Veymur',
@@ -142,7 +142,7 @@ const en = {
   directionsHeading: 'Product',
   directionsLabel3: 'categories',
   directionsText:
-    'Wholesale supply is SEHA’s main focus. Retail orders are also welcome: select a product and send an inquiry to confirm available pack sizes, pricing and delivery.',
+    'SEHA supplies coconut products to businesses wholesale. Select a product and send an inquiry to confirm pack sizes, pricing and delivery terms.',
   directionsAriaLabel: 'Desiccated coconut',
   directionsLabel4: '02 / FOR FOOD',
   directionsCardTitle: 'Veymur food products',
