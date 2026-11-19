@@ -171,7 +171,7 @@ jobs:
             server/**
             **/*.php
             **/*.zip
-      - name: Connect branded 404 pages
+      - name: Configure canonical redirects and branded 404 pages
         if: steps.connection.outputs.ready == 'true'
         env:
           FTP_SERVER: ${{ secrets.REG_RU_FTP_SERVER }}
@@ -179,6 +179,9 @@ jobs:
           FTP_PASSWORD: ${{ secrets.REG_RU_FTP_PASSWORD }}
           FTP_DIRECTORY: ${{ vars.REG_RU_FTP_DIRECTORY }}
         run: python3 scripts/configure-reg-ru.py
+      - name: Verify permanent canonical redirects
+        if: steps.connection.outputs.ready == 'true'
+        run: python3 scripts/check-canonical-redirects.py
       - name: Check published pages
         if: steps.connection.outputs.ready == 'true'
         shell: bash

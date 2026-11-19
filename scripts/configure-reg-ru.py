@@ -1,4 +1,4 @@
-"""Set branded 404 documents without replacing the hosting's other settings."""
+"""Set canonical redirects and 404 documents, preserving other hosting settings."""
 
 import hashlib
 import io
@@ -6,6 +6,32 @@ import os
 import re
 import ssl
 from ftplib import FTP_TLS, error_perm
+
+
+def with_canonical_redirects(content: bytes) -> bytes:
+    """Put our rules first, ahead of older temporary HTTPS rewrite rules."""
+    start = b"# BEGIN SEHA canonical redirects"
+    end = b"# END SEHA canonical redirects"
+    pattern = rb"(?m)^" + start + rb"\r?\n[\s\S]*?^" + end + rb"(?:\r?\n|$)"
+    existing_blocks = list(re.finditer(pattern, content))
+    if content.count(start) != len(existing_blocks) or content.count(end) != len(existing_blocks):
+        raise ValueError("Incomplete canonical redirect block; leave hosting settings unchanged")
+    preserved = re.sub(pattern, b"", content)
+    newline = b"\r\n" if b"\r\n" in content else b"\n"
+    lines = [
+        start,
+        b"RewriteEngine On",
+        b"# Permanent redirects preserve request methods, paths and query strings.",
+        rb"RewriteCond %{HTTP_HOST} ^www\.seha-group\.ru(?::[0-9]+)?$ [NC]",
+        b"RewriteRule ^ https://seha-group.ru%{REQUEST_URI} [R=308,L,NE]",
+        rb"RewriteCond %{HTTP_HOST} ^seha-group\.ru(?::[0-9]+)?$ [NC]",
+        b"RewriteCond %{HTTPS} !=on",
+        b"# REG.RU can terminate TLS at its reverse proxy.",
+        b"RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]",
+        b"RewriteRule ^ https://seha-group.ru%{REQUEST_URI} [R=308,L,NE]",
+        end,
+    ]
+    return newline.join(lines) + newline + preserved
 
 
 def with_error_document(content: bytes, target: str) -> bytes:
@@ -49,6 +75,8 @@ def main() -> None:
         ):
             original = read_optional(ftp, path)
             updated = with_error_document(original or b"", target)
+            if path == ".htaccess":
+                updated = with_canonical_redirects(updated)
             if updated == original:
                 continue
             if original is not None:
@@ -60,8 +88,8 @@ def main() -> None:
             ftp.storbinary("STOR " + temporary, io.BytesIO(updated))
             ftp.rename(temporary, path)
             if read_optional(ftp, path) != updated:
-                raise RuntimeError("Could not verify the uploaded 404 configuration")
-            print("Configured 404 document:", path)
+                raise RuntimeError("Could not verify the uploaded hosting configuration")
+            print("Configured hosting rules:", path)
 
 
 if __name__ == "__main__":
